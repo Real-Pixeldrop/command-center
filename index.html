@@ -1723,24 +1723,30 @@
     function renderBusiness() {
         document.getElementById('business-content').innerHTML = `
         <!-- Informations légales -->
-        <div class="card fade-in" style="animation-delay:0.1s">
-            <div class="biz-header-row">
-                <h3 class="biz-section-title" style="margin-bottom:0;">Informations Légales</h3>
-                <a href="#" class="biz-open-link">📄 Ouvrir BUSINESS.md ↗</a>
+        <div class="biz-header-row fade-in" style="animation-delay:0.1s;margin-bottom:12px;">
+            <h3 class="biz-section-title" style="margin-bottom:0;">Informations Légales</h3>
+            <a href="#" class="biz-open-link">📄 Ouvrir BUSINESS.md ↗</a>
+        </div>
+        <div class="grid grid-2 fade-in" style="animation-delay:0.1s">
+            <div class="card" style="padding:20px;">
+                <h4 style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-light);margin-bottom:12px;">Identite</h4>
+                ${bizInfoRow('Raison sociale', 'GOUDJIL AKLI', false)}
+                ${bizInfoRow('Nom commercial', 'Pixel Drop', false)}
+                ${bizInfoRow('Forme juridique', 'Entrepreneur Individuel', false)}
+                ${bizInfoRow("Date d'immatriculation", '13/12/2021', false)}
+                ${bizInfoRow('Code NAF/APE', '7410Z (Activités spécialisées de design)', true)}
+                ${bizInfoRow('RCS', 'Paris', false)}
             </div>
-            ${bizInfoRow('Raison sociale', 'GOUDJIL AKLI', false)}
-            ${bizInfoRow('Nom commercial', 'Pixel Drop', false)}
-            ${bizInfoRow('Forme juridique', 'Entrepreneur Individuel', false)}
-            ${bizInfoRow("Date d'immatriculation", '13/12/2021', false)}
-            ${bizInfoRow('SIREN', '908154073', true)}
-            ${bizInfoRow('SIRET', '90815407300013', true)}
-            ${bizInfoRow('Code NAF/APE', '7410Z (Activités spécialisées de design)', true)}
-            ${bizInfoRow('TVA Intracommunautaire', 'FR48908154073', true)}
-            ${bizInfoRow('RCS', 'Paris', false)}
-            ${bizInfoRow("Adresse", "58 Rue de la Chaussée d'Antin, 75009 Paris", true)}
-            ${bizInfoRow('Téléphone', '01 83 64 17 41', true)}
-            ${bizInfoRow('Email', 'contact@pixel-drop.com', true)}
-            <div class="biz-info-row"><span class="biz-info-key">Site web</span><span class="biz-info-left"><span class="biz-info-val"><a href="https://pixel-drop.com" target="_blank" style="color:var(--primary);text-decoration:none;">pixel-drop.com ↗</a></span></span></div>
+            <div class="card" style="padding:20px;">
+                <h4 style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-light);margin-bottom:12px;">Coordonnees & numeros</h4>
+                ${bizInfoRow('SIREN', '908154073', true)}
+                ${bizInfoRow('SIRET', '90815407300013', true)}
+                ${bizInfoRow('TVA Intracommunautaire', 'FR48908154073', true)}
+                ${bizInfoRow("Adresse", "58 Rue de la Chaussée d'Antin, 75009 Paris", true)}
+                ${bizInfoRow('Téléphone', '01 83 64 17 41', true)}
+                ${bizInfoRow('Email', 'contact@pixel-drop.com', true)}
+                <div class="biz-info-row"><span class="biz-info-key">Site web</span><span class="biz-info-left"><span class="biz-info-val"><a href="https://pixel-drop.com" target="_blank" style="color:var(--primary);text-decoration:none;">pixel-drop.com ↗</a></span></span></div>
+            </div>
         </div>
 
         <!-- Services proposés -->
