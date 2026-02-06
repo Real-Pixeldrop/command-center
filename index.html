@@ -1420,15 +1420,14 @@
     function renderClients() {
         const clients = DATA.clients;
         const total = clients.length;
-        const maintenanceActive = clients.filter(c => c.maintenance === 'Active').length;
+        const actifs = clients.filter(c => c.statut === 'Actif').length;
         const projetsActifs = clients.filter(c => c.statut === 'Projet en cours').length;
         const anciens = clients.filter(c => c.statut === 'Ancien').length;
 
         let rows = clients.map(c => {
-            const dc = dateClass(c.fin_contrat);
-            const maintBadge = c.maintenance === 'Active' ? 'badge-green' : (c.maintenance === 'Non' ? 'badge-gray' : 'badge-gray');
             const telHtml = c.telephone ? `<a href="tel:${esc(c.telephone)}" style="color:var(--primary)">${esc(c.telephone)}</a>` : '--';
-            return `<tr><td>${esc(c.nom)}</td><td>${telHtml}</td><td>${esc(c.site)}</td><td><span class="badge ${maintBadge}">${esc(c.maintenance)}</span></td><td class="${dc}">${esc(c.fin_contrat)}</td><td><span class="badge ${badgeClass(c.statut)}">${esc(c.statut)}</span></td></tr>`;
+            const emailHtml = c.email ? '<a href="mailto:' + esc(c.email) + '" style="color:var(--primary)">' + esc(c.email) + '</a>' : '--';
+            return `<tr><td>${esc(c.nom)}</td><td>${telHtml}</td><td>${emailHtml}</td><td>${esc(c.site)}</td><td>${c.dernier_contact || '--'}</td><td><span class="badge ${badgeClass(c.statut)}">${esc(c.statut)}</span></td></tr>`;
         }).join('');
 
         document.getElementById('clients-content').innerHTML = `
@@ -1438,11 +1437,11 @@
                 <div class="card-value primary">${total}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">Maintenance active</div>
-                <div class="card-value success">${maintenanceActive}</div>
+                <div class="card-label">Clients actifs</div>
+                <div class="card-value success">${actifs}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Projets actifs</div>
+                <div class="card-label">Projets en cours</div>
                 <div class="card-value accent">${projetsActifs}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.25s">
@@ -1455,14 +1454,14 @@
             <input type="text" class="search-input" placeholder="Rechercher un client..." oninput="searchTable('clients-list', this.value)">
             <button class="filter-btn active" onclick="filterTable('clients-list', 'all', this)">Tous</button>
             <button class="filter-btn" onclick="filterTable('clients-list', 'Actif', this)">Actifs</button>
-            <button class="filter-btn" onclick="filterTable('clients-list', 'Maintenance', this)">Maintenance</button>
+            <button class="filter-btn" onclick="filterTable('clients-list', 'Projet en cours', this)">Projet en cours</button>
             <button class="filter-btn" onclick="filterTable('clients-list', 'Ancien', this)">Anciens</button>
         </div>
 
         <div class="card table-card fade-in" style="animation-delay:0.3s">
             <div class="table-header">Clients</div>
             <table>
-                <thead><tr><th>Client</th><th>Tel</th><th>Site</th><th>Maintenance</th><th>Fin contrat</th><th>Statut</th></tr></thead>
+                <thead><tr><th>Client</th><th>Tel</th><th>Email</th><th>Site</th><th>Dernier Contact</th><th>Statut</th></tr></thead>
                 <tbody id="clients-list">${rows}</tbody>
             </table>
         </div>`;
@@ -1808,25 +1807,72 @@
 
         <div class="grid grid-2">
             <div class="card fade-in" style="animation-delay:0.3s">
-                <div class="table-header" style="padding:0 0 16px;">CA mensuel 2026</div>
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:0 0 16px;">
+                    <span style="font-weight:600;">CA mensuel</span>
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <button onclick="switchChartYear(-1)" style="background:none;border:none;cursor:pointer;color:var(--text-light);font-size:1rem;">&lsaquo;</button>
+                        <span id="chart-year-label">2026</span>
+                        <button onclick="switchChartYear(1)" style="background:none;border:none;cursor:pointer;color:var(--text-light);font-size:1rem;">&rsaquo;</button>
+                    </div>
+                </div>
                 <div class="bar-chart">${bars}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.35s">
-                <div class="table-header" style="padding:0 0 16px;">Simulation charges (micro-entreprise)</div>
-                <div style="margin-bottom:16px;">
-                    <label style="font-size:0.8rem;color:var(--text-light);display:block;margin-bottom:6px;">CA annuel HT simule</label>
-                    <input type="number" class="sim-input" id="sim-ca" value="50000" oninput="updateSim()">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                    <span style="font-weight:600;">Charges du mois</span>
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <button onclick="switchChargesMonth(-1)" style="background:none;border:none;cursor:pointer;color:var(--text-light);font-size:1rem;">&lsaquo;</button>
+                        <span id="charges-month-label">Février 2026</span>
+                        <button onclick="switchChargesMonth(1)" style="background:none;border:none;cursor:pointer;color:var(--text-light);font-size:1rem;">&rsaquo;</button>
+                    </div>
                 </div>
-                <div id="sim-results">
-                    <div class="sim-row"><span class="sim-label">CA annuel HT</span><span class="sim-value" id="sim-ca-val">50 000€</span></div>
-                    <div class="sim-row"><span class="sim-label">URSSAF (23.1%)</span><span class="sim-value negative" id="sim-urssaf">-11 550€</span></div>
-                    <div class="sim-row"><span class="sim-label">Versement liberatoire IR (2.2%)</span><span class="sim-value negative" id="sim-ir">-1 100€</span></div>
-                    <div class="sim-row"><span class="sim-label">CFE (estimee)</span><span class="sim-value negative" id="sim-cfe">-500€</span></div>
-                    <div class="sim-row" style="border-top:2px solid var(--text);padding-top:12px;margin-top:4px;"><span class="sim-label" style="font-weight:700;color:var(--text);">Resultat net</span><span class="sim-value positive" id="sim-net" style="font-size:1.1rem;">36 850€</span></div>
-                    <div class="sim-row"><span class="sim-label">Soit par mois</span><span class="sim-value positive" id="sim-monthly">3 071€</span></div>
+                <div id="charges-content">
+                    <!-- Sera rempli par JS -->
                 </div>
             </div>
         </div>`;
+        renderChargesMonth();
+    }
+
+    // ===== CHARGES MENSUELLES =====
+    let chargesMonthIdx = new Date().getMonth();
+    function switchChargesMonth(dir) {
+        chargesMonthIdx = Math.max(0, Math.min(11, chargesMonthIdx + dir));
+        renderChargesMonth();
+    }
+    function renderChargesMonth() {
+        const moisNoms = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+        const chart = DATA.finances.ca_mensuel_chart;
+        const m = chart[chargesMonthIdx];
+        const ca = (m && m.montant !== null) ? m.montant : 0;
+        const urssaf = Math.round(ca * 0.231);
+        const ir = Math.round(ca * 0.022);
+        const cfe = 42; // 500€/an
+        const net = ca - urssaf - ir - cfe;
+        const fmt = (n) => n.toLocaleString('fr-FR') + '€';
+
+        const labelEl = document.getElementById('charges-month-label');
+        const contentEl = document.getElementById('charges-content');
+        if (labelEl) labelEl.textContent = moisNoms[chargesMonthIdx] + ' 2026';
+        if (contentEl) contentEl.innerHTML = `
+            <div class="sim-row"><span class="sim-label">CA du mois</span><span class="sim-value">${fmt(ca)}</span></div>
+            <div class="sim-row"><span class="sim-label">URSSAF (23.1%)</span><span class="sim-value negative">-${fmt(urssaf)}</span></div>
+            <div class="sim-row"><span class="sim-label">IR liberatoire (2.2%)</span><span class="sim-value negative">-${fmt(ir)}</span></div>
+            <div class="sim-row"><span class="sim-label">CFE (estimee)</span><span class="sim-value negative">-${fmt(cfe)}</span></div>
+            <div class="sim-row" style="border-top:2px solid var(--text);padding-top:12px;margin-top:4px;">
+                <span class="sim-label" style="font-weight:700;color:var(--text);">Net du mois</span>
+                <span class="sim-value ${net >= 0 ? 'positive' : 'negative'}" style="font-size:1.1rem;">${fmt(net)}</span>
+            </div>
+        `;
+    }
+
+    // ===== CHART YEAR NAVIGATION =====
+    let chartYear = 2026;
+    function switchChartYear(dir) {
+        chartYear += dir;
+        const labelEl = document.getElementById('chart-year-label');
+        if (labelEl) labelEl.textContent = chartYear;
+        // Pour l'instant seule 2026 a des données, on re-render quand même
     }
 
     // ===== DEVIS & FACTURES =====
@@ -2211,25 +2257,6 @@
     }
     updateClock();
     setInterval(updateClock, 30000);
-
-    // Finance simulator
-    function updateSim() {
-        const ca = parseFloat(document.getElementById('sim-ca').value) || 0;
-        const urssaf = ca * 0.231;
-        const ir = ca * 0.022;
-        const cfe = 500;
-        const net = ca - urssaf - ir - cfe;
-        const monthly = net / 12;
-        const fmt = (n) => n.toLocaleString('fr-FR', {maximumFractionDigits: 0}) + '€';
-        document.getElementById('sim-ca-val').textContent = fmt(ca);
-        document.getElementById('sim-urssaf').textContent = '-' + fmt(urssaf);
-        document.getElementById('sim-ir').textContent = '-' + fmt(ir);
-        document.getElementById('sim-cfe').textContent = '-' + fmt(cfe);
-        document.getElementById('sim-net').textContent = fmt(net);
-        document.getElementById('sim-net').className = 'sim-value ' + (net >= 0 ? 'positive' : 'negative');
-        document.getElementById('sim-monthly').textContent = fmt(monthly);
-        document.getElementById('sim-monthly').className = 'sim-value ' + (monthly >= 0 ? 'positive' : 'negative');
-    }
 
     // Calendar week view
     function buildWeek() {
