@@ -674,6 +674,93 @@
             font-weight: 600;
         }
 
+        .copy-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #9ca3af;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+            vertical-align: middle;
+        }
+        .copy-btn:hover { color: var(--accent); }
+
+        .biz-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .biz-open-link {
+            font-size: 0.85rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.2s;
+        }
+        .biz-open-link:hover { color: var(--accent); }
+
+        .biz-info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 9px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+        .biz-info-row:last-child { border-bottom: none; }
+        .biz-info-left { display: flex; align-items: center; gap: 8px; }
+        .biz-info-key { color: var(--text-light); font-weight: 500; }
+        .biz-info-val { font-weight: 600; color: var(--text); }
+
+        .biz-mini-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+        }
+
+        .biz-mini-card {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 18px;
+            border: 1px solid var(--border);
+        }
+
+        .biz-mini-card h4 {
+            font-size: 0.88rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .biz-mini-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .biz-mini-card ul li {
+            font-size: 0.84rem;
+            color: var(--text-light);
+            padding: 3px 0;
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .biz-mini-card ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1200px) {
             .grid-4 { grid-template-columns: repeat(2, 1fr); }
@@ -1502,35 +1589,52 @@
     }
 
     // ===== BUSINESS =====
+    function copyToClipboard(text, el) {
+        navigator.clipboard.writeText(text).then(() => {
+            const orig = el.innerHTML;
+            el.innerHTML = '✓';
+            el.style.color = 'var(--success)';
+            setTimeout(() => { el.innerHTML = orig; el.style.color = ''; }, 1500);
+        });
+    }
+
+    function copyIcon() {
+        return '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+    }
+
+    function bizInfoRow(label, value, copiable) {
+        const copyBtn = copiable ? ' <button class="copy-btn" onclick="copyToClipboard(\'' + value.replace(/'/g, "\\'") + '\', this)">' + copyIcon() + '</button>' : '';
+        return '<div class="biz-info-row"><span class="biz-info-key">' + label + '</span><span class="biz-info-left"><span class="biz-info-val">' + value + '</span>' + copyBtn + '</span></div>';
+    }
+
     function renderBusiness() {
         document.getElementById('business-content').innerHTML = `
-        <div class="grid grid-2">
-            <div class="card fade-in" style="animation-delay:0.1s">
-                <h3 class="biz-section-title">Structure</h3>
-                <ul class="biz-list">
-                    <li><span class="biz-key">Forme juridique</span><span class="biz-val">Entreprise Individuelle</span></li>
-                    <li><span class="biz-key">Nom commercial</span><span class="biz-val">Pixel Drop</span></li>
-                    <li><span class="biz-key">Localisation</span><span class="biz-val">Paris, France</span></li>
-                    <li><span class="biz-key">Site web</span><span class="biz-val"><a href="https://pixel-drop.com" target="_blank" style="color:var(--primary);text-decoration:none;">pixel-drop.com ↗</a></span></li>
-                </ul>
+        <!-- Informations légales -->
+        <div class="card fade-in" style="animation-delay:0.1s">
+            <div class="biz-header-row">
+                <h3 class="biz-section-title" style="margin-bottom:0;">Informations Légales</h3>
+                <a href="#" class="biz-open-link">📄 Ouvrir BUSINESS.md ↗</a>
             </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
-                <h3 class="biz-section-title">Objectifs & Cible</h3>
-                <div style="margin-bottom:20px;">
-                    <div class="card-label">Objectif CA 2025</div>
-                    <div class="card-value primary" style="font-size:1.8rem;">100 000€</div>
-                </div>
-                <ul class="biz-list">
-                    <li><span class="biz-key">Cible</span><span class="biz-val">PME, grands groupes</span></li>
-                    <li><span class="biz-key">Panier moyen visé</span><span class="biz-val">10 000€</span></li>
-                </ul>
-            </div>
+            ${bizInfoRow('Raison sociale', 'GOUDJIL AKLI', false)}
+            ${bizInfoRow('Nom commercial', 'Pixel Drop', false)}
+            ${bizInfoRow('Forme juridique', 'Entrepreneur Individuel', false)}
+            ${bizInfoRow("Date d'immatriculation", '13/12/2021', false)}
+            ${bizInfoRow('SIREN', '908154073', true)}
+            ${bizInfoRow('SIRET', '90815407300013', true)}
+            ${bizInfoRow('Code NAF/APE', '7410Z (Activités spécialisées de design)', true)}
+            ${bizInfoRow('TVA Intracommunautaire', 'FR48908154073', true)}
+            ${bizInfoRow('RCS', 'Paris', false)}
+            ${bizInfoRow('Adresse', '58 Rue de la Chaussée d\\'Antin, 75009 Paris', true)}
+            ${bizInfoRow('Téléphone', '01 83 64 17 41', true)}
+            ${bizInfoRow('Email', 'contact@pixel-drop.com', true)}
+            <div class="biz-info-row"><span class="biz-info-key">Site web</span><span class="biz-info-left"><span class="biz-info-val"><a href="https://pixel-drop.com" target="_blank" style="color:var(--primary);text-decoration:none;">pixel-drop.com ↗</a></span></span></div>
         </div>
 
+        <!-- Services proposés -->
         <h2 class="biz-section-title fade-in" style="animation-delay:0.2s;margin-top:10px;">Services proposés</h2>
         <div class="grid grid-2">
             <div class="card fade-in" style="animation-delay:0.25s">
-                <h3 class="biz-sub-title">Web & Design</h3>
+                <h3 class="biz-sub-title">🎨 Web & Design</h3>
                 <div class="biz-service-grid">
                     <div class="biz-service-item">Création de sites internet (WordPress)</div>
                     <div class="biz-service-item">Web design</div>
@@ -1538,7 +1642,7 @@
                 </div>
             </div>
             <div class="card fade-in" style="animation-delay:0.3s">
-                <h3 class="biz-sub-title">Automatisations & IA</h3>
+                <h3 class="biz-sub-title">⚡ Automatisations & IA</h3>
                 <div class="biz-service-grid">
                     <div class="biz-service-item">Ventes & Devis</div>
                     <div class="biz-service-item">Prospection & Acquisition</div>
@@ -1554,6 +1658,7 @@
             </div>
         </div>
 
+        <!-- Tarification -->
         <h2 class="biz-section-title fade-in" style="animation-delay:0.35s;margin-top:10px;">Tarification</h2>
         <div class="grid grid-4 biz-pricing-grid fade-in" style="animation-delay:0.4s">
             <div class="biz-pricing-card">
@@ -1579,6 +1684,55 @@
                 <div class="offer-price">400€<span style="font-size:0.9rem;font-weight:500;color:var(--text-light);">/mois</span></div>
                 <div class="offer-detail">Monitoring 24/7<br>Corrections illimitées<br>2h évolutions/mois</div>
                 <div class="offer-delay">Récurrent</div>
+            </div>
+        </div>
+        <div class="card fade-in" style="animation-delay:0.45s;text-align:center;margin-top:-10px;">
+            <span style="font-weight:600;color:var(--primary);font-size:1rem;">Panier moyen visé : 10 000€</span>
+        </div>
+
+        <!-- Objectifs, Cible, Outils, Équipe, Prospection -->
+        <div class="grid grid-2" style="margin-top:10px;">
+            <div class="card fade-in" style="animation-delay:0.5s">
+                <h3 class="biz-section-title">🎯 Objectifs 2025</h3>
+                <div style="margin-bottom:16px;">
+                    <div class="card-label">Chiffre d'affaires</div>
+                    <div class="card-value primary" style="font-size:2rem;">100 000€</div>
+                </div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.55s">
+                <h3 class="biz-section-title">🎯 Cible</h3>
+                <ul class="biz-list">
+                    <li><span class="biz-key">Cibles</span><span class="biz-val">PME, grands groupes</span></li>
+                    <li><span class="biz-key">À éviter</span><span class="biz-val" style="color:#ef4444;">Particuliers, clients avec trop d'ego</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="biz-mini-cards fade-in" style="animation-delay:0.6s;margin-bottom:30px;">
+            <div class="biz-mini-card">
+                <h4>🛠 Outils</h4>
+                <ul>
+                    <li>Comptabilité : Pennylane</li>
+                    <li>CRM / Gestion : Notion</li>
+                    <li>Automatisations : n8n, Make</li>
+                    <li>IA : Claude</li>
+                </ul>
+            </div>
+            <div class="biz-mini-card">
+                <h4>👤 Équipe</h4>
+                <ul>
+                    <li>Travaille seul</li>
+                    <li>Projet : émuler des collaborateurs à terme</li>
+                </ul>
+            </div>
+            <div class="biz-mini-card">
+                <h4>📞 Prospection</h4>
+                <ul>
+                    <li>LinkedIn Sales Navigator</li>
+                    <li>Cold calling</li>
+                    <li>Bouche à oreille</li>
+                    <li>BARK.com</li>
+                </ul>
             </div>
         </div>`;
     }
@@ -1930,7 +2084,7 @@
             <div class="table-header">Tous les sites</div>
             <table>
                 <thead><tr><th></th><th>Site</th><th>Maintenance</th><th>Fin contrat</th><th>MAJ dispo</th><th>API</th></tr></thead>
-                <tbody id="sites-list"><tr><td>pixel-drop.com</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h14</td></tr><tr><td>dernieredispo.com</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h14</td></tr><tr><td>black-trombone.fr</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h14</td></tr><tr><td>awayexpedition.com</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h14</td></tr><tr><td>cine-loges.fr</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h14</td></tr><tr><td>collectivitesterritoriales.fr</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h14</td></tr></tbody>
+                <tbody id="sites-list"><tr><td>pixel-drop.com</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h19</td></tr><tr><td>dernieredispo.com</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h19</td></tr><tr><td>black-trombone.fr</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h19</td></tr><tr><td>awayexpedition.com</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h19</td></tr><tr><td>cine-loges.fr</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h19</td></tr><tr><td>collectivitesterritoriales.fr</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h19</td></tr></tbody>
             </table>
         </div>`;
     }
