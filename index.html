@@ -19,7 +19,7 @@
             --text-light: #6b7280;
             --border: #E5E7EB;
             --sidebar-bg: #1a1a2e;
-            --sidebar-width: 240px;
+            --sidebar-width: 260px;
             --sidebar-collapsed: 60px;
         }
 
@@ -116,8 +116,8 @@
         .nav-item:hover { background: rgba(255,255,255,0.06); color: #e5e7eb; }
         .nav-item.active { background: var(--primary); color: white; }
 
-        .nav-label { font-weight: 500; transition: opacity 0.2s; }
-        .sidebar.collapsed .nav-label { opacity: 0; }
+        .nav-label { font-weight: 500; transition: opacity 0.2s; white-space: normal; }
+        .sidebar.collapsed .nav-label { opacity: 0; white-space: nowrap; }
 
         .nav-section {
             font-size: 0.7rem;
@@ -1044,7 +1044,7 @@
 
     <div class="sidebar-footer">
         <span id="clock"></span><br>
-        Control Center v2
+        Control Center v3.0
     </div>
 </nav>
 
@@ -1516,7 +1516,12 @@
         const p = DATA.prospection;
         const prospects = DATA.prospects;
 
-        let rows = prospects.map(pr => `<tr><td>${esc(pr.entreprise)}</td><td>${esc(pr.contact)}</td><td><span class="badge badge-blue">${esc(pr.etape)}</span></td></tr>`).join('');
+        let rows = prospects.map(pr => {
+            const tel = pr.telephone ? `<a href="tel:${esc(pr.telephone)}" style="color:var(--primary);text-decoration:none;">${esc(pr.telephone)}</a>` : '--';
+            const email = pr.email ? `<a href="mailto:${esc(pr.email)}" style="color:var(--primary);text-decoration:none;">${esc(pr.email)}</a>` : '--';
+            const secteur = pr.secteur ? esc(pr.secteur) : '--';
+            return `<tr><td>${esc(pr.entreprise)}</td><td>${esc(pr.contact)}</td><td>${tel}</td><td>${email}</td><td>${secteur}</td><td><span class="badge badge-blue">${esc(pr.etape)}</span></td></tr>`;
+        }).join('');
 
         let zoneRows = p.zones.map(z => `<tr><td>${esc(z.zone)}</td><td>${esc(z.prospects)}</td><td>${esc(z.secteur)}</td></tr>`).join('');
 
@@ -1582,7 +1587,7 @@
         <div class="card table-card fade-in" style="animation-delay:0.4s">
             <div class="table-header">Liste des prospects (${prospects.length})</div>
             <table>
-                <thead><tr><th>Entreprise</th><th>Contact</th><th>Etape</th></tr></thead>
+                <thead><tr><th>Entreprise</th><th>Contact</th><th>Tel</th><th>Email</th><th>Secteur</th><th>Etape</th></tr></thead>
                 <tbody id="prospect-list">${rows}</tbody>
             </table>
         </div>`;
