@@ -360,8 +360,8 @@
         .kanban-board::-webkit-scrollbar-thumb { background: #c4c8d0; border-radius: 3px; }
 
         .kanban-column {
-            flex: 0 0 280px;
-            min-width: 280px;
+            flex: 1 1 0;
+            min-width: 250px;
             background: var(--bg);
             border-radius: 12px;
             border: 1px solid var(--border);
@@ -1441,9 +1441,9 @@
             </div>
             <div class="card table-card fade-in">
                 <table>
-                    <thead><tr><th>Date</th><th>Client</th><th>Objet</th><th>Montant</th><th>Statut</th></tr></thead>
+                    <thead><tr><th>Date</th><th>Client</th><th>Objet</th><th>Montant</th><th>Statut</th><th>PDF</th></tr></thead>
                     <tbody id="factures-list">
-                        <tr><td>27/01/2026</td><td>Habitat Multi Services</td><td>Site vitrine</td><td>3 000€</td><td><span class="badge badge-green">Payee</span></td></tr>
+                        <tr><td>27/01/2026</td><td>Habitat Multi Services</td><td>Site vitrine</td><td>3 000€</td><td><span class="badge badge-green">Payee</span></td><td><a href="https://app.pennylane.com/public/invoice/pdf?encrypted_id=0Qee4cbI1LqtbpEiVo5WudplXI22j5u%2FY7bezcje0QK9MQU8MUbCqGM%2BDPIJAZ3JBrhT%2B73DEW3BWg%3D%3D--NtnuU9Jb%2BPt0zSY0--YqSkN1K3eug2RGaVrM6CUg%3D%3D" target="_blank" style="color:var(--primary)">↗</a></td></tr>
                     </tbody>
                 </table>
             </div>
