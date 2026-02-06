@@ -336,6 +336,174 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* ===== KANBAN ===== */
+        .kanban-board {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding-bottom: 12px;
+            min-height: 400px;
+        }
+
+        .kanban-board::-webkit-scrollbar { height: 6px; }
+        .kanban-board::-webkit-scrollbar-track { background: var(--border); border-radius: 3px; }
+        .kanban-board::-webkit-scrollbar-thumb { background: #c4c8d0; border-radius: 3px; }
+
+        .kanban-column {
+            flex: 0 0 280px;
+            min-width: 280px;
+            background: var(--bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            max-height: 70vh;
+        }
+
+        .kanban-column-header {
+            padding: 14px 16px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .kanban-column-header .count {
+            background: var(--border);
+            color: var(--text-light);
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .kanban-column-body {
+            padding: 10px;
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .kanban-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            cursor: grab;
+            transition: transform 0.15s, box-shadow 0.15s;
+            opacity: 0;
+            transform: translateY(-12px);
+            animation: fadeSlideIn 0.4s ease forwards;
+        }
+
+        .kanban-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .kanban-card:active { cursor: grabbing; }
+
+        .kanban-card-title {
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
+
+        .kanban-card-desc {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+
+        .kanban-card .badge {
+            margin-top: 8px;
+        }
+
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(-12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .kanban-card:nth-child(1) { animation-delay: 0.05s; }
+        .kanban-card:nth-child(2) { animation-delay: 0.1s; }
+        .kanban-card:nth-child(3) { animation-delay: 0.15s; }
+        .kanban-card:nth-child(4) { animation-delay: 0.2s; }
+        .kanban-card:nth-child(5) { animation-delay: 0.25s; }
+        .kanban-card:nth-child(6) { animation-delay: 0.3s; }
+
+        /* Kanban column accent colors */
+        .kanban-column.col-blue .kanban-column-header { border-bottom: 2px solid var(--primary); }
+        .kanban-column.col-orange .kanban-column-header { border-bottom: 2px solid var(--warning); }
+        .kanban-column.col-green .kanban-column-header { border-bottom: 2px solid var(--success); }
+        .kanban-column.col-gray .kanban-column-header { border-bottom: 2px solid #9ca3af; }
+
+        /* View toggle (table/kanban) */
+        .view-toggle {
+            display: inline-flex;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .view-toggle-btn {
+            padding: 8px 18px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            border: none;
+            background: transparent;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .view-toggle-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .view-toggle-btn:hover:not(.active) {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .pipeline-view { display: none; }
+        .pipeline-view.active { display: block; }
+
+        /* Clickable marketing cards */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card-link .card {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card-link .card .link-arrow {
+            position: absolute;
+            top: 14px;
+            right: 16px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .card-link:hover .card .link-arrow {
+            color: var(--accent);
+            transform: translate(2px, -2px);
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1200px) {
             .grid-4 { grid-template-columns: repeat(2, 1fr); }
@@ -345,6 +513,35 @@
             .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
             .main { padding: 20px; }
         }
+        /* ===== BAR CHART ===== */
+        .bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 200px; padding: 20px 0 0; }
+        .bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+        .bar-fill { width: 100%; border-radius: 6px 6px 0 0; background: var(--primary); min-height: 2px; transition: height 1s ease; }
+        .bar-label { font-size: 0.7rem; color: var(--text-light); font-weight: 500; }
+        .bar-amount { font-size: 0.72rem; font-weight: 600; color: var(--text); }
+
+        /* ===== SIMULATOR ===== */
+        .sim-input { width: 100%; padding: 12px 16px; border: 2px solid var(--border); border-radius: 10px; font-size: 1.1rem; font-family: 'Inter', sans-serif; font-weight: 600; color: var(--primary); transition: border-color 0.2s; }
+        .sim-input:focus { outline: none; border-color: var(--primary); }
+        .sim-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+        .sim-row:last-child { border-bottom: none; }
+        .sim-label { color: var(--text-light); }
+        .sim-value { font-weight: 600; }
+        .sim-value.negative { color: #ef4444; }
+        .sim-value.positive { color: var(--success); }
+
+        /* ===== LINK CARD ===== */
+        a.card-link { text-decoration: none; color: inherit; display: block; }
+        a.card-link .link-arrow { opacity: 0; transition: opacity 0.2s; font-size: 1.1rem; }
+        a.card-link:hover .link-arrow { opacity: 1; }
+
+        /* ===== WEEK VIEW ===== */
+        .week-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+        .week-day { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 12px; min-height: 120px; }
+        .week-day.today { border-color: var(--primary); border-width: 2px; }
+        .week-day-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-light); font-weight: 500; margin-bottom: 8px; }
+        .week-day-num { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; }
+
     </style>
 </head>
 <body>
@@ -374,6 +571,32 @@
             <span class="nav-icon">&#10148;</span>
             <span class="nav-label">Pipeline</span>
         </a>
+        <a class="nav-item" onclick="switchTab('taches', this)">
+            <span class="nav-icon">&#9745;</span>
+            <span class="nav-label">Tâches</span>
+        </a>
+        <a class="nav-item" onclick="switchTab('calendrier', this)">
+            <span class="nav-icon">&#128197;</span>
+            <span class="nav-label">Calendrier</span>
+        </a>
+        <a class="nav-item" onclick="switchTab('prospection', this)">
+            <span class="nav-icon">&#128222;</span>
+            <span class="nav-label">Prospection</span>
+        </a>
+
+        <div class="nav-section">Business</div>
+        <a class="nav-item" onclick="switchTab('finances', this)">
+            <span class="nav-icon">&#128176;</span>
+            <span class="nav-label">Finances</span>
+        </a>
+        <a class="nav-item" onclick="switchTab('devis', this)">
+            <span class="nav-icon">&#128196;</span>
+            <span class="nav-label">Devis & Factures</span>
+        </a>
+        <a class="nav-item" onclick="switchTab('abonnements', this)">
+            <span class="nav-icon">&#128260;</span>
+            <span class="nav-label">Abonnements</span>
+        </a>
 
         <div class="nav-section">Marketing</div>
         <a class="nav-item" onclick="switchTab('marketing', this)">
@@ -398,7 +621,7 @@
 
     <div class="sidebar-footer">
         <span id="clock"></span><br>
-        Control Center v1
+        Control Center v2
     </div>
 </nav>
 
@@ -435,34 +658,46 @@
 
         <h2 style="font-size:1.2rem; margin-bottom:18px;">Marketing</h2>
         <div class="grid grid-4">
-            <div class="card fade-in" style="animation-delay:0.3s">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                    <span style="font-weight:600;font-size:0.85rem;">LinkedIn</span>
-                    <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">"" / 500</span>
+            <a href="https://www.linkedin.com/company/93845156/admin/analytics/followers/" target="_blank" class="card-link">
+                <div class="card fade-in" style="animation-delay:0.3s">
+                    <span class="link-arrow">↗</span>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                        <span style="font-weight:600;font-size:0.85rem;">LinkedIn</span>
+                        <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">"" / 500</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill accent" style="width:12%"></div></div>
                 </div>
-                <div class="progress-bar"><div class="progress-fill accent" style="width:12%"></div></div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.35s">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                    <span style="font-weight:600;font-size:0.85rem;">Instagram</span>
-                    <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">45 / 300</span>
+            </a>
+            <a href="https://www.instagram.com/pixeldrop_fr/" target="_blank" class="card-link">
+                <div class="card fade-in" style="animation-delay:0.35s">
+                    <span class="link-arrow">↗</span>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                        <span style="font-weight:600;font-size:0.85rem;">Instagram</span>
+                        <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">45 / 300</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill accent" style="width:15%"></div></div>
                 </div>
-                <div class="progress-bar"><div class="progress-fill accent" style="width:15%"></div></div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.4s">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                    <span style="font-weight:600;font-size:0.85rem;">Newsletter</span>
-                    <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">99 / 200</span>
+            </a>
+            <a href="https://app.brevo.com/contact/list" target="_blank" class="card-link">
+                <div class="card fade-in" style="animation-delay:0.4s">
+                    <span class="link-arrow">↗</span>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                        <span style="font-weight:600;font-size:0.85rem;">Newsletter</span>
+                        <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">99 / 200</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill accent" style="width:49%"></div></div>
                 </div>
-                <div class="progress-bar"><div class="progress-fill accent" style="width:49%"></div></div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.45s">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                    <span style="font-weight:600;font-size:0.85rem;">Trafic 30j</span>
-                    <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">72 / 1000</span>
+            </a>
+            <a href="https://analytics.google.com/analytics/web/#/p474885507/reports/reportinghub" target="_blank" class="card-link">
+                <div class="card fade-in" style="animation-delay:0.45s">
+                    <span class="link-arrow">↗</span>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                        <span style="font-weight:600;font-size:0.85rem;">Trafic 30j</span>
+                        <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">72 / 1000</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill accent" style="width:7%"></div></div>
                 </div>
-                <div class="progress-bar"><div class="progress-fill accent" style="width:7%"></div></div>
-            </div>
+            </a>
         </div>
 
         <div class="grid grid-2">
@@ -614,6 +849,47 @@
             </div>
         </div>
 
+        <div class="view-toggle">
+            <button class="view-toggle-btn active" onclick="togglePipelineView('table', this)">📋 Tableau</button>
+            <button class="view-toggle-btn" onclick="togglePipelineView('kanban', this)">🗂 Kanban</button>
+        </div>
+
+        <!-- Pipeline Kanban View -->
+        <div class="pipeline-view" id="pipeline-kanban">
+            <div class="kanban-board">
+                <div class="kanban-column col-blue">
+                    <div class="kanban-column-header">
+                        <span>🎯 Nouvelle opportunité</span>
+                        <span class="count" id="pk-new-count">0</span>
+                    </div>
+                    <div class="kanban-column-body" id="pk-new"></div>
+                </div>
+                <div class="kanban-column col-orange">
+                    <div class="kanban-column-header">
+                        <span>📧 Offre envoyée</span>
+                        <span class="count" id="pk-sent-count">0</span>
+                    </div>
+                    <div class="kanban-column-body" id="pk-sent"></div>
+                </div>
+                <div class="kanban-column col-green">
+                    <div class="kanban-column-header">
+                        <span>✅ Client signé</span>
+                        <span class="count" id="pk-signed-count">0</span>
+                    </div>
+                    <div class="kanban-column-body" id="pk-signed"></div>
+                </div>
+                <div class="kanban-column col-gray">
+                    <div class="kanban-column-header">
+                        <span>❌ Perdu</span>
+                        <span class="count" id="pk-lost-count">0</span>
+                    </div>
+                    <div class="kanban-column-body" id="pk-lost"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pipeline Table View -->
+        <div class="pipeline-view active" id="pipeline-table">
         <div class="card table-card fade-in" style="animation-delay:0.3s">
             <div class="table-header">Pipeline Notion</div>
             <table>
@@ -718,6 +994,105 @@
 <tr><td>SITRAL INDUSTRIE</td><td>Loïc VILCHEZ (PDG)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
 <tr><td>BACACIER EST</td><td>(à identifier)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr></tbody>
             </table>
+        </div>
+        </div><!-- /pipeline-table -->
+    </div>
+
+    <!-- ===== TÂCHES ===== -->
+    <div class="tab" id="tab-taches">
+        <h1 class="page-title">Tâches</h1>
+        <p class="page-subtitle">Suivi des tâches en cours — Kanban</p>
+
+        <div class="kanban-board">
+            <div class="kanban-column col-blue">
+                <div class="kanban-column-header">
+                    <span>📋 À faire</span>
+                    <span class="count">5</span>
+                </div>
+                <div class="kanban-column-body">
+                    <div class="kanban-card" style="animation-delay:0.05s">
+                        <div class="kanban-card-title">Habitat Multi-Service</div>
+                        <div class="kanban-card-desc">Finaliser maquette Figma, puis créer site WordPress</div>
+                        <span class="badge badge-blue">Site Web</span>
+                    </div>
+                    <div class="kanban-card" style="animation-delay:0.1s">
+                        <div class="kanban-card-title">Relancer M.Bolchert JDA</div>
+                        <div class="kanban-card-desc">Devis en attente — 2 500€</div>
+                        <span class="badge badge-orange">Relance</span>
+                    </div>
+                    <div class="kanban-card" style="animation-delay:0.15s">
+                        <div class="kanban-card-title">Relancer Sara Cleaning</div>
+                        <div class="kanban-card-desc">Devis en attente — 4 000€</div>
+                        <span class="badge badge-orange">Relance</span>
+                    </div>
+                    <div class="kanban-card" style="animation-delay:0.2s">
+                        <div class="kanban-card-title">Point offres envoyées</div>
+                        <div class="kanban-card-desc">7 offres en attente — Total : 26 438€</div>
+                        <span class="badge badge-blue">Pipeline</span>
+                    </div>
+                    <div class="kanban-card" style="animation-delay:0.25s">
+                        <div class="kanban-card-title">Configurer API Pixel Space</div>
+                        <div class="kanban-card-desc">Installer sur Fidolux et Richard Wagner Museum</div>
+                        <span class="badge badge-blue">Technique</span>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban-column col-orange">
+                <div class="kanban-column-header">
+                    <span>🔄 En cours</span>
+                    <span class="count">3</span>
+                </div>
+                <div class="kanban-column-body">
+                    <div class="kanban-card" style="animation-delay:0.05s">
+                        <div class="kanban-card-title">Dernière Dispo — Consulting</div>
+                        <div class="kanban-card-desc">Consulting gratuit : suivi croissance, objectif 1000 lieux</div>
+                        <span class="badge badge-orange">Consulting</span>
+                    </div>
+                    <div class="kanban-card" style="animation-delay:0.1s">
+                        <div class="kanban-card-title">Plaza Tango Festival 2026</div>
+                        <div class="kanban-card-desc">Organisation festival — 24-26 avril</div>
+                        <span class="badge badge-orange">Événement</span>
+                    </div>
+                    <div class="kanban-card" style="animation-delay:0.15s">
+                        <div class="kanban-card-title">Check hebdo sites WP</div>
+                        <div class="kanban-card-desc">Vérification hebdomadaire de tous les sites WordPress</div>
+                        <span class="badge badge-orange">Maintenance</span>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban-column col-green">
+                <div class="kanban-column-header">
+                    <span>✅ Terminé</span>
+                    <span class="count">5</span>
+                </div>
+                <div class="kanban-column-body">
+                    <div class="kanban-card" style="animation-delay:0.05s">
+                        <div class="kanban-card-title">Dernière Dispo V2</div>
+                        <div class="kanban-card-desc">Site livré et en ligne</div>
+                        <span class="badge badge-green">Livré</span>
+                    </div>
+                    <div class="kanban-card" style="animation-delay:0.1s">
+                        <div class="kanban-card-title">CRW Lyon</div>
+                        <div class="kanban-card-desc">Projet livré au client</div>
+                        <span class="badge badge-green">Livré</span>
+                    </div>
+                    <div class="kanban-card" style="animation-delay:0.15s">
+                        <div class="kanban-card-title">Nettoyage taxonomie villes</div>
+                        <div class="kanban-card-desc">Taxonomie villes Dernière Dispo nettoyée</div>
+                        <span class="badge badge-green">Terminé</span>
+                    </div>
+                    <div class="kanban-card" style="animation-delay:0.2s">
+                        <div class="kanban-card-title">Dashboard Dernière Dispo</div>
+                        <div class="kanban-card-desc">Dashboard de suivi en ligne et fonctionnel</div>
+                        <span class="badge badge-green">Terminé</span>
+                    </div>
+                    <div class="kanban-card" style="animation-delay:0.25s">
+                        <div class="kanban-card-title">Migration CRM Notion</div>
+                        <div class="kanban-card-desc">Migration vers fichiers Claudia terminée</div>
+                        <span class="badge badge-green">Terminé</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -885,6 +1260,249 @@
         </div>
     </div>
 
+    <!-- ===== FINANCES ===== -->
+    <div class="tab" id="tab-finances">
+        <h1 class="page-title">Finances</h1>
+        <p class="page-subtitle">Vue financiere Pixel Drop — <a href="https://app.pennylane.com" target="_blank" style="color:var(--primary);text-decoration:none;">Ouvrir Pennylane ↗</a></p>
+
+        <div class="grid grid-4">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">CA Janvier 2026</div>
+                <div class="card-value primary">3 000€</div>
+                <div class="card-sub">1 facture payee</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">CA Fevrier 2026</div>
+                <div class="card-value accent">0€</div>
+                <div class="card-sub">en cours</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Total 2026</div>
+                <div class="card-value primary">3 000€</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <div class="card-label">Devis en attente</div>
+                <div class="card-value accent">36 400€</div>
+                <div class="card-sub">5 devis pending</div>
+            </div>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card fade-in" style="animation-delay:0.3s">
+                <div class="table-header" style="padding:0 0 16px;">CA mensuel 2026</div>
+                <div class="bar-chart" id="ca-chart">
+                    <div class="bar-col"><span class="bar-amount">3k</span><div class="bar-fill" style="height:100%;background:var(--primary)"></div><span class="bar-label">Jan</span></div>
+                    <div class="bar-col"><span class="bar-amount">0</span><div class="bar-fill" style="height:2px"></div><span class="bar-label">Fev</span></div>
+                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Mar</span></div>
+                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Avr</span></div>
+                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Mai</span></div>
+                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Jun</span></div>
+                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Jul</span></div>
+                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Aou</span></div>
+                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Sep</span></div>
+                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Oct</span></div>
+                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Nov</span></div>
+                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Dec</span></div>
+                </div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.35s">
+                <div class="table-header" style="padding:0 0 16px;">Simulation charges (micro-entreprise)</div>
+                <div style="margin-bottom:16px;">
+                    <label style="font-size:0.8rem;color:var(--text-light);display:block;margin-bottom:6px;">CA annuel HT simule</label>
+                    <input type="number" class="sim-input" id="sim-ca" value="50000" oninput="updateSim()">
+                </div>
+                <div id="sim-results">
+                    <div class="sim-row"><span class="sim-label">CA annuel HT</span><span class="sim-value" id="sim-ca-val">50 000€</span></div>
+                    <div class="sim-row"><span class="sim-label">URSSAF (23.1%)</span><span class="sim-value negative" id="sim-urssaf">-11 550€</span></div>
+                    <div class="sim-row"><span class="sim-label">Versement liberatoire IR (2.2%)</span><span class="sim-value negative" id="sim-ir">-1 100€</span></div>
+                    <div class="sim-row"><span class="sim-label">CFE (estimee)</span><span class="sim-value negative" id="sim-cfe">-500€</span></div>
+                    <div class="sim-row" style="border-top:2px solid var(--text);padding-top:12px;margin-top:4px;"><span class="sim-label" style="font-weight:700;color:var(--text);">Resultat net</span><span class="sim-value positive" id="sim-net" style="font-size:1.1rem;">36 850€</span></div>
+                    <div class="sim-row"><span class="sim-label">Soit par mois</span><span class="sim-value positive" id="sim-monthly">3 071€</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== DEVIS & FACTURES ===== -->
+    <div class="tab" id="tab-devis">
+        <h1 class="page-title">Devis & Factures</h1>
+        <p class="page-subtitle">Suivi Pennylane — <a href="https://app.pennylane.com/companies/24159587/client_documents/quotes" target="_blank" style="color:var(--primary);text-decoration:none;">Devis ↗</a> · <a href="https://app.pennylane.com/companies/24159587/client_documents/invoices" target="_blank" style="color:var(--primary);text-decoration:none;">Factures ↗</a></p>
+
+        <div class="grid grid-3">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">Devis en attente</div>
+                <div class="card-value accent">5</div>
+                <div class="card-sub">36 400€ potentiels</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">Devis factures</div>
+                <div class="card-value success">1</div>
+                <div class="card-sub">3 000€</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Factures payees</div>
+                <div class="card-value primary">1</div>
+                <div class="card-sub">3 000€ encaisses</div>
+            </div>
+        </div>
+
+        <div class="card table-card fade-in" style="animation-delay:0.25s">
+            <div class="table-header">Devis 2026</div>
+            <table>
+                <thead><tr><th>Date</th><th>Client</th><th>Objet</th><th>Montant</th><th>Statut</th><th>Lien</th></tr></thead>
+                <tbody>
+                    <tr><td>04/02</td><td>L.I.Partners</td><td>Refonte site web</td><td>8 400€</td><td><span class="badge badge-orange">En attente</span></td><td><a href="https://app.pennylane.com/companies/24159587/client_documents/quotes" target="_blank" style="color:var(--primary)">Voir ↗</a></td></tr>
+                    <tr><td>04/02</td><td>L.I.Partners</td><td>Refonte site web</td><td>8 400€</td><td><span class="badge badge-orange">En attente</span></td><td><a href="https://app.pennylane.com/companies/24159587/client_documents/quotes" target="_blank" style="color:var(--primary)">Voir ↗</a></td></tr>
+                    <tr><td>04/02</td><td>L.I.Partners</td><td>Refonte site web</td><td>8 400€</td><td><span class="badge badge-orange">En attente</span></td><td><a href="https://app.pennylane.com/companies/24159587/client_documents/quotes" target="_blank" style="color:var(--primary)">Voir ↗</a></td></tr>
+                    <tr><td>04/02</td><td>L.I.Partners</td><td>Refonte site web</td><td>7 800€</td><td><span class="badge badge-orange">En attente</span></td><td><a href="https://app.pennylane.com/companies/24159587/client_documents/quotes" target="_blank" style="color:var(--primary)">Voir ↗</a></td></tr>
+                    <tr><td>30/01</td><td>Entretien Zen</td><td>Site Internet 3.0</td><td>2 000€</td><td><span class="badge badge-orange">En attente</span></td><td><a href="https://app.pennylane.com/companies/24159587/client_documents/quotes" target="_blank" style="color:var(--primary)">Voir ↗</a></td></tr>
+                    <tr><td>27/01</td><td>Habitat Multi Services</td><td>Site vitrine</td><td>3 000€</td><td><span class="badge badge-green">Facture</span></td><td><a href="https://app.pennylane.com/companies/24159587/client_documents/quotes" target="_blank" style="color:var(--primary)">Voir ↗</a></td></tr>
+                    <tr><td>08/01</td><td>FIDOLUX</td><td>Portail Client</td><td>9 700€</td><td><span class="badge badge-orange">En attente</span></td><td><a href="https://app.pennylane.com/companies/24159587/client_documents/quotes" target="_blank" style="color:var(--primary)">Voir ↗</a></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card table-card fade-in" style="animation-delay:0.3s;margin-top:20px;">
+            <div class="table-header">Factures 2026</div>
+            <table>
+                <thead><tr><th>Date</th><th>Client</th><th>Montant</th><th>Statut</th></tr></thead>
+                <tbody>
+                    <tr><td>27/01/2026</td><td>Habitat Multi Services</td><td>3 000€</td><td><span class="badge badge-green">Payee</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ===== ABONNEMENTS ===== -->
+    <div class="tab" id="tab-abonnements">
+        <h1 class="page-title">Abonnements</h1>
+        <p class="page-subtitle">Charges fixes mensuelles</p>
+
+        <div class="grid grid-3">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">Total mensuel estime</div>
+                <div class="card-value primary" id="abo-total">~50€</div>
+                <div class="card-sub">a completer</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">Outils actifs</div>
+                <div class="card-value accent">6</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Prochain renouvellement</div>
+                <div class="card-value primary">--</div>
+            </div>
+        </div>
+
+        <div class="card table-card fade-in" style="animation-delay:0.25s">
+            <div class="table-header">Liste des abonnements</div>
+            <table>
+                <thead><tr><th>Outil</th><th>Cout/mois</th><th>Categorie</th><th>Notes</th></tr></thead>
+                <tbody>
+                    <tr><td>Hostinger</td><td>~10€</td><td><span class="badge badge-blue">Infrastructure</span></td><td>Hebergement sites clients</td></tr>
+                    <tr><td>Brevo</td><td>Gratuit</td><td><span class="badge badge-green">Marketing</span></td><td>Plan gratuit, newsletters</td></tr>
+                    <tr><td>Pennylane</td><td>?</td><td><span class="badge badge-orange">Comptabilite</span></td><td>Devis + factures</td></tr>
+                    <tr><td>Cloudflare</td><td>Gratuit</td><td><span class="badge badge-blue">Infrastructure</span></td><td>DNS + domaines</td></tr>
+                    <tr><td>Anthropic / OpenAI</td><td>~30€</td><td><span class="badge badge-gray">Outils IA</span></td><td>APIs</td></tr>
+                    <tr><td>Clawdbot</td><td>Gratuit</td><td><span class="badge badge-gray">Outils IA</span></td><td>Assistante Claudia</td></tr>
+                    <tr><td style="color:var(--text-light);font-style:italic">Figma ?</td><td>?</td><td><span class="badge badge-gray">Design</span></td><td style="color:var(--text-light)">A ajouter</td></tr>
+                    <tr><td style="color:var(--text-light);font-style:italic">Telephone pro ?</td><td>?</td><td><span class="badge badge-gray">Telecom</span></td><td style="color:var(--text-light)">A ajouter</td></tr>
+                    <tr><td style="color:var(--text-light);font-style:italic">RC Pro / Assurance ?</td><td>?</td><td><span class="badge badge-gray">Assurance</span></td><td style="color:var(--text-light)">A ajouter</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="color:var(--text-light);font-size:0.85rem;margin-top:16px;text-align:center;">Complete cette liste ! Dis a Claudia tes abonnements manquants.</p>
+    </div>
+
+    <!-- ===== CALENDRIER ===== -->
+    <div class="tab" id="tab-calendrier">
+        <h1 class="page-title">Calendrier</h1>
+        <p class="page-subtitle" id="cal-subtitle"></p>
+
+        <div class="grid grid-3">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">RDV aujourd'hui</div>
+                <div class="card-value primary" id="cal-today">--</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">RDV cette semaine</div>
+                <div class="card-value accent" id="cal-week">--</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Prochain RDV</div>
+                <div class="card-value primary" id="cal-next" style="font-size:1.2rem;">--</div>
+            </div>
+        </div>
+
+        <div class="card fade-in" style="animation-delay:0.25s;padding:24px;">
+            <div style="font-weight:600;margin-bottom:16px;">Semaine en cours</div>
+            <div class="week-grid" id="week-view"></div>
+        </div>
+
+        <div class="card fade-in" style="animation-delay:0.3s;margin-top:20px;padding:24px;text-align:center;">
+            <div style="font-size:2rem;margin-bottom:12px;">📅</div>
+            <div style="font-weight:600;margin-bottom:8px;">Connecte au calendrier Apple via Claudia</div>
+            <div style="color:var(--text-light);font-size:0.9rem;">Demande "briefing" ou "planning de la semaine" pour voir tes RDV.</div>
+        </div>
+    </div>
+
+    <!-- ===== PROSPECTION ===== -->
+    <div class="tab" id="tab-prospection">
+        <h1 class="page-title">Prospection</h1>
+        <p class="page-subtitle">Suivi des sessions de prospection</p>
+
+        <div class="grid grid-4">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">Prospects a contacter</div>
+                <div class="card-value accent">71</div>
+                <div class="card-sub">dans le pipeline</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">Appels ce mois</div>
+                <div class="card-value primary">0</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Taux conversion</div>
+                <div class="card-value primary">--</div>
+                <div class="card-sub">pas assez de donnees</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <div class="card-label">RDV obtenus</div>
+                <div class="card-value success">0</div>
+                <div class="card-sub">ce mois</div>
+            </div>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card fade-in" style="animation-delay:0.3s">
+                <div style="font-weight:600;margin-bottom:16px;">Objectifs du mois</div>
+                <div style="margin-bottom:14px;">
+                    <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:0.88rem;">Appels</span><span style="color:var(--accent);font-weight:600;font-size:0.88rem;">0 / 50</span></div>
+                    <div class="progress-bar"><div class="progress-fill accent" style="width:0%"></div></div>
+                </div>
+                <div style="margin-bottom:14px;">
+                    <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:0.88rem;">RDV obtenus</span><span style="color:var(--primary);font-weight:600;font-size:0.88rem;">0 / 5</span></div>
+                    <div class="progress-bar"><div class="progress-fill primary" style="width:0%"></div></div>
+                </div>
+                <div>
+                    <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:0.88rem;">Devis envoyes</span><span style="color:var(--success);font-weight:600;font-size:0.88rem;">0 / 3</span></div>
+                    <div class="progress-bar"><div class="progress-fill success" style="width:0%"></div></div>
+                </div>
+            </div>
+            <div class="card table-card fade-in" style="animation-delay:0.35s">
+                <div class="table-header">Prospects par zone</div>
+                <table>
+                    <thead><tr><th>Zone</th><th>Prospects</th><th>Secteur</th></tr></thead>
+                    <tbody>
+                        <tr><td>Luxembourg</td><td>~20</td><td>Fiduciaires, cabinets</td></tr>
+                        <tr><td>Alsace / Moselle</td><td>~40</td><td>BTP, industrie</td></tr>
+                        <tr><td>Ile-de-France</td><td>~10</td><td>Services, PME</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <!-- ===== SITES WORDPRESS ===== -->
     <div class="tab" id="tab-sites">
         <h1 class="page-title">Sites WordPress</h1>
@@ -953,6 +1571,111 @@
     }
     updateClock();
     setInterval(updateClock, 30000);
+
+    // Toggle Pipeline view (table/kanban)
+    function togglePipelineView(view, btn) {
+        btn.parentElement.querySelectorAll('.view-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('pipeline-table').classList.toggle('active', view === 'table');
+        document.getElementById('pipeline-kanban').classList.toggle('active', view === 'kanban');
+
+        // Re-trigger kanban animations
+        if (view === 'kanban') {
+            document.querySelectorAll('#pipeline-kanban .kanban-card').forEach(el => {
+                el.style.animation = 'none';
+                el.offsetHeight;
+                el.style.animation = '';
+            });
+        }
+    }
+
+    // Populate Pipeline Kanban from table data
+    function populatePipelineKanban() {
+        const rows = document.querySelectorAll('#pipeline-list tr');
+        const buckets = { new: [], sent: [], signed: [], lost: [] };
+
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            if (cells.length < 4) return;
+            const name = cells[0].textContent.trim();
+            const contact = cells[1].textContent.trim();
+            const value = cells[2].textContent.trim();
+            const stage = cells[3].textContent.trim();
+
+            let bucket = 'new';
+            if (stage.includes('Mail envoyé') || stage.includes('À rappeler')) bucket = 'sent';
+            else if (stage.includes('Pas intéressé')) bucket = 'lost';
+            else if (stage.includes('Signé') || stage.includes('Client')) bucket = 'signed';
+
+            buckets[bucket].push({ name, contact, value, stage });
+        });
+
+        const badgeMap = { new: 'badge-blue', sent: 'badge-orange', signed: 'badge-green', lost: 'badge-gray' };
+
+        Object.keys(buckets).forEach(key => {
+            const container = document.getElementById('pk-' + key);
+            const countEl = document.getElementById('pk-' + key + '-count');
+            container.innerHTML = '';
+            countEl.textContent = buckets[key].length;
+
+            buckets[key].forEach((item, i) => {
+                const card = document.createElement('div');
+                card.className = 'kanban-card';
+                card.style.animationDelay = (0.05 + i * 0.04) + 's';
+                card.innerHTML = `
+                    <div class="kanban-card-title">${item.name}</div>
+                    <div class="kanban-card-desc">${item.contact}${item.value !== '--' ? ' — ' + item.value : ''}</div>
+                    <span class="badge ${badgeMap[key]}">${item.stage.replace(/[🎯📧❌🔄✅]/g, '').trim()}</span>
+                `;
+                container.appendChild(card);
+            });
+        });
+    }
+
+    populatePipelineKanban();
+
+    // Finance simulator
+    function updateSim() {
+        const ca = parseFloat(document.getElementById('sim-ca').value) || 0;
+        const urssaf = ca * 0.231;
+        const ir = ca * 0.022;
+        const cfe = 500;
+        const net = ca - urssaf - ir - cfe;
+        const monthly = net / 12;
+        const fmt = (n) => n.toLocaleString('fr-FR', {maximumFractionDigits: 0}) + '€';
+        document.getElementById('sim-ca-val').textContent = fmt(ca);
+        document.getElementById('sim-urssaf').textContent = '-' + fmt(urssaf);
+        document.getElementById('sim-ir').textContent = '-' + fmt(ir);
+        document.getElementById('sim-cfe').textContent = '-' + fmt(cfe);
+        document.getElementById('sim-net').textContent = fmt(net);
+        document.getElementById('sim-net').className = 'sim-value ' + (net >= 0 ? 'positive' : 'negative');
+        document.getElementById('sim-monthly').textContent = fmt(monthly);
+        document.getElementById('sim-monthly').className = 'sim-value ' + (monthly >= 0 ? 'positive' : 'negative');
+    }
+
+    // Calendar week view
+    function buildWeek() {
+        const today = new Date();
+        const day = today.getDay();
+        const monday = new Date(today);
+        monday.setDate(today.getDate() - (day === 0 ? 6 : day - 1));
+        const days = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'];
+        const container = document.getElementById('week-view');
+        if (!container) return;
+        container.innerHTML = '';
+        for (let i = 0; i < 7; i++) {
+            const d = new Date(monday);
+            d.setDate(monday.getDate() + i);
+            const isToday = d.toDateString() === today.toDateString();
+            container.innerHTML += '<div class="week-day' + (isToday ? ' today' : '') + '"><div class="week-day-label">' + days[i] + '</div><div class="week-day-num">' + d.getDate() + '</div>' + (isToday ? '<div style="font-size:0.78rem;color:var(--primary);font-weight:600;">Aujourd\'hui</div>' : '') + '</div>';
+        }
+        const subtitle = document.getElementById('cal-subtitle');
+        if (subtitle) {
+            const mois = today.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+            subtitle.textContent = 'Semaine du ' + monday.getDate() + ' au ' + new Date(monday.getTime() + 6*86400000).getDate() + ' ' + mois;
+        }
+    }
+    buildWeek();
 
     // Filter tables
     function filterTable(tbodyId, filter, btn) {
