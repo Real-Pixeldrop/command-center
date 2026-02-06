@@ -1536,7 +1536,12 @@
         <div class="card table-card fade-in" style="animation-delay:0.3s">
             <div class="table-header">Clients</div>
             <table>
-                <thead><tr><th>Client</th><th>CA total</th><th>Site</th><th>Dernier Contact</th></tr></thead>
+                <thead><tr>
+                    <th style="cursor:pointer" onclick="sortClientsTable(0,'alpha',this)">Client <span class="sort-icon"></span></th>
+                    <th style="cursor:pointer" onclick="sortClientsTable(1,'num',this)">CA total <span class="sort-icon"></span></th>
+                    <th style="cursor:pointer" onclick="sortClientsTable(2,'alpha',this)">Site <span class="sort-icon"></span></th>
+                    <th style="cursor:pointer" onclick="sortClientsTable(3,'date',this)">Dernier Contact <span class="sort-icon"></span></th>
+                </tr></thead>
                 <tbody id="clients-list">${rows}</tbody>
             </table>
         </div>`;
@@ -2717,6 +2722,38 @@
 
         document.getElementById('client-panel').classList.add('open');
         document.getElementById('client-panel-overlay').classList.add('visible');
+    }
+
+    let clientSortCol = -1;
+    let clientSortAsc = true;
+    function sortClientsTable(colIdx, type, thEl) {
+        const tbody = document.getElementById('clients-list');
+        if (!tbody) return;
+        if (clientSortCol === colIdx) { clientSortAsc = !clientSortAsc; } else { clientSortCol = colIdx; clientSortAsc = true; }
+        // Update icons
+        thEl.closest('tr').querySelectorAll('.sort-icon').forEach(function(s) { s.textContent = ''; });
+        thEl.querySelector('.sort-icon').textContent = clientSortAsc ? ' ▲' : ' ▼';
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        rows.sort(function(a, b) {
+            const cellA = a.cells[colIdx]; const cellB = b.cells[colIdx];
+            if (!cellA || !cellB) return 0;
+            let vA = cellA.textContent.trim(); let vB = cellB.textContent.trim();
+            if (type === 'num') {
+                const nA = parseFloat(vA.replace(/[^0-9,.-]/g, '').replace(',', '.')) || 0;
+                const nB = parseFloat(vB.replace(/[^0-9,.-]/g, '').replace(',', '.')) || 0;
+                return clientSortAsc ? nA - nB : nB - nA;
+            } else if (type === 'date') {
+                // Format JJ-MM-AAAA -> sortable
+                const pA = vA.split('-'); const pB = vB.split('-');
+                const dA = pA.length === 3 ? pA[2] + pA[1] + pA[0] : '00000000';
+                const dB = pB.length === 3 ? pB[2] + pB[1] + pB[0] : '00000000';
+                return clientSortAsc ? dA.localeCompare(dB) : dB.localeCompare(dA);
+            } else {
+                vA = vA.toLowerCase(); vB = vB.toLowerCase();
+                return clientSortAsc ? vA.localeCompare(vB) : vB.localeCompare(vA);
+            }
+        });
+        rows.forEach(function(r) { tbody.appendChild(r); });
     }
 
     function closeClientPanel() {
