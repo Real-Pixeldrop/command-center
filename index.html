@@ -150,9 +150,12 @@
             transition: margin-left 0.3s ease;
             min-height: 100vh;
             padding: 35px 40px;
+            overflow-x: hidden;
+            max-width: calc(100vw - var(--sidebar-width));
+            box-sizing: border-box;
         }
 
-        .sidebar.collapsed ~ .main { margin-left: var(--sidebar-collapsed); }
+        .sidebar.collapsed ~ .main { margin-left: var(--sidebar-collapsed); max-width: calc(100vw - var(--sidebar-collapsed)); }
 
         .tab { display: none; }
         .tab.active { display: block; }
@@ -170,7 +173,7 @@
         }
 
         /* ===== CARDS ===== */
-        .grid { display: grid; gap: 20px; margin-bottom: 30px; }
+        .grid { display: grid; gap: 20px; margin-bottom: 30px; max-width: 100%; }
         .grid-4 { grid-template-columns: repeat(4, 1fr); }
         .grid-3 { grid-template-columns: repeat(3, 1fr); }
         .grid-2 { grid-template-columns: repeat(2, 1fr); }
@@ -216,7 +219,7 @@
         .card-full { grid-column: 1 / -1; }
 
         /* ===== TABLES ===== */
-        .table-card { overflow: hidden; padding: 0; }
+        .table-card { overflow-x: auto; overflow-y: hidden; padding: 0; max-width: 100%; }
 
         .table-header {
             padding: 18px 24px;
