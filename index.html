@@ -1436,7 +1436,12 @@
             const telHtml = c.telephone ? `<a href="tel:${esc(c.telephone)}" style="color:var(--primary)">${esc(c.telephone)}</a>` : '--';
             const emailHtml = c.email ? '<a href="mailto:' + esc(c.email) + '" style="color:var(--primary)">' + esc(c.email) + '</a>' : '--';
             const ageDays = clientContactAgeDays(c.dernier_contact);
-            return `<tr data-contact-age="${ageDays}"><td>${esc(c.nom)}</td><td>${telHtml}</td><td>${emailHtml}</td><td>${esc(c.site)}</td><td>${c.dernier_contact || '--'}</td><td><span class="badge ${badgeClass(c.statut)}">${esc(c.statut)}</span></td></tr>`;
+            let contactHtml = '--';
+            if (c.dernier_contact) {
+                const color = ageDays > 180 ? '#e74c3c' : ageDays > 90 ? '#f39c12' : 'var(--success)';
+                contactHtml = '<span style="color:' + color + ';font-weight:600">' + esc(c.dernier_contact) + '</span>';
+            }
+            return `<tr data-contact-age="${ageDays}"><td>${esc(c.nom)}</td><td>${telHtml}</td><td>${emailHtml}</td><td>${esc(c.site)}</td><td>${contactHtml}</td><td><span class="badge ${badgeClass(c.statut)}">${esc(c.statut)}</span></td></tr>`;
         }).join('');
 
         document.getElementById('clients-content').innerHTML = `
