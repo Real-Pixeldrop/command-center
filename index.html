@@ -1442,7 +1442,7 @@
         const enRetard = projets.filter(p => p.statut === 'En retard');
         const livres = projets.filter(p => p.statut === 'Livre').length;
 
-        let rows = projets.map(p => `<tr><td>${esc(p.nom)}</td><td>${esc(p.client)}</td><td>${esc(p.type)}</td><td>${esc(p.deadline)}</td><td><span class="badge ${badgeClass(p.statut)}">${esc(p.statut)}</span></td></tr>`).join('');
+        let rows = projets.map(p => `<tr onclick="openProjetPanel('${esc(p.nom).replace(/'/g, "\\'")}')" style="cursor:pointer"><td>${esc(p.nom)}</td><td>${esc(p.client)}</td><td>${esc(p.type)}</td><td>${esc(p.deadline)}</td><td><span class="badge ${badgeClass(p.statut)}">${esc(p.statut)}</span></td></tr>`).join('');
 
         document.getElementById('projets-content').innerHTML = `
         <div class="grid grid-3">
@@ -2699,7 +2699,7 @@
                         '<h2 style="font-size:1.2rem;font-weight:700;margin:0 0 2px;">' + esc(client.nom) + '</h2>' +
                         (nomEntreprise && nomEntreprise.toLowerCase() !== client.nom.toLowerCase() ? '<div style="font-size:0.8rem;color:var(--text-light);">' + esc(nomEntreprise) + '</div>' : '') +
                     '</div>' +
-                    '<button onclick="closeClientPanel()" style="background:none;border:none;cursor:pointer;font-size:1.3rem;color:var(--text-light);line-height:1;padding:4px 8px;">✕</button>' +
+                    '<button onclick="closePanel()" style="background:none;border:none;cursor:pointer;font-size:1.3rem;color:var(--text-light);line-height:1;padding:4px 8px;">✕</button>' +
                 '</div>' +
                 (siretFmt ? '<div style="font-size:0.75rem;color:var(--text-light);margin-top:6px;">SIRET ' + esc(siretFmt) + '</div>' : '') +
                 // CA badge
@@ -2772,13 +2772,99 @@
         rows.forEach(function(r) { tbody.appendChild(r); });
     }
 
-    function closeClientPanel() {
+    // ===== PROJET PANEL =====
+    function openProjetPanel(projetNom) {
+        const projet = DATA.projets.find(function(p) { return p.nom === projetNom; });
+        if (!projet) return;
+
+        // Find associated client (flexible match)
+        const projetClientLower = (projet.client || '').toLowerCase();
+        const client = DATA.clients.find(function(c) {
+            const cNom = (c.nom || '').toLowerCase();
+            return cNom.includes(projetClientLower) || projetClientLower.includes(cNom);
+        }) || null;
+
+        const sectionTitle = function(t) { return '<div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-light);font-weight:600;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border);">' + t + '</div>'; };
+        const infoRow = function(label, value) { return '<div style="display:flex;justify-content:space-between;padding:5px 0;font-size:0.85rem;"><span style="color:var(--text-light);font-weight:500;">' + label + '</span><span style="text-align:right;max-width:65%;">' + value + '</span></div>'; };
+
+        // Client info
+        const tel = client ? (client.telephone || '') : '';
+        const email = client ? (client.email || '') : '';
+        const telHtml = tel ? '<a href="tel:' + esc(tel) + '" style="color:var(--primary);text-decoration:none;">' + esc(tel) + '</a>' : '--';
+        const emailHtml = email ? '<a href="mailto:' + esc(email) + '" style="color:var(--primary);text-decoration:none;">' + esc(email) + '</a>' : '--';
+
+        // Details from PROJET.md
+        const details = projet.details || null;
+        const urlHtml = details && details.url ? '<a href="' + esc(details.url) + '" target="_blank" style="color:var(--primary);text-decoration:none;">' + esc(details.url) + ' ↗</a>' : null;
+
+        // Suivi notes (from client if available)
+        const suivi = client && client.suivi && client.suivi.length > 0 ? client.suivi : [];
+
+        // Client name clickable
+        const clientNameHtml = client
+            ? '<a href="javascript:void(0)" onclick="openClientPanel(\'' + esc(client.nom).replace(/'/g, "\\'") + '\')" style="color:var(--primary);text-decoration:none;font-weight:500;">' + esc(projet.client) + '</a>'
+            : esc(projet.client);
+
+        const panelHtml = '<div style="padding:0;">' +
+            // Header
+            '<div style="padding:20px 24px 16px;border-bottom:1px solid var(--border);background:var(--bg);">' +
+                '<div style="display:flex;justify-content:space-between;align-items:start;">' +
+                    '<div>' +
+                        '<h2 style="font-size:1.2rem;font-weight:700;margin:0 0 4px;">' + esc(projet.nom) + '</h2>' +
+                        '<div style="font-size:0.85rem;color:var(--text-light);">' + clientNameHtml + '</div>' +
+                    '</div>' +
+                    '<button onclick="closePanel()" style="background:none;border:none;cursor:pointer;font-size:1.3rem;color:var(--text-light);line-height:1;padding:4px 8px;">✕</button>' +
+                '</div>' +
+                '<div style="margin-top:10px;"><span class="badge ' + badgeClass(projet.statut) + '">' + esc(projet.statut) + '</span></div>' +
+            '</div>' +
+            // Body
+            '<div style="padding:20px 24px;">' +
+                // Infos
+                sectionTitle('Infos') +
+                '<div style="margin-bottom:20px;">' +
+                    infoRow('Type', esc(projet.type)) +
+                    infoRow('Deadline', esc(projet.deadline || '--')) +
+                    (urlHtml ? infoRow('URL', urlHtml) : '') +
+                    (details && details.activite ? infoRow('Activité', esc(details.activite)) : '') +
+                '</div>' +
+                // Client
+                sectionTitle('Client') +
+                '<div style="margin-bottom:20px;">' +
+                    infoRow('Nom', clientNameHtml) +
+                    infoRow('Tel', telHtml) +
+                    infoRow('Email', emailHtml) +
+                '</div>' +
+                // Details (PROJET.md notes)
+                (details && details.notes ?
+                    sectionTitle('Details') +
+                    '<div style="margin-bottom:20px;">' +
+                        '<pre style="font-size:0.82rem;font-family:Inter,sans-serif;white-space:pre-wrap;word-break:break-word;color:var(--text);line-height:1.6;margin:0;padding:12px;background:var(--bg);border-radius:8px;border:1px solid var(--border);">' + esc(details.notes) + '</pre>' +
+                    '</div>'
+                : '') +
+                // Suivi
+                sectionTitle('Suivi') +
+                '<div style="margin-bottom:20px;">' +
+                    (suivi.length > 0
+                        ? suivi.map(function(s) { return '<div style="padding:6px 0;border-bottom:1px solid var(--border);font-size:0.85rem;"><span style="color:var(--text-light);font-size:0.75rem;margin-right:8px;">' + fmtDate(s.date) + '</span>' + esc(s.note) + '</div>'; }).join('')
+                        : '<div style="color:var(--text-light);font-size:0.85rem;">Aucune note</div>') +
+                '</div>' +
+            '</div>' +
+        '</div>';
+
+        document.getElementById('client-panel').innerHTML = panelHtml;
+        document.getElementById('client-panel').classList.add('open');
+        document.getElementById('client-panel-overlay').classList.add('visible');
+    }
+
+    function closePanel() {
         document.getElementById('client-panel').classList.remove('open');
         document.getElementById('client-panel-overlay').classList.remove('visible');
     }
+    // Backwards compat alias
+    function closeClientPanel() { closePanel(); }
 </script>
 
-<div class="client-panel-overlay" id="client-panel-overlay" onclick="closeClientPanel()"></div>
+<div class="client-panel-overlay" id="client-panel-overlay" onclick="closePanel()"></div>
 <div class="client-panel" id="client-panel"></div>
 </body>
 </html>

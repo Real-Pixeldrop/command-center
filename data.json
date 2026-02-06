@@ -131,539 +131,644 @@
       "client": "Habitat Multi-Service",
       "type": "Site vitrine",
       "deadline": "A planifier",
-      "statut": "En retard"
+      "statut": "En retard",
+      "details": null
     },
     {
       "nom": "Plaza Tango Festival 2026",
       "client": "Plaza Tango",
       "type": "Evenementiel",
       "deadline": "24 avr 2026",
-      "statut": "En cours"
+      "statut": "En cours",
+      "details": {
+        "url": "https://festival.plazatango.com",
+        "activite": "Festival de Tango",
+        "notes": "Hébergement IONOS (pas Hostinger). WordPress API : aklig / QFa6 IOsi aGin l8OS kZF6 BaQb. SEO : 51 requêtes, 24 pages indexées. Impression programme : 250 ex A5 36 pages. Demandes Eva (02/02) : modifier programme, ajouter Lola, bio Eva, José Cloquell. SFTP : access801516635.webspace-data.io."
+      }
     },
     {
       "nom": "Consulting croissance",
       "client": "Derniere Dispo",
       "type": "Consulting",
       "deadline": "Continu",
-      "statut": "En cours"
+      "statut": "En cours",
+      "details": {
+        "url": "https://dernieredispo.com",
+        "activite": "Marketplace lieux événementiels",
+        "notes": "Consulting gratuit. ~363 lieux référencés (objectif 1000 fin 2026). Dashboard : https://real-pixeldrop.github.io/derniere-dispo-dashboard/. Problèmes : newsletter non optimale, croissance trop lente. Gérant : Yoann, Commercial : Driss. Call 45min le 5 fév 2026. Statut V2 : TERMINÉ."
+      }
     },
     {
       "nom": "Check hebdo sites WP",
       "client": "Pixel Drop",
       "type": "Maintenance",
       "deadline": "Recurrent",
-      "statut": "En cours"
+      "statut": "En cours",
+      "details": null
     },
     {
       "nom": "Derniere Dispo V2",
       "client": "Yoann / Driss",
       "type": "Marketplace",
       "deadline": "--",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": {
+        "url": "https://dernieredispo.com",
+        "activite": "Marketplace lieux événementiels",
+        "notes": "Consulting gratuit. ~363 lieux référencés (objectif 1000 fin 2026). Dashboard : https://real-pixeldrop.github.io/derniere-dispo-dashboard/. Problèmes : newsletter non optimale, croissance trop lente. Gérant : Yoann, Commercial : Driss. Call 45min le 5 fév 2026. Statut V2 : TERMINÉ."
+      }
     },
     {
       "nom": "CRW Lyon",
       "client": "Nicolas Crapanne",
       "type": "Site vitrine",
       "deadline": "--",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Dashboard Derniere Dispo",
       "client": "Derniere Dispo",
       "type": "Dashboard",
       "deadline": "--",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": {
+        "url": "https://dernieredispo.com",
+        "activite": "Marketplace lieux événementiels",
+        "notes": "Consulting gratuit. ~363 lieux référencés (objectif 1000 fin 2026). Dashboard : https://real-pixeldrop.github.io/derniere-dispo-dashboard/. Problèmes : newsletter non optimale, croissance trop lente. Gérant : Yoann, Commercial : Driss. Call 45min le 5 fév 2026. Statut V2 : TERMINÉ."
+      }
     },
     {
       "nom": "Développement une page (Anavia)",
       "client": "Anavia",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Création site web",
       "client": "Anavia",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Renouvellement nom de domaine + Hébérgement",
       "client": "Au Cerf",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Renouvellement nom de domaine + hébérgement",
       "client": "Au Cerf",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "creation site web (Au Cerf)",
       "client": "Au Cerf",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Babeta SINGLE PAGE",
       "client": "Babeta",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Email pro",
       "client": "Babeta",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Renouvellement nom de domaine + hébérgement",
       "client": "Babeta",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Refonte site web",
       "client": "Baptiste Beloeil",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Optimisation Black Trombonne",
       "client": "Black Trombone",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": {
+        "url": "https://www.black-trombone.fr",
+        "activite": "Agence événementielle (CSE, entreprises)",
+        "notes": "GA4 Property ID: 486963419. Search Console en attente (demande accès 02/02/2026). Analyse SEO réalisée 04/02/2026 : baisse impressions depuis avril, position améliorée (38→27). Opportunités : \"agence evenementiel paris\" (609 imp/mois, pos 29). Mail analyse envoyé à Johan. Plugins à jour au 02/02/2026."
+      }
     },
     {
       "nom": "Dernière Dispo 1/2",
       "client": "Black Trombone",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": {
+        "url": "https://www.black-trombone.fr",
+        "activite": "Agence événementielle (CSE, entreprises)",
+        "notes": "GA4 Property ID: 486963419. Search Console en attente (demande accès 02/02/2026). Analyse SEO réalisée 04/02/2026 : baisse impressions depuis avril, position améliorée (38→27). Opportunités : \"agence evenementiel paris\" (609 imp/mois, pos 29). Mail analyse envoyé à Johan. Plugins à jour au 02/02/2026."
+      }
     },
     {
       "nom": "Dernière Dispo 2/2",
       "client": "Black Trombone",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": {
+        "url": "https://www.black-trombone.fr",
+        "activite": "Agence événementielle (CSE, entreprises)",
+        "notes": "GA4 Property ID: 486963419. Search Console en attente (demande accès 02/02/2026). Analyse SEO réalisée 04/02/2026 : baisse impressions depuis avril, position améliorée (38→27). Opportunités : \"agence evenementiel paris\" (609 imp/mois, pos 29). Mail analyse envoyé à Johan. Plugins à jour au 02/02/2026."
+      }
     },
     {
       "nom": "nom de domaine + hébérgement",
       "client": "CRW Lyon",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Refonte web",
       "client": "Cinelite",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Cinéloges",
       "client": "Cineloges",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Cothidance",
       "client": "Cothidance",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Maintenance COTHIDANCE",
       "client": "Cothidance",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Refonte site web (Blog)",
       "client": "Eagle Rocket",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "MAJ",
       "client": "Eagle Rocket",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Création site web (Eagle Rocket)",
       "client": "Eagle Rocket",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Etheos (1)",
       "client": "Etheos",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Fidolux 1/2",
       "client": "Fidolux",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Fidolux 2/2",
       "client": "Fidolux",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Newsletter",
       "client": "GROUPE MEDIA DES TERRITOIRES",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Création site web",
       "client": "GROUPE MEDIA DES TERRITOIRES",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Habitat Multi Services - Site vitrine",
       "client": "Habitat Multi Surfaces",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Flyer ",
       "client": "Holly Meals",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Correctifs ",
       "client": "Holly Meals",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Intervention",
       "client": "Holly Meals",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Création site web (Holly Meals)",
       "client": "Holly Meals",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Création site web",
       "client": "JAB",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "JAB 2 Formulaire",
       "client": "JAB",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Révision site web",
       "client": "JAB",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "LXB Estates",
       "client": "LXB Estates Luxembourg",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "LXB Construct (2/2)",
       "client": "LXB Estates Luxembourg",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "LXB Construct (1/2)",
       "client": "LXB Estates Luxembourg",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Maquette accueil react",
       "client": "La Toast Family",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Le portail vert (CBD)",
       "client": "Le portail vert",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Site Levée de fonds",
       "client": "Licorne Invest",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Site kiné",
       "client": "MAKE",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Page rénovation",
       "client": "Musée Richard Wagner",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Maintenance annuelle",
       "client": "Musée Richard Wagner",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Sections membres 1/2",
       "client": "Musée Richard Wagner",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Site offert partenaires",
       "client": "Musée Richard Wagner",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Sections membres 2/2",
       "client": "Musée Richard Wagner",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Renouvellement maintenance",
       "client": "Musée Richard Wagner",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Refonte Site Web",
       "client": "Musée Richard Wagner",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Développement design",
       "client": "Optimmo",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Refonte esthétique",
       "client": "Optimmo",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Site internet avocat",
       "client": "Pauline Tkhor Avocat",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Stéphanie Ludivine 1/2",
       "client": "Pépite Esthétique",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Stéphanie Ludivine 2/2",
       "client": "Pépite Esthétique",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Maintenance RCL",
       "client": "RCL",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Renouvellement Domaine + Hosting",
       "client": "RCL",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Brochure",
       "client": "SACO",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Site groupe musique",
       "client": "Sexeen",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Maintenance sexeen 1/2",
       "client": "Sexeen",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Site une page",
       "client": "Taimpel",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Cartes de visites 2",
       "client": "Taimpel",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Design Liste",
       "client": "Teamshifts",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Tiz collab Heinrich",
       "client": "Tiz",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Tiz collab Zoning SC Diamonds",
       "client": "Tiz",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "TIZ x Fun tech adventures",
       "client": "Tiz",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Services additonnels",
       "client": "VTC Swiss",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Optimisation ",
       "client": "VTC Swiss",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Module Avis",
       "client": "VTC Swiss",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Nouvelle opportunité",
       "client": "VTC Swiss",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Excel",
       "client": "VTC Swiss",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Refonte esthétique site web",
       "client": "VTC Swiss",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     },
     {
       "nom": "Refonte web",
       "client": "Warere",
       "type": "Site vitrine",
       "deadline": "",
-      "statut": "Livre"
+      "statut": "Livre",
+      "details": null
     }
   ],
   "clients": [
@@ -863,8 +968,8 @@
       "telephone": "06 12 24 65 82",
       "email": "contact@mcs-climatisation.fr",
       "ca_2025": 0,
-      "ca_2026": 3000.0,
-      "ca_total": 3000.0,
+      "ca_2026": 3000,
+      "ca_total": 3000,
       "nb_factures": 1,
       "nb_projets": 0,
       "dernier_contact": null,
@@ -1522,7 +1627,7 @@
       "nom": "Devis D-2026-0216",
       "client": "L.I.Partners",
       "montant": "8 400€",
-      "montant_num": 8400.0,
+      "montant_num": 8400,
       "statut": "en_attente",
       "date_envoi": "2026-02-04",
       "date_accepte": null,
@@ -1534,7 +1639,7 @@
       "nom": "Devis D-2026-0215",
       "client": "L.I.Partners",
       "montant": "8 400€",
-      "montant_num": 8400.0,
+      "montant_num": 8400,
       "statut": "en_attente",
       "date_envoi": "2026-02-04",
       "date_accepte": null,
@@ -1546,7 +1651,7 @@
       "nom": "Devis D-2026-0214",
       "client": "L.I.Partners",
       "montant": "8 400€",
-      "montant_num": 8400.0,
+      "montant_num": 8400,
       "statut": "en_attente",
       "date_envoi": "2026-02-04",
       "date_accepte": null,
@@ -1558,7 +1663,7 @@
       "nom": "Devis D-2026-0213",
       "client": "L.I.Partners",
       "montant": "7 800€",
-      "montant_num": 7800.0,
+      "montant_num": 7800,
       "statut": "en_attente",
       "date_envoi": "2026-02-04",
       "date_accepte": null,
@@ -1570,7 +1675,7 @@
       "nom": "Devis D-2026-0112",
       "client": "Entretien Zen",
       "montant": "2 000€",
-      "montant_num": 2000.0,
+      "montant_num": 2000,
       "statut": "en_attente",
       "date_envoi": "2026-01-30",
       "date_accepte": null,
@@ -1582,7 +1687,7 @@
       "nom": "Devis D-2026-0111",
       "client": "Habitat Multi Services",
       "montant": "100€",
-      "montant_num": 100.0,
+      "montant_num": 100,
       "statut": "en_attente",
       "date_envoi": "2026-01-30",
       "date_accepte": null,
@@ -1594,7 +1699,7 @@
       "nom": "Devis D-2026-0110",
       "client": "Habitat Multi Services",
       "montant": "3 000€",
-      "montant_num": 3000.0,
+      "montant_num": 3000,
       "statut": "accepte",
       "date_envoi": "2026-01-27",
       "date_accepte": "2026-01-27",
@@ -1606,7 +1711,7 @@
       "nom": "Devis D-2026-017",
       "client": "FIDOLUX",
       "montant": "9 700€",
-      "montant_num": 9700.0,
+      "montant_num": 9700,
       "statut": "en_attente",
       "date_envoi": "2026-01-08",
       "date_accepte": null,
