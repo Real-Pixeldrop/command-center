@@ -1490,6 +1490,8 @@
         const actifs = clients.filter(c => c.statut === 'Actif').length;
         const projetsActifs = clients.filter(c => c.statut === 'Projet en cours').length;
         const sansContact3m = clients.filter(c => clientContactAgeDays(c.dernier_contact) > 90).length;
+        const caTotal = clients.reduce((s, c) => s + (c.ca_total || 0), 0);
+        const caTotalFmt = Math.round(caTotal).toLocaleString('fr-FR');
 
         let rows = clients.map(c => {
             const telHtml = c.telephone ? `<a href="tel:${esc(c.telephone)}" style="color:var(--primary)">${esc(c.telephone)}</a>` : '--';
@@ -1500,7 +1502,8 @@
                 const color = ageDays > 90 ? '#e74c3c' : 'var(--success)';
                 contactHtml = '<span style="color:' + color + ';font-weight:600">' + esc(c.dernier_contact) + '</span>';
             }
-            return `<tr data-contact-age="${ageDays}" onclick="openClientPanel('${esc(c.nom).replace(/'/g, "\\'")}')" style="cursor:pointer"><td>${esc(c.nom)}</td><td>${telHtml}</td><td>${emailHtml}</td><td>${esc(c.site)}</td><td>${contactHtml}</td></tr>`;
+            const caHtml = (c.ca_total || 0) > 0 ? '<span style="font-weight:600;color:var(--success)">' + Math.round(c.ca_total).toLocaleString('fr-FR') + '€</span>' : '--';
+            return `<tr data-contact-age="${ageDays}" onclick="openClientPanel('${esc(c.nom).replace(/'/g, "\\'")}')" style="cursor:pointer"><td>${esc(c.nom)}</td><td>${caHtml}</td><td>${esc(c.site)}</td><td>${contactHtml}</td></tr>`;
         }).join('');
 
         document.getElementById('clients-content').innerHTML = `
@@ -1514,8 +1517,8 @@
                 <div class="card-value success">${actifs}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Projets en cours</div>
-                <div class="card-value accent">${projetsActifs}</div>
+                <div class="card-label">CA total</div>
+                <div class="card-value accent">${caTotalFmt}€</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.25s">
                 <div class="card-label">Sans contact > 3 mois</div>
@@ -1532,7 +1535,7 @@
         <div class="card table-card fade-in" style="animation-delay:0.3s">
             <div class="table-header">Clients</div>
             <table>
-                <thead><tr><th>Client</th><th>Tel</th><th>Email</th><th>Site</th><th>Dernier Contact</th></tr></thead>
+                <thead><tr><th>Client</th><th>CA total</th><th>Site</th><th>Dernier Contact</th></tr></thead>
                 <tbody id="clients-list">${rows}</tbody>
             </table>
         </div>`;
@@ -2595,16 +2598,18 @@
             return dClient.includes(nameLower) || nameLower.includes(dClient);
         });
 
-        // CA total = sum of devis with statut accepte or signe
-        const caTotal = clientDevis.reduce((sum, d) => {
-            const s = d.statut.toLowerCase();
-            if (s === 'accepte' || s === 'accepté' || s === 'signe' || s === 'signé') {
-                const montant = parseFloat((d.montant || '').replace(/[^0-9.,]/g, '').replace(',', '.')) || 0;
-                return sum + montant;
-            }
-            return sum;
-        }, 0);
-        const caFmt = caTotal.toLocaleString('fr-FR');
+        // Flexible matching for factures
+        const clientFactures = (DATA.factures || []).filter(f => {
+            const fClient = (f.client || '').toLowerCase();
+            return fClient.includes(nameLower) || nameLower.includes(fClient);
+        });
+
+        // Use pre-computed CA from data
+        const ca2025 = client.ca_2025 || 0;
+        const ca2026 = client.ca_2026 || 0;
+        const caTotal = client.ca_total || 0;
+        const ca2025Fmt = Math.round(ca2025).toLocaleString('fr-FR');
+        const ca2026Fmt = Math.round(ca2026).toLocaleString('fr-FR');
 
         // Contact info
         const tel = client.telephone || '';
@@ -2634,10 +2639,26 @@
         } else {
             devisHtml = clientDevis.map(d =>
                 '<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">' +
-                    '<div><div style="font-weight:600;font-size:0.88rem;">' + esc(d.objet) + '</div><div style="font-size:0.78rem;color:var(--text-light);">' + esc(d.date) + '</div></div>' +
+                    '<div><div style="font-weight:600;font-size:0.88rem;">' + esc(d.objet || d.nom) + '</div><div style="font-size:0.78rem;color:var(--text-light);">' + esc(d.date_envoi || d.date) + '</div></div>' +
                     '<div style="text-align:right;"><div style="font-weight:600;font-size:0.88rem;">' + esc(d.montant) + '</div><span class="badge ' + badgeClass(d.statut) + '">' + esc(d.statut) + '</span></div>' +
                 '</div>'
             ).join('');
+        }
+
+        // Factures list
+        let facturesHtml = '';
+        if (clientFactures.length === 0) {
+            facturesHtml = '<div style="color:var(--text-light);font-size:0.88rem;">Aucune facture</div>';
+        } else {
+            facturesHtml = clientFactures.map(f => {
+                const statutColor = f.statut === 'payee' ? 'var(--success)' : '#e74c3c';
+                const statutBg = f.statut === 'payee' ? 'rgba(34,197,94,0.12)' : 'rgba(239,68,68,0.12)';
+                const statutLabel = f.statut === 'payee' ? 'Payée' : 'Impayée';
+                return '<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">' +
+                    '<div><div style="font-weight:600;font-size:0.88rem;">' + esc(f.objet || f.nom) + '</div><div style="font-size:0.78rem;color:var(--text-light);">' + esc(f.date) + '</div></div>' +
+                    '<div style="text-align:right;"><div style="font-weight:600;font-size:0.88rem;">' + esc(f.montant) + '</div><span style="display:inline-block;padding:2px 10px;border-radius:12px;font-size:0.75rem;font-weight:600;color:' + statutColor + ';background:' + statutBg + ';">' + statutLabel + '</span></div>' +
+                '</div>';
+            }).join('');
         }
 
         const siteHtml = site !== '--' ? '<a href="https://' + esc(site) + '" target="_blank" style="color:var(--primary);text-decoration:none;">' + esc(site) + '</a>' : '--';
@@ -2659,22 +2680,34 @@
                 '</div>' +
             '</div>' +
             '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">' +
-                '<div class="card" style="padding:16px;text-align:center;">' +
+                '<div class="card" style="padding:12px;text-align:center;">' +
                     '<div class="card-label">Projets</div>' +
                     '<div class="card-value primary">' + clientProjets.length + '</div>' +
                 '</div>' +
-                '<div class="card" style="padding:16px;text-align:center;">' +
-                    '<div class="card-label">CA total</div>' +
-                    '<div class="card-value success">' + caFmt + '€</div>' +
+                '<div class="card" style="padding:12px;text-align:center;">' +
+                    '<div class="card-label">CA 2025</div>' +
+                    '<div class="card-value" style="color:var(--accent);">' + ca2025Fmt + '€</div>' +
+                '</div>' +
+                '<div class="card" style="padding:12px;text-align:center;">' +
+                    '<div class="card-label">CA 2026</div>' +
+                    '<div class="card-value success">' + ca2026Fmt + '€</div>' +
+                '</div>' +
+                '<div class="card" style="padding:12px;text-align:center;">' +
+                    '<div class="card-label">Factures</div>' +
+                    '<div class="card-value primary">' + clientFactures.length + '</div>' +
                 '</div>' +
             '</div>' +
             '<div style="margin-bottom:24px;">' +
                 '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Projets</div>' +
                 projetsHtml +
             '</div>' +
-            '<div>' +
+            '<div style="margin-bottom:24px;">' +
                 '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Devis</div>' +
                 devisHtml +
+            '</div>' +
+            '<div>' +
+                '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Factures</div>' +
+                facturesHtml +
             '</div>' +
         '</div>';
 

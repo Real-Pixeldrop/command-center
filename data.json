@@ -8,7 +8,7 @@
     "ca_mensuel_mois": "Fevrier 2026",
     "clients_actifs": 100,
     "trafic_pd": 73,
-    "devis_attente": 0
+    "devis_attente": 7
   },
   "marketing": {
     "linkedin": {
@@ -184,7 +184,13 @@
       "fin_contrat": "01/12/2026",
       "statut": "Actif",
       "telephone": "+33 7 50 99 75 23",
-      "email": "contact@archibald-patrimoine.com"
+      "email": "contact@archibald-patrimoine.com",
+      "ca_2025": 2699,
+      "ca_2026": 0,
+      "ca_total": 2699,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "Pepites d'Esthetique",
@@ -193,7 +199,13 @@
       "fin_contrat": "12/10/2026",
       "statut": "Actif",
       "telephone": "06.65.52.97.14",
-      "email": "stephanieludivine.france@gmail.com"
+      "email": "stephanieludivine.france@gmail.com",
+      "ca_2025": 2169.9,
+      "ca_2026": 0,
+      "ca_total": 2169.9,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "Richard Wagner Museum",
@@ -202,7 +214,13 @@
       "fin_contrat": "14/09/2026",
       "statut": "Actif",
       "telephone": "0688228819",
-      "email": "ncrapanne@gmail.com"
+      "email": "ncrapanne@gmail.com",
+      "ca_2025": 2764,
+      "ca_2026": 0,
+      "ca_total": 2764,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "LXB Construction",
@@ -211,7 +229,13 @@
       "fin_contrat": "04/10/2026",
       "statut": "Actif",
       "telephone": "",
-      "email": ""
+      "email": "",
+      "ca_2025": 4000,
+      "ca_2026": 0,
+      "ca_total": 4000,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "LXB ESTATE",
@@ -220,7 +244,13 @@
       "fin_contrat": "30/04/2026",
       "statut": "Actif",
       "telephone": "+352 691 242 550",
-      "email": "lorenzo.rickal@gmail.com"
+      "email": "lorenzo.rickal@gmail.com",
+      "ca_2025": 2812,
+      "ca_2026": 0,
+      "ca_total": 2812,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "Derniere Dispo",
@@ -229,7 +259,13 @@
       "fin_contrat": "31/07/2026",
       "statut": "Actif",
       "telephone": "",
-      "email": ""
+      "email": "",
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "ca_total": 0,
+      "nb_factures": 0,
+      "nb_projets": 2,
+      "dernier_contact": null
     },
     {
       "nom": "Fidolux",
@@ -238,7 +274,13 @@
       "fin_contrat": "31/05/2026",
       "statut": "Actif",
       "telephone": "+352 691 242 550",
-      "email": "lorenzo.rickal@gmail.com"
+      "email": "lorenzo.rickal@gmail.com",
+      "ca_2025": 4000,
+      "ca_2026": 0,
+      "ca_total": 4000,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "Cothidance",
@@ -247,7 +289,13 @@
       "fin_contrat": "04/04/2026",
       "statut": "Actif",
       "telephone": "+33 6 64 70 04 47",
-      "email": "sonia.rioult@gmail.com"
+      "email": "sonia.rioult@gmail.com",
+      "ca_2025": 1689,
+      "ca_2026": 0,
+      "ca_total": 1689,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "RCL",
@@ -256,7 +304,13 @@
       "fin_contrat": "09/04/2026",
       "statut": "Actif",
       "telephone": "06 84 54 16 26",
-      "email": "gglondu@gmail.com"
+      "email": "gglondu@gmail.com",
+      "ca_2025": 1072,
+      "ca_2026": 0,
+      "ca_total": 1072,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "Plaza Tango",
@@ -265,7 +319,13 @@
       "fin_contrat": "04/01/2030",
       "statut": "Actif",
       "telephone": "",
-      "email": ""
+      "email": "",
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "ca_total": 0,
+      "nb_factures": 0,
+      "nb_projets": 1,
+      "dernier_contact": null
     },
     {
       "nom": "Habitat Multi Services",
@@ -274,7 +334,13 @@
       "fin_contrat": "--",
       "statut": "Projet en cours",
       "telephone": "06 12 24 65 82",
-      "email": "contact@mcs-climatisation.fr"
+      "email": "contact@mcs-climatisation.fr",
+      "ca_2025": 0,
+      "ca_2026": 3000.0,
+      "ca_total": 3000.0,
+      "nb_factures": 1,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "Black Trombone",
@@ -283,7 +349,13 @@
       "fin_contrat": "--",
       "statut": "Ancien",
       "telephone": "0660790451",
-      "email": "maurice.johan@black-trombone.fr"
+      "email": "maurice.johan@black-trombone.fr",
+      "ca_2025": 4029.7,
+      "ca_2026": 0,
+      "ca_total": 4029.7,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "Emmanuel Bernard",
@@ -292,7 +364,13 @@
       "fin_contrat": "--",
       "statut": "Ancien",
       "telephone": "",
-      "email": ""
+      "email": "",
+      "ca_2025": 400,
+      "ca_2026": 0,
+      "ca_total": 400,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "Au Cerf",
@@ -301,7 +379,13 @@
       "fin_contrat": "--",
       "statut": "Ancien",
       "telephone": "+33 6 64 53 24 18",
-      "email": "adeline.wilhelm@gmail.com"
+      "email": "adeline.wilhelm@gmail.com",
+      "ca_2025": 114,
+      "ca_2026": 0,
+      "ca_total": 114,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "Taimpel",
@@ -310,7 +394,13 @@
       "fin_contrat": "--",
       "statut": "Ancien",
       "telephone": "06 13 69 94 44",
-      "email": "pablo.blanc@taimpel.com"
+      "email": "pablo.blanc@taimpel.com",
+      "ca_2025": 960,
+      "ca_2026": 0,
+      "ca_total": 960,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "Baptiste Beloeil",
@@ -319,7 +409,13 @@
       "fin_contrat": "--",
       "statut": "Ancien",
       "telephone": "+33 6 61 05 46 07",
-      "email": "baptistebeloeilcontact@gmail.com"
+      "email": "baptistebeloeilcontact@gmail.com",
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "ca_total": 0,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "CRW Lyon",
@@ -328,7 +424,13 @@
       "fin_contrat": "--",
       "statut": "Ancien",
       "telephone": "0688228819",
-      "email": "ncrapanne@gmail.com"
+      "email": "ncrapanne@gmail.com",
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "ca_total": 0,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
     },
     {
       "nom": "Redaction Elite SEO",
@@ -337,7 +439,163 @@
       "fin_contrat": "--",
       "statut": "Ancien",
       "telephone": "",
-      "email": ""
+      "email": "",
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "ca_total": 0,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null
+    },
+    {
+      "nom": "L.I.Partners",
+      "site": "li.partners",
+      "telephone": "",
+      "email": "antoine.jude@li.partners",
+      "dernier_contact": "2026-02-04",
+      "statut": "Prospect",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "ca_total": 0,
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "nb_factures": 0,
+      "nb_projets": 0
+    },
+    {
+      "nom": "Entretien Zen",
+      "site": "--",
+      "telephone": "",
+      "email": "",
+      "dernier_contact": "2026-01-30",
+      "statut": "Prospect",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "ca_total": 0,
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "nb_factures": 0,
+      "nb_projets": 0
+    },
+    {
+      "nom": "Tiz",
+      "site": "tiz.fr",
+      "telephone": "",
+      "email": "cfournier@tiz.fr",
+      "dernier_contact": null,
+      "statut": "Ancien",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "ca_total": 5426.65,
+      "ca_2025": 5426.65,
+      "ca_2026": 0,
+      "nb_factures": 0,
+      "nb_projets": 0
+    },
+    {
+      "nom": "Le Portail Vert",
+      "site": "--",
+      "telephone": "",
+      "email": "contact@leportailvert.eu",
+      "dernier_contact": null,
+      "statut": "Ancien",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "ca_total": 2000,
+      "ca_2025": 2000,
+      "ca_2026": 0,
+      "nb_factures": 0,
+      "nb_projets": 0
+    },
+    {
+      "nom": "Cineloges",
+      "site": "cine-loges.fr",
+      "telephone": "",
+      "email": "cecile@cineloges.fr",
+      "dernier_contact": null,
+      "statut": "Ancien",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "ca_total": 1815.3,
+      "ca_2025": 1815.3,
+      "ca_2026": 0,
+      "nb_factures": 0,
+      "nb_projets": 0
+    },
+    {
+      "nom": "Licorne Invest",
+      "site": "licorne-invest.com",
+      "telephone": "",
+      "email": "octave@licorne-invest.com",
+      "dernier_contact": null,
+      "statut": "Ancien",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "ca_total": 2599,
+      "ca_2025": 2599,
+      "ca_2026": 0,
+      "nb_factures": 0,
+      "nb_projets": 0
+    },
+    {
+      "nom": "Sexeen",
+      "site": "--",
+      "telephone": "",
+      "email": "speed@post.com",
+      "dernier_contact": null,
+      "statut": "Ancien",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "ca_total": 1199,
+      "ca_2025": 1199,
+      "ca_2026": 0,
+      "nb_factures": 0,
+      "nb_projets": 0
+    },
+    {
+      "nom": "La Toast Family",
+      "site": "latoastfamily.fr",
+      "telephone": "",
+      "email": "morgane@latoastfamily.fr",
+      "dernier_contact": null,
+      "statut": "Ancien",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "ca_total": 990,
+      "ca_2025": 990,
+      "ca_2026": 0,
+      "nb_factures": 0,
+      "nb_projets": 0
+    },
+    {
+      "nom": "VTC Swiss",
+      "site": "vtcswiss.com",
+      "telephone": "",
+      "email": "vtcswiss@gmail.com",
+      "dernier_contact": null,
+      "statut": "Ancien",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "ca_total": 150,
+      "ca_2025": 150,
+      "ca_2026": 0,
+      "nb_factures": 0,
+      "nb_projets": 0
+    },
+    {
+      "nom": "SACO",
+      "site": "--",
+      "telephone": "",
+      "email": "michel.walch@saco.fr",
+      "dernier_contact": null,
+      "statut": "Ancien",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "ca_total": 999,
+      "ca_2025": 999,
+      "ca_2026": 0,
+      "nb_factures": 0,
+      "nb_projets": 0
     }
   ],
   "pipeline": [
@@ -392,83 +650,118 @@
   },
   "devis": [
     {
-      "date": "04/02",
+      "nom": "Devis D-2026-0216",
       "client": "L.I.Partners",
-      "objet": "Refonte site web",
       "montant": "8 400€",
-      "statut": "En attente",
+      "montant_num": 8400.0,
+      "statut": "en_attente",
       "date_envoi": "2026-02-04",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=ofb4adRdb8NcR0UMREjpTtAkyfaRlDlCi6BYpaBff8YDFHCcdwZh4n%2B4Nt8SuCht1S2I%2BYOSMrNrgFimwhsTAqow5gEnMHeyjedSRPcyAm%2Bcj9ALF17xUYc4--%2F3eQr5e6QT9wf%2BMI--hzs8nx%2FmE11%2FzRXclBLcjA%3D%3D"
+      "date_accepte": null,
+      "objet": "Refonte site web L.I.Partners",
+      "date": "04/02",
+      "pdf": ""
     },
     {
-      "date": "04/02",
+      "nom": "Devis D-2026-0215",
       "client": "L.I.Partners",
-      "objet": "Refonte site web",
       "montant": "8 400€",
-      "statut": "En attente",
+      "montant_num": 8400.0,
+      "statut": "en_attente",
       "date_envoi": "2026-02-04",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=TEL%2Bcls9lXjJGjREANlVYVGPGXaA1S2zcdlqrg3d%2BPAhF29h1ncaJsOURlPAmRK9mK95EPxmHVww3kLE%2FkpFs7mq%2BN0nVMjHXf%2BbeDOfURpZLzhzLqP5Bgjp--pjk9z1slPL838Qwb--HNLDuYEShsDVuMMZdfMLpQ%3D%3D"
+      "date_accepte": null,
+      "objet": "Refonte site web L.I.Partners",
+      "date": "04/02",
+      "pdf": ""
     },
     {
-      "date": "04/02",
+      "nom": "Devis D-2026-0214",
       "client": "L.I.Partners",
-      "objet": "Refonte site web",
       "montant": "8 400€",
-      "statut": "En attente",
+      "montant_num": 8400.0,
+      "statut": "en_attente",
       "date_envoi": "2026-02-04",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=nACIdIHZmzTlbkc2pKGJU1qGmoys1JK6w9P1LS5cxzMl5%2FleboRua9Kpsxic9Z65LIDhOSlGI3UsyBUXK0CPrAT2iS3ybjKTsRFvPznRB8NuVSAlmI8xBzri--3bCjFd5835ACcEEL--gVolaLE1mfgfMQpGJA619w%3D%3D"
+      "date_accepte": null,
+      "objet": "Refonte site web L.I.Partners",
+      "date": "04/02",
+      "pdf": ""
     },
     {
-      "date": "04/02",
+      "nom": "Devis D-2026-0213",
       "client": "L.I.Partners",
-      "objet": "Refonte site web",
       "montant": "7 800€",
-      "statut": "En attente",
+      "montant_num": 7800.0,
+      "statut": "en_attente",
       "date_envoi": "2026-02-04",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=R%2BcOW7FzSo%2B8LeA1iQiTcq32EBmF1FR5XtoH9PnN3boXSN0NdneunhhYDCUqo01RSWsGsYngnSQnIVBZxpQ1vdPeeZe6bY10C%2ByaKwvq4fg004QBnv0QQvFX--DQrwi08%2Bk6yjlWVr--MgD2hW7%2F%2F5qlZWSAmJ5EiQ%3D%3D"
+      "date_accepte": null,
+      "objet": "Refonte site web L.I.Partners",
+      "date": "04/02",
+      "pdf": ""
     },
     {
-      "date": "30/01",
+      "nom": "Devis D-2026-0112",
       "client": "Entretien Zen",
-      "objet": "Site Internet 3.0",
       "montant": "2 000€",
-      "statut": "En attente",
+      "montant_num": 2000.0,
+      "statut": "en_attente",
       "date_envoi": "2026-01-30",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=WMf0QL4HpO5sLOuSrXxQ%2BMltQ6MLkXf5%2Bt1Ks6I9FAibIklEwfZFXsGufskpYEAgvXHUkwWGc8mTRwojaUPz58E0CBYb6y3qqaKvUxdWGALs67u4NDmB2TOk--p1f6AZ2K%2FOhcZOGj--YrRGOh4Lpw0yK9kbxwiYwQ%3D%3D"
+      "date_accepte": null,
+      "objet": "Site Internet 3.0",
+      "date": "30/01",
+      "pdf": ""
     },
     {
-      "date": "27/01",
+      "nom": "Devis D-2026-0111",
       "client": "Habitat Multi Services",
-      "objet": "Site vitrine",
-      "montant": "3 000€",
-      "statut": "Accepte",
-      "date_envoi": "2026-01-27",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=72mMPUxPynHBnF35uabEt7T14MzWzJtJzwcneU8bC9gZ1HwOJsT1WSvfBx6rB4PStG1iqHRhbAalcNErdDfV3pG%2BGTVnRhl%2F7s5F88YBqThJVv51ACjY%2FCsI--rtVeA0cJMVJRXoUV--Vy1GUOVQMfrkVg%2BIo9Td6A%3D%3D"
+      "montant": "100€",
+      "montant_num": 100.0,
+      "statut": "en_attente",
+      "date_envoi": "2026-01-30",
+      "date_accepte": null,
+      "objet": "Test Quote",
+      "date": "30/01",
+      "pdf": ""
     },
     {
-      "date": "08/01",
+      "nom": "Devis D-2026-0110",
+      "client": "Habitat Multi Services",
+      "montant": "3 000€",
+      "montant_num": 3000.0,
+      "statut": "accepte",
+      "date_envoi": "2026-01-27",
+      "date_accepte": "2026-01-27",
+      "objet": "Site vitrine Habitat Multi Services",
+      "date": "27/01",
+      "pdf": ""
+    },
+    {
+      "nom": "Devis D-2026-017",
       "client": "FIDOLUX",
-      "objet": "Portail Client",
       "montant": "9 700€",
-      "statut": "En attente",
+      "montant_num": 9700.0,
+      "statut": "en_attente",
       "date_envoi": "2026-01-08",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=Alm%2Fl%2FcKCr%2Bgxs7SQJ3CZQvO8yUPYNdzTlhu3D6%2F6OGDZkSSelSVrzDgmQuycD9r3fF2Ro7BbV4CNFmqHbMFwXRBnxWCl%2BvqtcsuAc3dBTjJQIcKI063uyU3--0El5XvMsx3e4ylug--0fxzIKG6UTbq3pE%2FF8jCnQ%3D%3D"
+      "date_accepte": null,
+      "objet": "Portail Client FIDOLUX",
+      "date": "08/01",
+      "pdf": ""
     }
   ],
   "factures": [
     {
-      "date": "27/01/2026",
+      "nom": "Facture F-2026-01272",
       "client": "Habitat Multi Services",
-      "objet": "Site vitrine",
       "montant": "3 000€",
-      "statut": "Payee",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=0Qee4cbI1LqtbpEiVo5WudplXI22j5u%2FY7bezcje0QK9MQU8MUbCqGM%2BDPIJAZ3JBrhT%2B73DEW3BWg%3D%3D--NtnuU9Jb%2BPt0zSY0--YqSkN1K3eug2RGaVrM6CUg%3D%3D"
+      "montant_num": 3000,
+      "date": "2026-01-27",
+      "statut": "payee",
+      "date_paiement": "2026-01-27",
+      "objet": "Site vitrine Habitat Multi Services"
     }
   ],
   "devis_kpis": {
     "en_attente": {
-      "count": 5,
-      "montant": "36 400€ potentiels"
+      "count": 7,
+      "montant": "44 800€ potentiels"
     },
     "acceptes": {
       "count": 1,
@@ -2170,15 +2463,55 @@
     }
   ],
   "linkedin_posts": [
-    {"titre": "5 erreurs sur votre site web", "type": "post", "date": "2026-02-10", "statut": "redaction"},
-    {"titre": "Etude de cas - Habitat Multi Services", "type": "article", "date": "2026-02-14", "statut": "idee"},
-    {"titre": "Pourquoi investir dans le SEO en 2026", "type": "carousel", "date": "2026-02-17", "statut": "idee"},
-    {"titre": "Bilan janvier Pixel Drop", "type": "post", "date": "2026-02-03", "statut": "publie"}
+    {
+      "titre": "5 erreurs sur votre site web",
+      "type": "post",
+      "date": "2026-02-10",
+      "statut": "redaction"
+    },
+    {
+      "titre": "Etude de cas - Habitat Multi Services",
+      "type": "article",
+      "date": "2026-02-14",
+      "statut": "idee"
+    },
+    {
+      "titre": "Pourquoi investir dans le SEO en 2026",
+      "type": "carousel",
+      "date": "2026-02-17",
+      "statut": "idee"
+    },
+    {
+      "titre": "Bilan janvier Pixel Drop",
+      "type": "post",
+      "date": "2026-02-03",
+      "statut": "publie"
+    }
   ],
   "instagram_posts": [
-    {"titre": "Before/After site client", "type": "reel", "date": "2026-02-12", "statut": "creation"},
-    {"titre": "Tips SEO en 30s", "type": "reel", "date": "2026-02-15", "statut": "idee"},
-    {"titre": "Temoignage client Cothidance", "type": "post", "date": "2026-02-08", "statut": "pret"},
-    {"titre": "Coulisses bureau", "type": "story", "date": "2026-02-05", "statut": "publie"}
+    {
+      "titre": "Before/After site client",
+      "type": "reel",
+      "date": "2026-02-12",
+      "statut": "creation"
+    },
+    {
+      "titre": "Tips SEO en 30s",
+      "type": "reel",
+      "date": "2026-02-15",
+      "statut": "idee"
+    },
+    {
+      "titre": "Temoignage client Cothidance",
+      "type": "post",
+      "date": "2026-02-08",
+      "statut": "pret"
+    },
+    {
+      "titre": "Coulisses bureau",
+      "type": "story",
+      "date": "2026-02-05",
+      "statut": "publie"
+    }
   ]
 }
