@@ -2679,44 +2679,60 @@
         const adresse = client.adresse || null;
         const siretFmt = siret ? siret.replace(/(\d{3})(?=\d)/g, '$1 ').trim() : null;
 
-        document.getElementById('client-panel').innerHTML = '<div style="padding:24px;">' +
-            '<div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:4px;">' +
-                '<h2 style="font-size:1.3rem;font-weight:700;margin:0;">' + esc(client.nom) + '</h2>' +
-                '<button onclick="closeClientPanel()" style="background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--text-light);line-height:1;">&times;</button>' +
-            '</div>' +
-            (nomEntreprise ? '<div style="font-size:0.88rem;color:var(--text-light);font-style:italic;margin-bottom:4px;">' + esc(nomEntreprise) + '</div>' : '') +
-            (siretFmt ? '<div style="font-size:0.82rem;color:var(--text-light);margin-bottom:16px;">SIRET : ' + esc(siretFmt) + '</div>' : '<div style="margin-bottom:16px;"></div>') +
-            '<div style="margin-bottom:24px;">' +
-                '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Contact</div>' +
-                '<div style="display:flex;flex-direction:column;gap:8px;">' +
-                    '<div>Tel : ' + telHtml + '</div>' +
-                    '<div>Email : ' + emailHtml + '</div>' +
-                    (adresse ? '<div>Adresse : <span style="color:var(--text);">' + esc(adresse) + '</span></div>' : '') +
-                    '<div>Site : ' + siteHtml + '</div>' +
-                    '<div>Dernier contact : <span style="color:' + dcColor + ';font-weight:600;">' + fmtDate(dc) + '</span></div>' +
+        // Clean address (remove duplicates like "68100 MULHOUSE, 68100, MULHOUSE")
+        let adresseClean = adresse;
+        if (adresse) {
+            const parts = adresse.split(',').map(function(p) { return p.trim(); });
+            const seen = [];
+            parts.forEach(function(p) { if (!seen.some(function(s) { return s.toLowerCase().includes(p.toLowerCase()) || p.toLowerCase().includes(s.toLowerCase()); })) seen.push(p); });
+            adresseClean = seen.join(', ');
+        }
+
+        const sectionTitle = function(t) { return '<div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-light);font-weight:600;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border);">' + t + '</div>'; };
+        const infoRow = function(label, value) { return '<div style="display:flex;justify-content:space-between;padding:5px 0;font-size:0.85rem;"><span style="color:var(--text-light);font-weight:500;">' + label + '</span><span style="text-align:right;max-width:65%;">' + value + '</span></div>'; };
+
+        document.getElementById('client-panel').innerHTML = '<div style="padding:0;">' +
+            // Header
+            '<div style="padding:20px 24px 16px;border-bottom:1px solid var(--border);background:var(--bg);">' +
+                '<div style="display:flex;justify-content:space-between;align-items:start;">' +
+                    '<div>' +
+                        '<h2 style="font-size:1.2rem;font-weight:700;margin:0 0 2px;">' + esc(client.nom) + '</h2>' +
+                        (nomEntreprise && nomEntreprise.toLowerCase() !== client.nom.toLowerCase() ? '<div style="font-size:0.8rem;color:var(--text-light);">' + esc(nomEntreprise) + '</div>' : '') +
+                    '</div>' +
+                    '<button onclick="closeClientPanel()" style="background:none;border:none;cursor:pointer;font-size:1.3rem;color:var(--text-light);line-height:1;padding:4px 8px;">✕</button>' +
+                '</div>' +
+                (siretFmt ? '<div style="font-size:0.75rem;color:var(--text-light);margin-top:6px;">SIRET ' + esc(siretFmt) + '</div>' : '') +
+                // CA badge
+                '<div style="display:inline-block;margin-top:10px;padding:6px 16px;border-radius:8px;background:rgba(34,197,94,0.1);">' +
+                    '<span style="font-size:0.75rem;color:var(--text-light);">CA 2025</span> ' +
+                    '<span style="font-weight:700;font-size:1.05rem;color:var(--success);">' + ca2025Fmt + ' €</span>' +
                 '</div>' +
             '</div>' +
-            '<div style="margin-bottom:24px;">' +
-                '<div class="card" style="padding:16px;text-align:center;">' +
-                    '<div class="card-label">CA 2025</div>' +
-                    '<div class="card-value" style="color:var(--accent);font-size:1.5rem;">' + ca2025Fmt + '€</div>' +
+            // Body
+            '<div style="padding:20px 24px;">' +
+                // Contact
+                sectionTitle('Contact') +
+                '<div style="margin-bottom:20px;">' +
+                    infoRow('Tel', telHtml) +
+                    infoRow('Email', emailHtml) +
+                    (adresseClean ? infoRow('Adresse', '<span style="font-size:0.82rem;">' + esc(adresseClean) + '</span>') : '') +
+                    infoRow('Site', siteHtml) +
+                    infoRow('Dernier contact', '<span style="color:' + dcColor + ';font-weight:600;">' + fmtDate(dc) + '</span>') +
                 '</div>' +
-            '</div>' +
-            '<div style="margin-bottom:24px;">' +
-                '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Projets</div>' +
-                projetsHtml +
-            '</div>' +
-            '<div style="margin-bottom:24px;">' +
-                '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Devis</div>' +
-                devisHtml +
-            '</div>' +
-            '<div style="margin-bottom:24px;">' +
-                '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Factures</div>' +
-                facturesHtml +
-            '</div>' +
-            '<div style="margin-bottom:24px;">' +
-                '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Suivi</div>' +
-                ((client.suivi && client.suivi.length > 0) ? client.suivi.map(function(s) { return '<div style="padding:8px 0;border-bottom:1px solid var(--border);font-size:0.88rem;"><span style="color:var(--text-light);font-size:0.78rem;">' + fmtDate(s.date) + '</span> ' + esc(s.note) + '</div>'; }).join('') : '<div style="color:var(--text-light);font-size:0.88rem;">Aucune note</div>') +
+                // Projets
+                sectionTitle('Projets (' + clientProjets.length + ')') +
+                '<div style="margin-bottom:20px;">' + projetsHtml + '</div>' +
+                // Devis
+                sectionTitle('Devis (' + clientDevis.length + ')') +
+                '<div style="margin-bottom:20px;">' + devisHtml + '</div>' +
+                // Factures
+                sectionTitle('Factures (' + clientFactures.length + ')') +
+                '<div style="margin-bottom:20px;">' + facturesHtml + '</div>' +
+                // Suivi
+                sectionTitle('Suivi') +
+                '<div style="margin-bottom:20px;">' +
+                    ((client.suivi && client.suivi.length > 0) ? client.suivi.map(function(s) { return '<div style="padding:6px 0;border-bottom:1px solid var(--border);font-size:0.85rem;"><span style="color:var(--text-light);font-size:0.75rem;margin-right:8px;">' + fmtDate(s.date) + '</span>' + esc(s.note) + '</div>'; }).join('') : '<div style="color:var(--text-light);font-size:0.85rem;">Aucune note</div>') +
+                '</div>' +
             '</div>' +
         '</div>';
 
