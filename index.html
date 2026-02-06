@@ -147,6 +147,7 @@
         .main {
             margin-left: var(--sidebar-width);
             flex: 1;
+            min-width: 0;
             transition: margin-left 0.3s ease;
             min-height: 100vh;
             padding: 35px 40px;
@@ -230,6 +231,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
+            table-layout: fixed;
         }
 
         th {
@@ -247,6 +249,9 @@
             padding: 14px 24px;
             font-size: 0.9rem;
             border-bottom: 1px solid var(--border);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
         }
 
         tr:last-child td { border-bottom: none; }
@@ -662,713 +667,35 @@
     <div class="tab active" id="tab-dashboard">
         <h1 class="page-title">Dashboard</h1>
         <p class="page-subtitle" id="dash-date"></p>
-
-        <div class="grid grid-4">
-            <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">CA mensuel</div>
-                <div class="card-value primary" id="ca-mensuel">0€</div>
-                <div class="card-sub">Fevrier 2026</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">Clients actifs</div>
-                <div class="card-value accent" id="clients-actifs">100</div>
-                <div class="card-sub">maintenances + projets</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Trafic pixel-drop.com</div>
-                <div class="card-value primary" id="trafic-pd">73</div>
-                <div class="card-sub">sessions (30 jours)</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.25s">
-                <div class="card-label">Devis en attente</div>
-                <div class="card-value accent" id="devis-attente">0</div>
-                <div class="card-sub">pipeline Notion</div>
-            </div>
-        </div>
-
-        <h2 style="font-size:1.2rem; margin-bottom:18px;">Marketing</h2>
-        <div class="grid grid-4">
-            <a href="https://www.linkedin.com/company/93845156/admin/analytics/followers/" target="_blank" class="card-link">
-                <div class="card fade-in" style="animation-delay:0.3s">
-                    <span class="link-arrow">↗</span>
-                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                        <span style="font-weight:600;font-size:0.85rem;">LinkedIn</span>
-                        <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">"" / 500</span>
-                    </div>
-                    <div class="progress-bar"><div class="progress-fill accent" style="width:12%"></div></div>
-                </div>
-            </a>
-            <a href="https://www.instagram.com/pixeldrop_fr/" target="_blank" class="card-link">
-                <div class="card fade-in" style="animation-delay:0.35s">
-                    <span class="link-arrow">↗</span>
-                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                        <span style="font-weight:600;font-size:0.85rem;">Instagram</span>
-                        <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">45 / 300</span>
-                    </div>
-                    <div class="progress-bar"><div class="progress-fill accent" style="width:15%"></div></div>
-                </div>
-            </a>
-            <a href="https://app.brevo.com/contact/list" target="_blank" class="card-link">
-                <div class="card fade-in" style="animation-delay:0.4s">
-                    <span class="link-arrow">↗</span>
-                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                        <span style="font-weight:600;font-size:0.85rem;">Newsletter</span>
-                        <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">99 / 200</span>
-                    </div>
-                    <div class="progress-bar"><div class="progress-fill accent" style="width:49%"></div></div>
-                </div>
-            </a>
-            <a href="https://analytics.google.com/analytics/web/#/p474885507/reports/reportinghub" target="_blank" class="card-link">
-                <div class="card fade-in" style="animation-delay:0.45s">
-                    <span class="link-arrow">↗</span>
-                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                        <span style="font-weight:600;font-size:0.85rem;">Trafic 30j</span>
-                        <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">72 / 1000</span>
-                    </div>
-                    <div class="progress-bar"><div class="progress-fill accent" style="width:7%"></div></div>
-                </div>
-            </a>
-        </div>
-
-        <div class="grid grid-2">
-            <div class="card table-card fade-in" style="animation-delay:0.5s">
-                <div class="table-header">Projets en cours</div>
-                <table>
-                    <thead><tr><th>Projet</th><th>Client</th><th>Statut</th></tr></thead>
-                    <tbody id="dash-projets">
-                        <tr><td>Maquette Habitat</td><td>Habitat Multi-Service</td><td><span class="badge badge-red">En retard</span></td></tr>
-                        <tr><td>Plaza Tango Festival 2026</td><td>Plaza Tango</td><td><span class="badge badge-blue">En cours</span></td></tr>
-                        <tr><td>Consulting Derniere Dispo</td><td>Yoann</td><td><span class="badge badge-blue">En cours</span></td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="card table-card fade-in" style="animation-delay:0.35s">
-                <div class="table-header">Planning du jour</div>
-                <table>
-                    <thead><tr><th>Heure</th><th>Evenement</th></tr></thead>
-                    <tbody id="dash-events">
-                        <tr><td>09:00</td><td>Programme Plaza Tango a Papa</td></tr>
-                        <tr><td>09:30</td><td>Devis impressions Plaza Tango</td></tr>
-                        <tr><td>10:00</td><td>Check sites WordPress</td></tr>
-                        <tr><td>10:30</td><td>Maquette Habitat (URGENT)</td></tr>
-                        <tr><td>14:00</td><td>Newsletter Plaza Tango</td></tr>
-                        <tr><td>14:30</td><td>Post Instagram Plaza Tango</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        <div id="dash-content">Chargement...</div>
     </div>
 
     <!-- ===== PROJETS ===== -->
     <div class="tab" id="tab-projets">
         <h1 class="page-title">Projets</h1>
         <p class="page-subtitle">Projets actifs et livres (hors prospection)</p>
-
-        <div class="grid grid-3">
-            <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">En cours</div>
-                <div class="card-value primary">3</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">En retard</div>
-                <div class="card-value accent">1</div>
-                <div class="card-sub">Maquette Habitat</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Livres recemment</div>
-                <div class="card-value success">3</div>
-            </div>
-        </div>
-
-        <div class="search-bar">
-            <input type="text" class="search-input" placeholder="Rechercher un projet..." oninput="searchTable('projets-list', this.value)">
-            <button class="filter-btn active" onclick="filterTable('projets-list', 'all', this)">Tous</button>
-            <button class="filter-btn" onclick="filterTable('projets-list', 'En cours', this)">En cours</button>
-            <button class="filter-btn" onclick="filterTable('projets-list', 'Livre', this)">Livres</button>
-        </div>
-
-        <div class="card table-card fade-in" style="animation-delay:0.25s">
-            <div class="table-header">Liste des projets</div>
-            <table>
-                <thead><tr><th>Projet</th><th>Client</th><th>Type</th><th>Deadline</th><th>Statut</th></tr></thead>
-                <tbody id="projets-list">
-                    <tr><td>Maquette site vitrine</td><td>Habitat Multi-Service</td><td>Site vitrine</td><td>A planifier</td><td><span class="badge badge-red">En retard</span></td></tr>
-                    <tr><td>Plaza Tango Festival 2026</td><td>Plaza Tango</td><td>Evenementiel</td><td>24 avr 2026</td><td><span class="badge badge-blue">En cours</span></td></tr>
-                    <tr><td>Consulting croissance</td><td>Derniere Dispo</td><td>Consulting</td><td>Continu</td><td><span class="badge badge-blue">En cours</span></td></tr>
-                    <tr><td>Check hebdo sites WP</td><td>Pixel Drop</td><td>Maintenance</td><td>Recurrent</td><td><span class="badge badge-blue">En cours</span></td></tr>
-                    <tr><td>Derniere Dispo V2</td><td>Yoann / Driss</td><td>Marketplace</td><td>--</td><td><span class="badge badge-green">Livre</span></td></tr>
-                    <tr><td>CRW Lyon</td><td>Nicolas Crapanne</td><td>Site vitrine</td><td>--</td><td><span class="badge badge-green">Livre</span></td></tr>
-                    <tr><td>Dashboard Derniere Dispo</td><td>Derniere Dispo</td><td>Dashboard</td><td>--</td><td><span class="badge badge-green">Livre</span></td></tr>
-                </tbody>
-            </table>
-        </div>
-                </div>
-            </div>
-        </div>
+        <div id="projets-content">Chargement...</div>
     </div>
 
     <!-- ===== CLIENTS ===== -->
     <div class="tab" id="tab-clients">
         <h1 class="page-title">Clients</h1>
         <p class="page-subtitle">Base clients Pixel Drop</p>
-
-        <div class="grid grid-4">
-            <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">Total clients</div>
-                <div class="card-value primary">18</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">Maintenance active</div>
-                <div class="card-value success">11</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Projets actifs</div>
-                <div class="card-value accent">3</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.25s">
-                <div class="card-label">Anciens clients</div>
-                <div class="card-value primary">7</div>
-            </div>
-        </div>
-
-        <div class="search-bar">
-            <input type="text" class="search-input" placeholder="Rechercher un client..." oninput="searchTable('clients-list', this.value)">
-            <button class="filter-btn active" onclick="filterTable('clients-list', 'all', this)">Tous</button>
-            <button class="filter-btn" onclick="filterTable('clients-list', 'Actif', this)">Actifs</button>
-            <button class="filter-btn" onclick="filterTable('clients-list', 'Maintenance', this)">Maintenance</button>
-            <button class="filter-btn" onclick="filterTable('clients-list', 'Ancien', this)">Anciens</button>
-        </div>
-
-        <div class="card table-card fade-in" style="animation-delay:0.3s">
-            <div class="table-header">Clients</div>
-            <table>
-                <thead><tr><th>Client</th><th>Site</th><th>Maintenance</th><th>Fin contrat</th><th>Statut</th></tr></thead>
-                <tbody id="clients-list">
-                    <tr><td>ETHEOS</td><td>etheos.fr</td><td><span class="badge badge-green">Active</span></td><td>01/12/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Pepites d'Esthetique</td><td>pepitesdesthetique.com</td><td><span class="badge badge-green">Active</span></td><td>12/10/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Richard Wagner Museum</td><td>richard-wagner-web-museum.com</td><td><span class="badge badge-green">Active</span></td><td>14/09/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>LXB Construction</td><td>lxbconstruction.com</td><td><span class="badge badge-green">Active</span></td><td>04/10/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>LXB ESTATE</td><td>lxb-estate.com</td><td><span class="badge badge-green">Active</span></td><td>30/04/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Derniere Dispo</td><td>dernieredispo.com</td><td><span class="badge badge-green">Active</span></td><td>31/07/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Fidolux</td><td>fidolux.lu</td><td><span class="badge badge-green">Active</span></td><td>31/05/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Cothidance</td><td>cothidance92.fr</td><td><span class="badge badge-green">Active</span></td><td class="date-danger">04/04/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>RCL</td><td>collectivitesterritoriales.fr</td><td><span class="badge badge-green">Active</span></td><td class="date-danger">09/04/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Plaza Tango</td><td>festival.plazatango.com</td><td><span class="badge badge-green">Active</span></td><td>04/01/2030</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Habitat Multi Services</td><td>--</td><td><span class="badge badge-gray">Non</span></td><td>--</td><td><span class="badge badge-orange">Projet en cours</span></td></tr>
-                    <tr><td>Black Trombone</td><td>black-trombone.fr</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
-                    <tr><td>Emmanuel Bernard</td><td>bernard-emmanuel.com</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
-                    <tr><td>Au Cerf</td><td>au-cerf.com</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
-                    <tr><td>Taimpel</td><td>taimpel.com</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
-                    <tr><td>Baptiste Beloeil</td><td>baptistebeloeil.com</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
-                    <tr><td>CRW Lyon</td><td>crw-lyon.fr</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
-                    <tr><td>Redaction Elite SEO</td><td>redactioneliteseo.fr</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
-                </tbody>
-            </table>
-        </div>
+        <div id="clients-content">Chargement...</div>
     </div>
 
     <!-- ===== PIPELINE ===== -->
     <div class="tab" id="tab-pipeline">
         <h1 class="page-title">Pipeline Commercial</h1>
         <p class="page-subtitle">Opportunites qualifiees — synchro Pennylane</p>
-
-        <div class="grid grid-4">
-            <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">Offres envoyees</div>
-                <div class="card-value accent">6</div>
-                <div class="card-sub">39 400€ en jeu</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">En discussion</div>
-                <div class="card-value primary">1</div>
-                <div class="card-sub">M.Bolchert JDA</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Signes 2026</div>
-                <div class="card-value success">1</div>
-                <div class="card-sub">3 000€</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.25s">
-                <div class="card-label">Perdus</div>
-                <div class="card-value primary">0</div>
-                <div class="card-sub">ce mois</div>
-            </div>
-        </div>
-
-        <!-- Opportunites qualifiees -->
-        <div>
-            <div class="kanban-board">
-                <div class="kanban-column col-orange">
-                    <div class="kanban-column-header">
-                        <span>📧 Offre envoyee</span>
-                        <span class="count">6</span>
-                    </div>
-                    <div class="kanban-column-body">
-                        <div class="kanban-card"><div class="kanban-card-title">L.I.Partners</div><div class="kanban-card-desc">Refonte site web — 4 devis envoyes</div><span class="badge badge-orange">8 400€ x3 + 7 800€</span></div>
-                        <div class="kanban-card"><div class="kanban-card-title">Entretien Zen</div><div class="kanban-card-desc">Site Internet 3.0</div><span class="badge badge-orange">2 000€</span></div>
-                        <div class="kanban-card"><div class="kanban-card-title">FIDOLUX</div><div class="kanban-card-desc">Portail Client</div><span class="badge badge-orange">9 700€</span></div>
-                    </div>
-                </div>
-                <div class="kanban-column col-blue">
-                    <div class="kanban-column-header">
-                        <span>💬 En discussion</span>
-                        <span class="count">1</span>
-                    </div>
-                    <div class="kanban-column-body">
-                        <div class="kanban-card"><div class="kanban-card-title">M.Bolchert JDA</div><div class="kanban-card-desc">Devis en attente — relance a faire</div><span class="badge badge-blue">2 500€</span></div>
-                    </div>
-                </div>
-                <div class="kanban-column col-green">
-                    <div class="kanban-column-header">
-                        <span>✅ Signe</span>
-                        <span class="count">1</span>
-                    </div>
-                    <div class="kanban-column-body">
-                        <div class="kanban-card"><div class="kanban-card-title">Habitat Multi Services</div><div class="kanban-card-desc">Site vitrine — facture payee</div><span class="badge badge-green">3 000€</span></div>
-                    </div>
-                </div>
-                <div class="kanban-column col-gray">
-                    <div class="kanban-column-header">
-                        <span>❌ Perdu</span>
-                        <span class="count">0</span>
-                    </div>
-                    <div class="kanban-column-body"></div>
-                </div>
-            </div>
-        </div>
-        </div><!-- close kanban wrapper -->
-    </div>
-
-
+        <div id="pipeline-content">Chargement...</div>
     </div>
 
     <!-- ===== TÂCHES ===== -->
     <div class="tab" id="tab-taches">
         <h1 class="page-title">Tâches</h1>
         <p class="page-subtitle">Suivi des tâches en cours — Kanban</p>
-
-        <div class="kanban-board">
-            <div class="kanban-column col-blue">
-                <div class="kanban-column-header">
-                    <span>📋 À faire</span>
-                    <span class="count">5</span>
-                </div>
-                <div class="kanban-column-body">
-                    <div class="kanban-card" style="animation-delay:0.05s">
-                        <div class="kanban-card-title">Habitat Multi-Service</div>
-                        <div class="kanban-card-desc">Finaliser maquette Figma, puis créer site WordPress</div>
-                        <span class="badge badge-blue">Site Web</span>
-                    </div>
-                    <div class="kanban-card" style="animation-delay:0.1s">
-                        <div class="kanban-card-title">Relancer M.Bolchert JDA</div>
-                        <div class="kanban-card-desc">Devis en attente — 2 500€</div>
-                        <span class="badge badge-orange">Relance</span>
-                    </div>
-                    <div class="kanban-card" style="animation-delay:0.15s">
-                        <div class="kanban-card-title">Relancer Sara Cleaning</div>
-                        <div class="kanban-card-desc">Devis en attente — 4 000€</div>
-                        <span class="badge badge-orange">Relance</span>
-                    </div>
-                    <div class="kanban-card" style="animation-delay:0.2s">
-                        <div class="kanban-card-title">Point offres envoyées</div>
-                        <div class="kanban-card-desc">7 offres en attente — Total : 26 438€</div>
-                        <span class="badge badge-blue">Pipeline</span>
-                    </div>
-                    <div class="kanban-card" style="animation-delay:0.25s">
-                        <div class="kanban-card-title">Configurer API Pixel Space</div>
-                        <div class="kanban-card-desc">Installer sur Fidolux et Richard Wagner Museum</div>
-                        <span class="badge badge-blue">Technique</span>
-                    </div>
-                </div>
-            </div>
-            <div class="kanban-column col-orange">
-                <div class="kanban-column-header">
-                    <span>🔄 En cours</span>
-                    <span class="count">3</span>
-                </div>
-                <div class="kanban-column-body">
-                    <div class="kanban-card" style="animation-delay:0.05s">
-                        <div class="kanban-card-title">Dernière Dispo — Consulting</div>
-                        <div class="kanban-card-desc">Consulting gratuit : suivi croissance, objectif 1000 lieux</div>
-                        <span class="badge badge-orange">Consulting</span>
-                    </div>
-                    <div class="kanban-card" style="animation-delay:0.1s">
-                        <div class="kanban-card-title">Plaza Tango Festival 2026</div>
-                        <div class="kanban-card-desc">Organisation festival — 24-26 avril</div>
-                        <span class="badge badge-orange">Événement</span>
-                    </div>
-                    <div class="kanban-card" style="animation-delay:0.15s">
-                        <div class="kanban-card-title">Check hebdo sites WP</div>
-                        <div class="kanban-card-desc">Vérification hebdomadaire de tous les sites WordPress</div>
-                        <span class="badge badge-orange">Maintenance</span>
-                    </div>
-                </div>
-            </div>
-            <div class="kanban-column col-green">
-                <div class="kanban-column-header">
-                    <span>✅ Terminé</span>
-                    <span class="count">5</span>
-                </div>
-                <div class="kanban-column-body">
-                    <div class="kanban-card" style="animation-delay:0.05s">
-                        <div class="kanban-card-title">Dernière Dispo V2</div>
-                        <div class="kanban-card-desc">Site livré et en ligne</div>
-                        <span class="badge badge-green">Livré</span>
-                    </div>
-                    <div class="kanban-card" style="animation-delay:0.1s">
-                        <div class="kanban-card-title">CRW Lyon</div>
-                        <div class="kanban-card-desc">Projet livré au client</div>
-                        <span class="badge badge-green">Livré</span>
-                    </div>
-                    <div class="kanban-card" style="animation-delay:0.15s">
-                        <div class="kanban-card-title">Nettoyage taxonomie villes</div>
-                        <div class="kanban-card-desc">Taxonomie villes Dernière Dispo nettoyée</div>
-                        <span class="badge badge-green">Terminé</span>
-                    </div>
-                    <div class="kanban-card" style="animation-delay:0.2s">
-                        <div class="kanban-card-title">Dashboard Dernière Dispo</div>
-                        <div class="kanban-card-desc">Dashboard de suivi en ligne et fonctionnel</div>
-                        <span class="badge badge-green">Terminé</span>
-                    </div>
-                    <div class="kanban-card" style="animation-delay:0.25s">
-                        <div class="kanban-card-title">Migration CRM Notion</div>
-                        <div class="kanban-card-desc">Migration vers fichiers Claudia terminée</div>
-                        <span class="badge badge-green">Terminé</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== MARKETING ===== -->
-    <div class="tab" id="tab-marketing">
-        <h1 class="page-title">Marketing</h1>
-        <p class="page-subtitle">Progression vers les objectifs 2026</p>
-
-        <div class="grid grid-4">
-            <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">LinkedIn</div>
-                <div class="card-value accent" id="mkt-linkedin">62</div>
-                <div class="card-sub">Objectif : 500 followers</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">Instagram</div>
-                <div class="card-value accent" id="mkt-instagram">45</div>
-                <div class="card-sub">Objectif : 300 followers</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Newsletter</div>
-                <div class="card-value accent" id="mkt-newsletter">287</div>
-                <div class="card-sub">Objectif : 200 abonnes</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.25s">
-                <div class="card-label">Trafic site (30j)</div>
-                <div class="card-value accent" id="mkt-trafic">73</div>
-                <div class="card-sub">Objectif : 1000 sessions</div>
-            </div>
-        </div>
-
-        <h2 style="font-size:1.2rem; margin-bottom:18px;">Progression vers les objectifs 2026</h2>
-        <div class="grid grid-2">
-            <div class="card fade-in" style="animation-delay:0.3s">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                    <span style="font-weight:600;font-size:0.9rem;">LinkedIn Followers</span>
-                    <span style="color:var(--accent);font-weight:600;font-size:0.88rem;"><span id="mkt-li-val">62</span> / 500 (<span id="mkt-li-pct">12</span>%)</span>
-                </div>
-                <div class="progress-bar"><div class="progress-fill accent" id="mkt-li-bar" style="width:12%"></div></div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.35s">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                    <span style="font-weight:600;font-size:0.9rem;">Instagram Followers</span>
-                    <span style="color:var(--accent);font-weight:600;font-size:0.88rem;"><span id="mkt-ig-val">45</span> / 300 (<span id="mkt-ig-pct">15</span>%)</span>
-                </div>
-                <div class="progress-bar"><div class="progress-fill accent" id="mkt-ig-bar" style="width:15%"></div></div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.4s">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                    <span style="font-weight:600;font-size:0.9rem;">Newsletter Abonnes</span>
-                    <span style="color:var(--accent);font-weight:600;font-size:0.88rem;"><span id="mkt-nl-val">287</span> / 200 (<span id="mkt-nl-pct">100</span>%)</span>
-                </div>
-                <div class="progress-bar"><div class="progress-fill accent" id="mkt-nl-bar" style="width:100%"></div></div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.45s">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                    <span style="font-weight:600;font-size:0.9rem;">Trafic Mensuel</span>
-                    <span style="color:var(--accent);font-weight:600;font-size:0.88rem;"><span id="mkt-tr-val">73</span> / 1000 (<span id="mkt-tr-pct">7.3</span>%)</span>
-                </div>
-                <div class="progress-bar"><div class="progress-fill accent" id="mkt-tr-bar" style="width:7.3%"></div></div>
-            </div>
-        </div>
-
-        <h2 style="font-size:1.2rem; margin: 25px 0 18px;">Canaux par priorite</h2>
-        <div class="grid grid-4" style="grid-template-columns: repeat(5, 1fr);">
-            <div class="card fade-in" style="animation-delay:0.5s;text-align:center;">
-                <div class="card-label">#1 Priorite</div>
-                <div style="font-size:1.1rem;font-weight:700;">LinkedIn</div>
-                <div style="color:var(--success);font-size:0.85rem;margin-top:6px;">Actif</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.55s;text-align:center;">
-                <div class="card-label">#2 Priorite</div>
-                <div style="font-size:1.1rem;font-weight:700;">Newsletter</div>
-                <div style="color:var(--accent);font-size:0.85rem;margin-top:6px;">99 contacts</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.6s;text-align:center;">
-                <div class="card-label">#3 Priorite</div>
-                <div style="font-size:1.1rem;font-weight:700;">Instagram</div>
-                <div style="color:var(--success);font-size:0.85rem;margin-top:6px;">API active</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.65s;text-align:center;">
-                <div class="card-label">#4 Priorite</div>
-                <div style="font-size:1.1rem;font-weight:700;">Blog/SEO</div>
-                <div style="color:var(--warning);font-size:0.85rem;margin-top:6px;">A lancer</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.7s;text-align:center;">
-                <div class="card-label">#5 Bonus</div>
-                <div style="font-size:1.1rem;font-weight:700;">Facebook</div>
-                <div style="color:var(--success);font-size:0.85rem;margin-top:6px;">Cross-post</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== NEWSLETTER ===== -->
-    <div class="tab" id="tab-newsletter">
-        <h1 class="page-title">Newsletter</h1>
-        <p class="page-subtitle">Campagnes Brevo - Pixel Drop</p>
-
-        <div class="grid grid-3">
-            <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">Contacts</div>
-                <div class="card-value primary" id="nl-contacts">287</div>
-                <div class="card-sub">abonnes actifs</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">Taux ouverture</div>
-                <div class="card-value accent" id="nl-open">--</div>
-                <div class="card-sub">derniere campagne</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Campagnes envoyees</div>
-                <div class="card-value primary" id="nl-campaigns">2</div>
-                <div class="card-sub">total</div>
-            </div>
-        </div>
-
-        <div class="card table-card fade-in" style="animation-delay:0.25s">
-            <div class="table-header">Dernieres campagnes</div>
-            <table>
-                <thead><tr><th>Campagne</th><th>Date</th><th>Envoyes</th><th>Ouvertures</th><th>Clics</th></tr></thead>
-                <tbody id="nl-list">
-                    <tr><td colspan="5" style="text-align:center;color:var(--text-light)">Chargement...</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- ===== SEO ===== -->
-    <div class="tab" id="tab-seo">
-        <h1 class="page-title">SEO</h1>
-        <p class="page-subtitle">pixel-drop.com - Search Console</p>
-
-        <div class="grid grid-4">
-            <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">Clics (30j)</div>
-                <div class="card-value primary" id="seo-clicks">10</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">Impressions (30j)</div>
-                <div class="card-value accent" id="seo-impressions">669</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Position moyenne</div>
-                <div class="card-value primary" id="seo-position">17.7</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.25s">
-                <div class="card-label">CTR moyen</div>
-                <div class="card-value success" id="seo-ctr">0.5%</div>
-            </div>
-        </div>
-
-        <div class="card table-card fade-in" style="animation-delay:0.3s">
-            <div class="table-header">Top requetes</div>
-            <table>
-                <thead><tr><th>Requete</th><th>Clics</th><th>Impressions</th><th>Position</th></tr></thead>
-                <tbody id="seo-queries"><tr><td>pixel drop</td><td>7</td><td>361</td><td>6.2</td></tr>
-<tr><td>pixeldrop</td><td>3</td><td>109</td><td>7.3</td></tr>
-<tr><td>a5 en pixel</td><td>0</td><td>169</td><td>47</td></tr>
-<tr><td>a5 pixel</td><td>0</td><td>4</td><td>1.3</td></tr>
-<tr><td>agence développement applications</td><td>0</td><td>3</td><td>24.3</td></tr>
-<tr><td>agence développement web</td><td>0</td><td>2</td><td>12</td></tr>
-<tr><td>agence web 64</td><td>0</td><td>1</td><td>12</td></tr>
-<tr><td>agence web paris stage</td><td>0</td><td>1</td><td>22</td></tr></tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- ===== FINANCES ===== -->
-    <div class="tab" id="tab-finances">
-        <h1 class="page-title">Finances</h1>
-        <p class="page-subtitle">Vue financiere Pixel Drop — <a href="https://app.pennylane.com" target="_blank" style="color:var(--primary);text-decoration:none;">Ouvrir Pennylane ↗</a></p>
-
-        <div class="grid grid-4">
-            <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">CA Janvier 2026</div>
-                <div class="card-value primary">3 000€</div>
-                <div class="card-sub">1 facture payee</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">CA Fevrier 2026</div>
-                <div class="card-value accent">0€</div>
-                <div class="card-sub">en cours</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Total 2026</div>
-                <div class="card-value primary">3 000€</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.25s">
-                <div class="card-label">Devis en attente</div>
-                <div class="card-value accent">36 400€</div>
-                <div class="card-sub">5 devis pending</div>
-            </div>
-        </div>
-
-        <div class="grid grid-2">
-            <div class="card fade-in" style="animation-delay:0.3s">
-                <div class="table-header" style="padding:0 0 16px;">CA mensuel 2026</div>
-                <div class="bar-chart" id="ca-chart">
-                    <div class="bar-col"><span class="bar-amount">3k</span><div class="bar-fill" style="height:100%;background:var(--primary)"></div><span class="bar-label">Jan</span></div>
-                    <div class="bar-col"><span class="bar-amount">0</span><div class="bar-fill" style="height:2px"></div><span class="bar-label">Fev</span></div>
-                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Mar</span></div>
-                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Avr</span></div>
-                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Mai</span></div>
-                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Jun</span></div>
-                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Jul</span></div>
-                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Aou</span></div>
-                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Sep</span></div>
-                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Oct</span></div>
-                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Nov</span></div>
-                    <div class="bar-col"><span class="bar-amount">-</span><div class="bar-fill" style="height:2px;background:var(--border)"></div><span class="bar-label">Dec</span></div>
-                </div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.35s">
-                <div class="table-header" style="padding:0 0 16px;">Simulation charges (micro-entreprise)</div>
-                <div style="margin-bottom:16px;">
-                    <label style="font-size:0.8rem;color:var(--text-light);display:block;margin-bottom:6px;">CA annuel HT simule</label>
-                    <input type="number" class="sim-input" id="sim-ca" value="50000" oninput="updateSim()">
-                </div>
-                <div id="sim-results">
-                    <div class="sim-row"><span class="sim-label">CA annuel HT</span><span class="sim-value" id="sim-ca-val">50 000€</span></div>
-                    <div class="sim-row"><span class="sim-label">URSSAF (23.1%)</span><span class="sim-value negative" id="sim-urssaf">-11 550€</span></div>
-                    <div class="sim-row"><span class="sim-label">Versement liberatoire IR (2.2%)</span><span class="sim-value negative" id="sim-ir">-1 100€</span></div>
-                    <div class="sim-row"><span class="sim-label">CFE (estimee)</span><span class="sim-value negative" id="sim-cfe">-500€</span></div>
-                    <div class="sim-row" style="border-top:2px solid var(--text);padding-top:12px;margin-top:4px;"><span class="sim-label" style="font-weight:700;color:var(--text);">Resultat net</span><span class="sim-value positive" id="sim-net" style="font-size:1.1rem;">36 850€</span></div>
-                    <div class="sim-row"><span class="sim-label">Soit par mois</span><span class="sim-value positive" id="sim-monthly">3 071€</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== DEVIS & FACTURES ===== -->
-    <div class="tab" id="tab-devis">
-        <h1 class="page-title">Devis & Factures</h1>
-        <p class="page-subtitle">Suivi Pennylane — <a href="https://app.pennylane.com" target="_blank" style="color:var(--primary);text-decoration:none;">Ouvrir Pennylane ↗</a></p>
-
-        <div class="grid grid-3">
-            <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">Devis en attente</div>
-                <div class="card-value accent">5</div>
-                <div class="card-sub">36 400€ potentiels</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">Devis acceptes</div>
-                <div class="card-value success">1</div>
-                <div class="card-sub">3 000€</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Factures payees</div>
-                <div class="card-value primary">1</div>
-                <div class="card-sub">3 000€ encaisses</div>
-            </div>
-        </div>
-
-        <div class="sub-tabs">
-            <button class="sub-tab active" onclick="switchSubTab('devis', this)">Devis</button>
-            <button class="sub-tab" onclick="switchSubTab('factures', this)">Factures</button>
-        </div>
-
-        <div class="sub-tab-content active" id="subtab-devis">
-            <div class="search-bar" style="margin-bottom:16px;">
-                <input type="text" class="search-input" placeholder="Rechercher un devis..." oninput="searchTable('devis-list', this.value)">
-            </div>
-            <div class="card table-card fade-in" style="animation-delay:0.25s">
-                <table>
-                    <thead><tr><th>Date</th><th>Client</th><th>Objet</th><th>Montant</th><th>Statut</th><th>PDF</th></tr></thead>
-                    <tbody id="devis-list">
-                        <tr><td>04/02</td><td>L.I.Partners</td><td>Refonte site web</td><td>8 400€</td><td><span class="badge badge-orange">En attente</span></td><td><a href="https://app.pennylane.com/public/invoice/pdf?encrypted_id=ofb4adRdb8NcR0UMREjpTtAkyfaRlDlCi6BYpaBff8YDFHCcdwZh4n%2B4Nt8SuCht1S2I%2BYOSMrNrgFimwhsTAqow5gEnMHeyjedSRPcyAm%2Bcj9ALF17xUYc4--%2F3eQr5e6QT9wf%2BMI--hzs8nx%2FmE11%2FzRXclBLcjA%3D%3D" target="_blank" style="color:var(--primary)">↗</a></td></tr>
-                        <tr><td>04/02</td><td>L.I.Partners</td><td>Refonte site web</td><td>8 400€</td><td><span class="badge badge-orange">En attente</span></td><td><a href="https://app.pennylane.com/public/invoice/pdf?encrypted_id=TEL%2Bcls9lXjJGjREANlVYVGPGXaA1S2zcdlqrg3d%2BPAhF29h1ncaJsOURlPAmRK9mK95EPxmHVww3kLE%2FkpFs7mq%2BN0nVMjHXf%2BbeDOfURpZLzhzLqP5Bgjp--pjk9z1slPL838Qwb--HNLDuYEShsDVuMMZdfMLpQ%3D%3D" target="_blank" style="color:var(--primary)">↗</a></td></tr>
-                        <tr><td>04/02</td><td>L.I.Partners</td><td>Refonte site web</td><td>8 400€</td><td><span class="badge badge-orange">En attente</span></td><td><a href="https://app.pennylane.com/public/invoice/pdf?encrypted_id=nACIdIHZmzTlbkc2pKGJU1qGmoys1JK6w9P1LS5cxzMl5%2FleboRua9Kpsxic9Z65LIDhOSlGI3UsyBUXK0CPrAT2iS3ybjKTsRFvPznRB8NuVSAlmI8xBzri--3bCjFd5835ACcEEL--gVolaLE1mfgfMQpGJA619w%3D%3D" target="_blank" style="color:var(--primary)">↗</a></td></tr>
-                        <tr><td>04/02</td><td>L.I.Partners</td><td>Refonte site web</td><td>7 800€</td><td><span class="badge badge-orange">En attente</span></td><td><a href="https://app.pennylane.com/public/invoice/pdf?encrypted_id=R%2BcOW7FzSo%2B8LeA1iQiTcq32EBmF1FR5XtoH9PnN3boXSN0NdneunhhYDCUqo01RSWsGsYngnSQnIVBZxpQ1vdPeeZe6bY10C%2ByaKwvq4fg004QBnv0QQvFX--DQrwi08%2Bk6yjlWVr--MgD2hW7%2F%2F5qlZWSAmJ5EiQ%3D%3D" target="_blank" style="color:var(--primary)">↗</a></td></tr>
-                        <tr><td>30/01</td><td>Entretien Zen</td><td>Site Internet 3.0</td><td>2 000€</td><td><span class="badge badge-orange">En attente</span></td><td><a href="https://app.pennylane.com/public/invoice/pdf?encrypted_id=WMf0QL4HpO5sLOuSrXxQ%2BMltQ6MLkXf5%2Bt1Ks6I9FAibIklEwfZFXsGufskpYEAgvXHUkwWGc8mTRwojaUPz58E0CBYb6y3qqaKvUxdWGALs67u4NDmB2TOk--p1f6AZ2K%2FOhcZOGj--YrRGOh4Lpw0yK9kbxwiYwQ%3D%3D" target="_blank" style="color:var(--primary)">↗</a></td></tr>
-                        <tr><td>27/01</td><td>Habitat Multi Services</td><td>Site vitrine</td><td>3 000€</td><td><span class="badge badge-green">Accepte</span></td><td><a href="https://app.pennylane.com/public/invoice/pdf?encrypted_id=72mMPUxPynHBnF35uabEt7T14MzWzJtJzwcneU8bC9gZ1HwOJsT1WSvfBx6rB4PStG1iqHRhbAalcNErdDfV3pG%2BGTVnRhl%2F7s5F88YBqThJVv51ACjY%2FCsI--rtVeA0cJMVJRXoUV--Vy1GUOVQMfrkVg%2BIo9Td6A%3D%3D" target="_blank" style="color:var(--primary)">↗</a></td></tr>
-                        <tr><td>08/01</td><td>FIDOLUX</td><td>Portail Client</td><td>9 700€</td><td><span class="badge badge-orange">En attente</span></td><td><a href="https://app.pennylane.com/public/invoice/pdf?encrypted_id=Alm%2Fl%2FcKCr%2Bgxs7SQJ3CZQvO8yUPYNdzTlhu3D6%2F6OGDZkSSelSVrzDgmQuycD9r3fF2Ro7BbV4CNFmqHbMFwXRBnxWCl%2BvqtcsuAc3dBTjJQIcKI063uyU3--0El5XvMsx3e4ylug--0fxzIKG6UTbq3pE%2FF8jCnQ%3D%3D" target="_blank" style="color:var(--primary)">↗</a></td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="sub-tab-content" id="subtab-factures">
-            <div class="search-bar" style="margin-bottom:16px;">
-                <input type="text" class="search-input" placeholder="Rechercher une facture..." oninput="searchTable('factures-list', this.value)">
-            </div>
-            <div class="card table-card fade-in">
-                <table>
-                    <thead><tr><th>Date</th><th>Client</th><th>Objet</th><th>Montant</th><th>Statut</th><th>PDF</th></tr></thead>
-                    <tbody id="factures-list">
-                        <tr><td>27/01/2026</td><td>Habitat Multi Services</td><td>Site vitrine</td><td>3 000€</td><td><span class="badge badge-green">Payee</span></td><td><a href="https://app.pennylane.com/public/invoice/pdf?encrypted_id=0Qee4cbI1LqtbpEiVo5WudplXI22j5u%2FY7bezcje0QK9MQU8MUbCqGM%2BDPIJAZ3JBrhT%2B73DEW3BWg%3D%3D--NtnuU9Jb%2BPt0zSY0--YqSkN1K3eug2RGaVrM6CUg%3D%3D" target="_blank" style="color:var(--primary)">↗</a></td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== ABONNEMENTS ===== -->
-    <div class="tab" id="tab-abonnements">
-        <h1 class="page-title">Abonnements</h1>
-        <p class="page-subtitle">Charges fixes mensuelles</p>
-
-        <div class="grid grid-3">
-            <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">Total mensuel estime</div>
-                <div class="card-value primary" id="abo-total">~50€</div>
-                <div class="card-sub">a completer</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">Outils actifs</div>
-                <div class="card-value accent">6</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Prochain renouvellement</div>
-                <div class="card-value primary">--</div>
-            </div>
-        </div>
-
-        <div class="card table-card fade-in" style="animation-delay:0.25s">
-            <div class="table-header">Liste des abonnements</div>
-            <table>
-                <thead><tr><th>Outil</th><th>Cout/mois</th><th>Categorie</th><th>Notes</th></tr></thead>
-                <tbody>
-                    <tr><td>Hostinger</td><td>~10€</td><td><span class="badge badge-blue">Infrastructure</span></td><td>Hebergement sites clients</td></tr>
-                    <tr><td>Brevo</td><td>Gratuit</td><td><span class="badge badge-green">Marketing</span></td><td>Plan gratuit, newsletters</td></tr>
-                    <tr><td>Pennylane</td><td>?</td><td><span class="badge badge-orange">Comptabilite</span></td><td>Devis + factures</td></tr>
-                    <tr><td>Cloudflare</td><td>Gratuit</td><td><span class="badge badge-blue">Infrastructure</span></td><td>DNS + domaines</td></tr>
-                    <tr><td>Anthropic / OpenAI</td><td>~30€</td><td><span class="badge badge-gray">Outils IA</span></td><td>APIs</td></tr>
-                    <tr><td>Clawdbot</td><td>Gratuit</td><td><span class="badge badge-gray">Outils IA</span></td><td>Assistante Claudia</td></tr>
-                    <tr><td style="color:var(--text-light);font-style:italic">Figma ?</td><td>?</td><td><span class="badge badge-gray">Design</span></td><td style="color:var(--text-light)">A ajouter</td></tr>
-                    <tr><td style="color:var(--text-light);font-style:italic">Telephone pro ?</td><td>?</td><td><span class="badge badge-gray">Telecom</span></td><td style="color:var(--text-light)">A ajouter</td></tr>
-                    <tr><td style="color:var(--text-light);font-style:italic">RC Pro / Assurance ?</td><td>?</td><td><span class="badge badge-gray">Assurance</span></td><td style="color:var(--text-light)">A ajouter</td></tr>
-                </tbody>
-            </table>
-        </div>
-        <p style="color:var(--text-light);font-size:0.85rem;margin-top:16px;text-align:center;">Complete cette liste ! Dis a Claudia tes abonnements manquants.</p>
+        <div id="taches-content">Chargement...</div>
     </div>
 
     <!-- ===== CALENDRIER ===== -->
@@ -1407,25 +734,419 @@
     <div class="tab" id="tab-prospection">
         <h1 class="page-title">Prospection</h1>
         <p class="page-subtitle">Suivi des sessions de prospection</p>
+        <div id="prospection-content">Chargement...</div>
+    </div>
 
+    <!-- ===== FINANCES ===== -->
+    <div class="tab" id="tab-finances">
+        <h1 class="page-title">Finances</h1>
+        <p class="page-subtitle">Vue financiere Pixel Drop — <a href="https://app.pennylane.com" target="_blank" style="color:var(--primary);text-decoration:none;">Ouvrir Pennylane ↗</a></p>
+        <div id="finances-content">Chargement...</div>
+    </div>
+
+    <!-- ===== DEVIS & FACTURES ===== -->
+    <div class="tab" id="tab-devis">
+        <h1 class="page-title">Devis & Factures</h1>
+        <p class="page-subtitle">Suivi Pennylane — <a href="https://app.pennylane.com" target="_blank" style="color:var(--primary);text-decoration:none;">Ouvrir Pennylane ↗</a></p>
+        <div id="devis-content">Chargement...</div>
+    </div>
+
+    <!-- ===== ABONNEMENTS ===== -->
+    <div class="tab" id="tab-abonnements">
+        <h1 class="page-title">Abonnements</h1>
+        <p class="page-subtitle">Charges fixes mensuelles</p>
+        <div id="abonnements-content">Chargement...</div>
+    </div>
+
+    <!-- ===== MARKETING ===== -->
+    <div class="tab" id="tab-marketing">
+        <h1 class="page-title">Marketing</h1>
+        <p class="page-subtitle">Progression vers les objectifs 2026</p>
+        <div id="marketing-content">Chargement...</div>
+    </div>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <div class="tab" id="tab-newsletter">
+        <h1 class="page-title">Newsletter</h1>
+        <p class="page-subtitle">Campagnes Brevo - Pixel Drop</p>
+        <div id="newsletter-content">Chargement...</div>
+    </div>
+
+    <!-- ===== SEO ===== -->
+    <div class="tab" id="tab-seo">
+        <h1 class="page-title">SEO</h1>
+        <p class="page-subtitle">pixel-drop.com - Search Console</p>
+        <div id="seo-content">Chargement...</div>
+    </div>
+
+    <!-- ===== SITES WORDPRESS ===== -->
+    <div class="tab" id="tab-sites">
+        <h1 class="page-title">Sites WordPress</h1>
+        <p class="page-subtitle">Statut et maintenance des sites clients</p>
+        <div id="sites-content">Chargement...</div>
+    </div>
+
+</div>
+
+<script>
+    let DATA = {};
+
+    // ===== LOAD DATA =====
+    fetch('data.json')
+        .then(r => r.json())
+        .then(d => { DATA = d; renderAll(); })
+        .catch(e => console.error('Erreur chargement data.json:', e));
+
+    // ===== UTILITY =====
+    function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+    function badgeClass(statut) {
+        const s = statut.toLowerCase();
+        if (s.includes('retard') || s.includes('danger')) return 'badge-red';
+        if (s.includes('en cours') || s.includes('nouveau') || s.includes('contacter') || s.includes('rappeler') || s.includes('mail')) return 'badge-blue';
+        if (s.includes('livre') || s.includes('actif') || s.includes('active') || s.includes('accepte') || s.includes('payee') || s.includes('signe') || s.includes('termine')) return 'badge-green';
+        if (s.includes('attente') || s.includes('projet en cours') || s.includes('discussion')) return 'badge-orange';
+        if (s.includes('ancien') || s.includes('non') || s.includes('perdu') || s.includes('interesse')) return 'badge-gray';
+        return 'badge-blue';
+    }
+
+    function dateClass(dateStr) {
+        if (!dateStr || dateStr === '--') return 'date-ok';
+        const parts = dateStr.split('/');
+        if (parts.length < 3) return 'date-ok';
+        const d = new Date(parseInt(parts[2]), parseInt(parts[1]) - 1, parseInt(parts[0]));
+        const now = new Date();
+        const diffMs = d - now;
+        const diffMonths = diffMs / (1000 * 60 * 60 * 24 * 30);
+        if (diffMonths < 3) return 'date-danger';
+        if (diffMonths < 5) return 'date-warning';
+        return 'date-ok';
+    }
+
+    function majStyle(val) {
+        const n = parseInt(val);
+        if (isNaN(n)) return '';
+        if (n >= 9) return 'color:#ef4444;font-weight:600';
+        if (n >= 7) return 'color:#f59e0b;font-weight:600';
+        return '';
+    }
+
+    // ===== RENDER ALL =====
+    function renderAll() {
+        renderDashboard();
+        renderProjets();
+        renderClients();
+        renderPipeline();
+        renderTaches();
+        renderProspection();
+        renderFinances();
+        renderDevis();
+        renderAbonnements();
+        renderMarketing();
+        renderNewsletter();
+        renderSEO();
+        renderSites();
+    }
+
+    // ===== DASHBOARD =====
+    function renderDashboard() {
+        const k = DATA.kpis;
+        const m = DATA.marketing;
+        const dp = DATA.dash_projets_en_cours;
+        const pl = DATA.dash_planning;
+        const liPct = Math.round(m.linkedin.current / m.linkedin.goal * 100);
+        const igPct = Math.round(m.instagram.current / m.instagram.goal * 100);
+        const nlPct = Math.min(100, Math.round(m.newsletter.current / m.newsletter.goal * 100));
+        const trPct = Math.round(m.trafic.current / m.trafic.goal * 100 * 10) / 10;
+
+        let projRows = dp.map(p => `<tr><td>${esc(p.projet)}</td><td>${esc(p.client)}</td><td><span class="badge ${badgeClass(p.statut)}">${esc(p.statut)}</span></td></tr>`).join('');
+        let planRows = pl.map(p => `<tr><td>${esc(p.heure)}</td><td>${esc(p.evenement)}</td></tr>`).join('');
+
+        document.getElementById('dash-content').innerHTML = `
+        <div class="grid grid-4">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">CA mensuel</div>
+                <div class="card-value primary">${esc(k.ca_mensuel)}</div>
+                <div class="card-sub">${esc(k.ca_mensuel_mois)}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">Clients actifs</div>
+                <div class="card-value accent">${k.clients_actifs}</div>
+                <div class="card-sub">maintenances + projets</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Trafic pixel-drop.com</div>
+                <div class="card-value primary">${k.trafic_pd}</div>
+                <div class="card-sub">sessions (30 jours)</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <div class="card-label">Devis en attente</div>
+                <div class="card-value accent">${k.devis_attente}</div>
+                <div class="card-sub">pipeline Notion</div>
+            </div>
+        </div>
+
+        <h2 style="font-size:1.2rem; margin-bottom:18px;">Marketing</h2>
+        <div class="grid grid-4">
+            <a href="${esc(m.linkedin.url)}" target="_blank" class="card-link">
+                <div class="card fade-in" style="animation-delay:0.3s">
+                    <span class="link-arrow">↗</span>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                        <span style="font-weight:600;font-size:0.85rem;">LinkedIn</span>
+                        <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">${m.linkedin.current} / ${m.linkedin.goal}</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill accent" style="width:${liPct}%"></div></div>
+                </div>
+            </a>
+            <a href="${esc(m.instagram.url)}" target="_blank" class="card-link">
+                <div class="card fade-in" style="animation-delay:0.35s">
+                    <span class="link-arrow">↗</span>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                        <span style="font-weight:600;font-size:0.85rem;">Instagram</span>
+                        <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">${m.instagram.current} / ${m.instagram.goal}</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill accent" style="width:${igPct}%"></div></div>
+                </div>
+            </a>
+            <a href="${esc(m.newsletter.url)}" target="_blank" class="card-link">
+                <div class="card fade-in" style="animation-delay:0.4s">
+                    <span class="link-arrow">↗</span>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                        <span style="font-weight:600;font-size:0.85rem;">Newsletter</span>
+                        <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">${m.newsletter.current} / ${m.newsletter.goal}</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill accent" style="width:${nlPct}%"></div></div>
+                </div>
+            </a>
+            <a href="${esc(m.trafic.url)}" target="_blank" class="card-link">
+                <div class="card fade-in" style="animation-delay:0.45s">
+                    <span class="link-arrow">↗</span>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                        <span style="font-weight:600;font-size:0.85rem;">Trafic 30j</span>
+                        <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">${m.trafic.current} / ${m.trafic.goal}</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill accent" style="width:${trPct}%"></div></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card table-card fade-in" style="animation-delay:0.5s">
+                <div class="table-header">Projets en cours</div>
+                <table>
+                    <thead><tr><th>Projet</th><th>Client</th><th>Statut</th></tr></thead>
+                    <tbody>${projRows}</tbody>
+                </table>
+            </div>
+            <div class="card table-card fade-in" style="animation-delay:0.35s">
+                <div class="table-header">Planning du jour</div>
+                <table>
+                    <thead><tr><th>Heure</th><th>Evenement</th></tr></thead>
+                    <tbody>${planRows}</tbody>
+                </table>
+            </div>
+        </div>`;
+    }
+
+    // ===== PROJETS =====
+    function renderProjets() {
+        const projets = DATA.projets;
+        const enCours = projets.filter(p => p.statut === 'En cours').length;
+        const enRetard = projets.filter(p => p.statut === 'En retard');
+        const livres = projets.filter(p => p.statut === 'Livre').length;
+
+        let rows = projets.map(p => `<tr><td>${esc(p.nom)}</td><td>${esc(p.client)}</td><td>${esc(p.type)}</td><td>${esc(p.deadline)}</td><td><span class="badge ${badgeClass(p.statut)}">${esc(p.statut)}</span></td></tr>`).join('');
+
+        document.getElementById('projets-content').innerHTML = `
+        <div class="grid grid-3">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">En cours</div>
+                <div class="card-value primary">${enCours}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">En retard</div>
+                <div class="card-value accent">${enRetard.length}</div>
+                ${enRetard.length ? '<div class="card-sub">' + esc(enRetard[0].nom) + '</div>' : ''}
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Livres recemment</div>
+                <div class="card-value success">${livres}</div>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Rechercher un projet..." oninput="searchTable('projets-list', this.value)">
+            <button class="filter-btn active" onclick="filterTable('projets-list', 'all', this)">Tous</button>
+            <button class="filter-btn" onclick="filterTable('projets-list', 'En cours', this)">En cours</button>
+            <button class="filter-btn" onclick="filterTable('projets-list', 'Livre', this)">Livres</button>
+        </div>
+
+        <div class="card table-card fade-in" style="animation-delay:0.25s">
+            <div class="table-header">Liste des projets</div>
+            <table>
+                <thead><tr><th>Projet</th><th>Client</th><th>Type</th><th>Deadline</th><th>Statut</th></tr></thead>
+                <tbody id="projets-list">${rows}</tbody>
+            </table>
+        </div>`;
+    }
+
+    // ===== CLIENTS =====
+    function renderClients() {
+        const clients = DATA.clients;
+        const total = clients.length;
+        const maintenanceActive = clients.filter(c => c.maintenance === 'Active').length;
+        const projetsActifs = clients.filter(c => c.statut === 'Projet en cours').length;
+        const anciens = clients.filter(c => c.statut === 'Ancien').length;
+
+        let rows = clients.map(c => {
+            const dc = dateClass(c.fin_contrat);
+            const maintBadge = c.maintenance === 'Active' ? 'badge-green' : (c.maintenance === 'Non' ? 'badge-gray' : 'badge-gray');
+            return `<tr><td>${esc(c.nom)}</td><td>${esc(c.site)}</td><td><span class="badge ${maintBadge}">${esc(c.maintenance)}</span></td><td class="${dc}">${esc(c.fin_contrat)}</td><td><span class="badge ${badgeClass(c.statut)}">${esc(c.statut)}</span></td></tr>`;
+        }).join('');
+
+        document.getElementById('clients-content').innerHTML = `
+        <div class="grid grid-4">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">Total clients</div>
+                <div class="card-value primary">${total}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">Maintenance active</div>
+                <div class="card-value success">${maintenanceActive}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Projets actifs</div>
+                <div class="card-value accent">${projetsActifs}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <div class="card-label">Anciens clients</div>
+                <div class="card-value primary">${anciens}</div>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Rechercher un client..." oninput="searchTable('clients-list', this.value)">
+            <button class="filter-btn active" onclick="filterTable('clients-list', 'all', this)">Tous</button>
+            <button class="filter-btn" onclick="filterTable('clients-list', 'Actif', this)">Actifs</button>
+            <button class="filter-btn" onclick="filterTable('clients-list', 'Maintenance', this)">Maintenance</button>
+            <button class="filter-btn" onclick="filterTable('clients-list', 'Ancien', this)">Anciens</button>
+        </div>
+
+        <div class="card table-card fade-in" style="animation-delay:0.3s">
+            <div class="table-header">Clients</div>
+            <table>
+                <thead><tr><th>Client</th><th>Site</th><th>Maintenance</th><th>Fin contrat</th><th>Statut</th></tr></thead>
+                <tbody id="clients-list">${rows}</tbody>
+            </table>
+        </div>`;
+    }
+
+    // ===== PIPELINE =====
+    function renderPipeline() {
+        const pk = DATA.pipeline_kpis;
+        const pipeline = DATA.pipeline;
+
+        const etapeConfig = {
+            offre_envoyee: { label: '📧 Offre envoyee', col: 'col-orange', badge: 'badge-orange' },
+            en_discussion: { label: '💬 En discussion', col: 'col-blue', badge: 'badge-blue' },
+            signe: { label: '✅ Signe', col: 'col-green', badge: 'badge-green' },
+            perdu: { label: '❌ Perdu', col: 'col-gray', badge: 'badge-gray' }
+        };
+
+        let kanbanCols = '';
+        for (const [key, cfg] of Object.entries(etapeConfig)) {
+            const items = pipeline.filter(p => p.etape === key);
+            const cards = items.map(p => `<div class="kanban-card"><div class="kanban-card-title">${esc(p.nom)}</div><div class="kanban-card-desc">${esc(p.desc)}</div><span class="badge ${cfg.badge}">${esc(p.montant)}</span></div>`).join('');
+            kanbanCols += `<div class="kanban-column ${cfg.col}">
+                <div class="kanban-column-header"><span>${cfg.label}</span><span class="count">${items.length}</span></div>
+                <div class="kanban-column-body">${cards}</div>
+            </div>`;
+        }
+
+        document.getElementById('pipeline-content').innerHTML = `
+        <div class="grid grid-4">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">Offres envoyees</div>
+                <div class="card-value accent">${pk.offres_envoyees.count}</div>
+                <div class="card-sub">${esc(pk.offres_envoyees.montant)}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">En discussion</div>
+                <div class="card-value primary">${pk.en_discussion.count}</div>
+                <div class="card-sub">${esc(pk.en_discussion.detail)}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Signes 2026</div>
+                <div class="card-value success">${pk.signes.count}</div>
+                <div class="card-sub">${esc(pk.signes.montant)}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <div class="card-label">Perdus</div>
+                <div class="card-value primary">${pk.perdus.count}</div>
+                <div class="card-sub">${esc(pk.perdus.detail)}</div>
+            </div>
+        </div>
+        <div class="kanban-board">${kanbanCols}</div>`;
+    }
+
+    // ===== TÂCHES =====
+    function renderTaches() {
+        const taches = DATA.taches;
+        const colonneConfig = {
+            a_faire: { label: '📋 À faire', col: 'col-blue' },
+            en_cours: { label: '🔄 En cours', col: 'col-orange' },
+            termine: { label: '✅ Terminé', col: 'col-green' }
+        };
+
+        let kanbanCols = '';
+        for (const [key, cfg] of Object.entries(colonneConfig)) {
+            const items = taches.filter(t => t.colonne === key);
+            const cards = items.map((t, i) => `<div class="kanban-card" style="animation-delay:${(0.05 + i * 0.05).toFixed(2)}s">
+                <div class="kanban-card-title">${esc(t.titre)}</div>
+                <div class="kanban-card-desc">${esc(t.desc)}</div>
+                <span class="badge badge-${t.badge_color}">${esc(t.badge)}</span>
+            </div>`).join('');
+            kanbanCols += `<div class="kanban-column ${cfg.col}">
+                <div class="kanban-column-header"><span>${cfg.label}</span><span class="count">${items.length}</span></div>
+                <div class="kanban-column-body">${cards}</div>
+            </div>`;
+        }
+
+        document.getElementById('taches-content').innerHTML = `<div class="kanban-board">${kanbanCols}</div>`;
+    }
+
+    // ===== PROSPECTION =====
+    function renderProspection() {
+        const p = DATA.prospection;
+        const prospects = DATA.prospects;
+
+        let rows = prospects.map(pr => `<tr><td>${esc(pr.entreprise)}</td><td>${esc(pr.contact)}</td><td><span class="badge badge-blue">${esc(pr.etape)}</span></td></tr>`).join('');
+
+        let zoneRows = p.zones.map(z => `<tr><td>${esc(z.zone)}</td><td>${esc(z.prospects)}</td><td>${esc(z.secteur)}</td></tr>`).join('');
+
+        const appPct = p.objectifs.appels.goal > 0 ? Math.round(p.objectifs.appels.current / p.objectifs.appels.goal * 100) : 0;
+        const rdvPct = p.objectifs.rdv.goal > 0 ? Math.round(p.objectifs.rdv.current / p.objectifs.rdv.goal * 100) : 0;
+        const devPct = p.objectifs.devis.goal > 0 ? Math.round(p.objectifs.devis.current / p.objectifs.devis.goal * 100) : 0;
+
+        document.getElementById('prospection-content').innerHTML = `
         <div class="grid grid-4">
             <div class="card fade-in" style="animation-delay:0.1s">
                 <div class="card-label">Prospects a contacter</div>
-                <div class="card-value accent">71</div>
+                <div class="card-value accent">${p.prospects_a_contacter}</div>
                 <div class="card-sub">dans le pipeline</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
                 <div class="card-label">Appels ce mois</div>
-                <div class="card-value primary">0</div>
+                <div class="card-value primary">${p.appels_ce_mois}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
                 <div class="card-label">Taux conversion</div>
-                <div class="card-value primary">--</div>
+                <div class="card-value primary">${esc(p.taux_conversion)}</div>
                 <div class="card-sub">pas assez de donnees</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.25s">
                 <div class="card-label">RDV obtenus</div>
-                <div class="card-value success">0</div>
+                <div class="card-value success">${p.rdv_obtenus}</div>
                 <div class="card-sub">ce mois</div>
             </div>
         </div>
@@ -1434,27 +1155,23 @@
             <div class="card fade-in" style="animation-delay:0.3s">
                 <div style="font-weight:600;margin-bottom:16px;">Objectifs du mois</div>
                 <div style="margin-bottom:14px;">
-                    <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:0.88rem;">Appels</span><span style="color:var(--accent);font-weight:600;font-size:0.88rem;">0 / 50</span></div>
-                    <div class="progress-bar"><div class="progress-fill accent" style="width:0%"></div></div>
+                    <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:0.88rem;">Appels</span><span style="color:var(--accent);font-weight:600;font-size:0.88rem;">${p.objectifs.appels.current} / ${p.objectifs.appels.goal}</span></div>
+                    <div class="progress-bar"><div class="progress-fill accent" style="width:${appPct}%"></div></div>
                 </div>
                 <div style="margin-bottom:14px;">
-                    <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:0.88rem;">RDV obtenus</span><span style="color:var(--primary);font-weight:600;font-size:0.88rem;">0 / 5</span></div>
-                    <div class="progress-bar"><div class="progress-fill primary" style="width:0%"></div></div>
+                    <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:0.88rem;">RDV obtenus</span><span style="color:var(--primary);font-weight:600;font-size:0.88rem;">${p.objectifs.rdv.current} / ${p.objectifs.rdv.goal}</span></div>
+                    <div class="progress-bar"><div class="progress-fill primary" style="width:${rdvPct}%"></div></div>
                 </div>
                 <div>
-                    <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:0.88rem;">Devis envoyes</span><span style="color:var(--success);font-weight:600;font-size:0.88rem;">0 / 3</span></div>
-                    <div class="progress-bar"><div class="progress-fill success" style="width:0%"></div></div>
+                    <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:0.88rem;">Devis envoyes</span><span style="color:var(--success);font-weight:600;font-size:0.88rem;">${p.objectifs.devis.current} / ${p.objectifs.devis.goal}</span></div>
+                    <div class="progress-bar"><div class="progress-fill success" style="width:${devPct}%"></div></div>
                 </div>
             </div>
             <div class="card table-card fade-in" style="animation-delay:0.35s">
                 <div class="table-header">Prospects par zone</div>
                 <table>
                     <thead><tr><th>Zone</th><th>Prospects</th><th>Secteur</th></tr></thead>
-                    <tbody>
-                        <tr><td>Luxembourg</td><td>~20</td><td>Fiduciaires, cabinets</td></tr>
-                        <tr><td>Alsace / Moselle</td><td>~40</td><td>BTP, industrie</td></tr>
-                        <tr><td>Ile-de-France</td><td>~10</td><td>Services, PME</td></tr>
-                    </tbody>
+                    <tbody>${zoneRows}</tbody>
                 </table>
             </div>
         </div>
@@ -1467,134 +1184,346 @@
             <button class="filter-btn" onclick="filterTable('prospect-list', 'Pas intéressé', this)">Pas interesse</button>
         </div>
         <div class="card table-card fade-in" style="animation-delay:0.4s">
-            <div class="table-header">Liste des prospects (71)</div>
+            <div class="table-header">Liste des prospects (${prospects.length})</div>
             <table>
                 <thead><tr><th>Entreprise</th><th>Contact</th><th>Etape</th></tr></thead>
-                <tbody id="prospect-list">
-                    <tr><td>BATITECH</td><td>Mehmood Khalid (Président)</td><td><span class="badge badge-blue">🔄 À rappeler</span></td></tr>
-                    <tr><td>BSD RENOV</td><td>David Kamoun (Président)</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
-                    <tr><td>CREA</td><td>Pierre Boyet (via BOYET INVEST)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>OLD</td><td>N/A</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>Global Compta Services</td><td>À identifier</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
-                    <tr><td>Genimmo</td><td>Mme Perreira (Responsable)</td><td><span class="badge badge-blue">🔄 À rappeler</span></td></tr>
-                    <tr><td>Agigest</td><td>Paulo Madureira (Administrateur délégué)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>ECOFI</td><td>Virginie Baude (Co-gérante)</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
-                    <tr><td>ICB Ingénieurs Conseils en Bâtiments</td><td>Grégory Colinet & Pascal Cravatte (Gérants)</td><td><span class="badge badge-blue">📧 Mail envoyé</span></td></tr>
-                    <tr><td>Efitax Expertises</td><td>Stéphane Créer (Fondateur)</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
-                    <tr><td>TR-Engineering</td><td>Jean-Jacques Rauchs (Administrateur-délégué)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>CDBgest</td><td>Gérante (à identifier)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>Fiduciaire Luxpremium</td><td>Laurent Maraschin (Fondateur)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>SCRM Avocats</td><td>Alexandre Chateaux (Associé)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>GSImmo Luxembourg</td><td>À identifier</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>LBO Fiduciaire</td><td>À identifier</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>Schneider Linster Fiduciaire</td><td>Edouard Schneider (Gérant)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>RIS</td><td>Luc Mertes & Paulo Simoes (Directeurs)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>GSI Immobilier</td><td>Jérôme Masciocchi (Gestionnaire)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>Adam & Bleser Avocats</td><td>Romain Adam & Claude Bleser (Partners)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>Cabexco</td><td>Olivier Murru (Gérant)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>CHEDEVILLE</td><td>Bruno Verlhac</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>Ets Daniel Cuvelier</td><td>Damien Disdier</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>LA FOREZIENNE</td><td>Pierre Lafaye</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>LDS</td><td>N/A</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>COURTAIS</td><td>Florent Courtais</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-                    <tr><td>LA BRUXELLOISE</td><td>Alain Bernard</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
-                    <tr><td>CEKOVIC</td><td>Stéphane, Jean-michel Cekovic</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>F2A</td><td>Michael DE Oliveira</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>SPRINKLER CONCEPT MEDIS</td><td>Kemal, Ramazan Yilmaz</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>SUZETTE</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>IMMOBILIERE EURO MOSELLE</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>RESOGAZ</td><td>Antoine Moussalli</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>PIL POSE 68</td><td>Baptiste Euvrard</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>SASSO SAS</td><td>Eric, Henri Sasso</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>ENTREPRISE ALAIN BASTIEN</td><td>Pierric Bastien</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>SARL LORRAINE ENDUIT</td><td>Mahsuni Tansel</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>MLC CHAUFFAGES</td><td>Lucas Martz</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>SNOTEK</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>LOGE IMMOBILIER</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>SARL GHIA</td><td>Arnaud Mican</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>FPJ CONSEILS</td><td>Julien, Francis Serge</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>GOBIN OLLA</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>GRUMBACH IMMOBILIER</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>AMS IMMOBILIER</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>RESTAURANT LES ETANGS</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>CEGIP</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>EKYMOS</td><td>Ahmed El Yaakoubi</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>ATSIZ</td><td>Yilmaz Atsiz</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>FRANCIS BURGUNDER</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>ESPACE WENDLING</td><td>Michel Riess</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>ELECTRICITE STEUER</td><td>Dominique, Georges, Andre Briand</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>JFP</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>SMI CONSTRUCTION</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>CONSTRUCTIONS HEMMERLE</td><td>Mathieu Hemmerle</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>JMD GRILL</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>AZIZ SAHIN RAVALEMENT</td><td>David Sahin</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>CABINET HUSSER STOCKI</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>SCHNEIDER INTERNATIONAL</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>LA PETITE CUILLERE</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>PIERRE ET CREATION</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>GMS TRYBATEC</td><td>Lara Tryba</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>HOM IMMOBILIER</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>MAGYAR HABITAT</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>A & B CONSTRUCTION</td><td>Nuno, Jorge Ferreira Alves</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>KINII</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>PIERRES & FILS</td><td>Bertrand, Julien, Andre Croisille</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>ENTREPRISE BOONE FILS</td><td>Sebastien Boone</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>ETS MEYER</td><td>Christian Meyer</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>CERTEC CONCEPT</td><td>Salvatore, Alexandre Grillo</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>MATHIS IMMEUBLES</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>ETS ELECTRICITE PINTO</td><td>Sebastien Pinto</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>KRAFT</td><td>Michel, Pierre Herter</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>MARCO CERULLI</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>PARELEC</td><td>Stephane, Franck Kien</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>LE BOUCHE A OREILLE</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>CSOEC ELECTRICITE</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>Tolerie Service</td><td>(à trouver)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>USINAGE ALSACE</td><td>Vincent Ossola (CEO)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>MT2Prod</td><td>(à trouver)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>Technotol (Groupe Subtran)</td><td>(à trouver)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>HSS Usinage</td><td>Audrey Simon (Co-gérante)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>Plexinox</td><td>(à trouver)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>MIE - Mécanique Industrielle de l Est</td><td>(à trouver)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>Ateliers de Clouange</td><td>M. Dumont</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>SPR (Groupe)</td><td>David ROMEO (PDG)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>MÉCANIQUE INDUSTRIELLE DE L'EST (MIE)</td><td>Thierry LALE (Gérant)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>Techno Soud</td><td>(à trouver)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>LORRAINE METALLURGIE SERVICES</td><td>Michel Jean SEVERINO</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>SAINT JEAN EMBALLAGES</td><td>(à identifier)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>EPROLOR</td><td>Lionel GUIBERT (reprise familiale)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>VERRISSIMA INDUSTRIE</td><td>Jonathan METZ (Président)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>CRISTAL LASER</td><td>Dominique LUPINSKI (Président)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>EMBALLAGES DIFFUSION</td><td>Bruno PFYFFER D'ALTISHOFEN</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>PROCESS INDUSTRIES</td><td>Valérie FERREUX / Yves-Marie LEFEVRE (Gérants)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>HYDAC</td><td>Alain BECHTEL (Gérant)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>SITRAL INDUSTRIE</td><td>Loïc VILCHEZ (PDG)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                    <tr><td>BACACIER EST</td><td>(à identifier)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-                </tbody>
+                <tbody id="prospect-list">${rows}</tbody>
+            </table>
+        </div>`;
+    }
+
+    // ===== FINANCES =====
+    function renderFinances() {
+        const f = DATA.finances;
+        const maxCA = Math.max(...f.ca_mensuel_chart.map(m => m.montant || 0), 1);
+        let bars = f.ca_mensuel_chart.map(m => {
+            const h = m.montant !== null && m.montant > 0 ? Math.round(m.montant / maxCA * 100) + '%' : '2px';
+            const bg = m.montant !== null ? 'var(--primary)' : 'var(--border)';
+            return `<div class="bar-col"><span class="bar-amount">${esc(m.label)}</span><div class="bar-fill" style="height:${h};background:${bg}"></div><span class="bar-label">${esc(m.mois)}</span></div>`;
+        }).join('');
+
+        document.getElementById('finances-content').innerHTML = `
+        <div class="grid grid-4">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">CA Janvier 2026</div>
+                <div class="card-value primary">${esc(f.ca_janvier.montant)}</div>
+                <div class="card-sub">${esc(f.ca_janvier.detail)}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">CA Fevrier 2026</div>
+                <div class="card-value accent">${esc(f.ca_fevrier.montant)}</div>
+                <div class="card-sub">${esc(f.ca_fevrier.detail)}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Total 2026</div>
+                <div class="card-value primary">${esc(f.total_2026)}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <div class="card-label">Devis en attente</div>
+                <div class="card-value accent">${esc(f.devis_attente.montant)}</div>
+                <div class="card-sub">${esc(f.devis_attente.detail)}</div>
+            </div>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card fade-in" style="animation-delay:0.3s">
+                <div class="table-header" style="padding:0 0 16px;">CA mensuel 2026</div>
+                <div class="bar-chart">${bars}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.35s">
+                <div class="table-header" style="padding:0 0 16px;">Simulation charges (micro-entreprise)</div>
+                <div style="margin-bottom:16px;">
+                    <label style="font-size:0.8rem;color:var(--text-light);display:block;margin-bottom:6px;">CA annuel HT simule</label>
+                    <input type="number" class="sim-input" id="sim-ca" value="50000" oninput="updateSim()">
+                </div>
+                <div id="sim-results">
+                    <div class="sim-row"><span class="sim-label">CA annuel HT</span><span class="sim-value" id="sim-ca-val">50 000€</span></div>
+                    <div class="sim-row"><span class="sim-label">URSSAF (23.1%)</span><span class="sim-value negative" id="sim-urssaf">-11 550€</span></div>
+                    <div class="sim-row"><span class="sim-label">Versement liberatoire IR (2.2%)</span><span class="sim-value negative" id="sim-ir">-1 100€</span></div>
+                    <div class="sim-row"><span class="sim-label">CFE (estimee)</span><span class="sim-value negative" id="sim-cfe">-500€</span></div>
+                    <div class="sim-row" style="border-top:2px solid var(--text);padding-top:12px;margin-top:4px;"><span class="sim-label" style="font-weight:700;color:var(--text);">Resultat net</span><span class="sim-value positive" id="sim-net" style="font-size:1.1rem;">36 850€</span></div>
+                    <div class="sim-row"><span class="sim-label">Soit par mois</span><span class="sim-value positive" id="sim-monthly">3 071€</span></div>
+                </div>
+            </div>
+        </div>`;
+    }
+
+    // ===== DEVIS & FACTURES =====
+    function renderDevis() {
+        const dk = DATA.devis_kpis;
+        const devis = DATA.devis;
+        const factures = DATA.factures;
+
+        let devisRows = devis.map(d => `<tr><td>${esc(d.date)}</td><td>${esc(d.client)}</td><td>${esc(d.objet)}</td><td>${esc(d.montant)}</td><td><span class="badge ${badgeClass(d.statut)}">${esc(d.statut)}</span></td><td><a href="${esc(d.pdf)}" target="_blank" style="color:var(--primary)">↗</a></td></tr>`).join('');
+
+        let factRows = factures.map(f => `<tr><td>${esc(f.date)}</td><td>${esc(f.client)}</td><td>${esc(f.objet)}</td><td>${esc(f.montant)}</td><td><span class="badge ${badgeClass(f.statut)}">${esc(f.statut)}</span></td><td><a href="${esc(f.pdf)}" target="_blank" style="color:var(--primary)">↗</a></td></tr>`).join('');
+
+        document.getElementById('devis-content').innerHTML = `
+        <div class="grid grid-3">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">Devis en attente</div>
+                <div class="card-value accent">${dk.en_attente.count}</div>
+                <div class="card-sub">${esc(dk.en_attente.montant)}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">Devis acceptes</div>
+                <div class="card-value success">${dk.acceptes.count}</div>
+                <div class="card-sub">${esc(dk.acceptes.montant)}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Factures payees</div>
+                <div class="card-value primary">${dk.factures_payees.count}</div>
+                <div class="card-sub">${esc(dk.factures_payees.montant)}</div>
+            </div>
+        </div>
+
+        <div class="sub-tabs">
+            <button class="sub-tab active" onclick="switchSubTab('devis', this)">Devis</button>
+            <button class="sub-tab" onclick="switchSubTab('factures', this)">Factures</button>
+        </div>
+
+        <div class="sub-tab-content active" id="subtab-devis">
+            <div class="search-bar" style="margin-bottom:16px;">
+                <input type="text" class="search-input" placeholder="Rechercher un devis..." oninput="searchTable('devis-list', this.value)">
+            </div>
+            <div class="card table-card fade-in" style="animation-delay:0.25s">
+                <table>
+                    <thead><tr><th>Date</th><th>Client</th><th>Objet</th><th>Montant</th><th>Statut</th><th>PDF</th></tr></thead>
+                    <tbody id="devis-list">${devisRows}</tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="sub-tab-content" id="subtab-factures">
+            <div class="search-bar" style="margin-bottom:16px;">
+                <input type="text" class="search-input" placeholder="Rechercher une facture..." oninput="searchTable('factures-list', this.value)">
+            </div>
+            <div class="card table-card fade-in">
+                <table>
+                    <thead><tr><th>Date</th><th>Client</th><th>Objet</th><th>Montant</th><th>Statut</th><th>PDF</th></tr></thead>
+                    <tbody id="factures-list">${factRows}</tbody>
+                </table>
+            </div>
+        </div>`;
+    }
+
+    // ===== ABONNEMENTS =====
+    function renderAbonnements() {
+        const abos = DATA.abonnements;
+        const actifs = abos.filter(a => !a.placeholder).length;
+
+        let rows = abos.map(a => {
+            const style = a.placeholder ? 'color:var(--text-light);font-style:italic' : '';
+            const noteStyle = a.placeholder ? 'color:var(--text-light)' : '';
+            return `<tr><td style="${style}">${esc(a.outil)}</td><td>${esc(a.cout)}</td><td><span class="badge badge-${a.badge_color}">${esc(a.categorie)}</span></td><td style="${noteStyle}">${esc(a.notes)}</td></tr>`;
+        }).join('');
+
+        document.getElementById('abonnements-content').innerHTML = `
+        <div class="grid grid-3">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">Total mensuel estime</div>
+                <div class="card-value primary">~50€</div>
+                <div class="card-sub">a completer</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">Outils actifs</div>
+                <div class="card-value accent">${actifs}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Prochain renouvellement</div>
+                <div class="card-value primary">--</div>
+            </div>
+        </div>
+
+        <div class="card table-card fade-in" style="animation-delay:0.25s">
+            <div class="table-header">Liste des abonnements</div>
+            <table>
+                <thead><tr><th>Outil</th><th>Cout/mois</th><th>Categorie</th><th>Notes</th></tr></thead>
+                <tbody>${rows}</tbody>
             </table>
         </div>
-    </div>
+        <p style="color:var(--text-light);font-size:0.85rem;margin-top:16px;text-align:center;">Complete cette liste ! Dis a Claudia tes abonnements manquants.</p>`;
+    }
 
-    <!-- ===== SITES WORDPRESS ===== -->
-    <div class="tab" id="tab-sites">
-        <h1 class="page-title">Sites WordPress</h1>
-        <p class="page-subtitle">Statut et maintenance des sites clients</p>
+    // ===== MARKETING =====
+    function renderMarketing() {
+        const m = DATA.marketing;
+        const liPct = Math.round(m.linkedin.current / m.linkedin.goal * 100);
+        const igPct = Math.round(m.instagram.current / m.instagram.goal * 100);
+        const nlPct = Math.min(100, Math.round(m.newsletter_stats.contacts / m.newsletter.goal * 100));
+        const trPct = Math.round(m.trafic.current / m.trafic.goal * 100 * 10) / 10;
 
+        let channelCards = m.channels_priority.map((c, i) => `
+            <div class="card fade-in" style="animation-delay:${(0.5 + i * 0.05).toFixed(2)}s;text-align:center;">
+                <div class="card-label">#${c.rank} ${c.rank <= 4 ? 'Priorite' : 'Bonus'}</div>
+                <div style="font-size:1.1rem;font-weight:700;">${esc(c.name)}</div>
+                <div style="color:var(--${c.status_color});font-size:0.85rem;margin-top:6px;">${esc(c.status)}</div>
+            </div>`).join('');
+
+        document.getElementById('marketing-content').innerHTML = `
+        <div class="grid grid-4">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">LinkedIn</div>
+                <div class="card-value accent">${m.linkedin.current}</div>
+                <div class="card-sub">Objectif : ${m.linkedin.goal} followers</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">Instagram</div>
+                <div class="card-value accent">${m.instagram.current}</div>
+                <div class="card-sub">Objectif : ${m.instagram.goal} followers</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Newsletter</div>
+                <div class="card-value accent">${m.newsletter_stats.contacts}</div>
+                <div class="card-sub">Objectif : ${m.newsletter.goal} abonnes</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <div class="card-label">Trafic site (30j)</div>
+                <div class="card-value accent">${m.trafic.current}</div>
+                <div class="card-sub">Objectif : ${m.trafic.goal} sessions</div>
+            </div>
+        </div>
+
+        <h2 style="font-size:1.2rem; margin-bottom:18px;">Progression vers les objectifs 2026</h2>
+        <div class="grid grid-2">
+            <div class="card fade-in" style="animation-delay:0.3s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                    <span style="font-weight:600;font-size:0.9rem;">LinkedIn Followers</span>
+                    <span style="color:var(--accent);font-weight:600;font-size:0.88rem;">${m.linkedin.current} / ${m.linkedin.goal} (${liPct}%)</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill accent" style="width:${liPct}%"></div></div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.35s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                    <span style="font-weight:600;font-size:0.9rem;">Instagram Followers</span>
+                    <span style="color:var(--accent);font-weight:600;font-size:0.88rem;">${m.instagram.current} / ${m.instagram.goal} (${igPct}%)</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill accent" style="width:${igPct}%"></div></div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.4s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                    <span style="font-weight:600;font-size:0.9rem;">Newsletter Abonnes</span>
+                    <span style="color:var(--accent);font-weight:600;font-size:0.88rem;">${m.newsletter_stats.contacts} / ${m.newsletter.goal} (${nlPct}%)</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill accent" style="width:${nlPct}%"></div></div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.45s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                    <span style="font-weight:600;font-size:0.9rem;">Trafic Mensuel</span>
+                    <span style="color:var(--accent);font-weight:600;font-size:0.88rem;">${m.trafic.current} / ${m.trafic.goal} (${trPct}%)</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill accent" style="width:${trPct}%"></div></div>
+            </div>
+        </div>
+
+        <h2 style="font-size:1.2rem; margin: 25px 0 18px;">Canaux par priorite</h2>
+        <div class="grid grid-4" style="grid-template-columns: repeat(5, 1fr);">${channelCards}</div>`;
+    }
+
+    // ===== NEWSLETTER =====
+    function renderNewsletter() {
+        const ns = DATA.marketing.newsletter_stats;
+
+        document.getElementById('newsletter-content').innerHTML = `
+        <div class="grid grid-3">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">Contacts</div>
+                <div class="card-value primary">${ns.contacts}</div>
+                <div class="card-sub">abonnes actifs</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">Taux ouverture</div>
+                <div class="card-value accent">${esc(ns.open_rate)}</div>
+                <div class="card-sub">derniere campagne</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Campagnes envoyees</div>
+                <div class="card-value primary">${ns.campaigns_sent}</div>
+                <div class="card-sub">total</div>
+            </div>
+        </div>
+
+        <div class="card table-card fade-in" style="animation-delay:0.25s">
+            <div class="table-header">Dernieres campagnes</div>
+            <table>
+                <thead><tr><th>Campagne</th><th>Date</th><th>Envoyes</th><th>Ouvertures</th><th>Clics</th></tr></thead>
+                <tbody id="nl-list">
+                    <tr><td colspan="5" style="text-align:center;color:var(--text-light)">Chargement...</td></tr>
+                </tbody>
+            </table>
+        </div>`;
+    }
+
+    // ===== SEO =====
+    function renderSEO() {
+        const s = DATA.seo;
+        let rows = s.queries.map(q => `<tr><td>${esc(q.query)}</td><td>${q.clicks}</td><td>${q.impressions}</td><td>${q.position}</td></tr>`).join('');
+
+        document.getElementById('seo-content').innerHTML = `
+        <div class="grid grid-4">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">Clics (30j)</div>
+                <div class="card-value primary">${s.clicks}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">Impressions (30j)</div>
+                <div class="card-value accent">${s.impressions}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Position moyenne</div>
+                <div class="card-value primary">${s.position}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <div class="card-label">CTR moyen</div>
+                <div class="card-value success">${esc(s.ctr)}</div>
+            </div>
+        </div>
+
+        <div class="card table-card fade-in" style="animation-delay:0.3s">
+            <div class="table-header">Top requetes</div>
+            <table>
+                <thead><tr><th>Requete</th><th>Clics</th><th>Impressions</th><th>Position</th></tr></thead>
+                <tbody>${rows}</tbody>
+            </table>
+        </div>`;
+    }
+
+    // ===== SITES WORDPRESS =====
+    function renderSites() {
+        const sites = DATA.sites;
+        const active = sites.filter(s => s.maintenance === 'Active').length;
+        const inactive = sites.filter(s => s.maintenance === 'Inactive').length;
+        const html = sites.filter(s => s.type === 'html').length;
+        const total = sites.length;
+
+        let rows = sites.map(s => {
+            const dc = dateClass(s.fin_contrat);
+            const ms = majStyle(s.maj_dispo);
+            const maintBadge = s.maintenance === 'Active' ? 'badge-green' : (s.maintenance === 'Inactive' ? 'badge-gray' : 'badge-blue');
+            const wpLink = s.type === 'wordpress' ? `<a href="${esc(s.full_url)}/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a>` : '';
+            const apiLabel = s.type === 'html' ? '--' : (s.api ? '<span class="badge badge-green">OUI</span>' : '<span class="badge badge-gray">NON</span>');
+            const majLabel = s.type === 'html' ? '--' : (s.maj_dispo || '?');
+
+            return `<tr><td>${wpLink}</td><td><a href="${esc(s.full_url)}" target="_blank" style="color:var(--primary)">${esc(s.url)} ↗</a></td><td><span class="badge ${maintBadge}">${esc(s.maintenance)}</span></td><td class="${dc}">${esc(s.fin_contrat)}</td><td style="${ms}">${esc(String(majLabel))}</td><td>${apiLabel}</td></tr>`;
+        }).join('');
+
+        document.getElementById('sites-content').innerHTML = `
         <div class="grid grid-4">
             <div class="card fade-in" style="animation-delay:0.1s">
                 <div class="card-label">Maintenance active</div>
-                <div class="card-value primary">11</div>
+                <div class="card-value primary">${active}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
                 <div class="card-label">Maintenance inactive</div>
-                <div class="card-value accent">18</div>
+                <div class="card-value accent">${inactive}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
                 <div class="card-label">Sites non-WP</div>
-                <div class="card-value primary">2</div>
+                <div class="card-value primary">${html}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.25s">
                 <div class="card-label">Total</div>
-                <div class="card-value success">31</div>
+                <div class="card-value success">${total}</div>
             </div>
         </div>
 
@@ -1610,46 +1539,13 @@
             <div class="table-header">Tous les sites</div>
             <table>
                 <thead><tr><th></th><th>Site</th><th>Maintenance</th><th>Fin contrat</th><th>MAJ dispo</th><th>API</th></tr></thead>
-                <tbody id="sites-list">
-                    <tr><td><a href="https://pixel-drop.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://pixel-drop.com" target="_blank" style="color:var(--primary)">pixel-drop.com ↗</a></td><td><span class="badge badge-green">Active</span></td><td class="date-ok">04/10/2030</td><td>3</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://festival.plazatango.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://festival.plazatango.com" target="_blank" style="color:var(--primary)">festival.plazatango.com ↗</a></td><td><span class="badge badge-green">Active</span></td><td class="date-ok">04/01/2030</td><td>5</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://etheos.fr/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://etheos.fr" target="_blank" style="color:var(--primary)">etheos.fr ↗</a></td><td><span class="badge badge-green">Active</span></td><td class="date-ok">01/12/2026</td><td>3</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://pepitesdesthetique.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://pepitesdesthetique.com" target="_blank" style="color:var(--primary)">pepitesdesthetique.com ↗</a></td><td><span class="badge badge-green">Active</span></td><td class="date-ok">12/10/2026</td><td>6</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://richard-wagner-web-museum.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://richard-wagner-web-museum.com" target="_blank" style="color:var(--primary)">richard-wagner-web-museum.com ↗</a></td><td><span class="badge badge-green">Active</span></td><td class="date-ok">14/09/2026</td><td>?</td><td><span class="badge badge-gray">NON</span></td></tr>
-                    <tr><td><a href="https://lxbconstruction.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://lxbconstruction.com" target="_blank" style="color:var(--primary)">lxbconstruction.com ↗</a></td><td><span class="badge badge-green">Active</span></td><td class="date-ok">04/10/2026</td><td>3</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://dernieredispo.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://dernieredispo.com" target="_blank" style="color:var(--primary)">dernieredispo.com ↗</a></td><td><span class="badge badge-green">Active</span></td><td class="date-ok">31/07/2026</td><td>2</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://fidolux.lu/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://fidolux.lu" target="_blank" style="color:var(--primary)">fidolux.lu ↗</a></td><td><span class="badge badge-green">Active</span></td><td class="date-warning">31/05/2026</td><td>?</td><td><span class="badge badge-gray">NON</span></td></tr>
-                    <tr><td><a href="https://lxb-estate.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://lxb-estate.com" target="_blank" style="color:var(--primary)">lxb-estate.com ↗</a></td><td><span class="badge badge-green">Active</span></td><td class="date-warning">30/04/2026</td><td>3</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://cothidance92.fr/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://cothidance92.fr" target="_blank" style="color:var(--primary)">cothidance92.fr ↗</a></td><td><span class="badge badge-green">Active</span></td><td class="date-danger">04/04/2026</td><td>3</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://collectivitesterritoriales.fr/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://collectivitesterritoriales.fr" target="_blank" style="color:var(--primary)">collectivitesterritoriales.fr ↗</a></td><td><span class="badge badge-green">Active</span></td><td class="date-danger">09/04/2026</td><td>4</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://www.black-trombone.fr/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://www.black-trombone.fr" target="_blank" style="color:var(--primary)">black-trombone.fr ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>7</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://bernard-emmanuel.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://bernard-emmanuel.com" target="_blank" style="color:var(--primary)">bernard-emmanuel.com ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>0</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://habitatmultiservices.lu/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://habitatmultiservices.lu" target="_blank" style="color:var(--primary)">habitatmultiservices.lu ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>3</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://au-cerf.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://au-cerf.com" target="_blank" style="color:var(--primary)">au-cerf.com ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td style="color:#ef4444;font-weight:600">9</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://www.taimpel.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://www.taimpel.com" target="_blank" style="color:var(--primary)">taimpel.com ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td style="color:#f59e0b;font-weight:600">7</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://licorne-invest.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://licorne-invest.com" target="_blank" style="color:var(--primary)">licorne-invest.com ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>?</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://baptistebeloeil.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://baptistebeloeil.com" target="_blank" style="color:var(--primary)">baptistebeloeil.com ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td style="color:#ef4444;font-weight:600">12</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td><a href="https://babeta-lunchbox.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://babeta-lunchbox.com" target="_blank" style="color:var(--primary)">babeta-lunchbox.com ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>?</td><td><span class="badge badge-gray">NON</span></td></tr>
-                    <tr><td><a href="https://cine-loges.fr/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://cine-loges.fr" target="_blank" style="color:var(--primary)">cine-loges.fr ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>?</td><td><span class="badge badge-gray">NON</span></td></tr>
-                    <tr><td><a href="https://awayexpedition.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://awayexpedition.com" target="_blank" style="color:var(--primary)">awayexpedition.com ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>?</td><td><span class="badge badge-gray">NON</span></td></tr>
-                    <tr><td><a href="https://vtcswiss.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://vtcswiss.com" target="_blank" style="color:var(--primary)">vtcswiss.com ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>?</td><td><span class="badge badge-gray">NON</span></td></tr>
-                    <tr><td><a href="https://makephysio.ch/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://makephysio.ch" target="_blank" style="color:var(--primary)">makephysio.ch ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>?</td><td><span class="badge badge-gray">NON</span></td></tr>
-                    <tr><td><a href="https://tkhor-avocat.fr/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://tkhor-avocat.fr" target="_blank" style="color:var(--primary)">tkhor-avocat.fr ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>?</td><td><span class="badge badge-gray">NON</span></td></tr>
-                    <tr><td><a href="https://latoastfamily.fr/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://latoastfamily.fr" target="_blank" style="color:var(--primary)">latoastfamily.fr ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>?</td><td><span class="badge badge-gray">NON</span></td></tr>
-                    <tr><td><a href="https://hollymeals.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://hollymeals.com" target="_blank" style="color:var(--primary)">hollymeals.com ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>?</td><td><span class="badge badge-gray">NON</span></td></tr>
-                    <tr><td><a href="https://grandbattementdailes.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://grandbattementdailes.com" target="_blank" style="color:var(--primary)">grandbattementdailes.com ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>?</td><td><span class="badge badge-gray">NON</span></td></tr>
-                    <tr><td><a href="https://jab-prod.com/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://jab-prod.com" target="_blank" style="color:var(--primary)">jab-prod.com ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td>?</td><td><span class="badge badge-gray">NON</span></td></tr>
-                    <tr><td><a href="https://redactioneliteseo.fr/wp-admin" target="_blank" class="wp-admin-link" title="wp-admin">&#9881;</a></td><td><a href="https://redactioneliteseo.fr" target="_blank" style="color:var(--primary)">redactioneliteseo.fr ↗</a></td><td><span class="badge badge-gray">Inactive</span></td><td>--</td><td style="color:#ef4444;font-weight:600">8</td><td><span class="badge badge-green">OUI</span></td></tr>
-                    <tr><td></td><td><a href="https://crw-lyon.fr" target="_blank" style="color:var(--primary)">crw-lyon.fr ↗</a></td><td><span class="badge badge-blue">HTML statique</span></td><td>--</td><td>--</td><td>--</td></tr>
-                    <tr><td></td><td><a href="https://pixel-drop.com/calculateur/" target="_blank" style="color:var(--primary)">pixel-drop.com/calculateur ↗</a></td><td><span class="badge badge-blue">HTML statique</span></td><td>--</td><td>--</td><td>--</td></tr>
-                </tbody>
+                <tbody id="sites-list">${rows}</tbody>
             </table>
-        </div>
-    </div>
+        </div>`;
+    }
 
-</div>
+    // ===== GLOBAL FUNCTIONS =====
 
-<script>
     // Toggle sidebar
     document.getElementById('toggleBtn').addEventListener('click', () => {
         document.getElementById('sidebar').classList.toggle('collapsed');
@@ -1680,79 +1576,6 @@
     }
     updateClock();
     setInterval(updateClock, 30000);
-
-    // Toggle Pipeline view (table/kanban)
-    function togglePipelineView(view, btn) {
-        btn.parentElement.querySelectorAll('.view-toggle-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById('pipeline-table').classList.toggle('active', view === 'table');
-        document.getElementById('pipeline-kanban').classList.toggle('active', view === 'kanban');
-
-        // Re-trigger kanban animations
-        if (view === 'kanban') {
-            document.querySelectorAll('#pipeline-kanban .kanban-card').forEach(el => {
-                el.style.animation = 'none';
-                el.offsetHeight;
-                el.style.animation = '';
-            });
-        }
-    }
-
-    // Populate Pipeline Kanban from table data
-    function populatePipelineKanban() {
-        const rows = document.querySelectorAll('#pipeline-list tr');
-        const buckets = { new: [], sent: [], signed: [], lost: [] };
-
-        rows.forEach(row => {
-            const cells = row.querySelectorAll('td');
-            if (cells.length < 4) return;
-            const name = cells[0].textContent.trim();
-            const contact = cells[1].textContent.trim();
-            const value = cells[2].textContent.trim();
-            const stage = cells[3].textContent.trim();
-
-            let bucket = 'new';
-            if (stage.includes('Mail envoyé') || stage.includes('À rappeler')) bucket = 'sent';
-            else if (stage.includes('Pas intéressé')) bucket = 'lost';
-            else if (stage.includes('Signé') || stage.includes('Client')) bucket = 'signed';
-
-            buckets[bucket].push({ name, contact, value, stage });
-        });
-
-        const badgeMap = { new: 'badge-blue', sent: 'badge-orange', signed: 'badge-green', lost: 'badge-gray' };
-
-        Object.keys(buckets).forEach(key => {
-            const container = document.getElementById('pk-' + key);
-            const countEl = document.getElementById('pk-' + key + '-count');
-            container.innerHTML = '';
-            countEl.textContent = buckets[key].length;
-
-            buckets[key].forEach((item, i) => {
-                const card = document.createElement('div');
-                card.className = 'kanban-card';
-                card.style.animationDelay = (0.05 + i * 0.04) + 's';
-                card.innerHTML = `
-                    <div class="kanban-card-title">${item.name}</div>
-                    <div class="kanban-card-desc">${item.contact}${item.value !== '--' ? ' — ' + item.value : ''}</div>
-                    <span class="badge ${badgeMap[key]}">${item.stage.replace(/[🎯📧❌🔄✅]/g, '').trim()}</span>
-                `;
-                container.appendChild(card);
-            });
-        });
-    }
-
-    populatePipelineKanban();
-
-    // Toggle Projets view
-    function toggleProjetsView(view, btn) {
-        btn.parentElement.querySelectorAll('.view-toggle-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById('projets-table').style.display = view === 'table' ? 'block' : 'none';
-        document.getElementById('projets-kanban').style.display = view === 'kanban' ? 'block' : 'none';
-        if (view === 'kanban') {
-            document.querySelectorAll('#projets-kanban .kanban-card').forEach(el => { el.style.animation = 'none'; el.offsetHeight; el.style.animation = ''; });
-        }
-    }
 
     // Finance simulator
     function updateSim() {
@@ -1820,12 +1643,13 @@
     // Filter tables
     function filterTable(tbodyId, filter, btn) {
         const tbody = document.getElementById(tbodyId);
+        if (!tbody) return;
         const rows = tbody.querySelectorAll('tr');
-        
+
         // Update active button
         btn.parentElement.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        
+
         rows.forEach(row => {
             if (filter === 'all') {
                 row.style.display = '';
