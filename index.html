@@ -151,11 +151,11 @@
             min-height: 100vh;
             padding: 35px 40px;
             overflow-x: hidden;
-            max-width: calc(100vw - var(--sidebar-width));
+            width: calc(100vw - var(--sidebar-width));
             box-sizing: border-box;
         }
 
-        .sidebar.collapsed ~ .main { margin-left: var(--sidebar-collapsed); max-width: calc(100vw - var(--sidebar-collapsed)); }
+        .sidebar.collapsed ~ .main { margin-left: var(--sidebar-collapsed); width: calc(100vw - var(--sidebar-collapsed)); }
 
         .tab { display: none; }
         .tab.active { display: block; }
@@ -890,19 +890,14 @@
                 <div class="card-sub">3 000€</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.25s">
-                <div class="card-label">Prospection froide</div>
-                <div class="card-value primary">71</div>
-                <div class="card-sub">contacts a appeler</div>
+                <div class="card-label">Perdus</div>
+                <div class="card-value primary">0</div>
+                <div class="card-sub">ce mois</div>
             </div>
         </div>
 
-        <div class="sub-tabs">
-            <button class="sub-tab active" onclick="switchSubTab('pipeline-deals', this)">Opportunites</button>
-            <button class="sub-tab" onclick="switchSubTab('pipeline-prospection', this)">Prospection</button>
-        </div>
-
         <!-- Opportunites qualifiees -->
-        <div class="sub-tab-content active" id="subtab-pipeline-deals">
+        <div>
             <div class="kanban-board">
                 <div class="kanban-column col-orange">
                     <div class="kanban-column-header">
@@ -942,121 +937,10 @@
                 </div>
             </div>
         </div>
+        </div><!-- close kanban wrapper -->
+    </div>
 
-        <!-- Prospection froide -->
-        <div class="sub-tab-content" id="subtab-pipeline-prospection">
-            <div class="search-bar" style="margin-bottom:16px;">
-                <input type="text" class="search-input" placeholder="Rechercher un prospect..." oninput="searchTable('pipeline-list', this.value)">
-            </div>
 
-        <!-- Pipeline Table View -->
-        <div class="card table-card fade-in" style="animation-delay:0.3s">
-            <div class="table-header">Prospects (Notion)</div>
-            <table>
-                <thead><tr><th>Entreprise</th><th>Contact</th><th>Valeur</th><th>Etape</th></tr></thead>
-                <tbody id="pipeline-list"><tr><td>DECORENOV</td><td>Jennifer Kemmat (Présidente)</td><td>--</td><td><span class="badge badge-blue">🔄 À rappeler</span></td></tr>
-<tr><td>BATITECH</td><td>Mehmood Khalid (Président)</td><td>--</td><td><span class="badge badge-blue">🔄 À rappeler</span></td></tr>
-<tr><td>BSD RENOV</td><td>David Kamoun (Président)</td><td>--</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
-<tr><td>CREA</td><td>Pierre Boyet (via BOYET INVEST)</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>OLD</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>Global Compta Services</td><td>À identifier</td><td>--</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
-<tr><td>Genimmo</td><td>Mme Perreira (Responsable)</td><td>--</td><td><span class="badge badge-blue">🔄 À rappeler</span></td></tr>
-<tr><td>Agigest</td><td>Paulo Madureira (Administrateur délégué)</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>ECOFI</td><td>Virginie Baude (Co-gérante)</td><td>--</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
-<tr><td>ICB Ingénieurs Conseils en Bâtiments</td><td>Grégory Colinet & Pascal Cravatte (Gérants)</td><td>--</td><td><span class="badge badge-blue">📧 Mail envoyé</span></td></tr>
-<tr><td>Efitax Expertises</td><td>Stéphane Créer (Fondateur)</td><td>--</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
-<tr><td>TR-Engineering</td><td>Jean-Jacques Rauchs (Administrateur-délégué)</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>CDBgest</td><td>Gérante (à identifier)</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>Fiduciaire Luxpremium</td><td>Laurent Maraschin (Fondateur)</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>SCRM Avocats</td><td>Alexandre Chateaux (Associé)</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>GSImmo Luxembourg</td><td>À identifier</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>LBO Fiduciaire</td><td>À identifier</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>Schneider Linster Fiduciaire</td><td>Edouard Schneider (Gérant)</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>RIS</td><td>Luc Mertes & Paulo Simoes (Directeurs)</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>GSI Immobilier</td><td>Jérôme Masciocchi (Gestionnaire)</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>Adam & Bleser Avocats</td><td>Romain Adam & Claude Bleser (Partners)</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>Cabexco</td><td>Olivier Murru (Gérant)</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>CHEDEVILLE</td><td>Bruno Verlhac</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>Ets Daniel Cuvelier</td><td>Damien Disdier</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>LA FOREZIENNE</td><td>Pierre Lafaye</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>LDS</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>COURTAIS</td><td>Florent Courtais</td><td>--</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
-<tr><td>LA BRUXELLOISE</td><td>Alain Bernard</td><td>--</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
-<tr><td>CEKOVIC</td><td>Stéphane, Jean-michel Cekovic</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>F2A</td><td>Michael DE Oliveira</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>SPRINKLER CONCEPT MEDIS</td><td>Kemal, Ramazan Yilmaz</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>SUZETTE</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>IMMOBILIERE EURO MOSELLE</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>RESOGAZ</td><td>Antoine Moussalli</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>PIL POSE 68</td><td>Baptiste Euvrard</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>SASSO SAS</td><td>Eric, Henri Sasso</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>ENTREPRISE ALAIN BASTIEN</td><td>Pierric Bastien</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>SARL LORRAINE ENDUIT</td><td>Mahsuni Tansel</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>MLC CHAUFFAGES</td><td>Lucas Martz</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>SNOTEK</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>LOGE IMMOBILIER</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>SARL GHIA</td><td>Arnaud Mican</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>FPJ CONSEILS</td><td>Julien, Francis Serge</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>GOBIN OLLA</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>GRUMBACH IMMOBILIER</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>AMS IMMOBILIER</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>RESTAURANT LES ETANGS</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>CEGIP</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>EKYMOS</td><td>Ahmed El Yaakoubi</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>ATSIZ</td><td>Yilmaz Atsiz</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>FRANCIS BURGUNDER</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>ESPACE WENDLING</td><td>Michel Riess</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>ELECTRICITE STEUER</td><td>Dominique, Georges, Andre Briand</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>JFP</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>SMI CONSTRUCTION</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>CONSTRUCTIONS HEMMERLE</td><td>Mathieu Hemmerle</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>JMD GRILL</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>AZIZ SAHIN RAVALEMENT</td><td>David Sahin</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>CABINET HUSSER STOCKI</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>SCHNEIDER INTERNATIONAL</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>LA PETITE CUILLERE</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>PIERRE ET CREATION</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>GMS TRYBATEC</td><td>Lara Tryba</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>HOM IMMOBILIER</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>MAGYAR HABITAT</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>A & B CONSTRUCTION</td><td>Nuno, Jorge Ferreira Alves</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>KINII</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>PIERRES & FILS</td><td>Bertrand, Julien, Andre Croisille</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>ENTREPRISE BOONE FILS</td><td>Sebastien Boone</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>ETS MEYER</td><td>Christian Meyer</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>CERTEC CONCEPT</td><td>Salvatore, Alexandre Grillo</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>MATHIS IMMEUBLES</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>ETS ELECTRICITE PINTO</td><td>Sebastien Pinto</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>KRAFT</td><td>Michel, Pierre Herter</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>MARCO CERULLI</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>PARELEC</td><td>Stephane, Franck Kien</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>LE BOUCHE A OREILLE</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>CSOEC ELECTRICITE</td><td>N/A</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>Tolerie Service</td><td>(à trouver)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>USINAGE ALSACE</td><td>Vincent Ossola (CEO)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>MT2Prod</td><td>(à trouver)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>Technotol (Groupe Subtran)</td><td>(à trouver)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>HSS Usinage</td><td>Audrey Simon (Co-gérante)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>Plexinox</td><td>(à trouver)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>MIE - Mécanique Industrielle de l Est</td><td>(à trouver)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>Ateliers de Clouange</td><td>M. Dumont</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>SPR (Groupe)</td><td>David ROMEO (PDG)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>MÉCANIQUE INDUSTRIELLE DE L'EST (MIE)</td><td>Thierry LALE (Gérant)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>Techno Soud</td><td>(à trouver)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>LORRAINE METALLURGIE SERVICES</td><td>Michel Jean SEVERINO</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>SAINT JEAN EMBALLAGES</td><td>(à identifier)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>EPROLOR</td><td>Lionel GUIBERT (reprise familiale)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>VERRISSIMA INDUSTRIE</td><td>Jonathan METZ (Président)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>CRISTAL LASER</td><td>Dominique LUPINSKI (Président)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>EMBALLAGES DIFFUSION</td><td>Bruno PFYFFER D'ALTISHOFEN</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>PROCESS INDUSTRIES</td><td>Valérie FERREUX / Yves-Marie LEFEVRE (Gérants)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>HYDAC</td><td>Alain BECHTEL (Gérant)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>SITRAL INDUSTRIE</td><td>Loïc VILCHEZ (PDG)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
-<tr><td>BACACIER EST</td><td>(à identifier)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr></tbody>
-            </table>
-        </div>
-        </div>
-        </div><!-- /subtab-pipeline-prospection -->
     </div>
 
     <!-- ===== TÂCHES ===== -->
@@ -1574,6 +1458,120 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+
+        <div class="search-bar" style="margin-bottom:16px;">
+            <input type="text" class="search-input" placeholder="Rechercher un prospect..." oninput="searchTable('prospect-list', this.value)">
+            <button class="filter-btn active" onclick="filterTable('prospect-list', 'all', this)">Tous</button>
+            <button class="filter-btn" onclick="filterTable('prospect-list', 'À contacter', this)">A contacter</button>
+            <button class="filter-btn" onclick="filterTable('prospect-list', 'À rappeler', this)">A rappeler</button>
+            <button class="filter-btn" onclick="filterTable('prospect-list', 'Pas intéressé', this)">Pas interesse</button>
+        </div>
+        <div class="card table-card fade-in" style="animation-delay:0.4s">
+            <div class="table-header">Liste des prospects (71)</div>
+            <table>
+                <thead><tr><th>Entreprise</th><th>Contact</th><th>Etape</th></tr></thead>
+                <tbody id="prospect-list">
+                    <tr><td>BATITECH</td><td>Mehmood Khalid (Président)</td><td><span class="badge badge-blue">🔄 À rappeler</span></td></tr>
+                    <tr><td>BSD RENOV</td><td>David Kamoun (Président)</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
+                    <tr><td>CREA</td><td>Pierre Boyet (via BOYET INVEST)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>OLD</td><td>N/A</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>Global Compta Services</td><td>À identifier</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
+                    <tr><td>Genimmo</td><td>Mme Perreira (Responsable)</td><td><span class="badge badge-blue">🔄 À rappeler</span></td></tr>
+                    <tr><td>Agigest</td><td>Paulo Madureira (Administrateur délégué)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>ECOFI</td><td>Virginie Baude (Co-gérante)</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
+                    <tr><td>ICB Ingénieurs Conseils en Bâtiments</td><td>Grégory Colinet & Pascal Cravatte (Gérants)</td><td><span class="badge badge-blue">📧 Mail envoyé</span></td></tr>
+                    <tr><td>Efitax Expertises</td><td>Stéphane Créer (Fondateur)</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
+                    <tr><td>TR-Engineering</td><td>Jean-Jacques Rauchs (Administrateur-délégué)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>CDBgest</td><td>Gérante (à identifier)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>Fiduciaire Luxpremium</td><td>Laurent Maraschin (Fondateur)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>SCRM Avocats</td><td>Alexandre Chateaux (Associé)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>GSImmo Luxembourg</td><td>À identifier</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>LBO Fiduciaire</td><td>À identifier</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>Schneider Linster Fiduciaire</td><td>Edouard Schneider (Gérant)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>RIS</td><td>Luc Mertes & Paulo Simoes (Directeurs)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>GSI Immobilier</td><td>Jérôme Masciocchi (Gestionnaire)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>Adam & Bleser Avocats</td><td>Romain Adam & Claude Bleser (Partners)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>Cabexco</td><td>Olivier Murru (Gérant)</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>CHEDEVILLE</td><td>Bruno Verlhac</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>Ets Daniel Cuvelier</td><td>Damien Disdier</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>LA FOREZIENNE</td><td>Pierre Lafaye</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>LDS</td><td>N/A</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>COURTAIS</td><td>Florent Courtais</td><td><span class="badge badge-blue">🎯 Nouveau</span></td></tr>
+                    <tr><td>LA BRUXELLOISE</td><td>Alain Bernard</td><td><span class="badge badge-blue">❌ Pas intéressé</span></td></tr>
+                    <tr><td>CEKOVIC</td><td>Stéphane, Jean-michel Cekovic</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>F2A</td><td>Michael DE Oliveira</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>SPRINKLER CONCEPT MEDIS</td><td>Kemal, Ramazan Yilmaz</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>SUZETTE</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>IMMOBILIERE EURO MOSELLE</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>RESOGAZ</td><td>Antoine Moussalli</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>PIL POSE 68</td><td>Baptiste Euvrard</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>SASSO SAS</td><td>Eric, Henri Sasso</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>ENTREPRISE ALAIN BASTIEN</td><td>Pierric Bastien</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>SARL LORRAINE ENDUIT</td><td>Mahsuni Tansel</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>MLC CHAUFFAGES</td><td>Lucas Martz</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>SNOTEK</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>LOGE IMMOBILIER</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>SARL GHIA</td><td>Arnaud Mican</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>FPJ CONSEILS</td><td>Julien, Francis Serge</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>GOBIN OLLA</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>GRUMBACH IMMOBILIER</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>AMS IMMOBILIER</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>RESTAURANT LES ETANGS</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>CEGIP</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>EKYMOS</td><td>Ahmed El Yaakoubi</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>ATSIZ</td><td>Yilmaz Atsiz</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>FRANCIS BURGUNDER</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>ESPACE WENDLING</td><td>Michel Riess</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>ELECTRICITE STEUER</td><td>Dominique, Georges, Andre Briand</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>JFP</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>SMI CONSTRUCTION</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>CONSTRUCTIONS HEMMERLE</td><td>Mathieu Hemmerle</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>JMD GRILL</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>AZIZ SAHIN RAVALEMENT</td><td>David Sahin</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>CABINET HUSSER STOCKI</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>SCHNEIDER INTERNATIONAL</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>LA PETITE CUILLERE</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>PIERRE ET CREATION</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>GMS TRYBATEC</td><td>Lara Tryba</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>HOM IMMOBILIER</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>MAGYAR HABITAT</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>A & B CONSTRUCTION</td><td>Nuno, Jorge Ferreira Alves</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>KINII</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>PIERRES & FILS</td><td>Bertrand, Julien, Andre Croisille</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>ENTREPRISE BOONE FILS</td><td>Sebastien Boone</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>ETS MEYER</td><td>Christian Meyer</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>CERTEC CONCEPT</td><td>Salvatore, Alexandre Grillo</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>MATHIS IMMEUBLES</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>ETS ELECTRICITE PINTO</td><td>Sebastien Pinto</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>KRAFT</td><td>Michel, Pierre Herter</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>MARCO CERULLI</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>PARELEC</td><td>Stephane, Franck Kien</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>LE BOUCHE A OREILLE</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>CSOEC ELECTRICITE</td><td>N/A</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>Tolerie Service</td><td>(à trouver)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>USINAGE ALSACE</td><td>Vincent Ossola (CEO)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>MT2Prod</td><td>(à trouver)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>Technotol (Groupe Subtran)</td><td>(à trouver)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>HSS Usinage</td><td>Audrey Simon (Co-gérante)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>Plexinox</td><td>(à trouver)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>MIE - Mécanique Industrielle de l Est</td><td>(à trouver)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>Ateliers de Clouange</td><td>M. Dumont</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>SPR (Groupe)</td><td>David ROMEO (PDG)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>MÉCANIQUE INDUSTRIELLE DE L'EST (MIE)</td><td>Thierry LALE (Gérant)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>Techno Soud</td><td>(à trouver)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>LORRAINE METALLURGIE SERVICES</td><td>Michel Jean SEVERINO</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>SAINT JEAN EMBALLAGES</td><td>(à identifier)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>EPROLOR</td><td>Lionel GUIBERT (reprise familiale)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>VERRISSIMA INDUSTRIE</td><td>Jonathan METZ (Président)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>CRISTAL LASER</td><td>Dominique LUPINSKI (Président)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>EMBALLAGES DIFFUSION</td><td>Bruno PFYFFER D'ALTISHOFEN</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>PROCESS INDUSTRIES</td><td>Valérie FERREUX / Yves-Marie LEFEVRE (Gérants)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>HYDAC</td><td>Alain BECHTEL (Gérant)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>SITRAL INDUSTRIE</td><td>Loïc VILCHEZ (PDG)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                    <tr><td>BACACIER EST</td><td>(à identifier)</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
