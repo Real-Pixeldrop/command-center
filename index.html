@@ -2691,22 +2691,10 @@
                     '<div>Dernier contact : <span style="color:' + dcColor + ';font-weight:600;">' + fmtDate(dc) + '</span></div>' +
                 '</div>' +
             '</div>' +
-            '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">' +
-                '<div class="card" style="padding:12px;text-align:center;">' +
-                    '<div class="card-label">Projets</div>' +
-                    '<div class="card-value primary">' + clientProjets.length + '</div>' +
-                '</div>' +
-                '<div class="card" style="padding:12px;text-align:center;">' +
+            '<div style="margin-bottom:24px;">' +
+                '<div class="card" style="padding:16px;text-align:center;">' +
                     '<div class="card-label">CA 2025</div>' +
-                    '<div class="card-value" style="color:var(--accent);">' + ca2025Fmt + '€</div>' +
-                '</div>' +
-                '<div class="card" style="padding:12px;text-align:center;">' +
-                    '<div class="card-label">CA 2026</div>' +
-                    '<div class="card-value success">' + ca2026Fmt + '€</div>' +
-                '</div>' +
-                '<div class="card" style="padding:12px;text-align:center;">' +
-                    '<div class="card-label">Factures</div>' +
-                    '<div class="card-value primary">' + clientFactures.length + '</div>' +
+                    '<div class="card-value" style="color:var(--accent);font-size:1.5rem;">' + ca2025Fmt + '€</div>' +
                 '</div>' +
             '</div>' +
             '<div style="margin-bottom:24px;">' +
@@ -2717,9 +2705,13 @@
                 '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Devis</div>' +
                 devisHtml +
             '</div>' +
-            '<div>' +
+            '<div style="margin-bottom:24px;">' +
                 '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Factures</div>' +
                 facturesHtml +
+            '</div>' +
+            '<div style="margin-bottom:24px;">' +
+                '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Suivi</div>' +
+                ((client.suivi && client.suivi.length > 0) ? client.suivi.map(function(s) { return '<div style="padding:8px 0;border-bottom:1px solid var(--border);font-size:0.88rem;"><span style="color:var(--text-light);font-size:0.78rem;">' + fmtDate(s.date) + '</span> ' + esc(s.note) + '</div>'; }).join('') : '<div style="color:var(--text-light);font-size:0.88rem;">Aucune note</div>') +
             '</div>' +
         '</div>';
 
