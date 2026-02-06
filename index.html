@@ -979,18 +979,35 @@
             <a class="nav-item" onclick="switchTab('projets', this)">
                 <span class="nav-label">Projets</span>
             </a>
+            <a class="nav-item" onclick="switchTab('calendrier', this)">
+                <span class="nav-label">Calendrier</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('taches', this)">
+                <span class="nav-label">Tâches</span>
+            </a>
+        </div>
+
+        <div class="nav-section" onclick="toggleSection(this)">
+            <span>Commercial</span>
+            <span class="chevron">&#9660;</span>
+        </div>
+        <div class="nav-section-items">
             <a class="nav-item" onclick="switchTab('clients', this)">
                 <span class="nav-label">Clients</span>
             </a>
             <a class="nav-item" onclick="switchTab('pipeline', this)">
                 <span class="nav-label">Pipeline</span>
             </a>
-            <a class="nav-item" onclick="switchTab('taches', this)">
-                <span class="nav-label">Tâches</span>
+            <a class="nav-item" onclick="switchTab('devis', this)">
+                <span class="nav-label">Devis & Factures</span>
             </a>
-            <a class="nav-item" onclick="switchTab('calendrier', this)">
-                <span class="nav-label">Calendrier</span>
-            </a>
+        </div>
+
+        <div class="nav-section" onclick="toggleSection(this)">
+            <span>Prospection</span>
+            <span class="chevron">&#9660;</span>
+        </div>
+        <div class="nav-section-items">
             <a class="nav-item" onclick="switchTab('prospection', this)">
                 <span class="nav-label">Prospection</span>
             </a>
@@ -1006,9 +1023,6 @@
             </a>
             <a class="nav-item" onclick="switchTab('finances', this)">
                 <span class="nav-label">Finances</span>
-            </a>
-            <a class="nav-item" onclick="switchTab('devis', this)">
-                <span class="nav-label">Devis & Factures</span>
             </a>
             <a class="nav-item" onclick="switchTab('abonnements', this)">
                 <span class="nav-label">Abonnements</span>
@@ -1255,8 +1269,15 @@
         const nlPct = Math.min(100, Math.round(m.newsletter.current / m.newsletter.goal * 100));
         const trPct = Math.round(m.trafic.current / m.trafic.goal * 100 * 10) / 10;
 
+        const caNum = parseInt(DATA.finances.total_2026.replace(/[^0-9]/g, '')) || 0;
+        const caPct = Math.round(caNum / 100000 * 100);
+
+        const tachesEnCours = DATA.taches.filter(t => t.colonne === 'en_cours' || t.colonne === 'a_faire');
+        const tacheRows = tachesEnCours.slice(0, 8).map(t =>
+            `<tr><td>${esc(t.titre)}</td><td><span class="badge badge-${t.badge_color}">${esc(t.badge)}</span></td></tr>`
+        ).join('');
+
         let projRows = dp.map(p => `<tr><td>${esc(p.projet)}</td><td>${esc(p.client)}</td><td><span class="badge ${badgeClass(p.statut)}">${esc(p.statut)}</span></td></tr>`).join('');
-        let planRows = pl.map(p => `<tr><td>${esc(p.heure)}</td><td>${esc(p.evenement)}</td></tr>`).join('');
 
         document.getElementById('dash-content').innerHTML = `
         <div class="grid grid-4">
@@ -1266,9 +1287,10 @@
                 <div class="card-sub">${esc(k.ca_mensuel_mois)}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">Clients actifs</div>
-                <div class="card-value accent">${k.clients_actifs}</div>
-                <div class="card-sub">maintenances + projets</div>
+                <div class="card-label">CA annuel 2026</div>
+                <div class="card-value accent">${esc(DATA.finances.total_2026)}</div>
+                <div class="card-sub">objectif : 100 000€</div>
+                <div class="progress-bar" style="margin-top:10px;"><div class="progress-fill accent" style="width:${caPct}%"></div></div>
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
                 <div class="card-label">Trafic pixel-drop.com</div>
@@ -1277,8 +1299,8 @@
             </div>
             <div class="card fade-in" style="animation-delay:0.25s">
                 <div class="card-label">Devis en attente</div>
-                <div class="card-value accent">${k.devis_attente}</div>
-                <div class="card-sub">pipeline Notion</div>
+                <div class="card-value accent">${DATA.devis_kpis.en_attente.count}</div>
+                <div class="card-sub">${esc(DATA.devis_kpis.en_attente.montant)}</div>
             </div>
         </div>
 
@@ -1335,10 +1357,10 @@
                 </table>
             </div>
             <div class="card table-card fade-in" style="animation-delay:0.35s">
-                <div class="table-header">Planning du jour</div>
+                <div class="table-header">Taches en cours</div>
                 <table>
-                    <thead><tr><th>Heure</th><th>Evenement</th></tr></thead>
-                    <tbody>${planRows}</tbody>
+                    <thead><tr><th>Tache</th><th>Type</th></tr></thead>
+                    <tbody>${tacheRows}</tbody>
                 </table>
             </div>
         </div>`;
@@ -1397,7 +1419,7 @@
         let rows = clients.map(c => {
             const dc = dateClass(c.fin_contrat);
             const maintBadge = c.maintenance === 'Active' ? 'badge-green' : (c.maintenance === 'Non' ? 'badge-gray' : 'badge-gray');
-            const telHtml = c.telephone ? `<a href="tel:${esc(c.telephone)}">${esc(c.telephone)}</a>` : '--';
+            const telHtml = c.telephone ? `<a href="tel:${esc(c.telephone)}" style="color:var(--primary)">${esc(c.telephone)}</a>` : '--';
             return `<tr><td>${esc(c.nom)}</td><td>${telHtml}</td><td>${esc(c.site)}</td><td><span class="badge ${maintBadge}">${esc(c.maintenance)}</span></td><td class="${dc}">${esc(c.fin_contrat)}</td><td><span class="badge ${badgeClass(c.statut)}">${esc(c.statut)}</span></td></tr>`;
         }).join('');
 
