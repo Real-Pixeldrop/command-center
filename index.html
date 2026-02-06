@@ -760,79 +760,46 @@
     <!-- ===== PROJETS ===== -->
     <div class="tab" id="tab-projets">
         <h1 class="page-title">Projets</h1>
-        <p class="page-subtitle">Tous les projets en cours et livres</p>
+        <p class="page-subtitle">Projets actifs et livres (hors prospection)</p>
 
         <div class="grid grid-3">
             <div class="card fade-in" style="animation-delay:0.1s">
                 <div class="card-label">En cours</div>
-                <div class="card-value primary" id="proj-encours">3</div>
+                <div class="card-value primary">3</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
                 <div class="card-label">En retard</div>
-                <div class="card-value accent" id="proj-retard">1</div>
+                <div class="card-value accent">1</div>
+                <div class="card-sub">Maquette Habitat</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Livres ce mois</div>
-                <div class="card-value success" id="proj-livres">2</div>
+                <div class="card-label">Livres recemment</div>
+                <div class="card-value success">3</div>
             </div>
         </div>
 
-        <div class="filters">
-            <button class="view-toggle-btn active" onclick="toggleProjetsView('table', this)">&#128203; Tableau</button>
-            <button class="view-toggle-btn" onclick="toggleProjetsView('kanban', this)">&#128450; Kanban</button>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Rechercher un projet..." oninput="searchTable('projets-list', this.value)">
+            <button class="filter-btn active" onclick="filterTable('projets-list', 'all', this)">Tous</button>
+            <button class="filter-btn" onclick="filterTable('projets-list', 'En cours', this)">En cours</button>
+            <button class="filter-btn" onclick="filterTable('projets-list', 'Livre', this)">Livres</button>
         </div>
 
-        <div id="projets-table" class="active" style="display:block;">
-            <div class="filters">
-                <button class="filter-btn active" onclick="filterTable('projets-list', 'all', this)">Tous</button>
-                <button class="filter-btn" onclick="filterTable('projets-list', 'En cours', this)">En cours</button>
-                <button class="filter-btn" onclick="filterTable('projets-list', 'Livre', this)">Livres</button>
-                <button class="filter-btn" onclick="filterTable('projets-list', 'Devis', this)">Devis</button>
-            </div>
-            <div class="card table-card fade-in" style="animation-delay:0.25s">
-                <div class="table-header">Liste des projets</div>
-                <table>
-                    <thead><tr><th>Projet</th><th>Client</th><th>Type</th><th>Deadline</th><th>Statut</th></tr></thead>
-                    <tbody id="projets-list">
-                        <tr><td>Maquette site vitrine</td><td>Habitat Multi-Service</td><td>Site vitrine</td><td>En cours (Figma)</td><td><span class="badge badge-blue">En cours</span></td></tr>
-                        <tr><td>Plaza Tango Festival 2026</td><td>Plaza Tango</td><td>Evenementiel</td><td>24 avr 2026</td><td><span class="badge badge-blue">En cours</span></td></tr>
-                        <tr><td>Consulting croissance</td><td>Derniere Dispo</td><td>Consulting</td><td>Continu</td><td><span class="badge badge-blue">En cours</span></td></tr>
-                        <tr><td>Refonte + Page Carriere</td><td>L.I. Partners</td><td>Site vitrine</td><td>A definir</td><td><span class="badge badge-orange">Devis envoye</span></td></tr>
-                        <tr><td>Portail Client</td><td>FIDOLUX</td><td>Portail</td><td>A definir</td><td><span class="badge badge-orange">Devis envoye</span></td></tr>
-                        <tr><td>Site Internet 3.0</td><td>Entretien Zen</td><td>Site vitrine</td><td>A definir</td><td><span class="badge badge-orange">Devis envoye</span></td></tr>
-                        <tr><td>Derniere Dispo V2</td><td>Yoann / Driss</td><td>Marketplace</td><td>--</td><td><span class="badge badge-green">Livre</span></td></tr>
-                        <tr><td>CRW Lyon</td><td>Nicolas Crapanne</td><td>Site vitrine</td><td>--</td><td><span class="badge badge-green">Livre</span></td></tr>
-                        <tr><td>Dashboard croissance</td><td>Derniere Dispo</td><td>Dashboard</td><td>--</td><td><span class="badge badge-green">Livre</span></td></tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="card table-card fade-in" style="animation-delay:0.25s">
+            <div class="table-header">Liste des projets</div>
+            <table>
+                <thead><tr><th>Projet</th><th>Client</th><th>Type</th><th>Deadline</th><th>Statut</th></tr></thead>
+                <tbody id="projets-list">
+                    <tr><td>Maquette site vitrine</td><td>Habitat Multi-Service</td><td>Site vitrine</td><td>A planifier</td><td><span class="badge badge-red">En retard</span></td></tr>
+                    <tr><td>Plaza Tango Festival 2026</td><td>Plaza Tango</td><td>Evenementiel</td><td>24 avr 2026</td><td><span class="badge badge-blue">En cours</span></td></tr>
+                    <tr><td>Consulting croissance</td><td>Derniere Dispo</td><td>Consulting</td><td>Continu</td><td><span class="badge badge-blue">En cours</span></td></tr>
+                    <tr><td>Check hebdo sites WP</td><td>Pixel Drop</td><td>Maintenance</td><td>Recurrent</td><td><span class="badge badge-blue">En cours</span></td></tr>
+                    <tr><td>Derniere Dispo V2</td><td>Yoann / Driss</td><td>Marketplace</td><td>--</td><td><span class="badge badge-green">Livre</span></td></tr>
+                    <tr><td>CRW Lyon</td><td>Nicolas Crapanne</td><td>Site vitrine</td><td>--</td><td><span class="badge badge-green">Livre</span></td></tr>
+                    <tr><td>Dashboard Derniere Dispo</td><td>Derniere Dispo</td><td>Dashboard</td><td>--</td><td><span class="badge badge-green">Livre</span></td></tr>
+                </tbody>
+            </table>
         </div>
-
-        <div id="projets-kanban" style="display:none;">
-            <div class="kanban-board">
-                <div class="kanban-column">
-                    <div class="kanban-column-header" style="background:var(--accent);">Devis envoye <span id="pk-proj-devis-count">3</span></div>
-                    <div class="kanban-column-body">
-                        <div class="kanban-card" style="animation-delay:0.05s"><div class="kanban-card-title">Refonte + Page Carriere</div><div class="kanban-card-desc">L.I. Partners — 8 400€</div></div>
-                        <div class="kanban-card" style="animation-delay:0.09s"><div class="kanban-card-title">Portail Client</div><div class="kanban-card-desc">FIDOLUX — 9 700€</div></div>
-                        <div class="kanban-card" style="animation-delay:0.13s"><div class="kanban-card-title">Site Internet 3.0</div><div class="kanban-card-desc">Entretien Zen — 2 000€</div></div>
-                    </div>
-                </div>
-                <div class="kanban-column">
-                    <div class="kanban-column-header" style="background:var(--primary);">En cours <span>3</span></div>
-                    <div class="kanban-column-body">
-                        <div class="kanban-card" style="animation-delay:0.05s"><div class="kanban-card-title">Maquette Habitat</div><div class="kanban-card-desc">Habitat Multi-Service — Figma</div></div>
-                        <div class="kanban-card" style="animation-delay:0.09s"><div class="kanban-card-title">Plaza Tango Festival 2026</div><div class="kanban-card-desc">24-26 avril 2026</div></div>
-                        <div class="kanban-card" style="animation-delay:0.13s"><div class="kanban-card-title">Consulting croissance</div><div class="kanban-card-desc">Derniere Dispo — objectif 1000 lieux</div></div>
-                    </div>
-                </div>
-                <div class="kanban-column">
-                    <div class="kanban-column-header" style="background:var(--success);">Livre <span>3</span></div>
-                    <div class="kanban-column-body">
-                        <div class="kanban-card" style="animation-delay:0.05s"><div class="kanban-card-title">Derniere Dispo V2</div><div class="kanban-card-desc">Yoann / Driss</div></div>
-                        <div class="kanban-card" style="animation-delay:0.09s"><div class="kanban-card-title">CRW Lyon</div><div class="kanban-card-desc">Nicolas Crapanne</div></div>
-                        <div class="kanban-card" style="animation-delay:0.13s"><div class="kanban-card-title">Dashboard croissance</div><div class="kanban-card-desc">Derniere Dispo</div></div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -846,44 +813,53 @@
         <div class="grid grid-4">
             <div class="card fade-in" style="animation-delay:0.1s">
                 <div class="card-label">Total clients</div>
-                <div class="card-value primary">54</div>
+                <div class="card-value primary">18</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
                 <div class="card-label">Maintenance active</div>
-                <div class="card-value success">--</div>
+                <div class="card-value success">11</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
                 <div class="card-label">Projets actifs</div>
                 <div class="card-value accent">3</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.25s">
-                <div class="card-label">CA annuel</div>
-                <div class="card-value primary">--</div>
+                <div class="card-label">Anciens clients</div>
+                <div class="card-value" style="color:var(--text-light)">7</div>
             </div>
         </div>
 
-        <div class="filters">
+        <div class="search-bar">
             <input type="text" class="search-input" placeholder="Rechercher un client..." oninput="searchTable('clients-list', this.value)">
             <button class="filter-btn active" onclick="filterTable('clients-list', 'all', this)">Tous</button>
             <button class="filter-btn" onclick="filterTable('clients-list', 'Actif', this)">Actifs</button>
             <button class="filter-btn" onclick="filterTable('clients-list', 'Maintenance', this)">Maintenance</button>
-            <button class="filter-btn" onclick="filterTable('clients-list', 'Devis', this)">Devis en cours</button>
-            <button class="filter-btn" onclick="filterTable('clients-list', 'attente', this)">En attente</button>
+            <button class="filter-btn" onclick="filterTable('clients-list', 'Ancien', this)">Anciens</button>
         </div>
 
         <div class="card table-card fade-in" style="animation-delay:0.3s">
             <div class="table-header">Clients</div>
             <table>
-                <thead><tr><th>Client</th><th>Type</th><th>Maintenance</th><th>Fin contrat</th><th>Dernier contact</th><th>Statut</th></tr></thead>
+                <thead><tr><th>Client</th><th>Site</th><th>Maintenance</th><th>Fin contrat</th><th>Statut</th></tr></thead>
                 <tbody id="clients-list">
-                    <tr><td>Johan (Black Trombone)</td><td>Site + SEO</td><td><span class="badge badge-green">Oui</span></td><td>--</td><td>5 fev 2026</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Johan (DerniereDispo)</td><td>Marketplace</td><td><span class="badge badge-green">Oui</span></td><td>--</td><td>5 fev 2026</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Habitat</td><td>Site vitrine</td><td><span class="badge badge-gray">Non</span></td><td>--</td><td>3 fev 2026</td><td><span class="badge badge-orange">En attente maquette</span></td></tr>
-                    <tr><td>LI Partners</td><td>Refonte + Carriere</td><td><span class="badge badge-gray">Non</span></td><td>--</td><td>3 fev 2026</td><td><span class="badge badge-blue">Devis en cours</span></td></tr>
-                    <tr><td>Plaza Tango</td><td>Festival / Marketing</td><td><span class="badge badge-green">Oui</span></td><td>--</td><td>6 fev 2026</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Away Expedition</td><td>Site vitrine</td><td><span class="badge badge-green">Oui</span></td><td>--</td><td>--</td><td><span class="badge badge-green">Maintenance</span></td></tr>
-                    <tr><td>Cine Loges</td><td>Site vitrine</td><td><span class="badge badge-green">Oui</span></td><td>--</td><td>--</td><td><span class="badge badge-green">Maintenance</span></td></tr>
-                    <tr><td>Collectivites Territoriales</td><td>Site vitrine</td><td><span class="badge badge-green">Oui</span></td><td>--</td><td>--</td><td><span class="badge badge-green">Maintenance</span></td></tr>
+                    <tr><td>ETHEOS</td><td>etheos.fr</td><td><span class="badge badge-green">Active</span></td><td>01/12/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Pepites d'Esthetique</td><td>pepitesdesthetique.com</td><td><span class="badge badge-green">Active</span></td><td>12/10/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Richard Wagner Museum</td><td>richard-wagner-web-museum.com</td><td><span class="badge badge-green">Active</span></td><td>14/09/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>LXB Construction</td><td>lxbconstruction.com</td><td><span class="badge badge-green">Active</span></td><td>04/10/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>LXB ESTATE</td><td>lxb-estate.com</td><td><span class="badge badge-green">Active</span></td><td>30/04/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Derniere Dispo</td><td>dernieredispo.com</td><td><span class="badge badge-green">Active</span></td><td>31/07/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Fidolux</td><td>fidolux.lu</td><td><span class="badge badge-green">Active</span></td><td>31/05/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Cothidance</td><td>cothidance92.fr</td><td><span class="badge badge-green">Active</span></td><td class="date-danger">04/04/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>RCL</td><td>collectivitesterritoriales.fr</td><td><span class="badge badge-green">Active</span></td><td class="date-danger">09/04/2026</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Plaza Tango</td><td>festival.plazatango.com</td><td><span class="badge badge-green">Active</span></td><td>04/01/2030</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Habitat Multi Services</td><td>--</td><td><span class="badge badge-gray">Non</span></td><td>--</td><td><span class="badge badge-orange">Projet en cours</span></td></tr>
+                    <tr><td>Black Trombone</td><td>black-trombone.fr</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
+                    <tr><td>Emmanuel Bernard</td><td>bernard-emmanuel.com</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
+                    <tr><td>Au Cerf</td><td>au-cerf.com</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
+                    <tr><td>Taimpel</td><td>taimpel.com</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
+                    <tr><td>Baptiste Beloeil</td><td>baptistebeloeil.com</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
+                    <tr><td>CRW Lyon</td><td>crw-lyon.fr</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
+                    <tr><td>Redaction Elite SEO</td><td>redactioneliteseo.fr</td><td><span class="badge badge-gray">Ancien</span></td><td>--</td><td><span class="badge badge-gray">Ancien</span></td></tr>
                 </tbody>
             </table>
         </div>
