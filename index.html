@@ -2665,16 +2665,25 @@
         const telHtml = tel ? '<a href="tel:' + esc(tel) + '" style="color:var(--primary);text-decoration:none;">' + esc(tel) + '</a>' : '--';
         const emailHtml = email ? '<a href="mailto:' + esc(email) + '" style="color:var(--primary);text-decoration:none;">' + esc(email) + '</a>' : '--';
 
+        // Entreprise info from Pennylane
+        const nomEntreprise = client.nom_entreprise || null;
+        const siret = client.siret || null;
+        const adresse = client.adresse || null;
+        const siretFmt = siret ? siret.replace(/(\d{3})(?=\d)/g, '$1 ').trim() : null;
+
         document.getElementById('client-panel').innerHTML = '<div style="padding:24px;">' +
-            '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">' +
+            '<div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:4px;">' +
                 '<h2 style="font-size:1.3rem;font-weight:700;margin:0;">' + esc(client.nom) + '</h2>' +
                 '<button onclick="closeClientPanel()" style="background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--text-light);line-height:1;">&times;</button>' +
             '</div>' +
+            (nomEntreprise ? '<div style="font-size:0.88rem;color:var(--text-light);font-style:italic;margin-bottom:4px;">' + esc(nomEntreprise) + '</div>' : '') +
+            (siretFmt ? '<div style="font-size:0.82rem;color:var(--text-light);margin-bottom:16px;">SIRET : ' + esc(siretFmt) + '</div>' : '<div style="margin-bottom:16px;"></div>') +
             '<div style="margin-bottom:24px;">' +
                 '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Contact</div>' +
                 '<div style="display:flex;flex-direction:column;gap:8px;">' +
                     '<div>Tel : ' + telHtml + '</div>' +
                     '<div>Email : ' + emailHtml + '</div>' +
+                    (adresse ? '<div>Adresse : <span style="color:var(--text);">' + esc(adresse) + '</span></div>' : '') +
                     '<div>Site : ' + siteHtml + '</div>' +
                     '<div>Dernier contact : <span style="color:' + dcColor + ';font-weight:600;">' + esc(dc) + '</span></div>' +
                 '</div>' +

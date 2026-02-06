@@ -190,7 +190,10 @@
       "ca_total": 2699,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": "ETHEOS",
+      "siret": "99258913500019",
+      "adresse": "38 RUE DU PRINTEMPS 68100 MULHOUSE, 68100, MULHOUSE"
     },
     {
       "nom": "Pepites d'Esthetique",
@@ -205,7 +208,10 @@
       "ca_total": 2169.9,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null
     },
     {
       "nom": "Richard Wagner Museum",
@@ -220,7 +226,10 @@
       "ca_total": 2764,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null
     },
     {
       "nom": "LXB Construction",
@@ -235,7 +244,10 @@
       "ca_total": 4000,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": "LXB Construction",
+      "siret": null,
+      "adresse": null
     },
     {
       "nom": "LXB ESTATE",
@@ -250,7 +262,10 @@
       "ca_total": 2812,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null
     },
     {
       "nom": "Derniere Dispo",
@@ -265,7 +280,10 @@
       "ca_total": 0,
       "nb_factures": 0,
       "nb_projets": 2,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null
     },
     {
       "nom": "Fidolux",
@@ -280,7 +298,10 @@
       "ca_total": 4000,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": "FIDOLUX SARL",
+      "siret": "B297692",
+      "adresse": "11, Rue des Trois Cantons, L-8399, Windhof"
     },
     {
       "nom": "Cothidance",
@@ -295,7 +316,10 @@
       "ca_total": 1689,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": "COTHIDANCE",
+      "siret": "49144954200043",
+      "adresse": "42 RUE DE MAUBEUGE 75009 PARIS, 75009, PARIS"
     },
     {
       "nom": "RCL",
@@ -310,7 +334,10 @@
       "ca_total": 1072,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": "RCL",
+      "siret": "33841667000028",
+      "adresse": "20 AVENUE ROGER SALENGRO, 77270, VILLEPARISIS"
     },
     {
       "nom": "Plaza Tango",
@@ -325,7 +352,10 @@
       "ca_total": 0,
       "nb_factures": 0,
       "nb_projets": 1,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": "PLAZA TANGO",
+      "siret": "89867921200024",
+      "adresse": "CENTRE D'AFFAIRE AZAP - JONXION 1 1 AVENUE DE LA GARE TGV 90400 MEROUX-MOVAL, 90400, MEROUX-MOVAL"
     },
     {
       "nom": "Habitat Multi Services",
@@ -340,7 +370,10 @@
       "ca_total": 3000.0,
       "nb_factures": 1,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": "HABITAT MULTI SERVICES (HMS)",
+      "siret": "51756216100011",
+      "adresse": "26 RUE DE LASCHAMP 63170 AUBIERE, 63170, AUBIERE"
     },
     {
       "nom": "Black Trombone",
@@ -355,7 +388,10 @@
       "ca_total": 4029.7,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": "Black Trombone",
+      "siret": "42211684800025",
+      "adresse": "CHEF LIEU, 74150, MARCELLAZ-ALBANAIS"
     },
     {
       "nom": "Emmanuel Bernard",
@@ -370,7 +406,10 @@
       "ca_total": 400,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null
     },
     {
       "nom": "Au Cerf",
@@ -385,7 +424,10 @@
       "ca_total": 114,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": "Au Cerf",
+      "siret": "84207152400016",
+      "adresse": "3 RUE DU RIVAGE, 67114, ESCHAU"
     },
     {
       "nom": "Taimpel",
@@ -400,7 +442,10 @@
       "ca_total": 960,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null
     },
     {
       "nom": "Baptiste Beloeil",
@@ -415,7 +460,10 @@
       "ca_total": 0,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null
     },
     {
       "nom": "CRW Lyon",
@@ -430,7 +478,10 @@
       "ca_total": 0,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null
     },
     {
       "nom": "Redaction Elite SEO",
@@ -445,7 +496,10 @@
       "ca_total": 0,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null
     },
     {
       "nom": "L.I.Partners",
@@ -460,7 +514,10 @@
       "ca_2025": 0,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0
+      "nb_projets": 0,
+      "nom_entreprise": "LEADERSHIP.INSTEAD.PARTNERS",
+      "siret": "353008840",
+      "adresse": "13-15 Rue Jean Jaurès, 92800, Puteaux"
     },
     {
       "nom": "Entretien Zen",
@@ -475,7 +532,10 @@
       "ca_2025": 0,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0
+      "nb_projets": 0,
+      "nom_entreprise": "ENTRETIEN ZEN",
+      "siret": "929696128",
+      "adresse": "10 RUE DES TIRAILLEURS, 68350, BRUNSTATT-DIDENHEIM"
     },
     {
       "nom": "Tiz",
@@ -490,7 +550,10 @@
       "ca_2025": 5426.65,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0
+      "nb_projets": 0,
+      "nom_entreprise": "TIZ",
+      "siret": "85154963400018",
+      "adresse": "1 RUE DES POMMIERS 45230 LA BUSSIERE, 45230, LA BUSSIERE"
     },
     {
       "nom": "Le Portail Vert",
@@ -505,7 +568,10 @@
       "ca_2025": 2000,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0
+      "nb_projets": 0,
+      "nom_entreprise": "LE PORTAIL VERT (LPV)",
+      "siret": "98833271400019",
+      "adresse": "BUREAU 326 78 AVENUE DES CHAMPS ELYSEES 75008 PARIS, 75008, PARIS"
     },
     {
       "nom": "Cineloges",
@@ -520,7 +586,10 @@
       "ca_2025": 1815.3,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0
+      "nb_projets": 0,
+      "nom_entreprise": "Cineloges",
+      "siret": "51951834400022",
+      "adresse": "16 AVENUE EDOUARD GRINDA, 06200, NICE"
     },
     {
       "nom": "Licorne Invest",
@@ -535,7 +604,10 @@
       "ca_2025": 2599,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0
+      "nb_projets": 0,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null
     },
     {
       "nom": "Sexeen",
@@ -550,7 +622,10 @@
       "ca_2025": 1199,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0
+      "nb_projets": 0,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null
     },
     {
       "nom": "La Toast Family",
@@ -565,7 +640,10 @@
       "ca_2025": 990,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0
+      "nb_projets": 0,
+      "nom_entreprise": "La Toast Family",
+      "siret": "90897145000014",
+      "adresse": "36 RUE LAUTH, 67000, STRASBOURG"
     },
     {
       "nom": "VTC Swiss",
@@ -580,7 +658,10 @@
       "ca_2025": 150,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0
+      "nb_projets": 0,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null
     },
     {
       "nom": "SACO",
@@ -595,7 +676,10 @@
       "ca_2025": 999,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0
+      "nb_projets": 0,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null
     }
   ],
   "pipeline": [
