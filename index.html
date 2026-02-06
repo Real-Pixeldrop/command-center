@@ -1946,7 +1946,27 @@
 
         let factRows = factures.map(f => `<tr><td>${esc(f.date)}</td><td>${esc(f.client)}</td><td>${esc(f.objet)}</td><td>${esc(f.montant)}</td><td><span class="badge ${badgeClass(f.statut)}">${esc(f.statut)}</span></td><td><a href="${esc(f.pdf)}" target="_blank" style="color:var(--primary)">↗</a></td></tr>`).join('');
 
+        // Relances
+        const relances = getRelances();
+        let relancesHtml = '';
+        if (relances.length === 0) {
+            relancesHtml = '<div style="padding:16px 24px;color:var(--success);font-weight:500;">✓ Aucune relance en attente</div>';
+        } else {
+            const relanceRows = relances.map(r => {
+                const isUrgent = r.jours > 14;
+                const color = isUrgent ? '#ef4444' : '#f59e0b';
+                const label = isUrgent ? r.jours + ' jours - RELANCE URGENTE' : r.jours + ' jours sans reponse';
+                return `<tr><td>${esc(r.objet)}</td><td>${esc(r.client)}</td><td>${esc(r.montant)}</td><td><span style="color:${color};font-weight:600;font-size:0.82rem;">${label}</span></td></tr>`;
+            }).join('');
+            relancesHtml = `<table><thead><tr><th>Devis</th><th>Client</th><th>Montant</th><th>Statut</th></tr></thead><tbody>${relanceRows}</tbody></table>`;
+        }
+
         document.getElementById('devis-content').innerHTML = `
+        <div class="card fade-in" style="border-left:3px solid #ef4444;margin-bottom:20px;">
+            <div class="table-header" style="padding:12px 0;">Relances necessaires</div>
+            ${relancesHtml}
+        </div>
+
         <div class="grid grid-3">
             <div class="card fade-in" style="animation-delay:0.1s">
                 <div class="card-label">Devis en attente</div>
