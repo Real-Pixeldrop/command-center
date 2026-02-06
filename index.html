@@ -9,7 +9,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --primary: #3453BF;
+            --primary: #1CBBC8;
             --accent: #1CBBC8;
             --success: #10b981;
             --warning: #f59e0b;
@@ -42,7 +42,7 @@
             z-index: 100;
             display: flex;
             flex-direction: column;
-            transition: width 0.3s ease;
+            transition: width 0.3s ease, transform 0.3s ease;
             overflow: hidden;
         }
 
@@ -116,7 +116,6 @@
         .nav-item:hover { background: rgba(255,255,255,0.06); color: #e5e7eb; }
         .nav-item.active { background: var(--primary); color: white; }
 
-        .nav-icon { font-size: 1.1rem; flex-shrink: 0; width: 22px; text-align: center; }
         .nav-label { font-weight: 500; transition: opacity 0.2s; }
         .sidebar.collapsed .nav-label { opacity: 0; }
 
@@ -128,6 +127,33 @@
             padding: 16px 14px 6px;
             white-space: nowrap;
             transition: opacity 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .nav-section:hover { color: #6b7280; }
+
+        .nav-section .chevron {
+            display: inline-block;
+            transition: transform 0.25s ease;
+            font-size: 0.6rem;
+            margin-right: 4px;
+        }
+
+        .nav-section .chevron.collapsed {
+            transform: rotate(-90deg);
+        }
+
+        .nav-section-items {
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .nav-section-items.collapsed {
+            max-height: 0 !important;
         }
 
         .sidebar.collapsed .nav-section { opacity: 0; }
@@ -142,6 +168,37 @@
         }
 
         .sidebar.collapsed .sidebar-footer { opacity: 0; }
+
+        /* ===== FAB MOBILE MENU ===== */
+        .fab-menu {
+            display: none;
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 200;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(28, 187, 200, 0.35);
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
+        }
+
+        .fab-menu:active { transform: scale(0.92); }
+
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            z-index: 99;
+        }
 
         /* ===== MAIN ===== */
         .main {
@@ -185,6 +242,7 @@
             border: 1px solid var(--border);
             box-shadow: 0 2px 4px rgba(0,0,0,0.04);
             transition: transform 0.2s, box-shadow 0.2s;
+            overflow: hidden;
         }
 
         .card:hover {
@@ -360,6 +418,7 @@
             overflow-x: auto;
             padding-bottom: 12px;
             min-height: 400px;
+            -webkit-overflow-scrolling: touch;
         }
 
         .kanban-board::-webkit-scrollbar { height: 6px; }
@@ -521,15 +580,240 @@
             transform: translate(2px, -2px);
         }
 
+        /* ===== BUSINESS TAB STYLES ===== */
+        .biz-section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: var(--text);
+        }
+
+        .biz-sub-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .biz-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .biz-list li {
+            padding: 8px 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .biz-list li:last-child { border-bottom: none; }
+
+        .biz-list .biz-key { color: var(--text-light); font-weight: 500; }
+        .biz-list .biz-val { font-weight: 600; color: var(--text); }
+
+        .biz-service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .biz-service-item {
+            padding: 10px 14px;
+            background: var(--bg);
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .biz-pricing-card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .biz-pricing-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .biz-pricing-card .offer-name {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .biz-pricing-card .offer-price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .biz-pricing-card .offer-detail {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .biz-pricing-card .offer-delay {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1200px) {
             .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .biz-service-grid { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 768px) {
             .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
-            .main { padding: 20px; }
+            .biz-service-grid { grid-template-columns: 1fr; }
+
+            .main {
+                padding: 20px 16px;
+                margin-left: 0 !important;
+            }
+
+            .page-title { font-size: 1.3rem; }
+            .page-subtitle { font-size: 0.85rem; }
+            .card-value { font-size: 1.8rem; }
+
+            /* Sidebar mobile */
+            .sidebar {
+                width: 100vw !important;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .sidebar.mobile-open {
+                transform: translateX(0);
+            }
+
+            .sidebar.collapsed {
+                width: 100vw !important;
+            }
+
+            .sidebar.collapsed .nav-label,
+            .sidebar.collapsed .nav-section,
+            .sidebar.collapsed .sidebar-footer,
+            .sidebar.collapsed .sidebar-logo {
+                opacity: 1;
+            }
+
+            /* FAB */
+            .fab-menu {
+                display: flex;
+            }
+
+            .sidebar-overlay.visible {
+                display: block;
+            }
+
+            /* Tables mobile */
+            .table-card {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table {
+                table-layout: auto;
+                min-width: 500px;
+            }
+
+            th, td {
+                padding: 10px 14px;
+                font-size: 0.8rem;
+            }
+
+            /* Kanban mobile */
+            .kanban-board {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-type: x mandatory;
+            }
+
+            .kanban-column {
+                min-width: 280px;
+                scroll-snap-align: start;
+            }
+
+            /* Week grid mobile */
+            .week-grid {
+                grid-template-columns: repeat(7, 1fr);
+                gap: 4px;
+            }
+
+            .week-day {
+                padding: 8px 4px;
+                min-height: 80px;
+            }
+
+            .week-day-label { font-size: 0.65rem; }
+            .week-day-num { font-size: 1rem; }
+
+            /* Search bar */
+            .search-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-input {
+                width: 100%;
+            }
+
+            .search-bar .filter-btn {
+                font-size: 0.75rem;
+                padding: 6px 12px;
+            }
+
+            /* Pricing grid mobile */
+            .biz-pricing-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* Channels grid */
+            .channels-grid-5 {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            /* Bar chart */
+            .bar-chart {
+                height: 150px;
+            }
+
+            .bar-label { font-size: 0.6rem; }
+            .bar-amount { font-size: 0.65rem; }
+
+            /* Sim */
+            .sim-input { font-size: 1rem; }
         }
+
+        @media (max-width: 480px) {
+            .main { padding: 16px 12px; }
+            .card { padding: 18px; }
+            .card-value { font-size: 1.5rem; }
+            .page-title { font-size: 1.15rem; }
+
+            .week-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
         /* ===== BAR CHART ===== */
         .bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 200px; padding: 20px 0 0; }
         .bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; }
@@ -581,6 +865,14 @@
 </head>
 <body>
 
+<!-- SIDEBAR OVERLAY (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeMobileMenu()"></div>
+
+<!-- FAB BUTTON (mobile) -->
+<button class="fab-menu" id="fabMenu" onclick="toggleMobileMenu()">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+
 <!-- SIDEBAR -->
 <nav class="sidebar" id="sidebar">
     <div class="sidebar-header">
@@ -589,69 +881,78 @@
     </div>
 
     <div class="sidebar-nav">
-        <div class="nav-section">General</div>
-        <a class="nav-item active" onclick="switchTab('dashboard', this)">
-            <span class="nav-icon">&#9670;</span>
-            <span class="nav-label">Dashboard</span>
-        </a>
-        <a class="nav-item" onclick="switchTab('projets', this)">
-            <span class="nav-icon">&#9881;</span>
-            <span class="nav-label">Projets</span>
-        </a>
-        <a class="nav-item" onclick="switchTab('clients', this)">
-            <span class="nav-icon">&#9734;</span>
-            <span class="nav-label">Clients</span>
-        </a>
-        <a class="nav-item" onclick="switchTab('pipeline', this)">
-            <span class="nav-icon">&#10148;</span>
-            <span class="nav-label">Pipeline</span>
-        </a>
-        <a class="nav-item" onclick="switchTab('taches', this)">
-            <span class="nav-icon">&#9745;</span>
-            <span class="nav-label">Tâches</span>
-        </a>
-        <a class="nav-item" onclick="switchTab('calendrier', this)">
-            <span class="nav-icon">&#128197;</span>
-            <span class="nav-label">Calendrier</span>
-        </a>
-        <a class="nav-item" onclick="switchTab('prospection', this)">
-            <span class="nav-icon">&#128222;</span>
-            <span class="nav-label">Prospection</span>
-        </a>
+        <div class="nav-section" onclick="toggleSection(this)">
+            <span>General</span>
+            <span class="chevron">&#9660;</span>
+        </div>
+        <div class="nav-section-items">
+            <a class="nav-item active" onclick="switchTab('dashboard', this)">
+                <span class="nav-label">Dashboard</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('projets', this)">
+                <span class="nav-label">Projets</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('clients', this)">
+                <span class="nav-label">Clients</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('pipeline', this)">
+                <span class="nav-label">Pipeline</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('taches', this)">
+                <span class="nav-label">Tâches</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('calendrier', this)">
+                <span class="nav-label">Calendrier</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('prospection', this)">
+                <span class="nav-label">Prospection</span>
+            </a>
+        </div>
 
-        <div class="nav-section">Business</div>
-        <a class="nav-item" onclick="switchTab('finances', this)">
-            <span class="nav-icon">&#128176;</span>
-            <span class="nav-label">Finances</span>
-        </a>
-        <a class="nav-item" onclick="switchTab('devis', this)">
-            <span class="nav-icon">&#128196;</span>
-            <span class="nav-label">Devis & Factures</span>
-        </a>
-        <a class="nav-item" onclick="switchTab('abonnements', this)">
-            <span class="nav-icon">&#128260;</span>
-            <span class="nav-label">Abonnements</span>
-        </a>
+        <div class="nav-section" onclick="toggleSection(this)">
+            <span>Business</span>
+            <span class="chevron">&#9660;</span>
+        </div>
+        <div class="nav-section-items">
+            <a class="nav-item" onclick="switchTab('business', this)">
+                <span class="nav-label">Business</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('finances', this)">
+                <span class="nav-label">Finances</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('devis', this)">
+                <span class="nav-label">Devis & Factures</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('abonnements', this)">
+                <span class="nav-label">Abonnements</span>
+            </a>
+        </div>
 
-        <div class="nav-section">Marketing</div>
-        <a class="nav-item" onclick="switchTab('marketing', this)">
-            <span class="nav-icon">&#128200;</span>
-            <span class="nav-label">Marketing</span>
-        </a>
-        <a class="nav-item" onclick="switchTab('newsletter', this)">
-            <span class="nav-icon">&#9993;</span>
-            <span class="nav-label">Newsletter</span>
-        </a>
-        <a class="nav-item" onclick="switchTab('seo', this)">
-            <span class="nav-icon">&#128270;</span>
-            <span class="nav-label">SEO</span>
-        </a>
+        <div class="nav-section" onclick="toggleSection(this)">
+            <span>Marketing</span>
+            <span class="chevron">&#9660;</span>
+        </div>
+        <div class="nav-section-items">
+            <a class="nav-item" onclick="switchTab('marketing', this)">
+                <span class="nav-label">Marketing</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('newsletter', this)">
+                <span class="nav-label">Newsletter</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('seo', this)">
+                <span class="nav-label">SEO</span>
+            </a>
+        </div>
 
-        <div class="nav-section">Sites</div>
-        <a class="nav-item" onclick="switchTab('sites', this)">
-            <span class="nav-icon">&#127760;</span>
-            <span class="nav-label">Sites WordPress</span>
-        </a>
+        <div class="nav-section" onclick="toggleSection(this)">
+            <span>Sites</span>
+            <span class="chevron">&#9660;</span>
+        </div>
+        <div class="nav-section-items">
+            <a class="nav-item" onclick="switchTab('sites', this)">
+                <span class="nav-label">Sites WordPress</span>
+            </a>
+        </div>
     </div>
 
     <div class="sidebar-footer">
@@ -735,6 +1036,13 @@
         <h1 class="page-title">Prospection</h1>
         <p class="page-subtitle">Suivi des sessions de prospection</p>
         <div id="prospection-content">Chargement...</div>
+    </div>
+
+    <!-- ===== BUSINESS ===== -->
+    <div class="tab" id="tab-business">
+        <h1 class="page-title">Business</h1>
+        <p class="page-subtitle">Pixel Drop — Entreprise Individuelle</p>
+        <div id="business-content"></div>
     </div>
 
     <!-- ===== FINANCES ===== -->
@@ -839,6 +1147,7 @@
         renderPipeline();
         renderTaches();
         renderProspection();
+        renderBusiness();
         renderFinances();
         renderDevis();
         renderAbonnements();
@@ -1192,6 +1501,88 @@
         </div>`;
     }
 
+    // ===== BUSINESS =====
+    function renderBusiness() {
+        document.getElementById('business-content').innerHTML = `
+        <div class="grid grid-2">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <h3 class="biz-section-title">Structure</h3>
+                <ul class="biz-list">
+                    <li><span class="biz-key">Forme juridique</span><span class="biz-val">Entreprise Individuelle</span></li>
+                    <li><span class="biz-key">Nom commercial</span><span class="biz-val">Pixel Drop</span></li>
+                    <li><span class="biz-key">Localisation</span><span class="biz-val">Paris, France</span></li>
+                    <li><span class="biz-key">Site web</span><span class="biz-val"><a href="https://pixel-drop.com" target="_blank" style="color:var(--primary);text-decoration:none;">pixel-drop.com ↗</a></span></li>
+                </ul>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <h3 class="biz-section-title">Objectifs & Cible</h3>
+                <div style="margin-bottom:20px;">
+                    <div class="card-label">Objectif CA 2025</div>
+                    <div class="card-value primary" style="font-size:1.8rem;">100 000€</div>
+                </div>
+                <ul class="biz-list">
+                    <li><span class="biz-key">Cible</span><span class="biz-val">PME, grands groupes</span></li>
+                    <li><span class="biz-key">Panier moyen visé</span><span class="biz-val">10 000€</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="biz-section-title fade-in" style="animation-delay:0.2s;margin-top:10px;">Services proposés</h2>
+        <div class="grid grid-2">
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <h3 class="biz-sub-title">Web & Design</h3>
+                <div class="biz-service-grid">
+                    <div class="biz-service-item">Création de sites internet (WordPress)</div>
+                    <div class="biz-service-item">Web design</div>
+                    <div class="biz-service-item">Design graphique</div>
+                </div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.3s">
+                <h3 class="biz-sub-title">Automatisations & IA</h3>
+                <div class="biz-service-grid">
+                    <div class="biz-service-item">Ventes & Devis</div>
+                    <div class="biz-service-item">Prospection & Acquisition</div>
+                    <div class="biz-service-item">CRM & Gestion commerciale</div>
+                    <div class="biz-service-item">Clients & Onboarding</div>
+                    <div class="biz-service-item">Facturation & Finance</div>
+                    <div class="biz-service-item">Gestion de projet</div>
+                    <div class="biz-service-item">Reporting & Analytics</div>
+                    <div class="biz-service-item">Communication & Emails</div>
+                    <div class="biz-service-item">Contenu & Marketing</div>
+                    <div class="biz-service-item">Outils métier sur mesure</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="biz-section-title fade-in" style="animation-delay:0.35s;margin-top:10px;">Tarification</h2>
+        <div class="grid grid-4 biz-pricing-grid fade-in" style="animation-delay:0.4s">
+            <div class="biz-pricing-card">
+                <div class="offer-name">Automatisation</div>
+                <div class="offer-price">5 000€</div>
+                <div class="offer-detail">4 automatisations<br>Dashboard inclus<br>Formation 2h<br>30 jours de support</div>
+                <div class="offer-delay">3-4 semaines</div>
+            </div>
+            <div class="biz-pricing-card">
+                <div class="offer-name">Outil sur mesure</div>
+                <div class="offer-price">8 000 - 15 000€</div>
+                <div class="offer-detail">Outil spécifique<br>Formation 4h<br>45 jours de support</div>
+                <div class="offer-delay">4-6 semaines</div>
+            </div>
+            <div class="biz-pricing-card">
+                <div class="offer-name">Système complet</div>
+                <div class="offer-price">15 000 - 25 000€</div>
+                <div class="offer-detail">Automatisations illimitées + outils + IA<br>Formation complète<br>60 jours de support</div>
+                <div class="offer-delay">6-8 semaines</div>
+            </div>
+            <div class="biz-pricing-card">
+                <div class="offer-name">Maintenance</div>
+                <div class="offer-price">400€<span style="font-size:0.9rem;font-weight:500;color:var(--text-light);">/mois</span></div>
+                <div class="offer-detail">Monitoring 24/7<br>Corrections illimitées<br>2h évolutions/mois</div>
+                <div class="offer-delay">Récurrent</div>
+            </div>
+        </div>`;
+    }
+
     // ===== FINANCES =====
     function renderFinances() {
         const f = DATA.finances;
@@ -1417,7 +1808,7 @@
         </div>
 
         <h2 style="font-size:1.2rem; margin: 25px 0 18px;">Canaux par priorite</h2>
-        <div class="grid grid-4" style="grid-template-columns: repeat(5, 1fr);">${channelCards}</div>`;
+        <div class="grid grid-4 channels-grid-5" style="grid-template-columns: repeat(5, 1fr);">${channelCards}</div>`;
     }
 
     // ===== NEWSLETTER =====
@@ -1539,7 +1930,7 @@
             <div class="table-header">Tous les sites</div>
             <table>
                 <thead><tr><th></th><th>Site</th><th>Maintenance</th><th>Fin contrat</th><th>MAJ dispo</th><th>API</th></tr></thead>
-                <tbody id="sites-list">${rows}</tbody>
+                <tbody id="sites-list"><tr><td>pixel-drop.com</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h14</td></tr><tr><td>dernieredispo.com</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h14</td></tr><tr><td>black-trombone.fr</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h14</td></tr><tr><td>awayexpedition.com</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h14</td></tr><tr><td>cine-loges.fr</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h14</td></tr><tr><td>collectivitesterritoriales.fr</td><td><span class="badge badge-green">OK</span></td><td>--</td><td>06/02 14h14</td></tr></tbody>
             </table>
         </div>`;
     }
@@ -1564,6 +1955,45 @@
             el.offsetHeight;
             el.style.animation = '';
         });
+
+        // Close mobile menu on nav click
+        if (window.innerWidth <= 768) {
+            closeMobileMenu();
+        }
+    }
+
+    // Toggle sidebar sections (chevron)
+    function toggleSection(sectionEl) {
+        const chevron = sectionEl.querySelector('.chevron');
+        const items = sectionEl.nextElementSibling;
+        if (!items || !items.classList.contains('nav-section-items')) return;
+
+        chevron.classList.toggle('collapsed');
+        items.classList.toggle('collapsed');
+    }
+
+    // Initialize section heights for smooth collapse
+    function initSections() {
+        document.querySelectorAll('.nav-section-items').forEach(el => {
+            el.style.maxHeight = el.scrollHeight + 'px';
+        });
+    }
+    // Run after DOM ready
+    setTimeout(initSections, 50);
+
+    // Mobile menu
+    function toggleMobileMenu() {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+        sidebar.classList.toggle('mobile-open');
+        overlay.classList.toggle('visible');
+    }
+
+    function closeMobileMenu() {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+        sidebar.classList.remove('mobile-open');
+        overlay.classList.remove('visible');
     }
 
     // Date
