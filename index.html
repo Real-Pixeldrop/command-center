@@ -1417,21 +1417,30 @@
     }
 
     // ===== CLIENTS =====
+    function clientContactAgeDays(dc) {
+        if (!dc) return Infinity;
+        const d = new Date(dc);
+        if (isNaN(d.getTime())) return Infinity;
+        return Math.floor((Date.now() - d.getTime()) / (1000 * 60 * 60 * 24));
+    }
+
     function renderClients() {
         const clients = DATA.clients;
         const total = clients.length;
         const actifs = clients.filter(c => c.statut === 'Actif').length;
         const projetsActifs = clients.filter(c => c.statut === 'Projet en cours').length;
         const anciens = clients.filter(c => c.statut === 'Ancien').length;
+        const sansContact3m = clients.filter(c => clientContactAgeDays(c.dernier_contact) > 90).length;
 
         let rows = clients.map(c => {
             const telHtml = c.telephone ? `<a href="tel:${esc(c.telephone)}" style="color:var(--primary)">${esc(c.telephone)}</a>` : '--';
             const emailHtml = c.email ? '<a href="mailto:' + esc(c.email) + '" style="color:var(--primary)">' + esc(c.email) + '</a>' : '--';
-            return `<tr><td>${esc(c.nom)}</td><td>${telHtml}</td><td>${emailHtml}</td><td>${esc(c.site)}</td><td>${c.dernier_contact || '--'}</td><td><span class="badge ${badgeClass(c.statut)}">${esc(c.statut)}</span></td></tr>`;
+            const ageDays = clientContactAgeDays(c.dernier_contact);
+            return `<tr data-contact-age="${ageDays}"><td>${esc(c.nom)}</td><td>${telHtml}</td><td>${emailHtml}</td><td>${esc(c.site)}</td><td>${c.dernier_contact || '--'}</td><td><span class="badge ${badgeClass(c.statut)}">${esc(c.statut)}</span></td></tr>`;
         }).join('');
 
         document.getElementById('clients-content').innerHTML = `
-        <div class="grid grid-4">
+        <div class="grid grid-4" style="grid-template-columns: repeat(5, 1fr);">
             <div class="card fade-in" style="animation-delay:0.1s">
                 <div class="card-label">Total clients</div>
                 <div class="card-value primary">${total}</div>
@@ -1448,17 +1457,29 @@
                 <div class="card-label">Anciens clients</div>
                 <div class="card-value primary">${anciens}</div>
             </div>
+            <div class="card fade-in" style="animation-delay:0.3s">
+                <div class="card-label">Sans contact > 3 mois</div>
+                <div class="card-value" style="color:#ef4444;">${sansContact3m}</div>
+            </div>
         </div>
 
         <div class="search-bar">
             <input type="text" class="search-input" placeholder="Rechercher un client..." oninput="searchTable('clients-list', this.value)">
+            <span style="font-size:0.78rem;color:var(--text-light);font-weight:500;">Statut :</span>
             <button class="filter-btn active" onclick="filterTable('clients-list', 'all', this)">Tous</button>
             <button class="filter-btn" onclick="filterTable('clients-list', 'Actif', this)">Actifs</button>
             <button class="filter-btn" onclick="filterTable('clients-list', 'Projet en cours', this)">Projet en cours</button>
             <button class="filter-btn" onclick="filterTable('clients-list', 'Ancien', this)">Anciens</button>
         </div>
+        <div class="search-bar" style="margin-top:-12px;">
+            <span style="font-size:0.78rem;color:var(--text-light);font-weight:500;">Contact :</span>
+            <button class="filter-btn active" onclick="filterClientsByAge('all', this)">Tous</button>
+            <button class="filter-btn" onclick="filterClientsByAge(90, this)">> 3 mois</button>
+            <button class="filter-btn" onclick="filterClientsByAge(180, this)">> 6 mois</button>
+            <button class="filter-btn" onclick="filterClientsByAge('never', this)">Jamais contacté</button>
+        </div>
 
-        <div class="card table-card fade-in" style="animation-delay:0.3s">
+        <div class="card table-card fade-in" style="animation-delay:0.35s">
             <div class="table-header">Clients</div>
             <table>
                 <thead><tr><th>Client</th><th>Tel</th><th>Email</th><th>Site</th><th>Dernier Contact</th><th>Statut</th></tr></thead>
@@ -2318,6 +2339,25 @@
             } else {
                 const text = row.textContent.toLowerCase();
                 row.style.display = text.includes(filter.toLowerCase()) ? '' : 'none';
+            }
+        });
+    }
+
+    // Filter clients by contact age
+    function filterClientsByAge(threshold, btn) {
+        const tbody = document.getElementById('clients-list');
+        if (!tbody) return;
+        btn.parentElement.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const rows = tbody.querySelectorAll('tr');
+        rows.forEach(row => {
+            const age = parseFloat(row.getAttribute('data-contact-age'));
+            if (threshold === 'all') {
+                row.style.display = '';
+            } else if (threshold === 'never') {
+                row.style.display = (age === Infinity) ? '' : 'none';
+            } else {
+                row.style.display = (age > threshold) ? '' : 'none';
             }
         });
     }
