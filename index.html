@@ -352,6 +352,10 @@
         </a>
 
         <div class="nav-section">Marketing</div>
+        <a class="nav-item" onclick="switchTab('marketing', this)">
+            <span class="nav-icon">&#128200;</span>
+            <span class="nav-label">Marketing</span>
+        </a>
         <a class="nav-item" onclick="switchTab('newsletter', this)">
             <span class="nav-icon">&#9993;</span>
             <span class="nav-label">Newsletter</span>
@@ -405,8 +409,40 @@
             </div>
         </div>
 
+        <h2 style="font-size:1.2rem; margin-bottom:18px;">Marketing</h2>
+        <div class="grid grid-4">
+            <div class="card fade-in" style="animation-delay:0.3s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                    <span style="font-weight:600;font-size:0.85rem;">LinkedIn</span>
+                    <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">62 / 500</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill accent" style="width:12%"></div></div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.35s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                    <span style="font-weight:600;font-size:0.85rem;">Instagram</span>
+                    <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">45 / 300</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill accent" style="width:15%"></div></div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.4s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                    <span style="font-weight:600;font-size:0.85rem;">Newsletter</span>
+                    <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">99 / 200</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill accent" style="width:49%"></div></div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.45s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                    <span style="font-weight:600;font-size:0.85rem;">Trafic 30j</span>
+                    <span style="color:var(--accent);font-weight:600;font-size:0.85rem;">72 / 1000</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill accent" style="width:7%"></div></div>
+            </div>
+        </div>
+
         <div class="grid grid-2">
-            <div class="card table-card fade-in" style="animation-delay:0.3s">
+            <div class="card table-card fade-in" style="animation-delay:0.5s">
                 <div class="table-header">Projets en cours</div>
                 <table>
                     <thead><tr><th>Projet</th><th>Client</th><th>Statut</th></tr></thead>
@@ -539,6 +575,96 @@
                     <tr><td>LI Partners</td><td>Morgane</td><td>--</td><td><span class="badge badge-blue">Devis a faire</span></td></tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+
+    <!-- ===== MARKETING ===== -->
+    <div class="tab" id="tab-marketing">
+        <h1 class="page-title">Marketing</h1>
+        <p class="page-subtitle">Progression vers les objectifs 2026</p>
+
+        <div class="grid grid-4">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">LinkedIn</div>
+                <div class="card-value accent" id="mkt-linkedin">62</div>
+                <div class="card-sub">Objectif : 500 followers</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">Instagram</div>
+                <div class="card-value accent" id="mkt-instagram">45</div>
+                <div class="card-sub">Objectif : 300 followers</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Newsletter</div>
+                <div class="card-value accent" id="mkt-newsletter">99</div>
+                <div class="card-sub">Objectif : 200 abonnes</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <div class="card-label">Trafic site (30j)</div>
+                <div class="card-value accent" id="mkt-trafic">72</div>
+                <div class="card-sub">Objectif : 1000 sessions</div>
+            </div>
+        </div>
+
+        <h2 style="font-size:1.2rem; margin-bottom:18px;">Progression vers les objectifs 2026</h2>
+        <div class="grid grid-2">
+            <div class="card fade-in" style="animation-delay:0.3s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                    <span style="font-weight:600;font-size:0.9rem;">LinkedIn Followers</span>
+                    <span style="color:var(--accent);font-weight:600;font-size:0.88rem;"><span id="mkt-li-val">62</span> / 500 (<span id="mkt-li-pct">12</span>%)</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill accent" id="mkt-li-bar" style="width:12%"></div></div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.35s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                    <span style="font-weight:600;font-size:0.9rem;">Instagram Followers</span>
+                    <span style="color:var(--accent);font-weight:600;font-size:0.88rem;"><span id="mkt-ig-val">45</span> / 300 (<span id="mkt-ig-pct">15</span>%)</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill accent" id="mkt-ig-bar" style="width:15%"></div></div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.4s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                    <span style="font-weight:600;font-size:0.9rem;">Newsletter Abonnes</span>
+                    <span style="color:var(--accent);font-weight:600;font-size:0.88rem;"><span id="mkt-nl-val">99</span> / 200 (<span id="mkt-nl-pct">49</span>%)</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill accent" id="mkt-nl-bar" style="width:49%"></div></div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.45s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                    <span style="font-weight:600;font-size:0.9rem;">Trafic Mensuel</span>
+                    <span style="color:var(--accent);font-weight:600;font-size:0.88rem;"><span id="mkt-tr-val">72</span> / 1000 (<span id="mkt-tr-pct">7</span>%)</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill accent" id="mkt-tr-bar" style="width:7%"></div></div>
+            </div>
+        </div>
+
+        <h2 style="font-size:1.2rem; margin: 25px 0 18px;">Canaux par priorite</h2>
+        <div class="grid grid-4" style="grid-template-columns: repeat(5, 1fr);">
+            <div class="card fade-in" style="animation-delay:0.5s;text-align:center;">
+                <div class="card-label">#1 Priorite</div>
+                <div style="font-size:1.1rem;font-weight:700;">LinkedIn</div>
+                <div style="color:var(--success);font-size:0.85rem;margin-top:6px;">Actif</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.55s;text-align:center;">
+                <div class="card-label">#2 Priorite</div>
+                <div style="font-size:1.1rem;font-weight:700;">Newsletter</div>
+                <div style="color:var(--accent);font-size:0.85rem;margin-top:6px;">99 contacts</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.6s;text-align:center;">
+                <div class="card-label">#3 Priorite</div>
+                <div style="font-size:1.1rem;font-weight:700;">Instagram</div>
+                <div style="color:var(--success);font-size:0.85rem;margin-top:6px;">API active</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.65s;text-align:center;">
+                <div class="card-label">#4 Priorite</div>
+                <div style="font-size:1.1rem;font-weight:700;">Blog/SEO</div>
+                <div style="color:var(--warning);font-size:0.85rem;margin-top:6px;">A lancer</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.7s;text-align:center;">
+                <div class="card-label">#5 Bonus</div>
+                <div style="font-size:1.1rem;font-weight:700;">Facebook</div>
+                <div style="color:var(--success);font-size:0.85rem;margin-top:6px;">Cross-post</div>
+            </div>
         </div>
     </div>
 
