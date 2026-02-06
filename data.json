@@ -1,4 +1,8 @@
 {
+  "objectifs": {
+    "ca_mensuel": 5000,
+    "ca_annuel": 60000
+  },
   "kpis": {
     "ca_mensuel": "0€",
     "ca_mensuel_mois": "Fevrier 2026",
