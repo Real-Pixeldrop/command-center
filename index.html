@@ -904,6 +904,31 @@
             }
         }
 
+        /* ===== CLIENT PANEL ===== */
+        .client-panel {
+            position: fixed;
+            top: 0; right: 0; bottom: 0;
+            width: 420px;
+            max-width: 90vw;
+            background: var(--card-bg);
+            border-left: 1px solid var(--border);
+            box-shadow: -4px 0 24px rgba(0,0,0,0.08);
+            z-index: 200;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            padding: 0;
+        }
+        .client-panel.open { transform: translateX(0); }
+        .client-panel-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.3);
+            z-index: 199;
+            display: none;
+        }
+        .client-panel-overlay.visible { display: block; }
+
         /* ===== BAR CHART ===== */
         .bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 200px; padding: 20px 0 0; }
         .bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; }
@@ -1475,7 +1500,7 @@
                 const color = ageDays > 90 ? '#e74c3c' : 'var(--success)';
                 contactHtml = '<span style="color:' + color + ';font-weight:600">' + esc(c.dernier_contact) + '</span>';
             }
-            return `<tr data-contact-age="${ageDays}"><td>${esc(c.nom)}</td><td>${telHtml}</td><td>${emailHtml}</td><td>${esc(c.site)}</td><td>${contactHtml}</td></tr>`;
+            return `<tr data-contact-age="${ageDays}" onclick="openClientPanel('${esc(c.nom).replace(/'/g, "\\'")}')" style="cursor:pointer"><td>${esc(c.nom)}</td><td>${telHtml}</td><td>${emailHtml}</td><td>${esc(c.site)}</td><td>${contactHtml}</td></tr>`;
         }).join('');
 
         document.getElementById('clients-content').innerHTML = `
@@ -2551,6 +2576,119 @@
             }
         });
     }
+    // ===== CLIENT PANEL =====
+    function openClientPanel(clientName) {
+        const client = DATA.clients.find(c => c.nom === clientName);
+        if (!client) return;
+
+        const nameLower = client.nom.toLowerCase();
+
+        // Flexible matching for projets
+        const clientProjets = (DATA.projets || []).filter(p => {
+            const pClient = (p.client || '').toLowerCase();
+            return pClient.includes(nameLower) || nameLower.includes(pClient);
+        });
+
+        // Flexible matching for devis
+        const clientDevis = (DATA.devis || []).filter(d => {
+            const dClient = (d.client || '').toLowerCase();
+            return dClient.includes(nameLower) || nameLower.includes(dClient);
+        });
+
+        // CA total = sum of devis with statut accepte or signe
+        const caTotal = clientDevis.reduce((sum, d) => {
+            const s = d.statut.toLowerCase();
+            if (s === 'accepte' || s === 'accepté' || s === 'signe' || s === 'signé') {
+                const montant = parseFloat((d.montant || '').replace(/[^0-9.,]/g, '').replace(',', '.')) || 0;
+                return sum + montant;
+            }
+            return sum;
+        }, 0);
+        const caFmt = caTotal.toLocaleString('fr-FR');
+
+        // Contact info
+        const tel = client.telephone || '';
+        const email = client.email || '';
+        const site = client.site || '--';
+        const dc = client.dernier_contact || '--';
+        const ageDays = clientContactAgeDays(client.dernier_contact);
+        const dcColor = ageDays > 90 ? '#e74c3c' : (dc === '--' ? 'var(--text-light)' : 'var(--success)');
+
+        // Projets list
+        let projetsHtml = '';
+        if (clientProjets.length === 0) {
+            projetsHtml = '<div style="color:var(--text-light);font-size:0.88rem;">Aucun projet</div>';
+        } else {
+            projetsHtml = clientProjets.map(p =>
+                '<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">' +
+                    '<div><div style="font-weight:600;font-size:0.88rem;">' + esc(p.nom) + '</div><div style="font-size:0.78rem;color:var(--text-light);">' + esc(p.type) + ' — ' + esc(p.deadline) + '</div></div>' +
+                    '<span class="badge ' + badgeClass(p.statut) + '">' + esc(p.statut) + '</span>' +
+                '</div>'
+            ).join('');
+        }
+
+        // Devis list
+        let devisHtml = '';
+        if (clientDevis.length === 0) {
+            devisHtml = '<div style="color:var(--text-light);font-size:0.88rem;">Aucun devis</div>';
+        } else {
+            devisHtml = clientDevis.map(d =>
+                '<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">' +
+                    '<div><div style="font-weight:600;font-size:0.88rem;">' + esc(d.objet) + '</div><div style="font-size:0.78rem;color:var(--text-light);">' + esc(d.date) + '</div></div>' +
+                    '<div style="text-align:right;"><div style="font-weight:600;font-size:0.88rem;">' + esc(d.montant) + '</div><span class="badge ' + badgeClass(d.statut) + '">' + esc(d.statut) + '</span></div>' +
+                '</div>'
+            ).join('');
+        }
+
+        const siteHtml = site !== '--' ? '<a href="https://' + esc(site) + '" target="_blank" style="color:var(--primary);text-decoration:none;">' + esc(site) + '</a>' : '--';
+        const telHtml = tel ? '<a href="tel:' + esc(tel) + '" style="color:var(--primary);text-decoration:none;">' + esc(tel) + '</a>' : '--';
+        const emailHtml = email ? '<a href="mailto:' + esc(email) + '" style="color:var(--primary);text-decoration:none;">' + esc(email) + '</a>' : '--';
+
+        document.getElementById('client-panel').innerHTML = '<div style="padding:24px;">' +
+            '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">' +
+                '<h2 style="font-size:1.3rem;font-weight:700;margin:0;">' + esc(client.nom) + '</h2>' +
+                '<button onclick="closeClientPanel()" style="background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--text-light);line-height:1;">&times;</button>' +
+            '</div>' +
+            '<div style="margin-bottom:24px;">' +
+                '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Contact</div>' +
+                '<div style="display:flex;flex-direction:column;gap:8px;">' +
+                    '<div>Tel : ' + telHtml + '</div>' +
+                    '<div>Email : ' + emailHtml + '</div>' +
+                    '<div>Site : ' + siteHtml + '</div>' +
+                    '<div>Dernier contact : <span style="color:' + dcColor + ';font-weight:600;">' + esc(dc) + '</span></div>' +
+                '</div>' +
+            '</div>' +
+            '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">' +
+                '<div class="card" style="padding:16px;text-align:center;">' +
+                    '<div class="card-label">Projets</div>' +
+                    '<div class="card-value primary">' + clientProjets.length + '</div>' +
+                '</div>' +
+                '<div class="card" style="padding:16px;text-align:center;">' +
+                    '<div class="card-label">CA total</div>' +
+                    '<div class="card-value success">' + caFmt + '€</div>' +
+                '</div>' +
+            '</div>' +
+            '<div style="margin-bottom:24px;">' +
+                '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Projets</div>' +
+                projetsHtml +
+            '</div>' +
+            '<div>' +
+                '<div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);font-weight:500;margin-bottom:12px;">Devis</div>' +
+                devisHtml +
+            '</div>' +
+        '</div>';
+
+        document.getElementById('client-panel').classList.add('open');
+        document.getElementById('client-panel-overlay').classList.add('visible');
+    }
+
+    function closeClientPanel() {
+        document.getElementById('client-panel').classList.remove('open');
+        document.getElementById('client-panel-overlay').classList.remove('visible');
+    }
 </script>
+
+<div class="client-panel-overlay" id="client-panel-overlay" onclick="closeClientPanel()"></div>
+<div class="client-panel" id="client-panel"></div>
 </body>
 </html>
