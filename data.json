@@ -193,7 +193,8 @@
       "dernier_contact": null,
       "nom_entreprise": "ETHEOS",
       "siret": "99258913500019",
-      "adresse": "38 RUE DU PRINTEMPS 68100 MULHOUSE, 68100, MULHOUSE"
+      "adresse": "38 RUE DU PRINTEMPS 68100 MULHOUSE, 68100, MULHOUSE",
+      "nb_opps_notion": 2
     },
     {
       "nom": "Pepites d'Esthetique",
@@ -223,13 +224,15 @@
       "email": "ncrapanne@gmail.com",
       "ca_2025": 2764,
       "ca_2026": 0,
-      "ca_total": 2764,
+      "ca_total": 6760,
       "nb_factures": 0,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
-      "adresse": null
+      "adresse": null,
+      "ca_2024": 3996,
+      "nb_opps_notion": 7
     },
     {
       "nom": "LXB Construction",
@@ -257,15 +260,16 @@
       "statut": "Actif",
       "telephone": "+352 691 242 550",
       "email": "lorenzo.rickal@gmail.com",
-      "ca_2025": 2812,
+      "ca_2025": 6812,
       "ca_2026": 0,
-      "ca_total": 2812,
+      "ca_total": 6812,
       "nb_factures": 0,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
-      "adresse": null
+      "adresse": null,
+      "nb_opps_notion": 4
     },
     {
       "nom": "Derniere Dispo",
@@ -301,7 +305,8 @@
       "dernier_contact": null,
       "nom_entreprise": "FIDOLUX SARL",
       "siret": "B297692",
-      "adresse": "11, Rue des Trois Cantons, L-8399, Windhof"
+      "adresse": "11, Rue des Trois Cantons, L-8399, Windhof",
+      "nb_opps_notion": 3
     },
     {
       "nom": "Cothidance",
@@ -319,7 +324,8 @@
       "dernier_contact": null,
       "nom_entreprise": "COTHIDANCE",
       "siret": "49144954200043",
-      "adresse": "42 RUE DE MAUBEUGE 75009 PARIS, 75009, PARIS"
+      "adresse": "42 RUE DE MAUBEUGE 75009 PARIS, 75009, PARIS",
+      "nb_opps_notion": 2
     },
     {
       "nom": "RCL",
@@ -337,7 +343,8 @@
       "dernier_contact": null,
       "nom_entreprise": "RCL",
       "siret": "33841667000028",
-      "adresse": "20 AVENUE ROGER SALENGRO, 77270, VILLEPARISIS"
+      "adresse": "20 AVENUE ROGER SALENGRO, 77270, VILLEPARISIS",
+      "nb_opps_notion": 2
     },
     {
       "nom": "Plaza Tango",
@@ -373,7 +380,8 @@
       "dernier_contact": null,
       "nom_entreprise": "HABITAT MULTI SERVICES (HMS)",
       "siret": "51756216100011",
-      "adresse": "26 RUE DE LASCHAMP 63170 AUBIERE, 63170, AUBIERE"
+      "adresse": "26 RUE DE LASCHAMP 63170 AUBIERE, 63170, AUBIERE",
+      "nb_opps_notion": 2
     },
     {
       "nom": "Black Trombone",
@@ -391,7 +399,8 @@
       "dernier_contact": null,
       "nom_entreprise": "Black Trombone",
       "siret": "42211684800025",
-      "adresse": "CHEF LIEU, 74150, MARCELLAZ-ALBANAIS"
+      "adresse": "CHEF LIEU, 74150, MARCELLAZ-ALBANAIS",
+      "nb_opps_notion": 3
     },
     {
       "nom": "Emmanuel Bernard",
@@ -421,13 +430,15 @@
       "email": "adeline.wilhelm@gmail.com",
       "ca_2025": 114,
       "ca_2026": 0,
-      "ca_total": 114,
+      "ca_total": 2728,
       "nb_factures": 0,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": "Au Cerf",
       "siret": "84207152400016",
-      "adresse": "3 RUE DU RIVAGE, 67114, ESCHAU"
+      "adresse": "3 RUE DU RIVAGE, 67114, ESCHAU",
+      "ca_2024": 2614,
+      "nb_opps_notion": 3
     },
     {
       "nom": "Taimpel",
@@ -445,7 +456,8 @@
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
-      "adresse": null
+      "adresse": null,
+      "nb_opps_notion": 3
     },
     {
       "nom": "Baptiste Beloeil",
@@ -457,13 +469,15 @@
       "email": "baptistebeloeilcontact@gmail.com",
       "ca_2025": 0,
       "ca_2026": 0,
-      "ca_total": 0,
+      "ca_total": 650,
       "nb_factures": 0,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
-      "adresse": null
+      "adresse": null,
+      "ca_2024": 650,
+      "nb_opps_notion": 1
     },
     {
       "nom": "CRW Lyon",
@@ -473,15 +487,16 @@
       "statut": "Ancien",
       "telephone": "0688228819",
       "email": "ncrapanne@gmail.com",
-      "ca_2025": 0,
+      "ca_2025": 115,
       "ca_2026": 0,
-      "ca_total": 0,
+      "ca_total": 115,
       "nb_factures": 0,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": "IDI CRW HOLDING SA (IDI CRW HOLDING)",
       "siret": "97771427800016",
-      "adresse": "LOT ITM 83 AMBODIFASIKA ITAOSY ANTANANARIVO MADAGASCAR"
+      "adresse": "LOT ITM 83 AMBODIFASIKA ITAOSY ANTANANARIVO MADAGASCAR",
+      "nb_opps_notion": 1
     },
     {
       "nom": "Redaction Elite SEO",
@@ -535,7 +550,8 @@
       "nb_projets": 0,
       "nom_entreprise": "ENTRETIEN ZEN",
       "siret": "929696128",
-      "adresse": "10 RUE DES TIRAILLEURS, 68350, BRUNSTATT-DIDENHEIM"
+      "adresse": "10 RUE DES TIRAILLEURS, 68350, BRUNSTATT-DIDENHEIM",
+      "nb_opps_notion": 1
     },
     {
       "nom": "Tiz",
@@ -553,7 +569,8 @@
       "nb_projets": 0,
       "nom_entreprise": "TIZ",
       "siret": "85154963400018",
-      "adresse": "1 RUE DES POMMIERS 45230 LA BUSSIERE, 45230, LA BUSSIERE"
+      "adresse": "1 RUE DES POMMIERS 45230 LA BUSSIERE, 45230, LA BUSSIERE",
+      "nb_opps_notion": 3
     },
     {
       "nom": "Le Portail Vert",
@@ -571,7 +588,8 @@
       "nb_projets": 0,
       "nom_entreprise": "LE PORTAIL VERT (LPV)",
       "siret": "98833271400019",
-      "adresse": "BUREAU 326 78 AVENUE DES CHAMPS ELYSEES 75008 PARIS, 75008, PARIS"
+      "adresse": "BUREAU 326 78 AVENUE DES CHAMPS ELYSEES 75008 PARIS, 75008, PARIS",
+      "nb_opps_notion": 1
     },
     {
       "nom": "Cineloges",
@@ -589,7 +607,8 @@
       "nb_projets": 0,
       "nom_entreprise": "Cineloges",
       "siret": "51951834400022",
-      "adresse": "16 AVENUE EDOUARD GRINDA, 06200, NICE"
+      "adresse": "16 AVENUE EDOUARD GRINDA, 06200, NICE",
+      "nb_opps_notion": 1
     },
     {
       "nom": "Licorne Invest",
@@ -607,7 +626,8 @@
       "nb_projets": 0,
       "nom_entreprise": "LICORNE-INVEST",
       "siret": "92518339400012",
-      "adresse": "26 AVENUE FOCH 57000 METZ, 57000, METZ"
+      "adresse": "26 AVENUE FOCH 57000 METZ, 57000, METZ",
+      "nb_opps_notion": 1
     },
     {
       "nom": "Sexeen",
@@ -625,7 +645,8 @@
       "nb_projets": 0,
       "nom_entreprise": null,
       "siret": null,
-      "adresse": null
+      "adresse": null,
+      "nb_opps_notion": 3
     },
     {
       "nom": "La Toast Family",
@@ -643,7 +664,8 @@
       "nb_projets": 0,
       "nom_entreprise": "La Toast Family",
       "siret": "90897145000014",
-      "adresse": "36 RUE LAUTH, 67000, STRASBOURG"
+      "adresse": "36 RUE LAUTH, 67000, STRASBOURG",
+      "nb_opps_notion": 2
     },
     {
       "nom": "VTC Swiss",
@@ -654,14 +676,16 @@
       "statut": "Ancien",
       "maintenance": "Non",
       "fin_contrat": "--",
-      "ca_total": 150,
+      "ca_total": 3672,
       "ca_2025": 150,
       "ca_2026": 0,
       "nb_factures": 0,
       "nb_projets": 0,
       "nom_entreprise": null,
       "siret": null,
-      "adresse": null
+      "adresse": null,
+      "ca_2024": 3522,
+      "nb_opps_notion": 6
     },
     {
       "nom": "SACO",
@@ -679,7 +703,278 @@
       "nb_projets": 0,
       "nom_entreprise": null,
       "siret": null,
-      "adresse": null
+      "adresse": null,
+      "nb_opps_notion": 1
+    },
+    {
+      "nom": "Anavia",
+      "site": "",
+      "statut": "Ancien",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 1089,
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "ca_total": 1089,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 2
+    },
+    {
+      "nom": "Babeta",
+      "site": "",
+      "statut": "Actif",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 799,
+      "ca_2025": 214,
+      "ca_2026": 0,
+      "ca_total": 1013,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 3
+    },
+    {
+      "nom": "Cinelite",
+      "site": "",
+      "statut": "Actif",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 0,
+      "ca_2025": 400,
+      "ca_2026": 0,
+      "ca_total": 400,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 1
+    },
+    {
+      "nom": "Eagle Rocket",
+      "site": "",
+      "statut": "Ancien",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 4189,
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "ca_total": 4189,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 3
+    },
+    {
+      "nom": "GROUPE MEDIA DES TERRITOIRES",
+      "site": "",
+      "statut": "Actif",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 1887,
+      "ca_2025": 359,
+      "ca_2026": 0,
+      "ca_total": 2246,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 2
+    },
+    {
+      "nom": "Habitat Multi Surfaces",
+      "site": "",
+      "statut": "Actif",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 0,
+      "ca_2025": 0,
+      "ca_2026": 3000,
+      "ca_total": 3000,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 2
+    },
+    {
+      "nom": "Holly Meals",
+      "site": "",
+      "statut": "Ancien",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 1527,
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "ca_total": 1527,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 4
+    },
+    {
+      "nom": "JAB",
+      "site": "",
+      "statut": "Actif",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 3000,
+      "ca_2025": 578,
+      "ca_2026": 0,
+      "ca_total": 3578,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 3
+    },
+    {
+      "nom": "MAKE",
+      "site": "",
+      "statut": "Ancien",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 1299,
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "ca_total": 1299,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 1
+    },
+    {
+      "nom": "Musée Richard Wagner",
+      "site": "",
+      "statut": "Actif",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 3996,
+      "ca_2025": 2649,
+      "ca_2026": 0,
+      "ca_total": 6645,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 7
+    },
+    {
+      "nom": "Optimmo",
+      "site": "",
+      "statut": "Ancien",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 1098,
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "ca_total": 1098,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 2
+    },
+    {
+      "nom": "Pauline Tkhor Avocat",
+      "site": "",
+      "statut": "Ancien",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 2000,
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "ca_total": 2000,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 1
+    },
+    {
+      "nom": "Pépite Esthétique",
+      "site": "",
+      "statut": "Actif",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 0,
+      "ca_2025": 2169.9,
+      "ca_2026": 0,
+      "ca_total": 2169.9,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 2
+    },
+    {
+      "nom": "Teamshifts",
+      "site": "",
+      "statut": "Ancien",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 89,
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "ca_total": 89,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 1
+    },
+    {
+      "nom": "Warere",
+      "site": "",
+      "statut": "Ancien",
+      "telephone": "",
+      "email": "",
+      "ca_2024": 2599,
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "ca_total": 2599,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "dernier_contact": null,
+      "nom_entreprise": null,
+      "siret": null,
+      "adresse": null,
+      "nb_opps_notion": 1
     }
   ],
   "pipeline": [
@@ -828,6 +1123,762 @@
       "objet": "Portail Client FIDOLUX",
       "date": "08/01",
       "pdf": ""
+    },
+    {
+      "nom": "Communauté 360",
+      "client": "Communauté 360",
+      "montant": "4239.9 EUR",
+      "montant_num": 4239.9,
+      "statut": "envoye",
+      "date_envoi": "2025-06-15",
+      "source": "notion"
+    },
+    {
+      "nom": "Migration hébergement - Céline Roland",
+      "client": "Céline Roland Opticien Lunetier",
+      "montant": "5000 EUR",
+      "montant_num": 5000,
+      "statut": "en_attente",
+      "date_envoi": "2025-12-24",
+      "source": "notion"
+    },
+    {
+      "nom": "M.Bolchert JDA",
+      "client": "EJDA",
+      "montant": "2500 EUR",
+      "montant_num": 2500,
+      "statut": "en_attente",
+      "date_envoi": "2025-09-16",
+      "source": "notion"
+    },
+    {
+      "nom": "Site vitrine Entretien Zen",
+      "client": "Entretien Zen",
+      "montant": "2000 EUR",
+      "montant_num": 2000,
+      "statut": "en_attente",
+      "date_envoi": "2025-12-24",
+      "source": "notion"
+    },
+    {
+      "nom": "Portail Client",
+      "client": "Fidolux",
+      "montant": "9700 EUR",
+      "montant_num": 9700,
+      "statut": "envoye",
+      "date_envoi": "2026-01-08",
+      "source": "notion"
+    },
+    {
+      "nom": "E-Commerce",
+      "client": "Habitat Multi Surfaces",
+      "montant": "3500 EUR",
+      "montant_num": 3500,
+      "statut": "envoye",
+      "date_envoi": "2025-11-18",
+      "source": "notion"
+    },
+    {
+      "nom": "Ignite",
+      "client": "Ignite Media",
+      "montant": "3000 EUR",
+      "montant_num": 3000,
+      "statut": "envoye",
+      "date_envoi": "2025-12-15",
+      "source": "notion"
+    },
+    {
+      "nom": "Refonte site web L.I.Partners",
+      "client": "L.I. PARTNERS",
+      "montant": "7000 EUR",
+      "montant_num": 7000,
+      "statut": "envoye",
+      "date_envoi": "2026-01-25",
+      "source": "notion"
+    },
+    {
+      "nom": "LXB CARELLAGE",
+      "client": "LXB Carellage",
+      "montant": "6500 EUR",
+      "montant_num": 6500,
+      "statut": "envoye",
+      "date_envoi": "2025-11-12",
+      "source": "notion"
+    },
+    {
+      "nom": "Devis Blog Ewan",
+      "client": "LXB Estates Luxembourg",
+      "montant": "400 EUR",
+      "montant_num": 400,
+      "statut": "envoye",
+      "date_envoi": "2025-12-12",
+      "source": "notion"
+    },
+    {
+      "nom": "Site vitrine Maya Hua",
+      "client": "Maya Hua",
+      "montant": "2000 EUR",
+      "montant_num": 2000,
+      "statut": "en_attente",
+      "date_envoi": "2025-12-24",
+      "source": "notion"
+    },
+    {
+      "nom": "Pixel Booking",
+      "client": "Paris 8",
+      "montant": "2099 EUR",
+      "montant_num": 2099,
+      "statut": "envoye",
+      "date_envoi": "2025-10-08",
+      "source": "notion"
+    },
+    {
+      "nom": "Sara Cleaning",
+      "client": "Sans entreprise",
+      "montant": "4000 EUR",
+      "montant_num": 4000,
+      "statut": "en_attente",
+      "date_envoi": "2025-12-04",
+      "source": "notion"
+    },
+    {
+      "nom": "Sport Chevaux",
+      "client": "Sans entreprise",
+      "montant": "6699 EUR",
+      "montant_num": 6699,
+      "statut": "envoye",
+      "date_envoi": "2025-12-04",
+      "source": "notion"
+    },
+    {
+      "nom": "Développement une page (Anavia)",
+      "client": "Anavia",
+      "montant": "199 EUR",
+      "montant_num": 199,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "Création site web",
+      "client": "Anavia",
+      "montant": "890 EUR",
+      "montant_num": 890,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "Renouvellement nom de domaine + Hébérgement",
+      "client": "Au Cerf",
+      "montant": "114 EUR",
+      "montant_num": 114,
+      "statut": "accepte",
+      "date_envoi": "2024-12-08",
+      "source": "notion"
+    },
+    {
+      "nom": "Renouvellement nom de domaine + hébérgement",
+      "client": "Au Cerf",
+      "montant": "114 EUR",
+      "montant_num": 114,
+      "statut": "accepte",
+      "date_envoi": "2025-12-09",
+      "source": "notion"
+    },
+    {
+      "nom": "creation site web (Au Cerf)",
+      "client": "Au Cerf",
+      "montant": "2500 EUR",
+      "montant_num": 2500,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "Babeta SINGLE PAGE",
+      "client": "Babeta",
+      "montant": "799 EUR",
+      "montant_num": 799,
+      "statut": "accepte",
+      "date_envoi": "2024-10-18",
+      "source": "notion"
+    },
+    {
+      "nom": "Email pro",
+      "client": "Babeta",
+      "montant": "99 EUR",
+      "montant_num": 99,
+      "statut": "accepte",
+      "date_envoi": "2025-02-07",
+      "source": "notion"
+    },
+    {
+      "nom": "Renouvellement nom de domaine + hébérgement",
+      "client": "Babeta",
+      "montant": "115 EUR",
+      "montant_num": 115,
+      "statut": "accepte",
+      "date_envoi": "2025-11-12",
+      "source": "notion"
+    },
+    {
+      "nom": "Refonte site web",
+      "client": "Baptiste Beloeil",
+      "montant": "650 EUR",
+      "montant_num": 650,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "Optimisation Black Trombonne",
+      "client": "Black Trombone",
+      "montant": "499 EUR",
+      "montant_num": 499,
+      "statut": "accepte",
+      "date_envoi": "2025-04-07",
+      "source": "notion"
+    },
+    {
+      "nom": "Dernière Dispo 1/2",
+      "client": "Black Trombone",
+      "montant": "1765.35 EUR",
+      "montant_num": 1765.35,
+      "statut": "accepte",
+      "date_envoi": "2025-04-07",
+      "source": "notion"
+    },
+    {
+      "nom": "Dernière Dispo 2/2",
+      "client": "Black Trombone",
+      "montant": "1765.35 EUR",
+      "montant_num": 1765.35,
+      "statut": "accepte",
+      "date_envoi": "2025-06-04",
+      "source": "notion"
+    },
+    {
+      "nom": "nom de domaine + hébérgement",
+      "client": "CRW Lyon",
+      "montant": "115 EUR",
+      "montant_num": 115,
+      "statut": "accepte",
+      "date_envoi": "2025-12-15",
+      "source": "notion"
+    },
+    {
+      "nom": "Refonte web",
+      "client": "Cinelite",
+      "montant": "400 EUR",
+      "montant_num": 400,
+      "statut": "accepte",
+      "date_envoi": "2025-04-15",
+      "source": "notion"
+    },
+    {
+      "nom": "Cinéloges",
+      "client": "Cineloges",
+      "montant": "1815.3 EUR",
+      "montant_num": 1815.3,
+      "statut": "accepte",
+      "date_envoi": "2025-03-14",
+      "source": "notion"
+    },
+    {
+      "nom": "Cothidance",
+      "client": "Cothidance",
+      "montant": "990 EUR",
+      "montant_num": 990,
+      "statut": "accepte",
+      "date_envoi": "2025-03-05",
+      "source": "notion"
+    },
+    {
+      "nom": "Maintenance COTHIDANCE",
+      "client": "Cothidance",
+      "montant": "699 EUR",
+      "montant_num": 699,
+      "statut": "accepte",
+      "date_envoi": "2025-05-05",
+      "source": "notion"
+    },
+    {
+      "nom": "Refonte site web (Blog)",
+      "client": "Eagle Rocket",
+      "montant": "890 EUR",
+      "montant_num": 890,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "MAJ",
+      "client": "Eagle Rocket",
+      "montant": "799 EUR",
+      "montant_num": 799,
+      "statut": "accepte",
+      "date_envoi": "2024-07-19",
+      "source": "notion"
+    },
+    {
+      "nom": "Création site web (Eagle Rocket)",
+      "client": "Eagle Rocket",
+      "montant": "2500 EUR",
+      "montant_num": 2500,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "Etheos (1)",
+      "client": "Etheos",
+      "montant": "2699 EUR",
+      "montant_num": 2699,
+      "statut": "accepte",
+      "date_envoi": "2025-12-16",
+      "source": "notion"
+    },
+    {
+      "nom": "Fidolux 1/2",
+      "client": "Fidolux",
+      "montant": "2000 EUR",
+      "montant_num": 2000,
+      "statut": "accepte",
+      "date_envoi": "2025-05-05",
+      "source": "notion"
+    },
+    {
+      "nom": "Fidolux 2/2",
+      "client": "Fidolux",
+      "montant": "2000 EUR",
+      "montant_num": 2000,
+      "statut": "accepte",
+      "date_envoi": "2025-05-18",
+      "source": "notion"
+    },
+    {
+      "nom": "Newsletter",
+      "client": "GROUPE MEDIA DES TERRITOIRES",
+      "montant": "359 EUR",
+      "montant_num": 359,
+      "statut": "accepte",
+      "date_envoi": "2025-02-07",
+      "source": "notion"
+    },
+    {
+      "nom": "Création site web",
+      "client": "GROUPE MEDIA DES TERRITOIRES",
+      "montant": "1887 EUR",
+      "montant_num": 1887,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "Habitat Multi Services - Site vitrine",
+      "client": "Habitat Multi Surfaces",
+      "montant": "3000 EUR",
+      "montant_num": 3000,
+      "statut": "accepte",
+      "date_envoi": "2026-01-27",
+      "source": "notion"
+    },
+    {
+      "nom": "Flyer ",
+      "client": "Holly Meals",
+      "montant": "149 EUR",
+      "montant_num": 149,
+      "statut": "accepte",
+      "date_envoi": "2024-10-14",
+      "source": "notion"
+    },
+    {
+      "nom": "Correctifs ",
+      "client": "Holly Meals",
+      "montant": "399 EUR",
+      "montant_num": 399,
+      "statut": "accepte",
+      "date_envoi": "2024-10-21",
+      "source": "notion"
+    },
+    {
+      "nom": "Intervention",
+      "client": "Holly Meals",
+      "montant": "89 EUR",
+      "montant_num": 89,
+      "statut": "accepte",
+      "date_envoi": "2024-12-08",
+      "source": "notion"
+    },
+    {
+      "nom": "Création site web (Holly Meals)",
+      "client": "Holly Meals",
+      "montant": "890 EUR",
+      "montant_num": 890,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "Création site web",
+      "client": "JAB",
+      "montant": "2500 EUR",
+      "montant_num": 2500,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "JAB 2 Formulaire",
+      "client": "JAB",
+      "montant": "578 EUR",
+      "montant_num": 578,
+      "statut": "accepte",
+      "date_envoi": "2025-03-04",
+      "source": "notion"
+    },
+    {
+      "nom": "Révision site web",
+      "client": "JAB",
+      "montant": "500 EUR",
+      "montant_num": 500,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "LXB Estates",
+      "client": "LXB Estates Luxembourg",
+      "montant": "2812 EUR",
+      "montant_num": 2812,
+      "statut": "accepte",
+      "date_envoi": "2025-03-20",
+      "source": "notion"
+    },
+    {
+      "nom": "LXB Construct (2/2)",
+      "client": "LXB Estates Luxembourg",
+      "montant": "1000 EUR",
+      "montant_num": 1000,
+      "statut": "accepte",
+      "date_envoi": "2025-09-16",
+      "source": "notion"
+    },
+    {
+      "nom": "LXB Construct (1/2)",
+      "client": "LXB Estates Luxembourg",
+      "montant": "3000 EUR",
+      "montant_num": 3000,
+      "statut": "accepte",
+      "date_envoi": "2025-10-16",
+      "source": "notion"
+    },
+    {
+      "nom": "Maquette accueil react",
+      "client": "La Toast Family",
+      "montant": "990 EUR",
+      "montant_num": 990,
+      "statut": "accepte",
+      "date_envoi": "2025-06-20",
+      "source": "notion"
+    },
+    {
+      "nom": "Le portail vert (CBD)",
+      "client": "Le portail vert",
+      "montant": "2000 EUR",
+      "montant_num": 2000,
+      "statut": "accepte",
+      "date_envoi": "2025-07-01",
+      "source": "notion"
+    },
+    {
+      "nom": "Site Levée de fonds",
+      "client": "Licorne Invest",
+      "montant": "2599 EUR",
+      "montant_num": 2599,
+      "statut": "accepte",
+      "date_envoi": "2025-03-10",
+      "source": "notion"
+    },
+    {
+      "nom": "Site kiné",
+      "client": "MAKE",
+      "montant": "1299 EUR",
+      "montant_num": 1299,
+      "statut": "accepte",
+      "date_envoi": "2024-10-22",
+      "source": "notion"
+    },
+    {
+      "nom": "Page rénovation",
+      "client": "Musée Richard Wagner",
+      "montant": "299 EUR",
+      "montant_num": 299,
+      "statut": "accepte",
+      "date_envoi": "2024-07-24",
+      "source": "notion"
+    },
+    {
+      "nom": "Maintenance annuelle",
+      "client": "Musée Richard Wagner",
+      "montant": "599 EUR",
+      "montant_num": 599,
+      "statut": "accepte",
+      "date_envoi": "2024-09-23",
+      "source": "notion"
+    },
+    {
+      "nom": "Sections membres 1/2",
+      "client": "Musée Richard Wagner",
+      "montant": "825 EUR",
+      "montant_num": 825,
+      "statut": "accepte",
+      "date_envoi": "2025-02-26",
+      "source": "notion"
+    },
+    {
+      "nom": "Site offert partenaires",
+      "client": "Musée Richard Wagner",
+      "montant": "500 EUR",
+      "montant_num": 500,
+      "statut": "accepte",
+      "date_envoi": "2025-03-15",
+      "source": "notion"
+    },
+    {
+      "nom": "Sections membres 2/2",
+      "client": "Musée Richard Wagner",
+      "montant": "825 EUR",
+      "montant_num": 825,
+      "statut": "accepte",
+      "date_envoi": "2025-05-02",
+      "source": "notion"
+    },
+    {
+      "nom": "Renouvellement maintenance",
+      "client": "Musée Richard Wagner",
+      "montant": "499 EUR",
+      "montant_num": 499,
+      "statut": "accepte",
+      "date_envoi": "2025-08-30",
+      "source": "notion"
+    },
+    {
+      "nom": "Refonte Site Web",
+      "client": "Musée Richard Wagner",
+      "montant": "3098 EUR",
+      "montant_num": 3098,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "Développement design",
+      "client": "Optimmo",
+      "montant": "599 EUR",
+      "montant_num": 599,
+      "statut": "accepte",
+      "date_envoi": "2024-07-24",
+      "source": "notion"
+    },
+    {
+      "nom": "Refonte esthétique",
+      "client": "Optimmo",
+      "montant": "499 EUR",
+      "montant_num": 499,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "Site internet avocat",
+      "client": "Pauline Tkhor Avocat",
+      "montant": "2000 EUR",
+      "montant_num": 2000,
+      "statut": "accepte",
+      "date_envoi": "2024-10-30",
+      "source": "notion"
+    },
+    {
+      "nom": "Stéphanie Ludivine 1/2",
+      "client": "Pépite Esthétique",
+      "montant": "1084.95 EUR",
+      "montant_num": 1084.95,
+      "statut": "accepte",
+      "date_envoi": "2025-06-04",
+      "source": "notion"
+    },
+    {
+      "nom": "Stéphanie Ludivine 2/2",
+      "client": "Pépite Esthétique",
+      "montant": "1084.95 EUR",
+      "montant_num": 1084.95,
+      "statut": "accepte",
+      "date_envoi": "2025-09-16",
+      "source": "notion"
+    },
+    {
+      "nom": "Maintenance RCL",
+      "client": "RCL",
+      "montant": "599 EUR",
+      "montant_num": 599,
+      "statut": "accepte",
+      "date_envoi": "2025-04-09",
+      "source": "notion"
+    },
+    {
+      "nom": "Renouvellement Domaine + Hosting",
+      "client": "RCL",
+      "montant": "114 EUR",
+      "montant_num": 114,
+      "statut": "accepte",
+      "date_envoi": "2025-10-24",
+      "source": "notion"
+    },
+    {
+      "nom": "Brochure",
+      "client": "SACO",
+      "montant": "999 EUR",
+      "montant_num": 999,
+      "statut": "accepte",
+      "date_envoi": "2025-02-07",
+      "source": "notion"
+    },
+    {
+      "nom": "Site groupe musique",
+      "client": "Sexeen",
+      "montant": "899 EUR",
+      "montant_num": 899,
+      "statut": "accepte",
+      "date_envoi": "2025-02-10",
+      "source": "notion"
+    },
+    {
+      "nom": "Maintenance sexeen 1/2",
+      "client": "Sexeen",
+      "montant": "300 EUR",
+      "montant_num": 300,
+      "statut": "accepte",
+      "date_envoi": "2025-04-18",
+      "source": "notion"
+    },
+    {
+      "nom": "Site une page",
+      "client": "Taimpel",
+      "montant": "890 EUR",
+      "montant_num": 890,
+      "statut": "accepte",
+      "date_envoi": "2025-02-28",
+      "source": "notion"
+    },
+    {
+      "nom": "Cartes de visites 2",
+      "client": "Taimpel",
+      "montant": "70 EUR",
+      "montant_num": 70,
+      "statut": "accepte",
+      "date_envoi": "2025-05-05",
+      "source": "notion"
+    },
+    {
+      "nom": "Design Liste",
+      "client": "Teamshifts",
+      "montant": "89 EUR",
+      "montant_num": 89,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "Tiz collab Heinrich",
+      "client": "Tiz",
+      "montant": "1800 EUR",
+      "montant_num": 1800,
+      "statut": "accepte",
+      "date_envoi": "2025-04-17",
+      "source": "notion"
+    },
+    {
+      "nom": "Tiz collab Zoning SC Diamonds",
+      "client": "Tiz",
+      "montant": "1826.65 EUR",
+      "montant_num": 1826.65,
+      "statut": "accepte",
+      "date_envoi": "2025-06-06",
+      "source": "notion"
+    },
+    {
+      "nom": "TIZ x Fun tech adventures",
+      "client": "Tiz",
+      "montant": "1800 EUR",
+      "montant_num": 1800,
+      "statut": "accepte",
+      "date_envoi": "2025-07-17",
+      "source": "notion"
+    },
+    {
+      "nom": "Services additonnels",
+      "client": "VTC Swiss",
+      "montant": "947 EUR",
+      "montant_num": 947,
+      "statut": "accepte",
+      "date_envoi": "2024-09-19",
+      "source": "notion"
+    },
+    {
+      "nom": "Optimisation ",
+      "client": "VTC Swiss",
+      "montant": "399 EUR",
+      "montant_num": 399,
+      "statut": "accepte",
+      "date_envoi": "2024-10-08",
+      "source": "notion"
+    },
+    {
+      "nom": "Module Avis",
+      "client": "VTC Swiss",
+      "montant": "129 EUR",
+      "montant_num": 129,
+      "statut": "accepte",
+      "date_envoi": "2024-10-30",
+      "source": "notion"
+    },
+    {
+      "nom": "Nouvelle opportunité",
+      "client": "VTC Swiss",
+      "montant": "1448 EUR",
+      "montant_num": 1448,
+      "statut": "accepte",
+      "date_envoi": "2024-11-21",
+      "source": "notion"
+    },
+    {
+      "nom": "Excel",
+      "client": "VTC Swiss",
+      "montant": "150 EUR",
+      "montant_num": 150,
+      "statut": "accepte",
+      "date_envoi": "2025-10-24",
+      "source": "notion"
+    },
+    {
+      "nom": "Refonte esthétique site web",
+      "client": "VTC Swiss",
+      "montant": "599 EUR",
+      "montant_num": 599,
+      "statut": "accepte",
+      "date_envoi": "2024-07-02",
+      "source": "notion"
+    },
+    {
+      "nom": "Refonte web",
+      "client": "Warere",
+      "montant": "2599 EUR",
+      "montant_num": 2599,
+      "statut": "accepte",
+      "date_envoi": "2024-09-19",
+      "source": "notion"
     }
   ],
   "factures": [
