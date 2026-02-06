@@ -1327,7 +1327,8 @@
         ).join('');
 
         let projRows = dp.map(p => {
-            const matchP = DATA.projets.find(pr => pr.nom === p.projet || pr.client === p.client);
+            const pL = p.projet.toLowerCase(), cL = (p.client||'').toLowerCase();
+            const matchP = DATA.projets.find(pr => pr.nom === p.projet || pr.client === p.client || pr.nom.toLowerCase().includes(pL) || pL.includes(pr.nom.toLowerCase()) || pr.client.toLowerCase().includes(cL) || cL.includes(pr.client.toLowerCase()));
             const pNom = matchP ? matchP.nom : p.projet;
             return `<tr onclick="openProjetPanel('${esc(pNom).replace(/'/g, "\\'")}')" style="cursor:pointer"><td>${esc(p.projet)}</td><td>${esc(p.client)}</td><td><span class="badge ${badgeClass(p.statut)}">${esc(p.statut)}</span></td></tr>`;
         }).join('');
@@ -2895,6 +2896,75 @@
             '</div>' +
         '</div>';
 
+        document.getElementById('client-panel').classList.add('open');
+        document.getElementById('client-panel-overlay').classList.add('visible');
+    }
+
+    // ===== TACHE PANEL =====
+    function openTachePanel(tacheTitle) {
+        const tache = DATA.taches.find(function(t) { return t.titre === tacheTitle; });
+        if (!tache) return;
+
+        const sectionTitle = function(t) { return '<div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-light);font-weight:600;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border);">' + t + '</div>'; };
+        const infoRow = function(label, value) { return '<div style="display:flex;justify-content:space-between;padding:5px 0;font-size:0.85rem;"><span style="color:var(--text-light);font-weight:500;">' + label + '</span><span style="text-align:right;max-width:65%;">' + value + '</span></div>'; };
+
+        const colonneLabels = { a_faire: 'À faire', en_cours: 'En cours', termine: 'Terminé', bloque: 'Bloqué' };
+        const statutLabel = colonneLabels[tache.colonne] || tache.colonne;
+
+        // Try to find related projet or client
+        const titreLower = tache.titre.toLowerCase();
+        const relatedProjet = DATA.projets.find(function(p) {
+            return p.client.toLowerCase().includes(titreLower) || titreLower.includes(p.client.toLowerCase()) || p.nom.toLowerCase().includes(titreLower) || titreLower.includes(p.nom.toLowerCase());
+        });
+        const relatedClient = relatedProjet ? DATA.clients.find(function(c) {
+            const cNom = c.nom.toLowerCase();
+            const pClient = relatedProjet.client.toLowerCase();
+            return cNom.includes(pClient) || pClient.includes(cNom);
+        }) : null;
+
+        const relatedHtml = relatedProjet
+            ? '<a href="javascript:void(0)" onclick="openProjetPanel(\'' + esc(relatedProjet.nom).replace(/'/g, "\\'") + '\')" style="color:var(--primary);text-decoration:none;font-weight:500;">' + esc(relatedProjet.nom) + '</a>'
+            : null;
+
+        const panelHtml = '<div style="padding:0;">' +
+            // Header
+            '<div style="padding:20px 24px 16px;border-bottom:1px solid var(--border);background:var(--bg);">' +
+                '<div style="display:flex;justify-content:space-between;align-items:start;">' +
+                    '<div>' +
+                        '<h2 style="font-size:1.2rem;font-weight:700;margin:0 0 4px;">' + esc(tache.titre) + '</h2>' +
+                        (tache.badge ? '<div style="font-size:0.85rem;color:var(--text-light);">' + esc(tache.badge) + '</div>' : '') +
+                    '</div>' +
+                    '<button onclick="closePanel()" style="background:none;border:none;cursor:pointer;font-size:1.3rem;color:var(--text-light);line-height:1;padding:4px 8px;">✕</button>' +
+                '</div>' +
+                '<div style="margin-top:10px;"><span class="badge ' + badgeClass(statutLabel) + '">' + esc(statutLabel) + '</span></div>' +
+            '</div>' +
+            // Body
+            '<div style="padding:20px 24px;">' +
+                // Details
+                sectionTitle('Détails') +
+                '<div style="margin-bottom:20px;">' +
+                    (tache.desc ? infoRow('Description', esc(tache.desc)) : '') +
+                    infoRow('Colonne', esc(statutLabel)) +
+                    (tache.badge ? infoRow('Type', '<span class="badge badge-' + (tache.badge_color || 'blue') + '">' + esc(tache.badge) + '</span>') : '') +
+                    (tache.date ? infoRow('Date', fmtDate(tache.date)) : '') +
+                    (tache.priorite ? infoRow('Priorité', esc(tache.priorite)) : '') +
+                '</div>' +
+                // Projet lié
+                (relatedHtml ?
+                    sectionTitle('Projet lié') +
+                    '<div style="margin-bottom:20px;">' + infoRow('Projet', relatedHtml) + '</div>'
+                : '') +
+                // Suivi
+                sectionTitle('Suivi') +
+                '<div style="margin-bottom:20px;">' +
+                    ((tache.suivi && tache.suivi.length > 0)
+                        ? tache.suivi.map(function(s) { return '<div style="padding:6px 0;border-bottom:1px solid var(--border);font-size:0.85rem;"><span style="color:var(--text-light);font-size:0.75rem;margin-right:8px;">' + fmtDate(s.date) + '</span>' + esc(s.note) + '</div>'; }).join('')
+                        : '<div style="color:var(--text-light);font-size:0.85rem;">Aucune note</div>') +
+                '</div>' +
+            '</div>' +
+        '</div>';
+
+        document.getElementById('client-panel').innerHTML = panelHtml;
         document.getElementById('client-panel').classList.add('open');
         document.getElementById('client-panel-overlay').classList.add('visible');
     }
