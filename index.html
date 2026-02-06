@@ -151,11 +151,10 @@
             min-height: 100vh;
             padding: 35px 40px;
             overflow-x: hidden;
-            width: calc(100vw - var(--sidebar-width));
             box-sizing: border-box;
         }
 
-        .sidebar.collapsed ~ .main { margin-left: var(--sidebar-collapsed); width: calc(100vw - var(--sidebar-collapsed)); }
+        .sidebar.collapsed ~ .main { margin-left: var(--sidebar-collapsed); }
 
         .tab { display: none; }
         .tab.active { display: block; }
