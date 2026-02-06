@@ -301,6 +301,30 @@
         .carousel-card .label { font-weight: 600; font-size: 0.85rem; margin-bottom: 6px; }
         .carousel-card .value { color: var(--primary); font-size: 1.5rem; font-weight: 700; }
 
+        /* ===== FILTERS ===== */
+        .filters {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 7px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+            color: var(--text-light);
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .filter-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+
         /* ===== ANIMATIONS ===== */
         .fade-in {
             opacity: 0;
@@ -478,16 +502,26 @@
         <div class="grid grid-3">
             <div class="card fade-in" style="animation-delay:0.1s">
                 <div class="card-label">En cours</div>
-                <div class="card-value primary">3</div>
+                <div class="card-value primary" id="proj-encours">3</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
                 <div class="card-label">En retard</div>
-                <div class="card-value accent">1</div>
+                <div class="card-value accent" id="proj-retard">1</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
                 <div class="card-label">Livres ce mois</div>
-                <div class="card-value success">2</div>
+                <div class="card-value success" id="proj-livres">2</div>
             </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterTable('projets-list', 'all', this)">Tous</button>
+            <button class="filter-btn" onclick="filterTable('projets-list', 'En cours', this)">En cours</button>
+            <button class="filter-btn" onclick="filterTable('projets-list', 'En retard', this)">En retard</button>
+            <button class="filter-btn" onclick="filterTable('projets-list', 'Livre', this)">Livres</button>
+            <button class="filter-btn" onclick="filterTable('projets-list', 'Site vitrine', this)">Site vitrine</button>
+            <button class="filter-btn" onclick="filterTable('projets-list', 'SEO', this)">SEO</button>
+            <button class="filter-btn" onclick="filterTable('projets-list', 'Marketplace', this)">Marketplace</button>
         </div>
 
         <div class="card table-card fade-in" style="animation-delay:0.25s">
@@ -500,6 +534,7 @@
                     <tr><td>Rapport SEO</td><td>Black Trombone</td><td>SEO</td><td>5 fev 2026</td><td><span class="badge badge-green">Livre</span></td></tr>
                     <tr><td>Plaza Tango Festival</td><td>Plaza Tango</td><td>Evenementiel</td><td>24 avr 2026</td><td><span class="badge badge-blue">En cours</span></td></tr>
                     <tr><td>Dashboard croissance</td><td>DerniereDispo</td><td>Dashboard</td><td>5 fev 2026</td><td><span class="badge badge-green">Livre</span></td></tr>
+                    <tr><td>Refonte + Carriere</td><td>LI Partners</td><td>Site vitrine</td><td>A definir</td><td><span class="badge badge-orange">Devis en cours</span></td></tr>
                 </tbody>
             </table>
         </div>
@@ -529,15 +564,27 @@
             </div>
         </div>
 
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterTable('clients-list', 'all', this)">Tous</button>
+            <button class="filter-btn" onclick="filterTable('clients-list', 'Actif', this)">Actifs</button>
+            <button class="filter-btn" onclick="filterTable('clients-list', 'Maintenance', this)">Maintenance</button>
+            <button class="filter-btn" onclick="filterTable('clients-list', 'Devis', this)">Devis en cours</button>
+            <button class="filter-btn" onclick="filterTable('clients-list', 'attente', this)">En attente</button>
+        </div>
+
         <div class="card table-card fade-in" style="animation-delay:0.3s">
-            <div class="table-header">Clients recents</div>
+            <div class="table-header">Clients</div>
             <table>
-                <thead><tr><th>Client</th><th>Type</th><th>Dernier contact</th><th>Statut</th></tr></thead>
+                <thead><tr><th>Client</th><th>Type</th><th>Maintenance</th><th>Fin contrat</th><th>Dernier contact</th><th>Statut</th></tr></thead>
                 <tbody id="clients-list">
-                    <tr><td>Johan (Black Trombone / DerniereDispo)</td><td>Site + SEO + Marketplace</td><td>5 fev 2026</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Habitat</td><td>Site vitrine</td><td>3 fev 2026</td><td><span class="badge badge-orange">En attente maquette</span></td></tr>
-                    <tr><td>LI Partners</td><td>Refonte + Carriere</td><td>3 fev 2026</td><td><span class="badge badge-blue">Devis en cours</span></td></tr>
-                    <tr><td>Plaza Tango</td><td>Festival / Marketing</td><td>6 fev 2026</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Johan (Black Trombone)</td><td>Site + SEO</td><td><span class="badge badge-green">Oui</span></td><td>--</td><td>5 fev 2026</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Johan (DerniereDispo)</td><td>Marketplace</td><td><span class="badge badge-green">Oui</span></td><td>--</td><td>5 fev 2026</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Habitat</td><td>Site vitrine</td><td><span class="badge badge-gray">Non</span></td><td>--</td><td>3 fev 2026</td><td><span class="badge badge-orange">En attente maquette</span></td></tr>
+                    <tr><td>LI Partners</td><td>Refonte + Carriere</td><td><span class="badge badge-gray">Non</span></td><td>--</td><td>3 fev 2026</td><td><span class="badge badge-blue">Devis en cours</span></td></tr>
+                    <tr><td>Plaza Tango</td><td>Festival / Marketing</td><td><span class="badge badge-green">Oui</span></td><td>--</td><td>6 fev 2026</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Away Expedition</td><td>Site vitrine</td><td><span class="badge badge-green">Oui</span></td><td>--</td><td>--</td><td><span class="badge badge-green">Maintenance</span></td></tr>
+                    <tr><td>Cine Loges</td><td>Site vitrine</td><td><span class="badge badge-green">Oui</span></td><td>--</td><td>--</td><td><span class="badge badge-green">Maintenance</span></td></tr>
+                    <tr><td>Collectivites Territoriales</td><td>Site vitrine</td><td><span class="badge badge-green">Oui</span></td><td>--</td><td>--</td><td><span class="badge badge-green">Maintenance</span></td></tr>
                 </tbody>
             </table>
         </div>
@@ -858,6 +905,12 @@
             </div>
         </div>
 
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterTable('sites-list', 'all', this)">Tous</button>
+            <button class="filter-btn" onclick="filterTable('sites-list', 'OK', this)">En ligne</button>
+            <button class="filter-btn" onclick="filterTable('sites-list', 'Down', this)">Down</button>
+        </div>
+
         <div class="card table-card fade-in" style="animation-delay:0.25s">
             <div class="table-header">Liste des sites</div>
             <table>
@@ -900,6 +953,25 @@
     }
     updateClock();
     setInterval(updateClock, 30000);
+
+    // Filter tables
+    function filterTable(tbodyId, filter, btn) {
+        const tbody = document.getElementById(tbodyId);
+        const rows = tbody.querySelectorAll('tr');
+        
+        // Update active button
+        btn.parentElement.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        rows.forEach(row => {
+            if (filter === 'all') {
+                row.style.display = '';
+            } else {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(filter.toLowerCase()) ? '' : 'none';
+            }
+        });
+    }
 </script>
 </body>
 </html>
