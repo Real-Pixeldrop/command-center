@@ -1323,10 +1323,14 @@
 
         const tachesEnCours = DATA.taches.filter(t => t.colonne === 'en_cours' || t.colonne === 'a_faire');
         const tacheRows = tachesEnCours.slice(0, 8).map(t =>
-            `<tr><td>${esc(t.titre)}</td><td><span class="badge badge-${t.badge_color}">${esc(t.badge)}</span></td></tr>`
+            `<tr onclick="openTachePanel('${esc(t.titre).replace(/'/g, "\\'")}')" style="cursor:pointer"><td>${esc(t.titre)}</td><td><span class="badge badge-${t.badge_color}">${esc(t.badge)}</span></td></tr>`
         ).join('');
 
-        let projRows = dp.map(p => `<tr><td>${esc(p.projet)}</td><td>${esc(p.client)}</td><td><span class="badge ${badgeClass(p.statut)}">${esc(p.statut)}</span></td></tr>`).join('');
+        let projRows = dp.map(p => {
+            const matchP = DATA.projets.find(pr => pr.nom === p.projet || pr.client === p.client);
+            const pNom = matchP ? matchP.nom : p.projet;
+            return `<tr onclick="openProjetPanel('${esc(pNom).replace(/'/g, "\\'")}')" style="cursor:pointer"><td>${esc(p.projet)}</td><td>${esc(p.client)}</td><td><span class="badge ${badgeClass(p.statut)}">${esc(p.statut)}</span></td></tr>`;
+        }).join('');
 
         const moisNoms = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
         const currentMonthIdx = new Date().getMonth();
@@ -1607,7 +1611,7 @@
         let kanbanCols = '';
         for (const [key, cfg] of Object.entries(colonneConfig)) {
             const items = taches.filter(t => t.colonne === key);
-            const cards = items.map((t, i) => `<div class="kanban-card" style="animation-delay:${(0.05 + i * 0.05).toFixed(2)}s">
+            const cards = items.map((t, i) => `<div class="kanban-card" style="animation-delay:${(0.05 + i * 0.05).toFixed(2)}s;cursor:pointer" onclick="openTachePanel('${esc(t.titre).replace(/'/g, "\\'")}')">
                 <div class="kanban-card-title">${esc(t.titre)}</div>
                 <div class="kanban-card-desc">${esc(t.desc)}</div>
                 <span class="badge badge-${t.badge_color}">${esc(t.badge)}</span>
@@ -2852,6 +2856,45 @@
         '</div>';
 
         document.getElementById('client-panel').innerHTML = panelHtml;
+        document.getElementById('client-panel').classList.add('open');
+        document.getElementById('client-panel-overlay').classList.add('visible');
+    }
+
+    function openTachePanel(titre) {
+        const tache = DATA.taches.find(function(t) { return t.titre === titre; });
+        if (!tache) return;
+
+        const statutMap = { a_faire: 'A faire', en_cours: 'En cours', termine: 'Termine', bloque: 'Bloque' };
+        const statutColors = { a_faire: 'badge-blue', en_cours: 'badge-orange', termine: 'badge-green', bloque: 'badge-red' };
+        const statutLabel = statutMap[tache.colonne] || tache.colonne;
+        const statutBadge = statutColors[tache.colonne] || 'badge-gray';
+
+        const sectionTitle = function(t) { return '<div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-light);font-weight:600;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border);">' + t + '</div>'; };
+        const infoRow = function(label, value) { return '<div style="display:flex;justify-content:space-between;padding:5px 0;font-size:0.85rem;"><span style="color:var(--text-light);font-weight:500;">' + label + '</span><span style="text-align:right;max-width:65%;">' + value + '</span></div>'; };
+
+        document.getElementById('client-panel').innerHTML = '<div style="padding:0;">' +
+            '<div style="padding:20px 24px 16px;border-bottom:1px solid var(--border);background:var(--bg);">' +
+                '<div style="display:flex;justify-content:space-between;align-items:start;">' +
+                    '<div style="flex:1;">' +
+                        '<h2 style="font-size:1.2rem;font-weight:700;margin:0 0 8px;">' + esc(tache.titre) + '</h2>' +
+                        '<span class="badge ' + statutBadge + '">' + esc(statutLabel) + '</span>' +
+                    '</div>' +
+                    '<button onclick="closePanel()" style="background:none;border:none;cursor:pointer;font-size:1.3rem;color:var(--text-light);line-height:1;padding:4px 8px;">✕</button>' +
+                '</div>' +
+            '</div>' +
+            '<div style="padding:20px 24px;">' +
+                sectionTitle('Details') +
+                '<div style="margin-bottom:20px;">' +
+                    infoRow('Type', '<span class="badge badge-' + (tache.badge_color || 'gray') + '">' + esc(tache.badge || '--') + '</span>') +
+                    (tache.desc ? infoRow('Description', esc(tache.desc)) : '') +
+                '</div>' +
+                sectionTitle('Suivi') +
+                '<div style="margin-bottom:20px;">' +
+                    ((tache.suivi && tache.suivi.length > 0) ? tache.suivi.map(function(s) { return '<div style="padding:6px 0;border-bottom:1px solid var(--border);font-size:0.85rem;"><span style="color:var(--text-light);font-size:0.75rem;margin-right:8px;">' + fmtDate(s.date) + '</span>' + esc(s.note) + '</div>'; }).join('') : '<div style="color:var(--text-light);font-size:0.85rem;">Aucune note</div>') +
+                '</div>' +
+            '</div>' +
+        '</div>';
+
         document.getElementById('client-panel').classList.add('open');
         document.getElementById('client-panel-overlay').classList.add('visible');
     }
