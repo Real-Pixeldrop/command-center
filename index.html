@@ -2636,8 +2636,8 @@
             projetsHtml = '<div style="color:var(--text-light);font-size:0.88rem;">Aucun projet</div>';
         } else {
             projetsHtml = clientProjets.map(p =>
-                '<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">' +
-                    '<div><div style="font-weight:600;font-size:0.88rem;">' + esc(p.nom) + '</div><div style="font-size:0.78rem;color:var(--text-light);">' + esc(p.type) + ' — ' + esc(p.deadline) + '</div></div>' +
+                '<div onclick="openProjetPanel(\'' + esc(p.nom).replace(/'/g, "\\'") + '\')" style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);cursor:pointer;" onmouseover="this.style.background=\'var(--bg)\'" onmouseout="this.style.background=\'transparent\'">' +
+                    '<div><div style="font-weight:600;font-size:0.88rem;color:var(--primary);">' + esc(p.nom) + '</div><div style="font-size:0.78rem;color:var(--text-light);">' + esc(p.type) + ' — ' + fmtDate(p.deadline) + '</div></div>' +
                     '<span class="badge ' + badgeClass(p.statut) + '">' + esc(p.statut) + '</span>' +
                 '</div>'
             ).join('');
