@@ -891,71 +891,88 @@
 
     <!-- ===== PIPELINE ===== -->
     <div class="tab" id="tab-pipeline">
-        <h1 class="page-title">Pipeline</h1>
-        <p class="page-subtitle">Prospects et opportunites en cours</p>
+        <h1 class="page-title">Pipeline Commercial</h1>
+        <p class="page-subtitle">Opportunites qualifiees — synchro Pennylane</p>
 
         <div class="grid grid-4">
             <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">A contacter</div>
-                <div class="card-value accent" id="pipeline-contact">71</div>
+                <div class="card-label">Offres envoyees</div>
+                <div class="card-value accent">6</div>
+                <div class="card-sub">39 400€ en jeu</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
                 <div class="card-label">En discussion</div>
-                <div class="card-value primary" id="pipeline-discussion">0</div>
+                <div class="card-value primary">1</div>
+                <div class="card-sub">M.Bolchert JDA</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Devis envoyes</div>
-                <div class="card-value warning" id="pipeline-devis">0</div>
+                <div class="card-label">Signes 2026</div>
+                <div class="card-value success">1</div>
+                <div class="card-sub">3 000€</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.25s">
-                <div class="card-label">Signes ce mois</div>
-                <div class="card-value success" id="pipeline-signes">0</div>
+                <div class="card-label">Prospection froide</div>
+                <div class="card-value" style="color:var(--text-light)">71</div>
+                <div class="card-sub">contacts a appeler</div>
             </div>
         </div>
 
-        <div class="view-toggle">
-            <button class="view-toggle-btn active" onclick="togglePipelineView('table', this)">📋 Tableau</button>
-            <button class="view-toggle-btn" onclick="togglePipelineView('kanban', this)">🗂 Kanban</button>
+        <div class="sub-tabs">
+            <button class="sub-tab active" onclick="switchSubTab('pipeline-deals', this)">Opportunites</button>
+            <button class="sub-tab" onclick="switchSubTab('pipeline-prospection', this)">Prospection</button>
         </div>
 
-        <!-- Pipeline Kanban View -->
-        <div class="pipeline-view" id="pipeline-kanban">
+        <!-- Opportunites qualifiees -->
+        <div class="sub-tab-content active" id="subtab-pipeline-deals">
             <div class="kanban-board">
-                <div class="kanban-column col-blue">
-                    <div class="kanban-column-header">
-                        <span>🎯 Nouvelle opportunité</span>
-                        <span class="count" id="pk-new-count">0</span>
-                    </div>
-                    <div class="kanban-column-body" id="pk-new"></div>
-                </div>
                 <div class="kanban-column col-orange">
                     <div class="kanban-column-header">
-                        <span>📧 Offre envoyée</span>
-                        <span class="count" id="pk-sent-count">0</span>
+                        <span>📧 Offre envoyee</span>
+                        <span class="count">6</span>
                     </div>
-                    <div class="kanban-column-body" id="pk-sent"></div>
+                    <div class="kanban-column-body">
+                        <div class="kanban-card"><div class="kanban-card-title">L.I.Partners</div><div class="kanban-card-desc">Refonte site web — 4 devis envoyes</div><span class="badge badge-orange">8 400€ x3 + 7 800€</span></div>
+                        <div class="kanban-card"><div class="kanban-card-title">Entretien Zen</div><div class="kanban-card-desc">Site Internet 3.0</div><span class="badge badge-orange">2 000€</span></div>
+                        <div class="kanban-card"><div class="kanban-card-title">FIDOLUX</div><div class="kanban-card-desc">Portail Client</div><span class="badge badge-orange">9 700€</span></div>
+                    </div>
+                </div>
+                <div class="kanban-column col-blue">
+                    <div class="kanban-column-header">
+                        <span>💬 En discussion</span>
+                        <span class="count">1</span>
+                    </div>
+                    <div class="kanban-column-body">
+                        <div class="kanban-card"><div class="kanban-card-title">M.Bolchert JDA</div><div class="kanban-card-desc">Devis en attente — relance a faire</div><span class="badge badge-blue">2 500€</span></div>
+                    </div>
                 </div>
                 <div class="kanban-column col-green">
                     <div class="kanban-column-header">
-                        <span>✅ Client signé</span>
-                        <span class="count" id="pk-signed-count">0</span>
+                        <span>✅ Signe</span>
+                        <span class="count">1</span>
                     </div>
-                    <div class="kanban-column-body" id="pk-signed"></div>
+                    <div class="kanban-column-body">
+                        <div class="kanban-card"><div class="kanban-card-title">Habitat Multi Services</div><div class="kanban-card-desc">Site vitrine — facture payee</div><span class="badge badge-green">3 000€</span></div>
+                    </div>
                 </div>
                 <div class="kanban-column col-gray">
                     <div class="kanban-column-header">
                         <span>❌ Perdu</span>
-                        <span class="count" id="pk-lost-count">0</span>
+                        <span class="count">0</span>
                     </div>
-                    <div class="kanban-column-body" id="pk-lost"></div>
+                    <div class="kanban-column-body"></div>
                 </div>
             </div>
         </div>
 
+        <!-- Prospection froide -->
+        <div class="sub-tab-content" id="subtab-pipeline-prospection">
+            <div class="search-bar" style="margin-bottom:16px;">
+                <input type="text" class="search-input" placeholder="Rechercher un prospect..." oninput="searchTable('pipeline-list', this.value)">
+            </div>
+
         <!-- Pipeline Table View -->
-        <div class="pipeline-view active" id="pipeline-table">
         <div class="card table-card fade-in" style="animation-delay:0.3s">
-            <div class="table-header">Pipeline Notion</div>
+            <div class="table-header">Prospects (Notion)</div>
             <table>
                 <thead><tr><th>Entreprise</th><th>Contact</th><th>Valeur</th><th>Etape</th></tr></thead>
                 <tbody id="pipeline-list"><tr><td>DECORENOV</td><td>Jennifer Kemmat (Présidente)</td><td>--</td><td><span class="badge badge-blue">🔄 À rappeler</span></td></tr>
@@ -1059,7 +1076,8 @@
 <tr><td>BACACIER EST</td><td>(à identifier)</td><td>--</td><td><span class="badge badge-blue">🎯 À contacter</span></td></tr></tbody>
             </table>
         </div>
-        </div><!-- /pipeline-table -->
+        </div>
+        </div><!-- /subtab-pipeline-prospection -->
     </div>
 
     <!-- ===== TÂCHES ===== -->
