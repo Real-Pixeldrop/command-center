@@ -1224,6 +1224,7 @@
 
     // ===== UTILITY =====
     function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+    function fmtDate(s) { if (!s) return '--'; const parts = s.split('-'); if (parts.length === 3) return parts[2] + '-' + parts[1] + '-' + parts[0]; return s; }
 
     function badgeClass(statut) {
         const s = statut.toLowerCase();
@@ -1500,7 +1501,7 @@
             let contactHtml = '--';
             if (c.dernier_contact) {
                 const color = ageDays > 90 ? '#e74c3c' : 'var(--success)';
-                contactHtml = '<span style="color:' + color + ';font-weight:600">' + esc(c.dernier_contact) + '</span>';
+                contactHtml = '<span style="color:' + color + ';font-weight:600">' + fmtDate(c.dernier_contact) + '</span>';
             }
             const caHtml = (c.ca_total || 0) > 0 ? '<span style="font-weight:600;color:var(--success)">' + Math.round(c.ca_total).toLocaleString('fr-FR') + '€</span>' : '--';
             return `<tr data-contact-age="${ageDays}" onclick="openClientPanel('${esc(c.nom).replace(/'/g, "\\'")}')" style="cursor:pointer"><td>${esc(c.nom)}</td><td>${caHtml}</td><td>${esc(c.site)}</td><td>${contactHtml}</td></tr>`;
@@ -1972,7 +1973,7 @@
 
         let devisRows = devis.map(d => `<tr><td>${esc(d.date)}</td><td>${esc(d.client)}</td><td>${esc(d.objet)}</td><td>${esc(d.montant)}</td><td><span class="badge ${badgeClass(d.statut)}">${esc(d.statut)}</span></td><td><a href="${esc(d.pdf)}" target="_blank" style="color:var(--primary)">↗</a></td></tr>`).join('');
 
-        let factRows = factures.map(f => `<tr><td>${esc(f.date)}</td><td>${esc(f.client)}</td><td>${esc(f.objet)}</td><td>${esc(f.montant)}</td><td><span class="badge ${badgeClass(f.statut)}">${esc(f.statut)}</span></td><td><a href="${esc(f.pdf)}" target="_blank" style="color:var(--primary)">↗</a></td></tr>`).join('');
+        let factRows = factures.map(f => `<tr><td>${fmtDate(f.date)}</td><td>${esc(f.client)}</td><td>${esc(f.objet)}</td><td>${esc(f.montant)}</td><td><span class="badge ${badgeClass(f.statut)}">${esc(f.statut)}</span></td><td><a href="${esc(f.pdf)}" target="_blank" style="color:var(--primary)">↗</a></td></tr>`).join('');
 
         // Relances
         const relances = getRelances();
@@ -2313,7 +2314,7 @@
             const items = posts.filter(p => (statutToCol[p.statut] || p.statut) === key);
             const cards = items.map((p, i) => `<div class="kanban-card" style="animation-delay:${(0.05 + i * 0.05).toFixed(2)}s">
                 <div class="kanban-card-title">${esc(p.titre)}</div>
-                <div class="kanban-card-desc">${esc(p.date)}</div>
+                <div class="kanban-card-desc">${fmtDate(p.date)}</div>
                 <span class="badge ${typeBadge(p.type)}">${esc(p.type)}</span>
             </div>`).join('');
             kanbanCols += `<div class="kanban-column ${cfg.col}">
@@ -2379,7 +2380,7 @@
             const items = posts.filter(p => (statutToCol[p.statut] || p.statut) === key);
             const cards = items.map((p, i) => `<div class="kanban-card" style="animation-delay:${(0.05 + i * 0.05).toFixed(2)}s">
                 <div class="kanban-card-title">${esc(p.titre)}</div>
-                <div class="kanban-card-desc">${esc(p.date)}</div>
+                <div class="kanban-card-desc">${fmtDate(p.date)}</div>
                 <span class="badge ${typeBadge(p.type)}">${esc(p.type)}</span>
             </div>`).join('');
             kanbanCols += `<div class="kanban-column ${cfg.col}">
@@ -2640,7 +2641,7 @@
             devisHtml = clientDevis.map(d => {
                 const pdfLink = d.pdf_url ? ' <a href="' + esc(d.pdf_url) + '" target="_blank" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">PDF</a>' : '';
                 return '<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">' +
-                    '<div><div style="font-weight:600;font-size:0.88rem;">' + esc(d.objet || d.nom) + pdfLink + '</div><div style="font-size:0.78rem;color:var(--text-light);">' + esc(d.date_envoi || d.date) + '</div></div>' +
+                    '<div><div style="font-weight:600;font-size:0.88rem;">' + esc(d.objet || d.nom) + pdfLink + '</div><div style="font-size:0.78rem;color:var(--text-light);">' + fmtDate(d.date_envoi || d.date) + '</div></div>' +
                     '<div style="text-align:right;"><div style="font-weight:600;font-size:0.88rem;">' + esc(d.montant) + '</div><span class="badge ' + badgeClass(d.statut) + '">' + esc(d.statut) + '</span></div>' +
                 '</div>';
             }).join('');
@@ -2657,7 +2658,7 @@
                 const statutLabel = f.statut === 'payee' ? 'Payée' : 'Impayée';
                 const pdfLink = f.pdf_url ? ' <a href="' + esc(f.pdf_url) + '" target="_blank" style="font-size:0.75rem;color:var(--primary);text-decoration:none;">PDF</a>' : '';
                 return '<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">' +
-                    '<div><div style="font-weight:600;font-size:0.88rem;">' + esc(f.opp_nom || f.objet || f.nom) + pdfLink + '</div><div style="font-size:0.78rem;color:var(--text-light);">' + esc(f.date) + '</div></div>' +
+                    '<div><div style="font-weight:600;font-size:0.88rem;">' + esc(f.opp_nom || f.objet || f.nom) + pdfLink + '</div><div style="font-size:0.78rem;color:var(--text-light);">' + fmtDate(f.date) + '</div></div>' +
                     '<div style="text-align:right;"><div style="font-weight:600;font-size:0.88rem;">' + esc(f.montant) + '</div><span style="display:inline-block;padding:2px 10px;border-radius:12px;font-size:0.75rem;font-weight:600;color:' + statutColor + ';background:' + statutBg + ';">' + statutLabel + '</span></div>' +
                 '</div>';
             }).join('');
@@ -2687,7 +2688,7 @@
                     '<div>Email : ' + emailHtml + '</div>' +
                     (adresse ? '<div>Adresse : <span style="color:var(--text);">' + esc(adresse) + '</span></div>' : '') +
                     '<div>Site : ' + siteHtml + '</div>' +
-                    '<div>Dernier contact : <span style="color:' + dcColor + ';font-weight:600;">' + esc(dc) + '</span></div>' +
+                    '<div>Dernier contact : <span style="color:' + dcColor + ';font-weight:600;">' + fmtDate(dc) + '</span></div>' +
                 '</div>' +
             '</div>' +
             '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">' +

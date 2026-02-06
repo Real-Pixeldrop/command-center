@@ -174,6 +174,496 @@
       "type": "Dashboard",
       "deadline": "--",
       "statut": "Livre"
+    },
+    {
+      "nom": "Développement une page (Anavia)",
+      "client": "Anavia",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Création site web",
+      "client": "Anavia",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Renouvellement nom de domaine + Hébérgement",
+      "client": "Au Cerf",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Renouvellement nom de domaine + hébérgement",
+      "client": "Au Cerf",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "creation site web (Au Cerf)",
+      "client": "Au Cerf",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Babeta SINGLE PAGE",
+      "client": "Babeta",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Email pro",
+      "client": "Babeta",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Renouvellement nom de domaine + hébérgement",
+      "client": "Babeta",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Refonte site web",
+      "client": "Baptiste Beloeil",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Optimisation Black Trombonne",
+      "client": "Black Trombone",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Dernière Dispo 1/2",
+      "client": "Black Trombone",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Dernière Dispo 2/2",
+      "client": "Black Trombone",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "nom de domaine + hébérgement",
+      "client": "CRW Lyon",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Refonte web",
+      "client": "Cinelite",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Cinéloges",
+      "client": "Cineloges",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Cothidance",
+      "client": "Cothidance",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Maintenance COTHIDANCE",
+      "client": "Cothidance",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Refonte site web (Blog)",
+      "client": "Eagle Rocket",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "MAJ",
+      "client": "Eagle Rocket",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Création site web (Eagle Rocket)",
+      "client": "Eagle Rocket",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Etheos (1)",
+      "client": "Etheos",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Fidolux 1/2",
+      "client": "Fidolux",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Fidolux 2/2",
+      "client": "Fidolux",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Newsletter",
+      "client": "GROUPE MEDIA DES TERRITOIRES",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Création site web",
+      "client": "GROUPE MEDIA DES TERRITOIRES",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Habitat Multi Services - Site vitrine",
+      "client": "Habitat Multi Surfaces",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Flyer ",
+      "client": "Holly Meals",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Correctifs ",
+      "client": "Holly Meals",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Intervention",
+      "client": "Holly Meals",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Création site web (Holly Meals)",
+      "client": "Holly Meals",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Création site web",
+      "client": "JAB",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "JAB 2 Formulaire",
+      "client": "JAB",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Révision site web",
+      "client": "JAB",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "LXB Estates",
+      "client": "LXB Estates Luxembourg",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "LXB Construct (2/2)",
+      "client": "LXB Estates Luxembourg",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "LXB Construct (1/2)",
+      "client": "LXB Estates Luxembourg",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Maquette accueil react",
+      "client": "La Toast Family",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Le portail vert (CBD)",
+      "client": "Le portail vert",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Site Levée de fonds",
+      "client": "Licorne Invest",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Site kiné",
+      "client": "MAKE",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Page rénovation",
+      "client": "Musée Richard Wagner",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Maintenance annuelle",
+      "client": "Musée Richard Wagner",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Sections membres 1/2",
+      "client": "Musée Richard Wagner",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Site offert partenaires",
+      "client": "Musée Richard Wagner",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Sections membres 2/2",
+      "client": "Musée Richard Wagner",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Renouvellement maintenance",
+      "client": "Musée Richard Wagner",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Refonte Site Web",
+      "client": "Musée Richard Wagner",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Développement design",
+      "client": "Optimmo",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Refonte esthétique",
+      "client": "Optimmo",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Site internet avocat",
+      "client": "Pauline Tkhor Avocat",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Stéphanie Ludivine 1/2",
+      "client": "Pépite Esthétique",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Stéphanie Ludivine 2/2",
+      "client": "Pépite Esthétique",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Maintenance RCL",
+      "client": "RCL",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Renouvellement Domaine + Hosting",
+      "client": "RCL",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Brochure",
+      "client": "SACO",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Site groupe musique",
+      "client": "Sexeen",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Maintenance sexeen 1/2",
+      "client": "Sexeen",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Site une page",
+      "client": "Taimpel",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Cartes de visites 2",
+      "client": "Taimpel",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Design Liste",
+      "client": "Teamshifts",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Tiz collab Heinrich",
+      "client": "Tiz",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Tiz collab Zoning SC Diamonds",
+      "client": "Tiz",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "TIZ x Fun tech adventures",
+      "client": "Tiz",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Services additonnels",
+      "client": "VTC Swiss",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Optimisation ",
+      "client": "VTC Swiss",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Module Avis",
+      "client": "VTC Swiss",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Nouvelle opportunité",
+      "client": "VTC Swiss",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Excel",
+      "client": "VTC Swiss",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Refonte esthétique site web",
+      "client": "VTC Swiss",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Refonte web",
+      "client": "Warere",
+      "type": "Site vitrine",
+      "deadline": "",
+      "statut": "Livre"
     }
   ],
   "clients": [
@@ -189,7 +679,7 @@
       "ca_2026": 0,
       "ca_total": 2699,
       "nb_factures": 2,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "dernier_contact": null,
       "nom_entreprise": "ETHEOS",
       "siret": "99258913500019",
@@ -264,7 +754,7 @@
       "ca_2026": 0,
       "ca_total": 6812,
       "nb_factures": 2,
-      "nb_projets": 0,
+      "nb_projets": 3,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -301,7 +791,7 @@
       "ca_2026": 0,
       "ca_total": 4000,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 2,
       "dernier_contact": null,
       "nom_entreprise": "FIDOLUX SARL",
       "siret": "B297692",
@@ -320,7 +810,7 @@
       "ca_2026": 0,
       "ca_total": 1689,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 2,
       "dernier_contact": null,
       "nom_entreprise": "COTHIDANCE",
       "siret": "49144954200043",
@@ -339,7 +829,7 @@
       "ca_2026": 0,
       "ca_total": 1072,
       "nb_factures": 1,
-      "nb_projets": 0,
+      "nb_projets": 2,
       "dernier_contact": null,
       "nom_entreprise": "RCL",
       "siret": "33841667000028",
@@ -395,7 +885,7 @@
       "ca_2026": 0,
       "ca_total": 4029.7,
       "nb_factures": 1,
-      "nb_projets": 0,
+      "nb_projets": 3,
       "dernier_contact": null,
       "nom_entreprise": "Black Trombone",
       "siret": "42211684800025",
@@ -432,7 +922,7 @@
       "ca_2026": 0,
       "ca_total": 2728,
       "nb_factures": 1,
-      "nb_projets": 0,
+      "nb_projets": 3,
       "dernier_contact": null,
       "nom_entreprise": "Au Cerf",
       "siret": "84207152400016",
@@ -452,7 +942,7 @@
       "ca_2026": 0,
       "ca_total": 960,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 2,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -471,7 +961,7 @@
       "ca_2026": 0,
       "ca_total": 650,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -491,7 +981,7 @@
       "ca_2026": 0,
       "ca_total": 115,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "dernier_contact": null,
       "nom_entreprise": "IDI CRW HOLDING SA (IDI CRW HOLDING)",
       "siret": "97771427800016",
@@ -566,7 +1056,7 @@
       "ca_2025": 5426.65,
       "ca_2026": 0,
       "nb_factures": 1,
-      "nb_projets": 0,
+      "nb_projets": 3,
       "nom_entreprise": "TIZ",
       "siret": "85154963400018",
       "adresse": "1 RUE DES POMMIERS 45230 LA BUSSIERE, 45230, LA BUSSIERE",
@@ -585,7 +1075,7 @@
       "ca_2025": 2000,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "nom_entreprise": "LE PORTAIL VERT (LPV)",
       "siret": "98833271400019",
       "adresse": "BUREAU 326 78 AVENUE DES CHAMPS ELYSEES 75008 PARIS, 75008, PARIS",
@@ -604,7 +1094,7 @@
       "ca_2025": 1815.3,
       "ca_2026": 0,
       "nb_factures": 1,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "nom_entreprise": "Cineloges",
       "siret": "51951834400022",
       "adresse": "16 AVENUE EDOUARD GRINDA, 06200, NICE",
@@ -623,7 +1113,7 @@
       "ca_2025": 2599,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "nom_entreprise": "LICORNE-INVEST",
       "siret": "92518339400012",
       "adresse": "26 AVENUE FOCH 57000 METZ, 57000, METZ",
@@ -642,7 +1132,7 @@
       "ca_2025": 1199,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 2,
       "nom_entreprise": null,
       "siret": null,
       "adresse": null,
@@ -661,7 +1151,7 @@
       "ca_2025": 990,
       "ca_2026": 0,
       "nb_factures": 1,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "nom_entreprise": "La Toast Family",
       "siret": "90897145000014",
       "adresse": "36 RUE LAUTH, 67000, STRASBOURG",
@@ -680,7 +1170,7 @@
       "ca_2025": 150,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 6,
       "nom_entreprise": null,
       "siret": null,
       "adresse": null,
@@ -700,7 +1190,7 @@
       "ca_2025": 999,
       "ca_2026": 0,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "nom_entreprise": null,
       "siret": null,
       "adresse": null,
@@ -717,7 +1207,7 @@
       "ca_2026": 0,
       "ca_total": 1089,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 2,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -735,7 +1225,7 @@
       "ca_2026": 0,
       "ca_total": 1013,
       "nb_factures": 1,
-      "nb_projets": 0,
+      "nb_projets": 3,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -753,7 +1243,7 @@
       "ca_2026": 0,
       "ca_total": 400,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -771,7 +1261,7 @@
       "ca_2026": 0,
       "ca_total": 4189,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 3,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -789,7 +1279,7 @@
       "ca_2026": 0,
       "ca_total": 2246,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 2,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -807,7 +1297,7 @@
       "ca_2026": 3000,
       "ca_total": 3000,
       "nb_factures": 1,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -825,7 +1315,7 @@
       "ca_2026": 0,
       "ca_total": 1527,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 4,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -843,7 +1333,7 @@
       "ca_2026": 0,
       "ca_total": 3578,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 3,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -861,7 +1351,7 @@
       "ca_2026": 0,
       "ca_total": 1299,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -879,7 +1369,7 @@
       "ca_2026": 0,
       "ca_total": 6645,
       "nb_factures": 1,
-      "nb_projets": 0,
+      "nb_projets": 7,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -897,7 +1387,7 @@
       "ca_2026": 0,
       "ca_total": 1098,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 2,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -915,7 +1405,7 @@
       "ca_2026": 0,
       "ca_total": 2000,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -933,7 +1423,7 @@
       "ca_2026": 0,
       "ca_total": 2169.9,
       "nb_factures": 2,
-      "nb_projets": 0,
+      "nb_projets": 2,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -951,7 +1441,7 @@
       "ca_2026": 0,
       "ca_total": 89,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
@@ -969,7 +1459,7 @@
       "ca_2026": 0,
       "ca_total": 2599,
       "nb_factures": 0,
-      "nb_projets": 0,
+      "nb_projets": 1,
       "dernier_contact": null,
       "nom_entreprise": null,
       "siret": null,
