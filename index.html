@@ -1279,12 +1279,20 @@
 
         let projRows = dp.map(p => `<tr><td>${esc(p.projet)}</td><td>${esc(p.client)}</td><td><span class="badge ${badgeClass(p.statut)}">${esc(p.statut)}</span></td></tr>`).join('');
 
+        const moisNoms = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+        const currentMonthIdx = new Date().getMonth();
+        const caChart = DATA.finances.ca_mensuel_chart;
+
         document.getElementById('dash-content').innerHTML = `
         <div class="grid grid-4">
             <div class="card fade-in" style="animation-delay:0.1s">
                 <div class="card-label">CA mensuel</div>
-                <div class="card-value primary">${esc(k.ca_mensuel)}</div>
-                <div class="card-sub">${esc(k.ca_mensuel_mois)}</div>
+                <div class="card-value primary" id="ca-month-val">${esc(k.ca_mensuel)}</div>
+                <div class="card-sub" style="display:flex;align-items:center;justify-content:center;gap:10px;">
+                    <button onclick="switchMonth(-1)" style="background:none;border:none;cursor:pointer;color:var(--text-light);font-size:1rem;padding:2px 6px;border-radius:4px;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">&lsaquo;</button>
+                    <span id="ca-month-label">${esc(k.ca_mensuel_mois)}</span>
+                    <button onclick="switchMonth(1)" style="background:none;border:none;cursor:pointer;color:var(--text-light);font-size:1rem;padding:2px 6px;border-radius:4px;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">&rsaquo;</button>
+                </div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
                 <div class="card-label">CA annuel 2026</div>
@@ -2181,6 +2189,21 @@
     // Date
     const dateStr = new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
     document.getElementById('dash-date').textContent = dateStr.charAt(0).toUpperCase() + dateStr.slice(1);
+
+    // Month navigation for CA mensuel
+    let caMonthIdx = new Date().getMonth();
+    const caMoisNoms = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+    function switchMonth(dir) {
+        caMonthIdx = Math.max(0, Math.min(11, caMonthIdx + dir));
+        const chart = DATA.finances.ca_mensuel_chart;
+        const m = chart[caMonthIdx];
+        const val = (m && m.montant !== null) ? m.montant.toLocaleString('fr-FR') + '€' : '--';
+        const label = caMoisNoms[caMonthIdx] + ' 2026';
+        const valEl = document.getElementById('ca-month-val');
+        const labelEl = document.getElementById('ca-month-label');
+        if (valEl) valEl.textContent = val;
+        if (labelEl) labelEl.textContent = label;
+    }
 
     // Clock
     function updateClock() {
