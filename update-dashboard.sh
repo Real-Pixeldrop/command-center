@@ -186,17 +186,18 @@ with open('$HTML_FILE', 'w') as f:
 fi
 
 # Tableaux dynamiques - Sites
-if [ -n "$SITES_HTML" ]; then
-  python3 -c "
-import re
-with open('$HTML_FILE', 'r') as f:
-    content = f.read()
-sites_rows = '''$SITES_HTML'''
-content = re.sub(r'(<tbody id=\"sites-list\">).*?(</tbody>)', r'\1' + sites_rows + r'\2', content, flags=re.DOTALL)
-with open('$HTML_FILE', 'w') as f:
-    f.write(content)
-" 2>/dev/null || echo "Sites table update skipped"
-fi
+# DESACTIVE: le data.json + renderSites() gere deja l'affichage correct des 31 sites
+# if [ -n "$SITES_HTML" ]; then
+#   python3 -c "
+# import re
+# with open('$HTML_FILE', 'r') as f:
+#     content = f.read()
+# sites_rows = '''$SITES_HTML'''
+# content = re.sub(r'(<tbody id=\"sites-list\">).*?(</tbody>)', r'\1' + sites_rows + r'\2', content, flags=re.DOTALL)
+# with open('$HTML_FILE', 'w') as f:
+#     f.write(content)
+# " 2>/dev/null || echo "Sites table update skipped"
+# fi
 
 # Tableaux dynamiques - Pipeline
 if [ -n "$PIPELINE_TABLE" ]; then

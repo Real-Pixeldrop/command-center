@@ -28,11 +28,36 @@
       "url": "https://analytics.google.com/analytics/web/#/p474885507/reports/reportinghub"
     },
     "channels_priority": [
-      { "rank": 1, "name": "LinkedIn", "status": "Actif", "status_color": "success" },
-      { "rank": 2, "name": "Newsletter", "status": "99 contacts", "status_color": "accent" },
-      { "rank": 3, "name": "Instagram", "status": "API active", "status_color": "success" },
-      { "rank": 4, "name": "Blog/SEO", "status": "A lancer", "status_color": "warning" },
-      { "rank": 5, "name": "Facebook", "status": "Cross-post", "status_color": "success" }
+      {
+        "rank": 1,
+        "name": "LinkedIn",
+        "status": "Actif",
+        "status_color": "success"
+      },
+      {
+        "rank": 2,
+        "name": "Newsletter",
+        "status": "99 contacts",
+        "status_color": "accent"
+      },
+      {
+        "rank": 3,
+        "name": "Instagram",
+        "status": "API active",
+        "status_color": "success"
+      },
+      {
+        "rank": 4,
+        "name": "Blog/SEO",
+        "status": "A lancer",
+        "status_color": "warning"
+      },
+      {
+        "rank": 5,
+        "name": "Facebook",
+        "status": "Cross-post",
+        "status_color": "success"
+      }
     ],
     "newsletter_stats": {
       "contacts": 287,
@@ -46,105 +71,547 @@
     "position": 17.7,
     "ctr": "0.5%",
     "queries": [
-      { "query": "pixel drop", "clicks": 7, "impressions": 361, "position": 6.2 },
-      { "query": "pixeldrop", "clicks": 3, "impressions": 109, "position": 7.3 },
-      { "query": "a5 en pixel", "clicks": 0, "impressions": 169, "position": 47 },
-      { "query": "a5 pixel", "clicks": 0, "impressions": 4, "position": 1.3 },
-      { "query": "agence développement applications", "clicks": 0, "impressions": 3, "position": 24.3 },
-      { "query": "agence développement web", "clicks": 0, "impressions": 2, "position": 12 },
-      { "query": "agence web 64", "clicks": 0, "impressions": 1, "position": 12 },
-      { "query": "agence web paris stage", "clicks": 0, "impressions": 1, "position": 22 }
+      {
+        "query": "pixel drop",
+        "clicks": 7,
+        "impressions": 361,
+        "position": 6.2
+      },
+      {
+        "query": "pixeldrop",
+        "clicks": 3,
+        "impressions": 109,
+        "position": 7.3
+      },
+      {
+        "query": "a5 en pixel",
+        "clicks": 0,
+        "impressions": 169,
+        "position": 47
+      },
+      {
+        "query": "a5 pixel",
+        "clicks": 0,
+        "impressions": 4,
+        "position": 1.3
+      },
+      {
+        "query": "agence développement applications",
+        "clicks": 0,
+        "impressions": 3,
+        "position": 24.3
+      },
+      {
+        "query": "agence développement web",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 12
+      },
+      {
+        "query": "agence web 64",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 12
+      },
+      {
+        "query": "agence web paris stage",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 22
+      }
     ]
   },
   "projets": [
-    { "nom": "Maquette site vitrine", "client": "Habitat Multi-Service", "type": "Site vitrine", "deadline": "A planifier", "statut": "En retard" },
-    { "nom": "Plaza Tango Festival 2026", "client": "Plaza Tango", "type": "Evenementiel", "deadline": "24 avr 2026", "statut": "En cours" },
-    { "nom": "Consulting croissance", "client": "Derniere Dispo", "type": "Consulting", "deadline": "Continu", "statut": "En cours" },
-    { "nom": "Check hebdo sites WP", "client": "Pixel Drop", "type": "Maintenance", "deadline": "Recurrent", "statut": "En cours" },
-    { "nom": "Derniere Dispo V2", "client": "Yoann / Driss", "type": "Marketplace", "deadline": "--", "statut": "Livre" },
-    { "nom": "CRW Lyon", "client": "Nicolas Crapanne", "type": "Site vitrine", "deadline": "--", "statut": "Livre" },
-    { "nom": "Dashboard Derniere Dispo", "client": "Derniere Dispo", "type": "Dashboard", "deadline": "--", "statut": "Livre" }
+    {
+      "nom": "Maquette site vitrine",
+      "client": "Habitat Multi-Service",
+      "type": "Site vitrine",
+      "deadline": "A planifier",
+      "statut": "En retard"
+    },
+    {
+      "nom": "Plaza Tango Festival 2026",
+      "client": "Plaza Tango",
+      "type": "Evenementiel",
+      "deadline": "24 avr 2026",
+      "statut": "En cours"
+    },
+    {
+      "nom": "Consulting croissance",
+      "client": "Derniere Dispo",
+      "type": "Consulting",
+      "deadline": "Continu",
+      "statut": "En cours"
+    },
+    {
+      "nom": "Check hebdo sites WP",
+      "client": "Pixel Drop",
+      "type": "Maintenance",
+      "deadline": "Recurrent",
+      "statut": "En cours"
+    },
+    {
+      "nom": "Derniere Dispo V2",
+      "client": "Yoann / Driss",
+      "type": "Marketplace",
+      "deadline": "--",
+      "statut": "Livre"
+    },
+    {
+      "nom": "CRW Lyon",
+      "client": "Nicolas Crapanne",
+      "type": "Site vitrine",
+      "deadline": "--",
+      "statut": "Livre"
+    },
+    {
+      "nom": "Dashboard Derniere Dispo",
+      "client": "Derniere Dispo",
+      "type": "Dashboard",
+      "deadline": "--",
+      "statut": "Livre"
+    }
   ],
   "clients": [
-    { "nom": "ETHEOS", "site": "etheos.fr", "maintenance": "Active", "fin_contrat": "01/12/2026", "statut": "Actif" },
-    { "nom": "Pepites d'Esthetique", "site": "pepitesdesthetique.com", "maintenance": "Active", "fin_contrat": "12/10/2026", "statut": "Actif" },
-    { "nom": "Richard Wagner Museum", "site": "richard-wagner-web-museum.com", "maintenance": "Active", "fin_contrat": "14/09/2026", "statut": "Actif" },
-    { "nom": "LXB Construction", "site": "lxbconstruction.com", "maintenance": "Active", "fin_contrat": "04/10/2026", "statut": "Actif" },
-    { "nom": "LXB ESTATE", "site": "lxb-estate.com", "maintenance": "Active", "fin_contrat": "30/04/2026", "statut": "Actif" },
-    { "nom": "Derniere Dispo", "site": "dernieredispo.com", "maintenance": "Active", "fin_contrat": "31/07/2026", "statut": "Actif" },
-    { "nom": "Fidolux", "site": "fidolux.lu", "maintenance": "Active", "fin_contrat": "31/05/2026", "statut": "Actif" },
-    { "nom": "Cothidance", "site": "cothidance92.fr", "maintenance": "Active", "fin_contrat": "04/04/2026", "statut": "Actif" },
-    { "nom": "RCL", "site": "collectivitesterritoriales.fr", "maintenance": "Active", "fin_contrat": "09/04/2026", "statut": "Actif" },
-    { "nom": "Plaza Tango", "site": "festival.plazatango.com", "maintenance": "Active", "fin_contrat": "04/01/2030", "statut": "Actif" },
-    { "nom": "Habitat Multi Services", "site": "--", "maintenance": "Non", "fin_contrat": "--", "statut": "Projet en cours" },
-    { "nom": "Black Trombone", "site": "black-trombone.fr", "maintenance": "Ancien", "fin_contrat": "--", "statut": "Ancien" },
-    { "nom": "Emmanuel Bernard", "site": "bernard-emmanuel.com", "maintenance": "Ancien", "fin_contrat": "--", "statut": "Ancien" },
-    { "nom": "Au Cerf", "site": "au-cerf.com", "maintenance": "Ancien", "fin_contrat": "--", "statut": "Ancien" },
-    { "nom": "Taimpel", "site": "taimpel.com", "maintenance": "Ancien", "fin_contrat": "--", "statut": "Ancien" },
-    { "nom": "Baptiste Beloeil", "site": "baptistebeloeil.com", "maintenance": "Ancien", "fin_contrat": "--", "statut": "Ancien" },
-    { "nom": "CRW Lyon", "site": "crw-lyon.fr", "maintenance": "Ancien", "fin_contrat": "--", "statut": "Ancien" },
-    { "nom": "Redaction Elite SEO", "site": "redactioneliteseo.fr", "maintenance": "Ancien", "fin_contrat": "--", "statut": "Ancien" }
+    {
+      "nom": "ETHEOS",
+      "site": "etheos.fr",
+      "maintenance": "Active",
+      "fin_contrat": "01/12/2026",
+      "statut": "Actif",
+      "telephone": "+33 7 50 99 75 23",
+      "email": "contact@archibald-patrimoine.com"
+    },
+    {
+      "nom": "Pepites d'Esthetique",
+      "site": "pepitesdesthetique.com",
+      "maintenance": "Active",
+      "fin_contrat": "12/10/2026",
+      "statut": "Actif",
+      "telephone": "06.65.52.97.14",
+      "email": "stephanieludivine.france@gmail.com"
+    },
+    {
+      "nom": "Richard Wagner Museum",
+      "site": "richard-wagner-web-museum.com",
+      "maintenance": "Active",
+      "fin_contrat": "14/09/2026",
+      "statut": "Actif",
+      "telephone": "0688228819",
+      "email": "ncrapanne@gmail.com"
+    },
+    {
+      "nom": "LXB Construction",
+      "site": "lxbconstruction.com",
+      "maintenance": "Active",
+      "fin_contrat": "04/10/2026",
+      "statut": "Actif",
+      "telephone": "",
+      "email": ""
+    },
+    {
+      "nom": "LXB ESTATE",
+      "site": "lxb-estate.com",
+      "maintenance": "Active",
+      "fin_contrat": "30/04/2026",
+      "statut": "Actif",
+      "telephone": "+352 691 242 550",
+      "email": "lorenzo.rickal@gmail.com"
+    },
+    {
+      "nom": "Derniere Dispo",
+      "site": "dernieredispo.com",
+      "maintenance": "Active",
+      "fin_contrat": "31/07/2026",
+      "statut": "Actif",
+      "telephone": "",
+      "email": ""
+    },
+    {
+      "nom": "Fidolux",
+      "site": "fidolux.lu",
+      "maintenance": "Active",
+      "fin_contrat": "31/05/2026",
+      "statut": "Actif",
+      "telephone": "+352 691 242 550",
+      "email": "lorenzo.rickal@gmail.com"
+    },
+    {
+      "nom": "Cothidance",
+      "site": "cothidance92.fr",
+      "maintenance": "Active",
+      "fin_contrat": "04/04/2026",
+      "statut": "Actif",
+      "telephone": "+33 6 64 70 04 47",
+      "email": "sonia.rioult@gmail.com"
+    },
+    {
+      "nom": "RCL",
+      "site": "collectivitesterritoriales.fr",
+      "maintenance": "Active",
+      "fin_contrat": "09/04/2026",
+      "statut": "Actif",
+      "telephone": "06 84 54 16 26",
+      "email": "gglondu@gmail.com"
+    },
+    {
+      "nom": "Plaza Tango",
+      "site": "festival.plazatango.com",
+      "maintenance": "Active",
+      "fin_contrat": "04/01/2030",
+      "statut": "Actif",
+      "telephone": "",
+      "email": ""
+    },
+    {
+      "nom": "Habitat Multi Services",
+      "site": "--",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "statut": "Projet en cours",
+      "telephone": "06 12 24 65 82",
+      "email": "contact@mcs-climatisation.fr"
+    },
+    {
+      "nom": "Black Trombone",
+      "site": "black-trombone.fr",
+      "maintenance": "Ancien",
+      "fin_contrat": "--",
+      "statut": "Ancien",
+      "telephone": "0660790451",
+      "email": "maurice.johan@black-trombone.fr"
+    },
+    {
+      "nom": "Emmanuel Bernard",
+      "site": "bernard-emmanuel.com",
+      "maintenance": "Ancien",
+      "fin_contrat": "--",
+      "statut": "Ancien",
+      "telephone": "",
+      "email": ""
+    },
+    {
+      "nom": "Au Cerf",
+      "site": "au-cerf.com",
+      "maintenance": "Ancien",
+      "fin_contrat": "--",
+      "statut": "Ancien",
+      "telephone": "+33 6 64 53 24 18",
+      "email": "adeline.wilhelm@gmail.com"
+    },
+    {
+      "nom": "Taimpel",
+      "site": "taimpel.com",
+      "maintenance": "Ancien",
+      "fin_contrat": "--",
+      "statut": "Ancien",
+      "telephone": "06 13 69 94 44",
+      "email": "pablo.blanc@taimpel.com"
+    },
+    {
+      "nom": "Baptiste Beloeil",
+      "site": "baptistebeloeil.com",
+      "maintenance": "Ancien",
+      "fin_contrat": "--",
+      "statut": "Ancien",
+      "telephone": "+33 6 61 05 46 07",
+      "email": "baptistebeloeilcontact@gmail.com"
+    },
+    {
+      "nom": "CRW Lyon",
+      "site": "crw-lyon.fr",
+      "maintenance": "Ancien",
+      "fin_contrat": "--",
+      "statut": "Ancien",
+      "telephone": "0688228819",
+      "email": "ncrapanne@gmail.com"
+    },
+    {
+      "nom": "Redaction Elite SEO",
+      "site": "redactioneliteseo.fr",
+      "maintenance": "Ancien",
+      "fin_contrat": "--",
+      "statut": "Ancien",
+      "telephone": "",
+      "email": ""
+    }
   ],
   "pipeline": [
-    { "nom": "L.I.Partners", "desc": "Refonte site web — 4 devis envoyes", "montant": "8 400€ x3 + 7 800€", "etape": "offre_envoyee" },
-    { "nom": "Entretien Zen", "desc": "Site Internet 3.0", "montant": "2 000€", "etape": "offre_envoyee" },
-    { "nom": "FIDOLUX", "desc": "Portail Client", "montant": "9 700€", "etape": "offre_envoyee" },
-    { "nom": "M.Bolchert JDA", "desc": "Devis en attente — relance a faire", "montant": "2 500€", "etape": "en_discussion" },
-    { "nom": "Habitat Multi Services", "desc": "Site vitrine — facture payee", "montant": "3 000€", "etape": "signe" }
+    {
+      "nom": "L.I.Partners",
+      "desc": "Refonte site web — 4 devis envoyes",
+      "montant": "8 400€ x3 + 7 800€",
+      "etape": "offre_envoyee"
+    },
+    {
+      "nom": "Entretien Zen",
+      "desc": "Site Internet 3.0",
+      "montant": "2 000€",
+      "etape": "offre_envoyee"
+    },
+    {
+      "nom": "FIDOLUX",
+      "desc": "Portail Client",
+      "montant": "9 700€",
+      "etape": "offre_envoyee"
+    },
+    {
+      "nom": "M.Bolchert JDA",
+      "desc": "Devis en attente — relance a faire",
+      "montant": "2 500€",
+      "etape": "en_discussion"
+    },
+    {
+      "nom": "Habitat Multi Services",
+      "desc": "Site vitrine — facture payee",
+      "montant": "3 000€",
+      "etape": "signe"
+    }
   ],
   "pipeline_kpis": {
-    "offres_envoyees": { "count": 6, "montant": "39 400€ en jeu" },
-    "en_discussion": { "count": 1, "detail": "M.Bolchert JDA" },
-    "signes": { "count": 1, "montant": "3 000€" },
-    "perdus": { "count": 0, "detail": "ce mois" }
+    "offres_envoyees": {
+      "count": 6,
+      "montant": "39 400€ en jeu"
+    },
+    "en_discussion": {
+      "count": 1,
+      "detail": "M.Bolchert JDA"
+    },
+    "signes": {
+      "count": 1,
+      "montant": "3 000€"
+    },
+    "perdus": {
+      "count": 0,
+      "detail": "ce mois"
+    }
   },
   "devis": [
-    { "date": "04/02", "client": "L.I.Partners", "objet": "Refonte site web", "montant": "8 400€", "statut": "En attente", "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=ofb4adRdb8NcR0UMREjpTtAkyfaRlDlCi6BYpaBff8YDFHCcdwZh4n%2B4Nt8SuCht1S2I%2BYOSMrNrgFimwhsTAqow5gEnMHeyjedSRPcyAm%2Bcj9ALF17xUYc4--%2F3eQr5e6QT9wf%2BMI--hzs8nx%2FmE11%2FzRXclBLcjA%3D%3D" },
-    { "date": "04/02", "client": "L.I.Partners", "objet": "Refonte site web", "montant": "8 400€", "statut": "En attente", "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=TEL%2Bcls9lXjJGjREANlVYVGPGXaA1S2zcdlqrg3d%2BPAhF29h1ncaJsOURlPAmRK9mK95EPxmHVww3kLE%2FkpFs7mq%2BN0nVMjHXf%2BbeDOfURpZLzhzLqP5Bgjp--pjk9z1slPL838Qwb--HNLDuYEShsDVuMMZdfMLpQ%3D%3D" },
-    { "date": "04/02", "client": "L.I.Partners", "objet": "Refonte site web", "montant": "8 400€", "statut": "En attente", "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=nACIdIHZmzTlbkc2pKGJU1qGmoys1JK6w9P1LS5cxzMl5%2FleboRua9Kpsxic9Z65LIDhOSlGI3UsyBUXK0CPrAT2iS3ybjKTsRFvPznRB8NuVSAlmI8xBzri--3bCjFd5835ACcEEL--gVolaLE1mfgfMQpGJA619w%3D%3D" },
-    { "date": "04/02", "client": "L.I.Partners", "objet": "Refonte site web", "montant": "7 800€", "statut": "En attente", "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=R%2BcOW7FzSo%2B8LeA1iQiTcq32EBmF1FR5XtoH9PnN3boXSN0NdneunhhYDCUqo01RSWsGsYngnSQnIVBZxpQ1vdPeeZe6bY10C%2ByaKwvq4fg004QBnv0QQvFX--DQrwi08%2Bk6yjlWVr--MgD2hW7%2F%2F5qlZWSAmJ5EiQ%3D%3D" },
-    { "date": "30/01", "client": "Entretien Zen", "objet": "Site Internet 3.0", "montant": "2 000€", "statut": "En attente", "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=WMf0QL4HpO5sLOuSrXxQ%2BMltQ6MLkXf5%2Bt1Ks6I9FAibIklEwfZFXsGufskpYEAgvXHUkwWGc8mTRwojaUPz58E0CBYb6y3qqaKvUxdWGALs67u4NDmB2TOk--p1f6AZ2K%2FOhcZOGj--YrRGOh4Lpw0yK9kbxwiYwQ%3D%3D" },
-    { "date": "27/01", "client": "Habitat Multi Services", "objet": "Site vitrine", "montant": "3 000€", "statut": "Accepte", "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=72mMPUxPynHBnF35uabEt7T14MzWzJtJzwcneU8bC9gZ1HwOJsT1WSvfBx6rB4PStG1iqHRhbAalcNErdDfV3pG%2BGTVnRhl%2F7s5F88YBqThJVv51ACjY%2FCsI--rtVeA0cJMVJRXoUV--Vy1GUOVQMfrkVg%2BIo9Td6A%3D%3D" },
-    { "date": "08/01", "client": "FIDOLUX", "objet": "Portail Client", "montant": "9 700€", "statut": "En attente", "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=Alm%2Fl%2FcKCr%2Bgxs7SQJ3CZQvO8yUPYNdzTlhu3D6%2F6OGDZkSSelSVrzDgmQuycD9r3fF2Ro7BbV4CNFmqHbMFwXRBnxWCl%2BvqtcsuAc3dBTjJQIcKI063uyU3--0El5XvMsx3e4ylug--0fxzIKG6UTbq3pE%2FF8jCnQ%3D%3D" }
+    {
+      "date": "04/02",
+      "client": "L.I.Partners",
+      "objet": "Refonte site web",
+      "montant": "8 400€",
+      "statut": "En attente",
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=ofb4adRdb8NcR0UMREjpTtAkyfaRlDlCi6BYpaBff8YDFHCcdwZh4n%2B4Nt8SuCht1S2I%2BYOSMrNrgFimwhsTAqow5gEnMHeyjedSRPcyAm%2Bcj9ALF17xUYc4--%2F3eQr5e6QT9wf%2BMI--hzs8nx%2FmE11%2FzRXclBLcjA%3D%3D"
+    },
+    {
+      "date": "04/02",
+      "client": "L.I.Partners",
+      "objet": "Refonte site web",
+      "montant": "8 400€",
+      "statut": "En attente",
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=TEL%2Bcls9lXjJGjREANlVYVGPGXaA1S2zcdlqrg3d%2BPAhF29h1ncaJsOURlPAmRK9mK95EPxmHVww3kLE%2FkpFs7mq%2BN0nVMjHXf%2BbeDOfURpZLzhzLqP5Bgjp--pjk9z1slPL838Qwb--HNLDuYEShsDVuMMZdfMLpQ%3D%3D"
+    },
+    {
+      "date": "04/02",
+      "client": "L.I.Partners",
+      "objet": "Refonte site web",
+      "montant": "8 400€",
+      "statut": "En attente",
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=nACIdIHZmzTlbkc2pKGJU1qGmoys1JK6w9P1LS5cxzMl5%2FleboRua9Kpsxic9Z65LIDhOSlGI3UsyBUXK0CPrAT2iS3ybjKTsRFvPznRB8NuVSAlmI8xBzri--3bCjFd5835ACcEEL--gVolaLE1mfgfMQpGJA619w%3D%3D"
+    },
+    {
+      "date": "04/02",
+      "client": "L.I.Partners",
+      "objet": "Refonte site web",
+      "montant": "7 800€",
+      "statut": "En attente",
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=R%2BcOW7FzSo%2B8LeA1iQiTcq32EBmF1FR5XtoH9PnN3boXSN0NdneunhhYDCUqo01RSWsGsYngnSQnIVBZxpQ1vdPeeZe6bY10C%2ByaKwvq4fg004QBnv0QQvFX--DQrwi08%2Bk6yjlWVr--MgD2hW7%2F%2F5qlZWSAmJ5EiQ%3D%3D"
+    },
+    {
+      "date": "30/01",
+      "client": "Entretien Zen",
+      "objet": "Site Internet 3.0",
+      "montant": "2 000€",
+      "statut": "En attente",
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=WMf0QL4HpO5sLOuSrXxQ%2BMltQ6MLkXf5%2Bt1Ks6I9FAibIklEwfZFXsGufskpYEAgvXHUkwWGc8mTRwojaUPz58E0CBYb6y3qqaKvUxdWGALs67u4NDmB2TOk--p1f6AZ2K%2FOhcZOGj--YrRGOh4Lpw0yK9kbxwiYwQ%3D%3D"
+    },
+    {
+      "date": "27/01",
+      "client": "Habitat Multi Services",
+      "objet": "Site vitrine",
+      "montant": "3 000€",
+      "statut": "Accepte",
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=72mMPUxPynHBnF35uabEt7T14MzWzJtJzwcneU8bC9gZ1HwOJsT1WSvfBx6rB4PStG1iqHRhbAalcNErdDfV3pG%2BGTVnRhl%2F7s5F88YBqThJVv51ACjY%2FCsI--rtVeA0cJMVJRXoUV--Vy1GUOVQMfrkVg%2BIo9Td6A%3D%3D"
+    },
+    {
+      "date": "08/01",
+      "client": "FIDOLUX",
+      "objet": "Portail Client",
+      "montant": "9 700€",
+      "statut": "En attente",
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=Alm%2Fl%2FcKCr%2Bgxs7SQJ3CZQvO8yUPYNdzTlhu3D6%2F6OGDZkSSelSVrzDgmQuycD9r3fF2Ro7BbV4CNFmqHbMFwXRBnxWCl%2BvqtcsuAc3dBTjJQIcKI063uyU3--0El5XvMsx3e4ylug--0fxzIKG6UTbq3pE%2FF8jCnQ%3D%3D"
+    }
   ],
   "factures": [
-    { "date": "27/01/2026", "client": "Habitat Multi Services", "objet": "Site vitrine", "montant": "3 000€", "statut": "Payee", "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=0Qee4cbI1LqtbpEiVo5WudplXI22j5u%2FY7bezcje0QK9MQU8MUbCqGM%2BDPIJAZ3JBrhT%2B73DEW3BWg%3D%3D--NtnuU9Jb%2BPt0zSY0--YqSkN1K3eug2RGaVrM6CUg%3D%3D" }
+    {
+      "date": "27/01/2026",
+      "client": "Habitat Multi Services",
+      "objet": "Site vitrine",
+      "montant": "3 000€",
+      "statut": "Payee",
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=0Qee4cbI1LqtbpEiVo5WudplXI22j5u%2FY7bezcje0QK9MQU8MUbCqGM%2BDPIJAZ3JBrhT%2B73DEW3BWg%3D%3D--NtnuU9Jb%2BPt0zSY0--YqSkN1K3eug2RGaVrM6CUg%3D%3D"
+    }
   ],
   "devis_kpis": {
-    "en_attente": { "count": 5, "montant": "36 400€ potentiels" },
-    "acceptes": { "count": 1, "montant": "3 000€" },
-    "factures_payees": { "count": 1, "montant": "3 000€ encaisses" }
+    "en_attente": {
+      "count": 5,
+      "montant": "36 400€ potentiels"
+    },
+    "acceptes": {
+      "count": 1,
+      "montant": "3 000€"
+    },
+    "factures_payees": {
+      "count": 1,
+      "montant": "3 000€ encaisses"
+    }
   },
   "finances": {
-    "ca_janvier": { "montant": "3 000€", "detail": "1 facture payee" },
-    "ca_fevrier": { "montant": "0€", "detail": "en cours" },
+    "ca_janvier": {
+      "montant": "3 000€",
+      "detail": "1 facture payee"
+    },
+    "ca_fevrier": {
+      "montant": "0€",
+      "detail": "en cours"
+    },
     "total_2026": "3 000€",
-    "devis_attente": { "montant": "36 400€", "detail": "5 devis pending" },
+    "devis_attente": {
+      "montant": "36 400€",
+      "detail": "5 devis pending"
+    },
     "ca_mensuel_chart": [
-      { "mois": "Jan", "montant": 3000, "label": "3k" },
-      { "mois": "Fev", "montant": 0, "label": "0" },
-      { "mois": "Mar", "montant": null, "label": "-" },
-      { "mois": "Avr", "montant": null, "label": "-" },
-      { "mois": "Mai", "montant": null, "label": "-" },
-      { "mois": "Jun", "montant": null, "label": "-" },
-      { "mois": "Jul", "montant": null, "label": "-" },
-      { "mois": "Aou", "montant": null, "label": "-" },
-      { "mois": "Sep", "montant": null, "label": "-" },
-      { "mois": "Oct", "montant": null, "label": "-" },
-      { "mois": "Nov", "montant": null, "label": "-" },
-      { "mois": "Dec", "montant": null, "label": "-" }
+      {
+        "mois": "Jan",
+        "montant": 3000,
+        "label": "3k"
+      },
+      {
+        "mois": "Fev",
+        "montant": 0,
+        "label": "0"
+      },
+      {
+        "mois": "Mar",
+        "montant": null,
+        "label": "-"
+      },
+      {
+        "mois": "Avr",
+        "montant": null,
+        "label": "-"
+      },
+      {
+        "mois": "Mai",
+        "montant": null,
+        "label": "-"
+      },
+      {
+        "mois": "Jun",
+        "montant": null,
+        "label": "-"
+      },
+      {
+        "mois": "Jul",
+        "montant": null,
+        "label": "-"
+      },
+      {
+        "mois": "Aou",
+        "montant": null,
+        "label": "-"
+      },
+      {
+        "mois": "Sep",
+        "montant": null,
+        "label": "-"
+      },
+      {
+        "mois": "Oct",
+        "montant": null,
+        "label": "-"
+      },
+      {
+        "mois": "Nov",
+        "montant": null,
+        "label": "-"
+      },
+      {
+        "mois": "Dec",
+        "montant": null,
+        "label": "-"
+      }
     ]
   },
   "abonnements": [
-    { "outil": "Hostinger", "cout": "~10€", "categorie": "Infrastructure", "notes": "Hebergement sites clients", "badge_color": "blue" },
-    { "outil": "Brevo", "cout": "Gratuit", "categorie": "Marketing", "notes": "Plan gratuit, newsletters", "badge_color": "green" },
-    { "outil": "Pennylane", "cout": "?", "categorie": "Comptabilite", "notes": "Devis + factures", "badge_color": "orange" },
-    { "outil": "Cloudflare", "cout": "Gratuit", "categorie": "Infrastructure", "notes": "DNS + domaines", "badge_color": "blue" },
-    { "outil": "Anthropic / OpenAI", "cout": "~30€", "categorie": "Outils IA", "notes": "APIs", "badge_color": "gray" },
-    { "outil": "Clawdbot", "cout": "Gratuit", "categorie": "Outils IA", "notes": "Assistante Claudia", "badge_color": "gray" },
-    { "outil": "Figma ?", "cout": "?", "categorie": "Design", "notes": "A ajouter", "badge_color": "gray", "placeholder": true },
-    { "outil": "Telephone pro ?", "cout": "?", "categorie": "Telecom", "notes": "A ajouter", "badge_color": "gray", "placeholder": true },
-    { "outil": "RC Pro / Assurance ?", "cout": "?", "categorie": "Assurance", "notes": "A ajouter", "badge_color": "gray", "placeholder": true }
+    {
+      "outil": "Hostinger",
+      "cout": "~10€",
+      "categorie": "Infrastructure",
+      "notes": "Hebergement sites clients",
+      "badge_color": "blue"
+    },
+    {
+      "outil": "Brevo",
+      "cout": "Gratuit",
+      "categorie": "Marketing",
+      "notes": "Plan gratuit, newsletters",
+      "badge_color": "green"
+    },
+    {
+      "outil": "Pennylane",
+      "cout": "?",
+      "categorie": "Comptabilite",
+      "notes": "Devis + factures",
+      "badge_color": "orange"
+    },
+    {
+      "outil": "Cloudflare",
+      "cout": "Gratuit",
+      "categorie": "Infrastructure",
+      "notes": "DNS + domaines",
+      "badge_color": "blue"
+    },
+    {
+      "outil": "Anthropic / OpenAI",
+      "cout": "~30€",
+      "categorie": "Outils IA",
+      "notes": "APIs",
+      "badge_color": "gray"
+    },
+    {
+      "outil": "Clawdbot",
+      "cout": "Gratuit",
+      "categorie": "Outils IA",
+      "notes": "Assistante Claudia",
+      "badge_color": "gray"
+    },
+    {
+      "outil": "Figma ?",
+      "cout": "?",
+      "categorie": "Design",
+      "notes": "A ajouter",
+      "badge_color": "gray",
+      "placeholder": true
+    },
+    {
+      "outil": "Telephone pro ?",
+      "cout": "?",
+      "categorie": "Telecom",
+      "notes": "A ajouter",
+      "badge_color": "gray",
+      "placeholder": true
+    },
+    {
+      "outil": "RC Pro / Assurance ?",
+      "cout": "?",
+      "categorie": "Assurance",
+      "notes": "A ajouter",
+      "badge_color": "gray",
+      "placeholder": true
+    }
   ],
   "prospection": {
     "prospects_a_contacter": 71,
@@ -152,175 +619,1543 @@
     "taux_conversion": "--",
     "rdv_obtenus": 0,
     "objectifs": {
-      "appels": { "current": 0, "goal": 50 },
-      "rdv": { "current": 0, "goal": 5 },
-      "devis": { "current": 0, "goal": 3 }
+      "appels": {
+        "current": 0,
+        "goal": 50
+      },
+      "rdv": {
+        "current": 0,
+        "goal": 5
+      },
+      "devis": {
+        "current": 0,
+        "goal": 3
+      }
     },
     "zones": [
-      { "zone": "Luxembourg", "prospects": "~20", "secteur": "Fiduciaires, cabinets" },
-      { "zone": "Alsace / Moselle", "prospects": "~40", "secteur": "BTP, industrie" },
-      { "zone": "Ile-de-France", "prospects": "~10", "secteur": "Services, PME" }
+      {
+        "zone": "Luxembourg",
+        "prospects": "~20",
+        "secteur": "Fiduciaires, cabinets"
+      },
+      {
+        "zone": "Alsace / Moselle",
+        "prospects": "~40",
+        "secteur": "BTP, industrie"
+      },
+      {
+        "zone": "Ile-de-France",
+        "prospects": "~10",
+        "secteur": "Services, PME"
+      }
     ]
   },
   "prospects": [
-    { "entreprise": "BATITECH", "contact": "Mehmood Khalid (Président)", "etape": "🔄 À rappeler" },
-    { "entreprise": "BSD RENOV", "contact": "David Kamoun (Président)", "etape": "❌ Pas intéressé" },
-    { "entreprise": "CREA", "contact": "Pierre Boyet (via BOYET INVEST)", "etape": "🎯 Nouveau" },
-    { "entreprise": "OLD", "contact": "N/A", "etape": "🎯 Nouveau" },
-    { "entreprise": "Global Compta Services", "contact": "À identifier", "etape": "❌ Pas intéressé" },
-    { "entreprise": "Genimmo", "contact": "Mme Perreira (Responsable)", "etape": "🔄 À rappeler" },
-    { "entreprise": "Agigest", "contact": "Paulo Madureira (Administrateur délégué)", "etape": "🎯 Nouveau" },
-    { "entreprise": "ECOFI", "contact": "Virginie Baude (Co-gérante)", "etape": "❌ Pas intéressé" },
-    { "entreprise": "ICB Ingénieurs Conseils en Bâtiments", "contact": "Grégory Colinet & Pascal Cravatte (Gérants)", "etape": "📧 Mail envoyé" },
-    { "entreprise": "Efitax Expertises", "contact": "Stéphane Créer (Fondateur)", "etape": "❌ Pas intéressé" },
-    { "entreprise": "TR-Engineering", "contact": "Jean-Jacques Rauchs (Administrateur-délégué)", "etape": "🎯 Nouveau" },
-    { "entreprise": "CDBgest", "contact": "Gérante (à identifier)", "etape": "🎯 Nouveau" },
-    { "entreprise": "Fiduciaire Luxpremium", "contact": "Laurent Maraschin (Fondateur)", "etape": "🎯 Nouveau" },
-    { "entreprise": "SCRM Avocats", "contact": "Alexandre Chateaux (Associé)", "etape": "🎯 Nouveau" },
-    { "entreprise": "GSImmo Luxembourg", "contact": "À identifier", "etape": "🎯 Nouveau" },
-    { "entreprise": "LBO Fiduciaire", "contact": "À identifier", "etape": "🎯 Nouveau" },
-    { "entreprise": "Schneider Linster Fiduciaire", "contact": "Edouard Schneider (Gérant)", "etape": "🎯 Nouveau" },
-    { "entreprise": "RIS", "contact": "Luc Mertes & Paulo Simoes (Directeurs)", "etape": "🎯 Nouveau" },
-    { "entreprise": "GSI Immobilier", "contact": "Jérôme Masciocchi (Gestionnaire)", "etape": "🎯 Nouveau" },
-    { "entreprise": "Adam & Bleser Avocats", "contact": "Romain Adam & Claude Bleser (Partners)", "etape": "🎯 Nouveau" },
-    { "entreprise": "Cabexco", "contact": "Olivier Murru (Gérant)", "etape": "🎯 Nouveau" },
-    { "entreprise": "CHEDEVILLE", "contact": "Bruno Verlhac", "etape": "🎯 Nouveau" },
-    { "entreprise": "Ets Daniel Cuvelier", "contact": "Damien Disdier", "etape": "🎯 Nouveau" },
-    { "entreprise": "LA FOREZIENNE", "contact": "Pierre Lafaye", "etape": "🎯 Nouveau" },
-    { "entreprise": "LDS", "contact": "N/A", "etape": "🎯 Nouveau" },
-    { "entreprise": "COURTAIS", "contact": "Florent Courtais", "etape": "🎯 Nouveau" },
-    { "entreprise": "LA BRUXELLOISE", "contact": "Alain Bernard", "etape": "❌ Pas intéressé" },
-    { "entreprise": "CEKOVIC", "contact": "Stéphane, Jean-michel Cekovic", "etape": "🎯 À contacter" },
-    { "entreprise": "F2A", "contact": "Michael DE Oliveira", "etape": "🎯 À contacter" },
-    { "entreprise": "SPRINKLER CONCEPT MEDIS", "contact": "Kemal, Ramazan Yilmaz", "etape": "🎯 À contacter" },
-    { "entreprise": "SUZETTE", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "IMMOBILIERE EURO MOSELLE", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "RESOGAZ", "contact": "Antoine Moussalli", "etape": "🎯 À contacter" },
-    { "entreprise": "PIL POSE 68", "contact": "Baptiste Euvrard", "etape": "🎯 À contacter" },
-    { "entreprise": "SASSO SAS", "contact": "Eric, Henri Sasso", "etape": "🎯 À contacter" },
-    { "entreprise": "ENTREPRISE ALAIN BASTIEN", "contact": "Pierric Bastien", "etape": "🎯 À contacter" },
-    { "entreprise": "SARL LORRAINE ENDUIT", "contact": "Mahsuni Tansel", "etape": "🎯 À contacter" },
-    { "entreprise": "MLC CHAUFFAGES", "contact": "Lucas Martz", "etape": "🎯 À contacter" },
-    { "entreprise": "SNOTEK", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "LOGE IMMOBILIER", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "SARL GHIA", "contact": "Arnaud Mican", "etape": "🎯 À contacter" },
-    { "entreprise": "FPJ CONSEILS", "contact": "Julien, Francis Serge", "etape": "🎯 À contacter" },
-    { "entreprise": "GOBIN OLLA", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "GRUMBACH IMMOBILIER", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "AMS IMMOBILIER", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "RESTAURANT LES ETANGS", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "CEGIP", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "EKYMOS", "contact": "Ahmed El Yaakoubi", "etape": "🎯 À contacter" },
-    { "entreprise": "ATSIZ", "contact": "Yilmaz Atsiz", "etape": "🎯 À contacter" },
-    { "entreprise": "FRANCIS BURGUNDER", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "ESPACE WENDLING", "contact": "Michel Riess", "etape": "🎯 À contacter" },
-    { "entreprise": "ELECTRICITE STEUER", "contact": "Dominique, Georges, Andre Briand", "etape": "🎯 À contacter" },
-    { "entreprise": "JFP", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "SMI CONSTRUCTION", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "CONSTRUCTIONS HEMMERLE", "contact": "Mathieu Hemmerle", "etape": "🎯 À contacter" },
-    { "entreprise": "JMD GRILL", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "AZIZ SAHIN RAVALEMENT", "contact": "David Sahin", "etape": "🎯 À contacter" },
-    { "entreprise": "CABINET HUSSER STOCKI", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "SCHNEIDER INTERNATIONAL", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "LA PETITE CUILLERE", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "PIERRE ET CREATION", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "GMS TRYBATEC", "contact": "Lara Tryba", "etape": "🎯 À contacter" },
-    { "entreprise": "HOM IMMOBILIER", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "MAGYAR HABITAT", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "A & B CONSTRUCTION", "contact": "Nuno, Jorge Ferreira Alves", "etape": "🎯 À contacter" },
-    { "entreprise": "KINII", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "PIERRES & FILS", "contact": "Bertrand, Julien, Andre Croisille", "etape": "🎯 À contacter" },
-    { "entreprise": "ENTREPRISE BOONE FILS", "contact": "Sebastien Boone", "etape": "🎯 À contacter" },
-    { "entreprise": "ETS MEYER", "contact": "Christian Meyer", "etape": "🎯 À contacter" },
-    { "entreprise": "CERTEC CONCEPT", "contact": "Salvatore, Alexandre Grillo", "etape": "🎯 À contacter" },
-    { "entreprise": "MATHIS IMMEUBLES", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "ETS ELECTRICITE PINTO", "contact": "Sebastien Pinto", "etape": "🎯 À contacter" },
-    { "entreprise": "KRAFT", "contact": "Michel, Pierre Herter", "etape": "🎯 À contacter" },
-    { "entreprise": "MARCO CERULLI", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "PARELEC", "contact": "Stephane, Franck Kien", "etape": "🎯 À contacter" },
-    { "entreprise": "LE BOUCHE A OREILLE", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "CSOEC ELECTRICITE", "contact": "N/A", "etape": "🎯 À contacter" },
-    { "entreprise": "Tolerie Service", "contact": "(à trouver)", "etape": "🎯 À contacter" },
-    { "entreprise": "USINAGE ALSACE", "contact": "Vincent Ossola (CEO)", "etape": "🎯 À contacter" },
-    { "entreprise": "MT2Prod", "contact": "(à trouver)", "etape": "🎯 À contacter" },
-    { "entreprise": "Technotol (Groupe Subtran)", "contact": "(à trouver)", "etape": "🎯 À contacter" },
-    { "entreprise": "HSS Usinage", "contact": "Audrey Simon (Co-gérante)", "etape": "🎯 À contacter" },
-    { "entreprise": "Plexinox", "contact": "(à trouver)", "etape": "🎯 À contacter" },
-    { "entreprise": "MIE - Mécanique Industrielle de l Est", "contact": "(à trouver)", "etape": "🎯 À contacter" },
-    { "entreprise": "Ateliers de Clouange", "contact": "M. Dumont", "etape": "🎯 À contacter" },
-    { "entreprise": "SPR (Groupe)", "contact": "David ROMEO (PDG)", "etape": "🎯 À contacter" },
-    { "entreprise": "MÉCANIQUE INDUSTRIELLE DE L'EST (MIE)", "contact": "Thierry LALE (Gérant)", "etape": "🎯 À contacter" },
-    { "entreprise": "Techno Soud", "contact": "(à trouver)", "etape": "🎯 À contacter" },
-    { "entreprise": "LORRAINE METALLURGIE SERVICES", "contact": "Michel Jean SEVERINO", "etape": "🎯 À contacter" },
-    { "entreprise": "SAINT JEAN EMBALLAGES", "contact": "(à identifier)", "etape": "🎯 À contacter" },
-    { "entreprise": "EPROLOR", "contact": "Lionel GUIBERT (reprise familiale)", "etape": "🎯 À contacter" },
-    { "entreprise": "VERRISSIMA INDUSTRIE", "contact": "Jonathan METZ (Président)", "etape": "🎯 À contacter" },
-    { "entreprise": "CRISTAL LASER", "contact": "Dominique LUPINSKI (Président)", "etape": "🎯 À contacter" },
-    { "entreprise": "EMBALLAGES DIFFUSION", "contact": "Bruno PFYFFER D'ALTISHOFEN", "etape": "🎯 À contacter" },
-    { "entreprise": "PROCESS INDUSTRIES", "contact": "Valérie FERREUX / Yves-Marie LEFEVRE (Gérants)", "etape": "🎯 À contacter" },
-    { "entreprise": "HYDAC", "contact": "Alain BECHTEL (Gérant)", "etape": "🎯 À contacter" },
-    { "entreprise": "SITRAL INDUSTRIE", "contact": "Loïc VILCHEZ (PDG)", "etape": "🎯 À contacter" },
-    { "entreprise": "BACACIER EST", "contact": "(à identifier)", "etape": "🎯 À contacter" }
+    {
+      "entreprise": "DECORENOV",
+      "contact": "Jennifer Kemmat (Présidente)",
+      "telephone": "01 79 74 23 80",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "Vincennes",
+      "etape": "🔄 À rappeler",
+      "site_web": "https://www.decorenov-paris.fr",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "BATITECH",
+      "contact": "Mehmood Khalid (Président)",
+      "telephone": "06 52 96 73 31",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "Saint-Denis",
+      "etape": "🔄 À rappeler",
+      "site_web": "https://www.renovation-batitech.fr",
+      "linkedin": "https://fr.linkedin.com/in/khalid-mehmood-08084640"
+    },
+    {
+      "entreprise": "BSD RENOV",
+      "contact": "David Kamoun (Président)",
+      "telephone": "06 18 90 02 94",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "Montreuil",
+      "etape": "❌ Pas intéressé",
+      "site_web": "https://www.bsd-renov.com",
+      "linkedin": "https://www.linkedin.com/in/david-kamoun-481a391b6/"
+    },
+    {
+      "entreprise": "CREA",
+      "contact": "Pierre Boyet (via BOYET INVEST)",
+      "telephone": "01 86 22 25 55",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "Montrouge",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://crea-tce.fr/",
+      "linkedin": "https://www.linkedin.com/company/creatce"
+    },
+    {
+      "entreprise": "OLD",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 Nouveau",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "Global Compta Services",
+      "contact": "À identifier",
+      "telephone": "+352 26 30 55 53",
+      "email": "",
+      "secteur": "Comptable",
+      "ville": "Strassen",
+      "etape": "❌ Pas intéressé",
+      "site_web": "https://global-compta.com",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "Genimmo",
+      "contact": "Mme Perreira (Responsable)",
+      "telephone": "+352 511 971 1",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "Esch-sur-Alzette",
+      "etape": "🔄 À rappeler",
+      "site_web": "https://genimmo.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "Agigest",
+      "contact": "Paulo Madureira (Administrateur délégué)",
+      "telephone": "+352 288 456-1",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "Bertrange",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://agigest.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "ECOFI",
+      "contact": "Virginie Baude (Co-gérante)",
+      "telephone": "+352 30 59 66",
+      "email": "",
+      "secteur": "Comptable",
+      "ville": "Hagen",
+      "etape": "❌ Pas intéressé",
+      "site_web": "https://ecofi.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "ICB Ingénieurs Conseils en Bâtiments",
+      "contact": "Grégory Colinet & Pascal Cravatte (Gérants)",
+      "telephone": "+352 26 50 20 03",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "Rodange",
+      "etape": "📧 Mail envoyé",
+      "site_web": "https://icb.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "Efitax Expertises",
+      "contact": "Stéphane Créer (Fondateur)",
+      "telephone": "+352 28 80 07 62",
+      "email": "",
+      "secteur": "Comptable",
+      "ville": "Steinfort",
+      "etape": "❌ Pas intéressé",
+      "site_web": "https://efitax.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "TR-Engineering",
+      "contact": "Jean-Jacques Rauchs (Administrateur-délégué)",
+      "telephone": "+352 49 00 65-1",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "Luxembourg",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://tr-engineering.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "CDBgest",
+      "contact": "Gérante (à identifier)",
+      "telephone": "+352 28 80 28 80",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "Soleuvre",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://cdbgest.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "Fiduciaire Luxpremium",
+      "contact": "Laurent Maraschin (Fondateur)",
+      "telephone": "+352 44 01 23",
+      "email": "",
+      "secteur": "Comptable",
+      "ville": "Bertrange",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://fiduciaireluxpremium.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "SCRM Avocats",
+      "contact": "Alexandre Chateaux (Associé)",
+      "telephone": "+352 27 12 801",
+      "email": "",
+      "secteur": "",
+      "ville": "Luxembourg",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://scrm-avocats.com",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "GSImmo Luxembourg",
+      "contact": "À identifier",
+      "telephone": "+352 28 85 28 1",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "Luxembourg",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://gsimmo.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "LBO Fiduciaire",
+      "contact": "À identifier",
+      "telephone": "+352 20 40 07 60",
+      "email": "",
+      "secteur": "Comptable",
+      "ville": "Contern",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://lbofiduciaire.com",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "Schneider Linster Fiduciaire",
+      "contact": "Edouard Schneider (Gérant)",
+      "telephone": "+352 76 07 71 1",
+      "email": "",
+      "secteur": "Comptable",
+      "ville": "Niederanven",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://schneider-linster.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "RIS",
+      "contact": "Luc Mertes & Paulo Simoes (Directeurs)",
+      "telephone": "+352 28 32 25",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "Strassen",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://ris.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "GSI Immobilier",
+      "contact": "Jérôme Masciocchi (Gestionnaire)",
+      "telephone": "+352 26 53 11 15",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "Luxembourg",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://gsimmobilier.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "Adam & Bleser Avocats",
+      "contact": "Romain Adam & Claude Bleser (Partners)",
+      "telephone": "+352 47 24 24",
+      "email": "",
+      "secteur": "",
+      "ville": "Luxembourg",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://adam-bleser.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "Cabexco",
+      "contact": "Olivier Murru (Gérant)",
+      "telephone": "+352 31 18 89 1",
+      "email": "",
+      "secteur": "Comptable",
+      "ville": "Windhof",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://cabexco.lu",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "CHEDEVILLE",
+      "contact": "Bruno Verlhac",
+      "telephone": "01 64 90 19 09",
+      "email": "",
+      "secteur": "Alimentaire",
+      "ville": "Arpajon (91)",
+      "etape": "🎯 Nouveau",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "Ets Daniel Cuvelier",
+      "contact": "Damien Disdier",
+      "telephone": "03 28 63 58 01",
+      "email": "",
+      "secteur": "Alimentaire",
+      "ville": "Dunkerque (59)",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://www.cuveliersas.com",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "LA FOREZIENNE",
+      "contact": "Pierre Lafaye",
+      "telephone": "04 77 36 56 20",
+      "email": "",
+      "secteur": "Alimentaire",
+      "ville": "Andrézieux-Bouthéon (42)",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://www.la-forezienne.fr",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "LDS",
+      "contact": "",
+      "telephone": "02 40 70 16 19",
+      "email": "",
+      "secteur": "Alimentaire",
+      "ville": "Saint-Nazaire (44)",
+      "etape": "🎯 Nouveau",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "COURTAIS",
+      "contact": "Florent Courtais",
+      "telephone": "01 34 84 88 52",
+      "email": "",
+      "secteur": "Alimentaire",
+      "ville": "Le Perray-en-Yvelines (78)",
+      "etape": "🎯 Nouveau",
+      "site_web": "https://www.bonbon-foliz.com",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "LA BRUXELLOISE",
+      "contact": "Alain Bernard",
+      "telephone": "01 39 84 34 35",
+      "email": "",
+      "secteur": "Alimentaire",
+      "ville": "Deuil-la-Barre (95)",
+      "etape": "❌ Pas intéressé",
+      "site_web": "https://labruxelloise.fr",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "CEKOVIC",
+      "contact": "Stéphane, Jean-michel Cekovic",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "SAINT-BOINGT",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "F2A",
+      "contact": "Michael DE Oliveira",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "OBERNAI",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "SPRINKLER CONCEPT MEDIS",
+      "contact": "Kemal, Ramazan Yilmaz",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "SARREBOURG",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "SUZETTE",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Restaurant",
+      "ville": "NANCY",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "IMMOBILIERE EURO MOSELLE",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "MAIZIERES-LES-METZ",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "RESOGAZ",
+      "contact": "Antoine Moussalli",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "HOERDT",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "PIL POSE 68",
+      "contact": "Baptiste Euvrard",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "TAGOLSHEIM",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "SASSO SAS",
+      "contact": "Eric, Henri Sasso",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "SARREBOURG",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "ENTREPRISE ALAIN BASTIEN",
+      "contact": "Pierric Bastien",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "NEUVES-MAISONS",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "SARL LORRAINE ENDUIT",
+      "contact": "Mahsuni Tansel",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "LANEUVEVILLE-DEVANT-NANCY",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "MLC CHAUFFAGES",
+      "contact": "Lucas Martz",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "VALFF",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "SNOTEK",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "ASPACH-LE-BAS",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "LOGE IMMOBILIER",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "STRASBOURG",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "SARL GHIA",
+      "contact": "Arnaud Mican",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "BETTING",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "FPJ CONSEILS",
+      "contact": "Julien, Francis Serge",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "MOULINS-LES-METZ",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "GOBIN OLLA",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "HEILLECOURT",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "GRUMBACH IMMOBILIER",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "STRASBOURG",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "AMS IMMOBILIER",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "SAINT-AVOLD",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "RESTAURANT LES ETANGS",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Restaurant",
+      "ville": "MANOM",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "CEGIP",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "STRASBOURG",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "EKYMOS",
+      "contact": "Ahmed El Yaakoubi",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "HOENHEIM",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "ATSIZ",
+      "contact": "Yilmaz Atsiz",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "MULHOUSE",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "FRANCIS BURGUNDER",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "KRUTH",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "ESPACE WENDLING",
+      "contact": "Michel Riess",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "MERTZWILLER",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "ELECTRICITE STEUER",
+      "contact": "Dominique, Georges, Andre Briand",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "FORBACH",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "JFP",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Restaurant",
+      "ville": "METZ",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "SMI CONSTRUCTION",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "SAESSOLSHEIM",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "CONSTRUCTIONS HEMMERLE",
+      "contact": "Mathieu Hemmerle",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "BETSCHDORF",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "JMD GRILL",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Restaurant",
+      "ville": "METZ",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "AZIZ SAHIN RAVALEMENT",
+      "contact": "David Sahin",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "CHANTEHEUX",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "CABINET HUSSER STOCKI",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "STRASBOURG",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "SCHNEIDER INTERNATIONAL",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "VAL DE BRIEY",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "LA PETITE CUILLERE",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Restaurant",
+      "ville": "NANCY",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "PIERRE ET CREATION",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "METZ",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "GMS TRYBATEC",
+      "contact": "Lara Tryba",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "MERTZWILLER",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "HOM IMMOBILIER",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "WITTELSHEIM",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "MAGYAR HABITAT",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "SAINT-AVOLD",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "A & B CONSTRUCTION",
+      "contact": "Nuno, Jorge Ferreira Alves",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "YUTZ",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "KINII",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Restaurant",
+      "ville": "HORBOURG-WIHR",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "PIERRES & FILS",
+      "contact": "Bertrand, Julien, Andre Croisille",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "SEICHAMPS",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "ENTREPRISE BOONE FILS",
+      "contact": "Sebastien Boone",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "MALLELOY",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "ETS MEYER",
+      "contact": "Christian Meyer",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "HOENHEIM",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "CERTEC CONCEPT",
+      "contact": "Salvatore, Alexandre Grillo",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "SAINTE-CROIX-EN-PLAINE",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "MATHIS IMMEUBLES",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Immobilier",
+      "ville": "MONDELANGE",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "ETS ELECTRICITE PINTO",
+      "contact": "Sebastien Pinto",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "HAGONDANGE",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "KRAFT",
+      "contact": "Michel, Pierre Herter",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "FELLERING",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "MARCO CERULLI",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "SEREMANGE-ERZANGE",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "PARELEC",
+      "contact": "Stephane, Franck Kien",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "WALHEIM",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "LE BOUCHE A OREILLE",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "Restaurant",
+      "ville": "NANCY",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "CSOEC ELECTRICITE",
+      "contact": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "BTP",
+      "ville": "POMPEY",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "Tolerie Service",
+      "contact": "(à trouver)",
+      "telephone": "03 83 53 22 23",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "USINAGE ALSACE",
+      "contact": "Vincent Ossola (CEO)",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "ville": "Strasbourg",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": "https://www.linkedin.com/sales/lead/ACwAAAAxdwcByu4nrkYUNoiEZRerWRX6F5h1kDs"
+    },
+    {
+      "entreprise": "MT2Prod",
+      "contact": "(à trouver)",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "Technotol (Groupe Subtran)",
+      "contact": "(à trouver)",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "HSS Usinage",
+      "contact": "Audrey Simon (Co-gérante)",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "ville": "Berg (67320)",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": "https://www.linkedin.com/sales/lead/ACwAABwoidcBIdQIG4se4O3Y8GuSPDWaJ6GPHkY"
+    },
+    {
+      "entreprise": "Plexinox",
+      "contact": "(à trouver)",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "MIE - Mécanique Industrielle de l Est",
+      "contact": "(à trouver)",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "Ateliers de Clouange",
+      "contact": "M. Dumont",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "SPR (Groupe)",
+      "contact": "David ROMEO (PDG)",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "ville": "Mulhouse (68)",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": "https://www.linkedin.com/sales/lead/ACwAAAKa8qUBoMEUC81QAjdjKUwPGHJgSdp0Xmo"
+    },
+    {
+      "entreprise": "MÉCANIQUE INDUSTRIELLE DE L'EST (MIE)",
+      "contact": "Thierry LALE (Gérant)",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "ville": "Essey-lès-Nancy (54)",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": "https://www.linkedin.com/sales/lead/ACwAACi-_1sByD7Xp9yxc0UqPyEKV8r7jI_WizE"
+    },
+    {
+      "entreprise": "Techno Soud",
+      "contact": "(à trouver)",
+      "telephone": "03 83 20 78 84",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "LORRAINE METALLURGIE SERVICES",
+      "contact": "Michel Jean SEVERINO",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "SAINT JEAN EMBALLAGES",
+      "contact": "(à identifier)",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "EPROLOR",
+      "contact": "Lionel GUIBERT (reprise familiale)",
+      "telephone": "03 83 75 58 80",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "VERRISSIMA INDUSTRIE",
+      "contact": "Jonathan METZ (Président)",
+      "telephone": "03 87 96 80 55",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "CRISTAL LASER",
+      "contact": "Dominique LUPINSKI (Président)",
+      "telephone": "03 83 47 01 01",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "EMBALLAGES DIFFUSION",
+      "contact": "Bruno PFYFFER D'ALTISHOFEN",
+      "telephone": "03 83 75 70 17",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "PROCESS INDUSTRIES",
+      "contact": "Valérie FERREUX / Yves-Marie LEFEVRE (Gérants)",
+      "telephone": "03 83 65 55 61",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "HYDAC",
+      "contact": "Alain BECHTEL (Gérant)",
+      "telephone": "03 87 29 26 00",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "SITRAL INDUSTRIE",
+      "contact": "Loïc VILCHEZ (PDG)",
+      "telephone": "03 87 29 21 61",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    },
+    {
+      "entreprise": "BACACIER EST",
+      "contact": "(à identifier)",
+      "telephone": "03 82 44 04 08",
+      "email": "",
+      "secteur": "",
+      "ville": "",
+      "etape": "🎯 À contacter",
+      "site_web": "",
+      "linkedin": ""
+    }
   ],
   "taches": [
-    { "titre": "Habitat Multi-Service", "desc": "Finaliser maquette Figma, puis créer site WordPress", "badge": "Site Web", "badge_color": "blue", "colonne": "a_faire" },
-    { "titre": "Relancer M.Bolchert JDA", "desc": "Devis en attente — 2 500€", "badge": "Relance", "badge_color": "orange", "colonne": "a_faire" },
-    { "titre": "Relancer Sara Cleaning", "desc": "Devis en attente — 4 000€", "badge": "Relance", "badge_color": "orange", "colonne": "a_faire" },
-    { "titre": "Point offres envoyées", "desc": "7 offres en attente — Total : 26 438€", "badge": "Pipeline", "badge_color": "blue", "colonne": "a_faire" },
-    { "titre": "Configurer API Pixel Space", "desc": "Installer sur Fidolux et Richard Wagner Museum", "badge": "Technique", "badge_color": "blue", "colonne": "a_faire" },
-    { "titre": "Dernière Dispo — Consulting", "desc": "Consulting gratuit : suivi croissance, objectif 1000 lieux", "badge": "Consulting", "badge_color": "orange", "colonne": "en_cours" },
-    { "titre": "Plaza Tango Festival 2026", "desc": "Organisation festival — 24-26 avril", "badge": "Événement", "badge_color": "orange", "colonne": "en_cours" },
-    { "titre": "Check hebdo sites WP", "desc": "Vérification hebdomadaire de tous les sites WordPress", "badge": "Maintenance", "badge_color": "orange", "colonne": "en_cours" },
-    { "titre": "Dernière Dispo V2", "desc": "Site livré et en ligne", "badge": "Livré", "badge_color": "green", "colonne": "termine" },
-    { "titre": "CRW Lyon", "desc": "Projet livré au client", "badge": "Livré", "badge_color": "green", "colonne": "termine" },
-    { "titre": "Nettoyage taxonomie villes", "desc": "Taxonomie villes Dernière Dispo nettoyée", "badge": "Terminé", "badge_color": "green", "colonne": "termine" },
-    { "titre": "Dashboard Dernière Dispo", "desc": "Dashboard de suivi en ligne et fonctionnel", "badge": "Terminé", "badge_color": "green", "colonne": "termine" },
-    { "titre": "Migration CRM Notion", "desc": "Migration vers fichiers Claudia terminée", "badge": "Terminé", "badge_color": "green", "colonne": "termine" }
+    {
+      "titre": "Habitat Multi-Service",
+      "desc": "Finaliser maquette Figma, puis créer site WordPress",
+      "badge": "Site Web",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Relancer M.Bolchert JDA",
+      "desc": "Devis en attente — 2 500€",
+      "badge": "Relance",
+      "badge_color": "orange",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Relancer Sara Cleaning",
+      "desc": "Devis en attente — 4 000€",
+      "badge": "Relance",
+      "badge_color": "orange",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Point offres envoyées",
+      "desc": "7 offres en attente — Total : 26 438€",
+      "badge": "Pipeline",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Configurer API Pixel Space",
+      "desc": "Installer sur Fidolux et Richard Wagner Museum",
+      "badge": "Technique",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Dernière Dispo — Consulting",
+      "desc": "Consulting gratuit : suivi croissance, objectif 1000 lieux",
+      "badge": "Consulting",
+      "badge_color": "orange",
+      "colonne": "en_cours"
+    },
+    {
+      "titre": "Plaza Tango Festival 2026",
+      "desc": "Organisation festival — 24-26 avril",
+      "badge": "Événement",
+      "badge_color": "orange",
+      "colonne": "en_cours"
+    },
+    {
+      "titre": "Check hebdo sites WP",
+      "desc": "Vérification hebdomadaire de tous les sites WordPress",
+      "badge": "Maintenance",
+      "badge_color": "orange",
+      "colonne": "en_cours"
+    },
+    {
+      "titre": "Dernière Dispo V2",
+      "desc": "Site livré et en ligne",
+      "badge": "Livré",
+      "badge_color": "green",
+      "colonne": "termine"
+    },
+    {
+      "titre": "CRW Lyon",
+      "desc": "Projet livré au client",
+      "badge": "Livré",
+      "badge_color": "green",
+      "colonne": "termine"
+    },
+    {
+      "titre": "Nettoyage taxonomie villes",
+      "desc": "Taxonomie villes Dernière Dispo nettoyée",
+      "badge": "Terminé",
+      "badge_color": "green",
+      "colonne": "termine"
+    },
+    {
+      "titre": "Dashboard Dernière Dispo",
+      "desc": "Dashboard de suivi en ligne et fonctionnel",
+      "badge": "Terminé",
+      "badge_color": "green",
+      "colonne": "termine"
+    },
+    {
+      "titre": "Migration CRM Notion",
+      "desc": "Migration vers fichiers Claudia terminée",
+      "badge": "Terminé",
+      "badge_color": "green",
+      "colonne": "termine"
+    }
   ],
   "sites": [
-    { "url": "pixel-drop.com", "full_url": "https://pixel-drop.com", "maintenance": "Active", "fin_contrat": "04/10/2030", "maj_dispo": "3", "api": true, "type": "wordpress" },
-    { "url": "festival.plazatango.com", "full_url": "https://festival.plazatango.com", "maintenance": "Active", "fin_contrat": "04/01/2030", "maj_dispo": "5", "api": true, "type": "wordpress" },
-    { "url": "etheos.fr", "full_url": "https://etheos.fr", "maintenance": "Active", "fin_contrat": "01/12/2026", "maj_dispo": "3", "api": true, "type": "wordpress" },
-    { "url": "pepitesdesthetique.com", "full_url": "https://pepitesdesthetique.com", "maintenance": "Active", "fin_contrat": "12/10/2026", "maj_dispo": "6", "api": true, "type": "wordpress" },
-    { "url": "richard-wagner-web-museum.com", "full_url": "https://richard-wagner-web-museum.com", "maintenance": "Active", "fin_contrat": "14/09/2026", "maj_dispo": "?", "api": false, "type": "wordpress" },
-    { "url": "lxbconstruction.com", "full_url": "https://lxbconstruction.com", "maintenance": "Active", "fin_contrat": "04/10/2026", "maj_dispo": "3", "api": true, "type": "wordpress" },
-    { "url": "dernieredispo.com", "full_url": "https://dernieredispo.com", "maintenance": "Active", "fin_contrat": "31/07/2026", "maj_dispo": "2", "api": true, "type": "wordpress" },
-    { "url": "fidolux.lu", "full_url": "https://fidolux.lu", "maintenance": "Active", "fin_contrat": "31/05/2026", "maj_dispo": "?", "api": false, "type": "wordpress" },
-    { "url": "lxb-estate.com", "full_url": "https://lxb-estate.com", "maintenance": "Active", "fin_contrat": "30/04/2026", "maj_dispo": "3", "api": true, "type": "wordpress" },
-    { "url": "cothidance92.fr", "full_url": "https://cothidance92.fr", "maintenance": "Active", "fin_contrat": "04/04/2026", "maj_dispo": "3", "api": true, "type": "wordpress" },
-    { "url": "collectivitesterritoriales.fr", "full_url": "https://collectivitesterritoriales.fr", "maintenance": "Active", "fin_contrat": "09/04/2026", "maj_dispo": "4", "api": true, "type": "wordpress" },
-    { "url": "black-trombone.fr", "full_url": "https://www.black-trombone.fr", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "7", "api": true, "type": "wordpress" },
-    { "url": "bernard-emmanuel.com", "full_url": "https://bernard-emmanuel.com", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "0", "api": true, "type": "wordpress" },
-    { "url": "habitatmultiservices.lu", "full_url": "https://habitatmultiservices.lu", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "3", "api": true, "type": "wordpress" },
-    { "url": "au-cerf.com", "full_url": "https://au-cerf.com", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "9", "api": true, "type": "wordpress" },
-    { "url": "taimpel.com", "full_url": "https://www.taimpel.com", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "7", "api": true, "type": "wordpress" },
-    { "url": "licorne-invest.com", "full_url": "https://licorne-invest.com", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "?", "api": true, "type": "wordpress" },
-    { "url": "baptistebeloeil.com", "full_url": "https://baptistebeloeil.com", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "12", "api": true, "type": "wordpress" },
-    { "url": "babeta-lunchbox.com", "full_url": "https://babeta-lunchbox.com", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "?", "api": false, "type": "wordpress" },
-    { "url": "cine-loges.fr", "full_url": "https://cine-loges.fr", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "?", "api": false, "type": "wordpress" },
-    { "url": "awayexpedition.com", "full_url": "https://awayexpedition.com", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "?", "api": false, "type": "wordpress" },
-    { "url": "vtcswiss.com", "full_url": "https://vtcswiss.com", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "?", "api": false, "type": "wordpress" },
-    { "url": "makephysio.ch", "full_url": "https://makephysio.ch", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "?", "api": false, "type": "wordpress" },
-    { "url": "tkhor-avocat.fr", "full_url": "https://tkhor-avocat.fr", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "?", "api": false, "type": "wordpress" },
-    { "url": "latoastfamily.fr", "full_url": "https://latoastfamily.fr", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "?", "api": false, "type": "wordpress" },
-    { "url": "hollymeals.com", "full_url": "https://hollymeals.com", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "?", "api": false, "type": "wordpress" },
-    { "url": "grandbattementdailes.com", "full_url": "https://grandbattementdailes.com", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "?", "api": false, "type": "wordpress" },
-    { "url": "jab-prod.com", "full_url": "https://jab-prod.com", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "?", "api": false, "type": "wordpress" },
-    { "url": "redactioneliteseo.fr", "full_url": "https://redactioneliteseo.fr", "maintenance": "Inactive", "fin_contrat": "--", "maj_dispo": "8", "api": true, "type": "wordpress" },
-    { "url": "crw-lyon.fr", "full_url": "https://crw-lyon.fr", "maintenance": "HTML statique", "fin_contrat": "--", "maj_dispo": "--", "api": false, "type": "html" },
-    { "url": "pixel-drop.com/calculateur", "full_url": "https://pixel-drop.com/calculateur/", "maintenance": "HTML statique", "fin_contrat": "--", "maj_dispo": "--", "api": false, "type": "html" }
+    {
+      "url": "pixel-drop.com",
+      "full_url": "https://pixel-drop.com",
+      "maintenance": "Active",
+      "fin_contrat": "04/10/2030",
+      "maj_dispo": "3",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "festival.plazatango.com",
+      "full_url": "https://festival.plazatango.com",
+      "maintenance": "Active",
+      "fin_contrat": "04/01/2030",
+      "maj_dispo": "5",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "etheos.fr",
+      "full_url": "https://etheos.fr",
+      "maintenance": "Active",
+      "fin_contrat": "01/12/2026",
+      "maj_dispo": "3",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "pepitesdesthetique.com",
+      "full_url": "https://pepitesdesthetique.com",
+      "maintenance": "Active",
+      "fin_contrat": "12/10/2026",
+      "maj_dispo": "6",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "richard-wagner-web-museum.com",
+      "full_url": "https://richard-wagner-web-museum.com",
+      "maintenance": "Active",
+      "fin_contrat": "14/09/2026",
+      "maj_dispo": "?",
+      "api": false,
+      "type": "wordpress"
+    },
+    {
+      "url": "lxbconstruction.com",
+      "full_url": "https://lxbconstruction.com",
+      "maintenance": "Active",
+      "fin_contrat": "04/10/2026",
+      "maj_dispo": "3",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "dernieredispo.com",
+      "full_url": "https://dernieredispo.com",
+      "maintenance": "Active",
+      "fin_contrat": "31/07/2026",
+      "maj_dispo": "2",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "fidolux.lu",
+      "full_url": "https://fidolux.lu",
+      "maintenance": "Active",
+      "fin_contrat": "31/05/2026",
+      "maj_dispo": "?",
+      "api": false,
+      "type": "wordpress"
+    },
+    {
+      "url": "lxb-estate.com",
+      "full_url": "https://lxb-estate.com",
+      "maintenance": "Active",
+      "fin_contrat": "30/04/2026",
+      "maj_dispo": "3",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "cothidance92.fr",
+      "full_url": "https://cothidance92.fr",
+      "maintenance": "Active",
+      "fin_contrat": "04/04/2026",
+      "maj_dispo": "3",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "collectivitesterritoriales.fr",
+      "full_url": "https://collectivitesterritoriales.fr",
+      "maintenance": "Active",
+      "fin_contrat": "09/04/2026",
+      "maj_dispo": "4",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "black-trombone.fr",
+      "full_url": "https://www.black-trombone.fr",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "7",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "bernard-emmanuel.com",
+      "full_url": "https://bernard-emmanuel.com",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "0",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "habitatmultiservices.lu",
+      "full_url": "https://habitatmultiservices.lu",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "3",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "au-cerf.com",
+      "full_url": "https://au-cerf.com",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "9",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "taimpel.com",
+      "full_url": "https://www.taimpel.com",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "7",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "licorne-invest.com",
+      "full_url": "https://licorne-invest.com",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "?",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "baptistebeloeil.com",
+      "full_url": "https://baptistebeloeil.com",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "12",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "babeta-lunchbox.com",
+      "full_url": "https://babeta-lunchbox.com",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "?",
+      "api": false,
+      "type": "wordpress"
+    },
+    {
+      "url": "cine-loges.fr",
+      "full_url": "https://cine-loges.fr",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "?",
+      "api": false,
+      "type": "wordpress"
+    },
+    {
+      "url": "awayexpedition.com",
+      "full_url": "https://awayexpedition.com",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "?",
+      "api": false,
+      "type": "wordpress"
+    },
+    {
+      "url": "vtcswiss.com",
+      "full_url": "https://vtcswiss.com",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "?",
+      "api": false,
+      "type": "wordpress"
+    },
+    {
+      "url": "makephysio.ch",
+      "full_url": "https://makephysio.ch",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "?",
+      "api": false,
+      "type": "wordpress"
+    },
+    {
+      "url": "tkhor-avocat.fr",
+      "full_url": "https://tkhor-avocat.fr",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "?",
+      "api": false,
+      "type": "wordpress"
+    },
+    {
+      "url": "latoastfamily.fr",
+      "full_url": "https://latoastfamily.fr",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "?",
+      "api": false,
+      "type": "wordpress"
+    },
+    {
+      "url": "hollymeals.com",
+      "full_url": "https://hollymeals.com",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "?",
+      "api": false,
+      "type": "wordpress"
+    },
+    {
+      "url": "grandbattementdailes.com",
+      "full_url": "https://grandbattementdailes.com",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "?",
+      "api": false,
+      "type": "wordpress"
+    },
+    {
+      "url": "jab-prod.com",
+      "full_url": "https://jab-prod.com",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "?",
+      "api": false,
+      "type": "wordpress"
+    },
+    {
+      "url": "redactioneliteseo.fr",
+      "full_url": "https://redactioneliteseo.fr",
+      "maintenance": "Inactive",
+      "fin_contrat": "--",
+      "maj_dispo": "8",
+      "api": true,
+      "type": "wordpress"
+    },
+    {
+      "url": "crw-lyon.fr",
+      "full_url": "https://crw-lyon.fr",
+      "maintenance": "HTML statique",
+      "fin_contrat": "--",
+      "maj_dispo": "--",
+      "api": false,
+      "type": "html"
+    },
+    {
+      "url": "pixel-drop.com/calculateur",
+      "full_url": "https://pixel-drop.com/calculateur/",
+      "maintenance": "HTML statique",
+      "fin_contrat": "--",
+      "maj_dispo": "--",
+      "api": false,
+      "type": "html"
+    }
   ],
   "dash_projets_en_cours": [
-    { "projet": "Maquette Habitat", "client": "Habitat Multi-Service", "statut": "En retard" },
-    { "projet": "Plaza Tango Festival 2026", "client": "Plaza Tango", "statut": "En cours" },
-    { "projet": "Consulting Derniere Dispo", "client": "Yoann", "statut": "En cours" }
+    {
+      "projet": "Maquette Habitat",
+      "client": "Habitat Multi-Service",
+      "statut": "En retard"
+    },
+    {
+      "projet": "Plaza Tango Festival 2026",
+      "client": "Plaza Tango",
+      "statut": "En cours"
+    },
+    {
+      "projet": "Consulting Derniere Dispo",
+      "client": "Yoann",
+      "statut": "En cours"
+    }
   ],
   "dash_planning": [
-    { "heure": "09:00", "evenement": "Programme Plaza Tango a Papa" },
-    { "heure": "09:30", "evenement": "Devis impressions Plaza Tango" },
-    { "heure": "10:00", "evenement": "Check sites WordPress" },
-    { "heure": "10:30", "evenement": "Maquette Habitat (URGENT)" },
-    { "heure": "14:00", "evenement": "Newsletter Plaza Tango" },
-    { "heure": "14:30", "evenement": "Post Instagram Plaza Tango" }
+    {
+      "heure": "09:00",
+      "evenement": "Programme Plaza Tango a Papa"
+    },
+    {
+      "heure": "09:30",
+      "evenement": "Devis impressions Plaza Tango"
+    },
+    {
+      "heure": "10:00",
+      "evenement": "Check sites WordPress"
+    },
+    {
+      "heure": "10:30",
+      "evenement": "Maquette Habitat (URGENT)"
+    },
+    {
+      "heure": "14:00",
+      "evenement": "Newsletter Plaza Tango"
+    },
+    {
+      "heure": "14:30",
+      "evenement": "Post Instagram Plaza Tango"
+    }
   ]
 }
