@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Center - Pixel Drop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #3453BF;
+            --accent: #E77F74;
+            --bg: #F8F9FC;
+            --card-bg: #FFFFFF;
+            --text: #1a1a2e;
+            --text-light: #6b7280;
+            --border: #E5E7EB;
+            --sidebar-bg: #1a1a2e;
+            --sidebar-text: #e5e7eb;
+            --sidebar-hover: #2d2d44;
+            --sidebar-active: #3453BF;
+            --sidebar-width: 260px;
+            --sidebar-collapsed: 60px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            min-height: 100vh;
+            color: var(--text);
+            display: flex;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: var(--sidebar-width);
+            min-height: 100vh;
+            background: var(--sidebar-bg);
+            transition: width 0.3s ease;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .sidebar.collapsed {
+            width: var(--sidebar-collapsed);
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            min-height: 70px;
+        }
+
+        .sidebar-logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            white-space: nowrap;
+            overflow: hidden;
+            transition: opacity 0.2s ease;
+        }
+
+        .sidebar.collapsed .sidebar-logo {
+            opacity: 0;
+            width: 0;
+        }
+
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: var(--sidebar-text);
+            cursor: pointer;
+            font-size: 1.3rem;
+            padding: 8px;
+            border-radius: 8px;
+            transition: background 0.2s;
+            flex-shrink: 0;
+        }
+
+        .toggle-btn:hover {
+            background: var(--sidebar-hover);
+        }
+
+        .sidebar-nav {
+            flex: 1;
+            padding: 15px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 15px;
+            border-radius: 10px;
+            color: var(--sidebar-text);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .nav-item:hover {
+            background: var(--sidebar-hover);
+        }
+
+        .nav-item.active {
+            background: var(--sidebar-active);
+            color: white;
+        }
+
+        .nav-icon {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            width: 24px;
+            text-align: center;
+        }
+
+        .nav-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: opacity 0.2s ease;
+        }
+
+        .sidebar.collapsed .nav-label {
+            opacity: 0;
+        }
+
+        .nav-separator {
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            margin: 10px 15px;
+        }
+
+        .sidebar-footer {
+            padding: 15px 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--sidebar-text);
+            font-size: 0.75rem;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .sidebar.collapsed .sidebar-footer {
+            opacity: 0;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            transition: margin-left 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .sidebar.collapsed ~ .main-content {
+            margin-left: var(--sidebar-collapsed);
+        }
+
+        .tab-content {
+            display: none;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* CALENDRIER TAB */
+        .calendar-view {
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .calendar-view h1 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--text);
+        }
+
+        .calendar-date {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 25px;
+        }
+
+        .event-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .event-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px 25px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        }
+
+        .event-time {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            min-width: 60px;
+        }
+
+        .event-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .event-dot.done { background: #10b981; }
+        .event-dot.current { background: var(--primary); animation: pulse 2s infinite; }
+        .event-dot.upcoming { background: var(--accent); }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .event-title {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .no-events {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* OVERVIEW TAB */
+        .overview-view {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .overview-view h1 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .overview-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        .overview-card h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .overview-stat {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .overview-stat.accent { color: var(--accent); }
+
+        .overview-sub {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* Animation d'entrée */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(-15px);
+            animation: fadeSlideIn 0.4s ease forwards;
+        }
+
+        @keyframes fadeSlideIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-logo">Command Center</span>
+            <button class="toggle-btn" id="toggleBtn" title="Replier/Déplier">&#9776;</button>
+        </div>
+
+        <div class="sidebar-nav">
+            <a class="nav-item active" data-tab="overview" onclick="switchTab('overview', this)">
+                <span class="nav-icon">&#9671;</span>
+                <span class="nav-label">Vue d'ensemble</span>
+            </a>
+            <a class="nav-item" data-tab="calendar" onclick="switchTab('calendar', this)">
+                <span class="nav-icon">&#128197;</span>
+                <span class="nav-label">Calendrier</span>
+            </a>
+
+            <div class="nav-separator"></div>
+
+            <a class="nav-item" data-tab="dernieredispo" onclick="switchTab('dernieredispo', this)">
+                <span class="nav-icon">&#127968;</span>
+                <span class="nav-label">DerniereDispo</span>
+            </a>
+            <a class="nav-item" data-tab="pixeldrop" onclick="switchTab('pixeldrop', this)">
+                <span class="nav-icon">&#128640;</span>
+                <span class="nav-label">Pixel Drop</span>
+            </a>
+            <a class="nav-item" data-tab="plazatango" onclick="switchTab('plazatango', this)">
+                <span class="nav-icon">&#128131;</span>
+                <span class="nav-label">Plaza Tango</span>
+            </a>
+        </div>
+
+        <div class="sidebar-footer">
+            Pixel Drop - Command Center<br>
+            <span id="sidebar-clock"></span>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content" id="mainContent">
+
+        <!-- VUE D'ENSEMBLE -->
+        <div class="tab-content active" id="tab-overview">
+            <div class="overview-view">
+                <h1>Vue d'ensemble</h1>
+                <p class="calendar-date" id="overview-date"></p>
+                <div class="overview-grid">
+                    <div class="overview-card fade-in" style="animation-delay: 0.1s">
+                        <h3>Planning aujourd'hui</h3>
+                        <div class="overview-stat" id="overview-events">--</div>
+                        <div class="overview-sub">evenements</div>
+                    </div>
+                    <div class="overview-card fade-in" style="animation-delay: 0.2s">
+                        <h3>DerniereDispo - Lieux</h3>
+                        <div class="overview-stat">363</div>
+                        <div class="overview-sub">objectif 1000</div>
+                    </div>
+                    <div class="overview-card fade-in" style="animation-delay: 0.3s">
+                        <h3>Pixel Drop - Trafic 30j</h3>
+                        <div class="overview-stat accent" id="overview-traffic">--</div>
+                        <div class="overview-sub">sessions</div>
+                    </div>
+                    <div class="overview-card fade-in" style="animation-delay: 0.4s">
+                        <h3>Prochain RDV</h3>
+                        <div class="overview-stat" style="font-size: 1.3rem;" id="overview-next">--</div>
+                        <div class="overview-sub" id="overview-next-time"></div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <h2 style="font-size: 1.3rem; margin-bottom: 20px;">Planning du jour</h2>
+                    <div class="event-list" id="overview-events-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CALENDRIER -->
+        <div class="tab-content" id="tab-calendar">
+            <div class="calendar-view">
+                <h1>Calendrier</h1>
+                <p class="calendar-date" id="calendar-date"></p>
+                <div class="event-list" id="event-list"></div>
+            </div>
+        </div>
+
+        <!-- DERNIEREDISPO -->
+        <div class="tab-content" id="tab-dernieredispo">
+            <iframe src="https://real-pixeldrop.github.io/derniere-dispo-dashboard/" loading="lazy"></iframe>
+        </div>
+
+        <!-- PIXEL DROP -->
+        <div class="tab-content" id="tab-pixeldrop">
+            <iframe src="https://real-pixeldrop.github.io/pixel-drop-dashboard/" loading="lazy"></iframe>
+        </div>
+
+        <!-- PLAZA TANGO -->
+        <div class="tab-content" id="tab-plazatango">
+            <iframe src="https://real-pixeldrop.github.io/plaza-tango-generator/dashboard.html" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Toggle sidebar
+        document.getElementById('toggleBtn').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+        });
+
+        // Switch tabs
+        function switchTab(tabId, el) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+            document.getElementById('tab-' + tabId).classList.add('active');
+            el.classList.add('active');
+        }
+
+        // Date
+        const now = new Date();
+        const dateStr = now.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+        document.getElementById('calendar-date').textContent = dateStr;
+        document.getElementById('overview-date').textContent = dateStr;
+
+        // Clock
+        function updateClock() {
+            document.getElementById('sidebar-clock').textContent = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+        }
+        updateClock();
+        setInterval(updateClock, 60000);
+
+        // Events data (updated by script)
+        const events = [
+            { time: "09:00", title: "Envoyer programme Plaza Tango a Papa", status: "upcoming" },
+            { time: "09:30", title: "Demande devis impressions Plaza Tango", status: "upcoming" },
+            { time: "10:00", title: "Check sites WordPress", status: "upcoming" },
+            { time: "10:30", title: "Maquette Habitat (URGENT)", status: "upcoming" },
+            { time: "14:00", title: "Newsletter Plaza Tango (avec Valentina)", status: "upcoming" },
+            { time: "14:30", title: "Post Instagram Plaza Tango", status: "upcoming" }
+        ];
+
+        // Render events
+        function renderEvents(containerId) {
+            const container = document.getElementById(containerId);
+            const nowHours = now.getHours();
+            const nowMins = now.getMinutes();
+
+            container.innerHTML = events.map((evt, i) => {
+                const [h, m] = evt.time.split(':').map(Number);
+                let status = 'upcoming';
+                if (h < nowHours || (h === nowHours && m < nowMins)) status = 'done';
+                else if (h === nowHours) status = 'current';
+
+                return `<div class="event-card fade-in" style="animation-delay: ${i * 0.1}s">
+                    <div class="event-time">${evt.time}</div>
+                    <div class="event-dot ${status}"></div>
+                    <div class="event-title">${evt.title}</div>
+                </div>`;
+            }).join('');
+        }
+
+        renderEvents('event-list');
+        renderEvents('overview-events-list');
+        document.getElementById('overview-events').textContent = events.length;
+
+        // Next event
+        const nextEvent = events.find(e => {
+            const [h, m] = e.time.split(':').map(Number);
+            return h > now.getHours() || (h === now.getHours() && m > now.getMinutes());
+        });
+        if (nextEvent) {
+            document.getElementById('overview-next').textContent = nextEvent.title;
+            document.getElementById('overview-next-time').textContent = nextEvent.time;
+        } else {
+            document.getElementById('overview-next').textContent = "Rien de plus";
+            document.getElementById('overview-next-time').textContent = "journee terminee";
+        }
+    </script>
+</body>
+</html>
