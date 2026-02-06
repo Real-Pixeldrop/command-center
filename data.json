@@ -188,7 +188,7 @@
       "ca_2025": 2699,
       "ca_2026": 0,
       "ca_total": 2699,
-      "nb_factures": 0,
+      "nb_factures": 2,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": "ETHEOS",
@@ -263,7 +263,7 @@
       "ca_2025": 6812,
       "ca_2026": 0,
       "ca_total": 6812,
-      "nb_factures": 0,
+      "nb_factures": 2,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": null,
@@ -338,7 +338,7 @@
       "ca_2025": 1072,
       "ca_2026": 0,
       "ca_total": 1072,
-      "nb_factures": 0,
+      "nb_factures": 1,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": "RCL",
@@ -394,7 +394,7 @@
       "ca_2025": 4029.7,
       "ca_2026": 0,
       "ca_total": 4029.7,
-      "nb_factures": 0,
+      "nb_factures": 1,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": "Black Trombone",
@@ -431,7 +431,7 @@
       "ca_2025": 114,
       "ca_2026": 0,
       "ca_total": 2728,
-      "nb_factures": 0,
+      "nb_factures": 1,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": "Au Cerf",
@@ -565,7 +565,7 @@
       "ca_total": 5426.65,
       "ca_2025": 5426.65,
       "ca_2026": 0,
-      "nb_factures": 0,
+      "nb_factures": 1,
       "nb_projets": 0,
       "nom_entreprise": "TIZ",
       "siret": "85154963400018",
@@ -603,7 +603,7 @@
       "ca_total": 1815.3,
       "ca_2025": 1815.3,
       "ca_2026": 0,
-      "nb_factures": 0,
+      "nb_factures": 1,
       "nb_projets": 0,
       "nom_entreprise": "Cineloges",
       "siret": "51951834400022",
@@ -660,7 +660,7 @@
       "ca_total": 990,
       "ca_2025": 990,
       "ca_2026": 0,
-      "nb_factures": 0,
+      "nb_factures": 1,
       "nb_projets": 0,
       "nom_entreprise": "La Toast Family",
       "siret": "90897145000014",
@@ -734,7 +734,7 @@
       "ca_2025": 214,
       "ca_2026": 0,
       "ca_total": 1013,
-      "nb_factures": 0,
+      "nb_factures": 1,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": null,
@@ -806,7 +806,7 @@
       "ca_2025": 0,
       "ca_2026": 3000,
       "ca_total": 3000,
-      "nb_factures": 0,
+      "nb_factures": 1,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": null,
@@ -878,7 +878,7 @@
       "ca_2025": 2649,
       "ca_2026": 0,
       "ca_total": 6645,
-      "nb_factures": 0,
+      "nb_factures": 1,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": null,
@@ -932,7 +932,7 @@
       "ca_2025": 2169.9,
       "ca_2026": 0,
       "ca_total": 2169.9,
-      "nb_factures": 0,
+      "nb_factures": 2,
       "nb_projets": 0,
       "dernier_contact": null,
       "nom_entreprise": null,
@@ -1131,7 +1131,9 @@
       "montant_num": 4239.9,
       "statut": "envoye",
       "date_envoi": "2025-06-15",
-      "source": "notion"
+      "source": "notion",
+      "pdf_name": "Vivre-Devenir-12775.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/c0c4639d-08d4-4979-9ec4-10ba3844573f/Vivre-Devenir-12775.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142220Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=7d9f845282b38b9034237b995116c70f331034329443ad8626d8dfb29a75b9c4&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     },
     {
       "nom": "Migration hébergement - Céline Roland",
@@ -1167,7 +1169,9 @@
       "montant_num": 9700,
       "statut": "envoye",
       "date_envoi": "2026-01-08",
-      "source": "notion"
+      "source": "notion",
+      "pdf_name": "Devis-FIDOLUX SARL-AKLI GOUDJIL-D-2026-017.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/c02b0536-0247-42da-9d43-0d30725ca749/Devis-FIDOLUX_SARL-AKLI_GOUDJIL-D-2026-017.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4663XJQVQ72%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142222Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJHMEUCIBDsmRPHniKdMElaGcntJhRRp2IbL5kugp9AtPF1tn9BAiEA5ZHSUD4WFOYO%2BP8%2BjAE64oyaOWe3%2F0qPzeOe4i5A1h0q%2FwMIRxAAGgw2Mzc0MjMxODM4MDUiDBUE56F1ySn4oMrpXyrcAwwZ%2BeaZDKxRHosm4QwKwRWhAhMxz12rw7x6nIGbt6eM97NyBbVHcqAS7o5QyOzEjRAVEvpHDCA3b%2FRF1KOs22QstDpWYzuFsp63H4OUNM66DX%2BZ2DopVeyZJoxEHsdU7nS7SPFXpL6gR6aaAro7nfZltOp%2B3ReWBpV5tp4Q25IielW5G4z9fWgrR2s8YI52xPTYFvHSuK2yh38zLAc7ECn5qX0SCqJ56wSuAbpYJEhoRJdQAQqfhwaf7uqUv0tMxxsUuuPkZSekDkcvUMXHuxzTEuH70EpB6QRSZV03La7JWHzCNGPqt%2FBY%2B719%2BstmMSJeLAmJB4TTRhl1ZQb8x2pyUgzRcLCW0ZgVWklGRJGaXAu9S9OS2IXjWzbbFGJ0Yab5IzJ%2B6RbJwp%2FLonpGyuwnzPRpTMLu%2FEvkodc7SxuAWPxXnbClCgpE52i7EH4%2BXJpumW%2B8tV24oHc756BQh17LlreX8N6JHWiDJSJ41PwMAWXwW97FJ6lnPbMOHkm2UlhdSviX3NLDujFfq1PcBc%2Buu3drATGV38vyV2nJHQ2huwVGvUKX8zEJMbqFWhBm92IrB1jab8TUd01Ihwv0jSe0YUzn2XHLTseqvZvshFGajcegmOPHYyDVf6Z9MJzql8wGOqUBhsHDJ1icfmc1hUlcghm%2FJDwATeFsyJrLGdp0xTx315v1pchxbAiu7ft8w8T5GWSEZfl6kOmt90FU406PaKn01Z312f5%2Fz6nNa0BEArCN8FZiytFUvpPaBujQcktzRNQgx5hrbzBDZcPiyzja7ogLZ47nDljV6iExDd8ZU03QGsTc1PHMqWu4w8Ow9LW3l%2FeZl6MNGLx2%2FE%2BukRJFftad%2BRYck5yo&X-Amz-Signature=7ef8bf43b7d120803d43b508ff13f9d81ae93f7b9fb3eb3894de07a8795ccf66&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     },
     {
       "nom": "E-Commerce",
@@ -1176,7 +1180,9 @@
       "montant_num": 3500,
       "statut": "envoye",
       "date_envoi": "2025-11-18",
-      "source": "notion"
+      "source": "notion",
+      "pdf_name": "Devis-2025-11-0011.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/4cdd757b-e5d5-49b9-aabc-649fd74d21fd/Devis-2025-11-0011.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=913b80b32cce3302ab5e5d2a4e90b77cbb3c340587f2b58f4d13ab05e176e277&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     },
     {
       "nom": "Ignite",
@@ -1185,7 +1191,9 @@
       "montant_num": 3000,
       "statut": "envoye",
       "date_envoi": "2025-12-15",
-      "source": "notion"
+      "source": "notion",
+      "pdf_name": "Devis-2025-12-0015.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/4bf2e2e1-4005-48f5-8e62-7ce04139a255/Devis-2025-12-0015.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=cb99140bc87ed76fd410892a6ab4a0585dbddea425d24f1df82f60f8f88f595b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     },
     {
       "nom": "Refonte site web L.I.Partners",
@@ -1203,7 +1211,9 @@
       "montant_num": 6500,
       "statut": "envoye",
       "date_envoi": "2025-11-12",
-      "source": "notion"
+      "source": "notion",
+      "pdf_name": "Devis-2025-11-0005.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/f99dcaf1-16e9-4658-929e-f8985bcb7286/Devis-2025-11-0005.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=bca3c7bef17ff966f7af80469640ac5954319946f23ccdf732e20fc5dbfd1a79&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     },
     {
       "nom": "Devis Blog Ewan",
@@ -1212,7 +1222,9 @@
       "montant_num": 400,
       "statut": "envoye",
       "date_envoi": "2025-12-12",
-      "source": "notion"
+      "source": "notion",
+      "pdf_name": "Devis-2025-12-0016.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/98440a37-998b-4279-9ceb-64a1f70ddfd7/Devis-2025-12-0016.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=34a61cf368964c69623029018b0c9e751863a7fa1f47f62c3cb14ab25a6713ba&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     },
     {
       "nom": "Site vitrine Maya Hua",
@@ -1230,7 +1242,9 @@
       "montant_num": 2099,
       "statut": "envoye",
       "date_envoi": "2025-10-08",
-      "source": "notion"
+      "source": "notion",
+      "pdf_name": "Devis-2025-11-0008.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/2003c82e-054f-4bb2-8636-fbf7d4cb77ec/Devis-2025-11-0008.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=6f59fdf6b2b85268271b7ea8a7cb080b285d90a0f775616f48ae23a0eb6170bf&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     },
     {
       "nom": "Sara Cleaning",
@@ -1248,7 +1262,9 @@
       "montant_num": 6699,
       "statut": "envoye",
       "date_envoi": "2025-12-04",
-      "source": "notion"
+      "source": "notion",
+      "pdf_name": "Devis-2025-12-0017.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/b51888ef-3156-4ca9-80f2-9c2e295b20f1/Devis-2025-12-0017.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=7832180db42d9b67cc394688e272b31c75505ce79e58bc40dd5b56b26f2d8ac0&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     },
     {
       "nom": "Développement une page (Anavia)",
@@ -1374,7 +1390,9 @@
       "montant_num": 400,
       "statut": "accepte",
       "date_envoi": "2025-04-15",
-      "source": "notion"
+      "source": "notion",
+      "pdf_name": "Devis-2025-11-0008.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/2003c82e-054f-4bb2-8636-fbf7d4cb77ec/Devis-2025-11-0008.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=6f59fdf6b2b85268271b7ea8a7cb080b285d90a0f775616f48ae23a0eb6170bf&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     },
     {
       "nom": "Cinéloges",
@@ -1383,7 +1401,9 @@
       "montant_num": 1815.3,
       "statut": "accepte",
       "date_envoi": "2025-03-14",
-      "source": "notion"
+      "source": "notion",
+      "pdf_name": "Proposition_Cineloges_-_Pixel_Drop.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/ad2ea4c3-0b79-4ec1-a73e-93333d60967d/Proposition_Cineloges_-_Pixel_Drop.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142217Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=06a8419c25087cd91acc1a040a19fdaa86f9233a7cb22accc617a533f53c3ec8&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     },
     {
       "nom": "Cothidance",
@@ -1482,7 +1502,9 @@
       "montant_num": 3000,
       "statut": "accepte",
       "date_envoi": "2026-01-27",
-      "source": "notion"
+      "source": "notion",
+      "pdf_name": "devis-habitat.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/7d74eeb0-54dc-488f-83ac-ba2b3ee4c3a1/devis-habitat.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4663XJQVQ72%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142222Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJHMEUCIBDsmRPHniKdMElaGcntJhRRp2IbL5kugp9AtPF1tn9BAiEA5ZHSUD4WFOYO%2BP8%2BjAE64oyaOWe3%2F0qPzeOe4i5A1h0q%2FwMIRxAAGgw2Mzc0MjMxODM4MDUiDBUE56F1ySn4oMrpXyrcAwwZ%2BeaZDKxRHosm4QwKwRWhAhMxz12rw7x6nIGbt6eM97NyBbVHcqAS7o5QyOzEjRAVEvpHDCA3b%2FRF1KOs22QstDpWYzuFsp63H4OUNM66DX%2BZ2DopVeyZJoxEHsdU7nS7SPFXpL6gR6aaAro7nfZltOp%2B3ReWBpV5tp4Q25IielW5G4z9fWgrR2s8YI52xPTYFvHSuK2yh38zLAc7ECn5qX0SCqJ56wSuAbpYJEhoRJdQAQqfhwaf7uqUv0tMxxsUuuPkZSekDkcvUMXHuxzTEuH70EpB6QRSZV03La7JWHzCNGPqt%2FBY%2B719%2BstmMSJeLAmJB4TTRhl1ZQb8x2pyUgzRcLCW0ZgVWklGRJGaXAu9S9OS2IXjWzbbFGJ0Yab5IzJ%2B6RbJwp%2FLonpGyuwnzPRpTMLu%2FEvkodc7SxuAWPxXnbClCgpE52i7EH4%2BXJpumW%2B8tV24oHc756BQh17LlreX8N6JHWiDJSJ41PwMAWXwW97FJ6lnPbMOHkm2UlhdSviX3NLDujFfq1PcBc%2Buu3drATGV38vyV2nJHQ2huwVGvUKX8zEJMbqFWhBm92IrB1jab8TUd01Ihwv0jSe0YUzn2XHLTseqvZvshFGajcegmOPHYyDVf6Z9MJzql8wGOqUBhsHDJ1icfmc1hUlcghm%2FJDwATeFsyJrLGdp0xTx315v1pchxbAiu7ft8w8T5GWSEZfl6kOmt90FU406PaKn01Z312f5%2Fz6nNa0BEArCN8FZiytFUvpPaBujQcktzRNQgx5hrbzBDZcPiyzja7ogLZ47nDljV6iExDd8ZU03QGsTc1PHMqWu4w8Ow9LW3l%2FeZl6MNGLx2%2FE%2BukRJFftad%2BRYck5yo&X-Amz-Signature=29f382637696a2dcf44733d03cf786250728d93d63c086243dad3c2a36f1444b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     },
     {
       "nom": "Flyer ",
@@ -1581,7 +1603,9 @@
       "montant_num": 990,
       "statut": "accepte",
       "date_envoi": "2025-06-20",
-      "source": "notion"
+      "source": "notion",
+      "pdf_name": "Devis-2025-11-0004 (1).pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/729d78a3-af1c-46c6-a505-1efe02287487/Devis-2025-11-0004_%281%29.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142220Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=c9ee1bf2042520a3e203a8bc2b0951025aa3803824a6d7f0039e33c82039270c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     },
     {
       "nom": "Le portail vert (CBD)",
@@ -1879,6 +1903,61 @@
       "statut": "accepte",
       "date_envoi": "2024-09-19",
       "source": "notion"
+    },
+    {
+      "nom": "Strategy & Events Mexico",
+      "client": "Strategy and events",
+      "montant": "1880 EUR",
+      "montant_num": 1880,
+      "statut": "perdu",
+      "date_envoi": "2025-10-24",
+      "pdf_name": "Devis-2025-11-0007.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/d9b0918c-6aab-4cd3-876a-f77be7fcbfe9/Devis-2025-11-0007.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=4693d829c79cea4667276f5940083b5ab112b1fe42f0eccdbdb6fe34599a532f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion"
+    },
+    {
+      "nom": "Prototype plateforme",
+      "client": "Inconnu",
+      "montant": "1839.2 EUR",
+      "montant_num": 1839.2,
+      "statut": "perdu",
+      "date_envoi": "2025-10-24",
+      "pdf_name": "Devis-2025-11-0006.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/b6722cf3-66c4-4fe0-b83a-fe70926d71d2/Devis-2025-11-0006.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=2a17a2b6bd0f94db46a17fb60313a57515f14d9b55719204efb07f110335e60a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion"
+    },
+    {
+      "nom": "Pixel Store",
+      "client": "Paris 8",
+      "montant": "6500 EUR",
+      "montant_num": 6500,
+      "statut": "perdu",
+      "date_envoi": "2025-11-14",
+      "pdf_name": "Devis-2025-11-0009.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/ad744421-4a17-4bcc-ad5d-22e6f8fc5f9b/Devis-2025-11-0009.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=dcbda120e7da8b2c05e85db65cef9a34cc81a2c65b6f9cf1e2cfb35dd178e96f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion"
+    },
+    {
+      "nom": "Réseaux Sociaux",
+      "client": "Oxyde Surfaces",
+      "montant": "778.8 EUR",
+      "montant_num": 778.8,
+      "statut": "perdu",
+      "date_envoi": "2025-12-09",
+      "pdf_name": "Devis-2025-12-0013 (Reseaux sociaux).pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/a193d44f-2ad4-483f-8f5a-9a6b20b3e811/Devis-2025-12-0013_%28Reseaux_sociaux%29.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=87f6fe8eba9fd4784deda212c284834b83534c43b367682df1607253a6ae1d98&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion"
+    },
+    {
+      "nom": "Site e commerce",
+      "client": "Oxyde Surfaces",
+      "montant": "10200 EUR",
+      "montant_num": 10200,
+      "statut": "perdu",
+      "date_envoi": "2025-12-09",
+      "pdf_name": "Devis-2025-12-0012 (E commerce).pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/44a9a616-027d-4bff-a0ea-06dca648e0a9/Devis-2025-12-0012_%28E_commerce%29.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=f6fc88ef56e06ac34d3c43313f836de9a2be78c45c775ef529a73a6e19cfcf1f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion"
     }
   ],
   "factures": [
@@ -1891,6 +1970,186 @@
       "statut": "payee",
       "date_paiement": "2026-01-27",
       "objet": "Site vitrine Habitat Multi Services"
+    },
+    {
+      "nom": "Facture-2025-10-0002",
+      "client": "Cineloges",
+      "montant": "1815.3 EUR",
+      "montant_num": 1815.3,
+      "date": "2025-03-14",
+      "statut": "payee",
+      "pdf_name": "Facture-2025-10-0002.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/839d7af5-1a36-4e35-9a9d-84f9e1489b44/Facture-2025-10-0002.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142217Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=4fed305aade091c8e9c8ddab6b356f3d1cca4eab9d10192e18c3533da1a307a0&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "Cinéloges"
+    },
+    {
+      "nom": "Facture-2025-10-0003 (1)",
+      "client": "Black Trombone",
+      "montant": "1765.35 EUR",
+      "montant_num": 1765.35,
+      "date": "2025-06-04",
+      "statut": "payee",
+      "pdf_name": "Facture-2025-10-0003 (1).pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/5cac693e-a632-42fa-b258-a4c9c711865a/Facture-2025-10-0003_%281%29.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142220Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=fd8463844d582b895be7e4dfc0e50b4d4bfcb82fd6a3976d14f1cb0e5a82de80&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "Dernière Dispo 2/2"
+    },
+    {
+      "nom": "10284",
+      "client": "Pépite Esthétique",
+      "montant": "1084.95 EUR",
+      "montant_num": 1084.95,
+      "date": "2025-06-04",
+      "statut": "payee",
+      "pdf_name": "10284.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/0c67da73-3a96-4daa-8e1a-514e1de00098/10284.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142220Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=0e8559c20ed78cfbd97802017aa66822d35c5ef04408dd1a8da5e9ed1675f02c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "Stéphanie Ludivine 1/2"
+    },
+    {
+      "nom": "Facture-2025-12-0011",
+      "client": "La Toast Family",
+      "montant": "990 EUR",
+      "montant_num": 990,
+      "date": "2025-06-20",
+      "statut": "payee",
+      "pdf_name": "Facture-2025-12-0011.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/113ffc2a-1ff2-4862-8d23-813fb715fe24/Facture-2025-12-0011.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142220Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=538a6f2d51ee0e75fd67a26037e5a9e293732578038354c81328a4b529ff5bf9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "Maquette accueil react"
+    },
+    {
+      "nom": "10282",
+      "client": "Tiz",
+      "montant": "1800 EUR",
+      "montant_num": 1800,
+      "date": "2025-07-17",
+      "statut": "payee",
+      "pdf_name": "10282.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/5d312de3-ba80-4a52-9582-803506490df8/10282.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142220Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=ac7142c5098b6d8c1144d5cc7cc293a9fa44c1708a7c8109b2ab97d7d098d62d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "TIZ x Fun tech adventures"
+    },
+    {
+      "nom": "1022-0124",
+      "client": "Musée Richard Wagner",
+      "montant": "499 EUR",
+      "montant_num": 499,
+      "date": "2025-08-30",
+      "statut": "payee",
+      "pdf_name": "1022-0124.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/1f103fe6-f264-4d0e-8be8-eaa0260efce4/1022-0124.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142220Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=6224be03bc97ca19eb41a47d545bcb2baebd8c840ac364e3c38e255f435337db&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "Renouvellement maintenance"
+    },
+    {
+      "nom": "Facture-2025-10-0004",
+      "client": "Etheos",
+      "montant": "4798 EUR",
+      "montant_num": 4798,
+      "date": "2025-08-30",
+      "statut": "en_attente",
+      "pdf_name": "Facture-2025-10-0004.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/b22cf372-ade1-452a-84a8-1ce9cc6fe6e2/Facture-2025-10-0004.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142220Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=7a0804fb49612ac86da2bc6893301d48b2090a18dffcf1f0dba17d8b14ea8def&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "Etheos"
+    },
+    {
+      "nom": "Facture-2025-10-0005",
+      "client": "Pépite Esthétique",
+      "montant": "1084.95 EUR",
+      "montant_num": 1084.95,
+      "date": "2025-09-16",
+      "statut": "payee",
+      "pdf_name": "Facture-2025-10-0005.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/2e19acc1-3db7-4f8e-a8ba-83ca90d247ed/Facture-2025-10-0005.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142220Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=422714cc338709e6958250ff6292c2796000e0861eaf72890c1f2a037b4d6db9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "Stéphanie Ludivine 2/2"
+    },
+    {
+      "nom": "Facture de solde-2025-11-0008",
+      "client": "LXB Estates Luxembourg",
+      "montant": "1000 EUR",
+      "montant_num": 1000,
+      "date": "2025-09-16",
+      "statut": "payee",
+      "pdf_name": "Facture de solde-2025-11-0008.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/2101de7d-e63a-46c6-808a-f3b268b57004/Facture_de_solde-2025-11-0008.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142220Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=cc0acd52ddbcbd88ae44a419d17e7aed762b1e47145280107836ee2e80d34849&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "LXB Construct (2/2)"
+    },
+    {
+      "nom": "Facture d'acompte-2025-10-0007",
+      "client": "LXB Estates Luxembourg",
+      "montant": "3000 EUR",
+      "montant_num": 3000,
+      "date": "2025-10-16",
+      "statut": "payee",
+      "pdf_name": "Facture d'acompte-2025-10-0007.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/c73c941b-4b94-4da2-a523-0480658c10c3/Facture_dacompte-2025-10-0007.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=6b8f8f8008bb8b210a133b4d0a73a66b1aaa7e1b4ebb7b5487984d2087238dbd&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "LXB Construct (1/2)"
+    },
+    {
+      "nom": "Facture-2025-10-0006",
+      "client": "RCL",
+      "montant": "114 EUR",
+      "montant_num": 114,
+      "date": "2025-10-24",
+      "statut": "payee",
+      "pdf_name": "Facture-2025-10-0006.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/42004b9c-9579-4207-b29e-89b0d11ace07/Facture-2025-10-0006.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=749721341cf1577aa418b5eafd58cc39cc98bc0cff686e0b5410ed0ebe4bb547&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "Renouvellement Domaine + Hosting"
+    },
+    {
+      "nom": "Facture-2025-11-0009",
+      "client": "Babeta",
+      "montant": "115 EUR",
+      "montant_num": 115,
+      "date": "2025-11-12",
+      "statut": "payee",
+      "pdf_name": "Facture-2025-11-0009.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/d51beb59-1135-4cfe-9d09-550016e7590c/Facture-2025-11-0009.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=560563ed0bd8818249f1cb3afc46f8ed36a2e55008f34d0cc7be5bd9cc223bae&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "Renouvellement nom de domaine + hébérgement"
+    },
+    {
+      "nom": "Facture-2025-12-0010",
+      "client": "Au Cerf",
+      "montant": "114 EUR",
+      "montant_num": 114,
+      "date": "2025-12-09",
+      "statut": "payee",
+      "pdf_name": "Facture-2025-12-0010.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/3feea2f2-9752-4cb8-bdb0-d688494f1136/Facture-2025-12-0010.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=e8ae7ca7f32119e36340b0fdde6692ac6078cfd3c4c7c38ce613f39b05f429a3&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "Renouvellement nom de domaine + hébérgement"
+    },
+    {
+      "nom": "Facture-2025-12-0012",
+      "client": "Etheos",
+      "montant": "2699 EUR",
+      "montant_num": 2699,
+      "date": "2025-12-16",
+      "statut": "payee",
+      "pdf_name": "Facture-2025-12-0012.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/e4abbf91-428e-4186-9ac7-f33f55a747af/Facture-2025-12-0012.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662LJFL7SI%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJGMEQCIETAdQwWq1tzlWKtViYqGqHaKRKJ%2Bjb6cKkvQb8PR6R6AiBld753a4xDqCzCZap5an6aq4HJPh6blk93dx5kaPkjUir%2FAwhHEAAaDDYzNzQyMzE4MzgwNSIMLgN%2FFepG070pyR41KtwDPXiGsVwzX7GVJ29RsRq8AB7RixET6iu8ZriU2g6fV%2FGon%2Bdum1Wy%2B65d%2FOdJkPG5Br4EGiFQnx91woKL9l70bZAhXfCKfm7I%2FY4drAs67B8rcwz6vdsqAiIygbFAVbN%2BW%2BBBPyFruVMPDVqqrBiFmlNgU3N4XRsamSeuS96PoMbhkZBCWhzJm7btj4dgbt05PHCAyynF5NNzxkpKEFeZ9zWOJMGEPiArFamgzGoEDb9CLCkixin0Vi6%2BPG5v0W5aE8vij2PLTnfiDjlFyR1SWSBK9WCAl3B%2FZ3Vpo45KgZ%2FtS0QeUzGzXYcUSlIhBK2S0zVxoS0Ut64PpCNsK8fJSp6qbFKkQeJpJHSiwlbv%2FluMnRBPTEPMZ76wYmb%2B0wBdnwjE5TFeoKq49fPvx3KwIPNrwFiyPYnGuIyF%2BlaDMO3BeQ6cTCkWMF7GiuEnrdvem8I8iEYIzVnPS7%2F0Iv7%2BOj1Pk3TcEK3vsw1iS0IP2IpgFsW73BilRVF54FIhHdjem6BsOVG44fRB2ZU1UQHVwwiCH8jiqY%2Bl%2B%2FB23Z72Apk7yWxQv6UJie0GLLg4suiWYGVXc%2F35MpamSiVrBrS5aFa1UQ6YSvEiOYG1OBK8aIBmSohW%2FFvd2DpMxsQwqOqXzAY6pgG%2FtSATlWZraYFK0%2BsGDQO1ks6GjbQ%2BZ21dvkvLs%2Fgq3LOT7sVQXLK8gZkIOb30dEvy6gTjLe8rOUTlSVnE5Y%2B6qhk7%2Bhw0xT%2F0iYl7ILj9dXG9HQ5siq2o%2F%2FlCH0a%2FdixtWaCgtyIpdmO6vNKUqza2dp%2F4avI7MYm%2BbbFqms9P%2F2zZdNN8u%2BFJh8m4WjKEEH6VTqeRgYkFzrRSf7IChJH3MKrBI3D%2F&X-Amz-Signature=8e0d4054dea41355d42988958e9ab708a562e5aac198d47d06d9a71ea012d963&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "Etheos (1)"
+    },
+    {
+      "nom": "Facture-Habitat Multi Services-AKLI GOUDJIL-F-2026-01272",
+      "client": "Habitat Multi Surfaces",
+      "montant": "3000 EUR",
+      "montant_num": 3000,
+      "date": "2026-01-27",
+      "statut": "payee",
+      "pdf_name": "Facture-Habitat Multi Services-AKLI GOUDJIL-F-2026-01272.pdf",
+      "pdf_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4321160e-40b7-48b5-8d91-8fe901c6f2fa/b144ed08-013e-471c-83ab-a739974d257c/Facture-Habitat_Multi_Services-AKLI_GOUDJIL-F-2026-01272.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4663XJQVQ72%2F20260206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260206T142222Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEH4aCXVzLXdlc3QtMiJHMEUCIBDsmRPHniKdMElaGcntJhRRp2IbL5kugp9AtPF1tn9BAiEA5ZHSUD4WFOYO%2BP8%2BjAE64oyaOWe3%2F0qPzeOe4i5A1h0q%2FwMIRxAAGgw2Mzc0MjMxODM4MDUiDBUE56F1ySn4oMrpXyrcAwwZ%2BeaZDKxRHosm4QwKwRWhAhMxz12rw7x6nIGbt6eM97NyBbVHcqAS7o5QyOzEjRAVEvpHDCA3b%2FRF1KOs22QstDpWYzuFsp63H4OUNM66DX%2BZ2DopVeyZJoxEHsdU7nS7SPFXpL6gR6aaAro7nfZltOp%2B3ReWBpV5tp4Q25IielW5G4z9fWgrR2s8YI52xPTYFvHSuK2yh38zLAc7ECn5qX0SCqJ56wSuAbpYJEhoRJdQAQqfhwaf7uqUv0tMxxsUuuPkZSekDkcvUMXHuxzTEuH70EpB6QRSZV03La7JWHzCNGPqt%2FBY%2B719%2BstmMSJeLAmJB4TTRhl1ZQb8x2pyUgzRcLCW0ZgVWklGRJGaXAu9S9OS2IXjWzbbFGJ0Yab5IzJ%2B6RbJwp%2FLonpGyuwnzPRpTMLu%2FEvkodc7SxuAWPxXnbClCgpE52i7EH4%2BXJpumW%2B8tV24oHc756BQh17LlreX8N6JHWiDJSJ41PwMAWXwW97FJ6lnPbMOHkm2UlhdSviX3NLDujFfq1PcBc%2Buu3drATGV38vyV2nJHQ2huwVGvUKX8zEJMbqFWhBm92IrB1jab8TUd01Ihwv0jSe0YUzn2XHLTseqvZvshFGajcegmOPHYyDVf6Z9MJzql8wGOqUBhsHDJ1icfmc1hUlcghm%2FJDwATeFsyJrLGdp0xTx315v1pchxbAiu7ft8w8T5GWSEZfl6kOmt90FU406PaKn01Z312f5%2Fz6nNa0BEArCN8FZiytFUvpPaBujQcktzRNQgx5hrbzBDZcPiyzja7ogLZ47nDljV6iExDd8ZU03QGsTc1PHMqWu4w8Ow9LW3l%2FeZl6MNGLx2%2FE%2BukRJFftad%2BRYck5yo&X-Amz-Signature=84e17ed7db06228247c5c070259b9b04f35e347b0026f2a8dba65737f8554ab8&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "source": "notion",
+      "opp_nom": "Habitat Multi Services - Site vitrine"
     }
   ],
   "devis_kpis": {
