@@ -397,6 +397,7 @@
       "objet": "Refonte site web",
       "montant": "8 400€",
       "statut": "En attente",
+      "date_envoi": "2026-02-04",
       "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=ofb4adRdb8NcR0UMREjpTtAkyfaRlDlCi6BYpaBff8YDFHCcdwZh4n%2B4Nt8SuCht1S2I%2BYOSMrNrgFimwhsTAqow5gEnMHeyjedSRPcyAm%2Bcj9ALF17xUYc4--%2F3eQr5e6QT9wf%2BMI--hzs8nx%2FmE11%2FzRXclBLcjA%3D%3D"
     },
     {
@@ -405,6 +406,7 @@
       "objet": "Refonte site web",
       "montant": "8 400€",
       "statut": "En attente",
+      "date_envoi": "2026-02-04",
       "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=TEL%2Bcls9lXjJGjREANlVYVGPGXaA1S2zcdlqrg3d%2BPAhF29h1ncaJsOURlPAmRK9mK95EPxmHVww3kLE%2FkpFs7mq%2BN0nVMjHXf%2BbeDOfURpZLzhzLqP5Bgjp--pjk9z1slPL838Qwb--HNLDuYEShsDVuMMZdfMLpQ%3D%3D"
     },
     {
@@ -413,6 +415,7 @@
       "objet": "Refonte site web",
       "montant": "8 400€",
       "statut": "En attente",
+      "date_envoi": "2026-02-04",
       "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=nACIdIHZmzTlbkc2pKGJU1qGmoys1JK6w9P1LS5cxzMl5%2FleboRua9Kpsxic9Z65LIDhOSlGI3UsyBUXK0CPrAT2iS3ybjKTsRFvPznRB8NuVSAlmI8xBzri--3bCjFd5835ACcEEL--gVolaLE1mfgfMQpGJA619w%3D%3D"
     },
     {
@@ -421,6 +424,7 @@
       "objet": "Refonte site web",
       "montant": "7 800€",
       "statut": "En attente",
+      "date_envoi": "2026-02-04",
       "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=R%2BcOW7FzSo%2B8LeA1iQiTcq32EBmF1FR5XtoH9PnN3boXSN0NdneunhhYDCUqo01RSWsGsYngnSQnIVBZxpQ1vdPeeZe6bY10C%2ByaKwvq4fg004QBnv0QQvFX--DQrwi08%2Bk6yjlWVr--MgD2hW7%2F%2F5qlZWSAmJ5EiQ%3D%3D"
     },
     {
@@ -429,6 +433,7 @@
       "objet": "Site Internet 3.0",
       "montant": "2 000€",
       "statut": "En attente",
+      "date_envoi": "2026-01-30",
       "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=WMf0QL4HpO5sLOuSrXxQ%2BMltQ6MLkXf5%2Bt1Ks6I9FAibIklEwfZFXsGufskpYEAgvXHUkwWGc8mTRwojaUPz58E0CBYb6y3qqaKvUxdWGALs67u4NDmB2TOk--p1f6AZ2K%2FOhcZOGj--YrRGOh4Lpw0yK9kbxwiYwQ%3D%3D"
     },
     {
@@ -437,6 +442,7 @@
       "objet": "Site vitrine",
       "montant": "3 000€",
       "statut": "Accepte",
+      "date_envoi": "2026-01-27",
       "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=72mMPUxPynHBnF35uabEt7T14MzWzJtJzwcneU8bC9gZ1HwOJsT1WSvfBx6rB4PStG1iqHRhbAalcNErdDfV3pG%2BGTVnRhl%2F7s5F88YBqThJVv51ACjY%2FCsI--rtVeA0cJMVJRXoUV--Vy1GUOVQMfrkVg%2BIo9Td6A%3D%3D"
     },
     {
@@ -445,6 +451,7 @@
       "objet": "Portail Client",
       "montant": "9 700€",
       "statut": "En attente",
+      "date_envoi": "2026-01-08",
       "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=Alm%2Fl%2FcKCr%2Bgxs7SQJ3CZQvO8yUPYNdzTlhu3D6%2F6OGDZkSSelSVrzDgmQuycD9r3fF2Ro7BbV4CNFmqHbMFwXRBnxWCl%2BvqtcsuAc3dBTjJQIcKI063uyU3--0El5XvMsx3e4ylug--0fxzIKG6UTbq3pE%2FF8jCnQ%3D%3D"
     }
   ],
@@ -2161,5 +2168,17 @@
       "heure": "14:30",
       "evenement": "Post Instagram Plaza Tango"
     }
+  ],
+  "linkedin_posts": [
+    {"titre": "5 erreurs sur votre site web", "type": "post", "date": "2026-02-10", "statut": "redaction"},
+    {"titre": "Etude de cas - Habitat Multi Services", "type": "article", "date": "2026-02-14", "statut": "idee"},
+    {"titre": "Pourquoi investir dans le SEO en 2026", "type": "carousel", "date": "2026-02-17", "statut": "idee"},
+    {"titre": "Bilan janvier Pixel Drop", "type": "post", "date": "2026-02-03", "statut": "publie"}
+  ],
+  "instagram_posts": [
+    {"titre": "Before/After site client", "type": "reel", "date": "2026-02-12", "statut": "creation"},
+    {"titre": "Tips SEO en 30s", "type": "reel", "date": "2026-02-15", "statut": "idee"},
+    {"titre": "Temoignage client Cothidance", "type": "post", "date": "2026-02-08", "statut": "pret"},
+    {"titre": "Coulisses bureau", "type": "story", "date": "2026-02-05", "statut": "publie"}
   ]
 }

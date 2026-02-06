@@ -329,6 +329,7 @@
         .badge-red { background: #fee2e2; color: #991b1b; }
         .badge-blue { background: #dbeafe; color: #1e40af; }
         .badge-gray { background: #f3f4f6; color: #4b5563; }
+        .badge-purple { background: rgba(147,51,234,0.1); color: #9333ea; }
 
         /* ===== PROGRESS ===== */
         .progress-bar {
@@ -1034,10 +1035,16 @@
         </div>
         <div class="nav-section-items">
             <a class="nav-item" onclick="switchTab('marketing', this)">
-                <span class="nav-label">Marketing</span>
+                <span class="nav-label">Vue d'ensemble</span>
             </a>
             <a class="nav-item" onclick="switchTab('newsletter', this)">
                 <span class="nav-label">Newsletter</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('linkedin', this)">
+                <span class="nav-label">LinkedIn</span>
+            </a>
+            <a class="nav-item" onclick="switchTab('instagram', this)">
+                <span class="nav-label">Instagram</span>
             </a>
             <a class="nav-item" onclick="switchTab('seo', this)">
                 <span class="nav-label">SEO</span>
@@ -1151,6 +1158,20 @@
         <div id="newsletter-content">Chargement...</div>
     </div>
 
+    <!-- ===== LINKEDIN ===== -->
+    <div class="tab" id="tab-linkedin">
+        <h1 class="page-title">LinkedIn</h1>
+        <p class="page-subtitle">Planning de publications LinkedIn</p>
+        <div id="linkedin-content">Chargement...</div>
+    </div>
+
+    <!-- ===== INSTAGRAM ===== -->
+    <div class="tab" id="tab-instagram">
+        <h1 class="page-title">Instagram</h1>
+        <p class="page-subtitle">Planning de publications Instagram</p>
+        <div id="instagram-content">Chargement...</div>
+    </div>
+
     <!-- ===== SEO ===== -->
     <div class="tab" id="tab-seo">
         <h1 class="page-title">SEO</h1>
@@ -1224,8 +1245,40 @@
         renderAbonnements();
         renderMarketing();
         renderNewsletter();
+        renderLinkedin();
+        renderInstagram();
         renderSEO();
         renderSites();
+    }
+
+    // ===== HELPERS: OBJECTIFS & RELANCES =====
+    function getObjectifMensuel() {
+        const now = new Date();
+        const moisNoms = ['Janvier','Fevrier','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Decembre'];
+        const currentMonthIdx = now.getMonth();
+        const chart = DATA.finances.ca_mensuel_chart;
+        const caActuel = (chart[currentMonthIdx] && chart[currentMonthIdx].montant !== null) ? chart[currentMonthIdx].montant : 0;
+        const objectif = DATA.objectifs.ca_mensuel;
+        const pct = objectif > 0 ? Math.min(100, Math.round(caActuel / objectif * 100)) : 0;
+        const color = pct >= 80 ? 'var(--success)' : pct >= 50 ? 'var(--warning)' : '#ef4444';
+        return { mois: moisNoms[currentMonthIdx], caActuel, objectif, pct, color };
+    }
+
+    function getRelances() {
+        const now = new Date();
+        const devis = DATA.devis || [];
+        return devis.filter(d => {
+            const s = d.statut.toLowerCase();
+            if (s !== 'en attente' && s !== 'envoye' && s !== 'envoyé') return false;
+            if (!d.date_envoi) return false;
+            const envoi = new Date(d.date_envoi);
+            const jours = Math.floor((now - envoi) / (1000 * 60 * 60 * 24));
+            return jours > 7;
+        }).map(d => {
+            const envoi = new Date(d.date_envoi);
+            const jours = Math.floor((now - envoi) / (1000 * 60 * 60 * 24));
+            return { ...d, jours };
+        }).sort((a, b) => b.jours - a.jours);
     }
 
     // ===== DASHBOARD =====
@@ -1253,16 +1306,28 @@
         const currentMonthIdx = new Date().getMonth();
         const caChart = DATA.finances.ca_mensuel_chart;
 
+        // Objectif mensuel
+        const obj = getObjectifMensuel();
+        const caActuelFmt = obj.caActuel.toLocaleString('fr-FR');
+        const objFmt = obj.objectif.toLocaleString('fr-FR');
+
+        // Relances
+        const relances = getRelances();
+        const relanceCount = relances.length;
+        const relanceColor = relanceCount > 0 ? '#ef4444' : 'var(--success)';
+
         document.getElementById('dash-content').innerHTML = `
         <div class="grid grid-4">
             <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">CA mensuel</div>
-                <div class="card-value primary" id="ca-month-val">${esc(k.ca_mensuel)}</div>
-                <div class="card-sub" style="display:flex;align-items:center;justify-content:center;gap:10px;">
-                    <button onclick="switchMonth(-1)" style="background:none;border:none;cursor:pointer;color:var(--text-light);font-size:1rem;padding:2px 6px;border-radius:4px;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">&lsaquo;</button>
-                    <span id="ca-month-label">${esc(k.ca_mensuel_mois)}</span>
-                    <button onclick="switchMonth(1)" style="background:none;border:none;cursor:pointer;color:var(--text-light);font-size:1rem;padding:2px 6px;border-radius:4px;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">&rsaquo;</button>
+                <div class="card-label">Objectif ${esc(obj.mois)}</div>
+                <div style="display:flex;justify-content:space-between;align-items:baseline;margin:8px 0 4px;">
+                    <span class="card-value" style="font-size:1.3rem;">${caActuelFmt}€</span>
+                    <span style="color:var(--text-light);font-size:0.85rem;">/ ${objFmt}€</span>
                 </div>
+                <div style="background:var(--border);border-radius:8px;height:8px;overflow:hidden;">
+                    <div style="background:${obj.color};height:100%;width:${obj.pct}%;border-radius:8px;transition:width 0.5s ease;"></div>
+                </div>
+                <div style="text-align:right;font-size:0.78rem;color:var(--text-light);margin-top:4px;">${obj.pct}%</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
                 <div class="card-label">CA annuel 2026</div>
@@ -1271,14 +1336,14 @@
                 <div class="progress-bar" style="margin-top:10px;"><div class="progress-fill accent" style="width:${caPct}%"></div></div>
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Trafic pixel-drop.com</div>
-                <div class="card-value primary">${k.trafic_pd}</div>
-                <div class="card-sub">sessions (30 jours)</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.25s">
                 <div class="card-label">Devis en attente</div>
                 <div class="card-value accent">${DATA.devis_kpis.en_attente.count}</div>
                 <div class="card-sub">${esc(DATA.devis_kpis.en_attente.montant)}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <div class="card-label">Relances</div>
+                <div class="card-value" style="color:${relanceColor};">${relanceCount}</div>
+                <div class="card-sub">${relanceCount > 0 ? 'devis sans reponse > 7j' : 'aucune relance'}</div>
             </div>
         </div>
 
@@ -1763,21 +1828,36 @@
             return `<div class="bar-col"><span class="bar-amount">${esc(m.label)}</span><div class="bar-fill" style="height:${h};background:${bg}"></div><span class="bar-label">${esc(m.mois)}</span></div>`;
         }).join('');
 
+        // Objectif annuel
+        const caAnnuelNum = parseInt(f.total_2026.replace(/[^0-9]/g, '')) || 0;
+        const objAnnuel = DATA.objectifs.ca_annuel;
+        const objAnnuelPct = objAnnuel > 0 ? Math.min(100, Math.round(caAnnuelNum / objAnnuel * 100)) : 0;
+        const objAnnuelColor = objAnnuelPct >= 80 ? 'var(--success)' : objAnnuelPct >= 50 ? 'var(--warning)' : '#ef4444';
+        const caAnnuelFmt = caAnnuelNum.toLocaleString('fr-FR');
+        const objAnnuelFmt = objAnnuel.toLocaleString('fr-FR');
+
         document.getElementById('finances-content').innerHTML = `
         <div class="grid grid-4">
             <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">Objectif annuel 2026</div>
+                <div style="display:flex;justify-content:space-between;align-items:baseline;margin:8px 0 4px;">
+                    <span class="card-value" style="font-size:1.3rem;">${caAnnuelFmt}€</span>
+                    <span style="color:var(--text-light);font-size:0.85rem;">/ ${objAnnuelFmt}€</span>
+                </div>
+                <div style="background:var(--border);border-radius:8px;height:8px;overflow:hidden;">
+                    <div style="background:${objAnnuelColor};height:100%;width:${objAnnuelPct}%;border-radius:8px;transition:width 0.5s ease;"></div>
+                </div>
+                <div style="text-align:right;font-size:0.78rem;color:var(--text-light);margin-top:4px;">${objAnnuelPct}%</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
                 <div class="card-label">CA Janvier 2026</div>
                 <div class="card-value primary">${esc(f.ca_janvier.montant)}</div>
                 <div class="card-sub">${esc(f.ca_janvier.detail)}</div>
             </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
+            <div class="card fade-in" style="animation-delay:0.2s">
                 <div class="card-label">CA Fevrier 2026</div>
                 <div class="card-value accent">${esc(f.ca_fevrier.montant)}</div>
                 <div class="card-sub">${esc(f.ca_fevrier.detail)}</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Total 2026</div>
-                <div class="card-value primary">${esc(f.total_2026)}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.25s">
                 <div class="card-label">Devis en attente</div>
@@ -2150,6 +2230,136 @@
                 <tbody id="sites-list">${rows}</tbody>
             </table>
         </div>`;
+    }
+
+    // ===== LINKEDIN =====
+    function renderLinkedin() {
+        const posts = DATA.linkedin_posts || [];
+        const now = new Date();
+        const currentMonth = now.getMonth();
+        const currentYear = now.getFullYear();
+
+        const aPublier = posts.filter(p => p.statut === 'redaction' || p.statut === 'a_publier').length;
+        const planifies = posts.filter(p => new Date(p.date) > now && p.statut !== 'publie').length;
+        const publiesMois = posts.filter(p => {
+            const d = new Date(p.date);
+            return p.statut === 'publie' && d.getMonth() === currentMonth && d.getFullYear() === currentYear;
+        }).length;
+
+        const statutToCol = { idee: 'idee', redaction: 'redaction', a_publier: 'pret', pret: 'pret', publie: 'publie' };
+        const colonneConfig = {
+            idee: { label: '💡 Idee', col: 'col-gray' },
+            redaction: { label: '✏️ Redaction', col: 'col-orange' },
+            pret: { label: '🚀 Pret a publier', col: 'col-blue' },
+            publie: { label: '✅ Publie', col: 'col-green' }
+        };
+
+        function typeBadge(type) {
+            if (type === 'article' || type === 'post') return 'badge-blue';
+            if (type === 'carousel') return 'badge-orange';
+            return 'badge-gray';
+        }
+
+        let kanbanCols = '';
+        for (const [key, cfg] of Object.entries(colonneConfig)) {
+            const items = posts.filter(p => (statutToCol[p.statut] || p.statut) === key);
+            const cards = items.map((p, i) => `<div class="kanban-card" style="animation-delay:${(0.05 + i * 0.05).toFixed(2)}s">
+                <div class="kanban-card-title">${esc(p.titre)}</div>
+                <div class="kanban-card-desc">${esc(p.date)}</div>
+                <span class="badge ${typeBadge(p.type)}">${esc(p.type)}</span>
+            </div>`).join('');
+            kanbanCols += `<div class="kanban-column ${cfg.col}">
+                <div class="kanban-column-header"><span>${cfg.label}</span><span class="count">${items.length}</span></div>
+                <div class="kanban-column-body">${cards}</div>
+            </div>`;
+        }
+
+        document.getElementById('linkedin-content').innerHTML = `
+        <div class="grid grid-4">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">A publier</div>
+                <div class="card-value accent">${aPublier}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">Planifies</div>
+                <div class="card-value primary">${planifies}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Publies ce mois</div>
+                <div class="card-value success">${publiesMois}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <div class="card-label">Engagement moyen</div>
+                <div class="card-value primary">--</div>
+            </div>
+        </div>
+        <div class="kanban-board">${kanbanCols}</div>`;
+    }
+
+    // ===== INSTAGRAM =====
+    function renderInstagram() {
+        const posts = DATA.instagram_posts || [];
+        const now = new Date();
+        const currentMonth = now.getMonth();
+        const currentYear = now.getFullYear();
+
+        const aPublier = posts.filter(p => p.statut === 'creation' || p.statut === 'a_publier').length;
+        const planifies = posts.filter(p => new Date(p.date) > now && p.statut !== 'publie').length;
+        const publiesMois = posts.filter(p => {
+            const d = new Date(p.date);
+            return p.statut === 'publie' && d.getMonth() === currentMonth && d.getFullYear() === currentYear;
+        }).length;
+
+        const statutToCol = { idee: 'idee', creation: 'creation', a_publier: 'pret', pret: 'pret', publie: 'publie' };
+        const colonneConfig = {
+            idee: { label: '💡 Idee', col: 'col-gray' },
+            creation: { label: '🎨 Creation', col: 'col-orange' },
+            pret: { label: '🚀 Pret a publier', col: 'col-blue' },
+            publie: { label: '✅ Publie', col: 'col-green' }
+        };
+
+        function typeBadge(type) {
+            if (type === 'article' || type === 'post') return 'badge-blue';
+            if (type === 'carousel') return 'badge-orange';
+            if (type === 'reel') return 'badge-purple';
+            if (type === 'story') return 'badge-gray';
+            return 'badge-gray';
+        }
+
+        let kanbanCols = '';
+        for (const [key, cfg] of Object.entries(colonneConfig)) {
+            const items = posts.filter(p => (statutToCol[p.statut] || p.statut) === key);
+            const cards = items.map((p, i) => `<div class="kanban-card" style="animation-delay:${(0.05 + i * 0.05).toFixed(2)}s">
+                <div class="kanban-card-title">${esc(p.titre)}</div>
+                <div class="kanban-card-desc">${esc(p.date)}</div>
+                <span class="badge ${typeBadge(p.type)}">${esc(p.type)}</span>
+            </div>`).join('');
+            kanbanCols += `<div class="kanban-column ${cfg.col}">
+                <div class="kanban-column-header"><span>${cfg.label}</span><span class="count">${items.length}</span></div>
+                <div class="kanban-column-body">${cards}</div>
+            </div>`;
+        }
+
+        document.getElementById('instagram-content').innerHTML = `
+        <div class="grid grid-4">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div class="card-label">A publier</div>
+                <div class="card-value accent">${aPublier}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">Planifies</div>
+                <div class="card-value primary">${planifies}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.2s">
+                <div class="card-label">Publies ce mois</div>
+                <div class="card-value success">${publiesMois}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <div class="card-label">Engagement moyen</div>
+                <div class="card-value primary">--</div>
+            </div>
+        </div>
+        <div class="kanban-board">${kanbanCols}</div>`;
     }
 
     // ===== GLOBAL FUNCTIONS =====
