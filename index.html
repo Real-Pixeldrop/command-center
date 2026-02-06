@@ -1513,29 +1513,10 @@
         }).join('');
 
         document.getElementById('clients-content').innerHTML = `
-        <div class="grid grid-4">
-            <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">Total clients</div>
-                <div class="card-value primary">${total}</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">Clients actifs</div>
-                <div class="card-value success">${actifs}</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">CA total</div>
-                <div class="card-value accent">${caTotalFmt}€</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.25s">
-                <div class="card-label">Sans contact > 3 mois</div>
-                <div class="card-value" style="color:#ef4444;">${sansContact3m}</div>
-            </div>
-        </div>
-
         <div class="search-bar">
             <input type="text" class="search-input" placeholder="Rechercher un client..." oninput="searchTable('clients-list', this.value)">
-            <button class="filter-btn active" onclick="filterClientsByAge('all', this)">Tous</button>
-            <button class="filter-btn" onclick="filterClientsByAge(90, this)">> 3 mois</button>
+            <button class="filter-btn active" onclick="filterClientsByAge('all', this)">Tous (${total})</button>
+            <button class="filter-btn" onclick="filterClientsByAge(90, this)">> 3 mois (${sansContact3m})</button>
         </div>
 
         <div class="card table-card fade-in" style="animation-delay:0.3s">
