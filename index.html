@@ -1360,7 +1360,7 @@
 
         document.getElementById('dash-content').innerHTML = `
         <div class="grid grid-4">
-            <div class="card fade-in" style="animation-delay:0.1s">
+            <div class="card fade-in" style="animation-delay:0.1s;cursor:pointer;" onclick="switchTab('finances', document.querySelector('[onclick*=finances]'))">
                 <div class="card-label">Objectif ${esc(obj.mois)}</div>
                 <div style="display:flex;justify-content:space-between;align-items:baseline;margin:8px 0 4px;">
                     <span class="card-value" style="font-size:1.3rem;">${caActuelFmt}€</span>
@@ -1371,18 +1371,18 @@
                 </div>
                 <div style="text-align:right;font-size:0.78rem;color:var(--text-light);margin-top:4px;">${obj.pct}%</div>
             </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
+            <div class="card fade-in" style="animation-delay:0.15s;cursor:pointer;" onclick="switchTab('finances', document.querySelector('[onclick*=finances]'))">
                 <div class="card-label">CA annuel 2026</div>
                 <div class="card-value accent">${esc(DATA.finances.total_2026)}</div>
                 <div class="card-sub">objectif : 100 000€</div>
                 <div class="progress-bar" style="margin-top:10px;"><div class="progress-fill accent" style="width:${caPct}%"></div></div>
             </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
+            <div class="card fade-in" style="animation-delay:0.2s;cursor:pointer;" onclick="switchTab('devis', document.querySelector('[onclick*=devis]'))">
                 <div class="card-label">Devis en attente</div>
                 <div class="card-value accent">${DATA.devis_kpis.en_attente.count}</div>
                 <div class="card-sub">${esc(DATA.devis_kpis.en_attente.montant)}</div>
             </div>
-            <div class="card fade-in" style="animation-delay:0.25s">
+            <div class="card fade-in" style="animation-delay:0.25s;cursor:pointer;" onclick="switchTab('devis', document.querySelector('[onclick*=devis]'))">
                 <div class="card-label">Relances</div>
                 <div class="card-value" style="color:${relanceColor};">${relanceCount}</div>
                 <div class="card-sub">${relanceCount > 0 ? 'devis sans reponse > 7j' : 'aucune relance'}</div>
@@ -1435,14 +1435,14 @@
 
         <div class="grid grid-2">
             <div class="card table-card fade-in" style="animation-delay:0.5s">
-                <div class="table-header">Projets en cours</div>
+                <div class="table-header" style="cursor:pointer;" onclick="switchTab('projets', document.querySelector('[onclick*=projets]'))">Projets en cours <span style="font-size:0.75rem;opacity:0.5;">→</span></div>
                 <table>
                     <thead><tr><th>Projet</th><th>Client</th><th>Statut</th></tr></thead>
                     <tbody>${projRows}</tbody>
                 </table>
             </div>
             <div class="card table-card fade-in" style="animation-delay:0.35s">
-                <div class="table-header">Taches en cours</div>
+                <div class="table-header" style="cursor:pointer;" onclick="switchTab('taches', document.querySelector('[onclick*=taches]'))">Taches en cours <span style="font-size:0.75rem;opacity:0.5;">→</span></div>
                 <table>
                     <thead><tr><th>Tache</th><th>Type</th></tr></thead>
                     <tbody>${tacheRows}</tbody>
