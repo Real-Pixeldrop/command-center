@@ -403,6 +403,275 @@
         .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
         .filter-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
 
+        /* ===== SESSION PROSPECTION ===== */
+        .session-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: #f0f2f5;
+            z-index: 9999;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .session-container {
+            width: 100%;
+            max-width: 480px;
+            padding: 16px 20px 32px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .session-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .session-counter {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .session-close {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+            padding: 0 4px;
+            line-height: 1;
+        }
+
+        .session-rappel-badge {
+            background: var(--warning);
+            color: white;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            align-self: flex-start;
+        }
+
+        .session-company {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .session-contact {
+            font-size: 1rem;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+
+        .session-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .session-phone-btn {
+            display: block;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 16px;
+            border-radius: 14px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            transition: transform 0.1s;
+        }
+
+        .session-phone-btn:active { transform: scale(0.97); }
+
+        .session-site-link {
+            display: block;
+            text-align: center;
+            color: var(--accent);
+            font-size: 0.85rem;
+            text-decoration: none;
+            margin-bottom: 16px;
+            padding: 6px;
+        }
+
+        .session-script {
+            background: white;
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 14px;
+            border: 1px solid var(--border);
+        }
+
+        .script-section { margin-bottom: 12px; }
+        .script-section:last-child { margin-bottom: 0; }
+
+        .script-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--accent);
+            margin-bottom: 3px;
+        }
+
+        .script-text {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        .session-note-input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 14px;
+            background: white;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .session-note-input:focus { border-color: var(--accent); }
+
+        .session-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .session-btn {
+            padding: 16px 10px;
+            border: none;
+            border-radius: 14px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            transition: transform 0.1s, opacity 0.1s;
+            color: white;
+        }
+
+        .session-btn:active { transform: scale(0.95); opacity: 0.9; }
+
+        .btn-key {
+            font-size: 0.68rem;
+            opacity: 0.7;
+            font-weight: 400;
+        }
+
+        .btn-no-answer { background: #94a3b8; }
+        .btn-not-interested { background: #ef4444; }
+        .btn-callback { background: #f59e0b; }
+        .btn-interested { background: #10b981; }
+
+        .session-send-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            transition: transform 0.1s;
+        }
+
+        .session-send-btn:active { transform: scale(0.97); }
+
+        .recap-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .recap-card {
+            background: white;
+            border-radius: 12px;
+            padding: 14px 8px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .recap-number {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .recap-label {
+            font-size: 0.65rem;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        .recap-details {
+            background: white;
+            border-radius: 14px;
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+        }
+
+        .recap-row {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.88rem;
+        }
+
+        .recap-row:last-child { border-bottom: none; }
+
+        @media (max-width: 600px) {
+            .session-container { padding: 12px 16px 24px; }
+            .session-company { font-size: 1.3rem; }
+            .recap-grid { grid-template-columns: repeat(3, 1fr); }
+            .session-phone-btn { font-size: 1.1rem; padding: 14px; }
+        }
+
+        .start-session-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.1s, box-shadow 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .start-session-btn:hover {
+            box-shadow: 0 4px 14px rgba(28, 187, 200, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .start-session-btn:active { transform: scale(0.97); }
+
         /* ===== ANIMATIONS ===== */
         .fade-in {
             opacity: 0;
@@ -1637,7 +1906,15 @@
         const rdvPct = p.objectifs.rdv.goal > 0 ? Math.round(p.objectifs.rdv.current / p.objectifs.rdv.goal * 100) : 0;
         const devPct = p.objectifs.devis.goal > 0 ? Math.round(p.objectifs.devis.current / p.objectifs.devis.goal * 100) : 0;
 
+        const nbRappel = prospects.filter(pr => pr.etape && pr.etape.includes('rappeler')).length;
+        const nbContacter = prospects.filter(pr => pr.etape && pr.etape.includes('contacter')).length;
+        const nbCallable = nbRappel + nbContacter;
+
         document.getElementById('prospection-content').innerHTML = `
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap;">
+            <button class="start-session-btn" onclick="startSession()">📞 Lancer session (15 appels)</button>
+            <span style="font-size:0.85rem;color:var(--text-light);">${nbCallable} prospects disponibles${nbRappel > 0 ? ' dont ' + nbRappel + ' a rappeler' : ''}</span>
+        </div>
         <div class="grid grid-4">
             <div class="card fade-in" style="animation-delay:0.1s">
                 <div class="card-label">Prospects a contacter</div>
@@ -2977,8 +3254,270 @@
     }
     // Backwards compat alias
     function closeClientPanel() { closePanel(); }
+
+    // ===== SESSION PROSPECTION (Power Hour) =====
+    let sessionState = {
+        active: false,
+        prospects: [],
+        currentIndex: 0,
+        results: [],
+        startTime: null,
+        sessionSize: 15
+    };
+
+    function startSession() {
+        // Priorite: A rappeler d'abord, puis A contacter
+        const rappeler = DATA.prospects.filter(p => p.etape && p.etape.includes('rappeler'));
+        const aContacter = DATA.prospects.filter(p => p.etape && p.etape.includes('contacter'));
+        const allProspects = [...rappeler, ...aContacter];
+
+        if (allProspects.length === 0) {
+            alert('Aucun prospect a contacter !');
+            return;
+        }
+
+        sessionState.active = true;
+        sessionState.prospects = allProspects.slice(0, sessionState.sessionSize);
+        sessionState.currentIndex = 0;
+        sessionState.results = [];
+        sessionState.startTime = Date.now();
+
+        document.getElementById('session-overlay').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        renderSessionCard();
+    }
+
+    function endSession() {
+        sessionState.active = false;
+        document.getElementById('session-overlay').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    function renderSessionCard() {
+        const overlay = document.getElementById('session-overlay');
+        const idx = sessionState.currentIndex;
+        const total = sessionState.prospects.length;
+
+        // Session terminee ?
+        if (idx >= total) {
+            renderSessionRecap();
+            return;
+        }
+
+        const p = sessionState.prospects[idx];
+        const prenom = p.contact ? p.contact.split(' ')[0] : 'le responsable';
+        const elapsed = Math.floor((Date.now() - sessionState.startTime) / 60000);
+        const remaining = DATA.prospects.filter(pr => pr.etape && (pr.etape.includes('contacter') || pr.etape.includes('rappeler'))).length - idx;
+        const isRappel = p.etape && p.etape.includes('rappeler');
+
+        overlay.innerHTML = `
+        <div class="session-container">
+            <div class="session-top">
+                <div class="session-counter">Appel ${idx + 1}/${total} &middot; ${elapsed} min &middot; Reste ${remaining} prospects</div>
+                <button class="session-close" onclick="endSession()">&times;</button>
+            </div>
+
+            ${isRappel ? '<div class="session-rappel-badge">RAPPEL</div>' : ''}
+
+            <div class="session-company">${esc(p.entreprise)}</div>
+            <div class="session-contact">${esc(p.contact || '--')}</div>
+            <div class="session-meta">${esc(p.secteur || '')} ${p.ville ? '&middot; ' + esc(p.ville) : ''}</div>
+
+            <a href="tel:${esc((p.telephone || '').replace(/\s/g, ''))}" class="session-phone-btn">
+                📞 ${esc(p.telephone || 'Pas de tel')}
+            </a>
+
+            ${p.site_web ? '<a href="' + esc(p.site_web) + '" target="_blank" class="session-site-link">🌐 Voir le site</a>' : ''}
+
+            <div class="session-script">
+                <div class="script-section">
+                    <div class="script-label">ACCROCHE</div>
+                    <div class="script-text">"Bonjour, je souhaiterais parler a ${esc(prenom)} s'il vous plait"</div>
+                </div>
+                <div class="script-section">
+                    <div class="script-label">SI "C'EST POUR QUOI ?"</div>
+                    <div class="script-text">"Je suis Akli, de Pixel Drop. On accompagne les entreprises ${p.secteur ? 'du ' + esc(p.secteur) : ''} a gagner en productivite grace a l'IA. Je voulais echanger rapidement avec ${esc(prenom)}."</div>
+                </div>
+                <div class="script-section">
+                    <div class="script-label">SI BARRAGE</div>
+                    <div class="script-text">"C'est tres rapide, c'est au sujet de l'intelligence artificielle et de la productivite de l'entreprise"</div>
+                </div>
+                <div class="script-section">
+                    <div class="script-label">SI BON INTERLOCUTEUR</div>
+                    <div class="script-text">"Bonjour ${esc(prenom)}, je suis Akli de Pixel Drop. On aide les entreprises comme la votre a gagner du temps grace a l'IA. Est-ce que vous avez commence a l'integrer dans votre activite ?"</div>
+                </div>
+            </div>
+
+            <input type="text" class="session-note-input" id="session-note" placeholder="Note rapide (optionnel)..." />
+
+            <div class="session-buttons">
+                <button class="session-btn btn-no-answer" onclick="sessionAction('pas_repondu')">
+                    <span class="btn-key">1</span>
+                    <span>Pas de reponse</span>
+                </button>
+                <button class="session-btn btn-not-interested" onclick="sessionAction('pas_interesse')">
+                    <span class="btn-key">2</span>
+                    <span>Pas interesse</span>
+                </button>
+                <button class="session-btn btn-callback" onclick="sessionAction('rappeler')">
+                    <span class="btn-key">3</span>
+                    <span>A rappeler</span>
+                </button>
+                <button class="session-btn btn-interested" onclick="sessionAction('interesse')">
+                    <span class="btn-key">4</span>
+                    <span>Interesse / RDV</span>
+                </button>
+            </div>
+        </div>`;
+    }
+
+    function sessionAction(action) {
+        const p = sessionState.prospects[sessionState.currentIndex];
+        const note = document.getElementById('session-note') ? document.getElementById('session-note').value.trim() : '';
+
+        sessionState.results.push({
+            entreprise: p.entreprise,
+            contact: p.contact,
+            telephone: p.telephone,
+            action: action,
+            note: note
+        });
+
+        // Update prospect etape in local DATA
+        const idx = DATA.prospects.findIndex(pr => pr.entreprise === p.entreprise && pr.telephone === p.telephone);
+        if (idx !== -1) {
+            if (action === 'pas_interesse') DATA.prospects[idx].etape = '❌ Pas intéressé';
+            else if (action === 'rappeler') DATA.prospects[idx].etape = '🔄 À rappeler';
+            else if (action === 'interesse') DATA.prospects[idx].etape = '✅ Intéressé';
+            else if (action === 'pas_repondu') DATA.prospects[idx].etape = '📵 Pas répondu';
+        }
+
+        sessionState.currentIndex++;
+        renderSessionCard();
+    }
+
+    function renderSessionRecap() {
+        const overlay = document.getElementById('session-overlay');
+        const elapsed = Math.floor((Date.now() - sessionState.startTime) / 60000);
+        const results = sessionState.results;
+
+        const pasRepondu = results.filter(r => r.action === 'pas_repondu').length;
+        const pasInteresse = results.filter(r => r.action === 'pas_interesse').length;
+        const rappeler = results.filter(r => r.action === 'rappeler').length;
+        const interesse = results.filter(r => r.action === 'interesse').length;
+
+        // Build text summary for Claudia
+        let summary = `SESSION PROSPECTION ${new Date().toLocaleDateString('fr-FR')}\n`;
+        summary += `${results.length} appels en ${elapsed} min\n\n`;
+        results.forEach((r, i) => {
+            let status = '';
+            if (r.action === 'pas_repondu') status = 'Pas repondu';
+            if (r.action === 'pas_interesse') status = 'Pas interesse';
+            if (r.action === 'rappeler') status = 'A rappeler';
+            if (r.action === 'interesse') status = 'INTERESSE';
+            summary += `${i+1}. ${r.entreprise} (${r.contact}) - ${status}`;
+            if (r.note) summary += ` - Note: ${r.note}`;
+            summary += `\n`;
+        });
+        summary += `\nRESUME: ${pasRepondu} pas repondu, ${pasInteresse} pas interesse, ${rappeler} a rappeler, ${interesse} interesse`;
+
+        // Save to localStorage
+        const sessions = JSON.parse(localStorage.getItem('prospection_sessions') || '[]');
+        sessions.push({
+            date: new Date().toISOString(),
+            results: results,
+            duration: elapsed
+        });
+        localStorage.setItem('prospection_sessions', JSON.stringify(sessions));
+        localStorage.setItem('last_session_summary', summary);
+
+        overlay.innerHTML = `
+        <div class="session-container">
+            <div class="session-top">
+                <div class="session-counter">Session terminee - ${elapsed} min</div>
+                <button class="session-close" onclick="endSession(); renderProspection();">&times;</button>
+            </div>
+
+            <div class="session-company" style="font-size:1.4rem;margin-top:20px;">Session terminee !</div>
+
+            <div class="recap-grid">
+                <div class="recap-card">
+                    <div class="recap-number">${results.length}</div>
+                    <div class="recap-label">Appels</div>
+                </div>
+                <div class="recap-card">
+                    <div class="recap-number">${pasRepondu}</div>
+                    <div class="recap-label">Pas repondu</div>
+                </div>
+                <div class="recap-card">
+                    <div class="recap-number">${pasInteresse}</div>
+                    <div class="recap-label">Pas interesse</div>
+                </div>
+                <div class="recap-card">
+                    <div class="recap-number" style="color:var(--warning)">${rappeler}</div>
+                    <div class="recap-label">A rappeler</div>
+                </div>
+                <div class="recap-card">
+                    <div class="recap-number" style="color:var(--success)">${interesse}</div>
+                    <div class="recap-label">Interesse</div>
+                </div>
+            </div>
+
+            <div class="recap-details">
+                ${results.map((r, i) => {
+                    let icon = '';
+                    if (r.action === 'pas_repondu') icon = '📵';
+                    if (r.action === 'pas_interesse') icon = '❌';
+                    if (r.action === 'rappeler') icon = '🔄';
+                    if (r.action === 'interesse') icon = '✅';
+                    return `<div class="recap-row">${icon} ${esc(r.entreprise)}${r.note ? ' <span style="color:var(--text-light);font-size:0.8rem;">- ' + esc(r.note) + '</span>' : ''}</div>`;
+                }).join('')}
+            </div>
+
+            <button class="session-send-btn" onclick="copySessionSummary()">
+                📋 Copier le resume pour Claudia
+            </button>
+
+            <div class="session-buttons" style="margin-top:12px;">
+                <button class="session-btn btn-callback" onclick="endSession(); renderProspection(); startSession();" style="flex:1;">
+                    Encore ${sessionState.sessionSize} appels
+                </button>
+                <button class="session-btn btn-no-answer" onclick="endSession(); renderProspection();" style="flex:1;">
+                    Terminer
+                </button>
+            </div>
+        </div>`;
+    }
+
+    function copySessionSummary() {
+        const summary = localStorage.getItem('last_session_summary') || '';
+        navigator.clipboard.writeText(summary).then(() => {
+            const btn = document.querySelector('.session-send-btn');
+            if (btn) {
+                btn.textContent = '✅ Copie ! Colle sur iMessage';
+                btn.style.background = 'var(--success)';
+                setTimeout(() => {
+                    btn.textContent = '📋 Copier le resume pour Claudia';
+                    btn.style.background = '';
+                }, 2000);
+            }
+        });
+    }
+
+    // Raccourcis clavier 1-2-3-4
+    document.addEventListener('keydown', function(e) {
+        if (!sessionState.active) return;
+        if (sessionState.currentIndex >= sessionState.prospects.length) return;
+        if (document.activeElement && document.activeElement.tagName === 'INPUT') return;
+
+        if (e.key === '1') sessionAction('pas_repondu');
+        else if (e.key === '2') sessionAction('pas_interesse');
+        else if (e.key === '3') sessionAction('rappeler');
+        else if (e.key === '4') sessionAction('interesse');
+    });
 </script>
 
+<div class="session-overlay" id="session-overlay"></div>
 <div class="client-panel-overlay" id="client-panel-overlay" onclick="closePanel()"></div>
 <div class="client-panel" id="client-panel"></div>
 </body>
