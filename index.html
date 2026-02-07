@@ -7,6 +7,108 @@
     <title>Pixel Drop - Control Center</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* ===== LOCK SCREEN ===== */
+        .lock-screen {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: #1a1a2e;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .lock-screen.hidden { display: none; }
+
+        .lock-logo {
+            width: 60px;
+            height: 60px;
+            opacity: 0.9;
+        }
+
+        .lock-title {
+            color: rgba(255,255,255,0.6);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .lock-dots {
+            display: flex;
+            gap: 14px;
+            margin: 8px 0 20px;
+        }
+
+        .lock-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.3);
+            background: transparent;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .lock-dot.filled {
+            background: #1CBBC8;
+            border-color: #1CBBC8;
+        }
+
+        .lock-dot.error {
+            background: #ef4444;
+            border-color: #ef4444;
+        }
+
+        .lock-keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 72px);
+            gap: 12px;
+        }
+
+        .lock-key {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.05);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.15s, transform 0.1s;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        .lock-key:active {
+            background: rgba(255,255,255,0.15);
+            transform: scale(0.93);
+        }
+
+        .lock-key.empty {
+            border: none;
+            background: none;
+            cursor: default;
+        }
+
+        .lock-key.delete {
+            font-size: 1rem;
+        }
+
+        @keyframes lockShake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+
+        .lock-dots.shake { animation: lockShake 0.3s ease; }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
@@ -1275,6 +1377,91 @@
     </style>
 </head>
 <body>
+
+<!-- LOCK SCREEN -->
+<div class="lock-screen" id="lockScreen">
+    <img src="logo.svg" class="lock-logo" alt="Pixel Drop">
+    <div class="lock-title">CONTROL CENTER</div>
+    <div class="lock-dots" id="lockDots">
+        <div class="lock-dot"></div>
+        <div class="lock-dot"></div>
+        <div class="lock-dot"></div>
+        <div class="lock-dot"></div>
+    </div>
+    <div class="lock-keypad">
+        <button class="lock-key" onclick="lockInput('1')">1</button>
+        <button class="lock-key" onclick="lockInput('2')">2</button>
+        <button class="lock-key" onclick="lockInput('3')">3</button>
+        <button class="lock-key" onclick="lockInput('4')">4</button>
+        <button class="lock-key" onclick="lockInput('5')">5</button>
+        <button class="lock-key" onclick="lockInput('6')">6</button>
+        <button class="lock-key" onclick="lockInput('7')">7</button>
+        <button class="lock-key" onclick="lockInput('8')">8</button>
+        <button class="lock-key" onclick="lockInput('9')">9</button>
+        <button class="lock-key empty"></button>
+        <button class="lock-key" onclick="lockInput('0')">0</button>
+        <button class="lock-key delete" onclick="lockDelete()">&#9003;</button>
+    </div>
+</div>
+<script>
+(function() {
+    const CODE = '0239';
+    const STORAGE_KEY = 'cc_auth';
+
+    // Check if already authenticated this session
+    if (sessionStorage.getItem(STORAGE_KEY) === 'ok') {
+        document.getElementById('lockScreen').classList.add('hidden');
+    }
+
+    let entered = '';
+    const dots = document.getElementById('lockDots').children;
+
+    window.lockInput = function(n) {
+        if (entered.length >= 4) return;
+        entered += n;
+        for (let i = 0; i < 4; i++) {
+            dots[i].classList.toggle('filled', i < entered.length);
+            dots[i].classList.remove('error');
+        }
+        if (entered.length === 4) {
+            setTimeout(function() {
+                if (entered === CODE) {
+                    sessionStorage.setItem(STORAGE_KEY, 'ok');
+                    document.getElementById('lockScreen').classList.add('hidden');
+                } else {
+                    const dotsEl = document.getElementById('lockDots');
+                    for (let i = 0; i < 4; i++) {
+                        dots[i].classList.remove('filled');
+                        dots[i].classList.add('error');
+                    }
+                    dotsEl.classList.add('shake');
+                    setTimeout(function() {
+                        dotsEl.classList.remove('shake');
+                        for (let i = 0; i < 4; i++) dots[i].classList.remove('error');
+                        entered = '';
+                    }, 400);
+                }
+            }, 150);
+        }
+    };
+
+    window.lockDelete = function() {
+        if (entered.length > 0) {
+            entered = entered.slice(0, -1);
+            for (let i = 0; i < 4; i++) {
+                dots[i].classList.toggle('filled', i < entered.length);
+            }
+        }
+    };
+
+    // Keyboard support
+    document.addEventListener('keydown', function(e) {
+        if (document.getElementById('lockScreen').classList.contains('hidden')) return;
+        if (e.key >= '0' && e.key <= '9') lockInput(e.key);
+        else if (e.key === 'Backspace') lockDelete();
+    });
+})();
+</script>
 
 <!-- SIDEBAR OVERLAY (mobile) -->
 <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeMobileMenu()"></div>
