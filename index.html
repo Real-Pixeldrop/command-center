@@ -3282,8 +3282,9 @@
 
     function startSession() {
         // Priorite: A rappeler d'abord, puis A contacter
-        const rappeler = DATA.prospects.filter(p => p.etape && p.etape.includes('rappeler'));
-        const aContacter = DATA.prospects.filter(p => p.etape && p.etape.includes('contacter'));
+        const hasTel = p => p.telephone && p.telephone.trim() !== '';
+        const rappeler = DATA.prospects.filter(p => hasTel(p) && p.etape && p.etape.includes('rappeler'));
+        const aContacter = DATA.prospects.filter(p => hasTel(p) && p.etape && p.etape.includes('contacter'));
         const allProspects = [...rappeler, ...aContacter];
 
         if (allProspects.length === 0) {
