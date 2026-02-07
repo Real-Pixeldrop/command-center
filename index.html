@@ -419,7 +419,7 @@
         .session-container {
             width: 100%;
             max-width: 480px;
-            padding: 16px 20px 32px;
+            padding: 16px 20px 16px;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -515,6 +515,10 @@
             border: 1px solid var(--border);
         }
 
+        .session-script.collapsed .script-body { display: none; }
+        .session-script.collapsed .script-arrow { transform: rotate(-90deg); }
+        .session-script.collapsed { padding-bottom: 10px; }
+
         .script-section { margin-bottom: 12px; }
         .script-section:last-child { margin-bottom: 0; }
 
@@ -550,22 +554,33 @@
 
         .session-buttons {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(4, 1fr);
             gap: 10px;
+            position: sticky;
+            bottom: 0;
+            padding: 12px 0 4px;
+            background: linear-gradient(to bottom, transparent, #f0f2f5 8px);
+            z-index: 10;
+        }
+
+        @media (max-width: 600px) {
+            .session-buttons {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         .session-btn {
-            padding: 16px 10px;
+            padding: 14px 8px;
             border: none;
             border-radius: 14px;
             font-family: 'Inter', sans-serif;
-            font-size: 0.88rem;
+            font-size: 0.82rem;
             font-weight: 600;
             cursor: pointer;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 4px;
+            gap: 3px;
             transition: transform 0.1s, opacity 0.1s;
             color: white;
         }
@@ -3330,6 +3345,11 @@
             ${p.site_web ? '<a href="' + esc(p.site_web) + '" target="_blank" class="session-site-link">🌐 Voir le site</a>' : ''}
 
             <div class="session-script">
+                <div class="script-toggle" onclick="this.parentElement.classList.toggle('collapsed')" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;margin-bottom:8px;">
+                    <span style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-light);">Script d'appel</span>
+                    <span class="script-arrow" style="font-size:0.7rem;color:var(--text-light);transition:transform 0.2s;">▼</span>
+                </div>
+                <div class="script-body">
                 <div class="script-section">
                     <div class="script-label">ACCROCHE</div>
                     <div class="script-text">"Bonjour, je souhaiterais parler a ${esc(prenom)} s'il vous plait"</div>
@@ -3345,6 +3365,7 @@
                 <div class="script-section">
                     <div class="script-label">SI BON INTERLOCUTEUR</div>
                     <div class="script-text">"Bonjour ${esc(prenom)}, je suis Akli de Pixel Drop. On aide les entreprises comme la votre a gagner du temps grace a l'IA. Est-ce que vous avez commence a l'integrer dans votre activite ?"</div>
+                </div>
                 </div>
             </div>
 
