@@ -1710,34 +1710,189 @@
         <h1 class="page-title">Claudia</h1>
         <p class="page-subtitle">État de tous les systèmes automatisés</p>
         
-        <!-- SECTION 1: Heartbeats -->
-        <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:10px;">Heartbeats</h2>
-        <div class="grid grid-4 fade-in" style="animation-delay:0.1s">
-            <div class="card">
-                <div class="card-label">Agent Main (Claudia)</div>
-                <div class="card-value primary">30min</div>
-                <div class="card-sub">model Sonnet</div>
-                <span class="badge badge-green" style="margin-top:8px;">Actif</span>
+        <!-- SECTION 1: Mes Agents -->
+        <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:10px;">Mes Agents</h2>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 30px;" id="agents-grid">
+            <!-- Agent 1: CLAUDIA -->
+            <div class="card agent-card fade-in" style="animation-delay:0.1s; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-radius: 12px;">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; background: #1CBBC8; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.3rem; flex-shrink: 0;">C</div>
+                    <div style="flex: 1; min-width: 0;">
+                        <h3 style="margin: 0 0 4px 0; font-weight: 700;">CLAUDIA</h3>
+                        <small style="color: var(--text-light); font-size: 0.85rem;">Assistante personnelle</small>
+                    </div>
+                </div>
+                <p style="font-size: 0.9rem; margin-bottom: 12px; line-height: 1.4; color: var(--text);">Gestion complete : emails, calendrier, CRM, pipeline, prospection, coaching. Canal principal iMessage.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px;">
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">emails</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">calendrier</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">CRM Notion</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">WhatsApp</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">Pennylane</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">web</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">fichiers</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <a href="https://t.me/akli_ia_bot" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 0.85rem; padding: 4px 8px; border: 1px solid var(--primary); border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; transition: background 0.2s;">
+                        ✈ Telegram
+                    </a>
+                    <span style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.75rem; padding: 3px 8px; border-radius: 10px; font-weight: 600;">30min</span>
+                </div>
             </div>
-            <div class="card">
-                <div class="card-label">Agent Plaza Marketing (Valentina)</div>
-                <div class="card-value primary">15min</div>
-                <div class="card-sub">model Haiku</div>
-                <span class="badge badge-green" style="margin-top:8px;">Actif</span>
+
+            <!-- Agent 2: VALENTINA -->
+            <div class="card agent-card fade-in" style="animation-delay:0.2s; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-radius: 12px;">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; background: #e91e63; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.3rem; flex-shrink: 0;">V</div>
+                    <div style="flex: 1; min-width: 0;">
+                        <h3 style="margin: 0 0 4px 0; font-weight: 700;">VALENTINA</h3>
+                        <small style="color: var(--text-light); font-size: 0.85rem;">Marketing Plaza Tango</small>
+                    </div>
+                </div>
+                <p style="font-size: 0.9rem; margin-bottom: 12px; line-height: 1.4; color: var(--text);">Strategie marketing festival : Instagram, newsletters Brevo, blog WordPress, suivi Stripe, dashboard.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px;">
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">web</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">fichiers</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">emails</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">Stripe</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">Brevo</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">WordPress</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">browser</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <a href="https://t.me/valentina_marketing_akli_bot" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 0.85rem; padding: 4px 8px; border: 1px solid var(--primary); border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; transition: background 0.2s;">
+                        ✈ Telegram
+                    </a>
+                    <span style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.75rem; padding: 3px 8px; border-radius: 10px; font-weight: 600;">15min</span>
+                </div>
             </div>
-            <div class="card">
-                <div class="card-label">Agent Clea</div>
-                <div class="card-value primary">30min</div>
-                <div class="card-sub">model Haiku</div>
-                <span class="badge badge-green" style="margin-top:8px;">Actif</span>
+
+            <!-- Agent 3: CLEA -->
+            <div class="card agent-card fade-in" style="animation-delay:0.3s; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-radius: 12px;">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; background: #9c27b0; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.3rem; flex-shrink: 0;">C</div>
+                    <div style="flex: 1; min-width: 0;">
+                        <h3 style="margin: 0 0 4px 0; font-weight: 700;">CLEA</h3>
+                        <small style="color: var(--text-light); font-size: 0.85rem;">Marketing Pixel Drop</small>
+                    </div>
+                </div>
+                <p style="font-size: 0.9rem; margin-bottom: 12px; line-height: 1.4; color: var(--text);">Visibilite Pixel Drop : contenu, leads, branding, communication digitale.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px;">
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">web</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">fichiers</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">emails</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">browser</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <a href="https://t.me/clea_pixeldrop_bot" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 0.85rem; padding: 4px 8px; border: 1px solid var(--primary); border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; transition: background 0.2s;">
+                        ✈ Telegram
+                    </a>
+                    <span style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.75rem; padding: 3px 8px; border-radius: 10px; font-weight: 600;">30min</span>
+                </div>
             </div>
-            <div class="card">
-                <div class="card-label">Agent Jarvis</div>
-                <div class="card-value primary">30min</div>
-                <div class="card-sub">model Sonnet</div>
-                <span class="badge badge-green" style="margin-top:8px;">Actif</span>
+
+            <!-- Agent 4: JARVIS -->
+            <div class="card agent-card fade-in" style="animation-delay:0.4s; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-radius: 12px;">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; background: #607d8b; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.3rem; flex-shrink: 0;">J</div>
+                    <div style="flex: 1; min-width: 0;">
+                        <h3 style="margin: 0 0 4px 0; font-weight: 700;">JARVIS</h3>
+                        <small style="color: var(--text-light); font-size: 0.85rem;">Majordome personnel</small>
+                    </div>
+                </div>
+                <p style="font-size: 0.9rem; margin-bottom: 12px; line-height: 1.4; color: var(--text);">Assistant formel style majordome britannique. Vouvoie, anticipe, execute avec discretion.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px;">
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">tous (herité defaults)</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <a href="https://t.me/jarvis_akli_bot" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 0.85rem; padding: 4px 8px; border: 1px solid var(--primary); border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; transition: background 0.2s;">
+                        ✈ Telegram
+                    </a>
+                    <span style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.75rem; padding: 3px 8px; border-radius: 10px; font-weight: 600;">30min</span>
+                </div>
+            </div>
+
+            <!-- Agent 5: MIKE -->
+            <div class="card agent-card fade-in" style="animation-delay:0.5s; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-radius: 12px;">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; background: #ff5722; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.3rem; flex-shrink: 0;">M</div>
+                    <div style="flex: 1; min-width: 0;">
+                        <h3 style="margin: 0 0 4px 0; font-weight: 700;">MIKE</h3>
+                        <small style="color: var(--text-light); font-size: 0.85rem;">Coach muscu Heavy Duty</small>
+                    </div>
+                </div>
+                <p style="font-size: 0.9rem; margin-bottom: 12px; line-height: 1.4; color: var(--text);">Coaching musculation style Mike Mentzer. Suivi seances, nutrition, progression. Parle en anglais.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px;">
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">web</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">fichiers</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">exec</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">messages</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">cron</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <a href="https://t.me/mike_akli_bot" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 0.85rem; padding: 4px 8px; border: 1px solid var(--primary); border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; transition: background 0.2s;">
+                        ✈ Telegram
+                    </a>
+                    <span style="background: #f3f4f6; color: #4b5563; font-size: 0.75rem; padding: 3px 8px; border-radius: 10px; font-weight: 600;">non</span>
+                </div>
+            </div>
+
+            <!-- Agent 6: DONALD -->
+            <div class="card agent-card fade-in" style="animation-delay:0.6s; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-radius: 12px;">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; background: #f44336; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.3rem; flex-shrink: 0;">D</div>
+                    <div style="flex: 1; min-width: 0;">
+                        <h3 style="margin: 0 0 4px 0; font-weight: 700;">DONALD</h3>
+                        <small style="color: var(--text-light); font-size: 0.85rem;">Sparring partner business</small>
+                    </div>
+                </div>
+                <p style="font-size: 0.9rem; margin-bottom: 12px; line-height: 1.4; color: var(--text);">Challenge les pitchs, negocie dur, trouve les failles. Style Trump : confiance absolue.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px;">
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">web</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">fichiers</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">exec</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <a href="https://t.me/trump_akli_bot" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 0.85rem; padding: 4px 8px; border: 1px solid var(--primary); border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; transition: background 0.2s;">
+                        ✈ Telegram
+                    </a>
+                    <span style="background: #f3f4f6; color: #4b5563; font-size: 0.75rem; padding: 3px 8px; border-radius: 10px; font-weight: 600;">non</span>
+                </div>
+            </div>
+
+            <!-- Agent 7: ALMA -->
+            <div class="card agent-card fade-in" style="animation-delay:0.7s; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-radius: 12px;">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; background: #8bc34a; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.3rem; flex-shrink: 0;">A</div>
+                    <div style="flex: 1; min-width: 0;">
+                        <h3 style="margin: 0 0 4px 0; font-weight: 700;">ALMA</h3>
+                        <small style="color: var(--text-light); font-size: 0.85rem;">Accompagnante psychologique</small>
+                    </div>
+                </div>
+                <p style="font-size: 0.9rem; margin-bottom: 12px; line-height: 1.4; color: var(--text);">Ecoute active, questions ouvertes, confrontation bienveillante. Aide a explorer les patterns.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px;">
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">web</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">memoire</span>
+                    <span style="background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.7rem; color: var(--text);">fichiers</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <a href="https://t.me/alma_akli_bot" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 0.85rem; padding: 4px 8px; border: 1px solid var(--primary); border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; transition: background 0.2s;">
+                        ✈ Telegram
+                    </a>
+                    <span style="background: #f3f4f6; color: #4b5563; font-size: 0.75rem; padding: 3px 8px; border-radius: 10px; font-weight: 600;">non</span>
+                </div>
             </div>
         </div>
+
+        <!-- Styles pour responsive -->
+        <style>
+            @media (max-width: 1200px) {
+                #agents-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            }
+            @media (max-width: 768px) {
+                #agents-grid { grid-template-columns: 1fr !important; }
+            }
+        </style>
 
         <!-- SECTION 2: Crons Quotidiens -->
         <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:30px;">Crons Quotidiens</h2>
