@@ -1560,6 +1560,17 @@
         </div>
 
         <div class="nav-section" onclick="toggleSection(this)">
+            <span>Assistante</span>
+            <span class="chevron">&#9660;</span>
+        </div>
+        <div class="nav-section-items">
+            <a class="nav-item" onclick="switchTab('claudia', this)">
+                <span style="margin-right: 8px;">🤖</span>
+                <span class="nav-label">Claudia</span>
+            </a>
+        </div>
+
+        <div class="nav-section" onclick="toggleSection(this)">
             <span>Sites</span>
             <span class="chevron">&#9660;</span>
         </div>
@@ -1692,6 +1703,132 @@
         <h1 class="page-title">Sites WordPress</h1>
         <p class="page-subtitle">Statut et maintenance des sites clients</p>
         <div id="sites-content">Chargement...</div>
+    </div>
+
+    <!-- ===== CLAUDIA ===== -->
+    <div class="tab" id="tab-claudia">
+        <h1 class="page-title">Claudia</h1>
+        <p class="page-subtitle">État de tous les systèmes automatisés</p>
+        
+        <!-- SECTION 1: Heartbeats -->
+        <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:10px;">Heartbeats</h2>
+        <div class="grid grid-4 fade-in" style="animation-delay:0.1s">
+            <div class="card">
+                <div class="card-label">Agent Main (Claudia)</div>
+                <div class="card-value primary">30min</div>
+                <div class="card-sub">model Sonnet</div>
+                <span class="badge badge-green" style="margin-top:8px;">Actif</span>
+            </div>
+            <div class="card">
+                <div class="card-label">Agent Plaza Marketing (Valentina)</div>
+                <div class="card-value primary">15min</div>
+                <div class="card-sub">model Haiku</div>
+                <span class="badge badge-green" style="margin-top:8px;">Actif</span>
+            </div>
+            <div class="card">
+                <div class="card-label">Agent Clea</div>
+                <div class="card-value primary">30min</div>
+                <div class="card-sub">model Haiku</div>
+                <span class="badge badge-green" style="margin-top:8px;">Actif</span>
+            </div>
+            <div class="card">
+                <div class="card-label">Agent Jarvis</div>
+                <div class="card-value primary">30min</div>
+                <div class="card-sub">model Sonnet</div>
+                <span class="badge badge-green" style="margin-top:8px;">Actif</span>
+            </div>
+        </div>
+
+        <!-- SECTION 2: Crons Quotidiens -->
+        <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:30px;">Crons Quotidiens</h2>
+        <div class="card table-card fade-in" style="animation-delay:0.2s">
+            <div class="table-header">Tâches automatisées quotidiennes</div>
+            <table>
+                <thead><tr><th>Nom</th><th>Horaire</th><th>Description</th><th>Statut</th></tr></thead>
+                <tbody>
+                    <tr><td>Auto-update</td><td>5h</td><td>MAJ Clawdbot + skills</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Briefing matin</td><td>8h</td><td>Emails, RDV, WhatsApp, pipeline</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Update Control Center</td><td>8h 14h 20h</td><td>Sync dashboard</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Kick-ass Board</td><td>9h lun-ven</td><td>Motivation + action</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Check mi-journée</td><td>13h lun-ven</td><td>Emails, rappels</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Recap soir</td><td>18h lun-ven</td><td>Bilan + RDV demain</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Dashboard DerniereDispo</td><td>20h</td><td>Sync dashboard</td><td><span class="badge badge-green">Actif</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECTION 3: Crons Hebdo & Mensuels -->
+        <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:30px;">Crons Hebdo & Mensuels</h2>
+        <div class="card table-card fade-in" style="animation-delay:0.3s">
+            <div class="table-header">Tâches automatisées périodiques</div>
+            <table>
+                <thead><tr><th>Nom</th><th>Fréquence</th><th>Description</th><th>Statut</th></tr></thead>
+                <tbody>
+                    <tr><td>Prospection auto</td><td>Lundi 4h</td><td>10 PME via Pappers</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Check Brevo DerniereDispo</td><td>Lundi 9h</td><td>Adresses bloquées</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Rapport hebdo Plaza</td><td>Lundi 10h</td><td>Stats semaine</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Blog Plaza</td><td>Jeudi 10h</td><td>Article SEO auto</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Upsell clients</td><td>1er du mois</td><td>Contrats à renouveler</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Audit SEO</td><td>15 du mois</td><td>pixel-drop.com</td><td><span class="badge badge-green">Actif</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECTION 4: Crons Plaza Tango -->
+        <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:30px;">Crons Plaza Tango</h2>
+        <div class="card table-card fade-in" style="animation-delay:0.4s">
+            <div class="table-header">Automatisations spécifiques Plaza Tango</div>
+            <table>
+                <thead><tr><th>Nom</th><th>Fréquence</th><th>Description</th><th>Statut</th></tr></thead>
+                <tbody>
+                    <tr><td>Check Stripe</td><td>/30min</td><td>Nouvelles ventes</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Check emails Valentina</td><td>/1h</td><td>Emails importants</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Sync dashboard</td><td>/2h</td><td>GitHub Pages</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Brief Instagram</td><td>9h</td><td>Post du jour</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Recap soir Plaza</td><td>20h</td><td>Bilan ventes</td><td><span class="badge badge-green">Actif</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECTION 5: Dashboards -->
+        <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:30px;">Dashboards</h2>
+        <div class="grid grid-3 fade-in" style="animation-delay:0.5s">
+            <a href="https://real-pixeldrop.github.io/command-center/" target="_blank" class="card-link">
+                <div class="card">
+                    <span class="link-arrow">↗</span>
+                    <div class="card-label">Command Center</div>
+                    <div class="card-value primary" style="font-size:1.4rem;">Control Center</div>
+                    <div class="card-sub">real-pixeldrop.github.io/command-center/</div>
+                </div>
+            </a>
+            <div class="card">
+                <div class="card-label">Plaza Tango</div>
+                <div class="card-value primary" style="font-size:1.4rem;">GitHub Pages</div>
+                <div class="card-sub">Dashboard Plaza Tango</div>
+            </div>
+            <div class="card">
+                <div class="card-label">DerniereDispo</div>
+                <div class="card-value primary" style="font-size:1.4rem;">GitHub Pages</div>
+                <div class="card-sub">Dashboard DerniereDispo</div>
+            </div>
+        </div>
+
+        <!-- SECTION 6: Canaux de communication -->
+        <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:30px;">Canaux de communication</h2>
+        <div class="grid grid-2 fade-in" style="animation-delay:0.6s">
+            <div class="card">
+                <div class="card-label">iMessage (Claudia)</div>
+                <div class="card-value accent" style="font-size:1.4rem;">📱 Principal</div>
+                <div class="card-sub">Canal principal avec Akli</div>
+                <span class="badge badge-green" style="margin-top:8px;">Connecté</span>
+            </div>
+            <div class="card">
+                <div class="card-label">Telegram</div>
+                <div class="card-value accent" style="font-size:1.4rem;">🤖 Agents</div>
+                <div class="card-sub">Agents secondaires (Valentina, Jarvis, Mike, etc.)</div>
+                <span class="badge badge-green" style="margin-top:8px;">Connecté</span>
+            </div>
+        </div>
     </div>
 
 </div>
