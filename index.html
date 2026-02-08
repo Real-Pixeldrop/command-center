@@ -1729,6 +1729,7 @@
                     <li>Événements passés</li>
                 </ul>
                 <div style="margin-top: 12px; font-size: 0.7rem; color: var(--text-light); font-style: italic;">Style : Pepper Potts, attentionnée</div>
+                <div style="margin-top: 8px; font-size: 0.7rem; color: var(--text-light);" id="main-last-check">Dernier check : --</div>
             </div>
 
             <!-- Valentina (Plaza Marketing) -->
@@ -1746,6 +1747,7 @@
                     <li>Dashboard sync</li>
                 </ul>
                 <div style="margin-top: 12px; font-size: 0.7rem; color: var(--warning); font-style: italic;">Note : HEARTBEAT.md vide actuellement (à configurer)</div>
+                <div style="margin-top: 8px; font-size: 0.7rem; color: var(--text-light);" id="plaza-last-check">Dernier check : --</div>
             </div>
 
             <!-- Clea -->
@@ -1762,10 +1764,11 @@
                     <li>Veille concurrentielle</li>
                     <li>Tendances LinkedIn</li>
                 </ul>
+                <div style="margin-top: 12px; font-size: 0.7rem; color: var(--text-light);" id="clea-last-check">Dernier check : --</div>
             </div>
         </div>
 
-        <!-- Styles pour responsive heartbeats -->
+        <!-- Styles pour responsive heartbeats et badges canaux -->
         <style>
             @keyframes pulse {
                 0%, 100% { opacity: 1; }
@@ -1773,56 +1776,162 @@
             }
             @media (max-width: 768px) {
                 #heartbeats-grid { grid-template-columns: 1fr !important; }
+                #usage-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            }
+
+            /* Badges canaux */
+            .channel-badge {
+                display: inline-block;
+                padding: 4px 8px;
+                border-radius: 12px;
+                font-size: 0.7rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-right: 4px;
+            }
+
+            .channel-imessage {
+                background: #007AFF;
+                color: white;
+            }
+
+            .channel-telegram {
+                background: #0088CC;
+                color: white;
+            }
+
+            .channel-email {
+                background: #FF9500;
+                color: white;
+            }
+
+            .channel-silent {
+                background: #8E8E93;
+                color: white;
+            }
+
+            /* Activité récente styles */
+            .activity-item {
+                display: flex;
+                align-items: center;
+                padding: 8px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .activity-item:last-child {
+                border-bottom: none;
+            }
+
+            .activity-time {
+                font-size: 0.75rem;
+                color: var(--text-light);
+                min-width: 45px;
+                margin-right: 12px;
+            }
+
+            .activity-agent {
+                display: inline-block;
+                padding: 2px 6px;
+                border-radius: 8px;
+                font-size: 0.7rem;
+                font-weight: 600;
+                margin-right: 8px;
+                min-width: 60px;
+                text-align: center;
+            }
+
+            .agent-claudia { background: rgba(28, 187, 200, 0.2); color: #1CBBC8; }
+            .agent-valentina { background: rgba(255, 149, 0, 0.2); color: #FF9500; }
+            .agent-clea { background: rgba(88, 86, 214, 0.2); color: #5856D6; }
+
+            .activity-action {
+                flex: 1;
+                font-size: 0.8rem;
+                color: var(--text);
             }
         </style>
 
-        <!-- SECTION 2: Crons Quotidiens -->
+        <!-- SECTION 2: Usage du jour -->
+        <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:30px;">Usage du jour</h2>
+        <div class="grid grid-4 fade-in" style="animation-delay:0.25s" id="usage-grid">
+            <div class="card">
+                <div class="card-label">Tokens entrants</div>
+                <div class="card-value accent" style="font-size:1.8rem;" id="tokens-input">--</div>
+                <div class="card-sub">Aujourd'hui</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Tokens sortants</div>
+                <div class="card-value accent" style="font-size:1.8rem;" id="tokens-output">--</div>
+                <div class="card-sub">Aujourd'hui</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Coût estimé</div>
+                <div class="card-value primary" style="font-size:1.8rem;" id="tokens-cost">--</div>
+                <div class="card-sub">Aujourd'hui</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Messages envoyés</div>
+                <div class="card-value success" style="font-size:1.8rem;" id="messages-sent">--</div>
+                <div class="card-sub">Aujourd'hui</div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: Activité récente -->
+        <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:30px;">Activité récente</h2>
+        <div class="card fade-in" style="animation-delay:0.3s; padding: 20px;" id="recent-activity">
+            <div style="color: var(--text-light); font-size: 0.9rem; text-align: center; padding: 20px;">
+                Sync en cours...
+            </div>
+        </div>
+
+        <!-- SECTION 4: Crons Quotidiens -->
         <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:30px;">Crons Quotidiens</h2>
-        <div class="card table-card fade-in" style="animation-delay:0.3s">
+        <div class="card table-card fade-in" style="animation-delay:0.4s">
             <div class="table-header">Tâches automatisées quotidiennes</div>
             <table>
-                <thead><tr><th>Nom</th><th>Horaire</th><th>Description</th><th>Statut</th></tr></thead>
+                <thead><tr><th>Nom</th><th>Horaire</th><th>Description</th><th>Canal</th></tr></thead>
                 <tbody>
-                    <tr><td>Auto-update</td><td>5h</td><td>MAJ Clawdbot + skills</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Briefing matin</td><td>8h</td><td>Emails, RDV, WhatsApp, pipeline</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Update Control Center</td><td>8h 14h 20h</td><td>Sync dashboard</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Kick-ass Board</td><td>9h lun-ven</td><td>Motivation + action</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Check mi-journée</td><td>13h lun-ven</td><td>Emails, rappels</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Recap soir</td><td>18h lun-ven</td><td>Bilan + RDV demain</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Dashboard DerniereDispo</td><td>20h</td><td>Sync dashboard</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Auto-update</td><td>5h</td><td>MAJ Clawdbot + skills</td><td><span class="channel-badge channel-silent">Silencieux</span></td></tr>
+                    <tr><td>Briefing matin</td><td>8h</td><td>Emails, RDV, WhatsApp, pipeline</td><td><span class="channel-badge channel-imessage">iMessage</span></td></tr>
+                    <tr><td>Update Control Center</td><td>8h 14h 20h</td><td>Sync dashboard</td><td><span class="channel-badge channel-silent">Silencieux</span></td></tr>
+                    <tr><td>Kick-ass Board</td><td>9h lun-ven</td><td>Motivation + action</td><td><span class="channel-badge channel-imessage">iMessage</span></td></tr>
+                    <tr><td>Check mi-journée</td><td>13h lun-ven</td><td>Emails, rappels</td><td><span class="channel-badge channel-imessage">iMessage</span></td></tr>
+                    <tr><td>Recap soir</td><td>18h lun-ven</td><td>Bilan + RDV demain</td><td><span class="channel-badge channel-imessage">iMessage</span></td></tr>
+                    <tr><td>Dashboard DerniereDispo</td><td>20h</td><td>Sync dashboard</td><td><span class="channel-badge channel-imessage">iMessage</span></td></tr>
                 </tbody>
             </table>
         </div>
 
-        <!-- SECTION 3: Crons Hebdo & Mensuels -->
+        <!-- SECTION 5: Crons Hebdo & Mensuels -->
         <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:30px;">Crons Hebdo & Mensuels</h2>
-        <div class="card table-card fade-in" style="animation-delay:0.4s">
+        <div class="card table-card fade-in" style="animation-delay:0.5s">
             <div class="table-header">Tâches automatisées périodiques</div>
             <table>
-                <thead><tr><th>Nom</th><th>Fréquence</th><th>Description</th><th>Statut</th></tr></thead>
+                <thead><tr><th>Nom</th><th>Fréquence</th><th>Description</th><th>Canal</th></tr></thead>
                 <tbody>
-                    <tr><td>Prospection auto</td><td>Lundi 4h</td><td>10 PME via Pappers</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Check Brevo DerniereDispo</td><td>Lundi 9h</td><td>Adresses bloquées</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Rapport hebdo Plaza</td><td>Lundi 10h</td><td>Stats semaine</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Blog Plaza</td><td>Jeudi 10h</td><td>Article SEO auto</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Upsell clients</td><td>1er du mois</td><td>Contrats à renouveler</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Audit SEO</td><td>15 du mois</td><td>pixel-drop.com</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Prospection auto</td><td>Lundi 4h</td><td>10 PME via Pappers</td><td><span class="channel-badge channel-imessage">iMessage</span></td></tr>
+                    <tr><td>Check Brevo DerniereDispo</td><td>Lundi 9h</td><td>Adresses bloquées</td><td><span class="channel-badge channel-imessage">iMessage</span></td></tr>
+                    <tr><td>Rapport hebdo Plaza</td><td>Lundi 10h</td><td>Stats semaine</td><td><span class="channel-badge channel-email">Email</span></td></tr>
+                    <tr><td>Blog Plaza</td><td>Jeudi 10h</td><td>Article SEO auto</td><td><span class="channel-badge channel-telegram">Telegram</span> + <span class="channel-badge channel-email">Email</span></td></tr>
+                    <tr><td>Upsell clients</td><td>1er du mois</td><td>Contrats à renouveler</td><td><span class="channel-badge channel-imessage">iMessage</span></td></tr>
+                    <tr><td>Audit SEO</td><td>15 du mois</td><td>pixel-drop.com</td><td><span class="channel-badge channel-email">Email</span></td></tr>
                 </tbody>
             </table>
         </div>
 
-        <!-- SECTION 4: Crons Plaza Tango -->
+        <!-- SECTION 6: Crons Plaza Tango -->
         <h2 style="font-size:1.2rem; margin-bottom:18px; margin-top:30px;">Crons Plaza Tango</h2>
-        <div class="card table-card fade-in" style="animation-delay:0.5s">
+        <div class="card table-card fade-in" style="animation-delay:0.6s">
             <div class="table-header">Automatisations spécifiques Plaza Tango</div>
             <table>
-                <thead><tr><th>Nom</th><th>Fréquence</th><th>Description</th><th>Statut</th></tr></thead>
+                <thead><tr><th>Nom</th><th>Fréquence</th><th>Description</th><th>Canal</th></tr></thead>
                 <tbody>
-                    <tr><td>Check Stripe</td><td>/30min</td><td>Nouvelles ventes</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Check emails Valentina</td><td>/1h</td><td>Emails importants</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Sync dashboard</td><td>/2h</td><td>GitHub Pages</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Brief Instagram</td><td>9h</td><td>Post du jour</td><td><span class="badge badge-green">Actif</span></td></tr>
-                    <tr><td>Recap soir Plaza</td><td>20h</td><td>Bilan ventes</td><td><span class="badge badge-green">Actif</span></td></tr>
+                    <tr><td>Check Stripe</td><td>/30min</td><td>Nouvelles ventes</td><td><span class="channel-badge channel-telegram">Telegram</span></td></tr>
+                    <tr><td>Check emails Valentina</td><td>/1h</td><td>Emails importants</td><td><span class="channel-badge channel-telegram">Telegram</span></td></tr>
+                    <tr><td>Sync dashboard</td><td>/2h</td><td>GitHub Pages</td><td><span class="channel-badge channel-silent">Silencieux</span></td></tr>
+                    <tr><td>Brief Instagram</td><td>9h</td><td>Post du jour</td><td><span class="channel-badge channel-imessage">iMessage</span></td></tr>
+                    <tr><td>Recap soir Plaza</td><td>20h</td><td>Bilan ventes</td><td><span class="channel-badge channel-telegram">Telegram</span></td></tr>
                 </tbody>
             </table>
         </div>
@@ -4109,6 +4218,118 @@
         else if (e.key === '3') sessionAction('rappeler');
         else if (e.key === '4') sessionAction('interesse');
     });
+
+    // === CLAUDIA DYNAMIC SYNC ===
+    function loadClaudiaStatus() {
+        fetch('./claudia-status.json?' + Date.now()) // Cache busting
+            .then(response => {
+                if (!response.ok) throw new Error('Status file not found');
+                return response.json();
+            })
+            .then(data => {
+                updateHeartbeats(data.heartbeats);
+                updateRecentActivity(data.recentActivity);
+                updateTokenUsage(data.tokenUsage);
+            })
+            .catch(error => {
+                console.warn('Claudia sync error:', error);
+                // Afficher des placeholders si pas de données
+                document.getElementById('recent-activity').innerHTML = 
+                    '<div style="color: var(--text-light); font-size: 0.9rem; text-align: center; padding: 20px;">Sync en cours...</div>';
+            });
+    }
+
+    function updateHeartbeats(heartbeats) {
+        if (!heartbeats) return;
+
+        // Mettre à jour les indicateurs "dernier check"
+        if (heartbeats.main && heartbeats.main.lastCheck) {
+            const mainElement = document.getElementById('main-last-check');
+            if (mainElement) {
+                const minutesAgo = calculateMinutesAgo(heartbeats.main.lastCheck);
+                mainElement.textContent = `Dernier check : il y a ${minutesAgo}min`;
+            }
+        }
+
+        if (heartbeats['plaza-marketing'] && heartbeats['plaza-marketing'].lastCheck) {
+            const plazaElement = document.getElementById('plaza-last-check');
+            if (plazaElement) {
+                const minutesAgo = calculateMinutesAgo(heartbeats['plaza-marketing'].lastCheck);
+                plazaElement.textContent = `Dernier check : il y a ${minutesAgo}min`;
+            }
+        }
+
+        if (heartbeats.clea && heartbeats.clea.lastCheck) {
+            const cleaElement = document.getElementById('clea-last-check');
+            if (cleaElement) {
+                const minutesAgo = calculateMinutesAgo(heartbeats.clea.lastCheck);
+                cleaElement.textContent = `Dernier check : il y a ${minutesAgo}min`;
+            }
+        }
+    }
+
+    function updateRecentActivity(activities) {
+        const container = document.getElementById('recent-activity');
+        if (!activities || activities.length === 0) {
+            container.innerHTML = '<div style="color: var(--text-light); font-size: 0.9rem; text-align: center; padding: 20px;">Aucune activité récente</div>';
+            return;
+        }
+
+        let html = '';
+        activities.slice(0, 8).forEach(activity => {
+            const agentClass = activity.agent.toLowerCase() === 'claudia' ? 'agent-claudia' : 
+                              activity.agent.toLowerCase() === 'valentina' ? 'agent-valentina' : 
+                              'agent-clea';
+            
+            html += `
+                <div class="activity-item">
+                    <div class="activity-time">${activity.time}</div>
+                    <div class="activity-agent ${agentClass}">${activity.agent}</div>
+                    <div class="activity-action">${activity.action}</div>
+                </div>
+            `;
+        });
+
+        container.innerHTML = html;
+    }
+
+    function updateTokenUsage(tokenUsage) {
+        if (!tokenUsage || !tokenUsage.today) return;
+
+        const inputEl = document.getElementById('tokens-input');
+        const outputEl = document.getElementById('tokens-output');
+        const costEl = document.getElementById('tokens-cost');
+        const messagesEl = document.getElementById('messages-sent');
+
+        if (inputEl) inputEl.textContent = formatNumber(tokenUsage.today.input);
+        if (outputEl) outputEl.textContent = formatNumber(tokenUsage.today.output);
+        if (costEl) costEl.textContent = '$' + (tokenUsage.today.cost || 0).toFixed(2);
+        if (messagesEl) messagesEl.textContent = '--'; // Placeholder pour messages
+    }
+
+    function calculateMinutesAgo(isoDateString) {
+        if (!isoDateString || isoDateString === 'unknown') return '--';
+        try {
+            const then = new Date(isoDateString);
+            const now = new Date();
+            const diffMs = now - then;
+            const diffMinutes = Math.floor(diffMs / 60000);
+            return diffMinutes;
+        } catch (e) {
+            return '--';
+        }
+    }
+
+    function formatNumber(num) {
+        if (!num) return '0';
+        return num.toLocaleString();
+    }
+
+    // Charger les données au démarrage et toutes les 5 minutes
+    if (currentTab === 'claudia') {
+        loadClaudiaStatus();
+        setInterval(loadClaudiaStatus, 5 * 60 * 1000); // 5 minutes
+    }
 </script>
 
 <div class="session-overlay" id="session-overlay"></div>
