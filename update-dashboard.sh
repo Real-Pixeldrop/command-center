@@ -218,6 +218,10 @@ sed -i '' "s/>62 \/ 500</>$( [ -n \"\" ] && echo \"\" || echo \"62\" ) \/ 500</"
 sed -i '' "s/>$TRAFIC \/ 1000</>${TRAFIC} \/ 1000</" "$HTML_FILE" 2>/dev/null || true
 sed -i '' "s/>$NL_CONTACTS \/ 200</>${NL_CONTACTS} \/ 200</" "$HTML_FILE" 2>/dev/null || true
 
+# ===== CLAUDIA SYNC =====
+echo "Claudia sync..."
+bash ./claudia-sync.sh 2>/dev/null || echo "Claudia sync skipped"
+
 # ===== GIT PUSH =====
 git add -A
 if ! git diff --quiet --staged; then
