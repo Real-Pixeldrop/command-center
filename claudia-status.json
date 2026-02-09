@@ -1,25 +1,66 @@
 {
-  "lastSync": "2026-02-09T08:01:43+01:00",
+  "lastSync": "2026-02-09T14:00:32+01:00",
   "heartbeats": {
     "main": {
-      "lastCheck": "2026-02-09T08:01:19+01:00",
+      "lastCheck": "2026-02-09T14:00:00+01:00",
       "status": "ok"
     },
     "plaza-marketing": {
-      "lastCheck": "2026-02-09T07:45:28+01:00",
+      "lastCheck": "2026-02-09T13:54:36+01:00",
       "status": "ok"
     },
     "clea": {
-      "lastCheck": "2026-02-09T07:31:01+01:00",
+      "lastCheck": "2026-02-09T13:31:11+01:00",
       "status": "ok"
     }
   },
-  "recentActivity": [],
+  "recentActivity": [
+    {
+      "time": "12:39",
+      "agent": "Claudia",
+      "action": "Brief matinal envoyé"
+    },
+    {
+      "time": "12:39",
+      "agent": "Claudia",
+      "action": "Brief matinal envoyé"
+    },
+    {
+      "time": "12:39",
+      "agent": "Claudia",
+      "action": "Brief matinal envoyé"
+    },
+    {
+      "time": "12:39",
+      "agent": "Claudia",
+      "action": "Brief matinal envoyé"
+    },
+    {
+      "time": "12:44",
+      "agent": "Claudia",
+      "action": "Activité système"
+    },
+    {
+      "time": "12:54",
+      "agent": "Claudia",
+      "action": "Heartbeat check"
+    },
+    {
+      "time": "12:54",
+      "agent": "Claudia",
+      "action": "Activité système"
+    },
+    {
+      "time": "13:00",
+      "agent": "Claudia",
+      "action": "Heartbeat check"
+    }
+  ],
   "tokenUsage": {
     "today": {
-      "input": 76,
-      "output": 1568,
-      "cost": 0.11874000000000000000
+      "input": 77,
+      "output": 1540,
+      "cost": 0.11665500000000000000
     }
   }
 }
