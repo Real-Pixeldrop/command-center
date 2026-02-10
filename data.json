@@ -869,7 +869,7 @@
       "siret": null,
       "adresse": null,
       "nb_opps_notion": 4,
-      "derniere_maintenance": null
+      "derniere_maintenance": "2026-02-10"
     },
     {
       "nom": "Derniere Dispo",
@@ -4389,7 +4389,7 @@
       "maj_dispo": "3",
       "api": true,
       "type": "wordpress",
-      "derniere_maintenance": null
+      "derniere_maintenance": "2026-02-10"
     },
     {
       "url": "cothidance92.fr",
