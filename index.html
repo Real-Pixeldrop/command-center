@@ -3496,13 +3496,20 @@
         const items = sectionEl.nextElementSibling;
         if (!items || !items.classList.contains('nav-section-items')) return;
 
+        const isCollapsed = items.classList.contains('collapsed');
         chevron.classList.toggle('collapsed');
         items.classList.toggle('collapsed');
 
-        if (items.classList.contains('collapsed')) {
-            items.style.maxHeight = '0';
+        if (isCollapsed) {
+            // Opening: remove max-height constraint, measure, then set
+            items.style.maxHeight = 'none';
+            const h = items.scrollHeight;
+            items.style.maxHeight = '0px';
+            // Force reflow then animate
+            items.offsetHeight;
+            items.style.maxHeight = h + 'px';
         } else {
-            items.style.maxHeight = items.scrollHeight + 'px';
+            items.style.maxHeight = '0';
         }
     }
 
