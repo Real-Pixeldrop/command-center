@@ -3228,9 +3228,10 @@
 
             const dmDate = s.derniere_maintenance;
             const dmClass = !dmDate ? 'color:var(--danger)' : (() => { const d = new Date(dmDate); const diff = (new Date() - d) / 86400000; return diff > 90 ? 'color:var(--danger)' : diff > 30 ? 'color:var(--warning)' : 'color:var(--success)'; })();
-            const dmLabel = dmDate || 'Jamais';
+            const dmLabel = dmDate ? dmDate.split('-').reverse().join('/') : 'Jamais';
+            const dmSort = dmDate || '0000-00-00';
 
-            return `<tr><td>${wpLink}</td><td><a href="${esc(s.full_url)}" target="_blank" style="color:var(--primary)">${esc(s.url)} ↗</a></td><td><span class="badge ${maintBadge}">${esc(s.maintenance)}</span></td><td class="${dc}">${esc(s.fin_contrat)}</td><td style="${dmClass}">${esc(dmLabel)}</td><td style="${ms}">${esc(String(majLabel))}</td><td>${apiLabel}</td></tr>`;
+            return `<tr><td>${wpLink}</td><td><a href="${esc(s.full_url)}" target="_blank" style="color:var(--primary)">${esc(s.url)} ↗</a></td><td><span class="badge ${maintBadge}">${esc(s.maintenance)}</span></td><td class="${dc}">${esc(s.fin_contrat)}</td><td style="${dmClass}" data-sort="${dmSort}">${esc(dmLabel)}</td><td style="${ms}">${esc(String(majLabel))}</td><td>${apiLabel}</td></tr>`;
         }).join('');
 
         document.getElementById('sites-content').innerHTML = `
@@ -3264,10 +3265,24 @@
         <div class="card table-card fade-in" style="animation-delay:0.25s">
             <div class="table-header">Tous les sites</div>
             <table>
-                <thead><tr><th></th><th>Site</th><th>Maintenance</th><th>Fin contrat</th><th>Dern. maint.</th><th>MAJ dispo</th><th>API</th></tr></thead>
+                <thead><tr><th></th><th>Site</th><th>Maintenance</th><th>Fin contrat</th><th style="cursor:pointer;user-select:none" onclick="sortSitesBy(4)">Dern. maint. ⇅</th><th>MAJ dispo</th><th>API</th></tr></thead>
                 <tbody id="sites-list">${rows}</tbody>
             </table>
         </div>`;
+    }
+
+    let sitesSortAsc = true;
+    function sortSitesBy(colIdx) {
+        const tbody = document.getElementById('sites-list');
+        if (!tbody) return;
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        rows.sort((a, b) => {
+            const aVal = a.cells[colIdx]?.getAttribute('data-sort') || a.cells[colIdx]?.textContent || '';
+            const bVal = b.cells[colIdx]?.getAttribute('data-sort') || b.cells[colIdx]?.textContent || '';
+            return sitesSortAsc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+        });
+        sitesSortAsc = !sitesSortAsc;
+        rows.forEach(r => tbody.appendChild(r));
     }
 
     // ===== LINKEDIN =====
