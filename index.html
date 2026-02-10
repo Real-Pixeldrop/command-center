@@ -1169,15 +1169,23 @@
             .page-subtitle { font-size: 0.85rem; }
             .card-value { font-size: 1.8rem; }
 
-            /* Sidebar mobile */
+            /* Bottom sheet mobile */
             .sidebar {
                 width: 100vw !important;
-                transform: translateX(-100%);
-                transition: transform 0.3s ease;
+                height: auto !important;
+                max-height: 75vh;
+                top: auto !important;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border-radius: 20px 20px 0 0;
+                transform: translateY(100%);
+                transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+                box-shadow: 0 -8px 40px rgba(0,0,0,0.4);
             }
 
             .sidebar.mobile-open {
-                transform: translateX(0);
+                transform: translateY(0);
             }
 
             .sidebar.collapsed {
@@ -1190,6 +1198,42 @@
             .sidebar.collapsed .sidebar-logo {
                 opacity: 1;
             }
+
+            .sidebar-header {
+                justify-content: center;
+                padding: 12px 16px 8px;
+                border-bottom: none;
+                min-height: auto;
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .sidebar-header::before {
+                content: '';
+                display: block;
+                width: 36px;
+                height: 4px;
+                background: rgba(255,255,255,0.25);
+                border-radius: 2px;
+                margin-bottom: 10px;
+            }
+
+            .sidebar-header .toggle-btn { display: none; }
+
+            .sidebar-nav {
+                padding: 4px 8px 12px;
+                max-height: calc(75vh - 100px);
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .sidebar-footer {
+                padding: 10px 16px;
+                text-align: center;
+            }
+
+            .nav-section { padding: 10px 14px 4px; }
+            .nav-item { padding: 10px 14px; font-size: 0.88rem; }
 
             /* FAB */
             .fab-menu {
@@ -3509,7 +3553,7 @@
     // Run after DOM ready
     setTimeout(initSections, 50);
 
-    // Mobile menu
+    // Mobile bottom sheet
     function toggleMobileMenu() {
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('sidebarOverlay');
@@ -3523,6 +3567,46 @@
         sidebar.classList.remove('mobile-open');
         overlay.classList.remove('visible');
     }
+
+    // Swipe down to close bottom sheet
+    (function() {
+        const sidebar = document.getElementById('sidebar');
+        if (!sidebar) return;
+        let startY = 0, currentY = 0, dragging = false;
+
+        sidebar.addEventListener('touchstart', function(e) {
+            const nav = sidebar.querySelector('.sidebar-nav');
+            // Only allow drag from top of sheet or when nav is scrolled to top
+            if (nav && nav.scrollTop > 0) return;
+            startY = e.touches[0].clientY;
+            dragging = true;
+            sidebar.style.transition = 'none';
+        }, { passive: true });
+
+        sidebar.addEventListener('touchmove', function(e) {
+            if (!dragging) return;
+            currentY = e.touches[0].clientY;
+            const diff = currentY - startY;
+            if (diff > 0) {
+                sidebar.style.transform = 'translateY(' + diff + 'px)';
+            }
+        }, { passive: true });
+
+        sidebar.addEventListener('touchend', function() {
+            if (!dragging) return;
+            dragging = false;
+            sidebar.style.transition = '';
+            const diff = currentY - startY;
+            if (diff > 80) {
+                closeMobileMenu();
+            }
+            sidebar.style.transform = '';
+            if (sidebar.classList.contains('mobile-open')) {
+                sidebar.style.transform = 'translateY(0)';
+            }
+            startY = 0; currentY = 0;
+        }, { passive: true });
+    })();
 
     // Date
     const dateStr = new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
