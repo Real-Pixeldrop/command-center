@@ -3962,17 +3962,5 @@
     }
   ],
   "system_status_updated": "2026-02-10T23:06:00+01:00",
-  "linkedin_prospects": [
-    {
-      "nom": "Exemple Prospect",
-      "poste": "Directeur General",
-      "entreprise": "Entreprise SAS",
-      "lien_linkedin": "",
-      "demande_envoyee": "",
-      "connexion_acceptee": "",
-      "message_envoye": "",
-      "reponse": "",
-      "notes": ""
-    }
-  ]
+  "linkedin_prospects": []
 }
