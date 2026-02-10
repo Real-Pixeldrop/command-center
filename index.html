@@ -1217,8 +1217,8 @@
                 border-radius: 2px;
             }
 
-            .sidebar-header .toggle-btn { display: none; }
-            .sidebar-header .sidebar-logo { display: none; }
+            .sidebar-header .toggle-btn { display: none !important; }
+            .sidebar-header .sidebar-logo { display: none !important; }
 
             .sidebar-nav {
                 padding: 4px 8px 8px;
@@ -3557,6 +3557,21 @@
     function toggleMobileMenu() {
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('sidebarOverlay');
+        const opening = !sidebar.classList.contains('mobile-open');
+
+        if (opening && window.innerWidth <= 768) {
+            // Collapse all sections when opening bottom sheet
+            sidebar.querySelectorAll('.nav-section-items').forEach(items => {
+                // Keep the section with active item expanded
+                if (!items.querySelector('.nav-item.active')) {
+                    items.classList.add('collapsed');
+                    items.style.maxHeight = '0';
+                    const chevron = items.previousElementSibling?.querySelector('.chevron');
+                    if (chevron) chevron.classList.add('collapsed');
+                }
+            });
+        }
+
         sidebar.classList.toggle('mobile-open');
         overlay.classList.toggle('visible');
     }
