@@ -3498,6 +3498,12 @@
 
         chevron.classList.toggle('collapsed');
         items.classList.toggle('collapsed');
+
+        if (items.classList.contains('collapsed')) {
+            items.style.maxHeight = '0';
+        } else {
+            items.style.maxHeight = items.scrollHeight + 'px';
+        }
     }
 
     // Initialize section heights for smooth collapse
