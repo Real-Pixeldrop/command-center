@@ -1519,6 +1519,9 @@
             <a class="nav-item" onclick="switchTab('prospection', this)">
                 <span class="nav-label">Prospection</span>
             </a>
+            <a class="nav-item" onclick="switchTab('salesnav', this)">
+                <span class="nav-label">Sales Navigator</span>
+            </a>
         </div>
 
         <div class="nav-section" onclick="toggleSection(this)">
@@ -1636,6 +1639,13 @@
         <h1 class="page-title">Prospection</h1>
         <p class="page-subtitle">Suivi des sessions de prospection</p>
         <div id="prospection-content">Chargement...</div>
+    </div>
+
+    <!-- ===== SALES NAVIGATOR ===== -->
+    <div class="tab" id="tab-salesnav">
+        <h1 class="page-title">Sales Navigator</h1>
+        <p class="page-subtitle">Pipeline LinkedIn — <a href="https://www.linkedin.com/sales/" target="_blank" style="color:var(--primary);text-decoration:none;">Ouvrir Sales Nav ↗</a></p>
+        <div id="salesnav-content">Chargement...</div>
     </div>
 
     <!-- ===== BUSINESS ===== -->
@@ -2252,6 +2262,7 @@
         renderPipeline();
         renderTaches();
         renderProspection();
+        renderSalesNav();
         renderBusiness();
         renderFinances();
         renderDevis();
@@ -2683,6 +2694,60 @@
                 <tbody id="prospect-list">${rows}</tbody>
             </table>
         </div>`;
+    }
+
+    // ===== SALES NAVIGATOR =====
+    function renderSalesNav() {
+        const lp = DATA.linkedin_prospects || [];
+        const total = lp.length;
+        const demandes = lp.filter(p => p.demande_envoyee).length;
+        const acceptees = lp.filter(p => p.connexion_acceptee).length;
+        const messages = lp.filter(p => p.message_envoye).length;
+        const reponses = lp.filter(p => p.reponse).length;
+
+        const rows = lp.map((p, i) => {
+            const statutBadge = p.reponse ? '<span class="badge badge-green">Repondu</span>'
+                : p.message_envoye ? '<span class="badge badge-blue">Message</span>'
+                : p.connexion_acceptee ? '<span class="badge badge-yellow">Connecte</span>'
+                : p.demande_envoyee ? '<span class="badge badge-gray">En attente</span>'
+                : '<span class="badge badge-gray">Nouveau</span>';
+
+            const linkedinLink = p.lien_linkedin
+                ? '<a href="' + esc(p.lien_linkedin) + '" target="_blank" style="color:var(--primary);text-decoration:none;">Profil ↗</a>'
+                : '--';
+
+            return '<tr>' +
+                '<td><strong>' + esc(p.nom) + '</strong><br><span style="color:#6b7280;font-size:0.75rem;">' + esc(p.poste || '') + '</span></td>' +
+                '<td>' + esc(p.entreprise || '') + '</td>' +
+                '<td>' + statutBadge + '</td>' +
+                '<td>' + linkedinLink + '</td>' +
+                '<td style="color:#6b7280;font-size:0.75rem;">' + esc(p.notes || '') + '</td>' +
+                '</tr>';
+        }).join('');
+
+        document.getElementById('salesnav-content').innerHTML = `
+            <div class="grid grid-4 fade-in">
+                <div class="card"><div class="card-label">PROSPECTS</div><div class="card-value">${total}</div></div>
+                <div class="card"><div class="card-label">DEMANDES</div><div class="card-value" style="color:var(--primary)">${demandes}</div></div>
+                <div class="card"><div class="card-label">CONNECTES</div><div class="card-value" style="color:#f59e0b">${acceptees}</div></div>
+                <div class="card"><div class="card-label">REPONSES</div><div class="card-value" style="color:#10b981">${reponses}</div></div>
+            </div>
+            <div class="card table-card fade-in" style="animation-delay:0.1s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                    <h3 style="margin:0;">Pipeline LinkedIn</h3>
+                    <span style="color:#6b7280;font-size:0.78rem;">${demandes} demandes → ${acceptees} connectes → ${messages} messages → ${reponses} reponses</span>
+                </div>
+                <table>
+                    <thead><tr>
+                        <th>Prospect</th>
+                        <th>Entreprise</th>
+                        <th>Statut</th>
+                        <th>LinkedIn</th>
+                        <th>Notes</th>
+                    </tr></thead>
+                    <tbody>${rows || '<tr><td colspan="5" style="text-align:center;color:#6b7280;">Aucun prospect LinkedIn. Dis-moi "sync Sales Nav" pour importer.</td></tr>'}</tbody>
+                </table>
+            </div>`;
     }
 
     // ===== BUSINESS =====
