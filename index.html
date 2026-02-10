@@ -3226,7 +3226,11 @@
             const apiLabel = s.type === 'html' ? '--' : (s.api ? '<span class="badge badge-green">OUI</span>' : '<span class="badge badge-gray">NON</span>');
             const majLabel = s.type === 'html' ? '--' : (s.maj_dispo || '?');
 
-            return `<tr><td>${wpLink}</td><td><a href="${esc(s.full_url)}" target="_blank" style="color:var(--primary)">${esc(s.url)} ↗</a></td><td><span class="badge ${maintBadge}">${esc(s.maintenance)}</span></td><td class="${dc}">${esc(s.fin_contrat)}</td><td style="${ms}">${esc(String(majLabel))}</td><td>${apiLabel}</td></tr>`;
+            const dmDate = s.derniere_maintenance;
+            const dmClass = !dmDate ? 'color:var(--danger)' : (() => { const d = new Date(dmDate); const diff = (new Date() - d) / 86400000; return diff > 90 ? 'color:var(--danger)' : diff > 30 ? 'color:var(--warning)' : 'color:var(--success)'; })();
+            const dmLabel = dmDate || 'Jamais';
+
+            return `<tr><td>${wpLink}</td><td><a href="${esc(s.full_url)}" target="_blank" style="color:var(--primary)">${esc(s.url)} ↗</a></td><td><span class="badge ${maintBadge}">${esc(s.maintenance)}</span></td><td class="${dc}">${esc(s.fin_contrat)}</td><td style="${dmClass}">${esc(dmLabel)}</td><td style="${ms}">${esc(String(majLabel))}</td><td>${apiLabel}</td></tr>`;
         }).join('');
 
         document.getElementById('sites-content').innerHTML = `
@@ -3260,7 +3264,7 @@
         <div class="card table-card fade-in" style="animation-delay:0.25s">
             <div class="table-header">Tous les sites</div>
             <table>
-                <thead><tr><th></th><th>Site</th><th>Maintenance</th><th>Fin contrat</th><th>MAJ dispo</th><th>API</th></tr></thead>
+                <thead><tr><th></th><th>Site</th><th>Maintenance</th><th>Fin contrat</th><th>Dern. maint.</th><th>MAJ dispo</th><th>API</th></tr></thead>
                 <tbody id="sites-list">${rows}</tbody>
             </table>
         </div>`;
