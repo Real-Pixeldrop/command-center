@@ -131,7 +131,7 @@
       "client": "Habitat Multi-Service",
       "type": "Site vitrine",
       "deadline": "A planifier",
-      "statut": "En retard",
+      "statut": "En cours",
       "details": null
     },
     {
@@ -4213,14 +4213,7 @@
       "desc": "Finaliser maquette Figma, puis créer site WordPress",
       "badge": "Site Web",
       "badge_color": "blue",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Relancer M.Bolchert JDA",
-      "desc": "Devis en attente — 2 500€",
-      "badge": "Relance",
-      "badge_color": "orange",
-      "colonne": "a_faire"
+      "colonne": "en_cours"
     },
     {
       "titre": "Relancer Sara Cleaning",
@@ -4230,23 +4223,16 @@
       "colonne": "a_faire"
     },
     {
-      "titre": "Point offres envoyées",
-      "desc": "7 offres en attente — Total : 26 438€",
-      "badge": "Pipeline",
-      "badge_color": "blue",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Configurer API Pixel Space",
-      "desc": "Installer sur Fidolux et Richard Wagner Museum",
-      "badge": "Technique",
-      "badge_color": "blue",
-      "colonne": "a_faire"
-    },
-    {
       "titre": "Dernière Dispo — Consulting",
-      "desc": "Consulting gratuit : suivi croissance, objectif 1000 lieux",
+      "desc": "Consulting croissance + envoyer devis automatisation",
       "badge": "Consulting",
+      "badge_color": "orange",
+      "colonne": "en_cours"
+    },
+    {
+      "titre": "Check hebdo sites WP",
+      "desc": "Vérification hebdomadaire tous les mercredis matin",
+      "badge": "Maintenance",
       "badge_color": "orange",
       "colonne": "en_cours"
     },
@@ -4254,13 +4240,6 @@
       "titre": "Plaza Tango Festival 2026",
       "desc": "Organisation festival — 24-26 avril",
       "badge": "Événement",
-      "badge_color": "orange",
-      "colonne": "en_cours"
-    },
-    {
-      "titre": "Check hebdo sites WP",
-      "desc": "Vérification hebdomadaire de tous les sites WordPress",
-      "badge": "Maintenance",
       "badge_color": "orange",
       "colonne": "en_cours"
     },
