@@ -1578,6 +1578,9 @@
             <a class="nav-item" onclick="switchTab('sites', this)">
                 <span class="nav-label">Sites WordPress</span>
             </a>
+            <a class="nav-item" onclick="switchTab('status', this)">
+                <span class="nav-label">System Status</span>
+            </a>
         </div>
     </div>
 
@@ -1703,6 +1706,13 @@
         <h1 class="page-title">Sites WordPress</h1>
         <p class="page-subtitle">Statut et maintenance des sites clients</p>
         <div id="sites-content">Chargement...</div>
+    </div>
+
+    <!-- ===== SYSTEM STATUS ===== -->
+    <div class="tab" id="tab-status">
+        <h1 class="page-title">System Status</h1>
+        <p class="page-subtitle">État de tous les services en temps réel</p>
+        <div id="status-content">Chargement...</div>
     </div>
 
     <!-- ===== CLAUDIA ===== -->
@@ -2252,6 +2262,7 @@
         renderInstagram();
         renderSEO();
         renderSites();
+        renderStatus();
     }
 
     // ===== HELPERS: OBJECTIFS & RELANCES =====
@@ -3269,6 +3280,43 @@
                 <tbody id="sites-list">${rows}</tbody>
             </table>
         </div>`;
+    }
+
+    function renderStatus() {
+        const services = DATA.system_status || [];
+        const updated = DATA.system_status_updated || '';
+        const categories = [...new Set(services.map(s => s.categorie))];
+        const allOk = services.every(s => s.statut === 'ok');
+        const issues = services.filter(s => s.statut !== 'ok');
+        const updatedDate = updated ? new Date(updated).toLocaleString('fr-FR') : '--';
+
+        let html = `
+        <div style="text-align:center;margin:20px 0 30px">
+            <div style="font-size:1.1rem;margin-bottom:8px">
+                <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${allOk ? 'var(--success)' : 'var(--danger)'};margin-right:6px"></span>
+                ${allOk ? 'Tous les systèmes sont opérationnels' : issues.length + ' service(s) en anomalie'}
+            </div>
+            <div style="color:var(--text-light);font-size:0.85rem">Dernière vérification : ${updatedDate}</div>
+        </div>`;
+
+        categories.forEach(cat => {
+            const catServices = services.filter(s => s.categorie === cat);
+            html += `<div class="card fade-in" style="margin-bottom:16px;padding:20px">
+                <div style="font-weight:600;font-size:1rem;margin-bottom:12px;color:var(--text-light)">${cat}</div>`;
+            catServices.forEach(s => {
+                const color = s.statut === 'ok' ? 'var(--success)' : s.statut === 'issue' ? '#f0ad4e' : 'var(--danger)';
+                const label = s.statut === 'ok' ? 'Opérationnel' : s.statut === 'issue' ? 'Problème' : 'Indisponible';
+                html += `<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">
+                    <span>${s.nom}</span>
+                    <span style="display:flex;align-items:center;gap:6px;font-size:0.85rem;color:${color}">
+                        ${label} <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${color}"></span>
+                    </span>
+                </div>`;
+            });
+            html += `</div>`;
+        });
+
+        document.getElementById('status-content').innerHTML = html;
     }
 
     let sitesSortAsc = true;

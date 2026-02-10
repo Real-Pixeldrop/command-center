@@ -4685,5 +4685,93 @@
       "date": "2026-02-05",
       "statut": "publie"
     }
-  ]
+  ],
+  "system_status": [
+    {
+      "nom": "pixel-drop.com",
+      "categorie": "Sites",
+      "statut": "ok"
+    },
+    {
+      "nom": "festival.plazatango.com",
+      "categorie": "Sites",
+      "statut": "ok"
+    },
+    {
+      "nom": "etheos.fr",
+      "categorie": "Sites",
+      "statut": "ok"
+    },
+    {
+      "nom": "lxbconstruction.com",
+      "categorie": "Sites",
+      "statut": "ok"
+    },
+    {
+      "nom": "lxb-estate.com",
+      "categorie": "Sites",
+      "statut": "ok"
+    },
+    {
+      "nom": "dernieredispo.com",
+      "categorie": "Sites",
+      "statut": "ok"
+    },
+    {
+      "nom": "collectivitesterritoriales.fr",
+      "categorie": "Sites",
+      "statut": "ok"
+    },
+    {
+      "nom": "black-trombone.fr",
+      "categorie": "Sites",
+      "statut": "ok"
+    },
+    {
+      "nom": "fidolux.lu",
+      "categorie": "Sites",
+      "statut": "ok"
+    },
+    {
+      "nom": "cine-loges.fr",
+      "categorie": "Sites",
+      "statut": "ok"
+    },
+    {
+      "nom": "Brevo",
+      "categorie": "APIs",
+      "statut": "ok"
+    },
+    {
+      "nom": "Pennylane",
+      "categorie": "APIs",
+      "statut": "ok"
+    },
+    {
+      "nom": "iCloud Calendar",
+      "categorie": "Apple",
+      "statut": "ok"
+    },
+    {
+      "nom": "iCloud Mail",
+      "categorie": "Apple",
+      "statut": "ok"
+    },
+    {
+      "nom": "iCloud Account",
+      "categorie": "Apple",
+      "statut": "ok"
+    },
+    {
+      "nom": "iMessage",
+      "categorie": "Apple",
+      "statut": "ok"
+    },
+    {
+      "nom": "Hostinger",
+      "categorie": "Hébergement",
+      "statut": "ok"
+    }
+  ],
+  "system_status_updated": "2026-02-10T23:06:00+01:00"
 }
