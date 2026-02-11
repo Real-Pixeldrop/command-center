@@ -10,6 +10,39 @@
     "trafic_pd": 73,
     "devis_attente": 8
   },
+  "prospection": {
+    "linkedin_sales_nav": {
+      "credits_inmail": 88,
+      "credits_max": 150,
+      "liste_active": "Dirigeants PME Industrielles",
+      "derniere_session": "2026-02-11",
+      "messages_envoyes_total": 10
+    },
+    "sessions": [
+      {
+        "date": "2026-02-11",
+        "messages": 10,
+        "prospects": [
+          {"nom": "Christophe Schalk", "entreprise": "Directeur", "secteur": "Industrie"},
+          {"nom": "Trishna Kammili", "entreprise": "R-GDS", "secteur": "Energie"},
+          {"nom": "Claire-Lise Baumann", "entreprise": "Hôtel Beaucour", "secteur": "Hôtellerie"},
+          {"nom": "François Duchaine", "entreprise": "Les Constructeurs du Bois", "secteur": "Construction"},
+          {"nom": "Roxane Weiss", "entreprise": "WOOZUP", "secteur": "Tech"},
+          {"nom": "Thomas Gresset", "entreprise": "Réseau Entreprendre Alsace", "secteur": "Réseau"},
+          {"nom": "Yannick FLACH", "entreprise": "Cabinet Foltzer-Flach-Scheer", "secteur": "Comptabilité"},
+          {"nom": "Christophe LELANDAIS", "entreprise": "MUSSIPONTUM", "secteur": "Grande distribution"},
+          {"nom": "Valérie Creusot Rivière", "entreprise": "Yzico", "secteur": "Comptabilité"},
+          {"nom": "Stéphane COUTANSON", "entreprise": "Prométhée Technologies", "secteur": "Tech/Industrie"}
+        ],
+        "reponses": 0,
+        "rdv_obtenus": 0
+      }
+    ],
+    "kpis": {
+      "taux_reponse_moyen": "--",
+      "taux_rdv": "--"
+    }
+  },
   "marketing": {
     "linkedin": {
       "current": 62,
