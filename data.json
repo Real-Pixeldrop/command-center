@@ -1663,790 +1663,845 @@
     {
       "nom": "Devis D-2026-0218",
       "client": "Black Trombone",
-      "montant": "600€",
+      "montant": "600 €",
       "montant_num": 600,
       "statut": "en_attente",
       "date_envoi": "2026-02-10",
       "date_accepte": null,
       "objet": "Automatisation DernièreDispo / Brevo",
-      "date": "10/02",
+      "date": "10/02/2026",
       "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D"
     },
     {
       "nom": "Devis D-2026-0216",
-      "client": "L.I.Partners",
-      "montant": "8 400€",
+      "client": "L.I. Partners",
+      "montant": "8 400 €",
       "montant_num": 8400,
       "statut": "en_attente",
       "date_envoi": "2026-02-04",
       "date_accepte": null,
       "objet": "Refonte site web L.I.Partners",
-      "date": "04/02",
+      "date": "04/02/2026",
       "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=1ISSAiiH8RacslbmGUPhoi7j6xW4sXpsntPcr5Bm7i3uvMCsQaVJHJZP7vQlw1%2Fn5%2BRXvVsqWYVlx00getC0bqKpEoU9VQhPrtQIxKhBB%2F%2BjgvyJe0FHnrC%2F--ME7fKv%2FiC97RSpEC--sQaAIFRY4lBtdd04iR4vkg%3D%3D"
     },
     {
       "nom": "Devis D-2026-0110",
       "client": "Habitat Multi Services",
-      "montant": "3 000€",
+      "montant": "3 000 €",
       "montant_num": 3000,
       "statut": "accepte",
       "date_envoi": "2026-01-27",
       "date_accepte": "2026-01-27",
       "objet": "Site vitrine Habitat Multi Services",
-      "date": "27/01",
+      "date": "27/01/2026",
       "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=mzxKI8Ez8xrEXu4zOd60jTRCdsFdWeQ9hN86mkVLJGHtSGFvw57V0btgo8ZXFjbGWsUDRL7Lc584AJRv8%2FWtDiKBoWN6lZDJKCEuH1TgLoeeeqSQMgL1JnqS--9C6UY9FeFL2KTpm4--ucH6WGGrfzfHykU6KINUKQ%3D%3D"
     },
     {
       "nom": "Devis D-2026-017",
       "client": "FIDOLUX",
-      "montant": "9 700€",
+      "montant": "9 700 €",
       "montant_num": 9700,
       "statut": "en_attente",
       "date_envoi": "2026-01-08",
       "date_accepte": null,
       "objet": "Portail Client FIDOLUX",
-      "date": "08/01",
+      "date": "08/01/2026",
       "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=tf%2FiUFaLWiNBy8lOTsrembQRnDjq7DTCXnL2Mx%2BsWcJO6aDWfxE2m9IcgApe18eeEJTtUBnPKy0VAOtu0sPJQ%2FWiUZyVOT%2BDoboUsDdIOOYiIxPBHg8bdc7A--lsImK%2BBj0%2BiPYk56--mKP90nsTP%2BByiMre9NnkSA%3D%3D"
     },
     {
       "nom": "Communauté 360",
       "client": "Communauté 360",
-      "montant": "4239.9 EUR",
+      "montant": "4 239,90 €",
       "montant_num": 4239.9,
       "statut": "envoye",
       "date_envoi": "2025-06-15",
       "source": "notion",
       "pdf_name": "Vivre-Devenir-12775.pdf",
-      "pdf_url": null
-    },
-    {
-      "nom": "Portail Client",
-      "client": "Fidolux",
-      "montant": "9700 EUR",
-      "montant_num": 9700,
-      "statut": "envoye",
-      "date_envoi": "2026-01-08",
-      "source": "notion",
-      "pdf_name": "Devis-FIDOLUX SARL-AKLI GOUDJIL-D-2026-017.pdf",
-      "pdf_url": null
+      "pdf_url": null,
+      "date": "15/06/2025"
     },
     {
       "nom": "Ignite",
       "client": "Ignite Media",
-      "montant": "3000 EUR",
+      "montant": "3 000 €",
       "montant_num": 3000,
       "statut": "envoye",
       "date_envoi": "2025-12-15",
       "source": "notion",
       "pdf_name": "Devis-2025-12-0015.pdf",
-      "pdf_url": null
+      "pdf_url": null,
+      "date": "15/12/2025"
     },
     {
       "nom": "Refonte site web L.I.Partners",
-      "client": "L.I. PARTNERS",
-      "montant": "7000 EUR",
+      "client": "L.I. Partners",
+      "montant": "7 000 €",
       "montant_num": 7000,
       "statut": "envoye",
       "date_envoi": "2026-01-25",
-      "source": "notion"
+      "source": "notion",
+      "date": "25/01/2026"
     },
     {
       "nom": "Pixel Booking",
       "client": "Paris 8",
-      "montant": "2099 EUR",
+      "montant": "2 099 €",
       "montant_num": 2099,
       "statut": "envoye",
       "date_envoi": "2025-10-08",
       "source": "notion",
       "pdf_name": "Devis-2025-11-0008.pdf",
-      "pdf_url": null
+      "pdf_url": null,
+      "date": "08/10/2025"
     },
     {
       "nom": "Développement une page (Anavia)",
       "client": "Anavia",
-      "montant": "199 EUR",
+      "montant": "199 €",
       "montant_num": 199,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/07/2024"
     },
     {
       "nom": "Création site web",
       "client": "Anavia",
-      "montant": "890 EUR",
+      "montant": "890 €",
       "montant_num": 890,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/07/2024"
     },
     {
       "nom": "Renouvellement nom de domaine + Hébérgement",
       "client": "Au Cerf",
-      "montant": "114 EUR",
+      "montant": "114 €",
       "montant_num": 114,
       "statut": "accepte",
       "date_envoi": "2024-12-08",
-      "source": "notion"
+      "source": "notion",
+      "date": "08/12/2024"
     },
     {
       "nom": "creation site web (Au Cerf)",
       "client": "Au Cerf",
-      "montant": "2500 EUR",
+      "montant": "2 500 €",
       "montant_num": 2500,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/07/2024"
     },
     {
       "nom": "Babeta SINGLE PAGE",
       "client": "Babeta",
-      "montant": "799 EUR",
+      "montant": "799 €",
       "montant_num": 799,
       "statut": "accepte",
       "date_envoi": "2024-10-18",
-      "source": "notion"
+      "source": "notion",
+      "date": "18/10/2024"
     },
     {
       "nom": "Email pro",
       "client": "Babeta",
-      "montant": "99 EUR",
+      "montant": "99 €",
       "montant_num": 99,
       "statut": "accepte",
       "date_envoi": "2025-02-07",
-      "source": "notion"
+      "source": "notion",
+      "date": "07/02/2025"
     },
     {
       "nom": "Renouvellement nom de domaine + hébérgement",
       "client": "Babeta",
-      "montant": "115 EUR",
+      "montant": "115 €",
       "montant_num": 115,
       "statut": "accepte",
       "date_envoi": "2025-11-12",
-      "source": "notion"
+      "source": "notion",
+      "date": "12/11/2025"
     },
     {
       "nom": "Refonte site web",
       "client": "Baptiste Beloeil",
-      "montant": "650 EUR",
+      "montant": "650 €",
       "montant_num": 650,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/07/2024"
     },
     {
       "nom": "Optimisation Black Trombonne",
       "client": "Black Trombone",
-      "montant": "499 EUR",
+      "montant": "499 €",
       "montant_num": 499,
       "statut": "accepte",
       "date_envoi": "2025-04-07",
       "source": "notion",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D"
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D",
+      "date": "07/04/2025"
     },
     {
       "nom": "Dernière Dispo 1/2",
       "client": "Black Trombone",
-      "montant": "1765.35 EUR",
+      "montant": "1 765,35 €",
       "montant_num": 1765.35,
       "statut": "accepte",
       "date_envoi": "2025-04-07",
       "source": "notion",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D"
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D",
+      "date": "07/04/2025"
     },
     {
       "nom": "Dernière Dispo 2/2",
       "client": "Black Trombone",
-      "montant": "1765.35 EUR",
+      "montant": "1 765,35 €",
       "montant_num": 1765.35,
       "statut": "accepte",
       "date_envoi": "2025-06-04",
       "source": "notion",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D"
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D",
+      "date": "04/06/2025"
     },
     {
       "nom": "nom de domaine + hébérgement",
       "client": "CRW Lyon",
-      "montant": "115 EUR",
+      "montant": "115 €",
       "montant_num": 115,
       "statut": "accepte",
       "date_envoi": "2025-12-15",
-      "source": "notion"
+      "source": "notion",
+      "date": "15/12/2025"
     },
     {
       "nom": "Refonte web",
       "client": "Cinelite",
-      "montant": "400 EUR",
+      "montant": "400 €",
       "montant_num": 400,
       "statut": "accepte",
       "date_envoi": "2025-04-15",
       "source": "notion",
       "pdf_name": "Devis-2025-11-0008.pdf",
-      "pdf_url": null
+      "pdf_url": null,
+      "date": "15/04/2025"
     },
     {
       "nom": "Cinéloges",
       "client": "Cineloges",
-      "montant": "1815.3 EUR",
+      "montant": "1 815,30 €",
       "montant_num": 1815.3,
       "statut": "accepte",
       "date_envoi": "2025-03-14",
       "source": "notion",
       "pdf_name": "Proposition_Cineloges_-_Pixel_Drop.pdf",
-      "pdf_url": null
+      "pdf_url": null,
+      "date": "14/03/2025"
     },
     {
       "nom": "Cothidance",
       "client": "Cothidance",
-      "montant": "990 EUR",
+      "montant": "990 €",
       "montant_num": 990,
       "statut": "accepte",
       "date_envoi": "2025-03-05",
-      "source": "notion"
+      "source": "notion",
+      "date": "05/03/2025"
     },
     {
       "nom": "Maintenance COTHIDANCE",
       "client": "Cothidance",
-      "montant": "699 EUR",
+      "montant": "699 €",
       "montant_num": 699,
       "statut": "accepte",
       "date_envoi": "2025-05-05",
-      "source": "notion"
+      "source": "notion",
+      "date": "05/05/2025"
     },
     {
       "nom": "Refonte site web (Blog)",
       "client": "Eagle Rocket",
-      "montant": "890 EUR",
+      "montant": "890 €",
       "montant_num": 890,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/07/2024"
     },
     {
       "nom": "MAJ",
       "client": "Eagle Rocket",
-      "montant": "799 EUR",
+      "montant": "799 €",
       "montant_num": 799,
       "statut": "accepte",
       "date_envoi": "2024-07-19",
-      "source": "notion"
+      "source": "notion",
+      "date": "19/07/2024"
     },
     {
       "nom": "Création site web (Eagle Rocket)",
       "client": "Eagle Rocket",
-      "montant": "2500 EUR",
+      "montant": "2 500 €",
       "montant_num": 2500,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/07/2024"
     },
     {
       "nom": "Etheos (1)",
       "client": "Etheos",
-      "montant": "2699 EUR",
+      "montant": "2 699 €",
       "montant_num": 2699,
       "statut": "accepte",
       "date_envoi": "2025-12-16",
-      "source": "notion"
+      "source": "notion",
+      "date": "16/12/2025"
     },
     {
       "nom": "Fidolux 1/2",
       "client": "Fidolux",
-      "montant": "2000 EUR",
+      "montant": "2 000 €",
       "montant_num": 2000,
       "statut": "accepte",
       "date_envoi": "2025-05-05",
-      "source": "notion"
+      "source": "notion",
+      "date": "05/05/2025"
     },
     {
       "nom": "Fidolux 2/2",
       "client": "Fidolux",
-      "montant": "2000 EUR",
+      "montant": "2 000 €",
       "montant_num": 2000,
       "statut": "accepte",
       "date_envoi": "2025-05-18",
-      "source": "notion"
+      "source": "notion",
+      "date": "18/05/2025"
     },
     {
       "nom": "Newsletter",
       "client": "GROUPE MEDIA DES TERRITOIRES",
-      "montant": "359 EUR",
+      "montant": "359 €",
       "montant_num": 359,
       "statut": "accepte",
       "date_envoi": "2025-02-07",
-      "source": "notion"
+      "source": "notion",
+      "date": "07/02/2025"
     },
     {
       "nom": "Création site web",
       "client": "GROUPE MEDIA DES TERRITOIRES",
-      "montant": "1887 EUR",
+      "montant": "1 887 €",
       "montant_num": 1887,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
-    },
-    {
-      "nom": "Habitat Multi Services - Site vitrine",
-      "client": "Habitat Multi Surfaces",
-      "montant": "3000 EUR",
-      "montant_num": 3000,
-      "statut": "accepte",
-      "date_envoi": "2026-01-27",
       "source": "notion",
-      "pdf_name": "devis-habitat.pdf",
-      "pdf_url": null
+      "date": "02/07/2024"
     },
     {
       "nom": "Flyer ",
       "client": "Holly Meals",
-      "montant": "149 EUR",
+      "montant": "149 €",
       "montant_num": 149,
       "statut": "accepte",
       "date_envoi": "2024-10-14",
-      "source": "notion"
+      "source": "notion",
+      "date": "14/10/2024"
     },
     {
       "nom": "Correctifs ",
       "client": "Holly Meals",
-      "montant": "399 EUR",
+      "montant": "399 €",
       "montant_num": 399,
       "statut": "accepte",
       "date_envoi": "2024-10-21",
-      "source": "notion"
+      "source": "notion",
+      "date": "21/10/2024"
     },
     {
       "nom": "Intervention",
       "client": "Holly Meals",
-      "montant": "89 EUR",
+      "montant": "89 €",
       "montant_num": 89,
       "statut": "accepte",
       "date_envoi": "2024-12-08",
-      "source": "notion"
+      "source": "notion",
+      "date": "08/12/2024"
     },
     {
       "nom": "Création site web (Holly Meals)",
       "client": "Holly Meals",
-      "montant": "890 EUR",
+      "montant": "890 €",
       "montant_num": 890,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/07/2024"
     },
     {
       "nom": "Création site web",
       "client": "JAB",
-      "montant": "2500 EUR",
+      "montant": "2 500 €",
       "montant_num": 2500,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/07/2024"
     },
     {
       "nom": "JAB 2 Formulaire",
       "client": "JAB",
-      "montant": "578 EUR",
+      "montant": "578 €",
       "montant_num": 578,
       "statut": "accepte",
       "date_envoi": "2025-03-04",
-      "source": "notion"
+      "source": "notion",
+      "date": "04/03/2025"
     },
     {
       "nom": "Révision site web",
       "client": "JAB",
-      "montant": "500 EUR",
+      "montant": "500 €",
       "montant_num": 500,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/07/2024"
     },
     {
       "nom": "LXB Estates",
       "client": "LXB Estates Luxembourg",
-      "montant": "2812 EUR",
+      "montant": "2 812 €",
       "montant_num": 2812,
       "statut": "accepte",
       "date_envoi": "2025-03-20",
-      "source": "notion"
+      "source": "notion",
+      "date": "20/03/2025"
     },
     {
       "nom": "LXB Construct (2/2)",
       "client": "LXB Estates Luxembourg",
-      "montant": "1000 EUR",
+      "montant": "1 000 €",
       "montant_num": 1000,
       "statut": "accepte",
       "date_envoi": "2025-09-16",
-      "source": "notion"
+      "source": "notion",
+      "date": "16/09/2025"
     },
     {
       "nom": "LXB Construct (1/2)",
       "client": "LXB Estates Luxembourg",
-      "montant": "3000 EUR",
+      "montant": "3 000 €",
       "montant_num": 3000,
       "statut": "accepte",
       "date_envoi": "2025-10-16",
-      "source": "notion"
+      "source": "notion",
+      "date": "16/10/2025"
     },
     {
       "nom": "Maquette accueil react",
       "client": "La Toast Family",
-      "montant": "990 EUR",
+      "montant": "990 €",
       "montant_num": 990,
       "statut": "accepte",
       "date_envoi": "2025-06-20",
       "source": "notion",
       "pdf_name": "Devis-2025-11-0004 (1).pdf",
-      "pdf_url": null
+      "pdf_url": null,
+      "date": "20/06/2025"
     },
     {
       "nom": "Le portail vert (CBD)",
       "client": "Le portail vert",
-      "montant": "2000 EUR",
+      "montant": "2 000 €",
       "montant_num": 2000,
       "statut": "accepte",
       "date_envoi": "2025-07-01",
-      "source": "notion"
+      "source": "notion",
+      "date": "01/07/2025"
     },
     {
       "nom": "Site Levée de fonds",
       "client": "Licorne Invest",
-      "montant": "2599 EUR",
+      "montant": "2 599 €",
       "montant_num": 2599,
       "statut": "accepte",
       "date_envoi": "2025-03-10",
-      "source": "notion"
+      "source": "notion",
+      "date": "10/03/2025"
     },
     {
       "nom": "Site kiné",
       "client": "MAKE",
-      "montant": "1299 EUR",
+      "montant": "1 299 €",
       "montant_num": 1299,
       "statut": "accepte",
       "date_envoi": "2024-10-22",
-      "source": "notion"
+      "source": "notion",
+      "date": "22/10/2024"
     },
     {
       "nom": "Page rénovation",
       "client": "Musée Richard Wagner",
-      "montant": "299 EUR",
+      "montant": "299 €",
       "montant_num": 299,
       "statut": "accepte",
       "date_envoi": "2024-07-24",
-      "source": "notion"
+      "source": "notion",
+      "date": "24/07/2024"
     },
     {
       "nom": "Maintenance annuelle",
       "client": "Musée Richard Wagner",
-      "montant": "599 EUR",
+      "montant": "599 €",
       "montant_num": 599,
       "statut": "accepte",
       "date_envoi": "2024-09-23",
-      "source": "notion"
+      "source": "notion",
+      "date": "23/09/2024"
     },
     {
       "nom": "Sections membres 1/2",
       "client": "Musée Richard Wagner",
-      "montant": "825 EUR",
+      "montant": "825 €",
       "montant_num": 825,
       "statut": "accepte",
       "date_envoi": "2025-02-26",
-      "source": "notion"
+      "source": "notion",
+      "date": "26/02/2025"
     },
     {
       "nom": "Site offert partenaires",
       "client": "Musée Richard Wagner",
-      "montant": "500 EUR",
+      "montant": "500 €",
       "montant_num": 500,
       "statut": "accepte",
       "date_envoi": "2025-03-15",
-      "source": "notion"
+      "source": "notion",
+      "date": "15/03/2025"
     },
     {
       "nom": "Sections membres 2/2",
       "client": "Musée Richard Wagner",
-      "montant": "825 EUR",
+      "montant": "825 €",
       "montant_num": 825,
       "statut": "accepte",
       "date_envoi": "2025-05-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/05/2025"
     },
     {
       "nom": "Renouvellement maintenance",
       "client": "Musée Richard Wagner",
-      "montant": "499 EUR",
+      "montant": "499 €",
       "montant_num": 499,
       "statut": "accepte",
       "date_envoi": "2025-08-30",
-      "source": "notion"
+      "source": "notion",
+      "date": "30/08/2025"
     },
     {
       "nom": "Refonte Site Web",
       "client": "Musée Richard Wagner",
-      "montant": "3098 EUR",
+      "montant": "3 098 €",
       "montant_num": 3098,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/07/2024"
     },
     {
       "nom": "Développement design",
       "client": "Optimmo",
-      "montant": "599 EUR",
+      "montant": "599 €",
       "montant_num": 599,
       "statut": "accepte",
       "date_envoi": "2024-07-24",
-      "source": "notion"
+      "source": "notion",
+      "date": "24/07/2024"
     },
     {
       "nom": "Refonte esthétique",
       "client": "Optimmo",
-      "montant": "499 EUR",
+      "montant": "499 €",
       "montant_num": 499,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/07/2024"
     },
     {
       "nom": "Site internet avocat",
       "client": "Pauline Tkhor Avocat",
-      "montant": "2000 EUR",
+      "montant": "2 000 €",
       "montant_num": 2000,
       "statut": "accepte",
       "date_envoi": "2024-10-30",
-      "source": "notion"
+      "source": "notion",
+      "date": "30/10/2024"
     },
     {
       "nom": "Stéphanie Ludivine 1/2",
       "client": "Pépite Esthétique",
-      "montant": "1084.95 EUR",
+      "montant": "1 084,95 €",
       "montant_num": 1084.95,
       "statut": "accepte",
       "date_envoi": "2025-06-04",
-      "source": "notion"
+      "source": "notion",
+      "date": "04/06/2025"
     },
     {
       "nom": "Stéphanie Ludivine 2/2",
       "client": "Pépite Esthétique",
-      "montant": "1084.95 EUR",
+      "montant": "1 084,95 €",
       "montant_num": 1084.95,
       "statut": "accepte",
       "date_envoi": "2025-09-16",
-      "source": "notion"
+      "source": "notion",
+      "date": "16/09/2025"
     },
     {
       "nom": "Maintenance RCL",
       "client": "RCL",
-      "montant": "599 EUR",
+      "montant": "599 €",
       "montant_num": 599,
       "statut": "accepte",
       "date_envoi": "2025-04-09",
-      "source": "notion"
+      "source": "notion",
+      "date": "09/04/2025"
     },
     {
       "nom": "Renouvellement Domaine + Hosting",
       "client": "RCL",
-      "montant": "114 EUR",
+      "montant": "114 €",
       "montant_num": 114,
       "statut": "accepte",
       "date_envoi": "2025-10-24",
-      "source": "notion"
+      "source": "notion",
+      "date": "24/10/2025"
     },
     {
       "nom": "Brochure",
       "client": "SACO",
-      "montant": "999 EUR",
+      "montant": "999 €",
       "montant_num": 999,
       "statut": "accepte",
       "date_envoi": "2025-02-07",
-      "source": "notion"
+      "source": "notion",
+      "date": "07/02/2025"
     },
     {
       "nom": "Site groupe musique",
       "client": "Sexeen",
-      "montant": "899 EUR",
+      "montant": "899 €",
       "montant_num": 899,
       "statut": "accepte",
       "date_envoi": "2025-02-10",
-      "source": "notion"
+      "source": "notion",
+      "date": "10/02/2025"
     },
     {
       "nom": "Maintenance sexeen 1/2",
       "client": "Sexeen",
-      "montant": "300 EUR",
+      "montant": "300 €",
       "montant_num": 300,
       "statut": "accepte",
       "date_envoi": "2025-04-18",
-      "source": "notion"
+      "source": "notion",
+      "date": "18/04/2025"
     },
     {
       "nom": "Site une page",
       "client": "Taimpel",
-      "montant": "890 EUR",
+      "montant": "890 €",
       "montant_num": 890,
       "statut": "accepte",
       "date_envoi": "2025-02-28",
-      "source": "notion"
+      "source": "notion",
+      "date": "28/02/2025"
     },
     {
       "nom": "Cartes de visites 2",
       "client": "Taimpel",
-      "montant": "70 EUR",
+      "montant": "70 €",
       "montant_num": 70,
       "statut": "accepte",
       "date_envoi": "2025-05-05",
-      "source": "notion"
+      "source": "notion",
+      "date": "05/05/2025"
     },
     {
       "nom": "Design Liste",
       "client": "Teamshifts",
-      "montant": "89 EUR",
+      "montant": "89 €",
       "montant_num": 89,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/07/2024"
     },
     {
       "nom": "Tiz collab Heinrich",
       "client": "Tiz",
-      "montant": "1800 EUR",
+      "montant": "1 800 €",
       "montant_num": 1800,
       "statut": "accepte",
       "date_envoi": "2025-04-17",
-      "source": "notion"
+      "source": "notion",
+      "date": "17/04/2025"
     },
     {
       "nom": "Tiz collab Zoning SC Diamonds",
       "client": "Tiz",
-      "montant": "1826.65 EUR",
+      "montant": "1 826,65 €",
       "montant_num": 1826.65,
       "statut": "accepte",
       "date_envoi": "2025-06-06",
-      "source": "notion"
+      "source": "notion",
+      "date": "06/06/2025"
     },
     {
       "nom": "TIZ x Fun tech adventures",
       "client": "Tiz",
-      "montant": "1800 EUR",
+      "montant": "1 800 €",
       "montant_num": 1800,
       "statut": "accepte",
       "date_envoi": "2025-07-17",
-      "source": "notion"
+      "source": "notion",
+      "date": "17/07/2025"
     },
     {
       "nom": "Services additonnels",
       "client": "VTC Swiss",
-      "montant": "947 EUR",
+      "montant": "947 €",
       "montant_num": 947,
       "statut": "accepte",
       "date_envoi": "2024-09-19",
-      "source": "notion"
+      "source": "notion",
+      "date": "19/09/2024"
     },
     {
       "nom": "Optimisation ",
       "client": "VTC Swiss",
-      "montant": "399 EUR",
+      "montant": "399 €",
       "montant_num": 399,
       "statut": "accepte",
       "date_envoi": "2024-10-08",
-      "source": "notion"
+      "source": "notion",
+      "date": "08/10/2024"
     },
     {
       "nom": "Module Avis",
       "client": "VTC Swiss",
-      "montant": "129 EUR",
+      "montant": "129 €",
       "montant_num": 129,
       "statut": "accepte",
       "date_envoi": "2024-10-30",
-      "source": "notion"
+      "source": "notion",
+      "date": "30/10/2024"
     },
     {
       "nom": "Nouvelle opportunité",
       "client": "VTC Swiss",
-      "montant": "1448 EUR",
+      "montant": "1 448 €",
       "montant_num": 1448,
       "statut": "accepte",
       "date_envoi": "2024-11-21",
-      "source": "notion"
+      "source": "notion",
+      "date": "21/11/2024"
     },
     {
       "nom": "Excel",
       "client": "VTC Swiss",
-      "montant": "150 EUR",
+      "montant": "150 €",
       "montant_num": 150,
       "statut": "accepte",
       "date_envoi": "2025-10-24",
-      "source": "notion"
+      "source": "notion",
+      "date": "24/10/2025"
     },
     {
       "nom": "Refonte esthétique site web",
       "client": "VTC Swiss",
-      "montant": "599 EUR",
+      "montant": "599 €",
       "montant_num": 599,
       "statut": "accepte",
       "date_envoi": "2024-07-02",
-      "source": "notion"
+      "source": "notion",
+      "date": "02/07/2024"
     },
     {
       "nom": "Refonte web",
       "client": "Warere",
-      "montant": "2599 EUR",
+      "montant": "2 599 €",
       "montant_num": 2599,
       "statut": "accepte",
       "date_envoi": "2024-09-19",
-      "source": "notion"
+      "source": "notion",
+      "date": "19/09/2024"
     },
     {
       "nom": "Strategy & Events Mexico",
       "client": "Strategy and events",
-      "montant": "1880 EUR",
+      "montant": "1 880 €",
       "montant_num": 1880,
       "statut": "perdu",
       "date_envoi": "2025-10-24",
       "pdf_name": "Devis-2025-11-0007.pdf",
       "pdf_url": null,
-      "source": "notion"
+      "source": "notion",
+      "date": "24/10/2025"
     },
     {
       "nom": "Prototype plateforme",
       "client": "Inconnu",
-      "montant": "1839.2 EUR",
+      "montant": "1 839,20 €",
       "montant_num": 1839.2,
       "statut": "perdu",
       "date_envoi": "2025-10-24",
       "pdf_name": "Devis-2025-11-0006.pdf",
       "pdf_url": null,
-      "source": "notion"
+      "source": "notion",
+      "date": "24/10/2025"
     },
     {
       "nom": "Pixel Store",
       "client": "Paris 8",
-      "montant": "6500 EUR",
+      "montant": "6 500 €",
       "montant_num": 6500,
       "statut": "perdu",
       "date_envoi": "2025-11-14",
       "pdf_name": "Devis-2025-11-0009.pdf",
       "pdf_url": null,
-      "source": "notion"
+      "source": "notion",
+      "date": "14/11/2025"
     },
     {
       "nom": "Réseaux Sociaux",
       "client": "Oxyde Surfaces",
-      "montant": "778.8 EUR",
+      "montant": "778,80 €",
       "montant_num": 778.8,
       "statut": "perdu",
       "date_envoi": "2025-12-09",
       "pdf_name": "Devis-2025-12-0013 (Reseaux sociaux).pdf",
       "pdf_url": null,
-      "source": "notion"
+      "source": "notion",
+      "date": "09/12/2025"
     },
     {
       "nom": "Site e commerce",
       "client": "Oxyde Surfaces",
-      "montant": "10200 EUR",
+      "montant": "10 200 €",
       "montant_num": 10200,
       "statut": "perdu",
       "date_envoi": "2025-12-09",
       "pdf_name": "Devis-2025-12-0012 (E commerce).pdf",
       "pdf_url": null,
-      "source": "notion"
+      "source": "notion",
+      "date": "09/12/2025"
     }
   ],
   "factures": [
