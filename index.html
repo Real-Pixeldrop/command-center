@@ -2453,17 +2453,22 @@
     // ===== PROJETS =====
     function renderProjets() {
         const projets = DATA.projets;
-        const enCours = projets.filter(p => p.statut === 'En cours').length;
+        const enCours = projets.filter(p => p.statut === 'En cours' || p.statut === 'En retard');
         const enRetard = projets.filter(p => p.statut === 'En retard');
-        const livres = projets.filter(p => p.statut === 'Livre').length;
+        const livres = projets.filter(p => p.statut === 'Livre');
 
-        let rows = projets.map(p => `<tr onclick="openProjetPanel('${esc(p.nom).replace(/'/g, "\\'")}')" style="cursor:pointer"><td>${esc(p.nom)}</td><td>${esc(p.client)}</td><td>${esc(p.type)}</td><td>${esc(p.deadline)}</td><td><span class="badge ${badgeClass(p.statut)}">${esc(p.statut)}</span></td></tr>`).join('');
+        // Default view: only En cours + En retard
+        const activeRows = enCours.map(p => `<tr onclick="openProjetPanel('${esc(p.nom).replace(/'/g, "\\'")}')" style="cursor:pointer"><td>${esc(p.nom)}</td><td>${esc(p.client)}</td><td>${esc(p.type)}</td><td>${esc(p.deadline)}</td><td><span class="badge ${badgeClass(p.statut)}">${esc(p.statut)}</span></td></tr>`).join('');
+
+        const allRows = projets.filter(p => p.statut !== 'Livre').map(p => `<tr onclick="openProjetPanel('${esc(p.nom).replace(/'/g, "\\'")}')" style="cursor:pointer"><td>${esc(p.nom)}</td><td>${esc(p.client)}</td><td>${esc(p.type)}</td><td>${esc(p.deadline)}</td><td><span class="badge ${badgeClass(p.statut)}">${esc(p.statut)}</span></td></tr>`).join('');
+
+        const livreRows = livres.map(p => `<tr onclick="openProjetPanel('${esc(p.nom).replace(/'/g, "\\'")}')" style="cursor:pointer"><td>${esc(p.nom)}</td><td>${esc(p.client)}</td><td>${esc(p.type)}</td><td>${esc(p.deadline)}</td><td><span class="badge ${badgeClass(p.statut)}">${esc(p.statut)}</span></td></tr>`).join('');
 
         document.getElementById('projets-content').innerHTML = `
         <div class="grid grid-3">
             <div class="card fade-in" style="animation-delay:0.1s">
                 <div class="card-label">En cours</div>
-                <div class="card-value primary">${enCours}</div>
+                <div class="card-value primary">${enCours.length}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
                 <div class="card-label">En retard</div>
@@ -2471,25 +2476,35 @@
                 ${enRetard.length ? '<div class="card-sub">' + esc(enRetard[0].nom) + '</div>' : ''}
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Livres recemment</div>
-                <div class="card-value success">${livres}</div>
+                <div class="card-label">Total livres</div>
+                <div class="card-value success">${livres.length}</div>
             </div>
         </div>
 
         <div class="search-bar">
             <input type="text" class="search-input" placeholder="Rechercher un projet..." oninput="searchTable('projets-list', this.value)">
-            <button class="filter-btn active" onclick="filterTable('projets-list', 'all', this)">Tous</button>
-            <button class="filter-btn" onclick="filterTable('projets-list', 'En cours', this)">En cours</button>
-            <button class="filter-btn" onclick="filterTable('projets-list', 'Livre', this)">Livres</button>
+            <button class="filter-btn active" onclick="filterProjets('actifs', this)">En cours</button>
+            <button class="filter-btn" onclick="filterProjets('livres', this)">Livres (${livres.length})</button>
         </div>
 
         <div class="card table-card fade-in" style="animation-delay:0.25s">
             <div class="table-header">Liste des projets</div>
             <table>
                 <thead><tr><th>Projet</th><th>Client</th><th>Type</th><th>Deadline</th><th>Statut</th></tr></thead>
-                <tbody id="projets-list">${rows}</tbody>
+                <tbody id="projets-list">${activeRows}</tbody>
             </table>
         </div>`;
+
+        // Store rows for filtering
+        window._projetRows = { actifs: activeRows, livres: livreRows };
+    }
+
+    function filterProjets(filter, btn) {
+        const tbody = document.getElementById('projets-list');
+        if (!tbody || !window._projetRows) return;
+        tbody.innerHTML = window._projetRows[filter] || '';
+        document.querySelectorAll('.search-bar .filter-btn').forEach(b => b.classList.remove('active'));
+        if (btn) btn.classList.add('active');
     }
 
     // ===== CLIENTS =====
