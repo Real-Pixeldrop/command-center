@@ -2503,7 +2503,15 @@
         const tbody = document.getElementById('projets-list');
         if (!tbody || !window._projetRows) return;
         tbody.innerHTML = window._projetRows[filter] || '';
-        document.querySelectorAll('.search-bar .filter-btn').forEach(b => b.classList.remove('active'));
+        btn.closest('.search-bar').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        if (btn) btn.classList.add('active');
+    }
+
+    function filterDevisYear(year, btn) {
+        const tbody = document.getElementById('devis-list');
+        if (!tbody || !window._devisRows) return;
+        tbody.innerHTML = window._devisRows[year] || window._devisRows['all'] || '';
+        btn.closest('.search-bar').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         if (btn) btn.classList.add('active');
     }
 
@@ -3089,7 +3097,31 @@
         const devis = DATA.devis;
         const factures = DATA.factures;
 
-        let devisRows = devis.map(d => `<tr><td>${esc(d.date)}</td><td>${esc(d.client)}</td><td>${esc(d.objet)}</td><td>${esc(d.montant)}</td><td><span class="badge ${badgeClass(d.statut)}">${esc(d.statut)}</span></td><td><a href="${esc(d.pdf)}" target="_blank" style="color:var(--primary)">↗</a></td></tr>`).join('');
+        // Separate devis by year
+        const devis2026 = devis.filter(d => {
+            const dateStr = d.date_envoi || d.date || '';
+            return dateStr.includes('2026') || dateStr.includes('/26') || dateStr.startsWith('26');
+        });
+        const devis2025 = devis.filter(d => {
+            const dateStr = d.date_envoi || d.date || '';
+            return dateStr.includes('2025') || dateStr.includes('/25');
+        });
+        const devisOlder = devis.filter(d => {
+            const dateStr = d.date_envoi || d.date || '';
+            return !dateStr.includes('2026') && !dateStr.includes('2025') && !dateStr.includes('/26') && !dateStr.includes('/25') && !dateStr.startsWith('26');
+        });
+
+        function buildDevisRows(list) {
+            return list.map(d => {
+                const pdfLink = d.pdf ? '<a href="' + esc(d.pdf) + '" target="_blank" style="color:var(--primary)">↗</a>' : '--';
+                return '<tr><td>' + esc(d.date || fmtDate(d.date_envoi)) + '</td><td>' + esc(d.client) + '</td><td>' + esc(d.objet || d.nom) + '</td><td>' + esc(d.montant) + '</td><td><span class="badge ' + badgeClass(d.statut) + '">' + esc(d.statut) + '</span></td><td>' + pdfLink + '</td></tr>';
+            }).join('');
+        }
+
+        const devisRows2026 = buildDevisRows(devis2026);
+        const devisRows2025 = buildDevisRows(devis2025);
+        const devisRowsAll = buildDevisRows(devis);
+        let devisRows = devisRows2026;
 
         let factRows = factures.map(f => `<tr><td>${fmtDate(f.date)}</td><td>${esc(f.client)}</td><td>${esc(f.objet)}</td><td>${esc(f.montant)}</td><td><span class="badge ${badgeClass(f.statut)}">${esc(f.statut)}</span></td><td><a href="${esc(f.pdf)}" target="_blank" style="color:var(--primary)">↗</a></td></tr>`).join('');
 
@@ -3182,6 +3214,9 @@
         <div class="sub-tab-content active" id="subtab-devis">
             <div class="search-bar">
                 <input type="text" class="search-input" placeholder="Rechercher un devis..." oninput="searchTable('devis-list', this.value)">
+                <button class="filter-btn active" onclick="filterDevisYear('2026', this)">2026 (${devis2026.length})</button>
+                <button class="filter-btn" onclick="filterDevisYear('2025', this)">2025 (${devis2025.length})</button>
+                <button class="filter-btn" onclick="filterDevisYear('all', this)">Tous (${devis.length})</button>
             </div>
             <div class="card table-card fade-in" style="animation-delay:0.25s">
                 <table>
@@ -3202,6 +3237,9 @@
                 </table>
             </div>
         </div>`;
+
+        // Store rows for year filtering
+        window._devisRows = { '2026': devisRows2026, '2025': devisRows2025, 'all': devisRowsAll };
     }
 
     // ===== ABONNEMENTS =====
