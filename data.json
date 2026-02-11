@@ -3248,18 +3248,39 @@
   ],
   "taches": [
     {
+      "titre": "Declaration URSSAF janvier",
+      "desc": "Mercredi 11/02 — 12h",
+      "badge": "Admin",
+      "badge_color": "orange",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Muscu Heavy Duty",
+      "desc": "Mercredi 11/02 — 15h",
+      "badge": "Perso",
+      "badge_color": "green",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Session prospection telephonique",
+      "desc": "Mercredi 11/02 — 16h",
+      "badge": "Prospection",
+      "badge_color": "red",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Strategie Instagram avec Clea",
+      "desc": "Mercredi 11/02 — 20h",
+      "badge": "Marketing",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
+    {
       "titre": "Habitat Multi-Service",
       "desc": "Finaliser maquette Figma, puis créer site WordPress",
       "badge": "Site Web",
       "badge_color": "blue",
       "colonne": "en_cours"
-    },
-    {
-      "titre": "Relancer Sara Cleaning",
-      "desc": "Devis en attente — 4 000€",
-      "badge": "Relance",
-      "badge_color": "orange",
-      "colonne": "a_faire"
     },
     {
       "titre": "Dernière Dispo — Consulting",
