@@ -2595,8 +2595,7 @@
         const taches = DATA.taches;
         const colonneConfig = {
             a_faire: { label: '📋 À faire', col: 'col-blue' },
-            en_cours: { label: '🔄 En cours', col: 'col-orange' },
-            termine: { label: '✅ Terminé', col: 'col-green' }
+            en_cours: { label: '🔄 En cours', col: 'col-orange' }
         };
 
         let kanbanCols = '';
@@ -2613,7 +2612,39 @@
             </div>`;
         }
 
-        document.getElementById('taches-content').innerHTML = `<div class="kanban-board">${kanbanCols}</div>`;
+        // Terminés: collapsed by default
+        const termines = taches.filter(t => t.colonne === 'termine');
+        let termineSection = '';
+        if (termines.length > 0) {
+            const termineCards = termines.map((t, i) => `<div class="kanban-card" style="cursor:pointer;opacity:0.7" onclick="openTachePanel('${esc(t.titre).replace(/'/g, "\\'")}')">
+                <div class="kanban-card-title">${esc(t.titre)}</div>
+                <div class="kanban-card-desc">${esc(t.desc)}</div>
+                <span class="badge badge-${t.badge_color}">${esc(t.badge)}</span>
+            </div>`).join('');
+            termineSection = `<div style="margin-top:16px;">
+                <div onclick="toggleTermines()" style="display:inline-flex;align-items:center;gap:8px;cursor:pointer;padding:8px 16px;border-radius:8px;background:var(--bg);font-size:0.82rem;color:var(--text-light);transition:background 0.15s;" onmouseover="this.style.background='var(--border)'" onmouseout="this.style.background='var(--bg)'">
+                    <span id="termine-chevron" style="transition:transform 0.3s;font-size:0.7rem;">▶</span>
+                    <span>✅ ${termines.length} tache${termines.length > 1 ? 's' : ''} terminee${termines.length > 1 ? 's' : ''}</span>
+                </div>
+                <div id="termine-body" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;margin-top:8px;">
+                    <div class="kanban-column col-green" style="margin:0;">
+                        <div class="kanban-column-body">${termineCards}</div>
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        document.getElementById('taches-content').innerHTML = `<div class="kanban-board">${kanbanCols}</div>${termineSection}`;
+    }
+
+    let terminesVisible = false;
+    function toggleTermines() {
+        const body = document.getElementById('termine-body');
+        const chevron = document.getElementById('termine-chevron');
+        if (!body) return;
+        terminesVisible = !terminesVisible;
+        body.style.maxHeight = terminesVisible ? '600px' : '0';
+        chevron.style.transform = terminesVisible ? 'rotate(90deg)' : 'rotate(0deg)';
     }
 
     // ===== PROSPECTION =====
