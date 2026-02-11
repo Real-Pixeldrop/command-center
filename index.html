@@ -2289,11 +2289,21 @@
         return { mois: moisNoms[currentMonthIdx], caActuel, objectif, pct, color };
     }
 
+    let relancesCollapsed = false;
+    function toggleRelances() {
+        const body = document.getElementById('relance-body');
+        const chevron = document.getElementById('relance-chevron');
+        if (!body) return;
+        relancesCollapsed = !relancesCollapsed;
+        body.style.maxHeight = relancesCollapsed ? '0px' : '500px';
+        chevron.style.transform = relancesCollapsed ? 'rotate(-90deg)' : 'rotate(0deg)';
+    }
+
     function getRelances() {
         const now = new Date();
         const devis = DATA.devis || [];
         return devis.filter(d => {
-            const s = d.statut.toLowerCase();
+            const s = d.statut.toLowerCase().replace('_', ' ');
             if (s !== 'en attente' && s !== 'envoye' && s !== 'envoyé') return false;
             if (!d.date_envoi) return false;
             const envoi = new Date(d.date_envoi);
@@ -3040,22 +3050,63 @@
         const relances = getRelances();
         let relancesHtml = '';
         if (relances.length === 0) {
-            relancesHtml = '<div style="padding:16px 24px;color:var(--success);font-weight:500;">✓ Aucune relance en attente</div>';
+            relancesHtml = '';
         } else {
-            const relanceRows = relances.map(r => {
-                const isUrgent = r.jours > 14;
-                const color = isUrgent ? '#ef4444' : '#f59e0b';
-                const label = isUrgent ? r.jours + ' jours - RELANCE URGENTE' : r.jours + ' jours sans reponse';
-                return `<tr><td>${esc(r.objet)}</td><td>${esc(r.client)}</td><td>${esc(r.montant)}</td><td><span style="color:${color};font-weight:600;font-size:0.82rem;">${label}</span></td></tr>`;
+            const totalMontant = relances.reduce((sum, r) => {
+                const num = parseFloat(String(r.montant).replace(/[^0-9.,]/g, '').replace(',', '.')) || 0;
+                return sum + num;
+            }, 0);
+            const urgentCount = relances.filter(r => r.jours > 30).length;
+
+            const relanceItems = relances.map(r => {
+                const jours = r.jours;
+                let urgencyColor, urgencyBg, urgencyLabel, urgencyIcon;
+                if (jours > 60) {
+                    urgencyColor = '#dc2626'; urgencyBg = 'rgba(220,38,38,0.08)'; urgencyLabel = 'Critique'; urgencyIcon = '🔴';
+                } else if (jours > 30) {
+                    urgencyColor = '#ea580c'; urgencyBg = 'rgba(234,88,12,0.08)'; urgencyLabel = 'Urgent'; urgencyIcon = '🟠';
+                } else if (jours > 14) {
+                    urgencyColor = '#d97706'; urgencyBg = 'rgba(217,119,6,0.08)'; urgencyLabel = 'A suivre'; urgencyIcon = '🟡';
+                } else {
+                    urgencyColor = '#059669'; urgencyBg = 'rgba(5,150,105,0.08)'; urgencyLabel = 'Recent'; urgencyIcon = '🟢';
+                }
+                return `<div class="relance-item" style="display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border);transition:background 0.15s;" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='transparent'">
+                    <div style="display:flex;align-items:center;gap:14px;flex:1;min-width:0;">
+                        <span style="font-size:0.7rem;">${urgencyIcon}</span>
+                        <div style="min-width:0;">
+                            <div style="font-weight:600;font-size:0.88rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(r.client)}</div>
+                            <div style="font-size:0.78rem;color:var(--text-light);margin-top:2px;">${esc(r.objet || '')}</div>
+                        </div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:20px;flex-shrink:0;">
+                        <span style="font-weight:600;font-size:0.9rem;color:var(--text);">${esc(r.montant)}</span>
+                        <span style="font-size:0.75rem;font-weight:600;color:${urgencyColor};background:${urgencyBg};padding:4px 10px;border-radius:20px;white-space:nowrap;">${jours}j</span>
+                    </div>
+                </div>`;
             }).join('');
-            relancesHtml = `<table><thead><tr><th>Devis</th><th>Client</th><th>Montant</th><th>Statut</th></tr></thead><tbody>${relanceRows}</tbody></table>`;
+
+            relancesHtml = `
+            <div class="card fade-in relance-banner" style="overflow:hidden;margin-bottom:20px;border:1px solid rgba(239,68,68,0.15);background:linear-gradient(135deg, rgba(239,68,68,0.03) 0%, var(--card-bg) 100%);">
+                <div onclick="toggleRelances()" style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;user-select:none;" onmouseover="this.style.background='rgba(239,68,68,0.04)'" onmouseout="this.style.background='transparent'">
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <div style="width:36px;height:36px;border-radius:10px;background:rgba(239,68,68,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">⚡</div>
+                        <div>
+                            <div style="font-weight:700;font-size:0.95rem;color:var(--text);">Relances necessaires <span style="font-size:0.75rem;font-weight:600;color:#fff;background:#ef4444;padding:2px 8px;border-radius:10px;margin-left:6px;">${relances.length}</span></div>
+                            <div style="font-size:0.78rem;color:var(--text-light);margin-top:2px;">${urgentCount} urgente${urgentCount > 1 ? 's' : ''} · ${Math.round(totalMontant).toLocaleString('fr-FR')} € en jeu</div>
+                        </div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <span id="relance-chevron" style="transition:transform 0.3s;font-size:0.8rem;color:var(--text-light);">▼</span>
+                    </div>
+                </div>
+                <div id="relance-body" style="max-height:500px;overflow:hidden;transition:max-height 0.35s ease;">
+                    ${relanceItems}
+                </div>
+            </div>`;
         }
 
         document.getElementById('devis-content').innerHTML = `
-        <div class="card fade-in" style="border-left:3px solid #ef4444;margin-bottom:20px;">
-            <div class="table-header" style="padding:12px 0;">Relances necessaires</div>
-            ${relancesHtml}
-        </div>
+        ${relancesHtml}
 
         <div class="grid grid-3">
             <div class="card fade-in" style="animation-delay:0.1s">
