@@ -3614,6 +3614,17 @@
         if (!items || !items.classList.contains('nav-section-items')) return;
 
         const isCollapsed = items.classList.contains('collapsed');
+
+        // Accordion: close all other sections first
+        document.querySelectorAll('.nav-section-items').forEach(other => {
+            if (other !== items && !other.classList.contains('collapsed')) {
+                other.classList.add('collapsed');
+                other.style.maxHeight = '0';
+                const otherChevron = other.previousElementSibling?.querySelector('.chevron');
+                if (otherChevron) otherChevron.classList.add('collapsed');
+            }
+        });
+
         chevron.classList.toggle('collapsed');
         items.classList.toggle('collapsed');
 
