@@ -4,7 +4,7 @@
     "ca_annuel": 60000
   },
   "kpis": {
-    "ca_mensuel": "800€",
+    "ca_mensuel": "650€",
     "ca_mensuel_mois": "Février 2026",
     "clients_actifs": 100,
     "trafic_pd": 73,
@@ -1663,7 +1663,7 @@
     {
       "nom": "RCL / Gérald Glondu",
       "desc": "Alias domaine collectiviteslocales.fr - Devis accepté",
-      "montant": "800€",
+      "montant": "650€ HT (780€ TTC)",
       "etape": "signe",
       "prochaine_action": "Config domaine mercredi 12/02 après-midi"
     },
