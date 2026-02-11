@@ -2582,10 +2582,12 @@
         const pipeline = DATA.pipeline;
 
         const etapeConfig = {
-            offre_envoyee: { label: '📧 Offre envoyee', col: 'col-orange', badge: 'badge-orange' },
-            en_discussion: { label: '💬 En discussion', col: 'col-blue', badge: 'badge-blue' },
-            signe: { label: '✅ Signe', col: 'col-green', badge: 'badge-green' },
-            perdu: { label: '❌ Perdu', col: 'col-gray', badge: 'badge-gray' }
+            offre_envoyee: { label: 'Offre envoyee', col: 'col-orange', badge: 'badge-orange' },
+            en_attente: { label: 'En attente', col: 'col-yellow', badge: 'badge-yellow' },
+            en_discussion: { label: 'En discussion', col: 'col-blue', badge: 'badge-blue' },
+            signe: { label: 'Signe', col: 'col-green', badge: 'badge-green' },
+            livre: { label: 'Livre', col: 'col-green', badge: 'badge-green' },
+            perdu: { label: 'Perdu', col: 'col-gray', badge: 'badge-gray' }
         };
 
         let kanbanCols = '';

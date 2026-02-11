@@ -8,40 +8,44 @@
     "ca_mensuel_mois": "Fevrier 2026",
     "clients_actifs": 100,
     "trafic_pd": 73,
-    "devis_attente": 8
+    "devis_attente": 3
   },
   "prospection": {
-    "linkedin_sales_nav": {
-      "credits_inmail": 88,
-      "credits_max": 150,
-      "liste_active": "Dirigeants PME Industrielles",
-      "derniere_session": "2026-02-11",
-      "messages_envoyes_total": 10
-    },
-    "sessions": [
-      {
-        "date": "2026-02-11",
-        "messages": 10,
-        "prospects": [
-          {"nom": "Christophe Schalk", "entreprise": "Directeur", "secteur": "Industrie"},
-          {"nom": "Trishna Kammili", "entreprise": "R-GDS", "secteur": "Energie"},
-          {"nom": "Claire-Lise Baumann", "entreprise": "Hôtel Beaucour", "secteur": "Hôtellerie"},
-          {"nom": "François Duchaine", "entreprise": "Les Constructeurs du Bois", "secteur": "Construction"},
-          {"nom": "Roxane Weiss", "entreprise": "WOOZUP", "secteur": "Tech"},
-          {"nom": "Thomas Gresset", "entreprise": "Réseau Entreprendre Alsace", "secteur": "Réseau"},
-          {"nom": "Yannick FLACH", "entreprise": "Cabinet Foltzer-Flach-Scheer", "secteur": "Comptabilité"},
-          {"nom": "Christophe LELANDAIS", "entreprise": "MUSSIPONTUM", "secteur": "Grande distribution"},
-          {"nom": "Valérie Creusot Rivière", "entreprise": "Yzico", "secteur": "Comptabilité"},
-          {"nom": "Stéphane COUTANSON", "entreprise": "Prométhée Technologies", "secteur": "Tech/Industrie"}
-        ],
-        "reponses": 0,
-        "rdv_obtenus": 0
+    "prospects_a_contacter": 71,
+    "appels_ce_mois": 0,
+    "taux_conversion": "--",
+    "rdv_obtenus": 0,
+    "objectifs": {
+      "appels": {
+        "current": 0,
+        "goal": 50
+      },
+      "rdv": {
+        "current": 0,
+        "goal": 5
+      },
+      "devis": {
+        "current": 0,
+        "goal": 3
       }
-    ],
-    "kpis": {
-      "taux_reponse_moyen": "--",
-      "taux_rdv": "--"
-    }
+    },
+    "zones": [
+      {
+        "zone": "Luxembourg",
+        "prospects": "~20",
+        "secteur": "Fiduciaires, cabinets"
+      },
+      {
+        "zone": "Alsace / Moselle",
+        "prospects": "~40",
+        "secteur": "BTP, industrie"
+      },
+      {
+        "zone": "Ile-de-France",
+        "prospects": "~10",
+        "secteur": "Services, PME"
+      }
+    ]
   },
   "marketing": {
     "linkedin": {
@@ -1658,27 +1662,37 @@
   "pipeline": [
     {
       "nom": "L.I.Partners",
-      "desc": "Refonte site web — 4 devis envoyes",
-      "montant": "8 400€ x3 + 7 800€",
-      "etape": "offre_envoyee"
+      "desc": "Refonte site web - relance faite, attente retour",
+      "montant": "8 400€",
+      "etape": "offre_envoyee",
+      "prochaine_action": "Check vendredi 14/02"
     },
     {
       "nom": "FIDOLUX",
-      "desc": "Portail Client",
+      "desc": "Portail Client - pause volontaire (Ignite d'abord)",
       "montant": "9 700€",
-      "etape": "offre_envoyee"
-    },
-    {
-      "nom": "Habitat Multi Services",
-      "desc": "Site vitrine — facture payee",
-      "montant": "3 000€",
-      "etape": "signe"
+      "etape": "offre_envoyee",
+      "prochaine_action": "Reprise fin fevrier"
     },
     {
       "nom": "Black Trombone",
-      "desc": "Automatisation DernièreDispo / Brevo",
-      "montant": "600€",
-      "etape": "offre_envoyee"
+      "desc": "Tests et validation",
+      "montant": "500€",
+      "etape": "offre_envoyee",
+      "prochaine_action": "Attente retour Johan"
+    },
+    {
+      "nom": "Communaute 360",
+      "desc": "En attente comite national",
+      "montant": "4 240€",
+      "etape": "en_attente",
+      "prochaine_action": "Relance aout 2026"
+    },
+    {
+      "nom": "Habitat Multi Services",
+      "desc": "Site vitrine - facture payee",
+      "montant": "3 000€",
+      "etape": "livre"
     }
   ],
   "pipeline_kpis": {
@@ -1753,41 +1767,44 @@
       "client": "Communauté 360",
       "montant": "4 239,90 €",
       "montant_num": 4239.9,
-      "statut": "envoye",
+      "statut": "en_pause",
       "date_envoi": "2025-06-15",
       "source": "notion",
       "pdf_name": "Vivre-Devenir-12775.pdf",
       "pdf_url": null,
-      "date": "15/06/2025"
+      "date": "15/06/2025",
+      "note": "En attente comite national - relance aout 2026"
     },
     {
       "nom": "Ignite",
       "client": "Ignite Media",
       "montant": "3 000 €",
       "montant_num": 3000,
-      "statut": "envoye",
+      "statut": "en_pause",
       "date_envoi": "2025-12-15",
       "source": "notion",
       "pdf_name": "Devis-2025-12-0015.pdf",
       "pdf_url": null,
-      "date": "15/12/2025"
+      "date": "15/12/2025",
+      "note": "Client fait Ignite d abord, reprise fin fevrier"
     },
     {
       "nom": "Refonte site web L.I.Partners",
       "client": "L.I. Partners",
       "montant": "7 000 €",
       "montant_num": 7000,
-      "statut": "envoye",
+      "statut": "perdu",
       "date_envoi": "2026-01-25",
       "source": "notion",
-      "date": "25/01/2026"
+      "date": "25/01/2026",
+      "note": "Remplace par devis D-2026-0216 a 8400€"
     },
     {
       "nom": "Pixel Booking",
       "client": "Paris 8",
       "montant": "2 099 €",
       "montant_num": 2099,
-      "statut": "envoye",
+      "statut": "perdu",
       "date_envoi": "2025-10-08",
       "source": "notion",
       "pdf_name": "Devis-2025-11-0008.pdf",
@@ -2895,43 +2912,6 @@
       "placeholder": true
     }
   ],
-  "prospection": {
-    "prospects_a_contacter": 71,
-    "appels_ce_mois": 0,
-    "taux_conversion": "--",
-    "rdv_obtenus": 0,
-    "objectifs": {
-      "appels": {
-        "current": 0,
-        "goal": 50
-      },
-      "rdv": {
-        "current": 0,
-        "goal": 5
-      },
-      "devis": {
-        "current": 0,
-        "goal": 3
-      }
-    },
-    "zones": [
-      {
-        "zone": "Luxembourg",
-        "prospects": "~20",
-        "secteur": "Fiduciaires, cabinets"
-      },
-      {
-        "zone": "Alsace / Moselle",
-        "prospects": "~40",
-        "secteur": "BTP, industrie"
-      },
-      {
-        "zone": "Ile-de-France",
-        "prospects": "~10",
-        "secteur": "Services, PME"
-      }
-    ]
-  },
   "prospects": [
     {
       "entreprise": "DECORENOV",
