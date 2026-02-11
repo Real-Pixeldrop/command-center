@@ -3248,29 +3248,64 @@
   ],
   "taches": [
     {
-      "titre": "Declaration URSSAF janvier",
-      "desc": "Mercredi 11/02 — 12h",
-      "badge": "Admin",
-      "badge_color": "orange",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Muscu Heavy Duty",
-      "desc": "Mercredi 11/02 — 15h",
-      "badge": "Perso",
-      "badge_color": "green",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Session prospection telephonique",
-      "desc": "Mercredi 11/02 — 16h",
+      "titre": "Test prospection LinkedIn - Sales Navigator 08:00 - 09:00",
+      "desc": "Mercredi 11/02 — 09:00",
       "badge": "Prospection",
       "badge_color": "red",
       "colonne": "a_faire"
     },
     {
-      "titre": "Strategie Instagram avec Clea",
-      "desc": "Mercredi 11/02 — 20h",
+      "titre": "L.I. Partners - Relance devis 7000€ 09:00 - 09:15",
+      "desc": "Mercredi 11/02 — 10:00",
+      "badge": "Relance",
+      "badge_color": "red",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Relance Communauté 360 - 4240€ 10:15 - 10:30",
+      "desc": "Mercredi 11/02 — 10:30",
+      "badge": "Relance",
+      "badge_color": "red",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Post Plaza Tango 11:00 - 11:30",
+      "desc": "Mercredi 11/02 — 11:15",
+      "badge": "Marketing",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Check réponse CFI Impression - devis Plaza Tango 11:15",
+      "desc": "Mercredi 11/02 — 11:30",
+      "badge": "Plaza Tango",
+      "badge_color": "orange",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Déclaration URSSAF janvier 12:00 - 12:30",
+      "desc": "Mercredi 11/02 — 14:00",
+      "badge": "Admin",
+      "badge_color": "orange",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Muscu Heavy Duty 15:00 - 15:45",
+      "desc": "Mercredi 11/02 — 16:00",
+      "badge": "Perso",
+      "badge_color": "green",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Black Trombone - Centrer images grille (demande Johan) 17:00 - 17:30",
+      "desc": "Mercredi 11/02 — 17:30",
+      "badge": "Client",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Stratégie Instagram avec Cléa 20:00 - 21:00",
+      "desc": "Mercredi 11/02",
       "badge": "Marketing",
       "badge_color": "blue",
       "colonne": "a_faire"
