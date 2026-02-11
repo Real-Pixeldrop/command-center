@@ -3819,10 +3819,10 @@
   ],
   "instagram_posts": [
     {
-      "titre": "Before/After site client",
-      "type": "reel",
-      "date": "2026-02-12",
-      "statut": "creation"
+      "titre": "Lancement com Pixel Drop",
+      "type": "post",
+      "date": "2026-02-11",
+      "statut": "publie"
     },
     {
       "titre": "Tips SEO en 30s",
@@ -3831,16 +3831,16 @@
       "statut": "idee"
     },
     {
-      "titre": "Temoignage client Cothidance",
+      "titre": "L'IA dans le web design",
       "type": "post",
-      "date": "2026-02-08",
-      "statut": "pret"
+      "date": "2026-02-18",
+      "statut": "idee"
     },
     {
-      "titre": "Coulisses bureau",
-      "type": "story",
-      "date": "2026-02-05",
-      "statut": "publie"
+      "titre": "Notre process de creation",
+      "type": "reel",
+      "date": "2026-02-22",
+      "statut": "idee"
     }
   ],
   "system_status": [
