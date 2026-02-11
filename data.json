@@ -67,6 +67,13 @@
       "contacts": 287,
       "open_rate": "--",
       "campaigns_sent": 2
+    },
+    "google_reviews": {
+      "current": 60,
+      "goal": 110,
+      "rating": 5.0,
+      "url": "https://www.google.com/maps/place/Pixel+Drop",
+      "review_url": "https://g.page/r/CbbrUpuEtP7iEBM/review"
     }
   },
   "seo": {
