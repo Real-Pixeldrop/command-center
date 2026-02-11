@@ -8,7 +8,7 @@
     "ca_mensuel_mois": "Fevrier 2026",
     "clients_actifs": 100,
     "trafic_pd": 73,
-    "devis_attente": 7
+    "devis_attente": 8
   },
   "marketing": {
     "linkedin": {
@@ -1633,6 +1633,12 @@
       "desc": "Site vitrine — facture payee",
       "montant": "3 000€",
       "etape": "signe"
+    },
+    {
+      "nom": "Black Trombone",
+      "desc": "Automatisation DernièreDispo / Brevo",
+      "montant": "600€",
+      "etape": "offre_envoyee"
     }
   ],
   "pipeline_kpis": {
@@ -1655,6 +1661,18 @@
   },
   "devis": [
     {
+      "nom": "Devis D-2026-0218",
+      "client": "Black Trombone",
+      "montant": "600€",
+      "montant_num": 600,
+      "statut": "en_attente",
+      "date_envoi": "2026-02-10",
+      "date_accepte": null,
+      "objet": "Automatisation DernièreDispo / Brevo",
+      "date": "10/02",
+      "pdf": ""
+    },
+    {
       "nom": "Devis D-2026-0216",
       "client": "L.I.Partners",
       "montant": "8 400€",
@@ -1664,66 +1682,6 @@
       "date_accepte": null,
       "objet": "Refonte site web L.I.Partners",
       "date": "04/02",
-      "pdf": ""
-    },
-    {
-      "nom": "Devis D-2026-0215",
-      "client": "L.I.Partners",
-      "montant": "8 400€",
-      "montant_num": 8400,
-      "statut": "en_attente",
-      "date_envoi": "2026-02-04",
-      "date_accepte": null,
-      "objet": "Refonte site web L.I.Partners",
-      "date": "04/02",
-      "pdf": ""
-    },
-    {
-      "nom": "Devis D-2026-0214",
-      "client": "L.I.Partners",
-      "montant": "8 400€",
-      "montant_num": 8400,
-      "statut": "en_attente",
-      "date_envoi": "2026-02-04",
-      "date_accepte": null,
-      "objet": "Refonte site web L.I.Partners",
-      "date": "04/02",
-      "pdf": ""
-    },
-    {
-      "nom": "Devis D-2026-0213",
-      "client": "L.I.Partners",
-      "montant": "7 800€",
-      "montant_num": 7800,
-      "statut": "en_attente",
-      "date_envoi": "2026-02-04",
-      "date_accepte": null,
-      "objet": "Refonte site web L.I.Partners",
-      "date": "04/02",
-      "pdf": ""
-    },
-    {
-      "nom": "Devis D-2026-0112",
-      "client": "Entretien Zen",
-      "montant": "2 000€",
-      "montant_num": 2000,
-      "statut": "en_attente",
-      "date_envoi": "2026-01-30",
-      "date_accepte": null,
-      "objet": "Site Internet 3.0",
-      "date": "30/01",
-      "pdf": ""
-    },
-    {
-      "nom": "Devis D-2026-0111",
-      "client": "Habitat Multi Services",
-      "montant": "100€",
-      "montant_num": 100,
-      "statut": "en_attente",
-      "date_envoi": "2026-01-30",
-      "date_accepte": null,
-      "objet": "Test Quote",
-      "date": "30/01",
       "pdf": ""
     },
     {
@@ -1828,15 +1786,6 @@
       "montant_num": 114,
       "statut": "accepte",
       "date_envoi": "2024-12-08",
-      "source": "notion"
-    },
-    {
-      "nom": "Renouvellement nom de domaine + hébérgement",
-      "client": "Au Cerf",
-      "montant": "114 EUR",
-      "montant_num": 114,
-      "statut": "accepte",
-      "date_envoi": "2025-12-09",
       "source": "notion"
     },
     {
