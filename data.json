@@ -1670,7 +1670,7 @@
       "date_accepte": null,
       "objet": "Automatisation DernièreDispo / Brevo",
       "date": "10/02",
-      "pdf": ""
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D"
     },
     {
       "nom": "Devis D-2026-0216",
@@ -1682,7 +1682,7 @@
       "date_accepte": null,
       "objet": "Refonte site web L.I.Partners",
       "date": "04/02",
-      "pdf": ""
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=1ISSAiiH8RacslbmGUPhoi7j6xW4sXpsntPcr5Bm7i3uvMCsQaVJHJZP7vQlw1%2Fn5%2BRXvVsqWYVlx00getC0bqKpEoU9VQhPrtQIxKhBB%2F%2BjgvyJe0FHnrC%2F--ME7fKv%2FiC97RSpEC--sQaAIFRY4lBtdd04iR4vkg%3D%3D"
     },
     {
       "nom": "Devis D-2026-0110",
@@ -1694,7 +1694,7 @@
       "date_accepte": "2026-01-27",
       "objet": "Site vitrine Habitat Multi Services",
       "date": "27/01",
-      "pdf": ""
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=mzxKI8Ez8xrEXu4zOd60jTRCdsFdWeQ9hN86mkVLJGHtSGFvw57V0btgo8ZXFjbGWsUDRL7Lc584AJRv8%2FWtDiKBoWN6lZDJKCEuH1TgLoeeeqSQMgL1JnqS--9C6UY9FeFL2KTpm4--ucH6WGGrfzfHykU6KINUKQ%3D%3D"
     },
     {
       "nom": "Devis D-2026-017",
@@ -1706,7 +1706,7 @@
       "date_accepte": null,
       "objet": "Portail Client FIDOLUX",
       "date": "08/01",
-      "pdf": ""
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=tf%2FiUFaLWiNBy8lOTsrembQRnDjq7DTCXnL2Mx%2BsWcJO6aDWfxE2m9IcgApe18eeEJTtUBnPKy0VAOtu0sPJQ%2FWiUZyVOT%2BDoboUsDdIOOYiIxPBHg8bdc7A--lsImK%2BBj0%2BiPYk56--mKP90nsTP%2BByiMre9NnkSA%3D%3D"
     },
     {
       "nom": "Communauté 360",
@@ -1840,7 +1840,8 @@
       "montant_num": 499,
       "statut": "accepte",
       "date_envoi": "2025-04-07",
-      "source": "notion"
+      "source": "notion",
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D"
     },
     {
       "nom": "Dernière Dispo 1/2",
@@ -1849,7 +1850,8 @@
       "montant_num": 1765.35,
       "statut": "accepte",
       "date_envoi": "2025-04-07",
-      "source": "notion"
+      "source": "notion",
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D"
     },
     {
       "nom": "Dernière Dispo 2/2",
@@ -1858,7 +1860,8 @@
       "montant_num": 1765.35,
       "statut": "accepte",
       "date_envoi": "2025-06-04",
-      "source": "notion"
+      "source": "notion",
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D"
     },
     {
       "nom": "nom de domaine + hébérgement",
