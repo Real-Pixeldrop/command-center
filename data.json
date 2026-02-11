@@ -1623,22 +1623,10 @@
       "etape": "offre_envoyee"
     },
     {
-      "nom": "Entretien Zen",
-      "desc": "Site Internet 3.0",
-      "montant": "2 000€",
-      "etape": "offre_envoyee"
-    },
-    {
       "nom": "FIDOLUX",
       "desc": "Portail Client",
       "montant": "9 700€",
       "etape": "offre_envoyee"
-    },
-    {
-      "nom": "M.Bolchert JDA",
-      "desc": "Devis en attente — relance a faire",
-      "montant": "2 500€",
-      "etape": "en_discussion"
     },
     {
       "nom": "Habitat Multi Services",
@@ -1649,12 +1637,12 @@
   ],
   "pipeline_kpis": {
     "offres_envoyees": {
-      "count": 6,
-      "montant": "39 400€ en jeu"
+      "count": 2,
+      "montant": "2 offres en jeu"
     },
     "en_discussion": {
-      "count": 1,
-      "detail": "M.Bolchert JDA"
+      "count": 0,
+      "detail": ""
     },
     "signes": {
       "count": 1,
@@ -1774,33 +1762,6 @@
       "pdf_url": null
     },
     {
-      "nom": "Migration hébergement - Céline Roland",
-      "client": "Céline Roland Opticien Lunetier",
-      "montant": "5000 EUR",
-      "montant_num": 5000,
-      "statut": "en_attente",
-      "date_envoi": "2025-12-24",
-      "source": "notion"
-    },
-    {
-      "nom": "M.Bolchert JDA",
-      "client": "EJDA",
-      "montant": "2500 EUR",
-      "montant_num": 2500,
-      "statut": "en_attente",
-      "date_envoi": "2025-09-16",
-      "source": "notion"
-    },
-    {
-      "nom": "Site vitrine Entretien Zen",
-      "client": "Entretien Zen",
-      "montant": "2000 EUR",
-      "montant_num": 2000,
-      "statut": "en_attente",
-      "date_envoi": "2025-12-24",
-      "source": "notion"
-    },
-    {
       "nom": "Portail Client",
       "client": "Fidolux",
       "montant": "9700 EUR",
@@ -1809,17 +1770,6 @@
       "date_envoi": "2026-01-08",
       "source": "notion",
       "pdf_name": "Devis-FIDOLUX SARL-AKLI GOUDJIL-D-2026-017.pdf",
-      "pdf_url": null
-    },
-    {
-      "nom": "E-Commerce",
-      "client": "Habitat Multi Surfaces",
-      "montant": "3500 EUR",
-      "montant_num": 3500,
-      "statut": "envoye",
-      "date_envoi": "2025-11-18",
-      "source": "notion",
-      "pdf_name": "Devis-2025-11-0011.pdf",
       "pdf_url": null
     },
     {
@@ -1843,37 +1793,6 @@
       "source": "notion"
     },
     {
-      "nom": "LXB CARELLAGE",
-      "client": "LXB Carellage",
-      "montant": "6500 EUR",
-      "montant_num": 6500,
-      "statut": "envoye",
-      "date_envoi": "2025-11-12",
-      "source": "notion",
-      "pdf_name": "Devis-2025-11-0005.pdf",
-      "pdf_url": null
-    },
-    {
-      "nom": "Devis Blog Ewan",
-      "client": "LXB Estates Luxembourg",
-      "montant": "400 EUR",
-      "montant_num": 400,
-      "statut": "envoye",
-      "date_envoi": "2025-12-12",
-      "source": "notion",
-      "pdf_name": "Devis-2025-12-0016.pdf",
-      "pdf_url": null
-    },
-    {
-      "nom": "Site vitrine Maya Hua",
-      "client": "Maya Hua",
-      "montant": "2000 EUR",
-      "montant_num": 2000,
-      "statut": "en_attente",
-      "date_envoi": "2025-12-24",
-      "source": "notion"
-    },
-    {
       "nom": "Pixel Booking",
       "client": "Paris 8",
       "montant": "2099 EUR",
@@ -1882,26 +1801,6 @@
       "date_envoi": "2025-10-08",
       "source": "notion",
       "pdf_name": "Devis-2025-11-0008.pdf",
-      "pdf_url": null
-    },
-    {
-      "nom": "Sara Cleaning",
-      "client": "Sans entreprise",
-      "montant": "4000 EUR",
-      "montant_num": 4000,
-      "statut": "en_attente",
-      "date_envoi": "2025-12-04",
-      "source": "notion"
-    },
-    {
-      "nom": "Sport Chevaux",
-      "client": "Sans entreprise",
-      "montant": "6699 EUR",
-      "montant_num": 6699,
-      "statut": "envoye",
-      "date_envoi": "2025-12-04",
-      "source": "notion",
-      "pdf_name": "Devis-2025-12-0017.pdf",
       "pdf_url": null
     },
     {
