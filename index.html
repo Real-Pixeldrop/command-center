@@ -1568,7 +1568,6 @@
         </div>
         <div class="nav-section-items">
             <a class="nav-item" onclick="switchTab('claudia', this)">
-                <span style="margin-right: 8px;">🤖</span>
                 <span class="nav-label">Claudia</span>
             </a>
         </div>
@@ -3814,8 +3813,46 @@
     function searchTable(tbodyId, query) {
         const tbody = document.getElementById(tbodyId);
         if (!tbody) return;
-        const rows = tbody.querySelectorAll('tr');
         const q = query.toLowerCase().trim();
+
+        // If searching devis or projets, switch to "all" view first
+        if (q && tbodyId === 'devis-list' && window._devisRows) {
+            tbody.innerHTML = window._devisRows['all'] || '';
+            // Deselect year filter buttons
+            const searchBar = tbody.closest('.sub-tab-content')?.querySelector('.search-bar');
+            if (searchBar) searchBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        }
+        if (q && tbodyId === 'projets-list' && window._projetRows) {
+            tbody.innerHTML = (window._projetRows['actifs'] || '') + (window._projetRows['livres'] || '');
+            const searchBar = tbody.closest('.card')?.closest('div')?.querySelector('.search-bar');
+            if (searchBar) searchBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        }
+
+        // If search cleared, restore default filter
+        if (!q) {
+            if (tbodyId === 'devis-list' && window._devisRows) {
+                tbody.innerHTML = window._devisRows['2026'] || '';
+                const searchBar = tbody.closest('.sub-tab-content')?.querySelector('.search-bar');
+                if (searchBar) {
+                    const btns = searchBar.querySelectorAll('.filter-btn');
+                    btns.forEach(b => b.classList.remove('active'));
+                    if (btns[0]) btns[0].classList.add('active');
+                }
+                return;
+            }
+            if (tbodyId === 'projets-list' && window._projetRows) {
+                tbody.innerHTML = window._projetRows['actifs'] || '';
+                const searchBar = document.querySelector('#projets-content .search-bar');
+                if (searchBar) {
+                    const btns = searchBar.querySelectorAll('.filter-btn');
+                    btns.forEach(b => b.classList.remove('active'));
+                    if (btns[0]) btns[0].classList.add('active');
+                }
+                return;
+            }
+        }
+
+        const rows = tbody.querySelectorAll('tr');
         rows.forEach(row => {
             row.style.display = (!q || row.textContent.toLowerCase().includes(q)) ? '' : 'none';
         });
