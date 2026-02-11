@@ -1,61 +1,66 @@
 {
-  "lastSync": "2026-02-11T08:02:38.226648+01:00",
+  "lastSync": "2026-02-11T08:03:38+01:00",
   "heartbeats": {
     "main": {
-      "lastCheck": "2026-02-11T08:02:38.226648+01:00",
+      "lastCheck": "2026-02-11T08:02:54+01:00",
       "status": "ok"
     },
     "plaza-marketing": {
-      "lastCheck": null,
-      "status": "idle"
+      "lastCheck": "2026-02-11T08:03:17+01:00",
+      "status": "ok"
     },
     "clea": {
-      "lastCheck": null,
-      "status": "idle"
+      "lastCheck": "2026-02-11T08:03:25+01:00",
+      "status": "ok"
     }
   },
   "recentActivity": [
     {
-      "time": "08:02",
+      "time": "07:02",
+      "agent": "Claudia",
+      "action": "Activité système"
+    },
+    {
+      "time": "07:02",
+      "agent": "Claudia",
+      "action": "Activité système"
+    },
+    {
+      "time": "07:02",
       "agent": "Claudia",
       "action": "Heartbeat check"
     },
     {
-      "time": "07:17",
+      "time": "07:02",
+      "agent": "Claudia",
+      "action": "Activité système"
+    },
+    {
+      "time": "07:02",
       "agent": "Claudia",
       "action": "Heartbeat check"
     },
     {
-      "time": "07:15",
+      "time": "07:03",
       "agent": "Claudia",
-      "action": "Sync calendrier → taches dashboard"
+      "action": "Activité système"
     },
     {
-      "time": "07:15",
+      "time": "07:03",
       "agent": "Claudia",
-      "action": "Redesign relances (banniere collapsible)"
+      "action": "Heartbeat check"
     },
     {
-      "time": "07:15",
+      "time": "07:03",
       "agent": "Claudia",
-      "action": "Sidebar accordion + taches terminees cachees"
-    },
-    {
-      "time": "07:15",
-      "agent": "Claudia",
-      "action": "Resync devis Pennylane"
-    },
-    {
-      "time": "07:15",
-      "agent": "Claudia",
-      "action": "Fix Habitat Multi-Service statut dashboard"
+      "action": "Activité système"
     }
   ],
   "tokenUsage": {
     "today": {
-      "input": "--",
-      "output": "--",
-      "cost": "--"
+      "input": 86,
+      "output": 1444,
+      "cost": 0.10959000000000000000
     }
   }
 }
