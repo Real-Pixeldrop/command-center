@@ -218,6 +218,71 @@ sed -i '' "s/>62 \/ 500</>$( [ -n \"\" ] && echo \"\" || echo \"62\" ) \/ 500</"
 sed -i '' "s/>$TRAFIC \/ 1000</>${TRAFIC} \/ 1000</" "$HTML_FILE" 2>/dev/null || true
 sed -i '' "s/>$NL_CONTACTS \/ 200</>${NL_CONTACTS} \/ 200</" "$HTML_FILE" 2>/dev/null || true
 
+# ===== COHERENCE CHECK - Recalcul KPIs depuis données brutes =====
+echo "Cohérence KPIs..."
+python3 << 'COHERENCE_EOF'
+import json
+
+with open('data.json', 'r') as f:
+    data = json.load(f)
+
+# Recalcul pipeline_kpis depuis pipeline
+offres = [p for p in data['pipeline'] if p.get('etape') == 'offre_envoyee']
+signes = [p for p in data['pipeline'] if p.get('etape') in ('signe', 'livre')]
+perdus = [p for p in data['pipeline'] if p.get('etape') == 'perdu']
+
+# Calculer montant signé
+montant_signe = 0
+for p in signes:
+    m = p.get('montant', '0').replace('€', '').replace(' ', '').replace('HT', '').replace('TTC', '').replace('(', '').replace(')', '').strip()
+    try:
+        montant_signe += int(m.split(',')[0])
+    except:
+        pass
+
+data['pipeline_kpis'] = {
+    "offres_envoyees": {"count": len(offres), "montant": f"{len(offres)} offres en jeu"},
+    "en_discussion": {"count": 0, "detail": ""},
+    "signes": {"count": len(signes), "montant": f"{montant_signe:,}€".replace(",", " ")},
+    "perdus": {"count": len(perdus), "detail": "ce mois"}
+}
+
+# Recalcul devis_attente
+devis_attente = len([d for d in data['devis'] if d.get('statut') == 'en_attente'])
+data['kpis']['devis_attente'] = devis_attente
+
+# Refresh PDF links from Pennylane
+import subprocess, os
+try:
+    result = subprocess.run([
+        'curl', '-s', 'https://app.pennylane.com/api/external/v2/quotes',
+        '-H', 'Authorization: Bearer 2aCuX5vMMmW8hFgyFCnlDIEPWXSqSV4vPe_KsdlU6uQ'
+    ], capture_output=True, text=True, timeout=15)
+    quotes_data = json.loads(result.stdout)
+    items = quotes_data.get('items', [])
+    
+    # Build map: subject+amount -> pdf url
+    pdf_map = {}
+    for q in items:
+        label = q.get('label', '')
+        pdf = q.get('public_file_url', '')
+        if pdf and '2026' in q.get('date', ''):
+            pdf_map[label] = pdf
+    
+    # Update devis PDF links by matching label
+    for d in data['devis']:
+        nom = d.get('nom', '')
+        if nom in pdf_map:
+            d['pdf'] = pdf_map[nom]
+except Exception as e:
+    print(f"PDF refresh skipped: {e}")
+
+with open('data.json', 'w') as f:
+    json.dump(data, f, indent=2, ensure_ascii=False)
+
+print(f"KPIs: {devis_attente} devis attente, {len(signes)} signés ({montant_signe}€), {len(offres)} offres")
+COHERENCE_EOF
+
 # ===== CLAUDIA SYNC =====
 echo "Claudia sync..."
 bash ./claudia-sync.sh 2>/dev/null || echo "Claudia sync skipped"
