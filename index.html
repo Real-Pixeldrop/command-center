@@ -2774,7 +2774,7 @@
     }
 
     // ===== SALES NAVIGATOR =====
-    let salesNavFilter = 'all';
+    window.salesNavFilter = 'all';
     function renderSalesNav() {
         const lp = DATA.linkedin_prospects || [];
         const total = lp.length;
@@ -2834,53 +2834,21 @@
                 '</tr>';
         }).join('');
 
+        const tauxReponse = messages > 0 ? Math.round(reponses/messages*100) + '%' : '--';
+        const tauxColor = messages > 0 ? (reponses/messages > 0.1 ? '#10b981' : '#f59e0b') : '#9ca3af';
+
+        const filterBtn = (id, label, value, color) => {
+            const active = salesNavFilter === id;
+            return '<div class="card" style="cursor:pointer;transition:all 0.2s;' + (active ? 'border:2px solid var(--primary);box-shadow:0 0 0 1px var(--primary);' : '') + '" onclick="window.salesNavFilter=\'' + id + '\';renderSalesNav();"><div class="card-label">' + label + '</div><div class="card-value" style="color:' + color + ';">' + value + '</div></div>';
+        };
+
         document.getElementById('salesnav-content').innerHTML = `
             <div class="grid grid-5 fade-in">
-                <div class="card" style="cursor:pointer;${salesNavFilter==='all'?'border:2px solid var(--primary);':''}" onclick="salesNavFilter='all';renderSalesNav();"><div class="card-label">TOTAL</div><div class="card-value">${total}</div></div>
-                <div class="card" style="cursor:pointer;${salesNavFilter==='contacted'?'border:2px solid var(--primary);':''}" onclick="salesNavFilter='contacted';renderSalesNav();"><div class="card-label">CONTACTÉS</div><div class="card-value" style="color:var(--primary)">${messages}</div></div>
-                <div class="card" style="cursor:pointer;${salesNavFilter==='waiting'?'border:2px solid var(--primary);':''}" onclick="salesNavFilter='waiting';renderSalesNav();"><div class="card-label">À CONTACTER</div><div class="card-value" style="color:#f59e0b">${pasContactes}</div></div>
-                <div class="card" style="cursor:pointer;${salesNavFilter==='replied'?'border:2px solid var(--primary);':''}" onclick="salesNavFilter='replied';renderSalesNav();"><div class="card-label">RÉPONSES</div><div class="card-value" style="color:#10b981">${reponses}</div></div>
-                <div class="card"><div class="card-label">TAUX RÉPONSE</div><div class="card-value" style="color:${messages > 0 ? (reponses/messages > 0.1 ? '#10b981' : '#f59e0b') : '#9ca3af'}">${messages > 0 ? Math.round(reponses/messages*100) + '%' : '--'}</div></div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.08s;padding:20px 24px;">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
-                    <h3 style="margin:0;font-size:0.95rem;">Scripts LinkedIn</h3>
-                    <div style="display:flex;align-items:center;gap:8px;">
-                        <span id="li-script-name" style="font-size:0.65rem;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:0.3px;">Classique</span>
-                        <button onclick="switchLinkedinScript()" style="background:var(--bg-medium);border:1px solid var(--border);border-radius:6px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.7rem;color:var(--text-light);transition:all 0.2s;" title="Changer de script">▶</button>
-                    </div>
-                </div>
-                <!-- Script LinkedIn Classique -->
-                <div class="li-script-variant li-script-classic">
-                    <div style="background:var(--bg-medium);border-radius:10px;padding:14px 16px;position:relative;">
-                        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--primary);margin-bottom:6px;">MESSAGE DE CONNEXION</div>
-                        <div id="li-classic-msg" style="font-size:0.85rem;line-height:1.5;color:var(--text);">Bonjour [Prénom], je suis Akli de Pixel Drop. On aide les PME à intégrer l'IA dans leur quotidien. J'ai vu votre profil et je serais ravi d'échanger. Bonne journée !</div>
-                        <button onclick="copyLiScript('classic')" style="position:absolute;top:12px;right:12px;background:white;border:1px solid var(--border);border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-light);transition:all 0.2s;" title="Copier">${copyIcon()}</button>
-                    </div>
-                    <div style="background:var(--bg-medium);border-radius:10px;padding:14px 16px;margin-top:8px;position:relative;">
-                        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--primary);margin-bottom:6px;">SI ACCEPTE → 1er MESSAGE</div>
-                        <div id="li-classic-followup" style="font-size:0.85rem;line-height:1.5;color:var(--text);">Merci pour la connexion ! Est-ce que l'IA et l'automatisation sont des sujets qui vous parlent en ce moment ?</div>
-                        <button onclick="copyLiScript('classic-followup')" style="position:absolute;top:12px;right:12px;background:white;border:1px solid var(--border);border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-light);transition:all 0.2s;" title="Copier">${copyIcon()}</button>
-                    </div>
-                </div>
-                <!-- Script LinkedIn Dan Martell -->
-                <div class="li-script-variant li-script-martell" style="display:none;">
-                    <div style="background:var(--bg-medium);border-radius:10px;padding:14px 16px;position:relative;">
-                        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--primary);margin-bottom:6px;">MESSAGE DIRECT (pas de demande de connexion)</div>
-                        <div id="li-martell-msg" style="font-size:0.85rem;line-height:1.5;color:var(--text);">Est-ce que vous avez commencé à utiliser l'IA dans votre activité ?</div>
-                        <button onclick="copyLiScript('martell')" style="position:absolute;top:12px;right:12px;background:white;border:1px solid var(--border);border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-light);transition:all 0.2s;" title="Copier">${copyIcon()}</button>
-                    </div>
-                    <div style="background:var(--bg-medium);border-radius:10px;padding:14px 16px;margin-top:8px;position:relative;">
-                        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--primary);margin-bottom:6px;">SI REPONSE POSITIVE</div>
-                        <div id="li-martell-followup" style="font-size:0.85rem;line-height:1.5;color:var(--text);">C'est quoi le sujet qui revient le plus ? Automatiser les tâches répétitives, relation client, autre chose ?</div>
-                        <button onclick="copyLiScript('martell-followup')" style="position:absolute;top:12px;right:12px;background:white;border:1px solid var(--border);border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-light);transition:all 0.2s;" title="Copier">${copyIcon()}</button>
-                    </div>
-                    <div style="background:var(--bg-medium);border-radius:10px;padding:14px 16px;margin-top:8px;position:relative;">
-                        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--primary);margin-bottom:6px;">CLOSING</div>
-                        <div id="li-martell-closing" style="font-size:0.85rem;line-height:1.5;color:var(--text);">C'est exactement ce qu'on fait chez Pixel Drop. Je peux vous montrer un cas concret en 15 min si ça vous dit ?</div>
-                        <button onclick="copyLiScript('martell-closing')" style="position:absolute;top:12px;right:12px;background:white;border:1px solid var(--border);border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-light);transition:all 0.2s;" title="Copier">${copyIcon()}</button>
-                    </div>
-                </div>
+                ${filterBtn('all', 'TOTAL', total, 'var(--text)')}
+                ${filterBtn('contacted', 'CONTACTÉS', messages, 'var(--primary)')}
+                ${filterBtn('waiting', 'À CONTACTER', pasContactes, '#f59e0b')}
+                ${filterBtn('replied', 'RÉPONSES', reponses, '#10b981')}
+                <div class="card"><div class="card-label">TAUX RÉPONSE</div><div class="card-value" style="color:${tauxColor};">${tauxReponse}</div></div>
             </div>
             <div class="card table-card fade-in" style="animation-delay:0.1s;padding:20px 24px;">
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
@@ -2894,10 +2862,9 @@
                         <th>Statut</th>
                         <th>Notes</th>
                     </tr></thead>
-                    <tbody>${rows || '<tr><td colspan="4" style="text-align:center;color:#6b7280;">Aucun prospect LinkedIn. Dis-moi "sync Sales Nav" pour importer.</td></tr>'}</tbody>
+                    <tbody>${rows || '<tr><td colspan="4" style="text-align:center;color:#6b7280;">Aucun prospect. Dis-moi "sync Sales Nav" pour importer.</td></tr>'}</tbody>
                 </table>
             </div>`;
-        setTimeout(applyLiScriptPreference, 0);
     }
 
     // ===== BUSINESS =====
