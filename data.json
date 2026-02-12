@@ -1722,6 +1722,17 @@
   },
   "devis": [
     {
+      "nom": "Devis D-2026-0219",
+      "client": "RCL",
+      "montant": "650 €",
+      "montant_num": 650,
+      "statut": "accepte",
+      "date_envoi": "2026-02-11",
+      "date_accepte": "2026-02-11",
+      "objet": "Configuration domaine collectiviteslocales.fr",
+      "date": "11/02/2026"
+    },
+    {
       "nom": "Devis D-2026-0218",
       "client": "Black Trombone",
       "montant": "600 €",
@@ -1794,17 +1805,6 @@
       "pdf_url": null,
       "date": "15/12/2025",
       "note": "Client fait Ignite d abord, reprise fin fevrier"
-    },
-    {
-      "nom": "Refonte site web L.I.Partners",
-      "client": "L.I. Partners",
-      "montant": "7 000 €",
-      "montant_num": 7000,
-      "statut": "perdu",
-      "date_envoi": "2026-01-25",
-      "source": "notion",
-      "date": "25/01/2026",
-      "note": "Remplace par devis D-2026-0216 a 8400€"
     },
     {
       "nom": "Pixel Booking",
