@@ -175,7 +175,7 @@
       "client": "RCL / Gérald Glondu",
       "type": "Site vitrine",
       "deadline": "12/02/2026",
-      "statut": "En cours",
+      "statut": "Livre",
       "details": {
         "url": "https://collectivitesterritoriales.fr",
         "activite": "Alias domaine collectiviteslocales.fr",
@@ -995,11 +995,11 @@
       "telephone": "06 84 54 16 26",
       "email": "gglondu@gmail.com",
       "ca_2025": 1072,
-      "ca_2026": 0,
+      "ca_2026": 650,
       "ca_total": 1072,
       "nb_factures": 1,
       "nb_projets": 2,
-      "dernier_contact": null,
+      "dernier_contact": "2026-02-12",
       "nom_entreprise": "RCL",
       "siret": "33841667000028",
       "adresse": "20 AVENUE ROGER SALENGRO, 77270, VILLEPARISIS",
@@ -1676,8 +1676,8 @@
       "nom": "RCL / Gérald Glondu",
       "desc": "Alias domaine collectiviteslocales.fr - Devis accepté",
       "montant": "650€ HT (780€ TTC)",
-      "etape": "signe",
-      "prochaine_action": "Config domaine mercredi 12/02 après-midi"
+      "etape": "livre",
+      "prochaine_action": "Livré 12/02/2026 - facturé 780€ TTC"
     },
     {
       "nom": "L.I.Partners",
