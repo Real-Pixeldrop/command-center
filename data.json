@@ -171,6 +171,18 @@
   },
   "projets": [
     {
+      "nom": "Configuration domaine collectiviteslocales.fr",
+      "client": "RCL / Gérald Glondu",
+      "type": "Site vitrine",
+      "deadline": "12/02/2026",
+      "statut": "En cours",
+      "details": {
+        "url": "https://collectivitesterritoriales.fr",
+        "activite": "Alias domaine collectiviteslocales.fr",
+        "notes": "Devis 650€ accepté"
+      }
+    },
+    {
       "nom": "Maquette site vitrine",
       "client": "Habitat Multi-Service",
       "type": "Site vitrine",
