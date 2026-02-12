@@ -2853,7 +2853,13 @@
             <div class="card table-card fade-in" style="animation-delay:0.1s;padding:20px 24px;">
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
                     <h3 style="margin:0;">Pipeline Sales Navigator</h3>
-                    <span style="color:#6b7280;font-size:0.78rem;">${filtered.length} affichés sur ${total} · ${messages} contactés → ${reponses} réponses</span>
+                    <span style="color:#6b7280;font-size:0.78rem;">${filtered.length} sur ${total}</span>
+                </div>
+                <div class="search-bar" style="margin-bottom:16px;">
+                    <button class="filter-btn ${salesNavFilter==='all'?'active':''}" onclick="window.salesNavFilter='all';renderSalesNav();">Tous (${total})</button>
+                    <button class="filter-btn ${salesNavFilter==='contacted'?'active':''}" onclick="window.salesNavFilter='contacted';renderSalesNav();">Contactés (${messages})</button>
+                    <button class="filter-btn ${salesNavFilter==='waiting'?'active':''}" onclick="window.salesNavFilter='waiting';renderSalesNav();">À contacter (${pasContactes})</button>
+                    <button class="filter-btn ${salesNavFilter==='replied'?'active':''}" onclick="window.salesNavFilter='replied';renderSalesNav();">Réponses (${reponses})</button>
                 </div>
                 <table>
                     <thead><tr>
