@@ -3797,11 +3797,16 @@
     });
 
     // Switch tabs
+    var currentTab = 'dashboard';
     function switchTab(tabId, el) {
+        currentTab = tabId;
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
         document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
         document.getElementById('tab-' + tabId).classList.add('active');
         el.classList.add('active');
+
+        // Charger les données Claudia quand on ouvre cet onglet
+        if (tabId === 'claudia') loadClaudiaStatus();
 
         // Re-trigger animations
         document.querySelectorAll('#tab-' + tabId + ' .fade-in').forEach(el => {
