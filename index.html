@@ -4402,11 +4402,17 @@
             ${p.site_web ? '<a href="' + esc(p.site_web) + '" target="_blank" class="session-site-link">🌐 Voir le site</a>' : ''}
 
             <div class="session-script">
-                <div class="script-toggle" onclick="this.parentElement.classList.toggle('collapsed')" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;margin-bottom:8px;">
-                    <span style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-light);">Script d'appel</span>
-                    <span class="script-arrow" style="font-size:0.7rem;color:var(--text-light);transition:transform 0.2s;">▼</span>
+                <div class="script-toggle" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                    <span onclick="this.closest('.session-script').classList.toggle('collapsed')" style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-light);cursor:pointer;flex:1;">Script d'appel</span>
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <span id="script-name-label" style="font-size:0.65rem;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:0.3px;">Classique</span>
+                        <button onclick="switchCallScript(event)" style="background:var(--bg-medium);border:1px solid var(--border);border-radius:6px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.7rem;color:var(--text-light);transition:all 0.2s;" title="Changer de script">▶</button>
+                        <span class="script-arrow" onclick="this.closest('.session-script').classList.toggle('collapsed')" style="font-size:0.7rem;color:var(--text-light);transition:transform 0.2s;cursor:pointer;">▼</span>
+                    </div>
                 </div>
                 <div class="script-body">
+                <!-- SCRIPT 1: Classique -->
+                <div class="script-variant script-classic">
                 <div class="script-section">
                     <div class="script-label">ACCROCHE</div>
                     <div class="script-text">"Bonjour, je souhaiterais parler a ${esc(prenom)} s'il vous plait"</div>
@@ -4422,6 +4428,34 @@
                 <div class="script-section">
                     <div class="script-label">SI BON INTERLOCUTEUR</div>
                     <div class="script-text">"Bonjour ${esc(prenom)}, je suis Akli de Pixel Drop. On aide les entreprises comme la votre a gagner du temps grace a l'IA. Est-ce que vous avez commence a l'integrer dans votre activite ?"</div>
+                </div>
+                </div>
+                <!-- SCRIPT 2: Dan Martell -->
+                <div class="script-variant script-martell" style="display:none;">
+                <div class="script-section">
+                    <div class="script-label">ACCROCHE</div>
+                    <div class="script-text">"Bonjour, Akli, Pixel Drop. Est-ce que vous avez commence a utiliser l'IA dans votre entreprise ?"</div>
+                </div>
+                <div class="script-section">
+                    <div class="script-label">SI "NON"</div>
+                    <div class="script-text">"OK, par curiosite, c'est quoi qui vous prend le plus de temps au quotidien ?"<br><em style="color:var(--text-light);font-size:0.8em;">Si non sec → "Pas de souci, bonne journee !" (on passe au suivant)</em></div>
+                </div>
+                <div class="script-section">
+                    <div class="script-label">SI "OUI ON A DEJA TOUT"</div>
+                    <div class="script-text">"Ah nickel, vous utilisez quoi ?"<br><em style="color:var(--text-light);font-size:0.8em;">Laisser parler, chercher la faille</em></div>
+                </div>
+                <div class="script-section">
+                    <div class="script-label">SI "OUI ON COMMENCE A REGARDER"</div>
+                    <div class="script-text">"C'est quoi le sujet qui revient le plus ?"<br><em style="color:var(--text-light);font-size:0.8em;">Ecouter, ne jamais pitcher</em></div>
+                </div>
+                <div class="script-section">
+                    <div class="script-label">SI "C'EST QUOI PIXEL DROP ?"</div>
+                    <div class="script-text">"On automatise les taches repetitives pour les PME. Vous avez un truc qui vous prend trop de temps en ce moment ?"</div>
+                </div>
+                <div class="script-section">
+                    <div class="script-label">CLOSING</div>
+                    <div class="script-text">"C'est exactement ce qu'on fait. On cale 15 min cette semaine pour que je vous montre ?"</div>
+                </div>
                 </div>
                 </div>
             </div>
@@ -4447,6 +4481,40 @@
                 </button>
             </div>
         </div>`;
+        // Apply saved script preference after render
+        setTimeout(applyScriptPreference, 0);
+    }
+
+    // Script switcher for prospection session
+    let currentScript = localStorage.getItem('preferred_call_script') || 'classic';
+    function switchCallScript(e) {
+        e && e.stopPropagation();
+        const classics = document.querySelectorAll('.script-classic');
+        const martells = document.querySelectorAll('.script-martell');
+        const label = document.getElementById('script-name-label');
+        if (currentScript === 'classic') {
+            currentScript = 'martell';
+            classics.forEach(el => el.style.display = 'none');
+            martells.forEach(el => el.style.display = 'block');
+            if (label) label.textContent = 'Dan Martell';
+        } else {
+            currentScript = 'classic';
+            classics.forEach(el => el.style.display = 'block');
+            martells.forEach(el => el.style.display = 'none');
+            if (label) label.textContent = 'Classique';
+        }
+        localStorage.setItem('preferred_call_script', currentScript);
+    }
+    // Apply saved preference on render
+    function applyScriptPreference() {
+        const classics = document.querySelectorAll('.script-classic');
+        const martells = document.querySelectorAll('.script-martell');
+        const label = document.getElementById('script-name-label');
+        if (currentScript === 'martell') {
+            classics.forEach(el => el.style.display = 'none');
+            martells.forEach(el => el.style.display = 'block');
+            if (label) label.textContent = 'Dan Martell';
+        }
     }
 
     function sessionAction(action) {
