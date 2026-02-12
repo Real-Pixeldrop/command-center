@@ -8,7 +8,7 @@
     "ca_mensuel_mois": "Février 2026",
     "clients_actifs": 100,
     "trafic_pd": 31,
-    "devis_attente": 3
+    "devis_attente": 4
   },
   "prospection": {
     "prospects_a_contacter": 71,
@@ -1696,9 +1696,11 @@
     {
       "nom": "Black Trombone",
       "desc": "Tests et validation",
-      "montant": "600€",
+      "montant": "5 600€",
       "etape": "offre_envoyee",
-      "prochaine_action": "Attente retour Johan"
+      "prochaine_action": "Attente retour Johan",
+      "detail": "Automatisation DernièreDispo (600€) + Consulting SEO complet (5 000€ + 400€/mois)",
+      "statut": "en_cours"
     },
     {
       "nom": "Communaute 360",
@@ -1712,6 +1714,13 @@
       "desc": "Site vitrine - facture payee",
       "montant": "3 000€",
       "etape": "livre"
+    },
+    {
+      "nom": "Pierrick Léonard",
+      "montant": "À définir",
+      "statut": "rdv_planifie",
+      "detail": "Démo Agentic AI - RDV lundi 16/02 à 11h (Meet)",
+      "contact": "leonard.pierrick@gmail.com"
     }
   ],
   "pipeline_kpis": {
@@ -1744,6 +1753,13 @@
       "objet": "Configuration domaine collectiviteslocales.fr",
       "date": "11/02/2026",
       "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=QDwpo1FYZVGm5GaG%2FmV5R6NnHzpbeRGVAt2uOFfNm3Ls5b%2Bk3KFDzaDS6RwfCzJvkkkhhIrUrV69qaiyuYUWYf8V2FCWJWiGSKt%2F6047dhUZdgyT4LfY2HdW--ZICDM9%2Fpb5TPV9un--9YMrTTgPT8WGfhXsWxZ8gQ%3D%3D"
+    },
+    {
+      "client": "Black Trombone",
+      "montant": "5 000 €",
+      "statut": "en_attente",
+      "date": "2026-02-12",
+      "detail": "Consulting digital complet - Audit + Exécution + Automatisations + Suivi mensuel 400€/mois"
     },
     {
       "nom": "Devis D-2026-0218",
@@ -3929,9 +3945,29 @@
       "nom": "Hostinger",
       "categorie": "Hébergement",
       "statut": "ok"
+    },
+    {
+      "nom": "Google Calendar API",
+      "categorie": "Outils",
+      "statut": "ok"
+    },
+    {
+      "nom": "Email SMTP (Claudia)",
+      "categorie": "Outils",
+      "statut": "ok"
+    },
+    {
+      "nom": "Skill email-pro",
+      "categorie": "Skills",
+      "statut": "ok"
+    },
+    {
+      "nom": "Skill google-meet",
+      "categorie": "Skills",
+      "statut": "ok"
     }
   ],
-  "system_status_updated": "2026-02-10T23:06:00+01:00",
+  "system_status_updated": "2026-02-12 17:50",
   "linkedin_prospects": [
     {
       "nom": "Christophe Schalk",
