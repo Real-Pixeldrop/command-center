@@ -1,8 +1,8 @@
 {
-  "lastSync": "2026-02-12T20:00:53.884719+01:00",
+  "lastSync": "2026-02-12T20:18:48.400218+01:00",
   "heartbeats": {
     "main": {
-      "lastCheck": "2026-02-12T20:00:53.884719+01:00",
+      "lastCheck": "2026-02-12T20:18:48.400218+01:00",
       "status": "ok"
     },
     "plaza-marketing": {
@@ -16,6 +16,11 @@
   },
   "recentActivity": [
     {
+      "time": "20:18",
+      "agent": "Claudia",
+      "action": "Heartbeat check"
+    },
+    {
       "time": "20:00",
       "agent": "Claudia",
       "action": "Heartbeat check"
@@ -25,7 +30,8 @@
     "today": {
       "input": 87,
       "output": 1966,
-      "cost": 0.148755
+      "cost": 0.148755,
+      "messagesSent": 14
     }
   }
 }
