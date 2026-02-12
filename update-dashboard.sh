@@ -263,6 +263,13 @@ data['devis_kpis'] = {
     "factures_payees": data.get('devis_kpis', {}).get('factures_payees', {"count": 0, "montant": "0€"})
 }
 
+# Sync dash_projets_en_cours depuis projets
+en_cours = [p for p in data['projets'] if p.get('statut') == 'En cours']
+data['dash_projets_en_cours'] = [
+    {"projet": p['nom'], "client": p['client'], "statut": "En cours"}
+    for p in en_cours
+]
+
 # Refresh PDF links from Pennylane
 import subprocess, os
 try:

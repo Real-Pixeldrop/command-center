@@ -3741,7 +3741,12 @@
   ],
   "dash_projets_en_cours": [
     {
-      "projet": "Maquette Habitat",
+      "projet": "Configuration domaine collectiviteslocales.fr",
+      "client": "RCL / Gérald Glondu",
+      "statut": "En cours"
+    },
+    {
+      "projet": "Maquette site vitrine",
       "client": "Habitat Multi-Service",
       "statut": "En cours"
     },
@@ -3751,8 +3756,13 @@
       "statut": "En cours"
     },
     {
-      "projet": "Consulting Derniere Dispo",
-      "client": "Yoann",
+      "projet": "Consulting croissance",
+      "client": "Yoann / Driss",
+      "statut": "En cours"
+    },
+    {
+      "projet": "Check hebdo sites WP",
+      "client": "Pixel Drop",
       "statut": "En cours"
     }
   ],
