@@ -2822,25 +2822,24 @@
             const dateContact = p.message_envoye || p.demande_envoyee || '';
             const dateStr = dateContact ? '<span style="color:#9ca3af;font-size:0.7rem;">' + esc(dateContact) + '</span>' : '';
 
-            const linkedinLink = p.lien_linkedin
-                ? '<a href="' + esc(p.lien_linkedin) + '" target="_blank" style="color:var(--primary);text-decoration:none;">Profil ↗</a>'
-                : '--';
+            const linkedinArrow = p.lien_linkedin
+                ? ' <a href="' + esc(p.lien_linkedin) + '" target="_blank" style="color:var(--primary);text-decoration:none;font-size:0.75rem;" title="Voir profil LinkedIn">↗</a>'
+                : '';
 
             return '<tr>' +
-                '<td><strong>' + esc(p.nom) + '</strong><br><span style="color:#6b7280;font-size:0.75rem;">' + esc(p.poste || '') + '</span></td>' +
+                '<td><strong>' + esc(p.nom) + '</strong>' + linkedinArrow + '<br><span style="color:#6b7280;font-size:0.75rem;">' + esc(p.poste || '') + '</span></td>' +
                 '<td>' + esc(p.entreprise || '') + '</td>' +
                 '<td>' + statutBadge + (dateStr ? '<br>' + dateStr : '') + '</td>' +
-                '<td>' + linkedinLink + '</td>' +
-                '<td style="color:#6b7280;font-size:0.75rem;max-width:150px;">' + esc(p.notes || '') + '</td>' +
+                '<td style="color:#6b7280;font-size:0.8rem;max-width:200px;">' + esc(p.notes || '') + '</td>' +
                 '</tr>';
         }).join('');
 
         document.getElementById('salesnav-content').innerHTML = `
-            <div class="grid grid-4 fade-in" style="grid-template-columns: repeat(5, 1fr);">
-                <div class="card" style="cursor:pointer;${salesNavFilter==='all'?'border-color:var(--primary);':''}}" onclick="salesNavFilter='all';renderSalesNav();"><div class="card-label">TOTAL</div><div class="card-value">${total}</div></div>
-                <div class="card" style="cursor:pointer;${salesNavFilter==='contacted'?'border-color:var(--primary);':''}}" onclick="salesNavFilter='contacted';renderSalesNav();"><div class="card-label">CONTACTÉS</div><div class="card-value" style="color:var(--primary)">${messages}</div></div>
-                <div class="card" style="cursor:pointer;${salesNavFilter==='waiting'?'border-color:var(--primary);':''}}" onclick="salesNavFilter='waiting';renderSalesNav();"><div class="card-label">À CONTACTER</div><div class="card-value" style="color:#f59e0b">${pasContactes}</div></div>
-                <div class="card" style="cursor:pointer;${salesNavFilter==='replied'?'border-color:var(--primary);':''}}" onclick="salesNavFilter='replied';renderSalesNav();"><div class="card-label">RÉPONSES</div><div class="card-value" style="color:#10b981">${reponses}</div></div>
+            <div class="grid grid-5 fade-in">
+                <div class="card" style="cursor:pointer;${salesNavFilter==='all'?'border:2px solid var(--primary);':''}" onclick="salesNavFilter='all';renderSalesNav();"><div class="card-label">TOTAL</div><div class="card-value">${total}</div></div>
+                <div class="card" style="cursor:pointer;${salesNavFilter==='contacted'?'border:2px solid var(--primary);':''}" onclick="salesNavFilter='contacted';renderSalesNav();"><div class="card-label">CONTACTÉS</div><div class="card-value" style="color:var(--primary)">${messages}</div></div>
+                <div class="card" style="cursor:pointer;${salesNavFilter==='waiting'?'border:2px solid var(--primary);':''}" onclick="salesNavFilter='waiting';renderSalesNav();"><div class="card-label">À CONTACTER</div><div class="card-value" style="color:#f59e0b">${pasContactes}</div></div>
+                <div class="card" style="cursor:pointer;${salesNavFilter==='replied'?'border:2px solid var(--primary);':''}" onclick="salesNavFilter='replied';renderSalesNav();"><div class="card-label">RÉPONSES</div><div class="card-value" style="color:#10b981">${reponses}</div></div>
                 <div class="card"><div class="card-label">TAUX RÉPONSE</div><div class="card-value" style="color:${messages > 0 ? (reponses/messages > 0.1 ? '#10b981' : '#f59e0b') : '#9ca3af'}">${messages > 0 ? Math.round(reponses/messages*100) + '%' : '--'}</div></div>
             </div>
             <div class="card fade-in" style="animation-delay:0.08s;padding:20px 24px;">
@@ -2883,7 +2882,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card table-card fade-in" style="animation-delay:0.1s">
+            <div class="card table-card fade-in" style="animation-delay:0.1s;padding:20px 24px;">
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
                     <h3 style="margin:0;">Pipeline Sales Navigator</h3>
                     <span style="color:#6b7280;font-size:0.78rem;">${filtered.length} affichés sur ${total} · ${messages} contactés → ${reponses} réponses</span>
@@ -2893,10 +2892,9 @@
                         <th>Prospect</th>
                         <th>Entreprise</th>
                         <th>Statut</th>
-                        <th>LinkedIn</th>
                         <th>Notes</th>
                     </tr></thead>
-                    <tbody>${rows || '<tr><td colspan="5" style="text-align:center;color:#6b7280;">Aucun prospect LinkedIn. Dis-moi "sync Sales Nav" pour importer.</td></tr>'}</tbody>
+                    <tbody>${rows || '<tr><td colspan="4" style="text-align:center;color:#6b7280;">Aucun prospect LinkedIn. Dis-moi "sync Sales Nav" pour importer.</td></tr>'}</tbody>
                 </table>
             </div>`;
         setTimeout(applyLiScriptPreference, 0);
