@@ -3330,64 +3330,22 @@
   ],
   "taches": [
     {
-      "titre": "Test prospection LinkedIn - Sales Navigator",
-      "desc": "Mercredi 11/02 — 08:00",
-      "badge": "Prospection",
-      "badge_color": "red",
+      "titre": "Check hebdo sites WP 09:00 - 10:00",
+      "desc": "Jeudi 12/02 — 10:00",
+      "badge": "Maintenance",
+      "badge_color": "green",
       "colonne": "a_faire"
     },
     {
-      "titre": "L.I. Partners - Relance devis 7000€",
-      "desc": "Mercredi 11/02 — 09:00",
-      "badge": "Relance",
-      "badge_color": "red",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Relance Communauté 360 - 4240€",
-      "desc": "Mercredi 11/02 — 10:15",
-      "badge": "Relance",
-      "badge_color": "red",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Post Plaza Tango",
-      "desc": "Mercredi 11/02 — 11:00",
+      "titre": "Consulting Black Trombone - SEO 14:00 - 15:00",
+      "desc": "Jeudi 12/02 — 16:00",
       "badge": "Marketing",
       "badge_color": "blue",
       "colonne": "a_faire"
     },
     {
-      "titre": "Check réponse CFI Impression - devis Plaza Tango",
-      "desc": "Mercredi 11/02 — 11:15",
-      "badge": "Plaza Tango",
-      "badge_color": "orange",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Déclaration URSSAF janvier",
-      "desc": "Mercredi 11/02 — 12:00",
-      "badge": "Admin",
-      "badge_color": "orange",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Muscu Heavy Duty",
-      "desc": "Mercredi 11/02 — 15:00",
-      "badge": "Perso",
-      "badge_color": "green",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Black Trombone - Centrer images grille (demande Johan)",
-      "desc": "Mercredi 11/02 — 17:00",
-      "badge": "Client",
-      "badge_color": "blue",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Stratégie Instagram avec Cléa",
-      "desc": "Mercredi 11/02 — 20:00",
+      "titre": "Stratégie Instagram avec Cléa 16:30 - 17:30",
+      "desc": "Jeudi 12/02",
       "badge": "Marketing",
       "badge_color": "blue",
       "colonne": "a_faire"
