@@ -4842,7 +4842,7 @@
         if (inputEl) inputEl.textContent = formatNumber(tokenUsage.today.input);
         if (outputEl) outputEl.textContent = formatNumber(tokenUsage.today.output);
         if (costEl) costEl.textContent = '$' + (tokenUsage.today.cost || 0).toFixed(2);
-        if (messagesEl) messagesEl.textContent = '--'; // Placeholder pour messages
+        if (messagesEl) messagesEl.textContent = tokenUsage.today.messagesSent || '0';
     }
 
     function calculateMinutesAgo(isoDateString) {
