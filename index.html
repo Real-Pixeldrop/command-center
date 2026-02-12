@@ -2809,6 +2809,46 @@
                 <div class="card"><div class="card-label">CONNECTES</div><div class="card-value" style="color:#f59e0b">${acceptees}</div></div>
                 <div class="card"><div class="card-label">REPONSES</div><div class="card-value" style="color:#10b981">${reponses}</div></div>
             </div>
+            <div class="card fade-in" style="animation-delay:0.08s;padding:20px 24px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                    <h3 style="margin:0;font-size:0.95rem;">Scripts LinkedIn</h3>
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <span id="li-script-name" style="font-size:0.65rem;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:0.3px;">Classique</span>
+                        <button onclick="switchLinkedinScript()" style="background:var(--bg-medium);border:1px solid var(--border);border-radius:6px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.7rem;color:var(--text-light);transition:all 0.2s;" title="Changer de script">▶</button>
+                    </div>
+                </div>
+                <!-- Script LinkedIn Classique -->
+                <div class="li-script-variant li-script-classic">
+                    <div style="background:var(--bg-medium);border-radius:10px;padding:14px 16px;position:relative;">
+                        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--primary);margin-bottom:6px;">MESSAGE DE CONNEXION</div>
+                        <div id="li-classic-msg" style="font-size:0.85rem;line-height:1.5;color:var(--text);">Bonjour [Prénom], je suis Akli de Pixel Drop. On aide les PME a integrer l'IA dans leur quotidien. J'ai vu votre profil et je serais ravi d'echanger. Bonne journee !</div>
+                        <button onclick="copyLiScript('classic')" style="position:absolute;top:12px;right:12px;background:white;border:1px solid var(--border);border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-light);transition:all 0.2s;" title="Copier">${copyIcon()}</button>
+                    </div>
+                    <div style="background:var(--bg-medium);border-radius:10px;padding:14px 16px;margin-top:8px;position:relative;">
+                        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--primary);margin-bottom:6px;">SI ACCEPTE → 1er MESSAGE</div>
+                        <div id="li-classic-followup" style="font-size:0.85rem;line-height:1.5;color:var(--text);">Merci pour la connexion ! Est-ce que l'IA et l'automatisation sont des sujets qui vous parlent en ce moment ?</div>
+                        <button onclick="copyLiScript('classic-followup')" style="position:absolute;top:12px;right:12px;background:white;border:1px solid var(--border);border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-light);transition:all 0.2s;" title="Copier">${copyIcon()}</button>
+                    </div>
+                </div>
+                <!-- Script LinkedIn Dan Martell -->
+                <div class="li-script-variant li-script-martell" style="display:none;">
+                    <div style="background:var(--bg-medium);border-radius:10px;padding:14px 16px;position:relative;">
+                        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--primary);margin-bottom:6px;">MESSAGE DIRECT (pas de demande de connexion)</div>
+                        <div id="li-martell-msg" style="font-size:0.85rem;line-height:1.5;color:var(--text);">Est-ce que vous avez commence a utiliser l'IA dans votre activite ?</div>
+                        <button onclick="copyLiScript('martell')" style="position:absolute;top:12px;right:12px;background:white;border:1px solid var(--border);border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-light);transition:all 0.2s;" title="Copier">${copyIcon()}</button>
+                    </div>
+                    <div style="background:var(--bg-medium);border-radius:10px;padding:14px 16px;margin-top:8px;position:relative;">
+                        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--primary);margin-bottom:6px;">SI REPONSE POSITIVE</div>
+                        <div id="li-martell-followup" style="font-size:0.85rem;line-height:1.5;color:var(--text);">C'est quoi le sujet qui revient le plus ? Automatiser les taches repetitives, relation client, autre chose ?</div>
+                        <button onclick="copyLiScript('martell-followup')" style="position:absolute;top:12px;right:12px;background:white;border:1px solid var(--border);border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-light);transition:all 0.2s;" title="Copier">${copyIcon()}</button>
+                    </div>
+                    <div style="background:var(--bg-medium);border-radius:10px;padding:14px 16px;margin-top:8px;position:relative;">
+                        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--primary);margin-bottom:6px;">CLOSING</div>
+                        <div id="li-martell-closing" style="font-size:0.85rem;line-height:1.5;color:var(--text);">C'est exactement ce qu'on fait chez Pixel Drop. Je peux vous montrer un cas concret en 15 min si ca vous dit ?</div>
+                        <button onclick="copyLiScript('martell-closing')" style="position:absolute;top:12px;right:12px;background:white;border:1px solid var(--border);border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-light);transition:all 0.2s;" title="Copier">${copyIcon()}</button>
+                    </div>
+                </div>
+            </div>
             <div class="card table-card fade-in" style="animation-delay:0.1s">
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
                     <h3 style="margin:0;">Pipeline LinkedIn</h3>
@@ -2825,9 +2865,54 @@
                     <tbody>${rows || '<tr><td colspan="5" style="text-align:center;color:#6b7280;">Aucun prospect LinkedIn. Dis-moi "sync Sales Nav" pour importer.</td></tr>'}</tbody>
                 </table>
             </div>`;
+        setTimeout(applyLiScriptPreference, 0);
     }
 
     // ===== BUSINESS =====
+    // LinkedIn script switcher
+    let currentLiScript = localStorage.getItem('preferred_li_script') || 'classic';
+    function switchLinkedinScript() {
+        const classics = document.querySelectorAll('.li-script-classic');
+        const martells = document.querySelectorAll('.li-script-martell');
+        const label = document.getElementById('li-script-name');
+        if (currentLiScript === 'classic') {
+            currentLiScript = 'martell';
+            classics.forEach(el => el.style.display = 'none');
+            martells.forEach(el => el.style.display = 'block');
+            if (label) label.textContent = 'Dan Martell';
+        } else {
+            currentLiScript = 'classic';
+            classics.forEach(el => el.style.display = 'block');
+            martells.forEach(el => el.style.display = 'none');
+            if (label) label.textContent = 'Classique';
+        }
+        localStorage.setItem('preferred_li_script', currentLiScript);
+    }
+    function copyLiScript(variant) {
+        const ids = {
+            'classic': 'li-classic-msg',
+            'classic-followup': 'li-classic-followup',
+            'martell': 'li-martell-msg',
+            'martell-followup': 'li-martell-followup',
+            'martell-closing': 'li-martell-closing'
+        };
+        const el = document.getElementById(ids[variant]);
+        if (!el) return;
+        const btn = el.parentElement.querySelector('button');
+        navigator.clipboard.writeText(el.textContent).then(() => {
+            if (btn) { btn.innerHTML = '✓'; btn.style.color = 'var(--success)'; setTimeout(() => { btn.innerHTML = copyIcon(); btn.style.color = ''; }, 1500); }
+        });
+    }
+    // Apply saved LinkedIn script preference
+    function applyLiScriptPreference() {
+        if (currentLiScript === 'martell') {
+            document.querySelectorAll('.li-script-classic').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.li-script-martell').forEach(el => el.style.display = 'block');
+            const label = document.getElementById('li-script-name');
+            if (label) label.textContent = 'Dan Martell';
+        }
+    }
+
     function copyToClipboard(text, el) {
         navigator.clipboard.writeText(text).then(() => {
             const orig = el.innerHTML;
