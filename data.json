@@ -2775,16 +2775,16 @@
   ],
   "devis_kpis": {
     "en_attente": {
-      "count": 7,
-      "montant": "44 800€ potentiels"
+      "count": 3,
+      "montant": "18 700€ potentiels"
     },
     "acceptes": {
-      "count": 1,
-      "montant": "3 000€"
+      "count": 2,
+      "montant": "3 650€"
     },
     "factures_payees": {
       "count": 1,
-      "montant": "3 000€ encaisses"
+      "montant": "3 000€ encaissés"
     }
   },
   "finances": {

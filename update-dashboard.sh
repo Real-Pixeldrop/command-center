@@ -251,6 +251,18 @@ data['pipeline_kpis'] = {
 devis_attente = len([d for d in data['devis'] if d.get('statut') == 'en_attente'])
 data['kpis']['devis_attente'] = devis_attente
 
+# Recalcul devis_kpis depuis devis 2026
+devis_2026 = [d for d in data['devis'] if '2026' in d.get('date_envoi','')]
+en_att = [d for d in devis_2026 if d.get('statut') == 'en_attente']
+acceptes = [d for d in devis_2026 if d.get('statut') == 'accepte']
+m_att = sum(d.get('montant_num', 0) for d in en_att)
+m_acc = sum(d.get('montant_num', 0) for d in acceptes)
+data['devis_kpis'] = {
+    "en_attente": {"count": len(en_att), "montant": f"{m_att:,.0f}€ potentiels".replace(",", " ")},
+    "acceptes": {"count": len(acceptes), "montant": f"{m_acc:,.0f}€".replace(",", " ")},
+    "factures_payees": data.get('devis_kpis', {}).get('factures_payees', {"count": 0, "montant": "0€"})
+}
+
 # Refresh PDF links from Pennylane
 import subprocess, os
 try:
