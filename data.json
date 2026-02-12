@@ -7,7 +7,7 @@
     "ca_mensuel": "650€",
     "ca_mensuel_mois": "Février 2026",
     "clients_actifs": 100,
-    "trafic_pd": 73,
+    "trafic_pd": 31,
     "devis_attente": 3
   },
   "prospection": {
@@ -192,7 +192,7 @@
     },
     {
       "nom": "Consulting croissance",
-      "client": "Derniere Dispo",
+      "client": "Yoann / Driss",
       "type": "Consulting",
       "deadline": "Continu",
       "statut": "En cours",
@@ -1684,7 +1684,7 @@
     {
       "nom": "Black Trombone",
       "desc": "Tests et validation",
-      "montant": "500€",
+      "montant": "600€",
       "etape": "offre_envoyee",
       "prochaine_action": "Attente retour Johan"
     },
@@ -1704,16 +1704,16 @@
   ],
   "pipeline_kpis": {
     "offres_envoyees": {
-      "count": 2,
-      "montant": "2 offres en jeu"
+      "count": 3,
+      "montant": "3 offres en jeu"
     },
     "en_discussion": {
       "count": 0,
       "detail": ""
     },
     "signes": {
-      "count": 1,
-      "montant": "3 000€"
+      "count": 2,
+      "montant": "3 650€"
     },
     "perdus": {
       "count": 0,
