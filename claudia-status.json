@@ -1,16 +1,16 @@
 {
-  "lastSync": "2026-02-12T14:00:29+01:00",
+  "lastSync": "2026-02-12T20:00:35+01:00",
   "heartbeats": {
     "main": {
-      "lastCheck": "2026-02-12T14:00:00+01:00",
+      "lastCheck": "2026-02-12T20:00:00+01:00",
       "status": "ok"
     },
     "plaza-marketing": {
-      "lastCheck": "2026-02-12T13:45:37+01:00",
+      "lastCheck": "2026-02-12T19:46:17+01:00",
       "status": "ok"
     },
     "clea": {
-      "lastCheck": "2026-02-12T13:31:26+01:00",
+      "lastCheck": "2026-02-12T19:46:43+01:00",
       "status": "ok"
     }
   },
@@ -18,8 +18,8 @@
   "tokenUsage": {
     "today": {
       "input": 87,
-      "output": 1618,
-      "cost": 0.12265500000000000000
+      "output": 1966,
+      "cost": 0.14875500000000000000
     }
   }
 }
