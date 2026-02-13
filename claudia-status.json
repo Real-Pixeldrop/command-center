@@ -1,8 +1,8 @@
 {
-  "lastSync": "2026-02-12T20:26:35.227455+01:00",
+  "lastSync": "2026-02-13T08:01:48.214382+01:00",
   "heartbeats": {
     "main": {
-      "lastCheck": "2026-02-12T20:26:35.227455+01:00",
+      "lastCheck": "2026-02-13T08:01:48.214382+01:00",
       "status": "ok"
     },
     "plaza-marketing": {
@@ -15,6 +15,11 @@
     }
   },
   "recentActivity": [
+    {
+      "time": "08:01",
+      "agent": "Claudia",
+      "action": "Heartbeat check"
+    },
     {
       "time": "20:26",
       "agent": "Claudia",
@@ -33,10 +38,10 @@
   ],
   "tokenUsage": {
     "today": {
-      "input": 28523,
-      "output": 120245,
-      "cost": 6.42,
-      "messagesSent": 14
+      "input": 5227,
+      "output": 20295,
+      "cost": 1.09,
+      "messagesSent": 5
     }
   }
 }
