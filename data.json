@@ -3359,24 +3359,10 @@
   ],
   "taches": [
     {
-      "titre": "Check hebdo sites WP 09:00 - 10:00",
-      "desc": "Jeudi 12/02 — 10:00",
-      "badge": "Maintenance",
-      "badge_color": "green",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Consulting Black Trombone - SEO 14:00 - 15:00",
-      "desc": "Jeudi 12/02 — 16:00",
-      "badge": "Marketing",
-      "badge_color": "blue",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Stratégie Instagram avec Cléa 16:30 - 17:30",
-      "desc": "Jeudi 12/02",
-      "badge": "Marketing",
-      "badge_color": "blue",
+      "titre": "Session prospection téléphonique 14:00 - 16:00",
+      "desc": "Vendredi 13/02 — 16:30",
+      "badge": "Prospection",
+      "badge_color": "red",
       "colonne": "a_faire"
     },
     {
