@@ -3359,13 +3359,6 @@
   ],
   "taches": [
     {
-      "titre": "Session prospection téléphonique 14:00 - 16:00",
-      "desc": "Vendredi 13/02 — 16:30",
-      "badge": "Prospection",
-      "badge_color": "red",
-      "colonne": "a_faire"
-    },
-    {
       "titre": "Habitat Multi-Service",
       "desc": "Finaliser maquette Figma, puis créer site WordPress",
       "badge": "Site Web",
