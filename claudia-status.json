@@ -1,37 +1,25 @@
 {
-  "lastSync": "2026-02-15T08:01:21.964633+01:00",
+  "lastSync": "2026-02-15T08:01:29+01:00",
   "heartbeats": {
     "main": {
-      "lastCheck": "2026-02-15T08:01:21.964633+01:00",
+      "lastCheck": "2026-02-15T08:01:05+01:00",
       "status": "ok"
     },
     "plaza-marketing": {
-      "lastCheck": "2026-02-14T19:45:41+01:00",
+      "lastCheck": "2026-02-15T07:45:25+01:00",
       "status": "ok"
     },
     "clea": {
-      "lastCheck": "2026-02-14T19:31:29+01:00",
+      "lastCheck": "2026-02-15T07:30:55+01:00",
       "status": "ok"
     }
   },
-  "recentActivity": [
-    {
-      "time": "08:01",
-      "agent": "Claudia",
-      "action": "Heartbeat check"
-    },
-    {
-      "time": "20:00",
-      "agent": "Claudia",
-      "action": "Heartbeat check"
-    }
-  ],
+  "recentActivity": [],
   "tokenUsage": {
     "today": {
-      "input": 4795,
-      "output": 18798,
-      "cost": 1.01,
-      "messagesSent": 5
+      "input": 78,
+      "output": 1498,
+      "cost": 0.11352000000000000000
     }
   }
 }
