@@ -1,25 +1,31 @@
 {
-  "lastSync": "2026-02-15T14:00:21+01:00",
+  "lastSync": "2026-02-15T20:00:33+01:00",
   "heartbeats": {
     "main": {
-      "lastCheck": "2026-02-15T14:00:00+01:00",
+      "lastCheck": "2026-02-15T20:00:13+01:00",
       "status": "ok"
     },
     "plaza-marketing": {
-      "lastCheck": "2026-02-15T13:45:30+01:00",
+      "lastCheck": "2026-02-15T19:45:43+01:00",
       "status": "ok"
     },
     "clea": {
-      "lastCheck": "2026-02-15T13:31:00+01:00",
+      "lastCheck": "2026-02-15T19:31:26+01:00",
       "status": "ok"
     }
   },
-  "recentActivity": [],
+  "recentActivity": [
+    {
+      "time": "15:16",
+      "agent": "Claudia",
+      "action": "Brief matinal envoyé"
+    }
+  ],
   "tokenUsage": {
     "today": {
-      "input": 76,
-      "output": 1923,
-      "cost": 0.14536500000000000000
+      "input": 87,
+      "output": 1513,
+      "cost": 0.11478000000000000000
     }
   }
 }
