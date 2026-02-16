@@ -3355,8 +3355,7 @@
       "etape": "🎯 À contacter",
       "site_web": "",
       "linkedin": ""
-    }
-    ,
+    },
     {
       "entreprise": "SOCIETE MECANIQUE AUTOMOBILE DE L'EST (SMAE)",
       "contact": "Michel Dubois (Directeur)",
@@ -3496,7 +3495,8 @@
       "siren": "494160849",
       "activite": "25.62B",
       "source": "prospection_auto_20260217"
-    }  ],
+    }
+  ],
   "taches": [
     {
       "titre": "Habitat Multi-Service",
