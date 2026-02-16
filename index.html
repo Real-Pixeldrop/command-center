@@ -1587,6 +1587,16 @@
         </div>
     </div>
 
+        <div class="nav-section" onclick="toggleSection(this)">
+            <span>📋 Playbooks</span>
+            <span class="chevron collapsed">&#9660;</span>
+        </div>
+        <div class="nav-section-items collapsed">
+            <a class="nav-item" onclick="switchTab('playbooks', this)">
+                <span class="nav-label">Process clients</span>
+            </a>
+        </div>
+
     <div class="sidebar-footer">
         <span id="clock"></span><br>
         Control Center v3.0
@@ -1726,6 +1736,12 @@
     </div>
 
     <!-- ===== CLAUDIA ===== -->
+    <div class="tab" id="tab-playbooks">
+        <h1 class="page-title">📋 Playbooks</h1>
+        <p class="page-subtitle">Process clients et méthodes Pixel Drop</p>
+        <div id="playbooks-container"></div>
+    </div>
+
     <div class="tab" id="tab-claudia">
         <h1 class="page-title">Claudia</h1>
         <p class="page-subtitle">État de tous les systèmes automatisés</p>
@@ -2275,6 +2291,7 @@
         renderSEO();
         renderSites();
         renderStatus();
+        renderPlaybooks();
     }
 
     // ===== HELPERS: OBJECTIFS & RELANCES =====
@@ -3853,6 +3870,48 @@
         } else {
             items.style.maxHeight = '0';
         }
+    }
+
+    function renderPlaybooks() {
+        const playbooks = data.playbooks || [];
+        const container = document.getElementById('playbooks-container');
+        if (!container) return;
+        
+        const categories = {};
+        playbooks.forEach(p => {
+            if (!categories[p.categorie]) categories[p.categorie] = [];
+            categories[p.categorie].push(p);
+        });
+
+        let html = '';
+        Object.keys(categories).forEach((cat, ci) => {
+            html += `<h2 style="font-size:1.1rem; margin: ${ci > 0 ? '30px' : '0'} 0 16px 0; color: var(--primary); font-weight: 700;">${cat}</h2>`;
+            categories[cat].forEach((p, i) => {
+                html += `<div class="card fade-in" style="animation-delay:${0.1 * (i + 1)}s; padding: 24px; margin-bottom: 16px;">`;
+                html += `<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 12px;">`;
+                html += `<h3 style="margin:0; font-size:1rem; font-weight:700;">${p.titre}</h3>`;
+                html += `<span style="font-size:0.75rem; color:var(--text-light);">${p.date_ajout}</span>`;
+                html += `</div>`;
+                html += `<div style="margin-bottom: 12px;">`;
+                p.etapes.forEach((e, ei) => {
+                    html += `<div style="display:flex; align-items:flex-start; gap:10px; margin-bottom:8px; font-size:0.9rem;">`;
+                    html += `<span style="min-width:24px; height:24px; background:var(--primary); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700;">${ei + 1}</span>`;
+                    html += `<span style="color:var(--text); line-height:24px;">${e}</span>`;
+                    html += `</div>`;
+                });
+                html += `</div>`;
+                if (p.regle) {
+                    html += `<div style="background: rgba(239,68,68,0.08); border-left: 3px solid #ef4444; padding: 8px 12px; border-radius: 4px; font-size: 0.85rem; color: #ef4444; font-weight: 600;">⚠️ ${p.regle}</div>`;
+                }
+                html += `</div>`;
+            });
+        });
+
+        if (playbooks.length === 0) {
+            html = '<div class="card" style="padding:24px; text-align:center; color:var(--text-light);">Aucun playbook pour le moment. Demande à Claudia d\'en ajouter !</div>';
+        }
+
+        container.innerHTML = html;
     }
 
     // Initialize section heights for smooth collapse

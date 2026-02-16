@@ -5283,5 +5283,45 @@
       "reponse": "",
       "notes": ""
     }
+  ],
+  "playbooks": [
+    {
+      "titre": "Création email pro client",
+      "categorie": "Onboarding",
+      "etapes": [
+        "Créer l'adresse dans Hostinger (Emails > Créer un compte)",
+        "Envoyer au client : lien webmail (https://mail.hostinger.com) + identifiants",
+        "Si le client demande Outlook/Apple Mail : envoyer guide PDF avec IMAP/SMTP",
+        "Si le client est perdu : session TeamViewer (10 min max)"
+      ],
+      "regle": "Ne JAMAIS demander 'webmail ou intégration ?'. Webmail par défaut.",
+      "date_ajout": "2026-02-16"
+    },
+    {
+      "titre": "Livraison de site",
+      "categorie": "Livraison",
+      "etapes": [
+        "Vérifier responsive (mobile, tablette, desktop)",
+        "Tester tous les formulaires",
+        "Vérifier vitesse (PageSpeed > 80)",
+        "Installer Pixel Space (monitoring)",
+        "Configurer sauvegardes automatiques",
+        "Envoyer mail de livraison au client avec accès admin"
+      ],
+      "regle": "Ne jamais livrer sans avoir testé les formulaires.",
+      "date_ajout": "2026-02-16"
+    },
+    {
+      "titre": "Relance devis en attente",
+      "categorie": "Commercial",
+      "etapes": [
+        "J+3 : premier suivi par email (léger, 'je me permets de revenir vers vous')",
+        "J+7 : appel téléphonique direct",
+        "J+14 : dernier email avec deadline ('l'offre reste valable jusqu'au...')",
+        "J+21 : classer en perdu si pas de retour"
+      ],
+      "regle": "Toujours relancer par téléphone à J+7, pas juste par mail.",
+      "date_ajout": "2026-02-16"
+    }
   ]
 }
