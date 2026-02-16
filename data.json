@@ -964,7 +964,7 @@
       "siret": "B297692",
       "adresse": "11, Rue des Trois Cantons, L-8399, Windhof",
       "nb_opps_notion": 3,
-      "derniere_maintenance": null
+      "derniere_maintenance": "2026-02-16"
     },
     {
       "nom": "Cothidance",
@@ -1653,7 +1653,7 @@
     },
     {
       "nom": "Warere",
-      "site": "",
+      "site": "warere.com",
       "statut": "Ancien",
       "telephone": "",
       "email": "",
@@ -1663,10 +1663,10 @@
       "ca_total": 2599,
       "nb_factures": 0,
       "nb_projets": 1,
-      "dernier_contact": null,
-      "nom_entreprise": null,
+      "dernier_contact": "2026-02-16",
+      "nom_entreprise": "Warere Beach Hotel",
       "siret": null,
-      "adresse": null,
+      "adresse": "Nungwi, Zanzibar, Tanzania",
       "nb_opps_notion": 1,
       "derniere_maintenance": null
     }
@@ -1681,10 +1681,10 @@
     },
     {
       "nom": "L.I.Partners",
-      "desc": "Refonte site web - relance faite, attente retour",
+      "desc": "Refonte site web - RDV obtenu",
       "montant": "8 400€",
-      "etape": "offre_envoyee",
-      "prochaine_action": "Check vendredi 14/02"
+      "etape": "rdv_planifie",
+      "prochaine_action": "RDV jeudi 19/02 à 15h dans leurs locaux (15 rue Jean Jaurès, Puteaux)"
     },
     {
       "nom": "FIDOLUX",
@@ -1718,15 +1718,15 @@
     {
       "nom": "Pierrick Léonard",
       "montant": "À définir",
-      "statut": "rdv_planifie",
-      "detail": "Démo Agentic AI - RDV lundi 16/02 à 11h (Meet)",
+      "statut": "annule",
+      "detail": "Démo Agentic AI - annulé par Akli",
       "contact": "leonard.pierrick@gmail.com"
     }
   ],
   "pipeline_kpis": {
     "offres_envoyees": {
-      "count": 3,
-      "montant": "3 offres en jeu"
+      "count": 2,
+      "montant": "2 offres en jeu"
     },
     "en_discussion": {
       "count": 0,
