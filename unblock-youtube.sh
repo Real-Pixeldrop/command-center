@@ -4,7 +4,6 @@
 # À exécuter le 13 mars 2026 ou après
 # ===========================================
 
-set -e
 echo "🔓 DÉBLOCAGE YOUTUBE"
 echo "===================="
 
@@ -12,10 +11,10 @@ echo "===================="
 echo "[1/5] Arrêt des daemons gardiens..."
 sudo launchctl unload /Library/LaunchDaemons/com.apple.nsurlsessiond-check.plist 2>/dev/null || true
 sudo launchctl unload /Library/LaunchDaemons/com.apple.cfnetwork-diag.plist 2>/dev/null || true
-sudo rm -f /Library/LaunchDaemons/com.apple.nsurlsessiond-check.plist
-sudo rm -f /Library/LaunchDaemons/com.apple.cfnetwork-diag.plist
-sudo rm -f /usr/local/bin/.com.apple.nsurlsessiond-check
-sudo rm -f /usr/local/bin/.com.apple.cfnetwork-diag
+sudo rm -f /Library/LaunchDaemons/com.apple.nsurlsessiond-check.plist 2>/dev/null || true
+sudo rm -f /Library/LaunchDaemons/com.apple.cfnetwork-diag.plist 2>/dev/null || true
+sudo rm -f /usr/local/bin/.com.apple.nsurlsessiond-check 2>/dev/null || true
+sudo rm -f /usr/local/bin/.com.apple.cfnetwork-diag 2>/dev/null || true
 echo "  ✅ Daemons supprimés"
 
 # 2. Débloquer /etc/hosts
