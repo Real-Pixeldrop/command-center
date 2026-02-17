@@ -3499,6 +3499,13 @@
   ],
   "taches": [
     {
+      "titre": "RDV Gérald Glondu - Alias domaine 10:00 - 11:30",
+      "desc": "Mardi 17/02 — 12:00",
+      "badge": "Client",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
+    {
       "titre": "Habitat Multi-Service",
       "desc": "Finaliser maquette Figma, puis créer site WordPress",
       "badge": "Site Web",
