@@ -1,66 +1,66 @@
 {
-  "lastSync": "2026-02-17T14:00:46+01:00",
+  "lastSync": "2026-02-17T20:00:30+01:00",
   "heartbeats": {
     "main": {
-      "lastCheck": "2026-02-17T14:00:25+01:00",
+      "lastCheck": "2026-02-17T20:00:29+01:00",
       "status": "ok"
     },
     "plaza-marketing": {
-      "lastCheck": "2026-02-17T13:45:30+01:00",
+      "lastCheck": "2026-02-17T19:45:41+01:00",
       "status": "ok"
     },
     "clea": {
-      "lastCheck": "2026-02-17T13:30:31+01:00",
+      "lastCheck": "2026-02-17T19:45:54+01:00",
       "status": "ok"
     }
   },
   "recentActivity": [
     {
-      "time": "12:57",
-      "agent": "Claudia",
-      "action": "Brief matinal envoyé"
-    },
-    {
-      "time": "12:57",
-      "agent": "Claudia",
-      "action": "Brief matinal envoyé"
-    },
-    {
-      "time": "12:57",
-      "agent": "Claudia",
-      "action": "Brief matinal envoyé"
-    },
-    {
-      "time": "12:57",
+      "time": "18:31",
       "agent": "Claudia",
       "action": "Activité système"
     },
     {
-      "time": "12:59",
+      "time": "18:45",
+      "agent": "Claudia",
+      "action": "Heartbeat check"
+    },
+    {
+      "time": "18:45",
       "agent": "Claudia",
       "action": "Activité système"
     },
     {
-      "time": "13:00",
+      "time": "18:45",
+      "agent": "Claudia",
+      "action": "Heartbeat check"
+    },
+    {
+      "time": "18:45",
       "agent": "Claudia",
       "action": "Activité système"
     },
     {
-      "time": "13:00",
+      "time": "18:45",
+      "agent": "Claudia",
+      "action": "Heartbeat check"
+    },
+    {
+      "time": "18:45",
       "agent": "Claudia",
       "action": "Activité système"
     },
     {
-      "time": "13:00",
+      "time": "19:00",
       "agent": "Claudia",
       "action": "Heartbeat check"
     }
   ],
   "tokenUsage": {
     "today": {
-      "input": 85,
-      "output": 1668,
-      "cost": 0.12637500000000000000
+      "input": 78,
+      "output": 5119,
+      "cost": 0.38509500000000000000
     }
   }
 }
