@@ -8,6 +8,10 @@ HTML_FILE="index.html"
 
 echo "=== Control Center Update $(date) ==="
 
+# ===== 0. Sync Pennylane (source de vérité financière) =====
+echo "Sync Pennylane..."
+bash ./sync-pennylane.sh 2>/dev/null || echo "Pennylane sync failed"
+
 # ===== 1. GA4 - Trafic pixel-drop.com (30j) =====
 echo "GA4 trafic..."
 ACCESS_TOKEN=$(curl -s -X POST https://oauth2.googleapis.com/token \

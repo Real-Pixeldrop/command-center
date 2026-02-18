@@ -4,11 +4,11 @@
     "ca_annuel": 60000
   },
   "kpis": {
-    "ca_mensuel": 650,
-    "ca_mensuel_mois": "Février 2026",
+    "ca_mensuel": 780,
+    "ca_mensuel_mois": "February 2026",
     "clients_actifs": 100,
     "trafic_pd": 31,
-    "devis_attente": 3
+    "devis_attente": 6
   },
   "prospection": {
     "prospects_a_contacter": 71,
@@ -1797,12 +1797,13 @@
       "client": "Habitat Multi Services",
       "montant": "3 000 €",
       "montant_num": 3000,
-      "statut": "accepte",
+      "statut": "paye",
       "date_envoi": "2026-01-27",
       "date_accepte": "2026-01-27",
       "objet": "Site vitrine Habitat Multi Services",
       "date": "27/01/2026",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=5KOSDUczi%2Ba98MMe5ZNmbNvxrRWtLV6wG4W1J9YROTS7zZKtwnOVo3dFHGa259aTUR0KbRMMtRcg0vYhOMWZD6QUJPwg0Uy8CDsVnCFm%2FcJmEp8jRGWjL2J6--A2nzOFJV%2BDIuYTpZ--6AHYGmnYMhcign2Dg8P9Ew%3D%3D"
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=5KOSDUczi%2Ba98MMe5ZNmbNvxrRWtLV6wG4W1J9YROTS7zZKtwnOVo3dFHGa259aTUR0KbRMMtRcg0vYhOMWZD6QUJPwg0Uy8CDsVnCFm%2FcJmEp8jRGWjL2J6--A2nzOFJV%2BDIuYTpZ--6AHYGmnYMhcign2Dg8P9Ew%3D%3D",
+      "date_paiement": "2026-01-27"
     },
     {
       "nom": "Devis D-2026-017",
@@ -1834,7 +1835,7 @@
       "client": "Ignite Media",
       "montant": "3 000 €",
       "montant_num": 3000,
-      "statut": "en_pause",
+      "statut": "en_attente",
       "date_envoi": "2025-12-15",
       "source": "notion",
       "pdf_name": "Devis-2025-12-0015.pdf",
@@ -2196,7 +2197,7 @@
       "client": "LXB Estates Luxembourg",
       "montant": "3 000 €",
       "montant_num": 3000,
-      "statut": "accepte",
+      "statut": "en_attente",
       "date_envoi": "2025-10-16",
       "source": "notion",
       "date": "16/10/2025"
@@ -2798,16 +2799,16 @@
   ],
   "devis_kpis": {
     "en_attente": {
-      "count": 3,
-      "montant": "18 700€ potentiels"
+      "count": 6,
+      "montant": "24 700€ potentiels"
     },
     "acceptes": {
-      "count": 2,
-      "montant": "3 650€"
+      "count": 69,
+      "montant": "73 575€"
     },
     "factures_payees": {
-      "count": 1,
-      "montant": "3 000€ encaissés"
+      "count": 2,
+      "montant": "3 780€ encaissés"
     }
   },
   "finances": {
@@ -5337,5 +5338,6 @@
       "regle": "Toujours relancer par téléphone à J+7, pas juste par mail.",
       "date_ajout": "2026-02-16"
     }
-  ]
+  ],
+  "pennylane_last_sync": "2026-02-18 15:55"
 }
