@@ -2816,13 +2816,13 @@
       "detail": "1 facture payee"
     },
     "ca_fevrier": {
-      "montant": "0€",
-      "detail": "en cours"
+      "montant": "650€",
+      "detail": "1 facture payée (RCL)"
     },
-    "total_2026": "3 000€",
+    "total_2026": "3 650€",
     "devis_attente": {
-      "montant": "36 400€",
-      "detail": "5 devis pending"
+      "montant": "14 000€",
+      "detail": "3 devis pending"
     },
     "ca_mensuel_chart": [
       {

@@ -3103,7 +3103,7 @@
         }).join('');
 
         // Objectif annuel
-        const caAnnuelNum = parseInt(f.total_2026.replace(/[^0-9]/g, '')) || 0;
+        const caAnnuelNum = f.ca_mensuel_chart.reduce((sum, m) => sum + (m.montant || 0), 0);
         const objAnnuel = DATA.objectifs.ca_annuel;
         const objAnnuelPct = objAnnuel > 0 ? Math.min(100, Math.round(caAnnuelNum / objAnnuel * 100)) : 0;
         const objAnnuelColor = objAnnuelPct >= 80 ? 'var(--success)' : objAnnuelPct >= 50 ? 'var(--warning)' : '#ef4444';
