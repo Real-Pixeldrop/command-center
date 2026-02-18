@@ -4,11 +4,11 @@
     "ca_annuel": 60000
   },
   "kpis": {
-    "ca_mensuel": "650€",
+    "ca_mensuel": 650,
     "ca_mensuel_mois": "Février 2026",
     "clients_actifs": 100,
     "trafic_pd": 31,
-    "devis_attente": 4
+    "devis_attente": 3
   },
   "prospection": {
     "prospects_a_contacter": 71,
@@ -995,11 +995,11 @@
       "telephone": "06 84 54 16 26",
       "email": "gglondu@gmail.com",
       "ca_2025": 1072,
-      "ca_2026": 650,
+      "ca_2026": 1300,
       "ca_total": 1072,
       "nb_factures": 1,
       "nb_projets": 2,
-      "dernier_contact": "2026-02-12",
+      "dernier_contact": "2026-02-18",
       "nom_entreprise": "RCL",
       "siret": "33841667000028",
       "adresse": "20 AVENUE ROGER SALENGRO, 77270, VILLEPARISIS",
@@ -1188,9 +1188,9 @@
     {
       "nom": "L.I.Partners",
       "site": "li.partners",
-      "telephone": "",
+      "telephone": "01 39 04 60 40",
       "email": "antoine.jude@li.partners",
-      "dernier_contact": "2026-02-04",
+      "dernier_contact": "2026-02-18",
       "statut": "Prospect",
       "maintenance": "Non",
       "fin_contrat": "--",
@@ -1202,7 +1202,11 @@
       "nom_entreprise": "LEADERSHIP.INSTEAD.PARTNERS",
       "siret": "353008840",
       "adresse": "13-15 Rue Jean Jaurès, 92800, Puteaux",
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "contact_principal": "Abdelhamid RAFIKI",
+      "poste_contact": "Responsable administratif et financier / Office manager",
+      "email_contact": "abdelhamid.rafiki@li.partners",
+      "notes": "RDV confirmé par tel le 18/02. Réunion refonte site le 19/02 à 15h sur place (15 rue Jean Jaurès, Puteaux). Participants: Abdelhamid RAFIKI + Antoine JUDE"
     },
     {
       "nom": "Entretien Zen",
@@ -1747,12 +1751,15 @@
       "client": "RCL",
       "montant": "650 €",
       "montant_num": 650,
-      "statut": "accepte",
+      "statut": "paye",
       "date_envoi": "2026-02-11",
       "date_accepte": "2026-02-11",
       "objet": "Configuration domaine collectiviteslocales.fr",
       "date": "11/02/2026",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=QDwpo1FYZVGm5GaG%2FmV5R6NnHzpbeRGVAt2uOFfNm3Ls5b%2Bk3KFDzaDS6RwfCzJvkkkhhIrUrV69qaiyuYUWYf8V2FCWJWiGSKt%2F6047dhUZdgyT4LfY2HdW--ZICDM9%2Fpb5TPV9un--9YMrTTgPT8WGfhXsWxZ8gQ%3D%3D"
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=QDwpo1FYZVGm5GaG%2FmV5R6NnHzpbeRGVAt2uOFfNm3Ls5b%2Bk3KFDzaDS6RwfCzJvkkkhhIrUrV69qaiyuYUWYf8V2FCWJWiGSKt%2F6047dhUZdgyT4LfY2HdW--ZICDM9%2Fpb5TPV9un--9YMrTTgPT8WGfhXsWxZ8gQ%3D%3D",
+      "date_paiement": "2026-02-18",
+      "montant_ttc": "780 €",
+      "montant_ttc_num": 780
     },
     {
       "client": "Black Trombone",
@@ -2825,8 +2832,8 @@
       },
       {
         "mois": "Fev",
-        "montant": 0,
-        "label": "0"
+        "montant": 650,
+        "label": "650"
       },
       {
         "mois": "Mar",
