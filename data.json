@@ -2799,12 +2799,12 @@
   ],
   "devis_kpis": {
     "en_attente": {
-      "count": 6,
-      "montant": "24 700€ potentiels"
+      "count": 3,
+      "montant": "18 700€ potentiels"
     },
     "acceptes": {
-      "count": 69,
-      "montant": "73 575€"
+      "count": 0,
+      "montant": "0€"
     },
     "factures_payees": {
       "count": 2,
@@ -5339,5 +5339,5 @@
       "date_ajout": "2026-02-16"
     }
   ],
-  "pennylane_last_sync": "2026-02-18 15:55"
+  "pennylane_last_sync": "2026-02-18 20:00"
 }
