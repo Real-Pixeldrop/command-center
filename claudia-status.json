@@ -1,67 +1,31 @@
 {
-  "lastSync": "2026-02-18T20:00:35.059010+01:00",
+  "lastSync": "2026-02-19T08:01:29+01:00",
   "heartbeats": {
     "main": {
-      "lastCheck": "2026-02-18T20:00:35.059010+01:00",
+      "lastCheck": "2026-02-19T08:01:04+01:00",
       "status": "ok"
     },
     "plaza-marketing": {
-      "lastCheck": "2026-02-18T19:46:11+01:00",
+      "lastCheck": "2026-02-19T07:00:43+01:00",
       "status": "ok"
     },
     "clea": {
-      "lastCheck": "2026-02-18T19:46:26+01:00",
+      "lastCheck": "2026-02-19T07:30:23+01:00",
       "status": "ok"
     }
   },
   "recentActivity": [
     {
-      "time": "20:00",
+      "time": "00:45",
       "agent": "Claudia",
-      "action": "Heartbeat check"
-    },
-    {
-      "time": "18:51",
-      "agent": "Claudia",
-      "action": "Activité système"
-    },
-    {
-      "time": "18:54",
-      "agent": "Claudia",
-      "action": "Heartbeat check"
-    },
-    {
-      "time": "18:54",
-      "agent": "Claudia",
-      "action": "Activité système"
-    },
-    {
-      "time": "18:57",
-      "agent": "Claudia",
-      "action": "Heartbeat check"
-    },
-    {
-      "time": "18:57",
-      "agent": "Claudia",
-      "action": "Activité système"
-    },
-    {
-      "time": "19:00",
-      "agent": "Claudia",
-      "action": "Heartbeat check"
-    },
-    {
-      "time": "19:00",
-      "agent": "Claudia",
-      "action": "Activité système"
+      "action": "Tâche automatisée"
     }
   ],
   "tokenUsage": {
     "today": {
-      "input": 36799,
-      "output": 208917,
-      "cost": 11.03,
-      "messagesSent": 17
+      "input": 76,
+      "output": 1820,
+      "cost": 0.13764000000000000000
     }
   }
 }
