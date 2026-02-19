@@ -3507,9 +3507,16 @@
   ],
   "taches": [
     {
-      "titre": "Préparer RDV L.I.Partners (jeudi 15h) 10:00 - 11:30",
-      "desc": "Mercredi 18/02",
-      "badge": "Client",
+      "titre": "Réunion site refonte 15:00 - 16:00",
+      "desc": "Jeudi 19/02 — 15:00",
+      "badge": "Tâche",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Networking Entrepreneurs 19:30 - 22:00",
+      "desc": "Jeudi 19/02",
+      "badge": "Tâche",
       "badge_color": "blue",
       "colonne": "a_faire"
     },
