@@ -8,7 +8,7 @@
     "ca_mensuel_mois": "February 2026",
     "clients_actifs": 100,
     "trafic_pd": 31,
-    "devis_attente": 6
+    "devis_attente": 5
   },
   "prospection": {
     "prospects_a_contacter": 71,
@@ -1190,8 +1190,8 @@
       "site": "li.partners",
       "telephone": "01 39 04 60 40",
       "email": "antoine.jude@li.partners",
-      "dernier_contact": "2026-02-18",
-      "statut": "Prospect",
+      "dernier_contact": "2026-02-19",
+      "statut": "Négociation",
       "maintenance": "Non",
       "fin_contrat": "--",
       "ca_total": 0,
@@ -1206,7 +1206,7 @@
       "contact_principal": "Abdelhamid RAFIKI",
       "poste_contact": "Responsable administratif et financier / Office manager",
       "email_contact": "abdelhamid.rafiki@li.partners",
-      "notes": "RDV confirmé par tel le 18/02. Réunion refonte site le 19/02 à 15h sur place (15 rue Jean Jaurès, Puteaux). Participants: Abdelhamid RAFIKI + Antoine JUDE"
+      "notes": "RDV 19/02 positif. Antoine JUDE OK pour le projet, recommande présentation COMEX le 16/03.\nSTRATÉGIE : convaincre un par un (visios individuelles) puis finaliser au COMEX.\nAntoine a donné des tips pour que ça passe. Pas d'objection de sa part.\nLes autres sont plus réticents au changement.\nAUTOMATISATION : le sujet les a intéressés mais ils veulent y aller doucement. Akli veut appuyer car ROI direct vs site web.\n\nCONTACTS COMEX :\n- Antoine JUDE (DG) : favorable, veut que ça change\n- Lydia MAZZUCCO : Directrice Actions sur site & Valorisation. Terrain, opérationnelle, met les mains dans le cambouis. Clients auto/industrie/BTP.\n- Alexandre LE HELLEY : Directeur Compétences & Formation. Innovation pédagogique, jeu, e-learning. Ex-responsable communication/marketing ITC Conseil.\n- Franck BONHOMME : Directeur Inspiration, Audit & Conseil opérationnel. Audit, conseil stratégique, data. Cas industriel (délais livraison).\n- Abdelhamid RAFIKI : Office Manager/RAF. Gère l'admin et la logistique.\n\nVISIOS TEAMS à caler (liens créés par Abdelhamid, dates à fixer) :\n- Avec Alexandre LE HELLEY\n- Avec Lydia MAZZUCCO\n- Avec Franck BONHOMME"
     },
     {
       "nom": "Entretien Zen",
@@ -1673,6 +1673,28 @@
       "adresse": "Nungwi, Zanzibar, Tanzania",
       "nb_opps_notion": 1,
       "derniere_maintenance": null
+    },
+    {
+      "nom": "Strada (Thomas Friedland)",
+      "site": "getstrada.com",
+      "telephone": "",
+      "email": "",
+      "dernier_contact": "2026-02-19",
+      "statut": "Prospect",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "ca_total": 0,
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "nom_entreprise": "Strada API, Inc.",
+      "siret": null,
+      "adresse": "156 2nd St, San Francisco, CA 94105",
+      "derniere_maintenance": null,
+      "contact_principal": "Thomas Friedland",
+      "poste_contact": "Employee (role exact a confirmer)",
+      "notes": "Ami d Akli. Se sont vus a Londres. Thomas trouve le site pas a la hauteur des produits. Veut une touche plus premium. Site fait avec Framer. Startup YC S23, fondee par Amir Prodensky (CEO) et Arash Khazaei (CTO). ~10 employes. AI vocale pour assurances (carriers, brokers, MGAs). Source WhatsApp 18/02/2026."
     }
   ],
   "pipeline": [
@@ -1725,6 +1747,13 @@
       "statut": "annule",
       "detail": "Démo Agentic AI - annulé par Akli",
       "contact": "leonard.pierrick@gmail.com"
+    },
+    {
+      "nom": "Strada / Thomas Friedland",
+      "desc": "Audit UX/design site getstrada.com + recommandations premium",
+      "montant": "A definir",
+      "etape": "en_discussion",
+      "prochaine_action": "Explorer le site, attendre liens concurrents, preparer liste de recommandations (deadline: semaine du 24/02)"
     }
   ],
   "pipeline_kpis": {
@@ -1785,12 +1814,13 @@
       "client": "L.I. Partners",
       "montant": "8 400 €",
       "montant_num": 8400,
-      "statut": "en_attente",
+      "statut": "negociation",
       "date_envoi": "2026-02-04",
       "date_accepte": null,
       "objet": "Refonte site web L.I.Partners",
       "date": "04/02/2026",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=hYGln3L5KW%2B%2B%2FVq51fzTMp7XNas%2Fl1ovWhCB2fHIXyP6UxAH7eqC4wHtzIdOYJ2qxgVR8%2FmECDR8M0dXCBFK6gUhdhi%2BvbwGsbkMc9027Zc%2FKNPnP6S%2BD5h5--EzTPuLQ7%2B1Vz4ynL--nj2bCVvrUjOkgffplEbRog%3D%3D"
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=hYGln3L5KW%2B%2B%2FVq51fzTMp7XNas%2Fl1ovWhCB2fHIXyP6UxAH7eqC4wHtzIdOYJ2qxgVR8%2FmECDR8M0dXCBFK6gUhdhi%2BvbwGsbkMc9027Zc%2FKNPnP6S%2BD5h5--EzTPuLQ7%2B1Vz4ynL--nj2bCVvrUjOkgffplEbRog%3D%3D",
+      "note": "RDV 19/02 positif. Présentation COMEX le 16/03. Visios individuelles avant."
     },
     {
       "nom": "Devis D-2026-0110",
@@ -2799,8 +2829,8 @@
   ],
   "devis_kpis": {
     "en_attente": {
-      "count": 3,
-      "montant": "18 700€ potentiels"
+      "count": 2,
+      "montant": "10 300€ potentiels"
     },
     "acceptes": {
       "count": 0,
@@ -5346,5 +5376,5 @@
       "date_ajout": "2026-02-16"
     }
   ],
-  "pennylane_last_sync": "2026-02-19 08:01"
+  "pennylane_last_sync": "2026-02-19 20:00"
 }
