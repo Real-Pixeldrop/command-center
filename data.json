@@ -4397,31 +4397,33 @@
     }
   ],
   "linkedin_posts": [
-    {
-      "titre": "5 erreurs sur votre site web",
-      "type": "post",
-      "date": "2026-02-10",
-      "statut": "redaction"
-    },
-    {
-      "titre": "Etude de cas - Habitat Multi Services",
-      "type": "article",
-      "date": "2026-02-14",
-      "statut": "idee"
-    },
-    {
-      "titre": "Pourquoi investir dans le SEO en 2026",
-      "type": "carousel",
-      "date": "2026-02-17",
-      "statut": "idee"
-    },
-    {
-      "titre": "Bilan janvier Pixel Drop",
-      "type": "post",
-      "date": "2026-02-03",
-      "statut": "publie"
-    }
+    {"titre": "Présentation Pixel Drop + IA + Calculateur ROI", "type": "expertise", "date": "2026-02-11", "statut": "publie", "profil": "akli", "url": null, "notes": "Premier post de lancement"},
+    {"titre": "3 leçons apprises en automatisant les process clients", "type": "reflexion", "date": "2026-02-17", "statut": "publie", "profil": "akli", "url": null},
+    {"titre": "Lead Automation - Email → CRM en 2 sec", "type": "automatisation", "date": "2026-02-18", "statut": "publie", "profil": "page_pixeldrop", "url": "https://www.linkedin.com/feed/update/urn:li:share:7429985779856072705"},
+    {"titre": "Avant/Après Automatisation", "type": "automatisation", "date": "2026-02-19", "statut": "publie", "profil": "page_pixeldrop", "url": "https://www.linkedin.com/feed/update/urn:li:share:7430313184969981952"},
+    {"titre": "Automatisation des processus métier", "type": "conseil", "date": "2026-02-21", "statut": "publie", "profil": "akli", "url": null, "notes": "En attente validation"},
+    {"titre": "Setup de travail / multi-écrans", "type": "coulisses", "date": "2026-02-21", "statut": "planifie", "profil": "page_pixeldrop"},
+    {"titre": "Client e-commerce : -60% temps admin", "type": "resultat", "date": "2026-02-22", "statut": "planifie", "profil": "page_pixeldrop"},
+    {"titre": "3 étapes pour automatiser sa prospection", "type": "process", "date": "2026-02-23", "statut": "planifie", "profil": "page_pixeldrop"},
+    {"titre": "Tendance IA 2026", "type": "reflexion", "date": "2026-02-24", "statut": "idee", "profil": "akli"},
+    {"titre": "Alertes Slack automatiques depuis formulaire", "type": "automatisation", "date": "2026-02-24", "statut": "planifie", "profil": "page_pixeldrop"},
+    {"titre": "Prompt engineering : mes 3 techniques", "type": "conseil", "date": "2026-02-25", "statut": "planifie", "profil": "page_pixeldrop"},
+    {"titre": "Client 3x plus de clients", "type": "etude_de_cas", "date": "2026-02-26", "statut": "idee", "profil": "page_pixeldrop"},
+    {"titre": "ROI automatisation", "type": "conseil", "date": "2026-02-28", "statut": "idee", "profil": "akli"}
   ],
+  "linkedin_meta": {
+    "gere_par": "Cléa",
+    "outils": ["nano-banana-pro (images IA)", "freeimage.host (hébergement)", "Instagram Graph API", "LinkedIn (publication)", "Telegram (validation)"],
+    "process": ["Création contenu texte", "Génération image (nano-banana-pro, style photoréaliste)", "Upload image sur freeimage.host", "Publication Instagram via API", "Publication LinkedIn (page ou profil Akli)", "Log dans memory"],
+    "guidelines": {
+      "linkedin_page": "Ton 'nous', pas d'emojis, pas de logo, cible directeurs/décideurs",
+      "linkedin_akli": "Ton personnel expert, emojis modérés",
+      "images": "Photoréaliste (bureaux, interfaces, dashboards). Jamais flat design."
+    },
+    "frequence": "2-3 posts/semaine (semaine test 19-25 fév : 1 post/jour)",
+    "objectif_followers": {"current": 62, "goal": 500}
+  },
+  "linkedin_conseil_clea": "Semaine test en cours (1 post/jour). Objectif : valider le rythme et identifier les formats qui engagent le plus. Priorité : les posts 'résultats clients' et 'automatisation' performent mieux que les posts réflexion.",
   "instagram_posts": [
     {
       "titre": "Lancement com Pixel Drop",

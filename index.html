@@ -3878,65 +3878,166 @@
     // ===== LINKEDIN =====
     function renderLinkedin() {
         const posts = DATA.linkedin_posts || [];
+        const meta = DATA.linkedin_meta || {};
+        const conseilClea = DATA.linkedin_conseil_clea || '';
         const now = new Date();
         const currentMonth = now.getMonth();
         const currentYear = now.getFullYear();
 
-        const aPublier = posts.filter(p => p.statut === 'redaction' || p.statut === 'a_publier').length;
-        const planifies = posts.filter(p => new Date(p.date) > now && p.statut !== 'publie').length;
+        // KPIs dynamiques
+        const publies = posts.filter(p => p.statut === 'publie').length;
+        const planifies = posts.filter(p => p.statut === 'planifie').length;
+        const idees = posts.filter(p => p.statut === 'idee').length;
         const publiesMois = posts.filter(p => {
             const d = new Date(p.date);
             return p.statut === 'publie' && d.getMonth() === currentMonth && d.getFullYear() === currentYear;
         }).length;
 
-        const statutToCol = { idee: 'idee', redaction: 'redaction', a_publier: 'pret', pret: 'pret', publie: 'publie' };
-        const colonneConfig = {
-            idee: { label: '💡 Idee', col: 'col-gray' },
-            redaction: { label: '✏️ Redaction', col: 'col-orange' },
-            pret: { label: '🚀 Pret a publier', col: 'col-blue' },
-            publie: { label: '✅ Publie', col: 'col-green' }
-        };
+        // Jauge followers - utilise marketing.linkedin (même donnée que Vue d'ensemble)
+        const liData = (DATA.marketing && DATA.marketing.linkedin) || meta.objectif_followers || {};
+        const liCurrent = liData.current || 0;
+        const liGoal = liData.goal || 500;
+        const liPct = liGoal > 0 ? Math.min(100, Math.round(liCurrent / liGoal * 100 * 10) / 10) : 0;
+        const liUrl = liData.url || 'https://www.linkedin.com/company/93845156/admin/analytics/followers/';
 
+        // Type badge colors
         function typeBadge(type) {
-            if (type === 'article' || type === 'post') return 'badge-blue';
-            if (type === 'carousel') return 'badge-orange';
-            return 'badge-gray';
+            const map = {
+                'expertise': 'badge-blue', 'automatisation': 'badge-purple', 'reflexion': 'badge-gray',
+                'conseil': 'badge-orange', 'coulisses': 'badge-slate', 'resultat': 'badge-green',
+                'process': 'badge-blue', 'etude_de_cas': 'badge-green'
+            };
+            return map[type] || 'badge-gray';
         }
 
-        let kanbanCols = '';
-        for (const [key, cfg] of Object.entries(colonneConfig)) {
-            const items = posts.filter(p => (statutToCol[p.statut] || p.statut) === key);
-            const cards = items.map((p, i) => `<div class="kanban-card" style="animation-delay:${(0.05 + i * 0.05).toFixed(2)}s">
-                <div class="kanban-card-title">${esc(p.titre)}</div>
-                <div class="kanban-card-desc">${fmtDate(p.date)}</div>
-                <span class="badge ${typeBadge(p.type)}">${esc(p.type)}</span>
-            </div>`).join('');
-            kanbanCols += `<div class="kanban-column ${cfg.col}">
-                <div class="kanban-column-header"><span>${cfg.label}</span><span class="count">${items.length}</span></div>
-                <div class="kanban-column-body">${cards}</div>
-            </div>`;
+        // Profil badge
+        function profilBadge(profil) {
+            if (profil === 'page_pixeldrop') return '<span class="badge badge-blue" style="font-size:0.68rem;">Page Pixel Drop</span>';
+            if (profil === 'akli') return '<span class="badge badge-gray" style="font-size:0.68rem;">Profil Akli</span>';
+            return '';
         }
+
+        // Statut badge
+        function statutBadge(statut) {
+            if (statut === 'publie') return '<span class="badge badge-green">Publié</span>';
+            if (statut === 'planifie') return '<span class="badge badge-orange">Planifié</span>';
+            if (statut === 'idee') return '<span class="badge badge-gray">Idée</span>';
+            return '<span class="badge badge-gray">' + esc(statut) + '</span>';
+        }
+
+        // Tableau des posts publiés
+        const postsPub = posts.filter(p => p.statut === 'publie').sort((a,b) => new Date(b.date) - new Date(a.date));
+        const pubRows = postsPub.map(p => {
+            const lien = p.url ? `<a href="${esc(p.url)}" target="_blank" style="color:var(--primary);text-decoration:none;font-size:0.8rem;">Voir ↗</a>` : '<span style="color:var(--text-light);font-size:0.8rem;">--</span>';
+            return `<tr>
+                <td style="white-space:normal;max-width:none;">${esc(p.titre)}</td>
+                <td>${fmtDate(p.date)}</td>
+                <td><span class="badge ${typeBadge(p.type)}">${esc(p.type)}</span></td>
+                <td>${profilBadge(p.profil)}</td>
+                <td>${lien}</td>
+            </tr>`;
+        }).join('');
+
+        // Publications à venir (planifiés + idées)
+        const postsAVenir = posts.filter(p => p.statut === 'planifie' || p.statut === 'idee').sort((a,b) => new Date(a.date) - new Date(b.date));
+        const aVenirRows = postsAVenir.map(p => {
+            return `<tr>
+                <td style="white-space:normal;max-width:none;">${esc(p.titre)}</td>
+                <td>${fmtDate(p.date)}</td>
+                <td><span class="badge ${typeBadge(p.type)}">${esc(p.type)}</span></td>
+                <td>${profilBadge(p.profil)}</td>
+                <td>${statutBadge(p.statut)}</td>
+            </tr>`;
+        }).join('');
+
+        // Process Cléa
+        const outils = (meta.outils || []).map(o => `<span style="display:inline-block;background:#f0f0f0;border-radius:4px;padding:3px 10px;font-size:0.75rem;color:var(--text);margin:2px 4px 2px 0;">${esc(o)}</span>`).join('');
+        const processSteps = (meta.process || []).map((s, i) => `<li style="padding:3px 0;font-size:0.82rem;color:var(--text-light);">${i+1}. ${esc(s)}</li>`).join('');
 
         document.getElementById('linkedin-content').innerHTML = `
+        <!-- KPIs Row -->
         <div class="grid grid-4">
             <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">A publier</div>
-                <div class="card-value accent">${aPublier}</div>
+                <div class="card-label">Posts publiés</div>
+                <div class="card-value success">${publies}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">Planifies</div>
+                <div class="card-label">Planifiés</div>
                 <div class="card-value primary">${planifies}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Publies ce mois</div>
-                <div class="card-value success">${publiesMois}</div>
+                <div class="card-label">Publiés ce mois</div>
+                <div class="card-value accent">${publiesMois}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.25s">
                 <div class="card-label">Engagement moyen</div>
                 <div class="card-value primary">--</div>
             </div>
         </div>
-        <div class="kanban-board">${kanbanCols}</div>`;
+
+        <!-- Conseil Cléa + Jauge followers -->
+        <div class="grid grid-2 fade-in" style="animation-delay:0.3s">
+            <div class="card">
+                <div style="background:linear-gradient(135deg, rgba(156,39,176,0.06), rgba(156,39,176,0.02)); border:1px solid rgba(156,39,176,0.2); border-radius:12px; padding:16px 18px;">
+                    <div style="font-size:0.85rem;font-weight:700;color:var(--text);margin-bottom:6px;">💡 Conseil Cléa</div>
+                    <div style="font-size:0.85rem;color:var(--text-light);line-height:1.5;">${esc(conseilClea)}</div>
+                </div>
+            </div>
+            <a href="${esc(liUrl)}" target="_blank" class="card-link">
+                <div class="card" style="position:relative;">
+                    <span class="link-arrow" style="position:absolute;top:14px;right:16px;font-size:0.9rem;color:var(--text-light);">↗</span>
+                    <div class="card-label">Objectif Followers LinkedIn</div>
+                    <div style="display:flex;justify-content:space-between;align-items:baseline;margin:8px 0 4px;">
+                        <span class="card-value" style="font-size:1.6rem;">${liCurrent}</span>
+                        <span style="color:var(--text-light);font-size:0.85rem;">/ ${liGoal}</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill primary" style="width:${liPct}%"></div></div>
+                    <div style="text-align:right;font-size:0.78rem;color:var(--text-light);margin-top:4px;">${liPct}%</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Tableau des posts publiés -->
+        <div class="card table-card fade-in" style="animation-delay:0.35s">
+            <div class="table-header">✅ Posts publiés</div>
+            <table>
+                <thead><tr><th style="width:35%">Titre</th><th style="width:12%">Date</th><th style="width:15%">Type</th><th style="width:18%">Profil</th><th style="width:10%">Lien</th></tr></thead>
+                <tbody>${pubRows}</tbody>
+            </table>
+        </div>
+
+        <!-- Publications à venir -->
+        <div class="card table-card fade-in" style="animation-delay:0.4s">
+            <div class="table-header">📅 Publications à venir</div>
+            <table>
+                <thead><tr><th style="width:35%">Titre</th><th style="width:12%">Date</th><th style="width:15%">Type</th><th style="width:18%">Profil</th><th style="width:12%">Statut</th></tr></thead>
+                <tbody>${aVenirRows}</tbody>
+            </table>
+        </div>
+
+        <!-- Process Cléa -->
+        <div class="card fade-in" style="animation-delay:0.45s">
+            <div style="cursor:pointer;display:flex;justify-content:space-between;align-items:center;" onclick="this.parentElement.querySelector('.process-body').classList.toggle('process-hidden');this.querySelector('.process-chevron').classList.toggle('process-chevron-closed');">
+                <div style="font-weight:600;font-size:0.95rem;">🔧 Process Cléa</div>
+                <span class="process-chevron" style="display:inline-block;transition:transform 0.25s;font-size:0.7rem;">▼</span>
+            </div>
+            <div class="process-body" style="margin-top:14px;">
+                <div style="font-size:0.85rem;color:var(--text);margin-bottom:10px;"><strong>Géré par :</strong> ${esc(meta.gere_par || 'Cléa')}</div>
+                <div style="font-size:0.85rem;color:var(--text);margin-bottom:6px;"><strong>Fréquence :</strong> ${esc(meta.frequence || '--')}</div>
+                <div style="margin-bottom:12px;">
+                    <div style="font-size:0.8rem;font-weight:600;color:var(--text);margin-bottom:6px;">Outils</div>
+                    ${outils}
+                </div>
+                <div>
+                    <div style="font-size:0.8rem;font-weight:600;color:var(--text);margin-bottom:6px;">Étapes du process</div>
+                    <ul style="list-style:none;padding:0;margin:0;">${processSteps}</ul>
+                </div>
+            </div>
+        </div>
+        <style>
+            .process-hidden { display: none !important; }
+            .process-chevron-closed { transform: rotate(-90deg); }
+        </style>`;
     }
 
     // ===== INSTAGRAM =====
