@@ -858,7 +858,8 @@
       "siret": "99258913500019",
       "adresse": "38 RUE DU PRINTEMPS 68100 MULHOUSE, 68100, MULHOUSE",
       "nb_opps_notion": 2,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Etheos (Opportunité perdue 🪦): 4798€; Etheos (1) (Client signé ✨): 2699€"
     },
     {
       "nom": "Pepites d'Esthetique",
@@ -907,7 +908,7 @@
       "fin_contrat": "04/10/2026",
       "statut": "Actif",
       "telephone": "",
-      "email": "",
+      "email": "lorenzo.rickal@gmail.com",
       "ca_2025": 4000,
       "ca_2026": 0,
       "ca_total": 4000,
@@ -917,7 +918,8 @@
       "nom_entreprise": "LXB Construction",
       "siret": null,
       "adresse": null,
-      "derniere_maintenance": "2026-02-10"
+      "derniere_maintenance": "2026-02-10",
+      "notion_notes": "LXB Construct (2/2) (Client signé ✨): 1000€; LXB Construct (1/2) (Client signé ✨): 3000€; LXB CARELLAGE (Offre envoyée ✉️): 6500€"
     },
     {
       "nom": "LXB ESTATE",
@@ -937,7 +939,8 @@
       "siret": null,
       "adresse": null,
       "nb_opps_notion": 4,
-      "derniere_maintenance": "2026-02-10"
+      "derniere_maintenance": "2026-02-10",
+      "notion_notes": "LXB Estates (Client signé ✨): 2812€"
     },
     {
       "nom": "Derniere Dispo",
@@ -946,7 +949,7 @@
       "fin_contrat": "31/07/2026",
       "statut": "Actif",
       "telephone": "",
-      "email": "",
+      "email": "maurice.johan@black-trombone.fr",
       "ca_2025": 0,
       "ca_2026": 0,
       "ca_total": 0,
@@ -956,7 +959,8 @@
       "nom_entreprise": null,
       "siret": null,
       "adresse": null,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Dernière Dispo 1/2 (Client signé ✨): 1765.35€; Dernière Dispo 2/2 (Client signé ✨): 1765.35€"
     },
     {
       "nom": "Fidolux",
@@ -976,7 +980,8 @@
       "siret": "B297692",
       "adresse": "11, Rue des Trois Cantons, L-8399, Windhof",
       "nb_opps_notion": 3,
-      "derniere_maintenance": "2026-02-16"
+      "derniere_maintenance": "2026-02-16",
+      "notion_notes": "Fidolux 1/2 (Client signé ✨): 2000€; Fidolux 2/2 (Client signé ✨): 2000€"
     },
     {
       "nom": "Cothidance",
@@ -996,7 +1001,8 @@
       "siret": "49144954200043",
       "adresse": "42 RUE DE MAUBEUGE 75009 PARIS, 75009, PARIS",
       "nb_opps_notion": 2,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Cothidance (Client signé ✨): 990€; Maintenance COTHIDANCE (Client signé ✨): 699€"
     },
     {
       "nom": "RCL",
@@ -1016,7 +1022,8 @@
       "siret": "33841667000028",
       "adresse": "20 AVENUE ROGER SALENGRO, 77270, VILLEPARISIS",
       "nb_opps_notion": 2,
-      "derniere_maintenance": "2026-02-21"
+      "derniere_maintenance": "2026-02-21",
+      "notion_notes": "Maintenance RCL (Client signé ✨): 599€; Renouvellement Domaine + Hosting (Client signé ✨): 114€"
     },
     {
       "nom": "Plaza Tango",
@@ -1055,7 +1062,8 @@
       "siret": "51756216100011",
       "adresse": "26 RUE DE LASCHAMP 63170 AUBIERE, 63170, AUBIERE",
       "nb_opps_notion": 2,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Habitat Multi Services - Site vitrine (Client signé ✨): 3000€"
     },
     {
       "nom": "Black Trombone",
@@ -1075,7 +1083,8 @@
       "siret": "75377759800029",
       "adresse": "12 RUE JEAN DE LA FONTAINE, 75016, PARIS",
       "nb_opps_notion": 3,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Optimisation Black Trombonne (Client signé ✨): 499€"
     },
     {
       "nom": "Emmanuel Bernard",
@@ -1084,7 +1093,7 @@
       "fin_contrat": "--",
       "statut": "Ancien",
       "telephone": "",
-      "email": "",
+      "email": "manachemmanuel@gmail.com",
       "ca_2025": 400,
       "ca_2026": 0,
       "ca_total": 400,
@@ -1094,7 +1103,8 @@
       "nom_entreprise": null,
       "siret": null,
       "adresse": null,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Développement design (Client signé ✨): 599€; Refonte esthétique (Client signé ✨): 499€"
     },
     {
       "nom": "Au Cerf",
@@ -1115,7 +1125,8 @@
       "adresse": "3 RUE DU RIVAGE, 67114, ESCHAU",
       "ca_2024": 2614,
       "nb_opps_notion": 3,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "creation site web (Au Cerf) (Client signé ✨): 2500€"
     },
     {
       "nom": "Taimpel",
@@ -1135,7 +1146,8 @@
       "siret": null,
       "adresse": null,
       "nb_opps_notion": 3,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Site une page (Client signé ✨): 890€; Cartes de visites 2 (Client signé ✨): 70€; Optimisations Taimpel (Opportunité perdue 🪦): 391.5€"
     },
     {
       "nom": "Baptiste Beloeil",
@@ -1156,7 +1168,8 @@
       "adresse": null,
       "ca_2024": 650,
       "nb_opps_notion": 1,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Refonte site web (Client signé ✨): 650€"
     },
     {
       "nom": "CRW Lyon",
@@ -1218,7 +1231,8 @@
       "contact_principal": "Abdelhamid RAFIKI",
       "poste_contact": "Responsable administratif et financier / Office manager",
       "email_contact": "abdelhamid.rafiki@li.partners",
-      "notes": "RDV 19/02 positif. Antoine JUDE OK pour le projet, recommande présentation COMEX le 16/03.\nSTRATÉGIE : convaincre un par un (visios individuelles) puis finaliser au COMEX.\nAntoine a donné des tips pour que ça passe. Pas d'objection de sa part.\nLes autres sont plus réticents au changement.\nAUTOMATISATION : le sujet les a intéressés mais ils veulent y aller doucement. Akli veut appuyer car ROI direct vs site web.\n\nCONTACTS COMEX :\n- Antoine JUDE (DG) : favorable, veut que ça change\n- Lydia MAZZUCCO : Directrice Actions sur site & Valorisation. Terrain, opérationnelle, met les mains dans le cambouis. Clients auto/industrie/BTP.\n- Alexandre LE HELLEY : Directeur Compétences & Formation. Innovation pédagogique, jeu, e-learning. Ex-responsable communication/marketing ITC Conseil.\n- Franck BONHOMME : Directeur Inspiration, Audit & Conseil opérationnel. Audit, conseil stratégique, data. Cas industriel (délais livraison).\n- Abdelhamid RAFIKI : Office Manager/RAF. Gère l'admin et la logistique.\n\nVISIOS TEAMS à caler (liens créés par Abdelhamid, dates à fixer) :\n- Avec Alexandre LE HELLEY\n- Avec Lydia MAZZUCCO\n- Avec Franck BONHOMME"
+      "notes": "RDV 19/02 positif. Antoine JUDE OK pour le projet, recommande présentation COMEX le 16/03.\nSTRATÉGIE : convaincre un par un (visios individuelles) puis finaliser au COMEX.\nAntoine a donné des tips pour que ça passe. Pas d'objection de sa part.\nLes autres sont plus réticents au changement.\nAUTOMATISATION : le sujet les a intéressés mais ils veulent y aller doucement. Akli veut appuyer car ROI direct vs site web.\n\nCONTACTS COMEX :\n- Antoine JUDE (DG) : favorable, veut que ça change\n- Lydia MAZZUCCO : Directrice Actions sur site & Valorisation. Terrain, opérationnelle, met les mains dans le cambouis. Clients auto/industrie/BTP.\n- Alexandre LE HELLEY : Directeur Compétences & Formation. Innovation pédagogique, jeu, e-learning. Ex-responsable communication/marketing ITC Conseil.\n- Franck BONHOMME : Directeur Inspiration, Audit & Conseil opérationnel. Audit, conseil stratégique, data. Cas industriel (délais livraison).\n- Abdelhamid RAFIKI : Office Manager/RAF. Gère l'admin et la logistique.\n\nVISIOS TEAMS à caler (liens créés par Abdelhamid, dates à fixer) :\n- Avec Alexandre LE HELLEY\n- Avec Lydia MAZZUCCO\n- Avec Franck BONHOMME",
+      "notion_notes": "Refonte site web L.I.Partners (Offre envoyée ✉️): 7000€"
     },
     {
       "nom": "Entretien Zen",
@@ -1238,7 +1252,8 @@
       "siret": "929696128",
       "adresse": "10 RUE DES TIRAILLEURS, 68350, BRUNSTATT-DIDENHEIM",
       "nb_opps_notion": 1,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Site vitrine Entretien Zen (Nouvelle opportunité 💫): 2000€"
     },
     {
       "nom": "Tiz",
@@ -1258,7 +1273,8 @@
       "siret": "85154963400018",
       "adresse": "1 RUE DES POMMIERS 45230 LA BUSSIERE, 45230, LA BUSSIERE",
       "nb_opps_notion": 3,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Tiz collab Heinrich (Client signé ✨): 1800€; Tiz collab Zoning SC Diamonds (Client signé ✨): 1826.65€; TIZ x Fun tech adventures (Client signé ✨): 1800€"
     },
     {
       "nom": "Le Portail Vert",
@@ -1278,7 +1294,8 @@
       "siret": "98833271400019",
       "adresse": "BUREAU 326 78 AVENUE DES CHAMPS ELYSEES 75008 PARIS, 75008, PARIS",
       "nb_opps_notion": 1,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Le portail vert (CBD) (Client signé ✨): 2000€"
     },
     {
       "nom": "Cineloges",
@@ -1298,7 +1315,8 @@
       "siret": "51951834400022",
       "adresse": "16 AVENUE EDOUARD GRINDA, 06200, NICE",
       "nb_opps_notion": 1,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Cinéloges (Client signé ✨): 1815.3€"
     },
     {
       "nom": "Licorne Invest",
@@ -1318,7 +1336,8 @@
       "siret": "92518339400012",
       "adresse": "26 AVENUE FOCH 57000 METZ, 57000, METZ",
       "nb_opps_notion": 1,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Site Levée de fonds (Client signé ✨): 2599€"
     },
     {
       "nom": "Sexeen",
@@ -1338,7 +1357,8 @@
       "siret": null,
       "adresse": null,
       "nb_opps_notion": 3,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Maintenance sexeen 1/2 (Client signé ✨): 300€; Maintenance sexeen 2/2 (Opportunité perdue 🪦): 300€"
     },
     {
       "nom": "La Toast Family",
@@ -1358,7 +1378,8 @@
       "siret": "90897145000014",
       "adresse": "36 RUE LAUTH, 67000, STRASBOURG",
       "nb_opps_notion": 2,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Maquette accueil react (Client signé ✨): 990€; Refonte site (Opportunité perdue 🪦): 3600€"
     },
     {
       "nom": "VTC Swiss",
@@ -1379,7 +1400,8 @@
       "adresse": null,
       "ca_2024": 3522,
       "nb_opps_notion": 6,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Services additonnels (Client signé ✨): 947€; Optimisation (Client signé ✨): 399€; Module Avis (Client signé ✨): 129€; Nouvelle opportunité (Client signé ✨): 1448€; Excel (Client signé ✨): 150€; Refonte esthétique site web (Client signé ✨): 599€"
     },
     {
       "nom": "SACO",
@@ -1399,14 +1421,15 @@
       "siret": null,
       "adresse": null,
       "nb_opps_notion": 1,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Brochure (Client signé ✨): 999€"
     },
     {
       "nom": "Anavia",
       "site": "",
       "statut": "Ancien",
       "telephone": "",
-      "email": "",
+      "email": "florian.navarro@anavia-services.fr",
       "ca_2024": 1089,
       "ca_2025": 0,
       "ca_2026": 0,
@@ -1418,14 +1441,15 @@
       "siret": null,
       "adresse": null,
       "nb_opps_notion": 2,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Développement une page (Anavia) (Client signé ✨): 199€; Création site web (Client signé ✨): 890€"
     },
     {
       "nom": "Babeta",
       "site": "",
       "statut": "Actif",
       "telephone": "",
-      "email": "",
+      "email": "savvas.mihalas@icloud.com",
       "ca_2024": 799,
       "ca_2025": 214,
       "ca_2026": 0,
@@ -1437,7 +1461,8 @@
       "siret": null,
       "adresse": null,
       "nb_opps_notion": 3,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Babeta SINGLE PAGE (Client signé ✨): 799€"
     },
     {
       "nom": "Cinelite",
@@ -1463,7 +1488,7 @@
       "site": "",
       "statut": "Ancien",
       "telephone": "",
-      "email": "",
+      "email": "contact@eagle-rocket.fr",
       "ca_2024": 4189,
       "ca_2025": 0,
       "ca_2026": 0,
@@ -1475,14 +1500,15 @@
       "siret": null,
       "adresse": null,
       "nb_opps_notion": 3,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Refonte site web (Blog) (Client signé ✨): 890€; MAJ (Client signé ✨): 799€; Création site web (Eagle Rocket) (Client signé ✨): 2500€"
     },
     {
       "nom": "GROUPE MEDIA DES TERRITOIRES",
       "site": "",
       "statut": "Actif",
       "telephone": "",
-      "email": "",
+      "email": "blandine.klaas@orange.fr",
       "ca_2024": 1887,
       "ca_2025": 359,
       "ca_2026": 0,
@@ -1494,7 +1520,8 @@
       "siret": null,
       "adresse": null,
       "nb_opps_notion": 2,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Newsletter (Client signé ✨): 359€; Maintenance RCL (Client signé ✨): 599€; Renouvellement Domaine + Hosting (Client signé ✨): 114€; Création site web (Client signé ✨): 1887€"
     },
     {
       "nom": "Habitat Multi Surfaces",
@@ -1520,7 +1547,7 @@
       "site": "",
       "statut": "Ancien",
       "telephone": "",
-      "email": "",
+      "email": "contact@crayonad.fr",
       "ca_2024": 1527,
       "ca_2025": 0,
       "ca_2026": 0,
@@ -1532,14 +1559,15 @@
       "siret": null,
       "adresse": null,
       "nb_opps_notion": 4,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Création site web (Holly Meals) (Client signé ✨): 890€"
     },
     {
       "nom": "JAB",
       "site": "",
       "statut": "Actif",
       "telephone": "",
-      "email": "",
+      "email": "garcia.thommasson.t@gmail.com",
       "ca_2024": 3000,
       "ca_2025": 578,
       "ca_2026": 0,
@@ -1551,7 +1579,8 @@
       "siret": null,
       "adresse": null,
       "nb_opps_notion": 3,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "JAB 2 Formulaire (Client signé ✨): 578€"
     },
     {
       "nom": "MAKE",
@@ -1615,7 +1644,7 @@
       "site": "",
       "statut": "Ancien",
       "telephone": "",
-      "email": "",
+      "email": "pt@tkhor-avocat.com",
       "ca_2024": 2000,
       "ca_2025": 0,
       "ca_2026": 0,
@@ -1627,7 +1656,8 @@
       "siret": null,
       "adresse": null,
       "nb_opps_notion": 1,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "notion_notes": "Site internet avocat (Client signé ✨): 2000€"
     },
     {
       "nom": "Pépite Esthétique",
@@ -1727,7 +1757,8 @@
       "adresse": null,
       "derniere_maintenance": null,
       "contact_principal": "Marine Dehr",
-      "notes": "Via Thiago (ami). Bougies artisanales non parfumees. Site vitrine + ateliers + events. Deadline avril 2026. En attente cahier des charges + exemples sites."
+      "notes": "Via Thiago (ami). Bougies artisanales non parfumees. Site vitrine + ateliers + events. Deadline avril 2026. En attente cahier des charges + exemples sites.",
+      "notion_notes": "Site vitrine Maya Hua (Nouvelle opportunité 💫): 2000€"
     },
     {
       "nom": "Stephane Coutanson (Promethee T&I)",
@@ -2998,21 +3029,126 @@
     ]
   },
   "abonnements": [
-    {"outil": "Google Workspace", "cout": "19,44€", "cout_num": 19.44, "categorie": "Infrastructure", "notes": "Emails pro + Drive (contact@pixel-drop.com, claudia@pixel-drop.com)", "statut": "actif"},
-    {"outil": "Pennylane", "cout": "24€", "cout_num": 24, "categorie": "Comptabilité", "notes": "Devis + factures + compta", "statut": "actif"},
-    {"outil": "Figma", "cout": "24€", "cout_num": 24, "categorie": "Design", "notes": "Maquettes et design UI", "statut": "actif"},
-    {"outil": "Freepik Premium", "cout": "19,20€", "cout_num": 19.20, "categorie": "Design", "notes": "Assets graphiques (photos, icônes)", "statut": "actif"},
-    {"outil": "Notion", "cout": "13,80€", "cout_num": 13.80, "categorie": "Productivité", "notes": "CRM + gestion projets", "statut": "actif"},
-    {"outil": "Igoflex (tel pro)", "cout": "11,98€", "cout_num": 11.98, "categorie": "Télécom", "notes": "Ligne téléphonique pro", "statut": "actif"},
-    {"outil": "OpenAI", "cout": "~10€", "cout_num": 10.18, "categorie": "Outils IA", "notes": "API ChatGPT", "statut": "actif"},
-    {"outil": "Google Cloud (APIs)", "cout": "Variable", "cout_num": 20, "categorie": "Outils IA", "notes": "APIs Gemini, Google Places (1-38€/mois)", "statut": "actif"},
-    {"outil": "N26 Smart", "cout": "4,90€", "cout_num": 4.90, "categorie": "Banque", "notes": "Compte bancaire", "statut": "actif"},
-    {"outil": "Facebook Ads", "cout": "Variable", "cout_num": 55, "categorie": "Marketing", "notes": "Publicité Facebook/Instagram (~55€/mois en fev)", "statut": "actif"},
-    {"outil": "Hostinger", "cout": "~10€", "cout_num": 10, "categorie": "Infrastructure", "notes": "Hébergement sites clients", "statut": "actif"},
-    {"outil": "YouTube Premium", "cout": "12,99€", "cout_num": 12.99, "categorie": "Mixte", "notes": "Veille tech + perso", "statut": "actif"},
-    {"outil": "Brevo", "cout": "Gratuit", "cout_num": 0, "categorie": "Marketing", "notes": "Plan gratuit, newsletters", "statut": "actif"},
-    {"outil": "Cloudflare", "cout": "Gratuit", "cout_num": 0, "categorie": "Infrastructure", "notes": "DNS + domaines", "statut": "actif"},
-    {"outil": "Clawdbot", "cout": "Gratuit", "cout_num": 0, "categorie": "Outils IA", "notes": "Assistante Claudia", "statut": "actif"}
+    {
+      "outil": "Google Workspace",
+      "cout": "19,44€",
+      "cout_num": 19.44,
+      "categorie": "Infrastructure",
+      "notes": "Emails pro + Drive (contact@pixel-drop.com, claudia@pixel-drop.com)",
+      "statut": "actif"
+    },
+    {
+      "outil": "Pennylane",
+      "cout": "24€",
+      "cout_num": 24,
+      "categorie": "Comptabilité",
+      "notes": "Devis + factures + compta",
+      "statut": "actif"
+    },
+    {
+      "outil": "Figma",
+      "cout": "24€",
+      "cout_num": 24,
+      "categorie": "Design",
+      "notes": "Maquettes et design UI",
+      "statut": "actif"
+    },
+    {
+      "outil": "Freepik Premium",
+      "cout": "19,20€",
+      "cout_num": 19.2,
+      "categorie": "Design",
+      "notes": "Assets graphiques (photos, icônes)",
+      "statut": "actif"
+    },
+    {
+      "outil": "Notion",
+      "cout": "13,80€",
+      "cout_num": 13.8,
+      "categorie": "Productivité",
+      "notes": "CRM + gestion projets",
+      "statut": "actif"
+    },
+    {
+      "outil": "Igoflex (tel pro)",
+      "cout": "11,98€",
+      "cout_num": 11.98,
+      "categorie": "Télécom",
+      "notes": "Ligne téléphonique pro",
+      "statut": "actif"
+    },
+    {
+      "outil": "OpenAI",
+      "cout": "~10€",
+      "cout_num": 10.18,
+      "categorie": "Outils IA",
+      "notes": "API ChatGPT",
+      "statut": "actif"
+    },
+    {
+      "outil": "Google Cloud (APIs)",
+      "cout": "Variable",
+      "cout_num": 20,
+      "categorie": "Outils IA",
+      "notes": "APIs Gemini, Google Places (1-38€/mois)",
+      "statut": "actif"
+    },
+    {
+      "outil": "N26 Smart",
+      "cout": "4,90€",
+      "cout_num": 4.9,
+      "categorie": "Banque",
+      "notes": "Compte bancaire",
+      "statut": "actif"
+    },
+    {
+      "outil": "Facebook Ads",
+      "cout": "Variable",
+      "cout_num": 55,
+      "categorie": "Marketing",
+      "notes": "Publicité Facebook/Instagram (~55€/mois en fev)",
+      "statut": "actif"
+    },
+    {
+      "outil": "Hostinger",
+      "cout": "~10€",
+      "cout_num": 10,
+      "categorie": "Infrastructure",
+      "notes": "Hébergement sites clients",
+      "statut": "actif"
+    },
+    {
+      "outil": "YouTube Premium",
+      "cout": "12,99€",
+      "cout_num": 12.99,
+      "categorie": "Mixte",
+      "notes": "Veille tech + perso",
+      "statut": "actif"
+    },
+    {
+      "outil": "Brevo",
+      "cout": "Gratuit",
+      "cout_num": 0,
+      "categorie": "Marketing",
+      "notes": "Plan gratuit, newsletters",
+      "statut": "actif"
+    },
+    {
+      "outil": "Cloudflare",
+      "cout": "Gratuit",
+      "cout_num": 0,
+      "categorie": "Infrastructure",
+      "notes": "DNS + domaines",
+      "statut": "actif"
+    },
+    {
+      "outil": "Clawdbot",
+      "cout": "Gratuit",
+      "cout_num": 0,
+      "categorie": "Outils IA",
+      "notes": "Assistante Claudia",
+      "statut": "actif"
+    }
   ],
   "abonnements_kpis": {
     "total_mensuel_estime": "~170€",
