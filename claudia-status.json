@@ -1,51 +1,66 @@
 {
-  "lastSync": "2026-02-21T14:00:41+01:00",
+  "lastSync": "2026-02-21T20:00:44+01:00",
   "heartbeats": {
     "main": {
-      "lastCheck": "2026-02-21T14:00:00+01:00",
+      "lastCheck": "2026-02-21T20:00:00+01:00",
       "status": "ok"
     },
     "plaza-marketing": {
-      "lastCheck": "2026-02-21T13:06:15+01:00",
+      "lastCheck": "2026-02-21T19:01:25+01:00",
       "status": "ok"
     },
     "clea": {
-      "lastCheck": "2026-02-21T13:35:55+01:00",
+      "lastCheck": "2026-02-21T19:31:03+01:00",
       "status": "ok"
     }
   },
   "recentActivity": [
     {
-      "time": "11:36",
+      "time": "18:48",
       "agent": "Claudia",
-      "action": "Tâche automatisée"
+      "action": "Activité système"
     },
     {
-      "time": "11:37",
+      "time": "18:51",
       "agent": "Claudia",
-      "action": "Tâche automatisée"
+      "action": "Heartbeat check"
     },
     {
-      "time": "11:37",
+      "time": "18:51",
       "agent": "Claudia",
-      "action": "Tâche automatisée"
+      "action": "Activité système"
     },
     {
-      "time": "11:37",
+      "time": "18:54",
       "agent": "Claudia",
-      "action": "Tâche automatisée"
+      "action": "Heartbeat check"
     },
     {
-      "time": "11:37",
+      "time": "18:54",
       "agent": "Claudia",
-      "action": "Tâche automatisée"
+      "action": "Activité système"
+    },
+    {
+      "time": "18:57",
+      "agent": "Claudia",
+      "action": "Heartbeat check"
+    },
+    {
+      "time": "18:57",
+      "agent": "Claudia",
+      "action": "Activité système"
+    },
+    {
+      "time": "19:00",
+      "agent": "Claudia",
+      "action": "Heartbeat check"
     }
   ],
   "tokenUsage": {
     "today": {
-      "input": 55,
-      "output": 1263,
-      "cost": 0.09555000000000000000
+      "input": 57,
+      "output": 1165,
+      "cost": 0.08823000000000000000
     }
   }
 }
