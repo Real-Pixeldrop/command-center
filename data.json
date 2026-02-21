@@ -861,7 +861,9 @@
       "derniere_maintenance": null,
       "notion_notes": "Etheos (Opportunité perdue 🪦): 4798€; Etheos (1) (Client signé ✨): 2699€",
       "contact_principal": "Mathieu Hentzel",
-      "poste_contact": "Gérant"
+      "poste_contact": "Gérant",
+      "contact_nom": "Mathieu Hentzel",
+      "contact_poste": "Gérant"
     },
     {
       "nom": "Pepites d'Esthetique",
@@ -880,7 +882,9 @@
       "nom_entreprise": null,
       "siret": null,
       "adresse": null,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "contact_nom": "Stéphanie Ludivine",
+      "contact_poste": "Professeur d’esthétique"
     },
     {
       "nom": "Richard Wagner Museum",
@@ -904,7 +908,9 @@
       "derniere_maintenance": "2026-02-21",
       "activite": "Association culturelle - Musée virtuel Richard Wagner",
       "contact_principal": "Nicolas Crapanne",
-      "poste_contact": "Président"
+      "poste_contact": "Président",
+      "contact_nom": "Nicolas Crapanne",
+      "contact_poste": "Président"
     },
     {
       "nom": "LXB Construction",
@@ -912,7 +918,7 @@
       "maintenance": "Active",
       "fin_contrat": "04/10/2026",
       "statut": "Actif",
-      "telephone": "",
+      "telephone": "+352 691 242 550",
       "email": "lorenzo.rickal@gmail.com",
       "ca_2025": 4000,
       "ca_2026": 0,
@@ -924,7 +930,13 @@
       "siret": null,
       "adresse": null,
       "derniere_maintenance": "2026-02-10",
-      "notion_notes": "LXB Construct (2/2) (Client signé ✨): 1000€; LXB Construct (1/2) (Client signé ✨): 3000€; LXB CARELLAGE (Offre envoyée ✉️): 6500€"
+      "notion_notes": "LXB Construct (2/2) (Client signé ✨): 1000€; LXB Construct (1/2) (Client signé ✨): 3000€; LXB CARELLAGE (Offre envoyée ✉️): 6500€",
+      "contact_nom": "Lorenzo Rickal",
+      "contact_poste": "Fondateur",
+      "contacts_notion": [
+        "Lorenzo Rickal <lorenzo.rickal@gmail.com> +352 691 242 550 (Fondateur)",
+        "Ewan Steil +352 691 731 215 (Associé)"
+      ]
     },
     {
       "nom": "LXB ESTATE",
@@ -948,7 +960,13 @@
       "notion_notes": "LXB Estates (Client signé ✨): 2812€",
       "site_web": "lxb-estates.com",
       "contact_principal": "Lorenzo Rickal ",
-      "poste_contact": "Fondateur"
+      "poste_contact": "Fondateur",
+      "contact_nom": "Lorenzo Rickal",
+      "contact_poste": "Fondateur",
+      "contacts_notion": [
+        "Lorenzo Rickal <lorenzo.rickal@gmail.com> +352 691 242 550 (Fondateur)",
+        "Ewan Steil +352 691 731 215 (Associé)"
+      ]
     },
     {
       "nom": "Derniere Dispo",
@@ -956,7 +974,7 @@
       "maintenance": "Active",
       "fin_contrat": "31/07/2026",
       "statut": "Actif",
-      "telephone": "",
+      "telephone": "0660790451",
       "email": "maurice.johan@black-trombone.fr",
       "ca_2025": 0,
       "ca_2026": 0,
@@ -968,7 +986,9 @@
       "siret": null,
       "adresse": null,
       "derniere_maintenance": null,
-      "notion_notes": "Dernière Dispo 1/2 (Client signé ✨): 1765.35€; Dernière Dispo 2/2 (Client signé ✨): 1765.35€"
+      "notion_notes": "Dernière Dispo 1/2 (Client signé ✨): 1765.35€; Dernière Dispo 2/2 (Client signé ✨): 1765.35€",
+      "contact_nom": "Johan Maurice",
+      "contact_poste": "Gérant"
     },
     {
       "nom": "Fidolux",
@@ -991,7 +1011,14 @@
       "derniere_maintenance": "2026-02-16",
       "notion_notes": "Fidolux 1/2 (Client signé ✨): 2000€; Fidolux 2/2 (Client signé ✨): 2000€",
       "contact_principal": "Connie Conrad",
-      "poste_contact": "Comptable"
+      "poste_contact": "Comptable",
+      "contact_nom": "Lorenzo Rickal",
+      "contact_poste": "Fondateur",
+      "contacts_notion": [
+        "Lorenzo Rickal <lorenzo.rickal@gmail.com> +352 691 242 550 (Fondateur)",
+        "Connie Conrad <connie@fidolux.lu> +352 661 132 250 (Comptable)",
+        "Lorenzo Rickal <Rickal.lorenzo@proton.me> (Dirigeant)"
+      ]
     },
     {
       "nom": "Cothidance",
@@ -1015,7 +1042,14 @@
       "notion_notes": "Cothidance (Client signé ✨): 990€; Maintenance COTHIDANCE (Client signé ✨): 699€",
       "site_web": "https://www.cothidance92.fr",
       "contact_principal": "Huseyin Sen",
-      "poste_contact": "Coach Sportif"
+      "poste_contact": "Coach Sportif",
+      "contact_nom": "Rayane Sen",
+      "contacts_notion": [
+        "Rayane Sen <rayane.sen92@gmail.com> 06 45 59 15 10",
+        "Huseyin Sen <ser.cafe76@gmail.com> 06 49 88 20 52 (Coach Sportif)",
+        "Corinne et Thierry 0607914563 (Anciens Propriétaires)",
+        "Sonia Vauchel <sonia.rioult@gmail.com> +33 6 64 70 04 47 (Coach Sportive)"
+      ]
     },
     {
       "nom": "RCL",
@@ -1037,7 +1071,13 @@
       "nb_opps_notion": 2,
       "derniere_maintenance": "2026-02-21",
       "notion_notes": "Maintenance RCL (Client signé ✨): 599€; Renouvellement Domaine + Hosting (Client signé ✨): 114€",
-      "site_web": "https://collectivitesterritoriales.fr"
+      "site_web": "https://collectivitesterritoriales.fr",
+      "contact_nom": "Gérald Glondu",
+      "contact_poste": "Directeur de publications",
+      "contacts_notion": [
+        "Gérald Glondu <gglondu@gmail.com> 06 84 54 16 26 (Directeur de publications)",
+        "Blandine Klaas <blandine.klaas@orange.fr> 06 89 12 38 79 (Directrice publication)"
+      ]
     },
     {
       "nom": "Plaza Tango",
@@ -1058,7 +1098,9 @@
       "adresse": "CENTRE D'AFFAIRE AZAP - JONXION 1 1 AVENUE DE LA GARE TGV 90400 MEROUX-MOVAL, 90400, MEROUX-MOVAL",
       "derniere_maintenance": null,
       "contact_principal": "Fatah Goudjil",
-      "poste_contact": "Président"
+      "poste_contact": "Président",
+      "contact_nom": "Fatah Goudjil",
+      "contact_poste": "Président"
     },
     {
       "nom": "Habitat Multi Services",
@@ -1106,7 +1148,9 @@
       "site_web": "https://www.black-trombone.fr",
       "activite": "Organisation de foires, salons professionnels et congrès",
       "contact_principal": "Johan Maurice",
-      "poste_contact": "Gérant"
+      "poste_contact": "Gérant",
+      "contact_nom": "Johan Maurice",
+      "contact_poste": "Gérant"
     },
     {
       "nom": "Emmanuel Bernard",
@@ -1114,7 +1158,7 @@
       "maintenance": "Ancien",
       "fin_contrat": "--",
       "statut": "Ancien",
-      "telephone": "",
+      "telephone": "06 22 37 89 84",
       "email": "manachemmanuel@gmail.com",
       "ca_2025": 400,
       "ca_2026": 0,
@@ -1126,7 +1170,9 @@
       "siret": null,
       "adresse": null,
       "derniere_maintenance": null,
-      "notion_notes": "Développement design (Client signé ✨): 599€; Refonte esthétique (Client signé ✨): 499€"
+      "notion_notes": "Développement design (Client signé ✨): 599€; Refonte esthétique (Client signé ✨): 499€",
+      "contact_nom": "Emmanuel Manache",
+      "contact_poste": "Gérant"
     },
     {
       "nom": "Au Cerf",
@@ -1151,7 +1197,13 @@
       "notion_notes": "creation site web (Au Cerf) (Client signé ✨): 2500€",
       "site_web": "https://au-cerf.com",
       "contact_principal": "Adeline Mehr",
-      "poste_contact": "Gérante"
+      "poste_contact": "Gérante",
+      "contact_nom": "Adeline Mehr",
+      "contact_poste": "Gérante",
+      "contacts_notion": [
+        "Adeline Mehr <adeline.wilhelm@gmail.com> +33 6 64 53 24 18 (Gérante)",
+        "David Mehr <mehr.david.24@gmail.com> +33 6 89 85 98 33 (Gérant)"
+      ]
     },
     {
       "nom": "Taimpel",
@@ -1174,7 +1226,9 @@
       "derniere_maintenance": null,
       "notion_notes": "Site une page (Client signé ✨): 890€; Cartes de visites 2 (Client signé ✨): 70€; Optimisations Taimpel (Opportunité perdue 🪦): 391.5€",
       "contact_principal": "Pablo Blanc",
-      "poste_contact": "Directeur IT"
+      "poste_contact": "Directeur IT",
+      "contact_nom": "Pablo Blanc",
+      "contact_poste": "Directeur IT"
     },
     {
       "nom": "Baptiste Beloeil",
@@ -1198,7 +1252,9 @@
       "derniere_maintenance": null,
       "notion_notes": "Refonte site web (Client signé ✨): 650€",
       "contact_principal": "Baptiste Beloeil",
-      "poste_contact": "Monteur vidéo"
+      "poste_contact": "Monteur vidéo",
+      "contact_nom": "Baptiste Beloeil",
+      "contact_poste": "Monteur vidéo"
     },
     {
       "nom": "CRW Lyon",
@@ -1218,7 +1274,9 @@
       "siret": "97771427800016",
       "adresse": "LOT ITM 83 AMBODIFASIKA ITAOSY ANTANANARIVO MADAGASCAR",
       "nb_opps_notion": 1,
-      "derniere_maintenance": null
+      "derniere_maintenance": null,
+      "contact_nom": "Nicolas Crapanne",
+      "contact_poste": "Président"
     },
     {
       "nom": "Redaction Elite SEO",
@@ -1263,7 +1321,13 @@
       "notes": "RDV 19/02 positif. Antoine JUDE OK pour le projet, recommande présentation COMEX le 16/03.\nSTRATÉGIE : convaincre un par un (visios individuelles) puis finaliser au COMEX.\nAntoine a donné des tips pour que ça passe. Pas d'objection de sa part.\nLes autres sont plus réticents au changement.\nAUTOMATISATION : le sujet les a intéressés mais ils veulent y aller doucement. Akli veut appuyer car ROI direct vs site web.\n\nCONTACTS COMEX :\n- Antoine JUDE (DG) : favorable, veut que ça change\n- Lydia MAZZUCCO : Directrice Actions sur site & Valorisation. Terrain, opérationnelle, met les mains dans le cambouis. Clients auto/industrie/BTP.\n- Alexandre LE HELLEY : Directeur Compétences & Formation. Innovation pédagogique, jeu, e-learning. Ex-responsable communication/marketing ITC Conseil.\n- Franck BONHOMME : Directeur Inspiration, Audit & Conseil opérationnel. Audit, conseil stratégique, data. Cas industriel (délais livraison).\n- Abdelhamid RAFIKI : Office Manager/RAF. Gère l'admin et la logistique.\n\nVISIOS TEAMS à caler (liens créés par Abdelhamid, dates à fixer) :\n- Avec Alexandre LE HELLEY\n- Avec Lydia MAZZUCCO\n- Avec Franck BONHOMME",
       "notion_notes": "Refonte site web L.I.Partners (Offre envoyée ✉️): 7000€",
       "site_web": "https://www.li.partners",
-      "activite": "Cabinet conseil - Formation - Leadership - Transformation (Qualiopi)"
+      "activite": "Cabinet conseil - Formation - Leadership - Transformation (Qualiopi)",
+      "contact_nom": "Abdelhamid RAFIKI",
+      "contact_poste": "Responsable administratif et financier - Office manager",
+      "contacts_notion": [
+        "Abdelhamid RAFIKI <abdelhamid.rafiki@li.partners> 01 39 04 60 40 (Responsable administratif et financier - Office manager)",
+        " <Antoine.Jude@li.partners> (Président)"
+      ]
     },
     {
       "nom": "Entretien Zen",
@@ -1286,7 +1350,8 @@
       "derniere_maintenance": null,
       "notion_notes": "Site vitrine Entretien Zen (Nouvelle opportunité 💫): 2000€",
       "activite": "Services à la personne, jardinage, bricolage, ménage",
-      "contact_principal": "Thiago Kaiser"
+      "contact_principal": "Thiago Kaiser",
+      "contact_nom": "Thiago Kaiser"
     },
     {
       "nom": "Tiz",
@@ -1310,7 +1375,9 @@
       "notion_notes": "Tiz collab Heinrich (Client signé ✨): 1800€; Tiz collab Zoning SC Diamonds (Client signé ✨): 1826.65€; TIZ x Fun tech adventures (Client signé ✨): 1800€",
       "site_web": "https://www.tiz.fr",
       "contact_principal": "Charles Fournier",
-      "poste_contact": "Chef de projets"
+      "poste_contact": "Chef de projets",
+      "contact_nom": "Charles Fournier",
+      "contact_poste": "Chef de projets"
     },
     {
       "nom": "Le Portail Vert",
@@ -1334,7 +1401,9 @@
       "notion_notes": "Le portail vert (CBD) (Client signé ✨): 2000€",
       "site_web": "https://leportailvert.eu/",
       "contact_principal": "Nicholas Pichenot",
-      "poste_contact": "Fondateur"
+      "poste_contact": "Fondateur",
+      "contact_nom": "Nicholas Pichenot",
+      "contact_poste": "Fondateur"
     },
     {
       "nom": "Cineloges",
@@ -1358,7 +1427,13 @@
       "notion_notes": "Cinéloges (Client signé ✨): 1815.3€",
       "site_web": "https://cine-loges.fr/accueil/cineloges/",
       "contact_principal": "Cecile Jacquin",
-      "poste_contact": "Manager marketing et commercial"
+      "poste_contact": "Manager marketing et commercial",
+      "contact_nom": "Cecile Jacquin",
+      "contact_poste": "Manager marketing et commercial",
+      "contacts_notion": [
+        "Cecile Jacquin <cecile@cineloges.fr> 07 68 30 23 28 (Manager marketing et commercial)",
+        "Héléna Beyer <helena@cineloges.fr> 06 98 68 62 12 (Gérante)"
+      ]
     },
     {
       "nom": "Licorne Invest",
@@ -1381,7 +1456,14 @@
       "derniere_maintenance": null,
       "notion_notes": "Site Levée de fonds (Client signé ✨): 2599€",
       "contact_principal": "Julien Colombatto",
-      "poste_contact": "Directeur Financier et Technique"
+      "poste_contact": "Directeur Financier et Technique",
+      "contact_nom": "Octave Muller",
+      "contact_poste": "Associé",
+      "contacts_notion": [
+        "Octave Muller <octave@licorne-invest.com> +33 6 15 35 94 12 (Associé)",
+        "Julien Colombatto <jc@licorne-invest.com> +33 6 45 58 05 55 (Directeur Financier et Technique)",
+        "Fred Muller <fm@licorne-invest.com>"
+      ]
     },
     {
       "nom": "Sexeen",
@@ -1404,7 +1486,9 @@
       "derniere_maintenance": null,
       "notion_notes": "Maintenance sexeen 1/2 (Client signé ✨): 300€; Maintenance sexeen 2/2 (Opportunité perdue 🪦): 300€",
       "contact_principal": "Christophe Thabor",
-      "poste_contact": "Musicien"
+      "poste_contact": "Musicien",
+      "contact_nom": "Christophe Thabor",
+      "contact_poste": "Musicien"
     },
     {
       "nom": "La Toast Family",
@@ -1428,7 +1512,9 @@
       "notion_notes": "Maquette accueil react (Client signé ✨): 990€; Refonte site (Opportunité perdue 🪦): 3600€",
       "site_web": "https://latoastfamily.fr",
       "contact_principal": "Morgane Mey",
-      "poste_contact": "Directrice"
+      "poste_contact": "Directrice",
+      "contact_nom": "Morgane Mey",
+      "contact_poste": "Directrice"
     },
     {
       "nom": "VTC Swiss",
@@ -1453,7 +1539,9 @@
       "notion_notes": "Services additonnels (Client signé ✨): 947€; Optimisation (Client signé ✨): 399€; Module Avis (Client signé ✨): 129€; Nouvelle opportunité (Client signé ✨): 1448€; Excel (Client signé ✨): 150€; Refonte esthétique site web (Client signé ✨): 599€",
       "site_web": "https://vtcswiss.com",
       "contact_principal": "Bader Alain-Houssine",
-      "poste_contact": "Directeur"
+      "poste_contact": "Directeur",
+      "contact_nom": "Bader Alain-Houssine",
+      "contact_poste": "Directeur"
     },
     {
       "nom": "SACO",
@@ -1477,7 +1565,13 @@
       "notion_notes": "Brochure (Client signé ✨): 999€",
       "site_web": "https://saco.fr",
       "contact_principal": "Michel Walch",
-      "poste_contact": "Directeur"
+      "poste_contact": "Directeur",
+      "contact_nom": "Michel Walch",
+      "contact_poste": "Directeur",
+      "contacts_notion": [
+        "Michel Walch <michel.walch@saco.fr> (Directeur)",
+        "Elise Walch (Responsable Communication)"
+      ]
     },
     {
       "nom": "Anavia",
@@ -1499,7 +1593,9 @@
       "derniere_maintenance": null,
       "notion_notes": "Développement une page (Anavia) (Client signé ✨): 199€; Création site web (Client signé ✨): 890€",
       "contact_principal": "Florian Navarro",
-      "poste_contact": "Directeur"
+      "poste_contact": "Directeur",
+      "contact_nom": "Florian Navarro",
+      "contact_poste": "Directeur"
     },
     {
       "nom": "Babeta",
@@ -1521,7 +1617,9 @@
       "derniere_maintenance": null,
       "notion_notes": "Babeta SINGLE PAGE (Client signé ✨): 799€",
       "contact_principal": "Savvas",
-      "poste_contact": "Cuisinier"
+      "poste_contact": "Cuisinier",
+      "contact_nom": "Savvas",
+      "contact_poste": "Cuisinier"
     },
     {
       "nom": "Cinelite",
@@ -1563,7 +1661,9 @@
       "notion_notes": "Refonte site web (Blog) (Client signé ✨): 890€; MAJ (Client signé ✨): 799€; Création site web (Eagle Rocket) (Client signé ✨): 2500€",
       "site_web": "https://eagle-rocket.fr",
       "contact_principal": "Olivier Niel",
-      "poste_contact": "Directeur"
+      "poste_contact": "Directeur",
+      "contact_nom": "Olivier Niel",
+      "contact_poste": "Directeur"
     },
     {
       "nom": "GROUPE MEDIA DES TERRITOIRES",
@@ -1586,7 +1686,13 @@
       "notion_notes": "Newsletter (Client signé ✨): 359€; Maintenance RCL (Client signé ✨): 599€; Renouvellement Domaine + Hosting (Client signé ✨): 114€; Création site web (Client signé ✨): 1887€",
       "site_web": "https://www.groupemediadesterritoires.com",
       "contact_principal": "Blandine Klaas",
-      "poste_contact": "Directrice publication"
+      "poste_contact": "Directrice publication",
+      "contact_nom": "Gérald Glondu",
+      "contact_poste": "Directeur de publications",
+      "contacts_notion": [
+        "Gérald Glondu <gglondu@gmail.com> 06 84 54 16 26 (Directeur de publications)",
+        "Blandine Klaas <blandine.klaas@orange.fr> 06 89 12 38 79 (Directrice publication)"
+      ]
     },
     {
       "nom": "Habitat Multi Surfaces",
@@ -1607,7 +1713,9 @@
       "nb_opps_notion": 2,
       "derniere_maintenance": null,
       "contact_principal": "Alex Karim",
-      "poste_contact": "Gérant"
+      "poste_contact": "Gérant",
+      "contact_nom": "Alex Karim",
+      "contact_poste": "Gérant"
     },
     {
       "nom": "Holly Meals",
@@ -1630,7 +1738,15 @@
       "notion_notes": "Création site web (Holly Meals) (Client signé ✨): 890€",
       "site_web": "hollymeals.com",
       "contact_principal": "Remy Vituchan",
-      "poste_contact": "Fondateur"
+      "poste_contact": "Fondateur",
+      "contact_nom": "Sirralan  Thavarajah",
+      "contact_poste": "Co-fondateur",
+      "contacts_notion": [
+        "Sirralan  Thavarajah <t.sirralan@gmail.com> +33 6 06 98 84 00 (Co-fondateur)",
+        "Remy Vituchan <remy.vithiyananthan@gmail.com> +33 6 51 90 38 71 (Fondateur)",
+        "Nadège  Loewert <contact@crayonad.fr> 0627911757 (Graphiste freelance)",
+        "Vithu Vituchan <v.vithuchan@gmail.com> +33 7 81 39 58 04 (Co-fondateur)"
+      ]
     },
     {
       "nom": "JAB",
@@ -1653,7 +1769,13 @@
       "notion_notes": "JAB 2 Formulaire (Client signé ✨): 578€",
       "site_web": "https://jab-prod.com",
       "contact_principal": "Nathan Trompas",
-      "poste_contact": "Réalisateur"
+      "poste_contact": "Réalisateur",
+      "contact_nom": "Timothé Garcia Thommasson",
+      "contact_poste": "Réalisateur",
+      "contacts_notion": [
+        "Timothé Garcia Thommasson <garcia.thommasson.t@gmail.com> 06 77 95 23 30 (Réalisateur)",
+        "Nathan Trompas <nathantrompas@gmail.com> +33 6 01 00 90 49 (Réalisateur)"
+      ]
     },
     {
       "nom": "MAKE",
@@ -1675,7 +1797,13 @@
       "derniere_maintenance": null,
       "site_web": "http://makephysio.ch",
       "contact_principal": "Kevin Petrovick",
-      "poste_contact": "Kinésithérapeute"
+      "poste_contact": "Kinésithérapeute",
+      "contact_nom": "Kevin Petrovick",
+      "contact_poste": "Kinésithérapeute",
+      "contacts_notion": [
+        "Kevin Petrovick <Kevinpetrovic1996@gmail.com> +33 7 70 58 68 78 (Kinésithérapeute)",
+        "Margot Seiler (Physio)"
+      ]
     },
     {
       "nom": "Musée Richard Wagner",
@@ -1697,7 +1825,9 @@
       "derniere_maintenance": null,
       "activite": "Association culturelle - Musée virtuel Richard Wagner",
       "contact_principal": "Nicolas Crapanne",
-      "poste_contact": "Président"
+      "poste_contact": "Président",
+      "contact_nom": "Nicolas Crapanne",
+      "contact_poste": "Président"
     },
     {
       "nom": "Optimmo",
@@ -1718,7 +1848,9 @@
       "nb_opps_notion": 2,
       "derniere_maintenance": null,
       "contact_principal": "Emmanuel Manache",
-      "poste_contact": "Gérant"
+      "poste_contact": "Gérant",
+      "contact_nom": "Emmanuel Manache",
+      "contact_poste": "Gérant"
     },
     {
       "nom": "Pauline Tkhor Avocat",
@@ -1740,7 +1872,9 @@
       "derniere_maintenance": null,
       "notion_notes": "Site internet avocat (Client signé ✨): 2000€",
       "contact_principal": "Chrystelle Panzani",
-      "poste_contact": "Avocate"
+      "poste_contact": "Avocate",
+      "contact_nom": "Pauline Tkhor",
+      "contact_poste": "Avocat"
     },
     {
       "nom": "Pépite Esthétique",
@@ -1761,7 +1895,9 @@
       "nb_opps_notion": 2,
       "derniere_maintenance": null,
       "contact_principal": "Stéphanie Ludivine",
-      "poste_contact": "Professeur d’esthétique"
+      "poste_contact": "Professeur d’esthétique",
+      "contact_nom": "Stéphanie Ludivine",
+      "contact_poste": "Professeur d’esthétique"
     },
     {
       "nom": "Teamshifts",
@@ -1782,7 +1918,13 @@
       "nb_opps_notion": 1,
       "derniere_maintenance": null,
       "contact_principal": "Aziz Kemiha",
-      "poste_contact": "Directeur"
+      "poste_contact": "Directeur",
+      "contact_nom": "Jean-Charles Meilland",
+      "contact_poste": "Chef de projet",
+      "contacts_notion": [
+        "Jean-Charles Meilland <jc.meilland@idboats.com> +48 508 708 250 (Chef de projet)",
+        "Aziz Kemiha <aziz.kemiha@gmail.com> +33 6 20 09 47 20 (Directeur)"
+      ]
     },
     {
       "nom": "Warere",
@@ -1804,7 +1946,9 @@
       "derniere_maintenance": null,
       "site_web": "https://www.warere.com",
       "contact_principal": "Shauna Accongiagioco",
-      "poste_contact": "Gérante"
+      "poste_contact": "Gérante",
+      "contact_nom": "Shauna Accongiagioco",
+      "contact_poste": "Gérante"
     },
     {
       "nom": "Strada (Thomas Friedland)",
@@ -1849,7 +1993,8 @@
       "contact_principal": "Marine Dehr",
       "notes": "Via Thiago (ami). Bougies artisanales non parfumees. Site vitrine + ateliers + events. Deadline avril 2026. En attente cahier des charges + exemples sites.",
       "notion_notes": "Site vitrine Maya Hua (Nouvelle opportunité 💫): 2000€",
-      "activite": "Bougies artisanales, vente directe et gros"
+      "activite": "Bougies artisanales, vente directe et gros",
+      "contact_nom": "Marine Dehr"
     },
     {
       "nom": "Stephane Coutanson (Promethee T&I)",
