@@ -3271,7 +3271,8 @@
       "cout_num": 19.44,
       "categorie": "Infrastructure",
       "notes": "Emails pro + Drive (contact@pixel-drop.com, claudia@pixel-drop.com)",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "~2 du mois"
     },
     {
       "outil": "Pennylane",
@@ -3279,7 +3280,8 @@
       "cout_num": 24,
       "categorie": "Comptabilité",
       "notes": "Devis + factures + compta",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "~9 du mois"
     },
     {
       "outil": "Figma",
@@ -3287,7 +3289,8 @@
       "cout_num": 24,
       "categorie": "Design",
       "notes": "Maquettes et design UI",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "~12 du mois"
     },
     {
       "outil": "Freepik Premium",
@@ -3295,7 +3298,8 @@
       "cout_num": 19.2,
       "categorie": "Design",
       "notes": "Assets graphiques (photos, icônes)",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "~16 du mois"
     },
     {
       "outil": "Notion",
@@ -3303,7 +3307,8 @@
       "cout_num": 13.8,
       "categorie": "Productivité",
       "notes": "CRM + gestion projets",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "~1er du mois"
     },
     {
       "outil": "Igoflex (tel pro)",
@@ -3311,7 +3316,8 @@
       "cout_num": 11.98,
       "categorie": "Télécom",
       "notes": "Ligne téléphonique pro",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "~14 du mois"
     },
     {
       "outil": "OpenAI",
@@ -3319,7 +3325,8 @@
       "cout_num": 10.18,
       "categorie": "Outils IA",
       "notes": "API ChatGPT",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "~4 du mois"
     },
     {
       "outil": "Google Cloud (APIs)",
@@ -3327,7 +3334,8 @@
       "cout_num": 20,
       "categorie": "Outils IA",
       "notes": "APIs Gemini, Google Places (1-38€/mois)",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "~2 du mois"
     },
     {
       "outil": "N26 Smart",
@@ -3335,7 +3343,8 @@
       "cout_num": 4.9,
       "categorie": "Banque",
       "notes": "Compte bancaire",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "~5 du mois"
     },
     {
       "outil": "Facebook Ads",
@@ -3343,7 +3352,8 @@
       "cout_num": 55,
       "categorie": "Marketing",
       "notes": "Publicité Facebook/Instagram (~55€/mois en fev)",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "Variable"
     },
     {
       "outil": "Hostinger",
@@ -3351,7 +3361,8 @@
       "cout_num": 10,
       "categorie": "Infrastructure",
       "notes": "Hébergement sites clients",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "Annuel"
     },
     {
       "outil": "YouTube Premium",
@@ -3359,7 +3370,17 @@
       "cout_num": 12.99,
       "categorie": "Mixte",
       "notes": "Veille tech + perso",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "~28 du mois"
+    },
+    {
+      "outil": "Claude (Anthropic)",
+      "cout": "200€",
+      "cout_num": 200,
+      "categorie": "Outils IA",
+      "notes": "Plan Max - Assistant IA principal",
+      "statut": "actif",
+      "renouvellement": "~1er du mois"
     },
     {
       "outil": "Brevo",
@@ -3367,7 +3388,8 @@
       "cout_num": 0,
       "categorie": "Marketing",
       "notes": "Plan gratuit, newsletters",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "Gratuit"
     },
     {
       "outil": "Cloudflare",
@@ -3375,7 +3397,8 @@
       "cout_num": 0,
       "categorie": "Infrastructure",
       "notes": "DNS + domaines",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "Gratuit"
     },
     {
       "outil": "Clawdbot",
@@ -3383,13 +3406,14 @@
       "cout_num": 0,
       "categorie": "Outils IA",
       "notes": "Assistante Claudia",
-      "statut": "actif"
+      "statut": "actif",
+      "renouvellement": "Gratuit"
     }
   ],
   "abonnements_kpis": {
-    "total_mensuel_estime": "~170€",
-    "outils_actifs": 15,
-    "prochain_renouvellement": "--"
+    "total_mensuel_estime": "~370€",
+    "outils_actifs": 16,
+    "conseil_ia": "Notion (13,80€/mois) peut être coupé : le Control Center et Claudia couvrent désormais 100% de ses usages (CRM, pipeline, contacts). Économie : 166€/an."
   },
   "prospects": [
     {

@@ -3534,8 +3534,8 @@
         const abos = DATA.abonnements;
         const kpis = DATA.abonnements_kpis || {};
         const actifs = kpis.outils_actifs || abos.filter(a => a.statut === 'actif').length;
-        const totalEstime = kpis.total_mensuel_estime || '~170€';
-        const prochainRenouv = kpis.prochain_renouvellement || '--';
+        const totalEstime = kpis.total_mensuel_estime || '~370€';
+        const conseilIA = kpis.conseil_ia || '';
 
         // Calculate total from cout_num
         const totalCalc = abos.reduce((sum, a) => sum + (a.cout_num || 0), 0);
@@ -3559,10 +3559,11 @@
         let rows = abos.map(a => {
             const coutStyle = (a.cout === 'Gratuit') ? 'color:var(--success);font-weight:600' : (a.cout === 'Variable' ? 'color:var(--warning);font-weight:500' : '');
             const badgeCls = catBadge(a.categorie);
+            const renouv = a.renouvellement || '--';
             return `<tr>
                 <td style="font-weight:500">${esc(a.outil)}</td>
                 <td style="${coutStyle}">${esc(a.cout)}</td>
-                <td>${a.cout_num !== undefined ? (a.cout_num > 0 ? a.cout_num.toFixed(2).replace('.', ',') + '€' : '--') : '--'}</td>
+                <td style="color:#9ca3af;font-size:0.82rem">${esc(renouv)}</td>
                 <td><span class="badge ${badgeCls}">${esc(a.categorie)}</span></td>
                 <td>${esc(a.notes)}</td>
                 <td><span class="badge badge-green">${esc(a.statut || 'actif')}</span></td>
@@ -3581,15 +3582,17 @@
                 <div class="card-value accent">${actifs}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">Prochain renouvellement</div>
-                <div class="card-value primary">${esc(prochainRenouv)}</div>
+                <div style="background:linear-gradient(135deg, rgba(28,187,200,0.06), rgba(28,187,200,0.02)); border:1px solid rgba(28,187,200,0.2); border-radius:12px; padding:16px 18px;">
+                    <div style="font-size:0.85rem;font-weight:700;color:var(--text);margin-bottom:6px;">💡 Conseil Claudia</div>
+                    <div style="font-size:0.85rem;color:var(--text-light);line-height:1.5;">${esc(conseilIA)}</div>
+                </div>
             </div>
         </div>
 
         <div class="card table-card fade-in" style="animation-delay:0.25s">
             <div class="table-header">Liste des abonnements</div>
             <table>
-                <thead><tr><th>Outil</th><th>Coût/mois</th><th>Coût num.</th><th>Catégorie</th><th>Notes</th><th>Statut</th></tr></thead>
+                <thead><tr><th>Outil</th><th>Coût/mois</th><th>Renouvellement</th><th>Catégorie</th><th>Notes</th><th>Statut</th></tr></thead>
                 <tbody>${rows}</tbody>
             </table>
         </div>`;
