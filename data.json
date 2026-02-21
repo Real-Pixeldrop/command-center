@@ -1839,14 +1839,14 @@
     {
       "nom": "Devis D-2026-0219",
       "client": "RCL",
-      "montant": "650 €",
-      "montant_num": 650,
+      "montant": "780 €",
+      "montant_num": 780,
       "statut": "paye",
       "date_envoi": "2026-02-11",
       "date_accepte": "2026-02-11",
       "objet": "Configuration domaine collectiviteslocales.fr",
       "date": "11/02/2026",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=QDwpo1FYZVGm5GaG%2FmV5R6NnHzpbeRGVAt2uOFfNm3Ls5b%2Bk3KFDzaDS6RwfCzJvkkkhhIrUrV69qaiyuYUWYf8V2FCWJWiGSKt%2F6047dhUZdgyT4LfY2HdW--ZICDM9%2Fpb5TPV9un--9YMrTTgPT8WGfhXsWxZ8gQ%3D%3D",
+      "pdf": "https://app.pennylane.com/companies/21979460/customer_invoices",
       "date_paiement": "2026-02-18",
       "montant_ttc": "780 €",
       "montant_ttc_num": 780
@@ -1861,7 +1861,7 @@
       "date_accepte": null,
       "objet": "Automatisation DernièreDispo / Brevo",
       "date": "10/02/2026",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=DPRCBXs72n1ZapBKl1aU20zXlhXxfBl9%2FgwGp%2BacNuOFPnZV2jTvoHgzoj8TrsKBfVmRC%2BzK4bDRmWOls3aOU0MQx1MqOolJTEobxHq%2BpOIwz8aoKTkCpRtZ--zEIE%2FogaWFYfQsEU--PIzWJOpum8UK71VIercKzg%3D%3D",
+      "pdf": "https://app.pennylane.com/companies/21979460/customer_invoices",
       "note": "Dernière version du devis sur Pennylane (5 versions créées D-2026-0218 à 0222)"
     },
     {
@@ -1874,7 +1874,7 @@
       "date_accepte": null,
       "objet": "Refonte site web L.I.Partners",
       "date": "04/02/2026",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=hYGln3L5KW%2B%2B%2FVq51fzTMp7XNas%2Fl1ovWhCB2fHIXyP6UxAH7eqC4wHtzIdOYJ2qxgVR8%2FmECDR8M0dXCBFK6gUhdhi%2BvbwGsbkMc9027Zc%2FKNPnP6S%2BD5h5--EzTPuLQ7%2B1Vz4ynL--nj2bCVvrUjOkgffplEbRog%3D%3D",
+      "pdf": "https://app.pennylane.com/companies/21979460/customer_invoices",
       "note": "RDV 19/02 positif. Présentation COMEX le 16/03. Visios individuelles avant."
     },
     {
@@ -1887,7 +1887,7 @@
       "date_accepte": "2026-01-27",
       "objet": "Site vitrine Habitat Multi Services",
       "date": "27/01/2026",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=5KOSDUczi%2Ba98MMe5ZNmbNvxrRWtLV6wG4W1J9YROTS7zZKtwnOVo3dFHGa259aTUR0KbRMMtRcg0vYhOMWZD6QUJPwg0Uy8CDsVnCFm%2FcJmEp8jRGWjL2J6--A2nzOFJV%2BDIuYTpZ--6AHYGmnYMhcign2Dg8P9Ew%3D%3D",
+      "pdf": "https://app.pennylane.com/companies/21979460/customer_invoices",
       "date_paiement": "2026-01-27"
     },
     {
@@ -1900,7 +1900,7 @@
       "date_accepte": null,
       "objet": "Portail Client FIDOLUX",
       "date": "08/01/2026",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=4Hql0TgVOgZGRBsxAAJNzPkz3uRvsLtYBOV0Fbl5d3PFVha5zD5sdODh9KWrGRI1Cmfq3R%2BQtvvlbpRjLdBi%2FV8xCH9oJ2oxfiHhq4UJmUQkBRHfT650Kxa6--VBmk78OS7oM6%2F7BX--nJ3Bu%2FT5dR0ZMxWyQeOElQ%3D%3D"
+      "pdf": "https://app.pennylane.com/companies/21979460/customer_invoices"
     },
     {
       "nom": "Communauté 360",
@@ -1923,6 +1923,7 @@
       "statut": "en_attente",
       "date_envoi": "2025-12-15",
       "source": "notion",
+      "hidden_relance": true,
       "pdf_name": "Devis-2025-12-0015.pdf",
       "pdf_url": null,
       "date": "15/12/2025",
@@ -2028,7 +2029,7 @@
       "statut": "accepte",
       "date_envoi": "2025-04-07",
       "source": "notion",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D",
+      "pdf": "https://app.pennylane.com/companies/21979460/customer_invoices",
       "date": "07/04/2025"
     },
     {
@@ -2039,7 +2040,7 @@
       "statut": "accepte",
       "date_envoi": "2025-04-07",
       "source": "notion",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D",
+      "pdf": "https://app.pennylane.com/companies/21979460/customer_invoices",
       "date": "07/04/2025"
     },
     {
@@ -2050,7 +2051,7 @@
       "statut": "accepte",
       "date_envoi": "2025-06-04",
       "source": "notion",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=VKl1OdoscdH5%2FFJF96oPQ3GyNPUqdH%2BMz5liZXayLHYR0DECLYP0kv4%2BzeuJTCi58POKpyX1E9C%2Ba%2Bwf7jsyctVB1aB5F%2BlJGd0FKsCKDdOrEC7JRhzO5lcN--l9lNcihqb4TTBoU9--7OMGMhqCd2E4UFiDDZufBQ%3D%3D",
+      "pdf": "https://app.pennylane.com/companies/21979460/customer_invoices",
       "date": "04/06/2025"
     },
     {
@@ -2285,7 +2286,8 @@
       "statut": "en_attente",
       "date_envoi": "2025-10-16",
       "source": "notion",
-      "date": "16/10/2025"
+      "date": "16/10/2025",
+      "hidden_relance": true
     },
     {
       "nom": "Maquette accueil react",
@@ -2694,12 +2696,22 @@
     {
       "nom": "Facture F-2026-01272",
       "client": "Habitat Multi Services",
-      "montant": "3 000€",
+      "montant": "3 000 €",
       "montant_num": 3000,
       "date": "2026-01-27",
       "statut": "payee",
       "date_paiement": "2026-01-27",
       "objet": "Site vitrine Habitat Multi Services"
+    },
+    {
+      "nom": "Facture F-2026-02181",
+      "client": "RCL",
+      "montant": "780 €",
+      "montant_num": 780,
+      "date": "2026-02-18",
+      "statut": "payee",
+      "date_paiement": "2026-02-18",
+      "objet": "Configuration domaine collectiviteslocales.fr"
     },
     {
       "nom": "Facture-2025-10-0002",

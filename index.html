@@ -2321,6 +2321,7 @@
         const now = new Date();
         const devis = DATA.devis || [];
         return devis.filter(d => {
+            if (d.hidden_relance) return false;
             const s = d.statut.toLowerCase().replace('_', ' ');
             if (s !== 'en attente' && s !== 'envoye' && s !== 'envoyé') return false;
             if (!d.date_envoi) return false;
@@ -2330,7 +2331,11 @@
         }).map(d => {
             const envoi = new Date(d.date_envoi);
             const jours = Math.floor((now - envoi) / (1000 * 60 * 60 * 24));
-            return { ...d, jours };
+            // Find client phone from clients list
+            const clients = DATA.clients || [];
+            const clientMatch = clients.find(c => c.nom && d.client && (c.nom.toLowerCase().includes(d.client.toLowerCase()) || d.client.toLowerCase().includes(c.nom.toLowerCase())));
+            const telephone = clientMatch ? clientMatch.telephone : '';
+            return { ...d, jours, telephone };
         }).sort((a, b) => b.jours - a.jours);
     }
 
@@ -3388,8 +3393,9 @@
 
         function buildDevisRows(list) {
             return list.map(d => {
-                const pdfLink = d.pdf ? '<a href="' + esc(d.pdf) + '" target="_blank" style="color:var(--primary)">↗</a>' : '--';
-                return '<tr><td>' + esc(d.date || fmtDate(d.date_envoi)) + '</td><td>' + esc(d.client) + '</td><td>' + esc(d.objet || d.nom) + '</td><td>' + esc(d.montant) + '</td><td><span class="badge ' + badgeClass(d.statut) + '">' + esc(d.statut) + '</span></td><td>' + pdfLink + '</td></tr>';
+                const pdfLink = d.pdf ? '<a href="' + esc(d.pdf) + '" target="_blank" style="color:var(--primary);text-decoration:none;font-size:0.8rem;">Pennylane</a>' : '--';
+                const displayMontant = d.montant_ttc || d.montant;
+                return '<tr><td>' + esc(d.date || fmtDate(d.date_envoi)) + '</td><td>' + esc(d.client) + '</td><td>' + esc(d.objet || d.nom) + '</td><td>' + esc(displayMontant) + '</td><td><span class="badge ' + badgeClass(d.statut) + '">' + esc(d.statut) + '</span></td><td>' + pdfLink + '</td></tr>';
             }).join('');
         }
 
@@ -3398,7 +3404,11 @@
         const devisRowsAll = buildDevisRows(devis);
         let devisRows = devisRows2026;
 
-        let factRows = factures.map(f => `<tr><td>${fmtDate(f.date)}</td><td>${esc(f.client)}</td><td>${esc(f.objet)}</td><td>${esc(f.montant)}</td><td><span class="badge ${badgeClass(f.statut)}">${esc(f.statut)}</span></td><td><a href="${esc(f.pdf)}" target="_blank" style="color:var(--primary)">↗</a></td></tr>`).join('');
+        const pennylaneFact = 'https://app.pennylane.com/companies/21979460/customer_invoices';
+        let factRows = factures.map(f => {
+            const objet = f.objet || f.opp_nom || f.nom || '--';
+            return `<tr><td>${fmtDate(f.date)}</td><td>${esc(f.client)}</td><td>${esc(objet)}</td><td>${esc(f.montant)}</td><td><span class="badge ${badgeClass(f.statut)}">${esc(f.statut)}</span></td><td><a href="${pennylaneFact}" target="_blank" style="color:var(--primary);text-decoration:none;font-size:0.8rem;">Pennylane</a></td></tr>`;
+        }).join('');
 
         // Relances
         const relances = getRelances();
@@ -3424,11 +3434,12 @@
                 } else {
                     urgencyColor = '#059669'; urgencyBg = 'rgba(5,150,105,0.08)'; urgencyLabel = 'Recent'; urgencyIcon = '🟢';
                 }
+                const phoneHtml = r.telephone ? ' <a href="tel:' + esc(r.telephone.replace(/\s/g,'')) + '" onclick="event.stopPropagation()" style="color:#9ca3af;text-decoration:none;font-weight:400;font-size:0.78rem;margin-left:6px;">' + esc(r.telephone) + '</a>' : '';
                 return `<div class="relance-item" style="display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border);transition:background 0.15s;" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='transparent'">
                     <div style="display:flex;align-items:center;gap:14px;flex:1;min-width:0;">
                         <span style="font-size:0.7rem;">${urgencyIcon}</span>
                         <div style="min-width:0;">
-                            <div style="font-weight:600;font-size:0.88rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(r.client)}</div>
+                            <div style="font-weight:600;font-size:0.88rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(r.client)}${phoneHtml}</div>
                             <div style="font-size:0.78rem;color:var(--text-light);margin-top:2px;">${esc(r.objet || '')}</div>
                         </div>
                     </div>
@@ -3495,7 +3506,7 @@
             </div>
             <div class="card table-card fade-in" style="animation-delay:0.25s">
                 <table>
-                    <thead><tr><th>Date</th><th>Client</th><th>Objet</th><th>Montant</th><th>Statut</th><th>PDF</th></tr></thead>
+                    <thead><tr><th>Date</th><th>Client</th><th>Objet</th><th>Montant</th><th>Statut</th><th>Lien</th></tr></thead>
                     <tbody id="devis-list">${devisRows}</tbody>
                 </table>
             </div>
@@ -3507,7 +3518,7 @@
             </div>
             <div class="card table-card fade-in">
                 <table>
-                    <thead><tr><th>Date</th><th>Client</th><th>Objet</th><th>Montant</th><th>Statut</th><th>PDF</th></tr></thead>
+                    <thead><tr><th>Date</th><th>Client</th><th>Objet</th><th>Montant</th><th>Statut</th><th>Lien</th></tr></thead>
                     <tbody id="factures-list">${factRows}</tbody>
                 </table>
             </div>
