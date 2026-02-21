@@ -3117,15 +3117,16 @@
         const chart = DATA.finances.ca_mensuel_chart;
         const m = chart[finMonthIdx];
         const caTTC = (m && m.montant !== null) ? m.montant : 0;
-        const caHT = Math.round(caTTC / 1.20);
-        const tva = caTTC - caHT;
+        const hasTVA = m && m.tva !== false;
+        const caHT = hasTVA ? Math.round(caTTC / 1.20) : caTTC;
+        const tva = hasTVA ? caTTC - caHT : 0;
         const labelEl = document.getElementById('fin-month-label');
         const valueEl = document.getElementById('fin-month-value');
         const detailEl = document.getElementById('fin-month-detail');
         if (labelEl) labelEl.textContent = moisNoms[finMonthIdx] + ' 2026';
-        if (valueEl) valueEl.textContent = caTTC.toLocaleString('fr-FR') + '€ TTC';
+        if (valueEl) valueEl.textContent = hasTVA ? caTTC.toLocaleString('fr-FR') + '€ TTC' : caTTC.toLocaleString('fr-FR') + '€';
         if (detailEl) detailEl.innerHTML = caTTC > 0
-            ? `${caHT.toLocaleString('fr-FR')}€ HT · ${tva.toLocaleString('fr-FR')}€ TVA`
+            ? (hasTVA ? `${caHT.toLocaleString('fr-FR')}€ HT · ${tva.toLocaleString('fr-FR')}€ TVA` : `${caTTC.toLocaleString('fr-FR')}€ net · Pas de TVA`)
             : 'Aucun CA ce mois';
     }
 
@@ -3134,8 +3135,9 @@
         const chart = DATA.finances.ca_mensuel_chart;
         const m = chart[chargesMonthIdx];
         const caTTC = (m && m.montant !== null) ? m.montant : 0;
-        const caHT = Math.round(caTTC / 1.20);
-        const tva = caTTC - caHT;
+        const hasTVA = m && m.tva !== false;
+        const caHT = hasTVA ? Math.round(caTTC / 1.20) : caTTC;
+        const tva = hasTVA ? caTTC - caHT : 0;
         const urssaf = Math.round(caHT * 0.231);
         const ir = Math.round(caHT * 0.022);
         const net = caTTC - tva - urssaf - ir;
@@ -3144,12 +3146,21 @@
         const labelEl = document.getElementById('charges-month-label');
         const contentEl = document.getElementById('charges-content');
         if (labelEl) labelEl.textContent = moisNoms[chargesMonthIdx] + ' 2026';
-        if (contentEl) contentEl.innerHTML = `
+        if (contentEl) contentEl.innerHTML = hasTVA ? `
             <div class="sim-row"><span class="sim-label">CA TTC</span><span class="sim-value">${fmt(caTTC)}</span></div>
             <div class="sim-row"><span class="sim-label">CA HT (÷ 1.20)</span><span class="sim-value">${fmt(caHT)}</span></div>
             <div class="sim-row"><span class="sim-label">TVA collectée (20%)</span><span class="sim-value negative">-${fmt(tva)}</span></div>
             <div class="sim-row"><span class="sim-label">URSSAF (23.1% sur HT)</span><span class="sim-value negative">-${fmt(urssaf)}</span></div>
             <div class="sim-row"><span class="sim-label">IR libératoire (2.2% sur HT)</span><span class="sim-value negative">-${fmt(ir)}</span></div>
+            <div class="sim-row" style="border-top:2px solid var(--text);padding-top:12px;margin-top:4px;">
+                <span class="sim-label" style="font-weight:700;color:var(--text);">Net du mois</span>
+                <span class="sim-value ${net >= 0 ? 'positive' : 'negative'}" style="font-size:1.1rem;">${fmt(net)}</span>
+            </div>
+        ` : `
+            <div class="sim-row"><span class="sim-label">CA (pas de TVA)</span><span class="sim-value">${fmt(caTTC)}</span></div>
+            <div class="sim-row"><span class="sim-label" style="color:var(--warning);">TVA</span><span class="sim-value" style="color:var(--warning);">Pas assujetti</span></div>
+            <div class="sim-row"><span class="sim-label">URSSAF (23.1% sur CA)</span><span class="sim-value negative">-${fmt(urssaf)}</span></div>
+            <div class="sim-row"><span class="sim-label">IR libératoire (2.2% sur CA)</span><span class="sim-value negative">-${fmt(ir)}</span></div>
             <div class="sim-row" style="border-top:2px solid var(--text);padding-top:12px;margin-top:4px;">
                 <span class="sim-label" style="font-weight:700;color:var(--text);">Net du mois</span>
                 <span class="sim-value ${net >= 0 ? 'positive' : 'negative'}" style="font-size:1.1rem;">${fmt(net)}</span>
@@ -3185,20 +3196,29 @@
         const moisNoms = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
         const initMonth = chart[finMonthIdx];
         const initCaTTC = (initMonth && initMonth.montant !== null) ? initMonth.montant : 0;
-        const initCaHT = Math.round(initCaTTC / 1.20);
-        const initTVA = initCaTTC - initCaHT;
+        const initHasTVA = initMonth && initMonth.tva !== false;
+        const initCaHT = initHasTVA ? Math.round(initCaTTC / 1.20) : initCaTTC;
+        const initTVA = initHasTVA ? initCaTTC - initCaHT : 0;
 
         // URSSAF / TVA trimestriels (Q1 = Jan-Mar)
+        // Correctly handle per-month TVA status
         const currentQ = Math.floor(currentMonthIdx / 3);
         const qStart = currentQ * 3;
         const qEnd = qStart + 3;
         const qNames = ['T1 (Jan-Mar)', 'T2 (Avr-Jun)', 'T3 (Jul-Sep)', 'T4 (Oct-Déc)'];
         let qCaTTC = 0;
+        let qCaHT = 0;
+        let qTVA = 0;
         for (let i = qStart; i < qEnd && i < 12; i++) {
-            qCaTTC += (chart[i] && chart[i].montant) || 0;
+            const mi = chart[i];
+            const mTTC = (mi && mi.montant) || 0;
+            const mHasTVA = mi && mi.tva !== false;
+            const mHT = mHasTVA ? Math.round(mTTC / 1.20) : mTTC;
+            const mTVA = mHasTVA ? mTTC - mHT : 0;
+            qCaTTC += mTTC;
+            qCaHT += mHT;
+            qTVA += mTVA;
         }
-        const qCaHT = Math.round(qCaTTC / 1.20);
-        const qTVA = qCaTTC - qCaHT;
         const qUrssaf = Math.round(qCaHT * 0.231);
         const qIR = Math.round(qCaHT * 0.022);
         const qTotal = qUrssaf + qIR;
@@ -3216,8 +3236,8 @@
                         <button onclick="switchFinMonth(1)" style="background:none;border:1px solid var(--border);width:30px;height:30px;border-radius:8px;cursor:pointer;color:var(--text-light);font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all 0.15s;" onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-light)'">&rsaquo;</button>
                     </div>
                 </div>
-                <div class="card-value primary" id="fin-month-value" style="font-size:2.4rem;margin-bottom:4px;">${initCaTTC.toLocaleString('fr-FR')}€ TTC</div>
-                <div class="card-sub" id="fin-month-detail">${initCaTTC > 0 ? initCaHT.toLocaleString('fr-FR')+'€ HT · '+initTVA.toLocaleString('fr-FR')+'€ TVA' : 'Aucun CA ce mois'}</div>
+                <div class="card-value primary" id="fin-month-value" style="font-size:2.4rem;margin-bottom:4px;">${initHasTVA ? initCaTTC.toLocaleString('fr-FR')+'€ TTC' : initCaTTC.toLocaleString('fr-FR')+'€'}</div>
+                <div class="card-sub" id="fin-month-detail">${initCaTTC > 0 ? (initHasTVA ? initCaHT.toLocaleString('fr-FR')+'€ HT · '+initTVA.toLocaleString('fr-FR')+'€ TVA' : initCaTTC.toLocaleString('fr-FR')+'€ net · Pas de TVA') : 'Aucun CA ce mois'}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
                 <div class="card-label">CA Annuel 2026</div>
@@ -3241,7 +3261,10 @@
                 <span style="font-weight:700;font-size:1.05rem;">CA mensuel 2026</span>
                 <span style="font-size:0.82rem;color:var(--text-light);">Total : ${caAnnuelFmt}€</span>
             </div>
-            <div class="bar-chart" style="height:250px;">${bars}</div>
+            <div style="position:relative;">
+                <div class="bar-chart" id="fin-bar-chart" style="height:250px;">${bars}</div>
+                <svg id="fin-trend-line" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2;"></svg>
+            </div>
         </div>
 
         <!-- ROW 3: Déclarations URSSAF + TVA -->
@@ -3314,6 +3337,33 @@
             </div>
         </div>`;
         renderChargesMonth();
+
+        // Trend line overlay on bar chart
+        setTimeout(function() {
+            const chartEl = document.getElementById('fin-bar-chart');
+            const svgEl = document.getElementById('fin-trend-line');
+            if (!chartEl || !svgEl) return;
+            const cols = chartEl.querySelectorAll('.bar-col');
+            const chartRect = chartEl.getBoundingClientRect();
+            const points = [];
+            chart.forEach(function(m, i) {
+                if (m.montant !== null && m.montant > 0 && cols[i]) {
+                    const colRect = cols[i].getBoundingClientRect();
+                    const barFill = cols[i].querySelector('.bar-fill');
+                    const barRect = barFill ? barFill.getBoundingClientRect() : null;
+                    const x = colRect.left - chartRect.left + colRect.width / 2;
+                    const y = barRect ? barRect.top - chartRect.top : chartRect.height;
+                    points.push({ x: x, y: y });
+                }
+            });
+            if (points.length < 2) { svgEl.innerHTML = ''; return; }
+            // Draw circles and polyline
+            let pathD = points.map(function(p, i) { return (i === 0 ? 'M' : 'L') + p.x + ',' + p.y; }).join(' ');
+            let circles = points.map(function(p) {
+                return '<circle cx="' + p.x + '" cy="' + p.y + '" r="4" fill="rgba(255,255,255,0.8)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>';
+            }).join('');
+            svgEl.innerHTML = '<polyline points="' + points.map(function(p){return p.x+','+p.y;}).join(' ') + '" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' + circles;
+        }, 1200);
     }
 
     // ===== DEVIS & FACTURES =====

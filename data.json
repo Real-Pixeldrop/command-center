@@ -2914,62 +2914,74 @@
       {
         "mois": "Jan",
         "montant": 3000,
-        "label": "3k"
+        "label": "3k",
+        "tva": false
       },
       {
         "mois": "Fev",
         "montant": 780,
-        "label": "780"
+        "label": "780",
+        "tva": true
       },
       {
         "mois": "Mar",
         "montant": null,
-        "label": "-"
+        "label": "-",
+        "tva": true
       },
       {
         "mois": "Avr",
         "montant": null,
-        "label": "-"
+        "label": "-",
+        "tva": true
       },
       {
         "mois": "Mai",
         "montant": null,
-        "label": "-"
+        "label": "-",
+        "tva": true
       },
       {
         "mois": "Jun",
         "montant": null,
-        "label": "-"
+        "label": "-",
+        "tva": true
       },
       {
         "mois": "Jul",
         "montant": null,
-        "label": "-"
+        "label": "-",
+        "tva": true
       },
       {
         "mois": "Aou",
         "montant": null,
-        "label": "-"
+        "label": "-",
+        "tva": true
       },
       {
         "mois": "Sep",
         "montant": null,
-        "label": "-"
+        "label": "-",
+        "tva": true
       },
       {
         "mois": "Oct",
         "montant": null,
-        "label": "-"
+        "label": "-",
+        "tva": true
       },
       {
         "mois": "Nov",
         "montant": null,
-        "label": "-"
+        "label": "-",
+        "tva": true
       },
       {
         "mois": "Dec",
         "montant": null,
-        "label": "-"
+        "label": "-",
+        "tva": true
       }
     ]
   },
