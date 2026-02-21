@@ -186,8 +186,8 @@
       "nom": "Maquette site vitrine",
       "client": "Habitat Multi-Service",
       "type": "Site vitrine",
-      "deadline": "A planifier",
-      "statut": "En cours",
+      "deadline": "Livré",
+      "statut": "Livre",
       "details": null
     },
     {
@@ -1007,8 +1007,8 @@
       "telephone": "06 84 54 16 26",
       "email": "gglondu@gmail.com",
       "ca_2025": 1072,
-      "ca_2026": 1300,
-      "ca_total": 1072,
+      "ca_2026": 780,
+      "ca_total": 1852,
       "nb_factures": 1,
       "nb_projets": 2,
       "dernier_contact": "2026-02-21",
@@ -2902,10 +2902,10 @@
       "detail": "1 facture payee"
     },
     "ca_fevrier": {
-      "montant": "650€",
-      "detail": "1 facture payée (RCL)"
+      "montant": "780€",
+      "detail": "1 facture payée (RCL - 780€ TTC)"
     },
-    "total_2026": "3 650€",
+    "total_2026": "3 780€",
     "devis_attente": {
       "montant": "14 000€",
       "detail": "3 devis pending"
@@ -2918,8 +2918,8 @@
       },
       {
         "mois": "Fev",
-        "montant": 650,
-        "label": "650"
+        "montant": 780,
+        "label": "780"
       },
       {
         "mois": "Mar",

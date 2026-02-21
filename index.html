@@ -3093,107 +3093,63 @@
     }
 
     // ===== FINANCES =====
-    function renderFinances() {
-        const f = DATA.finances;
-        const maxCA = Math.max(...f.ca_mensuel_chart.map(m => m.montant || 0), 1);
-        let bars = f.ca_mensuel_chart.map(m => {
-            const h = m.montant !== null && m.montant > 0 ? Math.round(m.montant / maxCA * 100) + '%' : '2px';
-            const bg = m.montant !== null ? 'var(--primary)' : 'var(--border)';
-            return `<div class="bar-col"><span class="bar-amount">${esc(m.label)}</span><div class="bar-fill" style="height:${h};background:${bg}"></div><span class="bar-label">${esc(m.mois)}</span></div>`;
-        }).join('');
-
-        // Objectif annuel
-        const caAnnuelNum = f.ca_mensuel_chart.reduce((sum, m) => sum + (m.montant || 0), 0);
-        const objAnnuel = DATA.objectifs.ca_annuel;
-        const objAnnuelPct = objAnnuel > 0 ? Math.min(100, Math.round(caAnnuelNum / objAnnuel * 100)) : 0;
-        const objAnnuelColor = objAnnuelPct >= 80 ? 'var(--success)' : objAnnuelPct >= 50 ? 'var(--warning)' : '#ef4444';
-        const caAnnuelFmt = caAnnuelNum.toLocaleString('fr-FR');
-        const objAnnuelFmt = objAnnuel.toLocaleString('fr-FR');
-
-        document.getElementById('finances-content').innerHTML = `
-        <div class="grid grid-4">
-            <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">Objectif annuel 2026</div>
-                <div style="display:flex;justify-content:space-between;align-items:baseline;margin:8px 0 4px;">
-                    <span class="card-value" style="font-size:1.3rem;">${caAnnuelFmt}€</span>
-                    <span style="color:var(--text-light);font-size:0.85rem;">/ ${objAnnuelFmt}€</span>
-                </div>
-                <div style="background:var(--border);border-radius:8px;height:8px;overflow:hidden;">
-                    <div style="background:${objAnnuelColor};height:100%;width:${objAnnuelPct}%;border-radius:8px;transition:width 0.5s ease;"></div>
-                </div>
-                <div style="text-align:right;font-size:0.78rem;color:var(--text-light);margin-top:4px;">${objAnnuelPct}%</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.15s">
-                <div class="card-label">CA Janvier 2026</div>
-                <div class="card-value primary">${esc(f.ca_janvier.montant)}</div>
-                <div class="card-sub">${esc(f.ca_janvier.detail)}</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.2s">
-                <div class="card-label">CA Fevrier 2026</div>
-                <div class="card-value accent">${esc(f.ca_fevrier.montant)}</div>
-                <div class="card-sub">${esc(f.ca_fevrier.detail)}</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.25s">
-                <div class="card-label">Devis en attente</div>
-                <div class="card-value accent">${esc(f.devis_attente.montant)}</div>
-                <div class="card-sub">${esc(f.devis_attente.detail)}</div>
-            </div>
-        </div>
-
-        <div class="grid grid-2">
-            <div class="card fade-in" style="animation-delay:0.3s">
-                <div style="display:flex;justify-content:space-between;align-items:center;padding:0 0 16px;">
-                    <span style="font-weight:600;">CA mensuel</span>
-                    <div style="display:flex;align-items:center;gap:8px;">
-                        <button onclick="switchChartYear(-1)" style="background:none;border:none;cursor:pointer;color:var(--text-light);font-size:1rem;">&lsaquo;</button>
-                        <span id="chart-year-label">2026</span>
-                        <button onclick="switchChartYear(1)" style="background:none;border:none;cursor:pointer;color:var(--text-light);font-size:1rem;">&rsaquo;</button>
-                    </div>
-                </div>
-                <div class="bar-chart">${bars}</div>
-            </div>
-            <div class="card fade-in" style="animation-delay:0.35s">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-                    <span style="font-weight:600;">Charges du mois</span>
-                    <div style="display:flex;align-items:center;gap:8px;">
-                        <button onclick="switchChargesMonth(-1)" style="background:none;border:none;cursor:pointer;color:var(--text-light);font-size:1rem;">&lsaquo;</button>
-                        <span id="charges-month-label">Février 2026</span>
-                        <button onclick="switchChargesMonth(1)" style="background:none;border:none;cursor:pointer;color:var(--text-light);font-size:1rem;">&rsaquo;</button>
-                    </div>
-                </div>
-                <div id="charges-content">
-                    <!-- Sera rempli par JS -->
-                </div>
-            </div>
-        </div>`;
-        renderChargesMonth();
-    }
-
-    // ===== CHARGES MENSUELLES =====
+    // ===== FINANCES STATE =====
+    let finMonthIdx = new Date().getMonth();
     let chargesMonthIdx = new Date().getMonth();
+    let chartYear = 2026;
+
+    function switchFinMonth(dir) {
+        finMonthIdx = Math.max(0, Math.min(11, finMonthIdx + dir));
+        renderFinMonthCard();
+    }
     function switchChargesMonth(dir) {
         chargesMonthIdx = Math.max(0, Math.min(11, chargesMonthIdx + dir));
         renderChargesMonth();
     }
+    function switchChartYear(dir) {
+        chartYear += dir;
+        const labelEl = document.getElementById('chart-year-label');
+        if (labelEl) labelEl.textContent = chartYear;
+    }
+
+    function renderFinMonthCard() {
+        const moisNoms = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+        const chart = DATA.finances.ca_mensuel_chart;
+        const m = chart[finMonthIdx];
+        const caTTC = (m && m.montant !== null) ? m.montant : 0;
+        const caHT = Math.round(caTTC / 1.20);
+        const tva = caTTC - caHT;
+        const labelEl = document.getElementById('fin-month-label');
+        const valueEl = document.getElementById('fin-month-value');
+        const detailEl = document.getElementById('fin-month-detail');
+        if (labelEl) labelEl.textContent = moisNoms[finMonthIdx] + ' 2026';
+        if (valueEl) valueEl.textContent = caTTC.toLocaleString('fr-FR') + '€ TTC';
+        if (detailEl) detailEl.innerHTML = caTTC > 0
+            ? `${caHT.toLocaleString('fr-FR')}€ HT · ${tva.toLocaleString('fr-FR')}€ TVA`
+            : 'Aucun CA ce mois';
+    }
+
     function renderChargesMonth() {
         const moisNoms = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
         const chart = DATA.finances.ca_mensuel_chart;
         const m = chart[chargesMonthIdx];
-        const ca = (m && m.montant !== null) ? m.montant : 0;
-        const urssaf = Math.round(ca * 0.231);
-        const ir = Math.round(ca * 0.022);
-        const cfe = 42; // 500€/an
-        const net = ca - urssaf - ir - cfe;
+        const caTTC = (m && m.montant !== null) ? m.montant : 0;
+        const caHT = Math.round(caTTC / 1.20);
+        const tva = caTTC - caHT;
+        const urssaf = Math.round(caHT * 0.231);
+        const ir = Math.round(caHT * 0.022);
+        const net = caTTC - tva - urssaf - ir;
         const fmt = (n) => n.toLocaleString('fr-FR') + '€';
 
         const labelEl = document.getElementById('charges-month-label');
         const contentEl = document.getElementById('charges-content');
         if (labelEl) labelEl.textContent = moisNoms[chargesMonthIdx] + ' 2026';
         if (contentEl) contentEl.innerHTML = `
-            <div class="sim-row"><span class="sim-label">CA du mois</span><span class="sim-value">${fmt(ca)}</span></div>
-            <div class="sim-row"><span class="sim-label">URSSAF (23.1%)</span><span class="sim-value negative">-${fmt(urssaf)}</span></div>
-            <div class="sim-row"><span class="sim-label">IR liberatoire (2.2%)</span><span class="sim-value negative">-${fmt(ir)}</span></div>
-            <div class="sim-row"><span class="sim-label">CFE (estimee)</span><span class="sim-value negative">-${fmt(cfe)}</span></div>
+            <div class="sim-row"><span class="sim-label">CA TTC</span><span class="sim-value">${fmt(caTTC)}</span></div>
+            <div class="sim-row"><span class="sim-label">CA HT (÷ 1.20)</span><span class="sim-value">${fmt(caHT)}</span></div>
+            <div class="sim-row"><span class="sim-label">TVA collectée (20%)</span><span class="sim-value negative">-${fmt(tva)}</span></div>
+            <div class="sim-row"><span class="sim-label">URSSAF (23.1% sur HT)</span><span class="sim-value negative">-${fmt(urssaf)}</span></div>
+            <div class="sim-row"><span class="sim-label">IR libératoire (2.2% sur HT)</span><span class="sim-value negative">-${fmt(ir)}</span></div>
             <div class="sim-row" style="border-top:2px solid var(--text);padding-top:12px;margin-top:4px;">
                 <span class="sim-label" style="font-weight:700;color:var(--text);">Net du mois</span>
                 <span class="sim-value ${net >= 0 ? 'positive' : 'negative'}" style="font-size:1.1rem;">${fmt(net)}</span>
@@ -3201,13 +3157,163 @@
         `;
     }
 
-    // ===== CHART YEAR NAVIGATION =====
-    let chartYear = 2026;
-    function switchChartYear(dir) {
-        chartYear += dir;
-        const labelEl = document.getElementById('chart-year-label');
-        if (labelEl) labelEl.textContent = chartYear;
-        // Pour l'instant seule 2026 a des données, on re-render quand même
+    function renderFinances() {
+        const f = DATA.finances;
+        const chart = f.ca_mensuel_chart;
+
+        // Bar chart — taller, more readable
+        const maxCA = Math.max(...chart.map(m => m.montant || 0), 1);
+        const currentMonthIdx = new Date().getMonth();
+        let bars = chart.map((m, i) => {
+            const h = m.montant !== null && m.montant > 0 ? Math.round(m.montant / maxCA * 100) + '%' : '3px';
+            const isCurrent = i === currentMonthIdx;
+            const bg = m.montant !== null && m.montant > 0 ? (isCurrent ? 'var(--primary)' : 'rgba(28,187,200,0.5)') : 'var(--border)';
+            const amtLabel = m.montant !== null && m.montant > 0 ? m.montant.toLocaleString('fr-FR') + '€' : '-';
+            const fw = isCurrent ? 'font-weight:700;color:var(--primary);' : '';
+            return `<div class="bar-col"><span class="bar-amount" style="${fw}">${amtLabel}</span><div class="bar-fill" style="height:${h};background:${bg};${isCurrent?'box-shadow:0 0 8px rgba(28,187,200,0.3);':''}"></div><span class="bar-label" style="${fw}">${esc(m.mois)}</span></div>`;
+        }).join('');
+
+        // Objectif annuel
+        const caAnnuelNum = chart.reduce((sum, m) => sum + (m.montant || 0), 0);
+        const objAnnuel = DATA.objectifs.ca_annuel;
+        const objAnnuelPct = objAnnuel > 0 ? Math.min(100, Math.round(caAnnuelNum / objAnnuel * 100)) : 0;
+        const objAnnuelColor = objAnnuelPct >= 80 ? 'var(--success)' : objAnnuelPct >= 50 ? 'var(--warning)' : '#ef4444';
+        const caAnnuelFmt = caAnnuelNum.toLocaleString('fr-FR');
+        const objAnnuelFmt = objAnnuel.toLocaleString('fr-FR');
+
+        // CA du mois initial
+        const moisNoms = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+        const initMonth = chart[finMonthIdx];
+        const initCaTTC = (initMonth && initMonth.montant !== null) ? initMonth.montant : 0;
+        const initCaHT = Math.round(initCaTTC / 1.20);
+        const initTVA = initCaTTC - initCaHT;
+
+        // URSSAF / TVA trimestriels (Q1 = Jan-Mar)
+        const currentQ = Math.floor(currentMonthIdx / 3);
+        const qStart = currentQ * 3;
+        const qEnd = qStart + 3;
+        const qNames = ['T1 (Jan-Mar)', 'T2 (Avr-Jun)', 'T3 (Jul-Sep)', 'T4 (Oct-Déc)'];
+        let qCaTTC = 0;
+        for (let i = qStart; i < qEnd && i < 12; i++) {
+            qCaTTC += (chart[i] && chart[i].montant) || 0;
+        }
+        const qCaHT = Math.round(qCaTTC / 1.20);
+        const qTVA = qCaTTC - qCaHT;
+        const qUrssaf = Math.round(qCaHT * 0.231);
+        const qIR = Math.round(qCaHT * 0.022);
+        const qTotal = qUrssaf + qIR;
+        const fmt = (n) => n.toLocaleString('fr-FR') + '€';
+
+        document.getElementById('finances-content').innerHTML = `
+        <!-- ROW 1: CA du mois + CA Annuel -->
+        <div class="grid grid-2">
+            <div class="card fade-in" style="animation-delay:0.1s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                    <div class="card-label" style="margin-bottom:0;">CA du mois</div>
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <button onclick="switchFinMonth(-1)" style="background:none;border:1px solid var(--border);width:30px;height:30px;border-radius:8px;cursor:pointer;color:var(--text-light);font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all 0.15s;" onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-light)'">&lsaquo;</button>
+                        <span id="fin-month-label" style="font-weight:600;font-size:0.9rem;min-width:120px;text-align:center;">${moisNoms[finMonthIdx]} 2026</span>
+                        <button onclick="switchFinMonth(1)" style="background:none;border:1px solid var(--border);width:30px;height:30px;border-radius:8px;cursor:pointer;color:var(--text-light);font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all 0.15s;" onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-light)'">&rsaquo;</button>
+                    </div>
+                </div>
+                <div class="card-value primary" id="fin-month-value" style="font-size:2.4rem;margin-bottom:4px;">${initCaTTC.toLocaleString('fr-FR')}€ TTC</div>
+                <div class="card-sub" id="fin-month-detail">${initCaTTC > 0 ? initCaHT.toLocaleString('fr-FR')+'€ HT · '+initTVA.toLocaleString('fr-FR')+'€ TVA' : 'Aucun CA ce mois'}</div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.15s">
+                <div class="card-label">CA Annuel 2026</div>
+                <div style="display:flex;justify-content:space-between;align-items:baseline;margin:8px 0 4px;">
+                    <span class="card-value" style="font-size:2rem;">${caAnnuelFmt}€</span>
+                    <span style="color:var(--text-light);font-size:0.9rem;">/ ${objAnnuelFmt}€</span>
+                </div>
+                <div style="background:var(--border);border-radius:8px;height:10px;overflow:hidden;margin-top:8px;">
+                    <div style="background:${objAnnuelColor};height:100%;width:${objAnnuelPct}%;border-radius:8px;transition:width 0.8s ease;"></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;margin-top:6px;">
+                    <span style="font-size:0.78rem;color:var(--text-light);">${objAnnuelPct}% de l'objectif</span>
+                    <span style="font-size:0.78rem;color:var(--text-light);">Reste ${(objAnnuel - caAnnuelNum).toLocaleString('fr-FR')}€</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 2: Graphique barres (full width) -->
+        <div class="card fade-in" style="animation-delay:0.2s;margin-bottom:30px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:0 0 16px;">
+                <span style="font-weight:700;font-size:1.05rem;">CA mensuel 2026</span>
+                <span style="font-size:0.82rem;color:var(--text-light);">Total : ${caAnnuelFmt}€</span>
+            </div>
+            <div class="bar-chart" style="height:250px;">${bars}</div>
+        </div>
+
+        <!-- ROW 3: Déclarations URSSAF + TVA -->
+        <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">Déclarations</h2>
+        <div class="grid grid-2" style="margin-bottom:30px;">
+            <div class="card fade-in" style="animation-delay:0.25s">
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+                    <div style="width:36px;height:36px;border-radius:10px;background:rgba(28,187,200,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">🏛️</div>
+                    <div>
+                        <div style="font-weight:700;font-size:0.95rem;">URSSAF — ${qNames[currentQ]}</div>
+                        <div style="font-size:0.78rem;color:var(--text-light);">Cotisations sur CA HT</div>
+                    </div>
+                </div>
+                <div class="sim-row"><span class="sim-label">CA HT du trimestre</span><span class="sim-value">${fmt(qCaHT)}</span></div>
+                <div class="sim-row"><span class="sim-label">URSSAF (23.1%)</span><span class="sim-value negative">-${fmt(qUrssaf)}</span></div>
+                <div class="sim-row"><span class="sim-label">IR libératoire (2.2%)</span><span class="sim-value negative">-${fmt(qIR)}</span></div>
+                <div class="sim-row" style="border-top:2px solid var(--border);padding-top:8px;margin-top:4px;">
+                    <span class="sim-label" style="font-weight:700;">Total à déclarer</span>
+                    <span class="sim-value" style="font-weight:700;color:var(--primary);font-size:1.05rem;">${fmt(qTotal)}</span>
+                </div>
+                <div style="margin-top:8px;font-size:0.75rem;color:var(--text-light);">Montant à déclarer sur l'URSSAF : <strong>${fmt(qCaHT)}</strong> (CA HT hors TVA)</div>
+                <a href="https://www.autoentrepreneur.urssaf.fr/portail/accueil.html" target="_blank" style="display:block;margin-top:14px;padding:10px 0;background:var(--primary);color:white;text-align:center;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.88rem;transition:opacity 0.15s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">Déclarer à l'URSSAF ↗</a>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.3s">
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+                    <div style="width:36px;height:36px;border-radius:10px;background:rgba(245,158,11,0.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">📋</div>
+                    <div>
+                        <div style="font-weight:700;font-size:0.95rem;">TVA — ${qNames[currentQ]}</div>
+                        <div style="font-size:0.78rem;color:var(--text-light);">TVA collectée à reverser</div>
+                    </div>
+                </div>
+                <div class="sim-row"><span class="sim-label">CA TTC du trimestre</span><span class="sim-value">${fmt(qCaTTC)}</span></div>
+                <div class="sim-row"><span class="sim-label">CA HT</span><span class="sim-value">${fmt(qCaHT)}</span></div>
+                <div class="sim-row" style="border-top:2px solid var(--border);padding-top:8px;margin-top:4px;">
+                    <span class="sim-label" style="font-weight:700;">TVA collectée à reverser</span>
+                    <span class="sim-value" style="font-weight:700;color:var(--warning);font-size:1.05rem;">${fmt(qTVA)}</span>
+                </div>
+                <div style="margin-top:8px;font-size:0.75rem;color:var(--text-light);">TVA = CA TTC - CA HT (taux 20%)</div>
+                <a href="https://cfspro.impots.gouv.fr/" target="_blank" style="display:block;margin-top:14px;padding:10px 0;background:var(--warning);color:white;text-align:center;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.88rem;transition:opacity 0.15s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">Déclarer la TVA ↗</a>
+                <div style="margin-top:14px;padding:10px 14px;background:rgba(245,158,11,0.06);border-radius:8px;border:1px solid rgba(245,158,11,0.15);">
+                    <div style="font-size:0.78rem;color:var(--text-light);">💡 <strong>CFE</strong> : vérifier le montant exact sur <a href="https://www.impots.gouv.fr" target="_blank" style="color:var(--primary);text-decoration:none;">impots.gouv.fr</a> (Paris 9e, 1m²)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 4: Charges du mois -->
+        <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">Charges du mois</h2>
+        <div class="grid grid-2">
+            <div class="card fade-in" style="animation-delay:0.35s">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                    <span style="font-weight:600;">Détail charges</span>
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <button onclick="switchChargesMonth(-1)" style="background:none;border:1px solid var(--border);width:28px;height:28px;border-radius:8px;cursor:pointer;color:var(--text-light);font-size:1rem;display:flex;align-items:center;justify-content:center;">&lsaquo;</button>
+                        <span id="charges-month-label" style="font-weight:500;font-size:0.88rem;min-width:110px;text-align:center;">Février 2026</span>
+                        <button onclick="switchChargesMonth(1)" style="background:none;border:1px solid var(--border);width:28px;height:28px;border-radius:8px;cursor:pointer;color:var(--text-light);font-size:1rem;display:flex;align-items:center;justify-content:center;">&rsaquo;</button>
+                    </div>
+                </div>
+                <div id="charges-content"></div>
+            </div>
+            <div class="card fade-in" style="animation-delay:0.4s">
+                <div style="font-weight:600;margin-bottom:14px;">Taux appliqués</div>
+                <div class="sim-row"><span class="sim-label">TVA</span><span class="sim-value">20% (incluse dans TTC)</span></div>
+                <div class="sim-row"><span class="sim-label">URSSAF</span><span class="sim-value">23.1% sur CA HT</span></div>
+                <div class="sim-row"><span class="sim-label">IR libératoire</span><span class="sim-value">2.2% sur CA HT</span></div>
+                <div class="sim-row"><span class="sim-label">Total charges</span><span class="sim-value" style="font-weight:700;">25.3% sur CA HT</span></div>
+                <div style="margin-top:14px;padding:10px 14px;background:rgba(28,187,200,0.06);border-radius:8px;border:1px solid rgba(28,187,200,0.15);font-size:0.78rem;color:var(--text-light);">
+                    💡 <strong>Calcul :</strong> Net = CA TTC - TVA - URSSAF - IR<br>
+                    CA HT = CA TTC ÷ 1.20
+                </div>
+            </div>
+        </div>`;
+        renderChargesMonth();
     }
 
     // ===== DEVIS & FACTURES =====
