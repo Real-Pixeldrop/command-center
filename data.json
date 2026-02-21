@@ -825,6 +825,18 @@
       "deadline": "",
       "statut": "Livre",
       "details": null
+    },
+    {
+      "nom": "Site vitrine Maya Hua",
+      "client": "Marine Dehr (Maya Hua)",
+      "type": "Site vitrine",
+      "deadline": "Avril 2026",
+      "statut": "En cours",
+      "details": {
+        "url": "mayahua.com",
+        "activite": "Bougies artisanales",
+        "notes": "Vitrine + ateliers + events + paiement en ligne. Brief recu 20/02."
+      }
     }
   ],
   "clients": [
@@ -880,13 +892,13 @@
       "ca_total": 6760,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": null,
+      "dernier_contact": "2026-02-21",
       "nom_entreprise": null,
       "siret": null,
       "adresse": null,
       "ca_2024": 3996,
       "nb_opps_notion": 7,
-      "derniere_maintenance": null
+      "derniere_maintenance": "2026-02-21"
     },
     {
       "nom": "LXB Construction",
@@ -1695,6 +1707,48 @@
       "contact_principal": "Thomas Friedland",
       "poste_contact": "Employee (role exact a confirmer)",
       "notes": "Ami d Akli. Se sont vus a Londres. Thomas trouve le site pas a la hauteur des produits. Veut une touche plus premium. Site fait avec Framer. Startup YC S23, fondee par Amir Prodensky (CEO) et Arash Khazaei (CTO). ~10 employes. AI vocale pour assurances (carriers, brokers, MGAs). Source WhatsApp 18/02/2026."
+    },
+    {
+      "nom": "Marine Dehr (Maya Hua)",
+      "site": "mayahua.com",
+      "telephone": "",
+      "email": "",
+      "dernier_contact": "2026-02-20",
+      "statut": "Projet en cours",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "ca_total": 0,
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "nom_entreprise": "Maya Hua",
+      "siret": null,
+      "adresse": null,
+      "derniere_maintenance": null,
+      "contact_principal": "Marine Dehr",
+      "notes": "Via Thiago (ami). Bougies artisanales non parfumees. Site vitrine + ateliers + events. Deadline avril 2026. En attente cahier des charges + exemples sites."
+    },
+    {
+      "nom": "Stephane Coutanson (Promethee T&I)",
+      "site": "",
+      "telephone": "",
+      "email": "",
+      "dernier_contact": "2026-02-21",
+      "statut": "Prospect",
+      "maintenance": "Non",
+      "fin_contrat": "--",
+      "ca_total": 0,
+      "ca_2025": 0,
+      "ca_2026": 0,
+      "nb_factures": 0,
+      "nb_projets": 0,
+      "nom_entreprise": "Promethee T&I",
+      "siret": null,
+      "adresse": null,
+      "derniere_maintenance": null,
+      "contact_principal": "Stephane COUTANSON, Ph.D.",
+      "notes": "Prospect LinkedIn 12/02. IA/industrie. Call propose semaine prochaine (jeudi/vendredi). Source Sales Navigator."
     }
   ],
   "pipeline": [
@@ -1707,10 +1761,10 @@
     },
     {
       "nom": "L.I.Partners",
-      "desc": "Refonte site web - RDV obtenu",
+      "desc": "Refonte site web - Visios programmées",
       "montant": "8 400€",
-      "etape": "rdv_planifie",
-      "prochaine_action": "RDV jeudi 19/02 à 15h dans leurs locaux (15 rue Jean Jaurès, Puteaux)"
+      "etape": "en_cours",
+      "prochaine_action": "Visios individuelles programmées avec Alexandre, Lydia et Franck avant COMEX 16/03"
     },
     {
       "nom": "FIDOLUX",
@@ -1721,11 +1775,11 @@
     },
     {
       "nom": "Black Trombone",
-      "desc": "Tests et validation",
-      "montant": "5 600€",
-      "etape": "offre_envoyee",
-      "prochaine_action": "Attente retour Johan",
-      "detail": "Automatisation DernièreDispo (600€) + Consulting SEO complet (5 000€ + 400€/mois)",
+      "desc": "Corrections site + Automatisation IA DerniereDispo - nouvelle demande elargie",
+      "montant": "A redefinir (scope elargi)",
+      "etape": "en_discussion",
+      "prochaine_action": "Call 15min a caler semaine prochaine pour cadrer scope automatisation IA",
+      "detail": "Ancien devis D-2026-0222 (600€ Brevo) depasse. Johan demande: 1) corrections coquilles site 2) etude automatisation IA (prospection lieux, matching, relances, UX). Scope plus large.",
       "statut": "en_cours"
     },
     {
@@ -1753,7 +1807,14 @@
       "desc": "Audit UX/design site getstrada.com + recommandations premium",
       "montant": "A definir",
       "etape": "en_discussion",
-      "prochaine_action": "Explorer le site, attendre liens concurrents, preparer liste de recommandations (deadline: semaine du 24/02)"
+      "prochaine_action": "Explorer le site, preparer recommandations (deadline: semaine du 24/02)"
+    },
+    {
+      "nom": "Marine Dehr / Maya Hua",
+      "desc": "Site vitrine bougies artisanales - brief recu",
+      "montant": "A definir",
+      "etape": "en_discussion",
+      "prochaine_action": "Attente cahier des charges + exemples sites. Preparer devis."
     }
   ],
   "pipeline_kpis": {
@@ -1791,14 +1852,7 @@
       "montant_ttc_num": 780
     },
     {
-      "client": "Black Trombone",
-      "montant": "5 000 €",
-      "statut": "en_attente",
-      "date": "2026-02-12",
-      "detail": "Consulting digital complet - Audit + Exécution + Automatisations + Suivi mensuel 400€/mois"
-    },
-    {
-      "nom": "Devis D-2026-0218",
+      "nom": "Devis D-2026-0222",
       "client": "Black Trombone",
       "montant": "600 €",
       "montant_num": 600,
@@ -1807,7 +1861,8 @@
       "date_accepte": null,
       "objet": "Automatisation DernièreDispo / Brevo",
       "date": "10/02/2026",
-      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=OTUuJw3EuPhkNDIor09n0oqV3LlULgKpFvr3b0zkxdQ5gfLcvMm2XeUuVCOCfJ%2BpS3%2B9w%2FsSIURBl2eivTrL3Pdn8esZbnyvJzS9xEUhk5xO8PqcYSEigRbp--PyMDyI0zfmnUxKH3--k5oW076EVJes%2FqstrQH%2Bxw%3D%3D"
+      "pdf": "https://app.pennylane.com/public/invoice/pdf?encrypted_id=DPRCBXs72n1ZapBKl1aU20zXlhXxfBl9%2FgwGp%2BacNuOFPnZV2jTvoHgzoj8TrsKBfVmRC%2BzK4bDRmWOls3aOU0MQx1MqOolJTEobxHq%2BpOIwz8aoKTkCpRtZ--zEIE%2FogaWFYfQsEU--PIzWJOpum8UK71VIercKzg%3D%3D",
+      "note": "Dernière version du devis sur Pennylane (5 versions créées D-2026-0218 à 0222)"
     },
     {
       "nom": "Devis D-2026-0216",
