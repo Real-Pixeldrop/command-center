@@ -2998,73 +2998,27 @@
     ]
   },
   "abonnements": [
-    {
-      "outil": "Hostinger",
-      "cout": "~10€",
-      "categorie": "Infrastructure",
-      "notes": "Hebergement sites clients",
-      "badge_color": "blue"
-    },
-    {
-      "outil": "Brevo",
-      "cout": "Gratuit",
-      "categorie": "Marketing",
-      "notes": "Plan gratuit, newsletters",
-      "badge_color": "green"
-    },
-    {
-      "outil": "Pennylane",
-      "cout": "?",
-      "categorie": "Comptabilite",
-      "notes": "Devis + factures",
-      "badge_color": "orange"
-    },
-    {
-      "outil": "Cloudflare",
-      "cout": "Gratuit",
-      "categorie": "Infrastructure",
-      "notes": "DNS + domaines",
-      "badge_color": "blue"
-    },
-    {
-      "outil": "Anthropic / OpenAI",
-      "cout": "~30€",
-      "categorie": "Outils IA",
-      "notes": "APIs",
-      "badge_color": "gray"
-    },
-    {
-      "outil": "Clawdbot",
-      "cout": "Gratuit",
-      "categorie": "Outils IA",
-      "notes": "Assistante Claudia",
-      "badge_color": "gray"
-    },
-    {
-      "outil": "Figma ?",
-      "cout": "?",
-      "categorie": "Design",
-      "notes": "A ajouter",
-      "badge_color": "gray",
-      "placeholder": true
-    },
-    {
-      "outil": "Telephone pro ?",
-      "cout": "?",
-      "categorie": "Telecom",
-      "notes": "A ajouter",
-      "badge_color": "gray",
-      "placeholder": true
-    },
-    {
-      "outil": "RC Pro / Assurance ?",
-      "cout": "?",
-      "categorie": "Assurance",
-      "notes": "A ajouter",
-      "badge_color": "gray",
-      "placeholder": true
-    }
+    {"outil": "Google Workspace", "cout": "19,44€", "cout_num": 19.44, "categorie": "Infrastructure", "notes": "Emails pro + Drive (contact@pixel-drop.com, claudia@pixel-drop.com)", "statut": "actif"},
+    {"outil": "Pennylane", "cout": "24€", "cout_num": 24, "categorie": "Comptabilité", "notes": "Devis + factures + compta", "statut": "actif"},
+    {"outil": "Figma", "cout": "24€", "cout_num": 24, "categorie": "Design", "notes": "Maquettes et design UI", "statut": "actif"},
+    {"outil": "Freepik Premium", "cout": "19,20€", "cout_num": 19.20, "categorie": "Design", "notes": "Assets graphiques (photos, icônes)", "statut": "actif"},
+    {"outil": "Notion", "cout": "13,80€", "cout_num": 13.80, "categorie": "Productivité", "notes": "CRM + gestion projets", "statut": "actif"},
+    {"outil": "Igoflex (tel pro)", "cout": "11,98€", "cout_num": 11.98, "categorie": "Télécom", "notes": "Ligne téléphonique pro", "statut": "actif"},
+    {"outil": "OpenAI", "cout": "~10€", "cout_num": 10.18, "categorie": "Outils IA", "notes": "API ChatGPT", "statut": "actif"},
+    {"outil": "Google Cloud (APIs)", "cout": "Variable", "cout_num": 20, "categorie": "Outils IA", "notes": "APIs Gemini, Google Places (1-38€/mois)", "statut": "actif"},
+    {"outil": "N26 Smart", "cout": "4,90€", "cout_num": 4.90, "categorie": "Banque", "notes": "Compte bancaire", "statut": "actif"},
+    {"outil": "Facebook Ads", "cout": "Variable", "cout_num": 55, "categorie": "Marketing", "notes": "Publicité Facebook/Instagram (~55€/mois en fev)", "statut": "actif"},
+    {"outil": "Hostinger", "cout": "~10€", "cout_num": 10, "categorie": "Infrastructure", "notes": "Hébergement sites clients", "statut": "actif"},
+    {"outil": "YouTube Premium", "cout": "12,99€", "cout_num": 12.99, "categorie": "Mixte", "notes": "Veille tech + perso", "statut": "actif"},
+    {"outil": "Brevo", "cout": "Gratuit", "cout_num": 0, "categorie": "Marketing", "notes": "Plan gratuit, newsletters", "statut": "actif"},
+    {"outil": "Cloudflare", "cout": "Gratuit", "cout_num": 0, "categorie": "Infrastructure", "notes": "DNS + domaines", "statut": "actif"},
+    {"outil": "Clawdbot", "cout": "Gratuit", "cout_num": 0, "categorie": "Outils IA", "notes": "Assistante Claudia", "statut": "actif"}
   ],
+  "abonnements_kpis": {
+    "total_mensuel_estime": "~170€",
+    "outils_actifs": 15,
+    "prochain_renouvellement": "--"
+  },
   "prospects": [
     {
       "entreprise": "DECORENOV",

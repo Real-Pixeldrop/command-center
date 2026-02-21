@@ -434,6 +434,7 @@
         .badge-blue { background: #dbeafe; color: #1e40af; }
         .badge-gray { background: #f3f4f6; color: #4b5563; }
         .badge-purple { background: rgba(147,51,234,0.1); color: #9333ea; }
+        .badge-slate { background: #e2e8f0; color: #475569; }
 
         /* ===== PROGRESS ===== */
         .progress-bar {
@@ -3531,20 +3532,49 @@
     // ===== ABONNEMENTS =====
     function renderAbonnements() {
         const abos = DATA.abonnements;
-        const actifs = abos.filter(a => !a.placeholder).length;
+        const kpis = DATA.abonnements_kpis || {};
+        const actifs = kpis.outils_actifs || abos.filter(a => a.statut === 'actif').length;
+        const totalEstime = kpis.total_mensuel_estime || '~170€';
+        const prochainRenouv = kpis.prochain_renouvellement || '--';
+
+        // Calculate total from cout_num
+        const totalCalc = abos.reduce((sum, a) => sum + (a.cout_num || 0), 0);
+        const totalFmt = totalCalc.toFixed(2).replace('.', ',') + '€';
+
+        // Category badge colors
+        function catBadge(cat) {
+            const c = cat.toLowerCase();
+            if (c.includes('infrastructure')) return 'badge-blue';
+            if (c.includes('comptabilit')) return 'badge-orange';
+            if (c.includes('design')) return 'badge-purple';
+            if (c.includes('productivit')) return 'badge-green';
+            if (c.includes('télécom') || c.includes('telecom')) return 'badge-orange';
+            if (c.includes('outils ia') || c.includes('ia')) return 'badge-gray';
+            if (c.includes('banque')) return 'badge-blue';
+            if (c.includes('marketing')) return 'badge-green';
+            if (c.includes('mixte')) return 'badge-slate';
+            return 'badge-gray';
+        }
 
         let rows = abos.map(a => {
-            const style = a.placeholder ? 'color:var(--text-light);font-style:italic' : '';
-            const noteStyle = a.placeholder ? 'color:var(--text-light)' : '';
-            return `<tr><td style="${style}">${esc(a.outil)}</td><td>${esc(a.cout)}</td><td><span class="badge badge-${a.badge_color}">${esc(a.categorie)}</span></td><td style="${noteStyle}">${esc(a.notes)}</td></tr>`;
+            const coutStyle = (a.cout === 'Gratuit') ? 'color:var(--success);font-weight:600' : (a.cout === 'Variable' ? 'color:var(--warning);font-weight:500' : '');
+            const badgeCls = catBadge(a.categorie);
+            return `<tr>
+                <td style="font-weight:500">${esc(a.outil)}</td>
+                <td style="${coutStyle}">${esc(a.cout)}</td>
+                <td>${a.cout_num !== undefined ? (a.cout_num > 0 ? a.cout_num.toFixed(2).replace('.', ',') + '€' : '--') : '--'}</td>
+                <td><span class="badge ${badgeCls}">${esc(a.categorie)}</span></td>
+                <td>${esc(a.notes)}</td>
+                <td><span class="badge badge-green">${esc(a.statut || 'actif')}</span></td>
+            </tr>`;
         }).join('');
 
         document.getElementById('abonnements-content').innerHTML = `
         <div class="grid grid-3">
             <div class="card fade-in" style="animation-delay:0.1s">
-                <div class="card-label">Total mensuel estime</div>
-                <div class="card-value primary">~50€</div>
-                <div class="card-sub">a completer</div>
+                <div class="card-label">Total mensuel estimé</div>
+                <div class="card-value primary">${esc(totalEstime)}</div>
+                <div class="card-sub">Calculé : ${totalFmt}</div>
             </div>
             <div class="card fade-in" style="animation-delay:0.15s">
                 <div class="card-label">Outils actifs</div>
@@ -3552,18 +3582,17 @@
             </div>
             <div class="card fade-in" style="animation-delay:0.2s">
                 <div class="card-label">Prochain renouvellement</div>
-                <div class="card-value primary">--</div>
+                <div class="card-value primary">${esc(prochainRenouv)}</div>
             </div>
         </div>
 
         <div class="card table-card fade-in" style="animation-delay:0.25s">
             <div class="table-header">Liste des abonnements</div>
             <table>
-                <thead><tr><th>Outil</th><th>Cout/mois</th><th>Categorie</th><th>Notes</th></tr></thead>
+                <thead><tr><th>Outil</th><th>Coût/mois</th><th>Coût num.</th><th>Catégorie</th><th>Notes</th><th>Statut</th></tr></thead>
                 <tbody>${rows}</tbody>
             </table>
-        </div>
-        <p style="color:var(--text-light);font-size:0.85rem;margin-top:16px;text-align:center;">Complete cette liste ! Dis a Claudia tes abonnements manquants.</p>`;
+        </div>`;
     }
 
     // ===== MARKETING =====
