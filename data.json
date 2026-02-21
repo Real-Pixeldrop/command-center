@@ -3537,22 +3537,8 @@
   ],
   "taches": [
     {
-      "titre": "Check hebdo sites WP 09:00 - 10:00",
-      "desc": "Vendredi 20/02 — 10:00",
-      "badge": "Maintenance",
-      "badge_color": "green",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Consulting Black Trombone - SEO 10:30 - 12:45",
-      "desc": "Vendredi 20/02 — 10:30",
-      "badge": "Marketing",
-      "badge_color": "blue",
-      "colonne": "a_faire"
-    },
-    {
-      "titre": "Pencil.dev : fork + version stable 14:00 - 18:00",
-      "desc": "Vendredi 20/02 — 14:00",
+      "titre": "Strada : exploration site + premieres notes 14:00 - 15:00",
+      "desc": "Samedi 21/02",
       "badge": "Tâche",
       "badge_color": "blue",
       "colonne": "a_faire"
