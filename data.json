@@ -3966,13 +3966,6 @@
   ],
   "taches": [
     {
-      "titre": "Strada : exploration site + premieres notes 14:00 - 15:00",
-      "desc": "Samedi 21/02",
-      "badge": "Tâche",
-      "badge_color": "blue",
-      "colonne": "a_faire"
-    },
-    {
       "titre": "Habitat Multi-Service",
       "desc": "Finaliser maquette Figma, puis créer site WordPress",
       "badge": "Site Web",
