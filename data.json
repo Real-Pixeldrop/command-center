@@ -4136,6 +4136,13 @@
   ],
   "taches": [
     {
+      "titre": "Relance Fidolux - 9700€ 10:00 - 10:30",
+      "desc": "Lundi 23/02",
+      "badge": "Relance",
+      "badge_color": "red",
+      "colonne": "a_faire"
+    },
+    {
       "titre": "Habitat Multi-Service",
       "desc": "Finaliser maquette Figma, puis créer site WordPress",
       "badge": "Site Web",
