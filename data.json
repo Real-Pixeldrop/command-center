@@ -1302,7 +1302,7 @@
       "site": "li.partners",
       "telephone": "01 39 04 60 40",
       "email": "antoine.jude@li.partners",
-      "dernier_contact": "2026-02-19",
+      "dernier_contact": "2026-02-24",
       "statut": "Négociation",
       "maintenance": "Non",
       "fin_contrat": "--",
@@ -1318,7 +1318,7 @@
       "contact_principal": "Abdelhamid RAFIKI",
       "poste_contact": "Responsable administratif et financier / Office manager",
       "email_contact": "abdelhamid.rafiki@li.partners",
-      "notes": "RDV 19/02 positif. Antoine JUDE OK pour le projet, recommande présentation COMEX le 16/03.\nSTRATÉGIE : convaincre un par un (visios individuelles) puis finaliser au COMEX.\nAntoine a donné des tips pour que ça passe. Pas d'objection de sa part.\nLes autres sont plus réticents au changement.\nAUTOMATISATION : le sujet les a intéressés mais ils veulent y aller doucement. Akli veut appuyer car ROI direct vs site web.\n\nCONTACTS COMEX :\n- Antoine JUDE (DG) : favorable, veut que ça change\n- Lydia MAZZUCCO : Directrice Actions sur site & Valorisation. Terrain, opérationnelle, met les mains dans le cambouis. Clients auto/industrie/BTP.\n- Alexandre LE HELLEY : Directeur Compétences & Formation. Innovation pédagogique, jeu, e-learning. Ex-responsable communication/marketing ITC Conseil.\n- Franck BONHOMME : Directeur Inspiration, Audit & Conseil opérationnel. Audit, conseil stratégique, data. Cas industriel (délais livraison).\n- Abdelhamid RAFIKI : Office Manager/RAF. Gère l'admin et la logistique.\n\nVISIOS TEAMS à caler (liens créés par Abdelhamid, dates à fixer) :\n- Avec Alexandre LE HELLEY\n- Avec Lydia MAZZUCCO\n- Avec Franck BONHOMME",
+      "notes": "RDV 19/02 positif. Antoine JUDE OK pour le projet, recommande présentation COMEX le 16/03.\nSTRATÉGIE : convaincre un par un (visios individuelles) puis finaliser au COMEX.\nAntoine a donné des tips pour que ça passe. Pas d'objection de sa part.\nLes autres sont plus réticents au changement.\nAUTOMATISATION : le sujet les a intéressés mais ils veulent y aller doucement. Akli veut appuyer car ROI direct vs site web.\n\nCONTACTS COMEX :\n- Antoine JUDE (DG) : favorable, veut que ça change\n- Lydia MAZZUCCO : Directrice Actions sur site & Valorisation. Terrain, opérationnelle, met les mains dans le cambouis. Clients auto/industrie/BTP.\n- Alexandre LE HELLEY : Directeur Compétences & Formation. Innovation pédagogique, jeu, e-learning. Ex-responsable communication/marketing ITC Conseil.\n- Franck BONHOMME : Directeur Inspiration, Audit & Conseil opérationnel. Audit, conseil stratégique, data. Cas industriel (délais livraison).\n- Abdelhamid RAFIKI : Office Manager/RAF. Gère l'admin et la logistique.\n\nVISIOS TEAMS à caler (liens créés par Abdelhamid, dates à fixer) :\n- Avec Alexandre LE HELLEY\n- Avec Lydia MAZZUCCO\n- Avec Franck BONHOMME\n\nRDV 24/02 avec Franck BONHOMME : passé en revue le site page par page. Focus bugs actuels + souhait chatbot IA + page internationale + harmonisation LinkedIn. Franck peu engagé, ambiance mitigée. Prochaine étape : visios Alexandre et Lydia avant COMEX 16/03.",
       "notion_notes": "Refonte site web L.I.Partners (Offre envoyée ✉️): 7000€",
       "site_web": "https://www.li.partners",
       "activite": "Cabinet conseil - Formation - Leadership - Transformation (Qualiopi)",
@@ -2031,7 +2031,7 @@
       "desc": "Refonte site web - Visios programmées",
       "montant": "8 400€",
       "etape": "en_cours",
-      "prochaine_action": "Visios individuelles programmées avec Alexandre, Lydia et Franck avant COMEX 16/03"
+      "prochaine_action": "Visio Franck OK (24/02). Reste : Alexandre et Lydia avant COMEX 16/03"
     },
     {
       "nom": "FIDOLUX",
@@ -6085,5 +6085,5 @@
       "date_ajout": "2026-02-16"
     }
   ],
-  "pennylane_last_sync": "2026-02-24 08:01"
+  "pennylane_last_sync": "2026-02-24 14:00"
 }
