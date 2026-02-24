@@ -4136,10 +4136,24 @@
   ],
   "taches": [
     {
-      "titre": "Relance Fidolux - 9700€ 10:00 - 10:30",
-      "desc": "Lundi 23/02",
-      "badge": "Relance",
-      "badge_color": "red",
+      "titre": "rdv chauffage -  09:30 - 09:55",
+      "desc": "Mardi 24/02 — 10:00",
+      "badge": "Client",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Seedance 2.0 - Sortie officielle (tester vidéo pub Pixel Drop) 10:00 - 10:30",
+      "desc": "Mardi 24/02 — 11:00",
+      "badge": "Tâche",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Marine Dehr (Maya Hua) - Brief site bougies 11:30 - 12:00",
+      "desc": "Mardi 24/02 — 14:00",
+      "badge": "Tâche",
+      "badge_color": "blue",
       "colonne": "a_faire"
     },
     {
