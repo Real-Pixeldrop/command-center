@@ -985,7 +985,7 @@
       "nom_entreprise": null,
       "siret": null,
       "adresse": null,
-      "derniere_maintenance": null,
+      "derniere_maintenance": "2026-02-25",
       "notion_notes": "Dernière Dispo 1/2 (Client signé ✨): 1765.35€; Dernière Dispo 2/2 (Client signé ✨): 1765.35€",
       "contact_nom": "Johan Maurice",
       "contact_poste": "Gérant"
@@ -4132,6 +4132,17 @@
       "siren": "494160849",
       "activite": "25.62B",
       "source": "prospection_auto_20260217"
+    },
+    {
+      "nom": "Sonia Bakri",
+      "entreprise": "I-Deal Development",
+      "poste": "Responsable Marketing et Communication",
+      "source": "LinkedIn (relance)",
+      "statut": "Contacté",
+      "date_contact": "2026-02-25",
+      "canal": "LinkedIn",
+      "notes": "Ancien contact pour refonte site, avaient choisi un autre prestataire. Relance angle IA. Message envoyé le 25/02.",
+      "ville": "Paris"
     }
   ],
   "taches": [
@@ -6078,5 +6089,5 @@
       "date_ajout": "2026-02-16"
     }
   ],
-  "pennylane_last_sync": "2026-02-25 14:12"
+  "pennylane_last_sync": "2026-02-25 21:17"
 }
