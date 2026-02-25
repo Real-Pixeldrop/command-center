@@ -3163,12 +3163,12 @@
   ],
   "devis_kpis": {
     "en_attente": {
-      "count": 4,
-      "montant": "16 300€ potentiels"
+      "count": 2,
+      "montant": "10 300€ potentiels"
     },
     "acceptes": {
-      "count": 69,
-      "montant": "73 705€"
+      "count": 0,
+      "montant": "0€"
     },
     "factures_payees": {
       "count": 2,
