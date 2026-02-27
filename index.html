@@ -2228,14 +2228,110 @@
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
     let DATA = {};
 
-    // ===== LOAD DATA =====
-    fetch('data.json?v=' + Date.now())
-        .then(r => r.json())
-        .then(d => { DATA = d; renderAll(); })
-        .catch(e => console.error('Erreur chargement data.json:', e));
+    // ===== SUPABASE CONFIG =====
+    const SUPABASE_URL = 'https://toetcpmczoshwrkvzbog.supabase.co';
+    const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRvZXRjcG1jem9zaHdya3Z6Ym9nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyMjY2OTYsImV4cCI6MjA4NzgwMjY5Nn0.W6rYJ4iognsmk8KbtnJe03SxLxYw9OvBwHeWBX9upA4';
+    const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
+    // Tables to fetch from Supabase (live data)
+    const LIVE_TABLES = ['clients', 'prospects', 'devis', 'factures', 'projets', 'pipeline', 'sites'];
+
+    async function loadFromSupabase() {
+        const results = {};
+        for (const table of LIVE_TABLES) {
+            const { data, error } = await sb.from(table).select('*');
+            if (error) { console.error(`Supabase ${table}:`, error); results[table] = []; }
+            else { results[table] = data; }
+        }
+        return results;
+    }
+
+    function convertDates(rows) {
+        // Convert YYYY-MM-DD back to DD/MM/YYYY for compatibility
+        return rows.map(r => {
+            const out = {...r};
+            for (const [k, v] of Object.entries(out)) {
+                if (v && typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v)) {
+                    const [y, m, d] = v.split('-');
+                    out[k] = `${d}/${m}/${y}`;
+                }
+            }
+            return out;
+        });
+    }
+
+    // ===== LOAD DATA (Supabase + data.json fallback) =====
+    async function loadData() {
+        try {
+            // Load static data from data.json (objectifs, kpis, finances, marketing, etc.)
+            const staticData = await fetch('data.json?v=' + Date.now()).then(r => r.json());
+            DATA = staticData;
+
+            // Override dynamic tables with live Supabase data
+            const live = await loadFromSupabase();
+            DATA.clients = convertDates(live.clients || []);
+            DATA.prospects = convertDates(live.prospects || []);
+            DATA.devis = convertDates(live.devis.map(d => ({
+                ...d, montant_num: d.montant_ht, montant_ttc_num: d.montant_ttc,
+                date: d.date_envoi, nom: d.nom || ''
+            })) || []);
+            DATA.factures = convertDates(live.factures.map(f => ({
+                ...f, montant_num: f.montant_ht, date: f.date_emission, nom: f.nom || ''
+            })) || []);
+            DATA.projets = convertDates(live.projets || []);
+            DATA.pipeline = live.pipeline.map(p => ({...p, desc: p.description})) || [];
+            DATA.sites = convertDates(live.sites.map(s => ({
+                ...s, full_url: s.full_url || s.url, api: s.api_url, maj_dispo: s.maj_dispo
+            })) || []);
+
+            console.log('✅ Loaded from Supabase + data.json');
+            renderAll();
+
+            // Setup realtime subscriptions
+            setupRealtime();
+        } catch(e) {
+            console.error('Supabase load failed, falling back to data.json:', e);
+            fetch('data.json?v=' + Date.now())
+                .then(r => r.json())
+                .then(d => { DATA = d; renderAll(); })
+                .catch(e2 => console.error('Fallback failed too:', e2));
+        }
+    }
+
+    function setupRealtime() {
+        LIVE_TABLES.forEach(table => {
+            sb.channel(`realtime-${table}`)
+                .on('postgres_changes', { event: '*', schema: 'public', table }, (payload) => {
+                    console.log(`🔄 Realtime update on ${table}:`, payload.eventType);
+                    // Reload that table and re-render
+                    sb.from(table).select('*').then(({ data }) => {
+                        if (data) {
+                            if (table === 'devis') {
+                                DATA.devis = convertDates(data.map(d => ({...d, montant_num: d.montant_ht, montant_ttc_num: d.montant_ttc, date: d.date_envoi})));
+                            } else if (table === 'factures') {
+                                DATA.factures = convertDates(data.map(f => ({...f, montant_num: f.montant_ht, date: f.date_emission})));
+                            } else if (table === 'pipeline') {
+                                DATA.pipeline = data.map(p => ({...p, desc: p.description}));
+                            } else if (table === 'sites') {
+                                DATA.sites = convertDates(data.map(s => ({...s, full_url: s.full_url || s.url, api: s.api_url})));
+                            } else {
+                                DATA[table] = convertDates(data);
+                            }
+                            renderAll();
+                        }
+                    });
+                })
+                .subscribe();
+        });
+        console.log('📡 Realtime subscriptions active');
+    }
+
+    // Start loading
+    loadData();
 
     // ===== UTILITY =====
     function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
