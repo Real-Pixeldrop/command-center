@@ -1478,6 +1478,14 @@
     <div class="sidebar-header">
         <button class="toggle-btn" id="toggleBtn">&#9776;</button>
         <img src="logo.svg" alt="Pixel Drop" class="sidebar-logo" style="height:28px;width:auto;">
+        <button id="syncBtn" onclick="syncPennylane()" title="Sync Pennylane" style="
+            background:none;border:1px solid rgba(255,255,255,0.15);border-radius:6px;
+            color:rgba(255,255,255,0.6);cursor:pointer;padding:4px 8px;font-size:0.75rem;
+            margin-left:auto;transition:all 0.2s;display:flex;align-items:center;gap:4px;
+        " onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'" 
+           onmouseout="this.style.borderColor='rgba(255,255,255,0.15)';this.style.color='rgba(255,255,255,0.6)'">
+            <span id="syncIcon">&#8635;</span> Sync
+        </button>
     </div>
 
     <div class="sidebar-nav">
@@ -2329,6 +2337,50 @@
         });
         console.log('📡 Realtime subscriptions active');
     }
+
+    // ===== SYNC PENNYLANE =====
+    async function syncPennylane() {
+        const btn = document.getElementById('syncBtn');
+        const icon = document.getElementById('syncIcon');
+        btn.style.pointerEvents = 'none';
+        icon.style.animation = 'spin 1s linear infinite';
+        btn.innerHTML = '<span id="syncIcon" style="animation:spin 1s linear infinite">&#8635;</span> Sync...';
+        
+        try {
+            const r = await fetch(SUPABASE_URL + '/functions/v1/sync-pennylane', {
+                method: 'POST',
+                headers: { 'Authorization': 'Bearer ' + SUPABASE_ANON, 'Content-Type': 'application/json' }
+            });
+            const result = await r.json();
+            if (result.ok) {
+                btn.innerHTML = '<span>&#10003;</span> OK';
+                btn.style.borderColor = '#10b981';
+                btn.style.color = '#10b981';
+                // Reload data from Supabase
+                await loadData();
+            } else {
+                btn.innerHTML = '<span>&#10007;</span> Erreur';
+                btn.style.borderColor = '#ef4444';
+                btn.style.color = '#ef4444';
+            }
+        } catch(e) {
+            btn.innerHTML = '<span>&#10007;</span> Erreur';
+            btn.style.borderColor = '#ef4444';
+            btn.style.color = '#ef4444';
+        }
+        
+        setTimeout(() => {
+            btn.innerHTML = '<span id="syncIcon">&#8635;</span> Sync';
+            btn.style.pointerEvents = 'auto';
+            btn.style.borderColor = 'rgba(255,255,255,0.15)';
+            btn.style.color = 'rgba(255,255,255,0.6)';
+        }, 2000);
+    }
+
+    // Add spin animation
+    const style = document.createElement('style');
+    style.textContent = '@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }';
+    document.head.appendChild(style);
 
     // Start loading
     loadData();
