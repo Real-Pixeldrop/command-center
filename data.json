@@ -5,7 +5,7 @@
   },
   "kpis": {
     "ca_mensuel": 780,
-    "ca_mensuel_mois": "February 2026",
+    "ca_mensuel_mois": "March 2026",
     "clients_actifs": 100,
     "trafic_pd": 31,
     "devis_attente": 4
@@ -4233,7 +4233,7 @@
       "full_url": "https://festival.plazatango.com",
       "maintenance": "Active",
       "fin_contrat": "04/01/2030",
-      "maj_dispo": "7",
+      "maj_dispo": "8",
       "api": true,
       "type": "wordpress",
       "derniere_maintenance": null
@@ -6082,5 +6082,5 @@
       "date_ajout": "2026-02-16"
     }
   ],
-  "pennylane_last_sync": "2026-02-28 20:03"
+  "pennylane_last_sync": "2026-03-01 09:51"
 }
