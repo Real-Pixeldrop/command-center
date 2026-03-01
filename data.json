@@ -4147,8 +4147,8 @@
   ],
   "taches": [
     {
-      "titre": "Migration PlanetHoster Crapanne - Fusion hébergements 10:00 - 12:00",
-      "desc": "Samedi 28/02 — 15:00",
+      "titre": "Bilan finances perso /coach 10:00 - 10:30",
+      "desc": "Dimanche 01/03",
       "badge": "Tâche",
       "badge_color": "blue",
       "colonne": "a_faire"
@@ -4223,7 +4223,7 @@
       "full_url": "https://pixel-drop.com",
       "maintenance": "Active",
       "fin_contrat": "04/10/2030",
-      "maj_dispo": "3",
+      "maj_dispo": "0",
       "api": true,
       "type": "wordpress",
       "derniere_maintenance": null
@@ -4233,7 +4233,7 @@
       "full_url": "https://festival.plazatango.com",
       "maintenance": "Active",
       "fin_contrat": "04/01/2030",
-      "maj_dispo": "5",
+      "maj_dispo": "7",
       "api": true,
       "type": "wordpress",
       "derniere_maintenance": null
@@ -4253,7 +4253,7 @@
       "full_url": "https://pepitesdesthetique.com",
       "maintenance": "Active",
       "fin_contrat": "12/10/2026",
-      "maj_dispo": "6",
+      "maj_dispo": "1",
       "api": true,
       "type": "wordpress",
       "derniere_maintenance": null
@@ -4273,7 +4273,7 @@
       "full_url": "https://lxbconstruction.com",
       "maintenance": "Active",
       "fin_contrat": "04/10/2026",
-      "maj_dispo": "3",
+      "maj_dispo": "1",
       "api": true,
       "type": "wordpress",
       "derniere_maintenance": "2026-02-10"
@@ -4283,7 +4283,7 @@
       "full_url": "https://dernieredispo.com",
       "maintenance": "Active",
       "fin_contrat": "31/07/2026",
-      "maj_dispo": "2",
+      "maj_dispo": "0",
       "api": true,
       "type": "wordpress",
       "derniere_maintenance": null
@@ -4333,7 +4333,7 @@
       "full_url": "https://www.black-trombone.fr",
       "maintenance": "Inactive",
       "fin_contrat": "--",
-      "maj_dispo": "7",
+      "maj_dispo": "4",
       "api": true,
       "type": "wordpress",
       "derniere_maintenance": null
@@ -4383,7 +4383,7 @@
       "full_url": "https://licorne-invest.com",
       "maintenance": "Inactive",
       "fin_contrat": "--",
-      "maj_dispo": "?",
+      "maj_dispo": "7",
       "api": true,
       "type": "wordpress",
       "derniere_maintenance": null
@@ -4393,7 +4393,7 @@
       "full_url": "https://baptistebeloeil.com",
       "maintenance": "Inactive",
       "fin_contrat": "--",
-      "maj_dispo": "12",
+      "maj_dispo": "13",
       "api": true,
       "type": "wordpress",
       "derniere_maintenance": null
@@ -4503,7 +4503,7 @@
       "full_url": "https://redactioneliteseo.fr",
       "maintenance": "Inactive",
       "fin_contrat": "--",
-      "maj_dispo": "8",
+      "maj_dispo": "9",
       "api": true,
       "type": "wordpress",
       "derniere_maintenance": null
