@@ -4659,7 +4659,7 @@
       "fin_contrat": "30/04/2026",
       "type": "wordpress",
       "derniere_maintenance": "2026-02-10",
-      "maj_dispo": "3",
+      "maj_dispo": "4",
       "created_at": "2026-02-27T23:06:16.779519+00:00",
       "updated_at": "2026-03-01T08:50:47.383218+00:00",
       "api": true
@@ -4727,7 +4727,7 @@
       "maintenance": "Active",
       "fin_contrat": "04/10/2030",
       "type": "wordpress",
-      "maj_dispo": "0",
+      "maj_dispo": "2",
       "created_at": "2026-02-27T23:06:16.779519+00:00",
       "updated_at": "2026-03-01T08:50:31.333121+00:00",
       "api": true
@@ -4763,7 +4763,7 @@
       "maintenance": "Active",
       "fin_contrat": "12/10/2026",
       "type": "wordpress",
-      "maj_dispo": "1",
+      "maj_dispo": "2",
       "created_at": "2026-02-27T23:06:16.779519+00:00",
       "updated_at": "2026-03-01T08:50:39.962749+00:00",
       "api": true
@@ -4776,7 +4776,7 @@
       "fin_contrat": "04/10/2026",
       "type": "wordpress",
       "derniere_maintenance": "2026-02-10",
-      "maj_dispo": "1",
+      "maj_dispo": "2",
       "created_at": "2026-02-27T23:06:16.779519+00:00",
       "updated_at": "2026-03-01T08:50:42.634965+00:00",
       "api": true
@@ -4788,7 +4788,7 @@
       "maintenance": "Active",
       "fin_contrat": "31/07/2026",
       "type": "wordpress",
-      "maj_dispo": "0",
+      "maj_dispo": "1",
       "created_at": "2026-02-27T23:06:16.779519+00:00",
       "updated_at": "2026-03-01T08:50:44.385176+00:00",
       "api": true
@@ -4840,17 +4840,17 @@
   ],
   "taches": [
     {
-      "titre": "Relance Ignite Media - 3000€ 10:05 - 10:35",
-      "desc": "Mardi 03/03 — 10:35",
-      "badge": "Relance",
-      "badge_color": "red",
+      "titre": "Maquette Habitat v2 - LIVRABLE: maquette finalisée 10:00 - 12:00",
+      "desc": "Mercredi 04/03 — 12:00",
+      "badge": "Design",
+      "badge_color": "blue",
       "colonne": "a_faire"
     },
     {
-      "titre": "rdv johan -  12:00 - 12:25",
-      "desc": "Mardi 03/03",
-      "badge": "Client",
-      "badge_color": "blue",
+      "titre": "Envoyer 2 devis Johan 13:15 - 13:40",
+      "desc": "Mercredi 04/03 — 14:00",
+      "badge": "Devis",
+      "badge_color": "orange",
       "colonne": "a_faire"
     },
     {
@@ -7006,5 +7006,5 @@
     "outils_actifs": 16.0,
     "conseil_ia": "Notion (13,80€/mois) peut être coupé : le Control Center et Claudia couvrent désormais 100% de ses usages (CRM, pipeline, contacts). Économie : 166€/an."
   },
-  "pennylane_last_sync": "2026-03-02 14:28"
+  "pennylane_last_sync": "2026-03-03 09:49"
 }
