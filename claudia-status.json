@@ -1,8 +1,8 @@
 {
-  "lastSync": "2026-03-04T10:29:27.726445+01:00",
+  "lastSync": "2026-03-04T16:11:38.192303+01:00",
   "heartbeats": {
     "main": {
-      "lastCheck": "2026-03-04T10:29:27.726445+01:00",
+      "lastCheck": "2026-03-04T16:11:38.192303+01:00",
       "status": "ok"
     },
     "plaza-marketing": {
@@ -15,6 +15,11 @@
     }
   },
   "recentActivity": [
+    {
+      "time": "16:11",
+      "agent": "Claudia",
+      "action": "Heartbeat check"
+    },
     {
       "time": "10:29",
       "agent": "Claudia",
@@ -49,18 +54,13 @@
       "time": "00:40",
       "agent": "Claudia",
       "action": "Tâche automatisée"
-    },
-    {
-      "time": "00:40",
-      "agent": "Claudia",
-      "action": "Tâche automatisée"
     }
   ],
   "tokenUsage": {
     "today": {
-      "input": 7351,
-      "output": 9477,
-      "cost": 0.56,
+      "input": 13875,
+      "output": 14705,
+      "cost": 0.89,
       "messagesSent": 0
     }
   }
