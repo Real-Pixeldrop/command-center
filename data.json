@@ -672,7 +672,7 @@
       "ca_total": 0.0,
       "nb_factures": 0,
       "nb_projets": 0,
-      "dernier_contact": "2026-03-02",
+      "dernier_contact": "2026-03-05",
       "siret": "353008840",
       "adresse": "13-15 Rue Jean Jaurès, 92800, Puteaux",
       "contact_principal": "Abdelhamid RAFIKI",
@@ -4659,7 +4659,7 @@
       "fin_contrat": "30/04/2026",
       "type": "wordpress",
       "derniere_maintenance": "2026-02-10",
-      "maj_dispo": "4",
+      "maj_dispo": "5",
       "created_at": "2026-02-27T23:06:16.779519+00:00",
       "updated_at": "2026-03-01T08:50:47.383218+00:00",
       "api": true
@@ -4693,7 +4693,7 @@
       "full_url": "https://bernard-emmanuel.com",
       "maintenance": "Inactive",
       "type": "wordpress",
-      "maj_dispo": "1",
+      "maj_dispo": "2",
       "created_at": "2026-02-27T23:06:16.779519+00:00",
       "updated_at": "2026-03-01T08:50:52.294802+00:00",
       "api": true
@@ -4763,7 +4763,7 @@
       "maintenance": "Active",
       "fin_contrat": "12/10/2026",
       "type": "wordpress",
-      "maj_dispo": "3",
+      "maj_dispo": "4",
       "created_at": "2026-02-27T23:06:16.779519+00:00",
       "updated_at": "2026-03-01T08:50:39.962749+00:00",
       "api": true
@@ -4839,6 +4839,34 @@
     }
   ],
   "taches": [
+    {
+      "titre": "Coiffeur 10:30 - 11:00",
+      "desc": "Vendredi 06/03 — 11:00",
+      "badge": "Tâche",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Branding Pixel Drop Technologies 14:00 - 15:00",
+      "desc": "Vendredi 06/03 — 15:00",
+      "badge": "Tâche",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Catch-up Pixel-drop/Databricks 15:30 - 16:30",
+      "desc": "Vendredi 06/03 — 15:30",
+      "badge": "Tâche",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
+    {
+      "titre": "Branding Pixel Drop Technologies (suite) 16:30 - 17:30",
+      "desc": "Vendredi 06/03",
+      "badge": "Tâche",
+      "badge_color": "blue",
+      "colonne": "a_faire"
+    },
     {
       "id": 12,
       "titre": "Habitat Multi-Service",
@@ -6992,5 +7020,5 @@
     "outils_actifs": 16.0,
     "conseil_ia": "Notion (13,80€/mois) peut être coupé : le Control Center et Claudia couvrent désormais 100% de ses usages (CRM, pipeline, contacts). Économie : 166€/an."
   },
-  "pennylane_last_sync": "2026-03-05 12:25"
+  "pennylane_last_sync": "2026-03-05 14:41"
 }
