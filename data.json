@@ -235,7 +235,8 @@
       "updated_at": "2026-02-27T23:06:15.629447+00:00",
       "ca_2024": 0.0,
       "contact_nom": "Stéphanie Ludivine",
-      "contact_poste": "Professeur d’esthétique"
+      "contact_poste": "Professeur d’esthétique",
+      "derniere_maintenance": "2026-03-08"
     },
     {
       "id": 95,
@@ -409,7 +410,8 @@
         "Huseyin Sen <ser.cafe76@gmail.com> 06 49 88 20 52 (Coach Sportif)",
         "Corinne et Thierry 0607914563 (Anciens Propriétaires)",
         "Sonia Vauchel <sonia.rioult@gmail.com> +33 6 64 70 04 47 (Coach Sportive)"
-      ]
+      ],
+      "derniere_maintenance": "2026-03-08"
     },
     {
       "id": 101,
@@ -1239,7 +1241,8 @@
       "ca_2024": 0.0,
       "nb_opps_notion": 2,
       "contact_nom": "Stéphanie Ludivine",
-      "contact_poste": "Professeur d’esthétique"
+      "contact_poste": "Professeur d’esthétique",
+      "derniere_maintenance": "2026-03-08"
     },
     {
       "id": 134,
@@ -1736,20 +1739,6 @@
       "updated_at": "2026-02-27T23:06:15.841019+00:00"
     },
     {
-      "id": 140,
-      "entreprise": "SCRM Avocats",
-      "contact": "Alexandre Chateaux (Associé)",
-      "telephone": "+352 27 12 801",
-      "email": "",
-      "secteur": "",
-      "ville": "Luxembourg",
-      "etape": "🎯 Nouveau",
-      "site_web": "https://scrm-avocats.com",
-      "linkedin": "",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00"
-    },
-    {
       "id": 141,
       "entreprise": "GSImmo Luxembourg",
       "contact": "À identifier",
@@ -1820,20 +1809,6 @@
       "updated_at": "2026-02-27T23:06:15.841019+00:00"
     },
     {
-      "id": 146,
-      "entreprise": "Adam & Bleser Avocats",
-      "contact": "Romain Adam & Claude Bleser (Partners)",
-      "telephone": "+352 47 24 24",
-      "email": "",
-      "secteur": "",
-      "ville": "Luxembourg",
-      "etape": "🎯 Nouveau",
-      "site_web": "https://adam-bleser.lu",
-      "linkedin": "",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00"
-    },
-    {
       "id": 147,
       "entreprise": "Cabexco",
       "contact": "Olivier Murru (Gérant)",
@@ -1890,20 +1865,6 @@
       "updated_at": "2026-02-27T23:06:15.841019+00:00"
     },
     {
-      "id": 151,
-      "entreprise": "LDS",
-      "contact": "",
-      "telephone": "02 40 70 16 19",
-      "email": "",
-      "secteur": "Alimentaire",
-      "ville": "Saint-Nazaire (44)",
-      "etape": "🎯 Nouveau",
-      "site_web": "",
-      "linkedin": "",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00"
-    },
-    {
       "id": 152,
       "entreprise": "COURTAIS",
       "contact": "Florent Courtais",
@@ -1927,146 +1888,6 @@
       "ville": "Deuil-la-Barre (95)",
       "etape": "❌ Pas intéressé",
       "site_web": "https://labruxelloise.fr",
-      "linkedin": "",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00"
-    },
-    {
-      "id": 154,
-      "entreprise": "Tolerie Service",
-      "contact": "(à trouver)",
-      "telephone": "03 83 53 22 23",
-      "email": "",
-      "secteur": "",
-      "ville": "",
-      "etape": "🎯 À contacter",
-      "site_web": "",
-      "linkedin": "",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00"
-    },
-    {
-      "id": 155,
-      "entreprise": "Techno Soud",
-      "contact": "(à trouver)",
-      "telephone": "03 83 20 78 84",
-      "email": "",
-      "secteur": "",
-      "ville": "",
-      "etape": "🎯 À contacter",
-      "site_web": "",
-      "linkedin": "",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00"
-    },
-    {
-      "id": 156,
-      "entreprise": "EPROLOR",
-      "contact": "Lionel GUIBERT (reprise familiale)",
-      "telephone": "03 83 75 58 80",
-      "email": "",
-      "secteur": "",
-      "ville": "",
-      "etape": "🎯 À contacter",
-      "site_web": "",
-      "linkedin": "",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00"
-    },
-    {
-      "id": 157,
-      "entreprise": "VERRISSIMA INDUSTRIE",
-      "contact": "Jonathan METZ (Président)",
-      "telephone": "03 87 96 80 55",
-      "email": "",
-      "secteur": "",
-      "ville": "",
-      "etape": "🎯 À contacter",
-      "site_web": "",
-      "linkedin": "",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00"
-    },
-    {
-      "id": 158,
-      "entreprise": "CRISTAL LASER",
-      "contact": "Dominique LUPINSKI (Président)",
-      "telephone": "03 83 47 01 01",
-      "email": "",
-      "secteur": "",
-      "ville": "",
-      "etape": "🎯 À contacter",
-      "site_web": "",
-      "linkedin": "",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00"
-    },
-    {
-      "id": 159,
-      "entreprise": "EMBALLAGES DIFFUSION",
-      "contact": "Bruno PFYFFER D'ALTISHOFEN",
-      "telephone": "03 83 75 70 17",
-      "email": "",
-      "secteur": "",
-      "ville": "",
-      "etape": "🎯 À contacter",
-      "site_web": "",
-      "linkedin": "",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00"
-    },
-    {
-      "id": 160,
-      "entreprise": "PROCESS INDUSTRIES",
-      "contact": "Valérie FERREUX / Yves-Marie LEFEVRE (Gérants)",
-      "telephone": "03 83 65 55 61",
-      "email": "",
-      "secteur": "",
-      "ville": "",
-      "etape": "🎯 À contacter",
-      "site_web": "",
-      "linkedin": "",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00"
-    },
-    {
-      "id": 161,
-      "entreprise": "HYDAC",
-      "contact": "Alain BECHTEL (Gérant)",
-      "telephone": "03 87 29 26 00",
-      "email": "",
-      "secteur": "",
-      "ville": "",
-      "etape": "🎯 À contacter",
-      "site_web": "",
-      "linkedin": "",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00"
-    },
-    {
-      "id": 162,
-      "entreprise": "SITRAL INDUSTRIE",
-      "contact": "Loïc VILCHEZ (PDG)",
-      "telephone": "03 87 29 21 61",
-      "email": "",
-      "secteur": "",
-      "ville": "",
-      "etape": "🎯 À contacter",
-      "site_web": "",
-      "linkedin": "",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00"
-    },
-    {
-      "id": 163,
-      "entreprise": "BACACIER EST",
-      "contact": "(à identifier)",
-      "telephone": "03 82 44 04 08",
-      "email": "",
-      "secteur": "",
-      "ville": "",
-      "etape": "🎯 À contacter",
-      "site_web": "",
       "linkedin": "",
       "created_at": "2026-02-27T23:06:15.841019+00:00",
       "updated_at": "2026-02-27T23:06:15.841019+00:00"
@@ -2250,22 +2071,6 @@
       "updated_at": "2026-02-27T23:06:15.841019+00:00",
       "siren": "494160849",
       "activite": "25.62B"
-    },
-    {
-      "id": 174,
-      "entreprise": "I-Deal Development",
-      "ville": "Paris",
-      "etape": "Contacté",
-      "source": "LinkedIn (relance)",
-      "date_ajout": "2026-02-25",
-      "notes": "Ancien contact pour refonte site, avaient choisi un autre prestataire. Relance angle IA. Message envoyé le 25/02.",
-      "created_at": "2026-02-27T23:06:15.841019+00:00",
-      "updated_at": "2026-02-27T23:06:15.841019+00:00",
-      "nom": "Sonia Bakri",
-      "poste": "Responsable Marketing et Communication",
-      "statut": "Contacté",
-      "date_contact": "2026-02-25",
-      "canal": "LinkedIn"
     }
   ],
   "projets": [
@@ -2299,7 +2104,8 @@
       "created_at": "2026-02-27T23:06:16.036327+00:00",
       "updated_at": "2026-02-27T23:06:16.036327+00:00",
       "url": "https://festival.plazatango.com",
-      "activite": "Festival de Tango"
+      "activite": "Festival de Tango",
+      "deadline": "27 avril 2026"
     },
     {
       "id": 162,
@@ -3036,7 +2842,7 @@
       "nom": "L.I.Partners",
       "description": "Refonte site web - Visios programmées",
       "montant": 8400.0,
-      "etape": "en_cours",
+      "etape": "en_discussion",
       "prochaine_action": "Visio Franck OK (24/02). Email envoyé à Alexandre (05/03) pour sites références avant COMEX 16/03. Reste Lydia à caler.",
       "created_at": "2026-02-27T23:06:16.215182+00:00",
       "updated_at": "2026-03-06T15:42:27.093639+00:00"
@@ -3077,10 +2883,11 @@
       "id": 26,
       "nom": "Strada / Thomas Friedland",
       "description": "Audit UX/design site getstrada.com + recommandations premium",
-      "etape": "en_discussion",
+      "etape": "perdu",
       "prochaine_action": "Bloqué - Akli ne veut pas travailler gratuitement. En attente.",
       "created_at": "2026-02-27T23:06:16.215182+00:00",
-      "updated_at": "2026-03-06T15:42:27.649288+00:00"
+      "updated_at": "2026-03-06T15:42:27.649288+00:00",
+      "notes": " Abandonné mars 2026."
     },
     {
       "id": 28,
@@ -3112,6 +2919,19 @@
       "prochaine_action": "Devis envoyé à Ben le 06/03. En attente validation.",
       "created_at": "2026-03-06T16:12:27.688816+00:00",
       "updated_at": "2026-03-06T16:12:27.688816+00:00"
+    },
+    {
+      "id": 30,
+      "nom": "Céline Roland",
+      "etape": "en_discussion",
+      "montant": 10000.0,
+      "contact": "Céline Roland",
+      "notes": "Ajouté 07/03/2026",
+      "created_at": "2026-03-07T19:21:53.308125",
+      "updated_at": "2026-03-07T19:21:53.308133",
+      "description": "E-commerce (CA 6.5M€, 18K followers). Audit hébergement + migration + projets franchise et marketplace seconde main.",
+      "detail": "RDV 20 janvier. Problème hébergement actuel (lenteur/coût/fiabilité). Audit gratuit proposé. Projets futurs : franchise multi-boutiques, site seconde main, IA relation client.",
+      "prochaine_action": "Relancer Céline pour avancer sur audit hébergement."
     }
   ],
   "devis": [
@@ -4765,7 +4585,7 @@
       "maintenance": "Active",
       "fin_contrat": "31/07/2026",
       "type": "wordpress",
-      "maj_dispo": "4",
+      "maj_dispo": "0",
       "created_at": "2026-02-27T23:06:16.779519+00:00",
       "updated_at": "2026-03-05T11:26:46.148454+00:00",
       "api": true
@@ -4812,7 +4632,7 @@
       "full_url": "https://bernard-emmanuel.com",
       "maintenance": "Inactive",
       "type": "wordpress",
-      "maj_dispo": "2",
+      "maj_dispo": "0",
       "created_at": "2026-02-27T23:06:16.779519+00:00",
       "updated_at": "2026-03-05T11:26:54.932921+00:00",
       "api": true
@@ -5302,7 +5122,8 @@
       "message_envoye": "2026-02-11",
       "reponse": "",
       "notes": "InMail envoyé 11/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 102,
@@ -5316,7 +5137,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "En attente (avant 12/02) InMail envoyé 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 103,
@@ -5330,7 +5152,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "En attente (avant 12/02)",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 104,
@@ -5344,7 +5167,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "En attente (avant 12/02)",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 105,
@@ -5358,7 +5182,8 @@
       "message_envoye": "2026-02-11",
       "reponse": "",
       "notes": "InMail envoyé 11/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 106,
@@ -5372,7 +5197,8 @@
       "message_envoye": "2026-02-11",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 107,
@@ -5386,7 +5212,8 @@
       "message_envoye": "2026-02-11",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 108,
@@ -5400,7 +5227,8 @@
       "message_envoye": "2026-02-11",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 109,
@@ -5414,7 +5242,8 @@
       "message_envoye": "2026-02-11",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 110,
@@ -5428,7 +5257,8 @@
       "message_envoye": "2026-02-11",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 111,
@@ -5442,7 +5272,8 @@
       "message_envoye": "2026-02-11",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 112,
@@ -5456,7 +5287,8 @@
       "message_envoye": "2026-02-11",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 113,
@@ -5470,7 +5302,8 @@
       "message_envoye": "2026-02-11",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 114,
@@ -5484,7 +5317,8 @@
       "message_envoye": "2026-02-11",
       "reponse": "2026-02-11",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 115,
@@ -5498,7 +5332,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 116,
@@ -5512,7 +5347,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 117,
@@ -5526,7 +5362,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 118,
@@ -5540,7 +5377,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 119,
@@ -5554,7 +5392,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 120,
@@ -5568,7 +5407,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "InMail envoyé 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 121,
@@ -5582,7 +5422,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "Message direct (1er niveau) 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 122,
@@ -5596,7 +5437,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 123,
@@ -5610,7 +5452,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 124,
@@ -5622,9 +5465,10 @@
       "demande_envoyee": "2026-02-12",
       "connexion_acceptee": "",
       "message_envoye": "",
-      "reponse": "",
-      "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "reponse": "2026-03-06",
+      "notes": "Invitation+note envoyée 12/02. Visio validée. RDV obtenu.",
+      "updated_at": "2026-03-07T18:01:07.134066",
+      "rdv_obtenu": "2026-03-07"
     },
     {
       "id": 125,
@@ -5638,7 +5482,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 126,
@@ -5652,7 +5497,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 127,
@@ -5666,7 +5512,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "Invitation sans note 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 128,
@@ -5680,7 +5527,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "InMail envoyé 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 129,
@@ -5694,7 +5542,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "Invitation+note envoyée 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 130,
@@ -5708,7 +5557,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "InMail envoyé 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 131,
@@ -5722,7 +5572,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "InMail envoyé 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 132,
@@ -5736,7 +5587,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "En attente (avant 12/02)",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 133,
@@ -5750,7 +5602,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "En attente (avant 12/02)",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 134,
@@ -5764,7 +5617,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "En attente (avant 12/02)",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 135,
@@ -5778,7 +5632,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "En attente (avant 12/02)",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 136,
@@ -5792,7 +5647,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "En attente (avant 12/02)",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 137,
@@ -5806,7 +5662,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "Invitation+note 12/02 (1er niveau)",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 138,
@@ -5820,7 +5677,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "En attente (avant 12/02)",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 139,
@@ -5834,7 +5692,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "InMail envoyé 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 140,
@@ -5848,7 +5707,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "Communications désactivées - pas de contact possible",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 141,
@@ -5862,7 +5722,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "Invitation+note 12/02 (1er niveau)",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 142,
@@ -5876,7 +5737,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "En attente (avant 12/02)",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 143,
@@ -5890,7 +5752,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "InMail envoyé 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 144,
@@ -5904,7 +5767,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "En attente (avant 12/02)",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 145,
@@ -5918,7 +5782,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "En attente (avant 12/02)",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 146,
@@ -5932,7 +5797,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "InMail envoyé 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 147,
@@ -5946,7 +5812,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "InMail envoyé 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 148,
@@ -5960,7 +5827,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "InMail envoyé 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 149,
@@ -5974,7 +5842,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "InMail envoyé 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 150,
@@ -5988,7 +5857,8 @@
       "message_envoye": "2026-02-12",
       "reponse": "",
       "notes": "InMail envoyé 12/02",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 151,
@@ -6002,7 +5872,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 152,
@@ -6016,7 +5887,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 153,
@@ -6030,7 +5902,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 154,
@@ -6044,7 +5917,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 155,
@@ -6058,7 +5932,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 156,
@@ -6072,7 +5947,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 157,
@@ -6086,7 +5962,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 158,
@@ -6100,7 +5977,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 159,
@@ -6114,7 +5992,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 160,
@@ -6128,7 +6007,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 161,
@@ -6142,7 +6022,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 162,
@@ -6156,7 +6037,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 163,
@@ -6170,7 +6052,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 164,
@@ -6184,7 +6067,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 165,
@@ -6198,7 +6082,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 166,
@@ -6212,7 +6097,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 167,
@@ -6226,7 +6112,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 168,
@@ -6240,7 +6127,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 169,
@@ -6254,7 +6142,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 170,
@@ -6268,7 +6157,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 171,
@@ -6282,7 +6172,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 172,
@@ -6296,7 +6187,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 173,
@@ -6310,7 +6202,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 174,
@@ -6324,7 +6217,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 175,
@@ -6338,7 +6232,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 176,
@@ -6352,7 +6247,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 177,
@@ -6366,7 +6262,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 178,
@@ -6380,7 +6277,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 179,
@@ -6394,7 +6292,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 180,
@@ -6408,7 +6307,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 181,
@@ -6422,7 +6322,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 182,
@@ -6436,7 +6337,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 183,
@@ -6450,7 +6352,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 184,
@@ -6464,7 +6367,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 185,
@@ -6478,7 +6382,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 186,
@@ -6492,7 +6397,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 187,
@@ -6506,7 +6412,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 188,
@@ -6520,7 +6427,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 189,
@@ -6534,7 +6442,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 190,
@@ -6548,7 +6457,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 191,
@@ -6562,7 +6472,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 192,
@@ -6576,7 +6487,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 193,
@@ -6590,7 +6502,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 194,
@@ -6604,7 +6517,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 195,
@@ -6618,7 +6532,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 196,
@@ -6632,7 +6547,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 197,
@@ -6646,7 +6562,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 198,
@@ -6660,7 +6577,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 199,
@@ -6674,7 +6592,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     },
     {
       "id": 200,
@@ -6688,7 +6607,8 @@
       "message_envoye": "",
       "reponse": "",
       "notes": "",
-      "updated_at": "2026-02-27T23:06:17.616928+00:00"
+      "updated_at": "2026-02-27T23:06:17.616928+00:00",
+      "rdv_obtenu": ""
     }
   ],
   "playbooks": [
@@ -7016,5 +6936,5 @@
     "outils_actifs": 16.0,
     "conseil_ia": "Notion (13,80€/mois) peut être coupé : le Control Center et Claudia couvrent désormais 100% de ses usages (CRM, pipeline, contacts). Économie : 166€/an."
   },
-  "pennylane_last_sync": "2026-03-06 20:28"
+  "pennylane_last_sync": "2026-03-07 14:39"
 }
